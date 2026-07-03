@@ -114,6 +114,17 @@ a {
   transition: color .2s ease, transform .2s ease;
 }
 
+.top-nav .lang-link {
+  min-width: 38px;
+  padding: 4px 10px;
+  border: 1.5px solid var(--outline);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  text-align: center;
+  box-shadow: var(--shadow-neo);
+}
+
 .top-nav a:hover {
   color: var(--ink);
   transform: translateY(-1px);
