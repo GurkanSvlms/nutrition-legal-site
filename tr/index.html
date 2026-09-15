@@ -1,145 +1,572 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-default-ct="site_home_tr" data-page="pofu_home_tr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pofu, iPhone için sakin bir AI beslenme koçudur. Öğünleri fotoğraf, ses, barkod veya hızlı seçimlerle ekleyin; kaydetmeden önce kalori ve makro tahminlerini düzenleyin.">
-  <title>Pofu - Sakin AI Beslenme Koçu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pofu — Kadınlar İçin Tasarlanmış AI Kalori Sayacı</title>
+  <meta name="description" content="Pofu, kadınlar düşünülerek tasarlanmış AI kalori sayacı. Tabağının fotoğrafını çek, kalori ve makroları saysın; döngüne göre tonunu yumuşatsın, kaçırdığın günde joker serini korusun. iPhone'da ücretsiz başla.">
+  <link rel="canonical" href="https://gurkansvlms.github.io/nutrition-legal-site/tr/">
+  <link rel="alternate" hreflang="en" href="https://gurkansvlms.github.io/nutrition-legal-site/">
+  <link rel="alternate" hreflang="tr" href="https://gurkansvlms.github.io/nutrition-legal-site/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://gurkansvlms.github.io/nutrition-legal-site/">
+  <meta name="apple-itunes-app" content="app-id=6778044605">
+  <meta name="theme-color" content="#FCE9F1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2E1229" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Pofu">
+  <meta property="og:title" content="Pofu — Kadınlar İçin Tasarlanmış AI Kalori Sayacı">
+  <meta property="og:description" content="Tabağının fotoğrafını çek. Her şeyi saysın — üstelik döngünü de anlasın. iPhone'da ücretsiz başla.">
+  <meta property="og:url" content="https://gurkansvlms.github.io/nutrition-legal-site/tr/">
+  <meta property="og:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image-tr.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pofu — kadınlar için tasarlanmış kalori sayacı, iPhone'da">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pofu — Kadınlar İçin Tasarlanmış AI Kalori Sayacı">
+  <meta name="twitter:description" content="Tabağının fotoğrafını çek. Her şeyi saysın — üstelik döngünü de anlasın.">
+  <meta name="twitter:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image-tr.jpg">
+
   <link rel="icon" type="image/png" href="../assets/pofu-favicon.png?v=20260703">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=20260703">
-  <link rel="alternate" hreflang="en" href="../index.html">
-  <link rel="alternate" hreflang="tr" href="index.html">
-  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="preload" as="image" href="../assets/img/hero-720.webp" imagesrcset="../assets/img/hero-480.webp 480w, ../assets/img/hero-720.webp 720w" imagesizes="(min-width: 960px) 460px, 100vw" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Figtree:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Figtree:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="../landing.css?v=20260915b">
+  <script>document.documentElement.classList.add("js");</script>
+  <!-- If the script cannot load, drop the reveal-hidden state so content stays visible. -->
+  <script src="../landing.js?v=20260915b" defer onerror="document.documentElement.classList.remove('js')"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Pofu",
+    "description": "Kadınlar için tasarlanmış AI kalori sayacı: fotoğrafla kayıt, döngüye duyarlı ton, joker günler ve aralıklı oruç.",
+    "inLanguage": "tr",
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "url": "https://gurkansvlms.github.io/nutrition-legal-site/tr/",
+    "installUrl": "https://apps.apple.com/tr/app/id6778044605",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+  }
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Pofu ana sayfa">
-      <img class="brand-icon" src="../assets/appicon.png" alt="" width="36" height="36">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5s-8-4.9-8-11A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.1-8 11-8 11z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M7 7l10 10M17 7L7 17"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M19.5 14.5A7.8 7.8 0 1 1 9.5 4.5a6.2 6.2 0 0 0 10 10z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l7 3v5.5c0 4.4-3 8.3-7 9.5-4-1.2-7-5.1-7-9.5V6z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.5c-4 0-7-2.9-7-6.6 0-3.4 2.4-5.4 3.8-8.4.4 1.9 1.4 3 2.6 3.6.2-3 2-5.3 4.4-6.6-.3 3 1.2 5 2.2 6.6.7 1.2 1 2.4 1 3.8 0 4.7-3 7.6-7 7.6z"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8L10 4h4l1.7 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.5" r="3.4"/></g></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></g></symbol>
+    <symbol id="i-barcode" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 6v12M7.5 6v12M11 6v12M13.5 6v12M17 6v12M20 6v12"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></g></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></g></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.1 6.1a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8" cy="8" r="1.4"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3l2 5.4 5.5 2-5.5 2L12 18l-2-5.6-5.5-2 5.5-2z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.8-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 5h3v14h-3zM13.5 5h3v14h-3z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">İçeriğe geç</a>
+
+  <div class="ios-bar" data-ios-only hidden>
+    <img src="../assets/img/icon-96.webp" alt="" width="36" height="36">
+    <p><strong>Pofu</strong><span>App Store'da ücretsiz</span></p>
+    <a class="ios-bar__btn" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8">App Store'da aç</a>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="./" aria-label="Pofu ana sayfa">
+      <img src="../assets/img/icon-96.webp" alt="" width="34" height="34">
       <span>Pofu</span>
     </a>
-    <nav class="top-nav" aria-label="Site sayfaları">
+    <nav class="top__nav" aria-label="Sayfa bölümleri">
       <a href="#features">Özellikler</a>
-      <a href="#privacy">Gizlilik</a>
-      <a href="privacy.html">Politika</a>
-      <a href="support.html">Destek</a>
-      <a class="lang-link" href="../index.html" hreflang="en" lang="en">EN</a>
+      <a href="#pricing">Fiyatlar</a>
+      <a href="#faq">SSS</a>
+      <a href="../" hreflang="en" lang="en" title="English">EN</a>
     </nav>
+    <a class="top__cta" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8">Uygulamayı indir</a>
   </header>
 
-  <main>
-    <section class="home-hero">
-      <div class="hero-copy">
-        <img class="hero-icon" src="../assets/appicon.png" alt="Pofu uygulama ikonu" width="96" height="96">
-        <p class="eyebrow">iPhone için AI beslenme koçu</p>
-        <h1>Pofu</h1>
-        <p class="hero-lede">Ne yediğinizi anlamanın yumuşak ve hızlı yolu. Öğünün fotoğrafını çekin, sesle anlatın, barkod okutun veya favoriden seçin; Pofu hiçbir şeyi kaydetmeden önce düzenlenebilir bir beslenme kaydı hazırlar.</p>
-        <div class="hero-actions" aria-label="Ana bağlantılar">
-          <a class="button primary" href="privacy.html">Gizlilik Politikası</a>
-          <a class="button secondary" href="terms.html">Kullanım Şartları</a>
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" data-video-box>
+        <img class="hero__poster" src="../assets/img/hero-720.webp" srcset="../assets/img/hero-480.webp 480w, ../assets/img/hero-720.webp 720w" sizes="(min-width: 960px) 460px, 100vw" alt="" width="720" height="1280" fetchpriority="high">
+        <video class="hero__video" data-src="../assets/video/hero.mp4" data-hero muted loop playsinline preload="none" aria-hidden="true"></video>
+        <button class="vid-toggle" type="button" aria-label="Arka plan videosunu duraklat" aria-pressed="false" hidden>
+          <svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+          <svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+        </button>
+        <div class="hero__chip hero__chip--a" aria-hidden="true">
+          <span class="dot dot--pink"><svg><use href="#i-camera"/></svg></span>
+          <span><small>Tek fotoğraftan sayıldı</small><b>Tavuklu avokado salata · 420 kcal</b></span>
+        </div>
+        <div class="hero__chip hero__chip--b" aria-hidden="true">
+          <span class="dot dot--plum"><svg><use href="#i-moon"/></svg></span>
+          <span><small>Döngü farkındalığı</small><b>Açık · ton yumuşadı</b></span>
         </div>
       </div>
 
-      <div class="phone-visual" aria-label="Pofu uygulama önizlemesi">
-        <div class="phone-frame">
-          <div class="phone-top"></div>
-          <div class="app-card greeting-card">
-            <img src="../assets/appicon.png" alt="" width="52" height="52">
-            <div>
-              <span>Bugün Pofu ile</span>
-              <strong>Mükemmel olmak zorunda değil.</strong>
-            </div>
-          </div>
-          <div class="macro-ring">
-            <div>
-              <span>kalan kcal</span>
-              <strong>680</strong>
-              <small>protein dengeli</small>
-            </div>
-          </div>
-          <div class="quick-grid">
-            <div>
-              <span>Fotoğraf</span>
-              <strong>AI tarama</strong>
-            </div>
-            <div>
-              <span>Ses</span>
-              <strong>Anlat</strong>
-            </div>
-            <div>
-              <span>Barkod</span>
-              <strong>Paketli ürün</strong>
-            </div>
-          </div>
-          <div class="app-card coach-card">
-            <span>Koç yorumu</span>
-            <strong>Porsiyonu gerçekçi tut.</strong>
-            <p>Tahmini gözden geçir, porsiyonu düzenle, doğru hissettiğinde kaydet.</p>
-          </div>
+      <div class="hero__copy">
+        <p class="pill"><svg aria-hidden="true"><use href="#i-heart"/></svg>Kadınlar için</p>
+        <h1 id="hero-title"><em>Kadınlar için</em> tasarlanmış kalori sayacı.</h1>
+        <p class="hero__lede">Tabağının fotoğrafını çek. Her şeyi saysın — üstelik döngünü de anlasın.</p>
+        <div class="hero__cta">
+          <a class="store-badge store-badge--lg" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8" aria-label="Pofu'yu App Store'dan indir">
+            <img src="../assets/img/app-store-badge.png" alt="" width="180" height="60">
+          </a>
+          <p class="hero__fine">Ücretsiz başla · İlk AI fotoğraf taraman ücretsiz</p>
         </div>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <p class="eyebrow">Gerçek öğünler için</p>
-      <h2>Hızlı kayıt, sakin geri bildirim, düzenlenebilir tahminler.</h2>
-      <div class="feature-grid">
-        <article class="feature-card rose-card">
-          <span>Kayıt</span>
-          <h3>Fotoğraf, ses, barkod veya hızlı seçimler</h3>
-          <p>O an hangisi kolaysa onu kullanın. Pofu kaydı düzenlenebilir tutar, kontrol sizde kalır.</p>
-        </article>
-        <article class="feature-card lilac-card">
-          <span>Koç</span>
-          <h3>Diyet baskısı olmadan AI desteği</h3>
-          <p>Öğün, makro, su ve planlama önerileri suçluluk yaratmayan, yardımcı bir koç diliyle gelir.</p>
-        </article>
-        <article class="feature-card mint-card">
-          <span>Takip</span>
-          <h3>Kalori, makro, su, kilo ve seri takibi</h3>
-          <p>Günü net görün; isteğe bağlı Apple Health bağlamı ve widget uyumlu ilerleme ile hedefler sakin kalır.</p>
-        </article>
+    <!-- 3. Proof strip -->
+    <section class="flow" aria-labelledby="flow-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Nasıl çalışır</p>
+          <h2 id="flow-title">Çek. Sayıldı. Dengede.</h2>
+          <p class="section-lede">Tek fotoğraf, bütün rutin bu. Tartı yok, her malzemeyi tek tek yazmak yok.</p>
+        </header>
+
+        <ol class="flow__steps">
+          <li class="step rv" style="--d:0">
+            <div class="step__visual step__visual--snap" aria-hidden="true">
+              <img src="../assets/img/snap-plate.webp" alt="" width="480" height="480" loading="lazy" decoding="async">
+              <span class="viewfinder"></span>
+              <span class="shutter"></span>
+            </div>
+            <p class="step__num">01 · Çek</p>
+            <h3>Kameranı tabağına doğrult</h3>
+            <p>Kahvaltı, paket servis, ev yemeği — her öğüne tek fotoğraf.</p>
+          </li>
+          <li class="step rv" style="--d:1">
+            <div class="step__visual step__visual--count" aria-hidden="true">
+              <div class="result">
+                <p class="result__label"><svg><use href="#i-sparkle"/></svg>AI tahmini</p>
+                <p class="result__meal">Tavuklu avokado salata</p>
+                <p class="result__kcal">420 <span>kcal</span></p>
+                <div class="macros">
+                  <span class="macro macro--p"><i style="--v:.62"></i>Protein 32g</span>
+                  <span class="macro macro--c"><i style="--v:.28"></i>Karb. 14g</span>
+                  <span class="macro macro--f"><i style="--v:.52"></i>Yağ 26g</span>
+                </div>
+                <p class="result__edit">Kaydetmeden önce porsiyonu düzenle</p>
+              </div>
+            </div>
+            <p class="step__num">02 · Sayıldı</p>
+            <h3>Kalori ve makrolar saniyeler içinde</h3>
+            <p>Her tahmin düzenlenebilir; doğru görünene kadar günlüğüne hiçbir şey girmez.</p>
+          </li>
+          <li class="step rv" style="--d:2">
+            <div class="step__visual step__visual--balance" aria-hidden="true">
+              <div class="ring">
+                <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="48"/><circle class="ring__bar" cx="60" cy="60" r="48"/></svg>
+                <p><b>1.240</b><span>kcal kaldı</span></p>
+              </div>
+              <p class="balance__note">760 yendi · su 1,2 / 2,5 L</p>
+            </div>
+            <p class="step__num">03 · Dengede</p>
+            <h3>Bütün günün tek bakışta</h3>
+            <p>Hedefi mi aştın? Pofu günün kalanını dengelemene yardım eder. Asla azarlamaz.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section concept-section">
-      <div>
-        <p class="eyebrow">Pofu yaklaşımı</p>
-        <h2>Önce kontrol et. Sadece mantıklı olanı kaydet.</h2>
-        <p class="section-copy">AI fotoğraf, ses ve tarif sonuçları kişisel takip için tahmindir. Pofu, bir öğün günlüğe girmeden önce gözden geçirme, porsiyon düzenleme ve net güven bilgisi üzerine tasarlanmıştır.</p>
-      </div>
-      <div class="note-stack" aria-label="Pofu ilkeleri">
-        <article>
-          <span>Yumuşak başlangıç</span>
-          <strong>Manuel öğünler, su ve günlük özet erişilebilir kalır.</strong>
-        </article>
-        <article>
-          <span>Kişisel ritim</span>
-          <strong>Planlar ve koç notları hedeflerinize ve tercihlerinize uyum sağlar.</strong>
-        </article>
-        <article>
-          <span>Taşınabilir ilerleme</span>
-          <strong>Widget ve Apple Watch hızlı aksiyonları yakında tutar.</strong>
-        </article>
+    <!-- 4. Features -->
+    <div id="features" class="features">
+
+      <section class="feature" aria-labelledby="f-cycle">
+        <div class="wrap feature__grid">
+          <div class="feature__copy rv">
+            <p class="kicker"><svg aria-hidden="true"><use href="#i-moon"/></svg>Döngü farkındalığı</p>
+            <h2 id="f-cycle">İştahın döngünle değişiyor. Uygulaman da değişmeli.</h2>
+            <p>Son döngünün başladığı günü ekle; iştah artışının ve ödemin tamamen normal olduğu günlerde Pofu tonunu yumuşatır. İştahlı bir hafta başarısızlık değildir.</p>
+            <ul class="facts">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>İsteğe bağlı — istediğin an kapat ya da tarihi sil</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Döngü verin iPhone'unda kalır</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Asla tıbbi tavsiye ya da teşhis değil</li>
+            </ul>
+          </div>
+          <div class="stage stage--tilt-l">
+            <figure class="phone rv" data-video-box>
+              <div class="phone__screen">
+                <img src="../assets/img/poster-cycle.jpg" alt="" width="480" height="853" loading="lazy" decoding="async">
+                <video data-src="../assets/video/cycle.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="sr-only">Pofu reklam klibi: bir kadın salatasını fotoğraflıyor; İngilizce ekran yazısı “It fits my cycle, my cravings, my life.” diyor.</figcaption>
+              <button class="vid-toggle" type="button" aria-label="Videoyu duraklat" aria-pressed="false" hidden>
+                <svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+                <svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+              </button>
+            </figure>
+            <div class="ui-card ui-card--br rv" style="--d:2" aria-hidden="true">
+              <div class="ui-card__row">
+                <span class="dot dot--plum"><svg><use href="#i-moon"/></svg></span>
+                <p><b>Döngü günü 22</b><small>Döngü farkındalığı · Açık</small></p>
+              </div>
+              <p class="ui-card__text">Bu dönemde ödem normaldir — tartıya takılma, önemli olan uzun vadeli trend.</p>
+              <p class="ui-card__tag"><svg><use href="#i-lock"/></svg>Bu cihazda kalır</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature feature--flip" aria-labelledby="f-photo">
+        <div class="wrap feature__grid">
+          <div class="feature__copy rv">
+            <p class="kicker"><svg aria-hidden="true"><use href="#i-camera"/></svg>Öğün başına tek fotoğraf</p>
+            <h2 id="f-photo">Tabağını çek. Bir kez düzelt. Öğrensin.</h2>
+            <p>Pofu tek bir fotoğraftan kalori, protein, karbonhidrat ve yağı tahmin eder. Bir porsiyonu düzelt, bir dahaki sefere porsiyonlarını hatırlasın. Fotoğraf çekmek istemiyor musun? Sesle anlat, barkodu okut ya da ara.</p>
+            <ul class="chips" aria-label="Öğün ekleme yolları">
+              <li><svg aria-hidden="true"><use href="#i-camera"/></svg>Fotoğraf</li>
+              <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Ses</li>
+              <li><svg aria-hidden="true"><use href="#i-barcode"/></svg>Barkod</li>
+              <li><svg aria-hidden="true"><use href="#i-search"/></svg>Arama</li>
+            </ul>
+          </div>
+          <div class="stage stage--tilt-r">
+            <figure class="phone rv" data-video-box>
+              <div class="phone__screen">
+                <img src="../assets/img/poster-photo.jpg" alt="" width="480" height="853" loading="lazy" decoding="async">
+                <video data-src="../assets/video/photo.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="sr-only">Pofu reklam klibi: bir kadın salata hazırlayıp kaydediyor; İngilizce ekran yazıları “One photo per meal. That’s it.” ve “Protein, carbs, fat — all counted for me.” diyor.</figcaption>
+              <button class="vid-toggle" type="button" aria-label="Videoyu duraklat" aria-pressed="false" hidden>
+                <svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+                <svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+              </button>
+            </figure>
+            <div class="ui-card ui-card--bl rv" style="--d:2" aria-hidden="true">
+              <div class="ui-card__row">
+                <span class="dot dot--pink"><svg><use href="#i-sparkle"/></svg></span>
+                <p><b>Porsiyon güncellendi</b><small>Öğle · Tavuklu avokado salata</small></p>
+              </div>
+              <p class="swap"><s>1 kase · 420 kcal</s><span>1,5 kase · 630 kcal</span></p>
+              <p class="ui-card__tag"><svg><use href="#i-check"/></svg>Bir dahaki sefere hatırlanacak</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature feature--dark" aria-labelledby="f-guilt">
+        <div class="wrap feature__grid">
+          <div class="feature__copy rv">
+            <p class="kicker"><svg aria-hidden="true"><use href="#i-shield"/></svg>Suçluluk yok</p>
+            <h2 id="f-guilt">Bir gün mü kaçırdın? Seri bozulmaz, joker var.</h2>
+            <p>Doğum günleri, hasta günler, hafta sonu kaçamakları. Jokerler serini korur ve asla ceza yoktur. Pofu seninle, senin tarafında olan bir arkadaş gibi konuşur.</p>
+            <ul class="facts">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Her ay joker günler, otomatik kullanılır</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Yumuşak bir dil, kırmızı uyarı yok</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Günlük baskı yerine haftalık desenler</li>
+            </ul>
+          </div>
+          <div class="stage stage--tilt-l">
+            <figure class="phone rv" data-video-box>
+              <div class="phone__screen">
+                <img src="../assets/img/poster-noguilt.jpg" alt="" width="480" height="853" loading="lazy" decoding="async">
+                <video data-src="../assets/video/noguilt.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="sr-only">Pofu reklam klibi: İngilizce ekran yazıları “Every calorie app made me feel guilty” ile başlayıp “No guilt. Just balance.” ile bitiyor.</figcaption>
+              <button class="vid-toggle" type="button" aria-label="Videoyu duraklat" aria-pressed="false" hidden>
+                <svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+                <svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+              </button>
+            </figure>
+            <div class="ui-card ui-card--br rv" style="--d:2" aria-hidden="true">
+              <div class="ui-card__row">
+                <span class="dot dot--peach"><svg><use href="#i-flame"/></svg></span>
+                <p><b>12 gün</b><small>Dengeli seri</small></p>
+              </div>
+              <ol class="week">
+                <li>P</li><li>S</li><li>Ç</li><li class="is-grace"><svg><use href="#i-shield"/></svg></li><li>C</li><li>C</li><li class="is-today">P</li>
+              </ol>
+              <p class="ui-card__tag"><svg><use href="#i-shield"/></svg>Telafi günü kullanıldı — serin sürüyor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature feature--flip" aria-labelledby="f-fast">
+        <div class="wrap feature__grid">
+          <div class="feature__copy rv">
+            <p class="kicker"><svg aria-hidden="true"><use href="#i-clock"/></svg>Aralıklı oruç</p>
+            <h2 id="f-fast">Kendi ritminde oruç tut — ya da hiç tutma.</h2>
+            <p>Hayatına uyan pencereyi seç, zamanlayıcıyı başlat ve öğünlerini aynı yerde kaydetmeye devam et. Pofu'da oruç bir araçtır, asla zorunluluk değil.</p>
+            <ul class="facts">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>16:8, 14:10, 18:6 veya 5:2</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zamanlayıcı, öğünler ve su tek ekranda</li>
+            </ul>
+          </div>
+          <div class="stage stage--tilt-r">
+            <figure class="phone rv" data-video-box>
+              <div class="phone__screen">
+                <img src="../assets/img/poster-fasting.jpg" alt="" width="480" height="853" loading="lazy" decoding="async">
+                <video data-src="../assets/video/fasting.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="sr-only">Pofu reklam klibi: İngilizce ekran yazıları “Then this app started learning from me” ve “Now it takes two taps a day.” diyor.</figcaption>
+              <button class="vid-toggle" type="button" aria-label="Videoyu duraklat" aria-pressed="false" hidden>
+                <svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+                <svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+              </button>
+            </figure>
+            <div class="ui-card ui-card--bl ui-card--plans rv" style="--d:2" aria-hidden="true">
+              <p class="ui-card__title">Planını seç</p>
+              <ul class="plans-mini">
+                <li class="is-on"><b>16:8</b><small>16 saat oruç · 8 saat yeme penceresi</small></li>
+                <li><b>14:10</b><small>Yumuşak başlangıç</small></li>
+                <li><b>18:6</b><small>İleri seviye</small></li>
+                <li><b>5:2</b><small>Haftada 2 hafif gün</small></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature" aria-labelledby="f-watch">
+        <div class="wrap feature__grid">
+          <div class="feature__copy rv">
+            <p class="kicker"><svg aria-hidden="true"><use href="#i-sparkle"/></svg>Apple Watch ve widgetlar</p>
+            <h2 id="f-watch">Uygulamayı açmadan gününü gör.</h2>
+            <p>Kalan kaloriyi, suyu ve adımları kolunda gör; tek dokunuşla bir bardak su ekle. Ana ekran widgetları dengeni bir bakış uzağında tutar.</p>
+            <ul class="facts">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Kolundan +250 ml ve +500 ml su</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>Kalori ve su için ana ekran widgetları</li>
+            </ul>
+          </div>
+          <div class="stage stage--tilt-l">
+            <figure class="phone rv" data-video-box>
+              <div class="phone__screen">
+                <img src="../assets/img/poster-watch.jpg" alt="" width="480" height="853" loading="lazy" decoding="async">
+                <video data-src="../assets/video/watch.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="sr-only">Pofu reklam klibi: bir kadın kasesini fotoğraflıyor; İngilizce ekran yazısı “It learns your portions, your food, your habits.” diyor.</figcaption>
+              <button class="vid-toggle" type="button" aria-label="Videoyu duraklat" aria-pressed="false" hidden>
+                <svg class="ic-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+                <svg class="ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+              </button>
+            </figure>
+            <div class="watch rv" style="--d:2" aria-hidden="true">
+              <div class="watch__case"><img src="../assets/img/watch-water-tr.webp" alt="" width="312" height="372" loading="lazy" decoding="async"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 5. Comparison -->
+    <section class="compare" aria-labelledby="compare-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">Fark</p>
+          <h2 id="compare-title">Çoğu kalori uygulaması vs Pofu</h2>
+        </header>
+        <div class="compare__table rv">
+          <table>
+            <caption class="sr-only">Çoğu kalori uygulamasının ve Pofu'nun üç yaygın anı nasıl ele aldığı</caption>
+            <thead>
+              <tr><th scope="col">Çoğu kalori uygulaması</th><th scope="col" class="is-pofu">Pofu</th></tr>
+            </thead>
+            <tbody>
+              <tr class="compare__label"><th colspan="2" scope="colgroup">Şişkin, iştahlı bir günde</th></tr>
+              <tr>
+                <td><svg aria-hidden="true"><use href="#i-x"/></svg>Hedefi aştın diye azarlar</td>
+                <td class="is-pofu"><svg aria-hidden="true"><use href="#i-check"/></svg>Döngün gerektirdiğinde tonunu yumuşatır</td>
+              </tr>
+              <tr class="compare__label"><th colspan="2" scope="colgroup">Bir günü kaçırdığında</th></tr>
+              <tr>
+                <td><svg aria-hidden="true"><use href="#i-x"/></svg>Serin sıfırlanır</td>
+                <td class="is-pofu"><svg aria-hidden="true"><use href="#i-check"/></svg>Joker serini korur</td>
+              </tr>
+              <tr class="compare__label"><th colspan="2" scope="colgroup">Döngün</th></tr>
+              <tr>
+                <td><svg aria-hidden="true"><use href="#i-x"/></svg>Döngünün ne olduğundan habersiz</td>
+                <td class="is-pofu"><svg aria-hidden="true"><use href="#i-check"/></svg>Döngüye duyarlı — isteğe bağlı ve iPhone'unda kalır</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
-    <section id="privacy" class="section split-section">
-      <div>
-        <p class="eyebrow">Gizlilik odaklı</p>
-        <h2>Beslenme veriniz kontrolünüzde hissettirmeli.</h2>
-        <p class="section-copy">Uygulama kayıtlarının çoğu cihazınızda tutulur. İsteğe bağlı izinler yalnızca açtığınız özellikler için kullanılır; AI istekleri ise seçtiğiniz işlem için gereken bağlamla sınırlıdır.</p>
+    <!-- 6. Honest proof -->
+    <section class="trust" aria-labelledby="trust-title">
+      <h2 class="sr-only" id="trust-title">Pofu'ya neden güvenebilirsin</h2>
+      <div class="wrap trust__grid">
+        <figure class="founder rv">
+          <p class="kicker">Geliştiriciden bir not</p>
+          <blockquote>
+            <p>Pofu'yu İstanbul'da tek başıma geliştiriyorum. Çevremdeki kadınların kendilerini suçlu hissettiren kalori uygulamalarını bir bir bıraktığını gördükten sonra başladım. Bu yüzden Pofu istersen döngünü dinler, kaçırdığın günleri affeder ve her fiyatı en baştan gösterir.</p>
+          </blockquote>
+          <figcaption>
+            <img src="../assets/img/icon-96.webp" alt="" width="44" height="44" loading="lazy">
+            <span><b>Gürkan</b>Pofu'nun kurucusu ve geliştiricisi</span>
+          </figcaption>
+        </figure>
+        <ul class="promises">
+          <li class="rv" style="--d:1">
+            <span class="dot dot--pink"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <p><b>İstanbul'da yapıldı, dünyada kullanılıyor.</b>Bağımsız bir uygulama, bir diyet imparatorluğu değil.</p>
+          </li>
+          <li class="rv" style="--d:2">
+            <span class="dot dot--plum"><svg aria-hidden="true"><use href="#i-lock"/></svg></span>
+            <p><b>Döngü verin telefonundan çıkmaz.</b>Döngü farkındalığı isteğe bağlıdır ve cihazında saklanır.</p>
+          </li>
+          <li class="rv" style="--d:3">
+            <span class="dot dot--peach"><svg aria-hidden="true"><use href="#i-tag"/></svg></span>
+            <p><b>Sinsi ödeme ekranı yok.</b>Her fiyat bu sayfada, indirmeden önce.</p>
+          </li>
+        </ul>
       </div>
-      <nav class="legal-links" aria-label="Yasal sayfalar">
-        <a href="privacy.html">Gizlilik Politikası</a>
-        <a href="terms.html">Kullanım Şartları</a>
-        <a href="support.html">Destek</a>
-      </nav>
+    </section>
+
+    <!-- 7. Pricing -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <header class="section-head section-head--light">
+          <p class="kicker">Fiyatlar</p>
+          <h2 id="pricing-title">Dürüst fiyat. Sinsi ödeme ekranı yok.</h2>
+          <p class="section-lede">Ücretsiz başla. Pofu hak ederse yükselt.</p>
+        </header>
+
+        <div class="free rv">
+          <div>
+            <p class="free__price"><b>Ücretsiz</b> her zaman</p>
+            <p class="free__sub">Başlamak için gereken her şey</p>
+          </div>
+          <ul class="facts facts--inline">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Manuel öğün, su ve günlük makrolar</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Döngü farkındalığı ve joker günler</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>İlk AI fotoğraf taraman</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Her gün 1 AI sesli kayıt</li>
+          </ul>
+        </div>
+
+        <div class="plans">
+          <article class="plan rv" style="--d:0">
+            <h3>Aylık</h3>
+            <p class="plan__price"><b>$4.99</b><span>/ ay</span></p>
+            <p class="plan__note">Aylık esneklikle tam Pro erişimi.</p>
+            <a class="btn btn--ghost" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8">Pofu'yu indir</a>
+          </article>
+          <article class="plan plan--best rv" style="--d:1">
+            <p class="plan__badge">En avantajlı</p>
+            <h3>Yıllık</h3>
+            <p class="plan__price"><b>$29.99</b><span>/ yıl</span></p>
+            <p class="plan__note">Ayda yaklaşık $2,50 — aylığa göre yaklaşık %50 tasarruf.</p>
+            <a class="btn" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8">Pofu'yu indir</a>
+          </article>
+          <article class="plan rv" style="--d:2">
+            <h3>Ömür boyu</h3>
+            <p class="plan__price"><b>$79.99</b><span>tek seferlik</span></p>
+            <p class="plan__note">Kalıcı Pro erişimi için bir kez öde.</p>
+            <a class="btn btn--ghost" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8">Pofu'yu indir</a>
+          </article>
+        </div>
+
+        <div class="pro-list rv">
+          <p>Tüm Pro planlarında</p>
+          <ul>
+            <li>Her öğün için AI fotoğraf ve sesli kayıt</li>
+            <li>AI koç</li>
+            <li>Esnek hafta sonu planı</li>
+            <li>Oruç istatistikleri</li>
+            <li>Renk temaları ve widget renkleri</li>
+          </ul>
+        </div>
+        <p class="pricing__legal">Fiyatlar USD cinsindendir; App Store senin yerel fiyatını gösterir. Abonelik, yenilenmeden en az 24 saat önce iptal edilmezse otomatik yenilenir — Ayarlar'dan istediğin an iptal edebilirsin. Ömür boyu erişim tek seferlik satın almadır.</p>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="wrap faq__grid">
+        <header class="section-head">
+          <p class="kicker">SSS</p>
+          <h2 id="faq-title">Güzel sorular, net cevaplar.</h2>
+          <p class="section-lede">Başka bir sorun mu var? <a href="support.html">Destek</a> sayfasından yaz.</p>
+        </header>
+        <div class="faq__list">
+          <details>
+            <summary>Pofu sadece kadınlar için mi?</summary>
+            <p>Hayır, herkes kullanabilir. Pofu kadınlar düşünülerek tasarlandı: isteğe bağlı döngü farkındalığı, kaçırılan günler için jokerler ve asla utandırmayan bir dil. Döngü takibi sana uygun değilse kapalı bırakman yeterli.</p>
+          </details>
+          <details>
+            <summary>Döngü verilerimi paylaşmak zorunda mıyım?</summary>
+            <p>Hayır. Döngü farkındalığı isteğe bağlıdır; istediğin an kapatabilir ya da tarihi silebilirsin. Kullanırsan döngü verin iPhone'unda kalır. Tıbbi tavsiye değildir; hiçbir şeyi tahmin etmez ya da teşhis koymaz.</p>
+          </details>
+          <details>
+            <summary>Android sürümü var mı?</summary>
+            <p>Şimdilik yok. Pofu iPhone için yapıldı; Apple Watch uygulaması ve ana ekran widgetları da var.</p>
+          </details>
+          <details>
+            <summary>AI ne kadar doğru?</summary>
+            <p>Fotoğraf tahminleri akıllı bir başlangıç noktasıdır, laboratuvar ölçümü değil — porsiyon büyüklüğünü ve gizli yağı fotoğraftan kestirmek zordur. Bu yüzden her kayıt kaydetmeden önce düzenlenebilir; bir porsiyonu düzelttiğinde Pofu bir dahaki sefere hatırlar. Paketli ürünlerde barkodu okut.</p>
+          </details>
+          <details>
+            <summary>Neler ücretsiz, Pro'da neler var?</summary>
+            <p>Ücretsiz: manuel öğün, su ve günlük makrolar, döngü farkındalığı, jokerler, ilk AI fotoğraf taraman ve her gün 1 AI sesli kayıt. Pro; her öğün için AI fotoğraf ve sesli kayıt, AI koç, esnek hafta sonu planı, oruç istatistikleri ve renk temaları ekler.</p>
+          </details>
+          <details>
+            <summary>İstediğim an iptal edebilir miyim?</summary>
+            <p>Evet. Abonelikler Apple üzerinden faturalanır ve yönetilir: yenilemeden en az 24 saat önce Ayarlar → adın → Abonelikler'den iptal et; ödediğin dönemin sonuna kadar Pro'da kalırsın. Ömür boyu erişim tek seferlik satın almadır, iptal edilecek bir şey yoktur.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Final CTA -->
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap final__inner rv">
+        <img class="final__icon" src="../assets/img/icon-240.webp" alt="" width="120" height="120" loading="lazy">
+        <p class="pill pill--dark"><svg aria-hidden="true"><use href="#i-heart"/></svg>Kadınlar için</p>
+        <h2 id="final-title">Suçluluk yok. <em>Sadece denge.</em></h2>
+        <p class="section-lede">Döngünü anlayan kalori sayacı — iPhone'da ücretsiz başla.</p>
+        <a class="store-badge store-badge--lg" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8" aria-label="Pofu'yu App Store'dan indir">
+          <img src="../assets/img/app-store-badge.png" alt="" width="180" height="60" loading="lazy">
+        </a>
+        <p class="hero__fine">Ücretsiz başla · iPhone ve Apple Watch</p>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>Pofu</span>
-    <a href="mailto:widgetai.support@gmail.com">widgetai.support@gmail.com</a>
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <a class="brand" href="./" aria-label="Pofu ana sayfa">
+        <img src="../assets/img/icon-96.webp" alt="" width="30" height="30" loading="lazy">
+        <span>Pofu</span>
+      </a>
+      <nav aria-label="Yasal ve destek">
+        <a href="privacy.html">Gizlilik</a>
+        <a href="terms.html">Kullanım Şartları</a>
+        <a href="support.html">Destek</a>
+        <a href="../" hreflang="en" lang="en">English</a>
+        <a href="mailto:widgetai.support@gmail.com">widgetai.support@gmail.com</a>
+      </nav>
+      <p class="foot__fine">Görsellerde yapay zekâyla üretilmiş imgeler bulunur. Pofu bir takip aracıdır, tıbbi tavsiye değildir.<br>Apple, Apple logosu, iPhone ve Apple Watch, Apple Inc.'in ticari markalarıdır. © 2026 Pofu · İstanbul'da yapıldı.</p>
+    </div>
   </footer>
+
+  <div class="redirect" role="status" aria-live="polite" hidden>
+    <p>App Store açılıyor: <b data-count>5</b>…</p>
+    <div class="redirect__actions">
+      <button type="button" class="redirect__cancel">İptal</button>
+      <a class="redirect__go" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=site_home_tr&amp;mt=8">Şimdi aç</a>
+    </div>
+  </div>
 </body>
 </html>

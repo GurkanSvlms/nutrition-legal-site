@@ -1,7 +1,10 @@
 // Pofu landing page behaviour. No dependencies.
 // - Every [data-store] link points to the App Store campaign URL (pt + ct from ?ct=).
-// - iPhone/iPad only: sticky "Open in App Store" bar and an optional, cancellable
-//   5-second countdown (?go=1, or after 6 s without any interaction). Never on desktop.
+// - iPhone/iPad only: sticky "Open in App Store" bar and a visible, cancellable countdown.
+//   Home pages: starts with ?go=1 or after 6 s without any interaction.
+//   Ad page (<html data-redirect="auto">): starts right away. ?go=0 always disables it.
+//   Never on desktop or Android, and only once per browser session.
+// - Page settings live on <html>: data-default-ct, data-page, data-redirect, data-countdown.
 // - Videos load lazily and only play while visible.
 (function () {
   "use strict";
@@ -10,11 +13,15 @@
   var PROVIDER_TOKEN = "128375664";   // App Store Connect > Campaigns link pt= value
   var META_PIXEL_ID = "";             // Meta Events Manager > Pixel ID (empty = no third-party script)
   var IDLE_MS = 6000;
-  var COUNTDOWN_S = 5;
   var OPENED_KEY = "pofu_store_opened";
 
+  var root = document.documentElement;
+  var COUNTDOWN_S = parseInt(root.getAttribute("data-countdown"), 10) || 5;
+  var AUTO_REDIRECT = root.getAttribute("data-redirect") === "auto";
+  var PAGE_NAME = root.getAttribute("data-page") || "pofu_home";
+
   var params = new URLSearchParams(location.search);
-  var campaign = params.get("ct") || "site_home";
+  var campaign = params.get("ct") || root.getAttribute("data-default-ct") || "site_home";
   var storeUrl = "https://apps.apple.com/app/apple-store/id" + APP_ID +
     "?pt=" + PROVIDER_TOKEN + "&ct=" + encodeURIComponent(campaign) + "&mt=8";
   var isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
@@ -43,7 +50,7 @@
     }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
     window.fbq("init", META_PIXEL_ID);
     window.fbq("track", "PageView");
-    window.fbq("track", "ViewContent", { content_name: "pofu_home", campaign: campaign });
+    window.fbq("track", "ViewContent", { content_name: PAGE_NAME, campaign: campaign });
   }
 
   function trackStoreClick() {
@@ -68,7 +75,7 @@
 
   function setupAutoRedirect() {
     var panel = document.querySelector(".redirect");
-    if (!panel || recalled(OPENED_KEY)) return;
+    if (!panel || recalled(OPENED_KEY) || params.get("go") === "0") return;
 
     var countEl = panel.querySelector("[data-count]");
     var idleTimer = null;
@@ -103,6 +110,7 @@
       var left = COUNTDOWN_S;
       countEl.textContent = String(left);
       panel.hidden = false;
+      panel.style.setProperty("--countdown", COUNTDOWN_S + "s");
       void panel.offsetWidth; // restart the drain animation
       panel.classList.add("is-running");
       tick = setInterval(function () {
@@ -126,7 +134,7 @@
     // Returning from the App Store via back/forward cache must not restart anything.
     window.addEventListener("pageshow", function (e) { if (e.persisted) stopAll(); });
 
-    if (params.get("go") === "1") startCountdown();
+    if (AUTO_REDIRECT || params.get("go") === "1") startCountdown();
     else idleTimer = setTimeout(startCountdown, IDLE_MS);
   }
 

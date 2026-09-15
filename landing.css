@@ -219,7 +219,7 @@ html.js .rv.in { opacity: 1; transform: none; }
   content: ""; position: absolute; left: 0; bottom: 0; height: 3px; width: 100%;
   background: #DE5187; transform-origin: left;
 }
-.redirect.is-running::after { animation: drain 5s linear forwards; }
+.redirect.is-running::after { animation: drain var(--countdown, 5s) linear forwards; }
 @keyframes drain { from { transform: scaleX(1); } to { transform: scaleX(0); } }
 
 /* ---------- Header ---------- */
