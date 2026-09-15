@@ -74,6 +74,8 @@ body {
 
 main { overflow-x: clip; }
 
+[id] { scroll-margin-top: calc(var(--bar-h) + 12px); }
+
 img, video { display: block; max-width: 100%; }
 
 h1, h2, h3 { font-family: var(--head); font-weight: 700; text-wrap: balance; margin: 0; }
