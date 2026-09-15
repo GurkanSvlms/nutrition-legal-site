@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-redirect="auto" data-countdown="3" data-default-ct="meta_reels" data-page="get_pofu">
+<html lang="en" data-redirect="auto" data-countdown="0" data-default-ct="meta_reels" data-page="get_pofu">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -34,12 +34,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Figtree:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=Figtree:wght@400;600;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../landing.css?v=20260915b">
+  <link rel="stylesheet" href="../landing.css?v=20260915c">
   <script>document.documentElement.classList.add("js");</script>
-  <!-- Meta ad landing page: same design as the home page; iOS visitors get a short,
-       cancellable countdown to the App Store (landing.js, data-redirect="auto"). -->
+  <!-- Meta ad landing page: same design as the home page. iPhone/iPad visitors go straight
+       to the App Store on open (landing.js, data-redirect="auto" + data-countdown="0");
+       Android, desktop and link-preview bots see this page. ?go=0 previews it on iPhone. -->
   <!-- If the script cannot load, drop the reveal-hidden state so content stays visible. -->
-  <script src="../landing.js?v=20260915b" defer onerror="document.documentElement.classList.remove('js')"></script>
+  <script src="../landing.js?v=20260915c" defer onerror="document.documentElement.classList.remove('js')"></script>
 
   <script type="application/ld+json">
   {
@@ -559,12 +560,5 @@
     </div>
   </footer>
 
-  <div class="redirect" role="status" aria-live="polite" hidden>
-    <p>Opening App Store in <b data-count>3</b>…</p>
-    <div class="redirect__actions">
-      <button type="button" class="redirect__cancel">Cancel</button>
-      <a class="redirect__go" data-store href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=meta_reels&amp;mt=8">Open now</a>
-    </div>
-  </div>
 </body>
 </html>

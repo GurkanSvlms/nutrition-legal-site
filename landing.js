@@ -1,9 +1,9 @@
 // Pofu landing page behaviour. No dependencies.
 // - Every [data-store] link points to the App Store campaign URL (pt + ct from ?ct=).
-// - iPhone/iPad only: sticky "Open in App Store" bar and a visible, cancellable countdown.
-//   Home pages: starts with ?go=1 or after 6 s without any interaction.
-//   Ad page (<html data-redirect="auto">): starts right away. ?go=0 always disables it.
-//   Never on desktop or Android, and only once per browser session.
+// - iPhone/iPad only: sticky "Open in App Store" bar and an App Store redirect.
+//   Home pages: visible, cancellable countdown with ?go=1 or after 6 s without any interaction.
+//   Ad page (<html data-redirect="auto" data-countdown="0">): straight to the App Store on open.
+//   ?go=0 always disables it. Never on desktop or Android, and only once per browser session.
 // - Page settings live on <html>: data-default-ct, data-page, data-redirect, data-countdown.
 // - Videos load lazily and only play while visible.
 (function () {
@@ -16,7 +16,8 @@
   var OPENED_KEY = "pofu_store_opened";
 
   var root = document.documentElement;
-  var COUNTDOWN_S = parseInt(root.getAttribute("data-countdown"), 10) || 5;
+  var countdownAttr = parseInt(root.getAttribute("data-countdown"), 10);
+  var COUNTDOWN_S = isNaN(countdownAttr) ? 5 : countdownAttr;
   var AUTO_REDIRECT = root.getAttribute("data-redirect") === "auto";
   var PAGE_NAME = root.getAttribute("data-page") || "pofu_home";
 
@@ -74,8 +75,18 @@
   }
 
   function setupAutoRedirect() {
+    if (recalled(OPENED_KEY) || params.get("go") === "0") return;
+
+    // Ad page: no countdown, no extra tap. replace() keeps Back from landing here again.
+    if (AUTO_REDIRECT && COUNTDOWN_S === 0) {
+      trackStoreClick();
+      // Give a configured Meta Pixel a moment to send PageView before leaving.
+      setTimeout(function () { location.replace(storeUrl); }, META_PIXEL_ID ? 600 : 0);
+      return;
+    }
+
     var panel = document.querySelector(".redirect");
-    if (!panel || recalled(OPENED_KEY) || params.get("go") === "0") return;
+    if (!panel) return;
 
     var countEl = panel.querySelector("[data-count]");
     var idleTimer = null;
