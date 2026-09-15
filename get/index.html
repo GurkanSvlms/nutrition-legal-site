@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Get Pofu — AI calorie counter made for women</title>
+  <link rel="icon" type="image/png" href="../assets/pofu-favicon.png?v=20260703">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    // Reklam iniş sayfası: iPhone/iPad'i anında App Store kampanya linkine yönlendirir,
+    // diğer cihazlara kısa bir sayfa gösterir. ?ct=... ile kampanya adı değiştirilebilir.
+    var APP_ID = "6778044605";
+    var PROVIDER_TOKEN = "";      // App Store Connect > Campaigns linkindeki pt= değeri
+    var META_PIXEL_ID = "";       // Meta Events Manager > Pixel kimliği
+    var params = new URLSearchParams(location.search);
+    var campaign = params.get("ct") || "meta_reels";
+    var storeUrl = "https://apps.apple.com/app/apple-store/id" + APP_ID + "?mt=8&ct=" + encodeURIComponent(campaign)
+      + (PROVIDER_TOKEN ? "&pt=" + PROVIDER_TOKEN : "");
+    var isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent)
+      || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+    if (META_PIXEL_ID) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+      fbq('track', 'ViewContent', { content_name: 'get_pofu', campaign: campaign });
+    }
+
+    if (isIOS) {
+      setTimeout(function () { location.replace(storeUrl); }, 350);
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var link = document.getElementById("store-link");
+      if (link) link.href = storeUrl;
+    });
+  </script>
+  <style>
+    .get-page { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 48px 20px; }
+    .get-page img.icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 18px 40px rgba(60, 20, 45, .18); }
+    .get-page h1 { margin: 20px 0 8px; }
+    .get-page p { max-width: 34rem; margin: 0 auto 24px; }
+    .get-page .badge { display: inline-block; }
+    .get-page .badge img { height: 56px; width: auto; }
+    .get-page .hint { font-size: .9rem; opacity: .7; margin-top: 18px; }
+  </style>
+</head>
+<body>
+  <main class="get-page">
+    <div>
+      <img class="icon" src="../assets/appicon.png" alt="Pofu app icon">
+      <p class="eyebrow">Made for women</p>
+      <h1>Pofu</h1>
+      <p>The AI calorie counter that understands your cycle. Snap your plate — it counts everything. No guilt, just balance.</p>
+      <a id="store-link" class="button primary" href="https://apps.apple.com/app/id6778044605">Download on the App Store</a>
+      <p class="hint">Free to start · iPhone &amp; Apple Watch</p>
+    </div>
+  </main>
+</body>
+</html>
