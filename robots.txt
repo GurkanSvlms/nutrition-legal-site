@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gurkansvlms.github.io/nutrition-legal-site/sitemap.xml

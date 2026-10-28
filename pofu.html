@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pofu: the AI calorie counter made for women | iPhone app</title>
+  <meta name="description" content="Pofu is a free-to-start AI calorie counter made for women: calories and macros from a photo, cycle-aware tracking, gentle fasting and grace days on iPhone.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://gurkansvlms.github.io/nutrition-legal-site/pofu.html">
+  <meta name="apple-itunes-app" content="app-id=6778044605">
+  <meta name="theme-color" content="#FCE9F1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2E1229" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pofu">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Pofu: the AI calorie counter made for women">
+  <meta property="og:description" content="Snap your plate for calories and macros, track with your cycle in mind, and keep your streak without guilt. Free to start on iPhone.">
+  <meta property="og:url" content="https://gurkansvlms.github.io/nutrition-legal-site/pofu.html">
+  <meta property="og:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pofu, the calorie counter made for women, on iPhone with an AI-counted salad example">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pofu: the AI calorie counter made for women">
+  <meta name="twitter:description" content="Snap your plate for calories and macros, track with your cycle in mind, and keep your streak without guilt. Free to start on iPhone.">
+  <meta name="twitter:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/pofu-favicon.png?v=20260703">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260703">
+
+  <style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pofu",
+  "alternateName": "Pofu: Women's Calorie Counter",
+  "description": "Pofu is a free-to-start AI calorie counter made for women. Photograph a meal to get calorie and macro estimates, turn on optional cycle awareness, follow intermittent fasting windows without pressure, and keep your streak with grace days.",
+  "operatingSystem": "iOS",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "Calorie counter, macro tracker and intermittent fasting timer",
+  "url": "https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu",
+  "installUrl": "https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu",
+  "image": "https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg",
+  "mainEntityOfPage": "https://gurkansvlms.github.io/nutrition-legal-site/pofu.html",
+  "softwareRequirements": "Requires iOS 18.6 or later. The Apple Watch app requires watchOS 11.0 or later.",
+  "inLanguage": [
+    "en",
+    "tr",
+    "de",
+    "fr",
+    "pt",
+    "es",
+    "ko",
+    "ru",
+    "vi"
+  ],
+  "featureList": [
+    "AI photo scanning that estimates calories and macros from a photo of your meal",
+    "Optional cycle awareness with your cycle day and phase and gentler feedback; cycle data stays on your device",
+    "Intermittent fasting timer with 16:8, 14:10, 18:6 and 5:2 windows",
+    "Protein, carb and fat tracking with calorie and macro goals from a 2-minute quiz",
+    "Grace days that protect your streak when you miss a day",
+    "Voice logging, barcode scanning, typo-tolerant search, favorites and meal templates",
+    "Widget, Apple Watch app, Live Activities and Apple Health support"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to download. Optional in-app purchases for Pofu Pro: yearly plan with a 7-day free trial, monthly plan, or one-time lifetime purchase."
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ali Gürkan Sevilmiş",
+    "alternateName": "Ali Gurkan Sevilmis"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://gurkansvlms.github.io/nutrition-legal-site/pofu.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there a calorie counter that understands my cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pofu is a calorie counter with optional cycle awareness. When you turn it on, Pofu shows your cycle day and phase, and in the luteal phase a jump on the scale is not read as “you gained weight”: Pofu tells you it may be water. Its intermittent fasting suggestions adapt too, so it does not push a long fast during your luteal phase. Cycle tracking is off by default, your cycle data stays on your device, and Pofu does not predict your cycle or give medical advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which calorie app is gentle about missed days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu is built to be gentle about missed days. A grace day keeps your streak alive with no punishment, and when you go over your target you see your weekly balance instead of a scolding. The flexible weekend plan (part of Pofu Pro) leaves room for things like Saturday brunch, and a shorter fasting window still counts as a win."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a calorie counter app made for women?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pofu is an AI calorie counter made for women, with optional cycle awareness, gentle language, grace days, intermittent fasting windows and macro tracking. It is not women-only: anyone can use Pofu, and if cycle tracking is not relevant to you, you can simply leave it off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Pofu count calories from a photo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Snap a photo of your plate and Pofu’s AI food scanner estimates the food, the portion, the calories and the macros in seconds, with a visible confidence score on every estimate. These are estimates, not exact measurements, so check the portion and edit anything that looks off; when you fix something once, Pofu remembers it. You can also log by voice (Pofu Pro), barcode, search, favorites or meal templates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Pofu free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu is free to start. Barcode scanning, search and manual logging are free and unlimited, plus you get 1 free AI photo scan every day. Pofu Pro is optional and unlocks unlimited AI photos, voice logging, the AI coach, advanced analytics, fasting stats and the flexible weekend plan. Pro is available as a yearly plan with a 7-day free trial, a monthly plan, or a one-time lifetime purchase; the App Store shows the current price in your currency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Pofu work on Apple Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pofu has an Apple Watch app (watchOS 11.0 or later) where you can log in two taps. On your iPhone, a widget shows your remaining calories without unlocking your phone, Live Activities keep your fasting timer live, and Pofu also works with Apple Health."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Pofu good for intermittent fasting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu includes an intermittent fasting timer with 16:8, 14:10, 18:6 and 5:2 windows, so your eating window and your meal log are in one app. It is designed to be pressure-free: a shorter window still counts as a win, and with cycle awareness on, Pofu does not push a long fast during your luteal phase and offers 14:10 as a perfectly good choice. Fasting stats are part of Pofu Pro. Fasting is not right for everyone: if you are pregnant, breastfeeding or have a history of disordered eating, follow your doctor’s or dietitian’s advice first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Pofu track macros and protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pofu tracks protein, carbs and fat for every meal and shows clean charts of where your calories come from. A 2-minute quiz builds calorie and macro goals around your goal, pace and lifestyle, whether that is weight loss, maintenance or simply healthy eating. Advanced analytics are part of Pofu Pro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Pofu share my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu is designed to keep your meal, goal and progress records on your device whenever possible. Cycle tracking is off by default; if you turn it on, your cycle data stays on your device and is never sent to analytics. When you use an AI feature such as photo logging or voice logging, the photo, text or voice transcript needed for that request may be sent to Pofu’s AI providers, Google (Gemini) and Anthropic (Claude), to generate the result. You can export or delete your data anytime. The privacy policy has the details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Pofu available on Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not right now. Pofu is an iOS app for iPhone and iPad (iOS 18.6 or later), with an Apple Watch app (watchOS 11.0 or later). You can get it on the App Store."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="./" aria-label="Pofu home">
+        <img src="assets/img/icon-96.webp" alt="" width="34" height="34">
+        <span>Pofu</span>
+      </a>
+      <a class="btn btn--sm" href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu">Get the app</a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <p class="pill">Made for women · free to start on iPhone</p>
+      <h1>Pofu: the AI calorie counter made for women</h1>
+      <p class="lede">Snap your plate for calories and macros, track with your cycle in mind, and keep your streak without guilt.</p>
+      <p class="cta">
+        <a href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu"><img src="assets/img/app-store-badge.png" alt="Download Pofu on the App Store" width="180" height="60"></a>
+        <span class="fine">Free to start · optional Pofu Pro</span>
+      </p>
+    </section>
+
+    <section id="what-is-pofu">
+      <h2>What is Pofu?</h2>
+      <p>Pofu is a free-to-start calorie counter for women on iPhone and Apple Watch. You take a photo of your meal and its AI food scanner estimates the food, the portion, the calories and the macros, and you can edit anything that looks off. Pofu is made with women in mind: if you opt in to cycle awareness, it shows your cycle day and phase, and in the luteal phase it tells you a jump on the scale may be water instead of blaming you. It also offers intermittent fasting windows without pressure, protein and macro tracking, grace days that keep your streak alive when you miss a day, and a widget and Apple Watch app. Pofu is a tracking tool, not medical advice, and anyone can use it.</p>
+    </section>
+
+    <section id="at-a-glance">
+      <h2>Pofu at a glance</h2>
+      <div class="card">
+        <dl class="facts">
+          <dt>What it is</dt>
+          <dd>An AI calorie counter, macro tracker and intermittent fasting timer</dd>
+          <dt>Made for</dt>
+          <dd>Women, with optional cycle awareness. Anyone can use it.</dd>
+          <dt>Platforms</dt>
+          <dd>iPhone and iPad (iOS 18.6 or later) and Apple Watch (watchOS 11.0 or later). There is no Android version right now.</dd>
+          <dt>Price</dt>
+          <dd>Free to start. Optional Pofu Pro through in-app purchases.</dd>
+          <dt>Languages</dt>
+          <dd>English, Türkçe, Deutsch, Français, Português, Español, 한국어, Русский, Tiếng Việt</dd>
+          <dt>Developer</dt>
+          <dd>Ali Gürkan Sevilmiş, an independent developer</dd>
+          <dt>Download</dt>
+          <dd><a href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu">Pofu: Women’s Calorie Counter on the App Store</a></dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul>
+        <li><a href="#photo-scanning">Photo scanning</a></li>
+        <li><a href="#cycle-aware">Cycle awareness</a></li>
+        <li><a href="#fasting">Intermittent fasting</a></li>
+        <li><a href="#macros">Macros and protein</a></li>
+        <li><a href="#grace-days">Grace days</a></li>
+        <li><a href="#widget-watch">Widget and Apple Watch</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#turkce" lang="tr">Türkçe</a></li>
+      </ul>
+    </section>
+
+    <section id="photo-scanning">
+      <h2>Count calories from a photo</h2>
+      <p>Open the camera, snap your plate, and Pofu’s AI food scanner estimates what is on it, how big the portion is, and the calories and macros, in seconds and with no weighing. Every estimate shows a confidence score, so you can see how sure the AI is.</p>
+      <p>These are estimates, not lab measurements. Check the portion and edit anything that looks off: when you fix something once, Pofu remembers the correction.</p>
+      <p>No photo? Say what you ate (“two eggs, a slice of toast, a spoon of peanut butter”), scan a barcode, use typo-tolerant search, or tap a favorite or a saved meal template. Voice logging is part of Pofu Pro; barcode, search and manual logging are free.</p>
+    </section>
+
+    <section id="cycle-aware">
+      <h2>Cycle-aware tracking, on your terms</h2>
+      <p>Most calorie apps apply one rulebook to everyone. Pofu can take your cycle into account if you want it to.</p>
+      <ul>
+        <li>Cycle tracking is off by default. Turning it on is your call.</li>
+        <li>With it on, Pofu shows your cycle day and phase.</li>
+        <li>In the luteal phase, a jump on the scale is not read as “you gained weight”. Pofu tells you it may be water.</li>
+        <li>Go over your target and you get your weekly balance, not a scolding.</li>
+        <li>Your cycle data stays on your device.</li>
+      </ul>
+      <p>Pofu does not predict your cycle and is not a medical tool.</p>
+    </section>
+
+    <section id="fasting">
+      <h2>Intermittent fasting without pressure</h2>
+      <p>Pick a 16:8, 14:10, 18:6 or 5:2 window and let the intermittent fasting timer keep your eating window in view, with Live Activities for a live timer. A shorter window still counts as a win.</p>
+      <p>Turn on cycle awareness and Pofu adapts instead of pushing: it does not push a long fast during your luteal phase, and 14:10 is offered as a perfectly good choice. Fasting stats are part of Pofu Pro.</p>
+      <p>Fasting is not right for everyone. If you are pregnant, breastfeeding or have a history of disordered eating, follow your doctor’s or dietitian’s advice first.</p>
+    </section>
+
+    <section id="macros">
+      <h2>Track macros and protein</h2>
+      <p>Pofu tracks protein, carbs and fat for every meal and shows clean charts of where your calories come from. A 2-minute quiz builds calorie and macro goals around your goal, pace and lifestyle, whether that is weight loss, maintenance or simply healthy eating. Advanced analytics are part of Pofu Pro.</p>
+    </section>
+
+    <section id="grace-days">
+      <h2>Grace days, not guilt</h2>
+      <p>Missed a day? A grace day keeps your streak alive, with no punishment. Go over your target and you see your weekly balance instead of a scolding. The flexible weekend plan (Pofu Pro) leaves room for Saturday brunch.</p>
+    </section>
+
+    <section id="widget-watch">
+      <h2>Widget, Apple Watch and Apple Health</h2>
+      <p>See your remaining calories on a widget without unlocking your phone, log from Apple Watch in two taps, and keep your fasting timer live with Live Activities. Pofu also works with Apple Health.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>Privacy: cycle data stays on your device</h2>
+      <ul>
+        <li>Cycle tracking is off by default. If you turn it on, your cycle data stays on your device and is never sent to analytics.</li>
+        <li>Your data belongs to you: export or delete it anytime.</li>
+        <li>Pofu is designed to keep your meal, goal and progress records on your device whenever possible. When you use an AI feature such as photo logging or voice logging, the photo, text or voice transcript needed for that request may be sent to Pofu’s AI providers, Google (Gemini) and Anthropic (Claude), to generate the result.</li>
+        <li>Purchases are handled by Apple.</li>
+      </ul>
+      <p>Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing: free to start</h2>
+      <p><strong>Free:</strong> barcode scanning, search and manual logging are free and unlimited, plus 1 free AI photo scan every day.</p>
+      <p><strong>Pofu Pro (optional):</strong> unlimited AI photos, voice logging, the AI coach, advanced analytics, fasting stats and the flexible weekend plan. Pro comes as a yearly plan with a 7-day free trial, a monthly plan, or a one-time lifetime purchase. The App Store shows the current price in your currency.</p>
+      <p>Subscriptions renew automatically unless auto-renew is turned off at least 24 hours before the end of the current period. You can manage or cancel anytime in your App Store account settings.</p>
+      <p class="cta"><a class="btn" href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu">Get Pofu on the App Store</a></p>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="qa">
+        <h3>Is there a calorie counter that understands my cycle?</h3>
+        <p>Yes. Pofu is a calorie counter with optional cycle awareness. When you turn it on, Pofu shows your cycle day and phase, and in the luteal phase a jump on the scale is not read as “you gained weight”: Pofu tells you it may be water. Its intermittent fasting suggestions adapt too, so it does not push a long fast during your luteal phase. Cycle tracking is off by default, your cycle data stays on your device, and Pofu does not predict your cycle or give medical advice.</p>
+      </div>
+      <div class="qa">
+        <h3>Which calorie app is gentle about missed days?</h3>
+        <p>Pofu is built to be gentle about missed days. A grace day keeps your streak alive with no punishment, and when you go over your target you see your weekly balance instead of a scolding. The flexible weekend plan (part of Pofu Pro) leaves room for things like Saturday brunch, and a shorter fasting window still counts as a win.</p>
+      </div>
+      <div class="qa">
+        <h3>Is there a calorie counter app made for women?</h3>
+        <p>Yes. Pofu is an AI calorie counter made for women, with optional cycle awareness, gentle language, grace days, intermittent fasting windows and macro tracking. It is not women-only: anyone can use Pofu, and if cycle tracking is not relevant to you, you can simply leave it off.</p>
+      </div>
+      <div class="qa">
+        <h3>Does Pofu count calories from a photo?</h3>
+        <p>Yes. Snap a photo of your plate and Pofu’s AI food scanner estimates the food, the portion, the calories and the macros in seconds, with a visible confidence score on every estimate. These are estimates, not exact measurements, so check the portion and edit anything that looks off; when you fix something once, Pofu remembers it. You can also log by voice (Pofu Pro), barcode, search, favorites or meal templates.</p>
+      </div>
+      <div class="qa">
+        <h3>Is Pofu free?</h3>
+        <p>Pofu is free to start. Barcode scanning, search and manual logging are free and unlimited, plus you get 1 free AI photo scan every day. Pofu Pro is optional and unlocks unlimited AI photos, voice logging, the AI coach, advanced analytics, fasting stats and the flexible weekend plan. Pro is available as a yearly plan with a 7-day free trial, a monthly plan, or a one-time lifetime purchase; the App Store shows the current price in your currency.</p>
+      </div>
+      <div class="qa">
+        <h3>Does Pofu work on Apple Watch?</h3>
+        <p>Yes. Pofu has an Apple Watch app (watchOS 11.0 or later) where you can log in two taps. On your iPhone, a widget shows your remaining calories without unlocking your phone, Live Activities keep your fasting timer live, and Pofu also works with Apple Health.</p>
+      </div>
+      <div class="qa">
+        <h3>Is Pofu good for intermittent fasting?</h3>
+        <p>Pofu includes an intermittent fasting timer with 16:8, 14:10, 18:6 and 5:2 windows, so your eating window and your meal log are in one app. It is designed to be pressure-free: a shorter window still counts as a win, and with cycle awareness on, Pofu does not push a long fast during your luteal phase and offers 14:10 as a perfectly good choice. Fasting stats are part of Pofu Pro. Fasting is not right for everyone: if you are pregnant, breastfeeding or have a history of disordered eating, follow your doctor’s or dietitian’s advice first.</p>
+      </div>
+      <div class="qa">
+        <h3>Does Pofu track macros and protein?</h3>
+        <p>Yes. Pofu tracks protein, carbs and fat for every meal and shows clean charts of where your calories come from. A 2-minute quiz builds calorie and macro goals around your goal, pace and lifestyle, whether that is weight loss, maintenance or simply healthy eating. Advanced analytics are part of Pofu Pro.</p>
+      </div>
+      <div class="qa">
+        <h3>Does Pofu share my data?</h3>
+        <p>Pofu is designed to keep your meal, goal and progress records on your device whenever possible. Cycle tracking is off by default; if you turn it on, your cycle data stays on your device and is never sent to analytics. When you use an AI feature such as photo logging or voice logging, the photo, text or voice transcript needed for that request may be sent to Pofu’s AI providers, Google (Gemini) and Anthropic (Claude), to generate the result. You can export or delete your data anytime. The <a href="privacy.html">privacy policy</a> has the details.</p>
+      </div>
+      <div class="qa">
+        <h3>Is Pofu available on Android?</h3>
+        <p>Not right now. Pofu is an iOS app for iPhone and iPad (iOS 18.6 or later), with an Apple Watch app (watchOS 11.0 or later). You can get it on the <a href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu">App Store</a>.</p>
+      </div>
+    </section>
+
+    <section id="not-medical">
+      <h2>What Pofu is not</h2>
+      <div class="note">
+        <p>Pofu does not provide medical diagnosis or treatment and does not predict your cycle. Calorie and macro numbers from the AI are estimates. If you are pregnant, breastfeeding or have a history of disordered eating, always follow your doctor’s or dietitian’s advice first.</p>
+      </div>
+    </section>
+
+    <section id="turkce" lang="tr">
+      <h2>Türkçe</h2>
+      <p>Pofu, kadınlar düşünülerek tasarlanmış yapay zekâ kalori sayacıdır. Tabağının fotoğrafını çekersin; Pofu yemeği, porsiyonu, kaloriyi ve makroları tahmin eder, yanlış bulduğunu düzeltirsin. İstersen açabileceğin döngü farkındalığı regl döngünü dikkate alır ve bu veri yalnızca telefonunda kalır; aralıklı orucu (16:8, 14:10, 18:6, 5:2) baskı yapmadan takip eder, kaçırdığın bir günde joker (grace day) serini korur. iPhone ve Apple Watch’ta ücretsiz başlar, Pofu Pro isteğe bağlıdır; ayrıntılar için <a href="tr/">Türkçe sayfaya</a> bakabilirsin.</p>
+    </section>
+
+    <section class="center" aria-labelledby="final-title">
+      <h2 id="final-title">Snap today, start today</h2>
+      <p class="cta">
+        <a href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?ct=web_pofu"><img src="assets/img/app-store-badge.png" alt="Download Pofu on the App Store" width="180" height="60" loading="lazy"></a>
+      </p>
+      <p class="fine">Free to start · iPhone, iPad and Apple Watch</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <nav aria-label="Legal and support">
+        <a href="./">Pofu home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a href="tr/" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="mailto:widgetai.support@gmail.com">widgetai.support@gmail.com</a>
+      </nav>
+      <p>Last updated <time datetime="2026-10-28">October 28, 2026</time>. Pofu is a tracking tool, not medical advice. The social preview image includes AI-generated imagery.</p>
+      <p>Apple, the Apple logo, iPhone, iPad, Apple Watch and App Store are trademarks of Apple Inc. © 2026 Pofu.</p>
+    </div>
+  </footer>
+</body>
+</html>
