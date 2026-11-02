@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TKNL87497B.com.gurkan.WidgetAINutrition"],
+        "components": [
+          { "/": "/pofu/*", "comment": "Pofu in-app deep links (today, fasting, 7day, invite, pro…)" }
+        ]
+      }
+    ]
+  }
+}
