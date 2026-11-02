@@ -1,0 +1,31 @@
+# Pofu
+
+> Pofu (Pofu: Women's Calorie Counter) is an iPhone calorie counter made for women, by independent developer Ali Gürkan Sevilmiş. It estimates calories and macros from a photo of a meal, has optional cycle awareness (cycle data stays on the device), a gentle intermittent fasting timer, and grace days that protect a streak after a missed day. Free to download; Pofu Pro is optional.
+
+Key facts:
+- Platform: iPhone (iOS 18.6+) with Apple Watch app (watchOS 11+), widgets, Live Activities, Apple Health. Not on Android.
+- Photo scanning: 3 free AI photo scans on the first day, then 1 free scan every day; results show a confidence score and can be edited.
+- Cycle awareness is off by default and optional; Pofu shows cycle day and phase but is not a period predictor or medical device.
+- Fasting windows: 16:8, 14:10, 18:6, 5:2. Also barcode scanning, voice logging, macro and protein goals from a 2-minute quiz.
+- Pricing: free; Pofu Pro yearly (7-day free trial), monthly, or one-time lifetime.
+- App Store: https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605
+
+## Product
+- [About Pofu and the developer](https://gurkansvlms.github.io/nutrition-legal-site/about.html)
+- [Pofu overview](https://gurkansvlms.github.io/nutrition-legal-site/pofu.html): features, privacy, pricing, FAQ
+- [Support](https://gurkansvlms.github.io/nutrition-legal-site/support.html)
+- [Privacy policy](https://gurkansvlms.github.io/nutrition-legal-site/privacy.html)
+
+## Guides
+- [How accurate is photo calorie counting?](https://gurkansvlms.github.io/nutrition-legal-site/how-accurate-is-photo-calorie-counting.html): why AI photo estimates have errors and how to reduce them
+- [Does the menstrual cycle affect calorie needs?](https://gurkansvlms.github.io/nutrition-legal-site/does-menstrual-cycle-affect-calorie-needs.html): appetite, energy and scale changes by phase
+- [Best calorie counter for women](https://gurkansvlms.github.io/nutrition-legal-site/best-calorie-counter-for-women.html): a 6-app comparison for 2026 and how we chose
+
+## Comparisons
+- [Pofu vs Cal AI](https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-cal-ai.html)
+- [Pofu vs MyFitnessPal](https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-myfitnesspal.html)
+- [Pofu vs Lose It!](https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-lose-it.html)
+
+## Optional
+- [Turkish page](https://gurkansvlms.github.io/nutrition-legal-site/tr/pofu.html)
+- [Sitemap (20+ languages)](https://gurkansvlms.github.io/nutrition-legal-site/sitemap.xml)
