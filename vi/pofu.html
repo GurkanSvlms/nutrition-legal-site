@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pofu: ứng dụng đếm calo bằng AI dành riêng cho phụ nữ | Ứng dụng iPhone</title>
+  <meta name="description" content="Pofu là ứng dụng đếm calo bằng AI dành cho phụ nữ, dùng miễn phí để bắt đầu: tính calo và macro từ ảnh, theo dõi theo chu kỳ, nhịn ăn nhẹ nhàng và ngày ân hạn trên iPhone.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://gurkansvlms.github.io/nutrition-legal-site/vi/pofu.html">
+<link rel="alternate" hreflang="en" href="https://gurkansvlms.github.io/nutrition-legal-site/pofu.html">
+<link rel="alternate" hreflang="tr" href="https://gurkansvlms.github.io/nutrition-legal-site/tr/pofu.html">
+<link rel="alternate" hreflang="de" href="https://gurkansvlms.github.io/nutrition-legal-site/de/pofu.html">
+<link rel="alternate" hreflang="fr" href="https://gurkansvlms.github.io/nutrition-legal-site/fr/pofu.html">
+<link rel="alternate" hreflang="es" href="https://gurkansvlms.github.io/nutrition-legal-site/es/pofu.html">
+<link rel="alternate" hreflang="it" href="https://gurkansvlms.github.io/nutrition-legal-site/it/pofu.html">
+<link rel="alternate" hreflang="pt-BR" href="https://gurkansvlms.github.io/nutrition-legal-site/pt-BR/pofu.html">
+<link rel="alternate" hreflang="nl" href="https://gurkansvlms.github.io/nutrition-legal-site/nl/pofu.html">
+<link rel="alternate" hreflang="pl" href="https://gurkansvlms.github.io/nutrition-legal-site/pl/pofu.html">
+<link rel="alternate" hreflang="ru" href="https://gurkansvlms.github.io/nutrition-legal-site/ru/pofu.html">
+<link rel="alternate" hreflang="uk" href="https://gurkansvlms.github.io/nutrition-legal-site/uk/pofu.html">
+<link rel="alternate" hreflang="cs" href="https://gurkansvlms.github.io/nutrition-legal-site/cs/pofu.html">
+<link rel="alternate" hreflang="ro" href="https://gurkansvlms.github.io/nutrition-legal-site/ro/pofu.html">
+<link rel="alternate" hreflang="sv" href="https://gurkansvlms.github.io/nutrition-legal-site/sv/pofu.html">
+<link rel="alternate" hreflang="ja" href="https://gurkansvlms.github.io/nutrition-legal-site/ja/pofu.html">
+<link rel="alternate" hreflang="ko" href="https://gurkansvlms.github.io/nutrition-legal-site/ko/pofu.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://gurkansvlms.github.io/nutrition-legal-site/zh-Hans/pofu.html">
+<link rel="alternate" hreflang="id" href="https://gurkansvlms.github.io/nutrition-legal-site/id/pofu.html">
+<link rel="alternate" hreflang="vi" href="https://gurkansvlms.github.io/nutrition-legal-site/vi/pofu.html">
+<link rel="alternate" hreflang="th" href="https://gurkansvlms.github.io/nutrition-legal-site/th/pofu.html">
+<link rel="alternate" hreflang="hi" href="https://gurkansvlms.github.io/nutrition-legal-site/hi/pofu.html">
+<link rel="alternate" hreflang="ar" href="https://gurkansvlms.github.io/nutrition-legal-site/ar/pofu.html">
+<link rel="alternate" hreflang="x-default" href="https://gurkansvlms.github.io/nutrition-legal-site/pofu.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+  <meta name="theme-color" content="#FCE9F1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2E1229" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pofu">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="Pofu: ứng dụng đếm calo bằng AI dành riêng cho phụ nữ">
+  <meta property="og:description" content="Chụp đĩa ăn để biết calo và macro, theo dõi có tính đến chu kỳ của bạn, và giữ chuỗi ngày mà không áy náy. Miễn phí để bắt đầu trên iPhone.">
+  <meta property="og:url" content="https://gurkansvlms.github.io/nutrition-legal-site/vi/pofu.html">
+  <meta property="og:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pofu, ứng dụng đếm calo dành cho phụ nữ, trên iPhone với ví dụ món salad do AI tính calo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pofu: ứng dụng đếm calo bằng AI dành riêng cho phụ nữ">
+  <meta name="twitter:description" content="Chụp đĩa ăn để biết calo và macro, theo dõi có tính đến chu kỳ của bạn, và giữ chuỗi ngày mà không áy náy. Miễn phí để bắt đầu trên iPhone.">
+  <meta name="twitter:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/pofu-favicon.png?v=20260703">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20260703">
+
+  <style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pofu",
+  "alternateName": "Pofu: Women's Calorie Counter",
+  "description": "Pofu là ứng dụng đếm calo bằng AI dành cho phụ nữ, miễn phí để bắt đầu. Chụp ảnh bữa ăn để có ước tính calo và macro, bật nhận biết chu kỳ tùy chọn, theo dõi khung giờ nhịn ăn gián đoạn không áp lực và giữ chuỗi ngày nhờ ngày ân hạn.",
+  "operatingSystem": "iOS",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "Ứng dụng đếm calo, theo dõi macro và hẹn giờ nhịn ăn gián đoạn",
+  "url": "https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&ct=web_vi_pofu",
+  "installUrl": "https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&ct=web_vi_pofu",
+  "image": "https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg",
+  "mainEntityOfPage": "https://gurkansvlms.github.io/nutrition-legal-site/vi/pofu.html",
+  "softwareRequirements": "Yêu cầu iOS 18.6 trở lên. Ứng dụng Apple Watch yêu cầu watchOS 11.0 trở lên.",
+  "inLanguage": [
+    "en",
+    "tr",
+    "de",
+    "fr",
+    "pt",
+    "es",
+    "ko",
+    "ru",
+    "vi"
+  ],
+  "featureList": [
+    "Quét ảnh bằng AI để ước tính calo và macro từ ảnh bữa ăn của bạn",
+    "Nhận biết chu kỳ tùy chọn với ngày và giai đoạn chu kỳ cùng phản hồi dịu dàng hơn; dữ liệu chu kỳ nằm trên thiết bị của bạn",
+    "Bộ hẹn giờ nhịn ăn gián đoạn với các khung 16:8, 14:10, 18:6 và 5:2",
+    "Theo dõi protein, carb và chất béo với mục tiêu calo và macro từ bài trắc nghiệm 2 phút",
+    "Ngày ân hạn bảo vệ chuỗi ngày của bạn khi bạn lỡ một hôm",
+    "Ghi bằng giọng nói, quét mã vạch, tìm kiếm chịu lỗi chính tả, món yêu thích và mẫu bữa ăn",
+    "Hỗ trợ widget, ứng dụng Apple Watch, Live Activities và Apple Health"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "url": "https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&ct=web_vi_pofu",
+    "description": "Tải miễn phí. Có mua hàng trong ứng dụng tùy chọn cho Pofu Pro: gói năm kèm 7 ngày dùng thử miễn phí, gói tháng hoặc mua một lần dùng trọn đời."
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ali Gürkan Sevilmiş",
+    "alternateName": "Ali Gurkan Sevilmis"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://gurkansvlms.github.io/nutrition-legal-site/vi/pofu.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Có ứng dụng đếm calo nào hiểu chu kỳ của tôi không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Pofu là ứng dụng đếm calo với tính năng nhận biết chu kỳ tùy chọn. Khi bạn bật, Pofu hiển thị ngày và giai đoạn chu kỳ của bạn, và ở giai đoạn hoàng thể, số cân nhảy lên không bị coi là “bạn tăng cân”: Pofu cho bạn biết đó có thể là nước. Gợi ý nhịn ăn gián đoạn cũng điều chỉnh theo, nên ứng dụng không đẩy bạn nhịn ăn dài trong giai đoạn hoàng thể. Theo dõi chu kỳ mặc định đang tắt, dữ liệu chu kỳ của bạn nằm trên thiết bị, và Pofu không dự đoán chu kỳ cũng như không đưa ra lời khuyên y tế."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ứng dụng calo nào nhẹ nhàng với những ngày bị lỡ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu được tạo ra để nhẹ nhàng với những ngày bị lỡ. Ngày ân hạn giữ chuỗi của bạn mà không có hình phạt, và khi vượt mục tiêu, bạn thấy cân đối trong tuần thay vì bị mắng. Kế hoạch cuối tuần linh hoạt (thuộc Pofu Pro) chừa chỗ cho những dịp như brunch thứ Bảy, và khung nhịn ăn ngắn hơn vẫn được tính là một thành công."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Có ứng dụng đếm calo nào dành cho phụ nữ không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Pofu là ứng dụng đếm calo bằng AI dành cho phụ nữ, với tính năng nhận biết chu kỳ tùy chọn, lời lẽ nhẹ nhàng, ngày ân hạn, khung giờ nhịn ăn gián đoạn và theo dõi macro. Pofu không chỉ dành riêng cho phụ nữ: ai cũng có thể dùng, và nếu theo dõi chu kỳ không liên quan đến bạn, cứ để tính năng đó tắt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có đếm calo từ ảnh không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Chụp đĩa ăn và trình quét thực phẩm AI của Pofu ước tính món ăn, khẩu phần, calo và macro trong vài giây, kèm điểm tin cậy hiển thị trên mỗi ước tính. Đây là ước tính, không phải số đo chính xác, nên hãy kiểm tra khẩu phần và chỉnh lại chỗ nào thấy lạ; khi bạn sửa một lần, Pofu sẽ nhớ. Bạn cũng có thể ghi bằng giọng nói (miễn phí 1 lần mỗi ngày, 10 lần mỗi ngày với Pofu Pro), mã vạch, tìm kiếm, món yêu thích hoặc mẫu bữa ăn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có miễn phí không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu miễn phí để bắt đầu. Quét mã vạch, tìm kiếm và nhập tay miễn phí, không giới hạn, cùng 3 lần quét ảnh AI miễn phí trong ngày đầu tiên và 1 lần mỗi ngày sau đó. Pofu Pro là tùy chọn, nâng quét ảnh AI và ghi bằng giọng nói lên tối đa 10 lần mỗi ngày, đồng thời mở khóa huấn luyện viên AI, phân tích nâng cao, thống kê nhịn ăn và kế hoạch cuối tuần linh hoạt. Pro có gói năm kèm 7 ngày dùng thử miễn phí, gói tháng hoặc mua một lần dùng trọn đời; App Store hiển thị mức giá hiện tại theo đơn vị tiền tệ của bạn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có dùng được trên Apple Watch không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Pofu có ứng dụng Apple Watch (watchOS 11.0 trở lên) để bạn ghi bữa ăn chỉ với hai lần chạm. Trên iPhone, widget hiển thị lượng calo còn lại mà không cần mở khóa điện thoại, Live Activities giữ đồng hồ nhịn ăn luôn hiển thị, và Pofu cũng hoạt động với Apple Health."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có phù hợp để nhịn ăn gián đoạn không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu có bộ hẹn giờ nhịn ăn gián đoạn với các khung 16:8, 14:10, 18:6 và 5:2, nên khung giờ ăn và nhật ký bữa ăn của bạn nằm chung một ứng dụng. Ứng dụng được thiết kế không tạo áp lực: khung ngắn hơn vẫn được tính là một thành công, và khi bật nhận biết chu kỳ, Pofu không đẩy bạn nhịn ăn dài trong giai đoạn hoàng thể mà gợi ý 14:10 như một lựa chọn hoàn toàn ổn. Thống kê nhịn ăn thuộc Pofu Pro. Nhịn ăn không phù hợp với tất cả mọi người: nếu bạn đang mang thai, cho con bú hoặc từng có rối loạn ăn uống, hãy làm theo lời khuyên của bác sĩ hoặc chuyên gia dinh dưỡng trước."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có theo dõi macro và protein không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Có. Pofu theo dõi protein, carb và chất béo cho từng bữa và hiển thị biểu đồ rõ ràng về nguồn gốc lượng calo của bạn. Một bài trắc nghiệm 2 phút sẽ xây dựng mục tiêu calo và macro phù hợp với mục tiêu, tốc độ và lối sống của bạn, dù là giảm cân, giữ cân hay chỉ đơn giản là ăn uống lành mạnh. Phân tích nâng cao thuộc Pofu Pro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có chia sẻ dữ liệu của tôi không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pofu được thiết kế để giữ nhật ký bữa ăn, mục tiêu và tiến độ của bạn trên thiết bị bất cứ khi nào có thể. Theo dõi chu kỳ mặc định đang tắt; nếu bạn bật, dữ liệu chu kỳ của bạn nằm trên thiết bị và không bao giờ được gửi đến công cụ phân tích. Khi bạn dùng tính năng AI như ghi bằng ảnh hoặc giọng nói, ảnh, văn bản hoặc bản chép lời giọng nói cần cho yêu cầu đó có thể được gửi đến các nhà cung cấp AI của Pofu là Google (Gemini) và Anthropic (Claude) để tạo kết quả. Bạn có thể xuất hoặc xóa dữ liệu bất cứ lúc nào. Chính sách quyền riêng tư (bằng tiếng Anh) có đầy đủ chi tiết."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pofu có trên Android không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hiện chưa có. Pofu là ứng dụng iOS cho iPhone và iPad (iOS 18.6 trở lên), kèm ứng dụng Apple Watch (watchOS 11.0 trở lên). Bạn có thể tải trên App Store."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Chuyển đến nội dung</a>
+
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="../" aria-label="Trang chủ Pofu">
+        <img src="../assets/img/icon-96.webp" alt="" width="34" height="34">
+        <span>Pofu</span>
+      </a>
+      <a class="btn btn--sm" href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_pofu">Tải ứng dụng</a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <p class="pill">Dành cho phụ nữ · miễn phí để bắt đầu trên iPhone</p>
+      <h1>Pofu: ứng dụng đếm calo bằng AI dành riêng cho phụ nữ</h1>
+      <p class="lede">Chụp đĩa ăn để biết calo và macro, theo dõi có tính đến chu kỳ của bạn, và giữ chuỗi ngày mà không áy náy.</p>
+      <p class="cta">
+        <a href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_pofu"><img src="../assets/img/app-store-badge.png" alt="Tải Pofu trên App Store" width="180" height="60"></a>
+        <span class="fine">Miễn phí để bắt đầu · Pofu Pro tùy chọn</span>
+      </p>
+    </section>
+
+    <section id="what-is-pofu">
+      <h2>Pofu là gì?</h2>
+      <p>Pofu là ứng dụng đếm calo dành cho phụ nữ trên iPhone và Apple Watch, miễn phí để bắt đầu. Bạn chụp ảnh bữa ăn, trình quét thực phẩm bằng AI sẽ ước tính món ăn, khẩu phần, calo và macro, và bạn có thể chỉnh lại bất cứ chỗ nào thấy chưa đúng. Pofu được thiết kế với phụ nữ trong tâm trí: nếu bạn bật tính năng nhận biết chu kỳ, ứng dụng sẽ hiển thị ngày và giai đoạn chu kỳ của bạn, và ở giai đoạn hoàng thể, nó cho bạn biết số cân tăng lên có thể chỉ là nước thay vì trách móc bạn. Pofu còn có khung giờ nhịn ăn gián đoạn không áp lực, theo dõi protein và macro, ngày ân hạn giúp giữ chuỗi ngày khi bạn lỡ một hôm, cùng widget và ứng dụng Apple Watch. Pofu là công cụ theo dõi, không phải lời khuyên y tế, và ai cũng có thể dùng.</p>
+    </section>
+
+    <section id="at-a-glance">
+      <h2>Pofu trong một cái nhìn</h2>
+      <div class="card">
+        <dl class="facts">
+          <dt>Đây là gì</dt>
+          <dd>Ứng dụng đếm calo bằng AI, theo dõi macro và hẹn giờ nhịn ăn gián đoạn</dd>
+          <dt>Dành cho</dt>
+          <dd>Phụ nữ, với tính năng nhận biết chu kỳ tùy chọn. Ai cũng có thể dùng.</dd>
+          <dt>Nền tảng</dt>
+          <dd>iPhone và iPad (iOS 18.6 trở lên) và Apple Watch (watchOS 11.0 trở lên). Hiện chưa có phiên bản Android.</dd>
+          <dt>Giá</dt>
+          <dd>Miễn phí để bắt đầu. Pofu Pro tùy chọn qua mua hàng trong ứng dụng.</dd>
+          <dt>Ngôn ngữ</dt>
+          <dd>English, Türkçe, Deutsch, Français, Português, Español, 한국어, Русский, Tiếng Việt</dd>
+          <dt>Nhà phát triển</dt>
+          <dd>Ali Gürkan Sevilmiş, một nhà phát triển độc lập</dd>
+          <dt>Tải về</dt>
+          <dd><a href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_pofu">Pofu: Women’s Calorie Counter trên App Store</a></dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Trong trang này</h2>
+      <ul>
+        <li><a href="#photo-scanning">Quét ảnh</a></li>
+        <li><a href="#cycle-aware">Nhận biết chu kỳ</a></li>
+        <li><a href="#fasting">Nhịn ăn gián đoạn</a></li>
+        <li><a href="#macros">Macro và protein</a></li>
+        <li><a href="#grace-days">Ngày ân hạn</a></li>
+        <li><a href="#widget-watch">Widget và Apple Watch</a></li>
+        <li><a href="#privacy">Quyền riêng tư</a></li>
+        <li><a href="#pricing">Giá</a></li>
+        <li><a href="#faq">Hỏi đáp</a></li>
+        <li><a href="#turkce" lang="tr">Türkçe</a></li>
+      </ul>
+    </section>
+
+    <section id="photo-scanning">
+      <h2>Đếm calo từ một bức ảnh</h2>
+      <p>Mở camera, chụp đĩa ăn, và trình quét thực phẩm AI của Pofu ước tính món bạn đang ăn, khẩu phần lớn nhỏ ra sao, cùng calo và macro, chỉ trong vài giây và không cần cân. Mỗi ước tính đều có điểm tin cậy, nên bạn thấy được AI chắc chắn đến đâu.</p>
+      <p>Đây là ước tính, không phải số đo trong phòng thí nghiệm. Hãy kiểm tra khẩu phần và chỉnh lại chỗ nào thấy lạ: khi bạn sửa một lần, Pofu sẽ nhớ chỉnh sửa đó.</p>
+      <p>Không có ảnh? Hãy nói bạn đã ăn gì (“hai quả trứng, một lát bánh mì nướng, một thìa bơ đậu phộng”), quét mã vạch, dùng tìm kiếm chịu được lỗi chính tả, hoặc chạm vào món yêu thích hay mẫu bữa ăn đã lưu. Ghi bằng giọng nói miễn phí mỗi ngày một lần (10 lần mỗi ngày với Pofu Pro); mã vạch, tìm kiếm và nhập tay miễn phí, không giới hạn.</p>
+    </section>
+
+    <section id="cycle-aware">
+      <h2>Theo dõi theo chu kỳ, do bạn quyết định</h2>
+      <p>Hầu hết ứng dụng calo áp dụng một bộ quy tắc cho tất cả mọi người. Pofu có thể tính đến chu kỳ của bạn, nếu bạn muốn.</p>
+      <ul>
+        <li>Theo dõi chu kỳ mặc định đang tắt. Bật hay không là quyền của bạn.</li>
+        <li>Khi bật, Pofu hiển thị ngày và giai đoạn chu kỳ của bạn.</li>
+        <li>Ở giai đoạn hoàng thể, số cân nhảy lên không bị coi là “bạn tăng cân”. Pofu cho bạn biết đó có thể là nước.</li>
+        <li>Nếu vượt mục tiêu, bạn sẽ thấy cân đối trong tuần, chứ không bị mắng.</li>
+        <li>Dữ liệu chu kỳ của bạn chỉ nằm trên thiết bị của bạn.</li>
+      </ul>
+      <p>Pofu không dự đoán chu kỳ của bạn và không phải công cụ y tế.</p>
+    </section>
+
+    <section id="fasting">
+      <h2>Nhịn ăn gián đoạn không áp lực</h2>
+      <p>Chọn khung 16:8, 14:10, 18:6 hoặc 5:2 và để bộ hẹn giờ nhịn ăn gián đoạn giúp bạn theo dõi khung giờ ăn, kèm Live Activities để xem đồng hồ trực tiếp. Khung ngắn hơn vẫn được tính là một thành công.</p>
+      <p>Bật tính năng nhận biết chu kỳ và Pofu sẽ điều chỉnh thay vì thúc ép: ứng dụng không đẩy bạn nhịn ăn dài trong giai đoạn hoàng thể, và 14:10 được gợi ý như một lựa chọn hoàn toàn ổn. Thống kê nhịn ăn thuộc Pofu Pro.</p>
+      <p>Nhịn ăn không phù hợp với tất cả mọi người. Nếu bạn đang mang thai, cho con bú hoặc từng có rối loạn ăn uống, hãy làm theo lời khuyên của bác sĩ hoặc chuyên gia dinh dưỡng trước.</p>
+    </section>
+
+    <section id="macros">
+      <h2>Theo dõi macro và protein</h2>
+      <p>Pofu theo dõi protein, carb và chất béo cho từng bữa và hiển thị biểu đồ rõ ràng về nguồn gốc lượng calo của bạn. Một bài trắc nghiệm 2 phút sẽ xây dựng mục tiêu calo và macro phù hợp với mục tiêu, tốc độ và lối sống của bạn, dù là giảm cân, giữ cân hay chỉ đơn giản là ăn uống lành mạnh. Phân tích nâng cao thuộc Pofu Pro.</p>
+    </section>
+
+    <section id="grace-days">
+      <h2>Ngày ân hạn, không áy náy</h2>
+      <p>Lỡ một ngày? Ngày ân hạn giữ chuỗi của bạn không bị đứt, không có hình phạt. Nếu vượt mục tiêu, bạn sẽ thấy cân đối trong tuần thay vì bị mắng. Kế hoạch cuối tuần linh hoạt (Pofu Pro) chừa chỗ cho bữa brunch thứ Bảy.</p>
+    </section>
+
+    <section id="widget-watch">
+      <h2>Widget, Apple Watch và Apple Health</h2>
+      <p>Xem lượng calo còn lại trên widget mà không cần mở khóa điện thoại, ghi bữa ăn từ Apple Watch chỉ với hai lần chạm, và giữ đồng hồ nhịn ăn luôn hiển thị nhờ Live Activities. Pofu cũng hoạt động với Apple Health.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>Quyền riêng tư: dữ liệu chu kỳ ở lại trên thiết bị của bạn</h2>
+      <ul>
+        <li>Theo dõi chu kỳ mặc định đang tắt. Nếu bạn bật, dữ liệu chu kỳ của bạn chỉ nằm trên thiết bị và không bao giờ được gửi đến công cụ phân tích.</li>
+        <li>Dữ liệu là của bạn: xuất hoặc xóa bất cứ lúc nào.</li>
+        <li>Pofu được thiết kế để giữ nhật ký bữa ăn, mục tiêu và tiến độ của bạn trên thiết bị bất cứ khi nào có thể. Khi bạn dùng tính năng AI như ghi bằng ảnh hoặc giọng nói, ảnh, văn bản hoặc bản chép lời giọng nói cần cho yêu cầu đó có thể được gửi đến các nhà cung cấp AI của Pofu là Google (Gemini) và Anthropic (Claude) để tạo kết quả.</li>
+        <li>Việc thanh toán do Apple xử lý.</li>
+      </ul>
+      <p>Đọc đầy đủ <a href="../privacy.html">Chính sách quyền riêng tư</a> (bằng tiếng Anh).</p>
+    </section>
+
+    <section id="pricing">
+      <h2>Giá: miễn phí để bắt đầu</h2>
+      <p><strong>Miễn phí:</strong> quét mã vạch, tìm kiếm và nhập tay miễn phí, không giới hạn, cùng 3 lần quét ảnh AI miễn phí trong ngày đầu tiên và 1 lần mỗi ngày sau đó.</p>
+      <p><strong>Pofu Pro (tùy chọn):</strong> quét ảnh AI và ghi bằng giọng nói tối đa 10 lần mỗi ngày, huấn luyện viên AI, phân tích nâng cao, thống kê nhịn ăn và kế hoạch cuối tuần linh hoạt. Pro có gói năm kèm 7 ngày dùng thử miễn phí, gói tháng hoặc mua một lần dùng trọn đời. App Store hiển thị mức giá hiện tại theo đơn vị tiền tệ của bạn.</p>
+      <p>Gói đăng ký tự động gia hạn trừ khi bạn tắt tự động gia hạn ít nhất 24 giờ trước khi kết thúc kỳ hiện tại. Bạn có thể quản lý hoặc hủy bất cứ lúc nào trong cài đặt tài khoản App Store.</p>
+      <p class="cta"><a class="btn" href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_pofu">Tải Pofu trên App Store</a></p>
+    </section>
+
+    <section id="faq">
+      <h2>Câu hỏi thường gặp</h2>
+      <div class="qa">
+        <h3>Có ứng dụng đếm calo nào hiểu chu kỳ của tôi không?</h3>
+        <p>Có. Pofu là ứng dụng đếm calo với tính năng nhận biết chu kỳ tùy chọn. Khi bạn bật, Pofu hiển thị ngày và giai đoạn chu kỳ của bạn, và ở giai đoạn hoàng thể, số cân nhảy lên không bị coi là “bạn tăng cân”: Pofu cho bạn biết đó có thể là nước. Gợi ý nhịn ăn gián đoạn cũng điều chỉnh theo, nên ứng dụng không đẩy bạn nhịn ăn dài trong giai đoạn hoàng thể. Theo dõi chu kỳ mặc định đang tắt, dữ liệu chu kỳ của bạn nằm trên thiết bị, và Pofu không dự đoán chu kỳ cũng như không đưa ra lời khuyên y tế.</p>
+      </div>
+      <div class="qa">
+        <h3>Ứng dụng calo nào nhẹ nhàng với những ngày bị lỡ?</h3>
+        <p>Pofu được tạo ra để nhẹ nhàng với những ngày bị lỡ. Ngày ân hạn giữ chuỗi của bạn mà không có hình phạt, và khi vượt mục tiêu, bạn thấy cân đối trong tuần thay vì bị mắng. Kế hoạch cuối tuần linh hoạt (thuộc Pofu Pro) chừa chỗ cho những dịp như brunch thứ Bảy, và khung nhịn ăn ngắn hơn vẫn được tính là một thành công.</p>
+      </div>
+      <div class="qa">
+        <h3>Có ứng dụng đếm calo nào dành cho phụ nữ không?</h3>
+        <p>Có. Pofu là ứng dụng đếm calo bằng AI dành cho phụ nữ, với tính năng nhận biết chu kỳ tùy chọn, lời lẽ nhẹ nhàng, ngày ân hạn, khung giờ nhịn ăn gián đoạn và theo dõi macro. Pofu không chỉ dành riêng cho phụ nữ: ai cũng có thể dùng, và nếu theo dõi chu kỳ không liên quan đến bạn, cứ để tính năng đó tắt.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có đếm calo từ ảnh không?</h3>
+        <p>Có. Chụp đĩa ăn và trình quét thực phẩm AI của Pofu ước tính món ăn, khẩu phần, calo và macro trong vài giây, kèm điểm tin cậy hiển thị trên mỗi ước tính. Đây là ước tính, không phải số đo chính xác, nên hãy kiểm tra khẩu phần và chỉnh lại chỗ nào thấy lạ; khi bạn sửa một lần, Pofu sẽ nhớ. Bạn cũng có thể ghi bằng giọng nói (miễn phí 1 lần mỗi ngày, 10 lần mỗi ngày với Pofu Pro), mã vạch, tìm kiếm, món yêu thích hoặc mẫu bữa ăn.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có miễn phí không?</h3>
+        <p>Pofu miễn phí để bắt đầu. Quét mã vạch, tìm kiếm và nhập tay miễn phí, không giới hạn, cùng 3 lần quét ảnh AI miễn phí trong ngày đầu tiên và 1 lần mỗi ngày sau đó. Pofu Pro là tùy chọn, nâng quét ảnh AI và ghi bằng giọng nói lên tối đa 10 lần mỗi ngày, đồng thời mở khóa huấn luyện viên AI, phân tích nâng cao, thống kê nhịn ăn và kế hoạch cuối tuần linh hoạt. Pro có gói năm kèm 7 ngày dùng thử miễn phí, gói tháng hoặc mua một lần dùng trọn đời; App Store hiển thị mức giá hiện tại theo đơn vị tiền tệ của bạn.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có dùng được trên Apple Watch không?</h3>
+        <p>Có. Pofu có ứng dụng Apple Watch (watchOS 11.0 trở lên) để bạn ghi bữa ăn chỉ với hai lần chạm. Trên iPhone, widget hiển thị lượng calo còn lại mà không cần mở khóa điện thoại, Live Activities giữ đồng hồ nhịn ăn luôn hiển thị, và Pofu cũng hoạt động với Apple Health.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có phù hợp để nhịn ăn gián đoạn không?</h3>
+        <p>Pofu có bộ hẹn giờ nhịn ăn gián đoạn với các khung 16:8, 14:10, 18:6 và 5:2, nên khung giờ ăn và nhật ký bữa ăn của bạn nằm chung một ứng dụng. Ứng dụng được thiết kế không tạo áp lực: khung ngắn hơn vẫn được tính là một thành công, và khi bật nhận biết chu kỳ, Pofu không đẩy bạn nhịn ăn dài trong giai đoạn hoàng thể mà gợi ý 14:10 như một lựa chọn hoàn toàn ổn. Thống kê nhịn ăn thuộc Pofu Pro. Nhịn ăn không phù hợp với tất cả mọi người: nếu bạn đang mang thai, cho con bú hoặc từng có rối loạn ăn uống, hãy làm theo lời khuyên của bác sĩ hoặc chuyên gia dinh dưỡng trước.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có theo dõi macro và protein không?</h3>
+        <p>Có. Pofu theo dõi protein, carb và chất béo cho từng bữa và hiển thị biểu đồ rõ ràng về nguồn gốc lượng calo của bạn. Một bài trắc nghiệm 2 phút sẽ xây dựng mục tiêu calo và macro phù hợp với mục tiêu, tốc độ và lối sống của bạn, dù là giảm cân, giữ cân hay chỉ đơn giản là ăn uống lành mạnh. Phân tích nâng cao thuộc Pofu Pro.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có chia sẻ dữ liệu của tôi không?</h3>
+        <p>Pofu được thiết kế để giữ nhật ký bữa ăn, mục tiêu và tiến độ của bạn trên thiết bị bất cứ khi nào có thể. Theo dõi chu kỳ mặc định đang tắt; nếu bạn bật, dữ liệu chu kỳ của bạn nằm trên thiết bị và không bao giờ được gửi đến công cụ phân tích. Khi bạn dùng tính năng AI như ghi bằng ảnh hoặc giọng nói, ảnh, văn bản hoặc bản chép lời giọng nói cần cho yêu cầu đó có thể được gửi đến các nhà cung cấp AI của Pofu là Google (Gemini) và Anthropic (Claude) để tạo kết quả. Bạn có thể xuất hoặc xóa dữ liệu bất cứ lúc nào. <a href="../privacy.html">Chính sách quyền riêng tư</a> (bằng tiếng Anh) có đầy đủ chi tiết.</p>
+      </div>
+      <div class="qa">
+        <h3>Pofu có trên Android không?</h3>
+        <p>Hiện chưa có. Pofu là ứng dụng iOS cho iPhone và iPad (iOS 18.6 trở lên), kèm ứng dụng Apple Watch (watchOS 11.0 trở lên). Bạn có thể tải trên <a href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_pofu">App Store</a>.</p>
+      </div>
+    </section>
+
+    <section id="not-medical">
+      <h2>Pofu không phải là gì</h2>
+      <div class="note">
+        <p>Pofu không chẩn đoán hay điều trị y tế và không dự đoán chu kỳ của bạn. Số calo và macro do AI đưa ra chỉ là ước tính. Nếu bạn đang mang thai, cho con bú hoặc từng có rối loạn ăn uống, hãy luôn làm theo lời khuyên của bác sĩ hoặc chuyên gia dinh dưỡng trước.</p>
+      </div>
+    </section>
+
+    <section id="turkce" lang="tr">
+      <h2>Türkçe</h2>
+      <p>Pofu, kadınlar düşünülerek tasarlanmış yapay zekâ kalori sayacıdır. Tabağının fotoğrafını çekersin; Pofu yemeği, porsiyonu, kaloriyi ve makroları tahmin eder, yanlış bulduğunu düzeltirsin. İstersen açabileceğin döngü farkındalığı regl döngünü dikkate alır ve bu veri yalnızca telefonunda kalır; aralıklı orucu (16:8, 14:10, 18:6, 5:2) baskı yapmadan takip eder, kaçırdığın bir günde joker (grace day) serini korur. iPhone ve Apple Watch’ta ücretsiz başlar, Pofu Pro isteğe bağlıdır; ayrıntılar için <a href="../tr/">Türkçe sayfaya</a> bakabilirsin.</p>
+    </section>
+
+    <section class="center" aria-labelledby="final-title">
+      <h2 id="final-title">Chụp ngay hôm nay, bắt đầu ngay hôm nay</h2>
+      <p class="cta">
+        <a href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_pofu"><img src="../assets/img/app-store-badge.png" alt="Tải Pofu trên App Store" width="180" height="60" loading="lazy"></a>
+      </p>
+      <p class="fine">Miễn phí để bắt đầu · iPhone, iPad và Apple Watch</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <nav aria-label="Pháp lý và hỗ trợ">
+        <a href="../">Trang chủ Pofu</a>
+        <a href="../privacy.html">Quyền riêng tư</a>
+        <a href="../terms.html">Điều khoản</a>
+        <a href="../support.html">Hỗ trợ</a>
+        <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="mailto:widgetai.support@gmail.com">widgetai.support@gmail.com</a>
+      </nav>
+      <p>Cập nhật lần cuối <time datetime="2026-10-28">28 tháng 10, 2026</time>. Pofu là công cụ theo dõi, không phải lời khuyên y tế. Ảnh xem trước trên mạng xã hội có hình ảnh do AI tạo ra.</p>
+      <p>Apple, logo Apple, iPhone, iPad, Apple Watch và App Store là nhãn hiệu của Apple Inc. © 2026 Pofu.</p>
+    </div>
+  
+<nav class="langs" aria-label="Languages" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../pofu.html" hreflang="en" lang="en">English</a> · <a href="../tr/pofu.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../de/pofu.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/pofu.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/pofu.html" hreflang="es" lang="es">Español</a> · <a href="../it/pofu.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/pofu.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../nl/pofu.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/pofu.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ru/pofu.html" hreflang="ru" lang="ru">Русский</a> · <a href="../uk/pofu.html" hreflang="uk" lang="uk">Українська</a> · <a href="../cs/pofu.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../ro/pofu.html" hreflang="ro" lang="ro">Română</a> · <a href="../sv/pofu.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../ja/pofu.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/pofu.html" hreflang="ko" lang="ko">한국어</a> · <a href="../zh-Hans/pofu.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../id/pofu.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <strong>Tiếng Việt</strong> · <a href="../th/pofu.html" hreflang="th" lang="th">ไทย</a> · <a href="../hi/pofu.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../ar/pofu.html" hreflang="ar" lang="ar">العربية</a></nav>
+</footer>
+</body>
+</html>
