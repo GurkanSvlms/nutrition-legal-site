@@ -11,21 +11,21 @@ Key facts:
 - App Store: https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605
 
 ## Product
-- [About Pofu and the developer](https://gurkansvlms.github.io/nutrition-legal-site/about.html)
-- [Pofu overview](https://gurkansvlms.github.io/nutrition-legal-site/pofu.html): features, privacy, pricing, FAQ
-- [Support](https://gurkansvlms.github.io/nutrition-legal-site/support.html)
-- [Privacy policy](https://gurkansvlms.github.io/nutrition-legal-site/privacy.html)
+- [About Pofu and the developer](https://getpofu.com/about.html)
+- [Pofu overview](https://getpofu.com/pofu.html): features, privacy, pricing, FAQ
+- [Support](https://getpofu.com/support.html)
+- [Privacy policy](https://getpofu.com/privacy.html)
 
 ## Guides
-- [How accurate is photo calorie counting?](https://gurkansvlms.github.io/nutrition-legal-site/how-accurate-is-photo-calorie-counting.html): why AI photo estimates have errors and how to reduce them
-- [Does the menstrual cycle affect calorie needs?](https://gurkansvlms.github.io/nutrition-legal-site/does-menstrual-cycle-affect-calorie-needs.html): appetite, energy and scale changes by phase
-- [Best calorie counter for women](https://gurkansvlms.github.io/nutrition-legal-site/best-calorie-counter-for-women.html): a 6-app comparison for 2026 and how we chose
+- [How accurate is photo calorie counting?](https://getpofu.com/how-accurate-is-photo-calorie-counting.html): why AI photo estimates have errors and how to reduce them
+- [Does the menstrual cycle affect calorie needs?](https://getpofu.com/does-menstrual-cycle-affect-calorie-needs.html): appetite, energy and scale changes by phase
+- [Best calorie counter for women](https://getpofu.com/best-calorie-counter-for-women.html): a 6-app comparison for 2026 and how we chose
 
 ## Comparisons
-- [Pofu vs Cal AI](https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-cal-ai.html)
-- [Pofu vs MyFitnessPal](https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-myfitnesspal.html)
-- [Pofu vs Lose It!](https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-lose-it.html)
+- [Pofu vs Cal AI](https://getpofu.com/pofu-vs-cal-ai.html)
+- [Pofu vs MyFitnessPal](https://getpofu.com/pofu-vs-myfitnesspal.html)
+- [Pofu vs Lose It!](https://getpofu.com/pofu-vs-lose-it.html)
 
 ## Optional
-- [Turkish page](https://gurkansvlms.github.io/nutrition-legal-site/tr/pofu.html)
-- [Sitemap (20+ languages)](https://gurkansvlms.github.io/nutrition-legal-site/sitemap.xml)
+- [Turkish page](https://getpofu.com/tr/pofu.html)
+- [Sitemap (20+ languages)](https://getpofu.com/sitemap.xml)
