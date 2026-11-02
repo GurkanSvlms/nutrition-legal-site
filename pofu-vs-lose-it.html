@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pofu vs Lose It!: calorie counters compared (2026)</title>
+<meta name="description" content="Pofu vs Lose It! in general terms: logging methods, photo logging, cycle-aware feedback, grace days, fasting, macros, widgets and price model.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-lose-it.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pofu vs Lose It!: calorie counters compared">
+<meta property="og:description" content="Pofu vs Lose It! in general terms: logging methods, photo logging, cycle-aware feedback, grace days, fasting, macros, widgets and price.">
+<meta property="og:url" content="https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-lose-it.html">
+<meta property="og:image" content="https://gurkansvlms.github.io/nutrition-legal-site/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://gurkansvlms.github.io/nutrition-legal-site/pofu-vs-lose-it.html", "mainEntity": [{"@type": "Question", "name": "Is Pofu better than Lose It!?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you value. Both can help you stay within a calorie target. Pofu is built around women's routines: optional cycle awareness, grace days, gentle fasting windows and AI photo logging. Lose It! may suit you better if its approach matches how you like to track. Try both, since both can be started without paying up front, and check each App Store listing for current details."}}, {"@type": "Question", "name": "Is Pofu free compared with Lose It!?", "acceptedAnswer": {"@type": "Answer", "text": "Pofu is free to start. Barcode scanning, search and manual logging are free and unlimited, and you get 3 free AI photo scans on your first day and 1 every day after that. Pofu Pro is optional. Lose It! has its own free and paid options that change over time, so check its App Store listing."}}, {"@type": "Question", "name": "Does Pofu work on Android?", "acceptedAnswer": {"@type": "Answer", "text": "Not right now. Pofu is an iOS app for iPhone and iPad, with an Apple Watch app. You can get it on the App Store."}}, {"@type": "Question", "name": "Is Pofu only for weight loss?", "acceptedAnswer": {"@type": "Answer", "text": "No. Pofu's quiz builds goals for weight loss, maintenance or simply healthy eating. It is not a medical tool, and anyone can use it."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vs_loseit">Get the app</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">Comparison · updated November 2026</p>
+<h1>Pofu vs Lose It!: which calorie counter fits you?</h1>
+<p class="lede">A fair, general comparison of Pofu and Lose It! for people who want to log food quickly and stay consistent.</p>
+</section>
+<section id="intro">
+<h2>The short version</h2>
+<p>Lose It! is a well-known calorie counter oriented toward weight loss goals, with food logging and barcode scanning. Pofu is an AI calorie counter made for women on iPhone, with photo logging, optional cycle awareness, grace days and fasting windows.</p><p>Both help you stay inside a calorie target. The difference is how they talk to you on a hard week, and which extras sit beside the log.</p>
+<p class="fine">Pricing and features change. This page describes Lose It! only in general terms, so check its App Store listing for what it offers today.</p>
+</section>
+
+<section id="table">
+<h2>Feature comparison</h2>
+<div class="card tblwrap"><table class="tbl"><caption>Pofu and Lose It! at a glance (general terms)</caption>
+<thead><tr><th scope="col">Feature</th><th scope="col">Lose It!</th><th scope="col">Pofu</th></tr></thead>
+<tbody>
+<tr><th scope="row">Photo logging</th><td>Check the listing for current photo features and which plan includes them.</td><td>AI photo scan estimates food, portion, calories and macros with a visible confidence score. You can edit it, and Pofu remembers your correction.</td></tr>
+<tr><th scope="row">Cycle-aware feedback</th><td>Not a central feature as far as we know; check the listing.</td><td>Optional and off by default. Shows your cycle day and phase; in the luteal phase a scale jump is flagged as possibly water. Cycle data stays on your device.</td></tr>
+<tr><th scope="row">Missed-day handling</th><td>Check how it treats a skipped day.</td><td>Grace days keep your streak alive. Going over your target shows your weekly balance instead of a scolding.</td></tr>
+<tr><th scope="row">Fasting</th><td>Check the listing for fasting tools.</td><td>Timer with 16:8, 14:10, 18:6 and 5:2 windows and Live Activities. A shorter window still counts. Fasting stats are part of Pro.</td></tr>
+<tr><th scope="row">Macros</th><td>Calorie and macro tracking is typical for apps like this.</td><td>Protein, carbs and fat per meal, with goals from a 2-minute quiz. Advanced analytics are part of Pro.</td></tr>
+<tr><th scope="row">Widgets and watch</th><td>Check the listing for current widget and watch support.</td><td>Home screen widget, Apple Watch app, Live Activities and Apple Health support.</td></tr>
+<tr><th scope="row">Price model</th><td>A free tier and a paid tier. Check the App Store.</td><td>Free to start: barcode, search and manual logging are free and unlimited, with 3 free AI photo scans on day one and 1 every day after. Optional Pofu Pro (yearly plan with a 7-day free trial, monthly, or one-time lifetime).</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="who">
+<h2>Who each is better for</h2>
+<h3>Lose It! may suit you if</h3>
+<ul>
+<li>You want a tracker framed around a weight-loss plan.</li><li>You like its logging flow and food search after trying it.</li><li>You are comfortable with its approach to goals and feedback.</li>
+</ul>
+<h3>Pofu may suit you if</h3>
+<ul>
+<li>You want goals from a 2-minute quiz covering weight loss, maintenance or simply healthy eating.</li><li>You want the scale to be read with your cycle in mind, if you opt in.</li><li>You want shorter fasting windows to count as a win.</li><li>You want a widget and Apple Watch app that log in two taps.</li>
+</ul>
+<p>Neither choice is wrong. The best calorie counter is the one you will still open in week three, and many apps offer a free way to try them.</p>
+</section>
+
+<section id="faq">
+<h2>Questions</h2>
+<h3>Is Pofu better than Lose It!?</h3>
+<p>It depends on what you value. Both can help you stay within a calorie target. Pofu is built around women's routines: optional cycle awareness, grace days, gentle fasting windows and AI photo logging. Lose It! may suit you better if its approach matches how you like to track. Try both, since both can be started without paying up front, and check each App Store listing for current details.</p>
+<h3>Is Pofu free compared with Lose It!?</h3>
+<p>Pofu is free to start. Barcode scanning, search and manual logging are free and unlimited, and you get 3 free AI photo scans on your first day and 1 every day after that. Pofu Pro is optional. Lose It! has its own free and paid options that change over time, so check its App Store listing.</p>
+<h3>Does Pofu work on Android?</h3>
+<p>Not right now. Pofu is an iOS app for iPhone and iPad, with an Apple Watch app. You can get it on the App Store.</p>
+<h3>Is Pofu only for weight loss?</h3>
+<p>No. Pofu's quiz builds goals for weight loss, maintenance or simply healthy eating. It is not a medical tool, and anyone can use it.</p>
+</section>
+
+<section id="get-pofu">
+<h2>Try Pofu</h2>
+<p>Pofu is free to start on iPhone. <a href="pofu.html">Read the full Pofu overview</a> or see our <a href="best-calorie-counter-for-women.html">checklist for choosing a calorie counter as a woman</a>.</p>
+<p class="cta"><a href="https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vs_loseit"><img src="assets/img/app-store-badge.png" alt="Download Pofu on the App Store" width="180" height="60"></a></p>
+</section>
+
+<section id="not-medical">
+<div class="note"><p>Calorie apps are tracking tools, not medical advice. AI calorie numbers are estimates. If you are pregnant, breastfeeding or have a history of disordered eating, follow your doctor's or dietitian's advice first.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Legal and support">
+<a href="pofu.html">Pofu</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="support.html">Support</a>
+</nav>
+<p>Last updated <time datetime="2026-11-02">November 2, 2026</time>. Written by Ali Gürkan Sevilmiş, the developer of Pofu.</p>
+<p>Apple, iPhone, iPad, Apple Watch and App Store are trademarks of Apple Inc. All other product names are trademarks of their respective owners and are used here only to identify them. © 2026 Pofu.</p>
+</div>
+</footer>
+</body>
+</html>
