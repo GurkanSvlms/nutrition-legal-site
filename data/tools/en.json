@@ -1,12 +1,24 @@
 {
   "common": {
-    "lang": "en", "locale": "en-US", "og_locale": "en_US", "og_img": "og-image.jpg", "us": true,
-    "skip": "Skip to content", "get_app": "Get the app", "pill": "Free tool · No sign-up",
+    "lang": "en",
+    "locale": "en-US",
+    "og_locale": "en_US",
+    "og_img": "og-image.jpg",
+    "us": true,
+    "skip": "Skip to content",
+    "get_app": "Get the app",
+    "pill": "Free tool · No sign-up",
     "byline": "By Ali Gürkan Sevilmiş, developer of Pofu · November 6, 2026",
     "submit": "Calculate",
     "privacy": "Everything is calculated in your browser. Nothing you enter is sent or stored.",
-    "f_age": "Age", "f_system": "Units", "sys_us": "US (ft, lb)", "sys_metric": "Metric (cm, kg)",
-    "f_height": "Height", "a_ft": "Height, feet", "a_in": "Height, inches", "f_weight": "Current weight",
+    "f_age": "Age",
+    "f_system": "Units",
+    "sys_us": "US (ft, lb)",
+    "sys_metric": "Metric (cm, kg)",
+    "f_height": "Height",
+    "a_ft": "Height, feet",
+    "a_in": "Height, inches",
+    "f_weight": "Current weight",
     "f_activity": "Activity level",
     "activity": {
       "sedentary": "Mostly sitting (desk job, little exercise)",
@@ -29,9 +41,17 @@
     "rel_h": "More free tools",
     "medical": "This calculator gives general estimates for adults, not medical advice. If you are pregnant or breastfeeding, have a medical condition such as kidney disease or diabetes, or have a history of disordered eating, talk to your doctor or a dietitian before changing how you eat.",
     "badge_alt": "Download Pofu on the App Store",
-    "foot_nav": "Legal and support", "privacy_l": "Privacy", "terms_l": "Terms", "support_l": "Support",
+    "foot_nav": "Legal and support",
+    "privacy_l": "Privacy",
+    "terms_l": "Terms",
+    "support_l": "Support",
     "updated": "Last updated: <time datetime=\"2026-11-06\">November 6, 2026</time>.",
-    "tm": "Apple, iPhone and App Store are trademarks of Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone and App Store are trademarks of Apple Inc. © 2026 Pofu.",
+    "embed_h": "Add this calculator to your site",
+    "embed_p": "Free to use on your blog or website. Copy the code below: it shows the calculator and a link back to this page.",
+    "embed_copy": "Copy code",
+    "embed_copied": "Copied",
+    "embed_by": "Calculator by Pofu"
   },
   "tools": {
     "protein": {
@@ -42,7 +62,11 @@
       "lede": "How much protein do you need a day? Enter your weight and goal to get a daily target in grams and how much that is per meal.",
       "tool_h": "Calculate your protein",
       "f_goal": "Goal",
-      "goals": {"maintain": "Stay healthy and maintain my weight", "lose": "Lose weight", "muscle": "Build muscle or get stronger"},
+      "goals": {
+        "maintain": "Stay healthy and maintain my weight",
+        "lose": "Lose weight",
+        "muscle": "Build muscle or get stronger"
+      },
       "res_head": "Your daily protein",
       "s_meal3": "per meal with 3 meals",
       "s_meal4": "per meal with 4 meals",
@@ -61,11 +85,26 @@
         "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (0.8 g/kg minimum for adults)."
       ],
       "faq": [
-        ["How much protein does a woman need a day?", "The minimum for adults is about 0.8 g per kg of body weight. For active women and during weight loss, research supports about 1.2 to 2.0 g per kg. For a 65 kg woman losing weight, this calculator gives 104 g a day."],
-        ["Is 100 g of protein a day too much for a woman?", "For most healthy women it is not. It is within the range studied for active people. If you have kidney disease, ask your doctor first."],
-        ["How much protein should I eat per meal?", "Divide your daily target by your meals. With 104 g a day and 3 meals, that is about 35 g per meal, for example a chicken breast or a bowl of Greek yogurt with eggs."],
-        ["Does protein help with weight loss?", "It helps you keep muscle while eating less and it keeps you full longer. Weight loss still comes from eating fewer calories than you use."],
-        ["Should I use my current or my goal weight?", "Use your current weight. If your weight is very high, using a lower reference weight gives a more realistic number; the cap of 230 g a day keeps the result reasonable."]
+        [
+          "How much protein does a woman need a day?",
+          "The minimum for adults is about 0.8 g per kg of body weight. For active women and during weight loss, research supports about 1.2 to 2.0 g per kg. For a 65 kg woman losing weight, this calculator gives 104 g a day."
+        ],
+        [
+          "Is 100 g of protein a day too much for a woman?",
+          "For most healthy women it is not. It is within the range studied for active people. If you have kidney disease, ask your doctor first."
+        ],
+        [
+          "How much protein should I eat per meal?",
+          "Divide your daily target by your meals. With 104 g a day and 3 meals, that is about 35 g per meal, for example a chicken breast or a bowl of Greek yogurt with eggs."
+        ],
+        [
+          "Does protein help with weight loss?",
+          "It helps you keep muscle while eating less and it keeps you full longer. Weight loss still comes from eating fewer calories than you use."
+        ],
+        [
+          "Should I use my current or my goal weight?",
+          "Use your current weight. If your weight is very high, using a lower reference weight gives a more realistic number; the cap of 230 g a day keeps the result reasonable."
+        ]
       ],
       "bridge": "Pofu sets your protein target with this same rule and shows how much you have eaten so far today, from photos, barcodes or search."
     },
@@ -77,9 +116,17 @@
       "lede": "Get your daily calories split into protein, carbohydrates and fat, in grams and as a share of your calories.",
       "tool_h": "Calculate your macros",
       "f_goal": "Goal",
-      "goals": {"maintain": "Maintain my weight", "lose_slow": "Lose weight slowly (about −250 kcal a day)", "lose": "Lose weight (about −400 kcal a day)", "lose_fast": "Lose weight faster (about −550 kcal a day)", "muscle": "Build muscle (about +225 kcal a day)"},
+      "goals": {
+        "maintain": "Maintain my weight",
+        "lose_slow": "Lose weight slowly (about −250 kcal a day)",
+        "lose": "Lose weight (about −400 kcal a day)",
+        "lose_fast": "Lose weight faster (about −550 kcal a day)",
+        "muscle": "Build muscle (about +225 kcal a day)"
+      },
       "res_head": "Your daily calories and macros",
-      "s_p": "Protein", "s_c": "Carbohydrates", "s_f": "Fat",
+      "s_p": "Protein",
+      "s_c": "Carbohydrates",
+      "s_f": "Fat",
       "pct": "{p}% of calories",
       "floor": "Your calories are set to 1,200 kcal, the lowest daily target we suggest. Going lower is not recommended without a doctor or dietitian.",
       "explain": "Protein comes first, fat is set to 28% of calories, and carbohydrates fill the rest. Hitting your calories matters more than hitting every gram; within a few grams is fine.",
@@ -96,11 +143,26 @@
         "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017."
       ],
       "faq": [
-        ["What is a good macro ratio for women?", "There is no single best ratio. A common, sustainable split is about 25–30% protein, 28–30% fat and the rest carbohydrates. Pick one you can keep up and hit your calories first."],
-        ["What are good macros for weight loss?", "Eat fewer calories than you use and keep protein high (about 1.6 g per kg). Fat and carbohydrates can be split the way you prefer."],
-        ["Do I have to hit my macros exactly?", "No. Being within about 10 g of protein and carbohydrates, and 5 g of fat, is close enough. Your weekly average matters more than one day."],
-        ["Is low carb better for women?", "Studies comparing low-carb and low-fat diets with the same calories find similar weight loss. Choose what fits your food and your energy."],
-        ["Do macros change during my menstrual cycle?", "Not much. Some people feel hungrier before their period; our cycle calorie calculator adds a small optional allowance for that phase."]
+        [
+          "What is a good macro ratio for women?",
+          "There is no single best ratio. A common, sustainable split is about 25–30% protein, 28–30% fat and the rest carbohydrates. Pick one you can keep up and hit your calories first."
+        ],
+        [
+          "What are good macros for weight loss?",
+          "Eat fewer calories than you use and keep protein high (about 1.6 g per kg). Fat and carbohydrates can be split the way you prefer."
+        ],
+        [
+          "Do I have to hit my macros exactly?",
+          "No. Being within about 10 g of protein and carbohydrates, and 5 g of fat, is close enough. Your weekly average matters more than one day."
+        ],
+        [
+          "Is low carb better for women?",
+          "Studies comparing low-carb and low-fat diets with the same calories find similar weight loss. Choose what fits your food and your energy."
+        ],
+        [
+          "Do macros change during my menstrual cycle?",
+          "Not much. Some people feel hungrier before their period; our cycle calorie calculator adds a small optional allowance for that phase."
+        ]
       ],
       "bridge": "Pofu tracks these macros for you: snap a photo of your meal and it estimates calories, protein, carbohydrates and fat, which you can correct."
     },
@@ -140,11 +202,26 @@
         "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (about 0.5 to 1 kg a week)."
       ],
       "faq": [
-        ["How big should my calorie deficit be?", "For most women 250 to 550 kcal a day below maintenance is sustainable. That is about 0.25 to 0.5 kg a week. Bigger deficits are harder to keep and can cost muscle."],
-        ["How long does it take to lose 5 kg?", "At a deficit of 550 kcal a day, about 10 weeks; at 400 kcal a day, about 14 weeks. Real progress is often a little slower."],
-        ["Why does this calculator not let me eat under 1,200 kcal?", "Below 1,200 kcal a day it is hard to get enough nutrients from food. Going lower should only happen with medical supervision."],
-        ["Is 7,700 calories really one kilogram?", "It is a rough estimate for body fat. Early on, part of the loss is water, and later the body adapts, so the rule is a guide, not a promise."],
-        ["Why did my weight go up even though I was in a deficit?", "Water, salt, a bigger meal and the days before your period can all push the scale up for a few days. Look at the trend over 2 to 4 weeks."]
+        [
+          "How big should my calorie deficit be?",
+          "For most women 250 to 550 kcal a day below maintenance is sustainable. That is about 0.25 to 0.5 kg a week. Bigger deficits are harder to keep and can cost muscle."
+        ],
+        [
+          "How long does it take to lose 5 kg?",
+          "At a deficit of 550 kcal a day, about 10 weeks; at 400 kcal a day, about 14 weeks. Real progress is often a little slower."
+        ],
+        [
+          "Why does this calculator not let me eat under 1,200 kcal?",
+          "Below 1,200 kcal a day it is hard to get enough nutrients from food. Going lower should only happen with medical supervision."
+        ],
+        [
+          "Is 7,700 calories really one kilogram?",
+          "It is a rough estimate for body fat. Early on, part of the loss is water, and later the body adapts, so the rule is a guide, not a promise."
+        ],
+        [
+          "Why did my weight go up even though I was in a deficit?",
+          "Water, salt, a bigger meal and the days before your period can all push the scale up for a few days. Look at the trend over 2 to 4 weeks."
+        ]
       ],
       "bridge": "In Pofu you can set a goal weight and pace; the app calculates your daily target with these same rules and shows your progress as a weekly trend."
     },
@@ -156,7 +233,12 @@
       "lede": "Calculate your body mass index and see the weight range that counts as healthy for your height.",
       "tool_h": "Calculate your BMI",
       "res_head": "Your BMI",
-      "cats": {"under": "Underweight (below 18.5)", "normal": "Healthy weight (18.5 to 24.9)", "over": "Overweight (25 to 29.9)", "obese": "Obesity (30 or more)"},
+      "cats": {
+        "under": "Underweight (below 18.5)",
+        "normal": "Healthy weight (18.5 to 24.9)",
+        "over": "Overweight (25 to 29.9)",
+        "obese": "Obesity (30 or more)"
+      },
       "range": "A healthy weight range for your height is about {low} to {high}.",
       "explain": "BMI is a quick screening number, not a diagnosis. It doesn’t tell muscle from fat, so very muscular women can score high, and it doesn’t apply during pregnancy.",
       "how": [
@@ -171,11 +253,26 @@
         "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004."
       ],
       "faq": [
-        ["What is a healthy BMI for a woman?", "For adults, a BMI of 18.5 to 24.9 counts as a healthy weight. The same ranges are used for women and men."],
-        ["Is BMI different for women?", "The formula and the categories are the same. Women usually have more body fat than men at the same BMI, which is one reason BMI is only a rough guide."],
-        ["Is BMI accurate?", "It is useful for groups and as a first check, but it doesn’t measure body fat. Muscle, age and body shape all change what a given BMI means for you."],
-        ["What weight should I be for my height?", "Any weight that gives a BMI between 18.5 and 24.9 is in the healthy range. For a height of 165 cm (5 ft 5 in), that is about 50 to 68 kg (111 to 149 lb)."],
-        ["Can I use BMI when I am pregnant?", "No. During pregnancy, follow your midwife’s or doctor’s advice on weight gain."]
+        [
+          "What is a healthy BMI for a woman?",
+          "For adults, a BMI of 18.5 to 24.9 counts as a healthy weight. The same ranges are used for women and men."
+        ],
+        [
+          "Is BMI different for women?",
+          "The formula and the categories are the same. Women usually have more body fat than men at the same BMI, which is one reason BMI is only a rough guide."
+        ],
+        [
+          "Is BMI accurate?",
+          "It is useful for groups and as a first check, but it doesn’t measure body fat. Muscle, age and body shape all change what a given BMI means for you."
+        ],
+        [
+          "What weight should I be for my height?",
+          "Any weight that gives a BMI between 18.5 and 24.9 is in the healthy range. For a height of 165 cm (5 ft 5 in), that is about 50 to 68 kg (111 to 149 lb)."
+        ],
+        [
+          "Can I use BMI when I am pregnant?",
+          "No. During pregnancy, follow your midwife’s or doctor’s advice on weight gain."
+        ]
       ],
       "bridge": "Pofu focuses on habits instead of a single number: daily calories and protein, a weekly weight trend and grace days so a missed day doesn’t break your streak."
     }

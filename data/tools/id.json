@@ -31,7 +31,12 @@
     "badge_alt": "Unduh Pofu di App Store",
     "foot_nav": "Hukum dan dukungan", "privacy_l": "Privasi", "terms_l": "Ketentuan", "support_l": "Dukungan",
     "updated": "Terakhir diperbarui: <time datetime=\"2026-11-06\">6 November 2026</time>.",
-    "tm": "Apple, iPhone, dan App Store adalah merek dagang Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone, dan App Store adalah merek dagang Apple Inc. © 2026 Pofu.",
+    "embed_h": "Pasang kalkulator ini di situsmu",
+    "embed_p": "Gratis dipakai di blog atau situs webmu. Salin kode di bawah: kode ini menampilkan kalkulator dan tautan kembali ke halaman ini.",
+    "embed_copy": "Salin kode",
+    "embed_copied": "Tersalin",
+    "embed_by": "Kalkulator oleh Pofu"
   },
   "tools": {
     "protein": {

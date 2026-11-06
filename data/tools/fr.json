@@ -31,7 +31,12 @@
     "badge_alt": "Télécharger Pofu sur l’App Store",
     "foot_nav": "Mentions légales et assistance", "privacy_l": "Confidentialité", "terms_l": "Conditions", "support_l": "Assistance",
     "updated": "Dernière mise à jour le <time datetime=\"2026-11-06\">6 novembre 2026</time>.",
-    "tm": "Apple, iPhone et App Store sont des marques d’Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone et App Store sont des marques d’Apple Inc. © 2026 Pofu.",
+    "embed_h": "Ajouter ce calculateur à ton site",
+    "embed_p": "Gratuit pour ton blog ou ton site. Copie le code ci-dessous : il affiche le calculateur et un lien vers cette page.",
+    "embed_copy": "Copier le code",
+    "embed_copied": "Copié",
+    "embed_by": "Calculateur par Pofu"
   },
   "tools": {
     "protein": {

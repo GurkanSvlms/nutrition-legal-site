@@ -152,7 +152,15 @@
     .stat b { display: block; font-size: 1.25rem; }
     .stat span { font-size: .88rem; color: var(--ink2); }
     [hidden] { display: none !important; }
+
+#embed textarea { width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }
+.embed-by { display: none; }
+.embed body { background: transparent; }
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer { display: none !important; }
+.embed #tool { margin: 0; padding: 0; }
+.embed .embed-by { display: block; margin: .6rem 0 0; font-size: .85rem; }
 </style>
+<script>if (/[?&]embed=1/.test(location.search)) { document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebApplication", "name": "여성 BMI 계산기", "url": "https://getpofu.com/ko/bmi-calculator-for-women.html", "inLanguage": "ko", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "description": "성인 여성을 위한 무료 BMI 계산기. 체질량지수와 그 의미, 내 키에 맞는 적정 체중 범위를 확인하고 BMI의 한계도 함께 알아보세요."}
 </script>
@@ -205,7 +213,6 @@
 <header class="top">
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
-<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_bmi_ko&amp;mt=8">앱 받기</a>
 <!-- nav:start -->
 <div class="pnav">
 <nav class="pnav__links" aria-label="메뉴"><a href="guides.html" aria-current="true">가이드</a><a href="tools.html">도구</a><a href="kallori/">칼로리</a><a href="questions/">Q&amp;A</a><a href="compare.html">비교</a></nav>
@@ -213,6 +220,7 @@
 <details class="plang"><summary aria-label="언어">🌐 KO</summary><nav class="plang__panel" aria-label="언어"><a href="../bmi-calculator-for-women.html" hreflang="en" lang="en">English</a><a href="../kadinlar-icin-vucut-kitle-endeksi-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/bmi-calculator-for-women.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/bmi-calculator-for-women.html" hreflang="fr" lang="fr">Français</a><a href="../es/bmi-calculator-for-women.html" hreflang="es" lang="es">Español</a><a href="../it/bmi-calculator-for-women.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/bmi-calculator-for-women.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/bmi-calculator-for-women.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/bmi-calculator-for-women.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/bmi-calculator-for-women.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/bmi-calculator-for-women.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/bmi-calculator-for-women.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/bmi-calculator-for-women.html" hreflang="ro" lang="ro">Română</a><a href="../sv/bmi-calculator-for-women.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/bmi-calculator-for-women.html" hreflang="ja" lang="ja">日本語</a><a href="bmi-calculator-for-women.html" hreflang="ko" lang="ko" aria-current="page">한국어</a><a href="../zh-Hans/bmi-calculator-for-women.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/bmi-calculator-for-women.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/bmi-calculator-for-women.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/bmi-calculator-for-women.html" hreflang="th" lang="th">ไทย</a><a href="../hi/bmi-calculator-for-women.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/bmi-calculator-for-women.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_bmi_ko&amp;mt=8">앱 받기</a>
 </div>
 </header>
 <main id="main" class="wrap">
@@ -232,6 +240,7 @@
 <p class="fine">모든 계산은 브라우저 안에서 이루어집니다. 입력한 내용은 전송되거나 저장되지 않습니다.</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="https://getpofu.com/ko/bmi-calculator-for-women.html">계산기 제공: Pofu</a></p>
 </div>
 </section>
 <section id="how">
@@ -251,6 +260,13 @@
 <li>WHO Expert Consultation. <a href="https://pubmed.ncbi.nlm.nih.gov/14726171/">Appropriate body-mass index for Asian populations</a>. Lancet, 2004(아시아인에게 적합한 BMI).</li>
 </ul>
 <p class="fine">계산식은 위에 소개한 공개 자료에서 가져왔으며 Pofu 앱이 사용하는 규칙과 같습니다. 이 페이지는 영양사의 감수를 거치지 않았으며, 위 자료와 대조해 확인하고 자료가 바뀌면 함께 업데이트합니다. <a href="editorial-policy.html">콘텐츠와 출처를 만드는 방법</a>.</p>
+</section>
+<section id="embed">
+<h2>이 계산기를 내 사이트에 추가하기</h2>
+<p>블로그나 웹사이트에서 무료로 사용할 수 있습니다. 아래 코드를 복사하세요. 계산기와 이 페이지로 연결되는 링크가 표시됩니다.</p>
+<textarea id="embed-code" readonly aria-label="이 계산기를 내 사이트에 추가하기">&lt;iframe src=&quot;https://getpofu.com/ko/bmi-calculator-for-women.html?embed=1&quot; title=&quot;여성 BMI 계산기&quot; width=&quot;100%&quot; height=&quot;940&quot; loading=&quot;lazy&quot; style=&quot;border:0;max-width:640px&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpofu.com/ko/bmi-calculator-for-women.html&quot;&gt;여성 BMI 계산기&lt;/a&gt; · Pofu&lt;/p&gt;</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="복사됨">코드 복사</button></p>
 </section>
 <section id="faq">
 <h2>자주 묻는 질문</h2>
@@ -278,6 +294,18 @@
 <section id="not-medical">
 <div class="note"><p>이 계산기는 성인을 위한 일반적인 추정치를 제공할 뿐 의학적 조언이 아닙니다. 임신 중이거나 수유 중이거나, 신장 질환이나 당뇨병 같은 질환이 있거나, 섭식 장애 이력이 있다면 식습관을 바꾸기 전에 의사나 영양사와 상담하세요.</p></div>
 </section>
+<!-- toolbox:start -->
+<section id="free-tools" class="toolbox">
+<h2>다른 무료 도구</h2>
+<ul>
+<li><a href="bmi-calculator-for-women.html">여성 BMI 계산기</a></li>
+<li><a href="calorie-deficit-calculator.html">목표 날짜별 칼로리 적자 계산기</a></li>
+<li><a href="protein-calculator-for-women.html">여성 단백질 섭취량 계산기</a></li>
+<li><a href="macro-calculator-for-women.html">여성 탄단지 비율 계산기</a></li>
+<li><a href="cycle-calorie-calculator.html">여성 주기별 칼로리 계산기</a></li>
+</ul>
+</section>
+<!-- toolbox:end -->
 </main>
 <footer class="foot">
 <div class="wrap">
@@ -367,5 +395,7 @@
   });
 })();
 </script>
+<script>(function () { var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () { t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () { document.execCommand('copy'); }); b.textContent = b.dataset.done; }); })();</script>
 </body>
 </html>

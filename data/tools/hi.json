@@ -31,7 +31,12 @@
     "badge_alt": "App Store पर Pofu डाउनलोड करें",
     "foot_nav": "क़ानूनी और सहायता", "privacy_l": "प्राइवेसी", "terms_l": "शर्तें", "support_l": "सहायता",
     "updated": "आख़िरी बार अपडेट किया गया: <time datetime=\"2026-11-06\">6 नवंबर 2026</time>।",
-    "tm": "Apple, iPhone और App Store, Apple Inc. के ट्रेडमार्क हैं। © 2026 Pofu।"
+    "tm": "Apple, iPhone और App Store, Apple Inc. के ट्रेडमार्क हैं। © 2026 Pofu।",
+    "embed_h": "इस कैलकुलेटर को अपनी साइट पर जोड़िए",
+    "embed_p": "आपके ब्लॉग या वेबसाइट पर इस्तेमाल करना मुफ़्त है। नीचे दिया कोड कॉपी कीजिए: यह कैलकुलेटर और इस पेज का एक लिंक दिखाता है।",
+    "embed_copy": "कोड कॉपी करें",
+    "embed_copied": "कॉपी हो गया",
+    "embed_by": "कैलकुलेटर: Pofu"
   },
   "tools": {
     "protein": {

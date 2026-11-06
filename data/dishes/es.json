@@ -1,0 +1,41 @@
+{
+  "title": "Calorías de platos nacionales: 22 cocinas comparadas (2026) | Pofu",
+  "desc": "¿Qué tan calóricos son los platos típicos de 22 cocinas? Calorías por ración y por 100 g de {n} platos locales, con la mediana de cada cocina y una descarga CSV gratuita.",
+  "h1": "Calorías de platos nacionales: 22 cocinas comparadas",
+  "lede": "Hemos comparado las calorías de {n} platos locales típicos de 22 cocinas, desde la sopa de lentejas turca hasta el bibimbap coreano, por ración y por 100 g.",
+  "pill": "Datos · noviembre de 2026",
+  "h_find": "Principales resultados",
+  "find_top": "En nuestra muestra, los platos de la cocina {top} son los más calóricos, con una mediana de {topk} kcal por 100 g.",
+  "find_low": "Los platos de la cocina {low} son los más ligeros, con una mediana de {lowk} kcal por 100 g.",
+  "find_soup": "Las sopas y los platos de verduras son los más ligeros en la mayoría de las cocinas, mientras que los fritos, la bollería y los dulces son los más calóricos.",
+  "find_portion": "Las calorías por 100 g y las calorías por ración cuentan historias distintas: un plato ligero servido en un bol grande puede sumar más que un pastelito pequeño y denso.",
+  "h_rank": "Cocinas ordenadas por densidad calórica",
+  "rank_cols": ["Cocina", "Platos", "Mediana de kcal por 100 g", "Plato más ligero", "Plato más calórico"],
+  "h_detail": "Todos los platos por cocina",
+  "detail_cols": ["Plato", "Ración", "kcal por ración", "kcal por 100 g"],
+  "h_method": "Cómo hicimos esta comparación",
+  "method": [
+    "<strong>Platos:</strong> los platos locales de nuestras páginas de alimentos de cada idioma, elegidos entre los platos comunes y conocidos de cada cocina. Se dejan fuera las bebidas, las salsas y los acompañamientos pequeños (menos de 60 g u 80 kcal por ración). Es una muestra, no una imagen completa de lo que come la gente de un país.",
+    "<strong>Valores:</strong> de bases de datos públicas de composición de alimentos (USDA FoodData Central, NEVO, la Agencia Sueca de Alimentación, NutriDatabáze, CREA) y de la base de alimentos de la app Pofu. Cada página de plato enlaza su fuente cuando existe.",
+    "<strong>Mediana:</strong> el valor central de las calorías por 100 g de los platos, de modo que un plato muy pesado o muy ligero no mueve mucho el resultado. Las cocinas con menos de 8 platos en nuestra muestra están marcadas.",
+    "<strong>Límites:</strong> las recetas, las raciones y el aceite de cocinar varían según el hogar, la región y el restaurante, así que cada valor es una estimación típica. Las variantes de un mismo plato (por ejemplo con pollo o con gambas) se cuentan por separado."
+  ],
+  "small": "muestra pequeña",
+  "csv": "Descargar los datos (CSV)",
+  "cite": "Puedes usar estos datos con un enlace a esta página.",
+  "h_faq": "Preguntas frecuentes",
+  "faq": [
+    ["¿Qué cocina tiene los platos más calóricos?", "En nuestra muestra de {n} platos, los de la cocina {top} tienen la mediana más alta, unas {topk} kcal por 100 g. Las recetas varían mucho, así que tómalo como una comparación aproximada."],
+    ["¿Qué cocina tiene los platos más ligeros?", "Los platos de la cocina {low} tienen la mediana más baja de nuestra muestra, unas {lowk} kcal por 100 g, sobre todo porque las sopas, los guisos y los platos al vapor contienen mucha agua."],
+    ["¿La densidad calórica decide si un plato es saludable?", "No. Muestra cuántas calorías caben en una cantidad dada de comida. La proteína, la fibra, las verduras y el tamaño de la ración importan igual de mucho."],
+    ["¿Cómo cuento las calorías de un plato nacional casero?", "Parte de un valor típico como los de aquí y ajusta la ración a lo que has comido. En Pofu puedes hacer una foto de tu plato y corregir la estimación."]
+  ],
+  "h_rel": "Lecturas relacionadas",
+  "rel_food": "Calorías de todos los alimentos",
+  "cuisines": {
+    "us": "estadounidense", "tr": "turca", "de": "alemana", "fr": "francesa", "mx": "mexicana", "br": "brasileña",
+    "arab": "árabe y de Oriente Medio", "cz": "checa", "in": "india", "id": "indonesia", "it": "italiana",
+    "jp": "japonesa", "kr": "coreana", "nl": "neerlandesa", "pl": "polaca", "ro": "rumana", "ru": "rusa",
+    "se": "sueca", "th": "tailandesa", "ua": "ucraniana", "vn": "vietnamita", "cn": "china"
+  }
+}

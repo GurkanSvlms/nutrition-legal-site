@@ -152,7 +152,15 @@
     .stat b { display: block; font-size: 1.25rem; }
     .stat span { font-size: .88rem; color: var(--ink2); }
     [hidden] { display: none !important; }
+
+#embed textarea { width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }
+.embed-by { display: none; }
+.embed body { background: transparent; }
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer { display: none !important; }
+.embed #tool { margin: 0; padding: 0; }
+.embed .embed-by { display: block; margin: .6rem 0 0; font-size: .85rem; }
 </style>
+<script>if (/[?&]embed=1/.test(location.search)) { document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebApplication", "name": "حاسبة الماكروز للنساء", "url": "https://getpofu.com/ar/macro-calculator-for-women.html", "inLanguage": "ar", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "description": "حاسبة ماكروز مجانية للنساء. اعرفي سعراتك اليومية وغرامات البروتين والكربوهيدرات والدهون للحفاظ على الوزن أو إنقاصه أو بناء العضلات."}
 </script>
@@ -205,7 +213,6 @@
 <header class="top">
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
-<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_macro_ar&amp;mt=8">احصلي على التطبيق</a>
 <!-- nav:start -->
 <div class="pnav">
 <nav class="pnav__links" aria-label="القائمة"><a href="guides.html" aria-current="true">الأدلة</a><a href="tools.html">الأدوات</a><a href="saarat/">السعرات</a><a href="questions/">أسئلة</a><a href="compare.html">مقارنات</a></nav>
@@ -213,6 +220,7 @@
 <details class="plang"><summary aria-label="اللغات">🌐 AR</summary><nav class="plang__panel" aria-label="اللغات"><a href="../macro-calculator-for-women.html" hreflang="en" lang="en">English</a><a href="../kadinlar-icin-makro-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/macro-calculator-for-women.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/macro-calculator-for-women.html" hreflang="fr" lang="fr">Français</a><a href="../es/macro-calculator-for-women.html" hreflang="es" lang="es">Español</a><a href="../it/macro-calculator-for-women.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/macro-calculator-for-women.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/macro-calculator-for-women.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/macro-calculator-for-women.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/macro-calculator-for-women.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/macro-calculator-for-women.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/macro-calculator-for-women.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/macro-calculator-for-women.html" hreflang="ro" lang="ro">Română</a><a href="../sv/macro-calculator-for-women.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/macro-calculator-for-women.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/macro-calculator-for-women.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/macro-calculator-for-women.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/macro-calculator-for-women.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/macro-calculator-for-women.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/macro-calculator-for-women.html" hreflang="th" lang="th">ไทย</a><a href="../hi/macro-calculator-for-women.html" hreflang="hi" lang="hi">हिन्दी</a><a href="macro-calculator-for-women.html" hreflang="ar" lang="ar" aria-current="page">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_macro_ar&amp;mt=8">احصلي على التطبيق</a>
 </div>
 </header>
 <main id="main" class="wrap">
@@ -235,6 +243,7 @@
 <p class="fine">يُحسب كل شيء داخل متصفحك. لا يُرسل أي شيء تدخلينه ولا يُحفظ.</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="https://getpofu.com/ar/macro-calculator-for-women.html">حاسبة من Pofu</a></p>
 </div>
 </section>
 <section id="how">
@@ -255,6 +264,13 @@
 <li>Jäger R. et al. <a href="https://pubmed.ncbi.nlm.nih.gov/28642676/">ISSN position stand: protein and exercise</a> (موقف ISSN من البروتين والتمارين). J Int Soc Sports Nutr, 2017.</li>
 </ul>
 <p class="fine">الصيغ مأخوذة من المصادر المنشورة أعلاه وتطابق القواعد التي يستخدمها تطبيق Pofu. لم يراجع هذه الصفحة أخصائي تغذية؛ وإنما تُقارَن بهذه المصادر وتُحدَّث عندما تتغير. <a href="editorial-policy.html">كيف نُعدّ محتوانا ومصادرنا</a>.</p>
+</section>
+<section id="embed">
+<h2>أضيفي هذه الحاسبة إلى موقعك</h2>
+<p>مجانية الاستخدام في مدونتك أو موقعك. انسخي الكود أدناه: فهو يعرض الحاسبة ورابطًا يعود إلى هذه الصفحة.</p>
+<textarea id="embed-code" readonly aria-label="أضيفي هذه الحاسبة إلى موقعك">&lt;iframe src=&quot;https://getpofu.com/ar/macro-calculator-for-women.html?embed=1&quot; title=&quot;حاسبة الماكروز للنساء&quot; width=&quot;100%&quot; height=&quot;940&quot; loading=&quot;lazy&quot; style=&quot;border:0;max-width:640px&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpofu.com/ar/macro-calculator-for-women.html&quot;&gt;حاسبة الماكروز للنساء&lt;/a&gt; · Pofu&lt;/p&gt;</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="تم النسخ">نسخ الكود</button></p>
 </section>
 <section id="faq">
 <h2>الأسئلة الشائعة</h2>
@@ -282,6 +298,18 @@
 <section id="not-medical">
 <div class="note"><p>تقدم هذه الحاسبة تقديرات عامة للبالغات وليست نصيحة طبية. إذا كنتِ حاملًا أو مرضعًا، أو لديك حالة طبية مثل أمراض الكلى أو السكري، أو تاريخ مع اضطرابات الأكل، فتحدثي إلى طبيبك أو أخصائي التغذية قبل تغيير طريقة أكلك.</p></div>
 </section>
+<!-- toolbox:start -->
+<section id="free-tools" class="toolbox">
+<h2>المزيد من الأدوات المجانية</h2>
+<ul>
+<li><a href="macro-calculator-for-women.html">حاسبة الماكروز للنساء</a></li>
+<li><a href="calorie-deficit-calculator.html">حاسبة عجز السعرات حسب موعد الهدف</a></li>
+<li><a href="protein-calculator-for-women.html">حاسبة البروتين للنساء</a></li>
+<li><a href="bmi-calculator-for-women.html">حاسبة مؤشر كتلة الجسم للنساء</a></li>
+<li><a href="cycle-calorie-calculator.html">حاسبة السعرات للنساء بحسب الدورة الشهرية</a></li>
+</ul>
+</section>
+<!-- toolbox:end -->
 </main>
 <footer class="foot">
 <div class="wrap">
@@ -371,5 +399,7 @@
   });
 })();
 </script>
+<script>(function () { var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () { t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () { document.execCommand('copy'); }); b.textContent = b.dataset.done; }); })();</script>
 </body>
 </html>

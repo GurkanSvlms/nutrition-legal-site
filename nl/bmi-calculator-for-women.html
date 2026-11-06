@@ -152,7 +152,15 @@
     .stat b { display: block; font-size: 1.25rem; }
     .stat span { font-size: .88rem; color: var(--ink2); }
     [hidden] { display: none !important; }
+
+#embed textarea { width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }
+.embed-by { display: none; }
+.embed body { background: transparent; }
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer { display: none !important; }
+.embed #tool { margin: 0; padding: 0; }
+.embed .embed-by { display: block; margin: .6rem 0 0; font-size: .85rem; }
 </style>
+<script>if (/[?&]embed=1/.test(location.search)) { document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebApplication", "name": "BMI berekenen voor vrouwen", "url": "https://getpofu.com/nl/bmi-calculator-for-women.html", "inLanguage": "nl", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "description": "Gratis BMI-rekentool voor volwassen vrouwen. Bekijk je body mass index, wat die betekent en het gezonde gewichtsbereik bij jouw lengte, met uitleg over de beperkingen van BMI."}
 </script>
@@ -205,7 +213,6 @@
 <header class="top">
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
-<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_bmi_nl&amp;mt=8">Download de app</a>
 <!-- nav:start -->
 <div class="pnav">
 <nav class="pnav__links" aria-label="Menu"><a href="guides.html" aria-current="true">Gidsen</a><a href="tools.html">Tools</a><a href="calorieen/">Calorieën</a><a href="questions/">Vragen</a><a href="compare.html">Vergelijkingen</a></nav>
@@ -213,6 +220,7 @@
 <details class="plang"><summary aria-label="Talen">🌐 NL</summary><nav class="plang__panel" aria-label="Talen"><a href="../bmi-calculator-for-women.html" hreflang="en" lang="en">English</a><a href="../kadinlar-icin-vucut-kitle-endeksi-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/bmi-calculator-for-women.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/bmi-calculator-for-women.html" hreflang="fr" lang="fr">Français</a><a href="../es/bmi-calculator-for-women.html" hreflang="es" lang="es">Español</a><a href="../it/bmi-calculator-for-women.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/bmi-calculator-for-women.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="bmi-calculator-for-women.html" hreflang="nl" lang="nl" aria-current="page">Nederlands</a><a href="../pl/bmi-calculator-for-women.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/bmi-calculator-for-women.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/bmi-calculator-for-women.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/bmi-calculator-for-women.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/bmi-calculator-for-women.html" hreflang="ro" lang="ro">Română</a><a href="../sv/bmi-calculator-for-women.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/bmi-calculator-for-women.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/bmi-calculator-for-women.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/bmi-calculator-for-women.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/bmi-calculator-for-women.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/bmi-calculator-for-women.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/bmi-calculator-for-women.html" hreflang="th" lang="th">ไทย</a><a href="../hi/bmi-calculator-for-women.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/bmi-calculator-for-women.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_bmi_nl&amp;mt=8">Download de app</a>
 </div>
 </header>
 <main id="main" class="wrap">
@@ -232,6 +240,7 @@
 <p class="fine">Alles wordt in je browser berekend. Niets wat je invult wordt verzonden of opgeslagen.</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="https://getpofu.com/nl/bmi-calculator-for-women.html">Rekentool van Pofu</a></p>
 </div>
 </section>
 <section id="how">
@@ -251,6 +260,13 @@
 <li>WHO Expert Consultation. <a href="https://pubmed.ncbi.nlm.nih.gov/14726171/">Appropriate body-mass index for Asian populations</a>. Lancet, 2004 (passende BMI voor Aziatische bevolkingsgroepen).</li>
 </ul>
 <p class="fine">De formules komen uit de hierboven genoemde bronnen en komen overeen met de regels die de Pofu-app gebruikt. Deze pagina is niet beoordeeld door een diëtist; ze is getoetst aan deze bronnen en wordt bijgewerkt als die veranderen. <a href="editorial-policy.html">Hoe we onze inhoud en bronnen opstellen</a>.</p>
+</section>
+<section id="embed">
+<h2>Voeg deze rekentool toe aan je site</h2>
+<p>Gratis te gebruiken op je blog of website. Kopieer de onderstaande code: die toont de rekentool en een link terug naar deze pagina.</p>
+<textarea id="embed-code" readonly aria-label="Voeg deze rekentool toe aan je site">&lt;iframe src=&quot;https://getpofu.com/nl/bmi-calculator-for-women.html?embed=1&quot; title=&quot;BMI berekenen voor vrouwen&quot; width=&quot;100%&quot; height=&quot;940&quot; loading=&quot;lazy&quot; style=&quot;border:0;max-width:640px&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpofu.com/nl/bmi-calculator-for-women.html&quot;&gt;BMI berekenen voor vrouwen&lt;/a&gt; · Pofu&lt;/p&gt;</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="Gekopieerd">Code kopiëren</button></p>
 </section>
 <section id="faq">
 <h2>Veelgestelde vragen</h2>
@@ -278,6 +294,18 @@
 <section id="not-medical">
 <div class="note"><p>Deze rekentool geeft algemene schattingen voor volwassenen, geen medisch advies. Ben je zwanger of geef je borstvoeding, heb je een medische aandoening zoals nierziekte of diabetes, of een voorgeschiedenis van een eetstoornis, praat dan met je arts of diëtist voordat je je eetpatroon aanpast.</p></div>
 </section>
+<!-- toolbox:start -->
+<section id="free-tools" class="toolbox">
+<h2>Meer gratis tools</h2>
+<ul>
+<li><a href="bmi-calculator-for-women.html">BMI berekenen voor vrouwen</a></li>
+<li><a href="calorie-deficit-calculator.html">Calorietekort berekenen met streefdatum</a></li>
+<li><a href="protein-calculator-for-women.html">Eiwitbehoefte berekenen voor vrouwen</a></li>
+<li><a href="macro-calculator-for-women.html">Macro's berekenen voor vrouwen</a></li>
+<li><a href="cycle-calorie-calculator.html">Calorieënrekentool voor vrouwen met cyclus</a></li>
+</ul>
+</section>
+<!-- toolbox:end -->
 </main>
 <footer class="foot">
 <div class="wrap">
@@ -367,5 +395,7 @@
   });
 })();
 </script>
+<script>(function () { var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () { t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () { document.execCommand('copy'); }); b.textContent = b.dataset.done; }); })();</script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+{
+  "title": "Calorieën in nationale gerechten: 22 keukens vergeleken (data 2026) | Pofu",
+  "desc": "Hoe calorierijk zijn typische gerechten uit 22 keukens? Calorieën per portie en per 100 g voor {n} lokale gerechten, met de mediaan per keuken en een gratis CSV-download.",
+  "h1": "Calorieën in nationale gerechten: 22 keukens vergeleken",
+  "lede": "We vergeleken de calorieën van {n} typische lokale gerechten uit 22 keukens, van Turkse linzensoep tot Koreaanse bibimbap, per portie en per 100 g.",
+  "pill": "Data · november 2026",
+  "h_find": "Belangrijkste bevindingen",
+  "find_top": "Het meest calorierijk in onze steekproef: {top}, met een mediaan van {topk} kcal per 100 g.",
+  "find_low": "Het lichtst: {low}, met een mediaan van {lowk} kcal per 100 g.",
+  "find_soup": "Soepen en groentegerechten zijn in de meeste keukens de lichtste gerechten, terwijl gefrituurde gerechten, gebak en zoetigheid het calorierijkst zijn.",
+  "find_portion": "Calorieën per 100 g en calorieën per portie vertellen een verschillend verhaal: een licht gerecht in een grote kom kan meer opleveren dan een klein, compact gebakje.",
+  "h_rank": "Keukens gerangschikt op caloriedichtheid",
+  "rank_cols": ["Keuken", "Gerechten", "Mediaan kcal per 100 g", "Lichtste gerecht", "Calorierijkste gerecht"],
+  "h_detail": "Alle gerechten per keuken",
+  "detail_cols": ["Gerecht", "Portie", "kcal per portie", "kcal per 100 g"],
+  "h_method": "Hoe we deze vergelijking hebben gemaakt",
+  "method": [
+    "<strong>Gerechten:</strong> de lokale gerechten op onze voedingspagina’s voor elke taal, gekozen als veelvoorkomende, bekende gerechten van die keuken. Dranken, sauzen en kleine bijgerechten (onder 60 g of 80 kcal per portie) laten we weg. Het is een steekproef, geen volledig beeld van wat mensen in een land eten.",
+    "<strong>Waarden:</strong> uit openbare voedingsmiddelendatabanken (USDA FoodData Central, NEVO, de Zweedse voedselautoriteit, NutriDatabáze, CREA) en de voedingsdatabase van de Pofu-app. Elke gerechtpagina linkt naar de bron als die er is.",
+    "<strong>Mediaan:</strong> de middelste waarde van de calorieën per 100 g van de gerechten, zodat één zeer zwaar of zeer licht gerecht het resultaat niet veel verschuift. Keukens met minder dan 8 gerechten in onze steekproef zijn gemarkeerd.",
+    "<strong>Beperkingen:</strong> recepten, porties en bakolie verschillen per huishouden, regio en restaurant, dus elke waarde is een gebruikelijke schatting. Varianten van één gerecht (bijvoorbeeld met kip of garnalen) tellen we apart."
+  ],
+  "small": "kleine steekproef",
+  "csv": "Download de data (CSV)",
+  "cite": "Je mag deze data gebruiken met een link naar deze pagina.",
+  "h_faq": "Veelgestelde vragen",
+  "faq": [
+    ["Welke keuken heeft de calorierijkste gerechten?", "In onze steekproef van {n} gerechten heeft de volgende keuken de hoogste mediaan, ongeveer {topk} kcal per 100 g: {top}. Recepten verschillen sterk, dus zie het als een grove vergelijking."],
+    ["Welke keuken heeft de lichtste gerechten?", "De laagste mediaan in onze steekproef heeft deze keuken, ongeveer {lowk} kcal per 100 g: {low}. Dat komt vooral doordat soepen, stoofgerechten en gestoomde gerechten veel water bevatten."],
+    ["Bepaalt caloriedichtheid of een gerecht gezond is?", "Nee. Ze laat zien hoeveel calorieën er in een bepaalde hoeveelheid eten zitten. Eiwit, vezels, groenten en portiegrootte zijn minstens zo belangrijk."],
+    ["Hoe tel ik calorieën bij een zelfgemaakt nationaal gerecht?", "Begin bij een gebruikelijke waarde zoals hier en pas de portie aan op wat je hebt gegeten. In Pofu kun je een foto van je bord maken en de schatting aanpassen."]
+  ],
+  "h_rel": "Gerelateerd",
+  "rel_food": "Calorieën in alle voedingsmiddelen",
+  "cuisines": {
+    "us": "Amerikaanse keuken", "tr": "Turkse keuken", "de": "Duitse keuken", "fr": "Franse keuken", "mx": "Mexicaanse keuken", "br": "Braziliaanse keuken",
+    "arab": "Arabische en Midden-Oosterse keuken", "cz": "Tsjechische keuken", "in": "Indiase keuken", "id": "Indonesische keuken", "it": "Italiaanse keuken",
+    "jp": "Japanse keuken", "kr": "Koreaanse keuken", "nl": "Nederlandse keuken", "pl": "Poolse keuken", "ro": "Roemeense keuken", "ru": "Russische keuken",
+    "se": "Zweedse keuken", "th": "Thaise keuken", "ua": "Oekraïense keuken", "vn": "Vietnamese keuken", "cn": "Chinese keuken"
+  }
+}

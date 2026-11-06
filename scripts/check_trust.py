@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Check data/trust/<lang>.json against en.json: same keys/list lengths and same {placeholders}.
-    python3 scripts/check_trust.py [lang ...]"""
+    python3 scripts/check_trust.py [--dir dishes] [lang ...]   (--dir picks another data/<dir>/ folder)"""
 import json, re, sys
 from pathlib import Path
-D = Path(__file__).resolve().parent.parent / "data" / "trust"
+args = sys.argv[1:]
+sub = "trust"
+if args[:1] == ["--dir"]:
+    sub, args = args[1], args[2:]
+D = Path(__file__).resolve().parent.parent / "data" / sub
 en = json.loads((D / "en.json").read_text(encoding="utf-8"))
 
 
@@ -25,7 +29,7 @@ def walk(a, b, path, errs):
             errs.append(f"{path}: links differ")
 
 
-langs = sys.argv[1:] or sorted(p.stem for p in D.glob("*.json") if p.stem != "en")
+langs = args or sorted(p.stem for p in D.glob("*.json") if p.stem != "en")
 bad = 0
 for L in langs:
     errs = []

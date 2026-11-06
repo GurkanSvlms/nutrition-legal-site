@@ -1,0 +1,41 @@
+{
+  "title": "Kalorie v národních jídlech: srovnání 22 kuchyní (data 2026) | Pofu",
+  "desc": "Jak kalorická jsou typická jídla z 22 kuchyní? Kalorie na porci a na 100 g u {n} místních jídel, s mediánem pro každou kuchyni a bezplatným stažením CSV.",
+  "h1": "Kalorie v národních jídlech: srovnání 22 kuchyní",
+  "lede": "Porovnali jsme kalorie u {n} typických místních jídel z 22 kuchyní, od turecké čočkové polévky po korejské bibimbap, na porci i na 100 g.",
+  "pill": "Data · listopad 2026",
+  "h_find": "Hlavní zjištění",
+  "find_top": "Nejkaloričtější v našem vzorku: {top}, medián {topk} kcal na 100 g.",
+  "find_low": "Nejlehčí: {low}, medián {lowk} kcal na 100 g.",
+  "find_soup": "Polévky a zeleninová jídla jsou ve většině kuchyní nejlehčí, zatímco smažená jídla, pečivo a sladkosti jsou nejkaloričtější.",
+  "find_portion": "Kalorie na 100 g a kalorie na porci vyprávějí jiný příběh: lehké jídlo ve velké misce může mít víc kalorií než malý, hutný moučník.",
+  "h_rank": "Kuchyně podle kalorické hustoty",
+  "rank_cols": ["Kuchyně", "Jídla", "Medián kcal na 100 g", "Nejlehčí jídlo", "Nejkaloričtější jídlo"],
+  "h_detail": "Všechna jídla podle kuchyní",
+  "detail_cols": ["Jídlo", "Porce", "kcal na porci", "kcal na 100 g"],
+  "h_method": "Jak jsme toto srovnání vytvořili",
+  "method": [
+    "<strong>Jídla:</strong> místní jídla z našich stránek o potravinách pro každý jazyk, vybraná jako běžná, dobře známá jídla dané kuchyně. Nápoje, omáčky a malé přílohy (pod 60 g nebo 80 kcal na porci) vynecháváme. Je to vzorek, ne úplný obraz toho, co lidé v dané zemi jedí.",
+    "<strong>Hodnoty:</strong> z veřejných databází složení potravin (USDA FoodData Central, NEVO, švédská potravinová agentura, NutriDatabáze, CREA) a databáze potravin aplikace Pofu. Stránka každého jídla odkazuje na zdroj, pokud existuje.",
+    "<strong>Medián:</strong> prostřední hodnota kalorií na 100 g u jídel, takže jedno velmi těžké nebo velmi lehké jídlo výsledek příliš neposune. Kuchyně, které mají v našem vzorku méně než 8 jídel, jsou označené.",
+    "<strong>Omezení:</strong> recepty, porce i množství oleje na smažení se liší podle domácnosti, regionu a restaurace, takže každá hodnota je typický odhad. Varianty jednoho jídla (například s kuřecím masem nebo krevetami) počítáme zvlášť."
+  ],
+  "small": "malý vzorek",
+  "csv": "Stáhnout data (CSV)",
+  "cite": "Tato data můžeš použít s odkazem na tuto stránku.",
+  "h_faq": "Často kladené otázky",
+  "faq": [
+    ["Která kuchyně má nejkaloričtější jídla?", "V našem vzorku {n} jídel má nejvyšší medián, asi {topk} kcal na 100 g, tato kuchyně: {top}. Recepty se hodně liší, takže to ber jako hrubé srovnání."],
+    ["Která kuchyně má nejlehčí jídla?", "Nejnižší medián v našem vzorku, asi {lowk} kcal na 100 g, má tato kuchyně: {low}. Hlavně proto, že polévky, dušená a vařená jídla v páře obsahují hodně vody."],
+    ["Rozhoduje kalorická hustota o tom, jestli je jídlo zdravé?", "Ne. Ukazuje, kolik kalorií se vejde do určitého množství jídla. Bílkoviny, vláknina, zelenina a velikost porce jsou stejně důležité."],
+    ["Jak počítat kalorie u domácího národního jídla?", "Začni typickou hodnotou jako tady a pak upravuj porci podle toho, kolik jsi snědla. V Pofu můžeš vyfotit talíř a odhad opravit."]
+  ],
+  "h_rel": "Související",
+  "rel_food": "Kalorie ve všech potravinách",
+  "cuisines": {
+    "us": "Americká kuchyně", "tr": "Turecká kuchyně", "de": "Německá kuchyně", "fr": "Francouzská kuchyně", "mx": "Mexická kuchyně", "br": "Brazilská kuchyně",
+    "arab": "Arabská a blízkovýchodní kuchyně", "cz": "Česká kuchyně", "in": "Indická kuchyně", "id": "Indonéská kuchyně", "it": "Italská kuchyně",
+    "jp": "Japonská kuchyně", "kr": "Korejská kuchyně", "nl": "Nizozemská kuchyně", "pl": "Polská kuchyně", "ro": "Rumunská kuchyně", "ru": "Ruská kuchyně",
+    "se": "Švédská kuchyně", "th": "Thajská kuchyně", "ua": "Ukrajinská kuchyně", "vn": "Vietnamská kuchyně", "cn": "Čínská kuchyně"
+  }
+}

@@ -31,7 +31,12 @@
     "badge_alt": "Pofu im App Store laden",
     "foot_nav": "Rechtliches und Support", "privacy_l": "Datenschutz", "terms_l": "Nutzungsbedingungen", "support_l": "Support",
     "updated": "Zuletzt aktualisiert am <time datetime=\"2026-11-06\">6. November 2026</time>.",
-    "tm": "Apple, iPhone und App Store sind Marken der Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone und App Store sind Marken der Apple Inc. © 2026 Pofu.",
+    "embed_h": "Diesen Rechner auf deiner Website einbinden",
+    "embed_p": "Kostenlos nutzbar für deinen Blog oder deine Website. Kopiere den Code unten: Er zeigt den Rechner und einen Link zurück zu dieser Seite.",
+    "embed_copy": "Code kopieren",
+    "embed_copied": "Kopiert",
+    "embed_by": "Rechner von Pofu"
   },
   "tools": {
     "protein": {

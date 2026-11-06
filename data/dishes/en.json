@@ -1,0 +1,41 @@
+{
+  "title": "Calories in national dishes: 22 cuisines compared (2026 data) | Pofu",
+  "desc": "How calorie-dense are typical dishes from 22 cuisines? Calories per serving and per 100 g for {n} local dishes, with the median for each cuisine and a free CSV download.",
+  "h1": "Calories in national dishes: 22 cuisines compared",
+  "lede": "We compared the calories in {n} typical local dishes from 22 cuisines, from Turkish lentil soup to Korean bibimbap, per serving and per 100 g.",
+  "pill": "Data · November 2026",
+  "h_find": "Key findings",
+  "find_top": "In our sample, {top} dishes are the most calorie-dense, with a median of {topk} kcal per 100 g.",
+  "find_low": "{low} dishes are the lightest, with a median of {lowk} kcal per 100 g.",
+  "find_soup": "Soups and vegetable dishes are the lightest dishes in most cuisines, while fried dishes, pastries and sweets are the most calorie-dense.",
+  "find_portion": "Calories per 100 g and calories per serving tell different stories: a light dish eaten in a big bowl can add up to more than a small, dense pastry.",
+  "h_rank": "Cuisines ranked by calorie density",
+  "rank_cols": ["Cuisine", "Dishes", "Median kcal per 100 g", "Lightest dish", "Most calorie-dense dish"],
+  "h_detail": "All dishes by cuisine",
+  "detail_cols": ["Dish", "Serving", "kcal per serving", "kcal per 100 g"],
+  "h_method": "How we made this comparison",
+  "method": [
+    "<strong>Dishes:</strong> the local dishes on our food pages for each language, chosen as common, well-known dishes of that cuisine. Drinks, sauces and small side portions (under 60 g or 80 kcal a serving) are left out. It is a sample, not a full picture of what people in a country eat.",
+    "<strong>Values:</strong> from public food composition databases (USDA FoodData Central, NEVO, the Swedish Food Agency, NutriDatabáze, CREA) and the Pofu app’s food database. Each dish page links its source where one exists.",
+    "<strong>Median:</strong> the middle value of the dishes’ calories per 100 g, so one very heavy or very light dish doesn’t move the result much. Cuisines with fewer than 8 dishes in our sample are marked.",
+    "<strong>Limits:</strong> recipes, portions and cooking oil differ by home, region and restaurant, so every value is a typical estimate. Variants of one dish (for example with chicken or shrimp) are counted separately."
+  ],
+  "small": "small sample",
+  "csv": "Download the data (CSV)",
+  "cite": "You may use this data with a link to this page.",
+  "h_faq": "Frequently asked questions",
+  "faq": [
+    ["Which cuisine has the most calorie-dense dishes?", "In our sample of {n} dishes, {top} dishes have the highest median, about {topk} kcal per 100 g. Recipes vary a lot, so treat it as a rough comparison."],
+    ["Which cuisine has the lightest dishes?", "{low} dishes have the lowest median in our sample, about {lowk} kcal per 100 g, mostly because soups, stews and steamed dishes contain a lot of water."],
+    ["Does calorie density decide if a dish is healthy?", "No. It shows how many calories fit in a given amount of food. Protein, fiber, vegetables and portion size matter just as much."],
+    ["How do I count calories for a home-cooked national dish?", "Start from a typical value like the ones here, then adjust the portion to what you ate. In Pofu you can take a photo of your plate and correct the estimate."]
+  ],
+  "h_rel": "Related",
+  "rel_food": "Calories in all foods",
+  "cuisines": {
+    "us": "American", "tr": "Turkish", "de": "German", "fr": "French", "mx": "Mexican", "br": "Brazilian",
+    "arab": "Arab and Middle Eastern", "cz": "Czech", "in": "Indian", "id": "Indonesian", "it": "Italian",
+    "jp": "Japanese", "kr": "Korean", "nl": "Dutch", "pl": "Polish", "ro": "Romanian", "ru": "Russian",
+    "se": "Swedish", "th": "Thai", "ua": "Ukrainian", "vn": "Vietnamese", "cn": "Chinese"
+  }
+}

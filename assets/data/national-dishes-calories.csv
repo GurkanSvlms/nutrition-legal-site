@@ -1,0 +1,383 @@
+cuisine,dish,serving,serving_grams_or_ml,kcal_per_serving,kcal_per_100,protein_g_per_serving,page
+us,Smoothie Bowl,"1 bowl, 350 g",350,300,86,8,https://getpofu.com/calories/smoothie-bowl.html
+us,Greek Salad,"1 serving, 250 g",250,230,92,7,https://getpofu.com/calories/greek-salad.html
+us,Ramen,"1 bowl, 500 g",500,500,100,24,https://getpofu.com/calories/ramen.html
+us,Poke Bowl,"1 bowl, 400 g",400,480,120,28,https://getpofu.com/calories/poke-bowl.html
+us,Chicken Curry,"1 serving, 300 g",300,380,127,28,https://getpofu.com/calories/chicken-curry.html
+us,Caesar Salad,"1 serving, 250 g",250,330,132,12,https://getpofu.com/calories/caesar-salad.html
+us,Fried Rice,"1 serving, 250 g",250,350,140,10,https://getpofu.com/calories/fried-rice.html
+us,Pad Thai,"1 serving, 350 g",350,600,171,22,https://getpofu.com/calories/pad-thai.html
+us,Shawarma Wrap,"1 piece, 300 g",300,520,173,30,https://getpofu.com/calories/shawarma-wrap.html
+us,Sushi (8 pieces),"1 serving, 200 g",200,350,175,14,https://getpofu.com/calories/sushi-8-pieces.html
+us,Full English Breakfast,"1 serving, 450 g",450,800,178,38,https://getpofu.com/calories/full-english-breakfast.html
+us,Hummus,"1 serving, 100 g",100,180,180,6,https://getpofu.com/calories/hummus.html
+us,Club Sandwich,"1 piece, 280 g",280,580,207,30,https://getpofu.com/calories/club-sandwich.html
+us,Fish and Chips,"1 serving, 400 g",400,840,210,38,https://getpofu.com/calories/fish-and-chips.html
+us,Pancakes,"3 pieces, 150 g",150,350,233,8,https://getpofu.com/calories/pancakes.html
+us,Cheeseburger,"1 piece, 220 g",220,550,250,30,https://getpofu.com/calories/cheeseburger.html
+us,Pizza Slice (cheese),"1 slice, 110 g",110,285,259,12,https://getpofu.com/calories/pizza-slice-cheese.html
+us,Bagel (plain),"1 piece, 95 g",95,250,263,10,https://getpofu.com/calories/bagel-plain.html
+us,French Fries,"1 serving, 110 g",110,310,282,3.4,https://getpofu.com/calories/french-fries.html
+tr,Çoban salata,"1 porsiyon, 200 g",200,90,45,2,https://getpofu.com/kalori/coban-salata.html
+tr,Cacık,"1 kâse, 200 g",200,90,45,5,https://getpofu.com/kalori/cacik.html
+tr,Taze fasulye,"1 porsiyon, 250 g",250,160,64,5,https://getpofu.com/kalori/taze-fasulye.html
+tr,Türlü,"1 porsiyon, 250 g",250,220,88,9,https://getpofu.com/kalori/turlu.html
+tr,Piyaz,"1 porsiyon, 200 g",200,200,100,8,https://getpofu.com/kalori/piyaz.html
+tr,İmam bayıldı,"1 porsiyon, 250 g",250,260,104,4,https://getpofu.com/kalori/imam-bayildi.html
+tr,Biber dolması,"1 adet, 150 g",150,165,110,7,https://getpofu.com/kalori/biber-dolmasi.html
+tr,Menemen,"1 porsiyon, 200 g",200,230,115,12,https://getpofu.com/kalori/menemen.html
+tr,Nohut yemeği,"1 porsiyon, 250 g",250,300,120,15,https://getpofu.com/kalori/nohut-yemegi.html
+tr,Musakka,"1 porsiyon, 250 g",250,310,124,15,https://getpofu.com/kalori/musakka.html
+tr,Aşure,"1 kâse, 200 g",200,250,125,5,https://getpofu.com/kalori/asure.html
+tr,Kuru fasulye,"1 porsiyon, 250 g",250,320,128,17,https://getpofu.com/kalori/kuru-fasulye.html
+tr,Bulgur pilavı,"1 porsiyon, 180 g",180,230,128,7,https://getpofu.com/kalori/bulgur-pilavi.html
+tr,Sütlaç,"1 kâse, 170 g",170,220,129,6,https://getpofu.com/kalori/sutlac.html
+tr,Çiğ köfte (etsiz),"5 adet, 100 g",100,130,130,3,https://getpofu.com/kalori/cig-kofte-etsiz.html
+tr,Karnıyarık,"1 porsiyon, 250 g",250,330,132,14,https://getpofu.com/kalori/karniyarik.html
+tr,Pirinç pilavı,"1 porsiyon, 180 g",180,260,144,5,https://getpofu.com/kalori/pirinc-pilavi.html
+tr,Şehriyeli pilav,"1 porsiyon, 180 g",180,270,150,6,https://getpofu.com/kalori/sehriyeli-pilav.html
+tr,Haydari,"1 porsiyon, 100 g",100,150,150,6,https://getpofu.com/kalori/haydari.html
+tr,Kazandibi,"1 porsiyon, 150 g",150,230,153,6,https://getpofu.com/kalori/kazandibi.html
+tr,Makarna (domates soslu),"1 porsiyon, 200 g",200,330,165,11,https://getpofu.com/kalori/makarna-domates-soslu.html
+tr,Tavuk şiş,"1 porsiyon, 180 g",180,300,167,38,https://getpofu.com/kalori/tavuk-sis.html
+tr,Mantı,"1 porsiyon, 250 g",250,420,168,18,https://getpofu.com/kalori/manti.html
+tr,Omlet,"2 yumurta, 120 g",120,220,183,15,https://getpofu.com/kalori/omlet.html
+tr,Tavuk döner,"1 porsiyon, 150 g",150,290,193,28,https://getpofu.com/kalori/tavuk-doner.html
+tr,Dondurma,"2 top, 100 g",100,200,200,4,https://getpofu.com/kalori/dondurma.html
+tr,Izgara köfte,"4 adet, 120 g",120,250,208,22,https://getpofu.com/kalori/izgara-kofte.html
+tr,Gözleme (peynirli),"1 adet, 180 g",180,380,211,14,https://getpofu.com/kalori/gozleme-peynirli.html
+tr,Lahmacun,"1 adet, 140 g",140,300,214,13,https://getpofu.com/kalori/lahmacun.html
+tr,Sucuklu yumurta,"1 porsiyon, 150 g",150,330,220,20,https://getpofu.com/kalori/sucuklu-yumurta.html
+tr,İçli köfte,"1 adet, 100 g",100,220,220,8,https://getpofu.com/kalori/icli-kofte.html
+tr,Kıymalı pide,"1 adet, 280 g",280,620,221,28,https://getpofu.com/kalori/kiymali-pide.html
+tr,İskender,"1 porsiyon, 350 g",350,780,223,38,https://getpofu.com/kalori/iskender.html
+tr,Köfte ekmek,"1 adet, 200 g",200,480,240,25,https://getpofu.com/kalori/kofte-ekmek.html
+tr,Kaşarlı pide,"1 adet, 280 g",280,680,243,30,https://getpofu.com/kalori/kasarli-pide.html
+tr,Su böreği,"1 dilim, 120 g",120,300,250,11,https://getpofu.com/kalori/su-boregi.html
+tr,Tost (kaşarlı),"1 adet, 160 g",160,400,250,18,https://getpofu.com/kalori/tost-kasarli.html
+tr,Et döner,"1 porsiyon, 150 g",150,380,253,26,https://getpofu.com/kalori/et-doner.html
+tr,Kokoreç,"Yarım ekmek, 200 g",200,520,260,26,https://getpofu.com/kalori/kokorec.html
+tr,Adana kebap,"1 porsiyon, 180 g",180,480,267,30,https://getpofu.com/kalori/adana-kebap.html
+tr,Künefe,"1 porsiyon, 180 g",180,480,267,12,https://getpofu.com/kalori/kunefe.html
+tr,Simit,"1 adet, 100 g",100,290,290,9,https://getpofu.com/kalori/simit.html
+tr,Poğaça,"1 adet, 80 g",80,250,312,6,https://getpofu.com/kalori/pogaca.html
+tr,Açma,"1 adet, 85 g",85,270,318,7,https://getpofu.com/kalori/acma.html
+de,Linsensuppe,"1 Schale, 250 g",250,160,64,9,https://getpofu.com/de/kalorien/linsensuppe.html
+de,Kartoffelsalat,"1 Portion, 150 g",150,190,127,3,https://getpofu.com/de/kalorien/kartoffelsalat.html
+de,Müsli mit Joghurt,"1 Schale, 200 g",200,320,160,12,https://getpofu.com/de/kalorien/musli-mit-joghurt.html
+de,Rinderroulade,"1 Portion, 200 g",200,380,190,32,https://getpofu.com/de/kalorien/rinderroulade.html
+de,Käsespätzle,"1 Portion, 250 g",250,520,208,20,https://getpofu.com/de/kalorien/kasespatzle.html
+de,Wiener Schnitzel,"1 Portion, 180 g",180,430,239,30,https://getpofu.com/de/kalorien/wiener-schnitzel.html
+de,Currywurst,"1 Portion, 150 g",150,380,253,14,https://getpofu.com/de/kalorien/currywurst.html
+de,Brezel,"1 Stück, 120 g",120,340,283,10,https://getpofu.com/de/kalorien/brezel.html
+de,Bratwurst,"1 Stück, 100 g",100,300,300,12,https://getpofu.com/de/kalorien/bratwurst.html
+fr,Ratatouille,"1 portion, 250 g",250,150,60,3,https://getpofu.com/fr/calories/ratatouille.html
+fr,Soupe à l'oignon,"1 bol, 300 g",300,220,73,9,https://getpofu.com/fr/calories/soupe-a-l-oignon.html
+fr,Salade niçoise,"1 portion, 300 g",300,320,107,20,https://getpofu.com/fr/calories/salade-nicoise.html
+fr,Coq au vin,"1 portion, 250 g",250,420,168,38,https://getpofu.com/fr/calories/coq-au-vin.html
+fr,Crêpe nature,"1 pièce, 70 g",70,150,214,4,https://getpofu.com/fr/calories/crepe-nature.html
+fr,Quiche lorraine,"1 tranche, 150 g",150,380,253,14,https://getpofu.com/fr/calories/quiche-lorraine.html
+fr,Baguette,"1 morceau, 70 g",70,180,257,6,https://getpofu.com/fr/calories/baguette.html
+fr,Croissant,"1 pièce, 60 g",60,270,450,5.5,https://getpofu.com/fr/calories/croissant.html
+mx,Pozole,"1 tazón, 350 g",350,280,80,20,https://getpofu.com/es/calorias/pozole.html
+mx,Paella,"1 porción, 300 g",300,420,140,22,https://getpofu.com/es/calorias/paella.html
+mx,Guacamole,"1 porción, 100 g",100,150,150,2,https://getpofu.com/es/calorias/guacamole.html
+mx,Tortilla española,"1 rebanada, 150 g",150,270,180,11,https://getpofu.com/es/calorias/tortilla-espanola.html
+mx,Chilaquiles,"1 porción, 250 g",250,480,192,18,https://getpofu.com/es/calorias/chilaquiles.html
+mx,Burrito,"1 pieza, 300 g",300,580,193,25,https://getpofu.com/es/calorias/burrito.html
+mx,Taco,"1 pieza, 100 g",100,210,210,10,https://getpofu.com/es/calorias/taco.html
+mx,Enchilada,"1 pieza, 150 g",150,320,213,15,https://getpofu.com/es/calorias/enchilada.html
+mx,Quesadilla,"1 pieza, 150 g",150,380,253,18,https://getpofu.com/es/calorias/quesadilla.html
+it,Minestrone,"1 piatto, 300 g",300,135,45,6,https://getpofu.com/it/calorie/minestrone.html
+it,Polenta,"1 porzione, 200 g",200,146,73,1.8,https://getpofu.com/it/calorie/polenta.html
+it,Gnocchi di patate,"1 piatto, 200 g",200,294,147,7,https://getpofu.com/it/calorie/gnocchi-di-patate.html
+it,Spaghetti alla bolognese,"1 piatto, 350 g",350,522,149,27,https://getpofu.com/it/calorie/spaghetti-alla-bolognese.html
+it,Cannelloni ricotta e spinaci,"2 cannelloni, 250 g",250,392,157,15.8,https://getpofu.com/it/calorie/cannelloni-ricotta-e-spinaci.html
+it,Tortellini,"1 piatto, 200 g",200,316,158,12.8,https://getpofu.com/it/calorie/tortellini.html
+it,Bruschetta,"2 fette, 100 g",100,171,171,4.3,https://getpofu.com/it/calorie/bruschetta.html
+it,Ravioli,"1 piatto, 200 g",200,354,177,14.4,https://getpofu.com/it/calorie/ravioli.html
+it,Spaghetti alla carbonara,"1 piatto, 350 g",350,637,182,26.3,https://getpofu.com/it/calorie/spaghetti-alla-carbonara.html
+it,Risotto,"1 piatto, 300 g",300,588,196,17.4,https://getpofu.com/it/calorie/risotto.html
+it,Lasagne,"1 porzione, 300 g",300,618,206,40.9,https://getpofu.com/it/calorie/lasagne.html
+it,Pizza quattro formaggi,"1 pizza, 350 g",350,816,233,32.2,https://getpofu.com/it/calorie/pizza-quattro-formaggi.html
+it,Pizza marinara,"1 pizza, 280 g",280,694,248,21.3,https://getpofu.com/it/calorie/pizza-marinara.html
+it,Gelato alla vaniglia,"2 palline, 100 g",100,249,249,3.5,https://getpofu.com/it/calorie/gelato-alla-vaniglia.html
+it,Pizza margherita,"1 pizza, 300 g",300,765,255,36.3,https://getpofu.com/it/calorie/pizza-margherita.html
+it,Mozzarella di bufala,"1 mozzarella, 125 g",125,321,257,17.6,https://getpofu.com/it/calorie/mozzarella-di-bufala.html
+it,Focaccia,"1 fetta, 80 g",80,213,266,6.2,https://getpofu.com/it/calorie/focaccia.html
+it,Panettone,"1 fetta, 100 g",100,337,337,6.4,https://getpofu.com/it/calorie/panettone.html
+it,Tiramisù,"1 porzione, 120 g",120,424,353,6.8,https://getpofu.com/it/calorie/tiramisu.html
+it,Cannolo alla crema,"1 pezzo, 80 g",80,294,368,5,https://getpofu.com/it/calorie/cannolo-alla-crema.html
+it,Torta margherita,"1 fetta, 70 g",70,259,370,6.2,https://getpofu.com/it/calorie/torta-margherita.html
+br,Açaí na tigela,"1 tigela, 300 g",300,320,107,3,https://getpofu.com/pt-BR/calorias/acai-na-tigela.html
+br,Arroz e feijão,"1 porção, 300 g",300,340,113,12,https://getpofu.com/pt-BR/calorias/arroz-e-feijao.html
+br,Bacalhau,"1 porção, 150 g",150,220,147,32,https://getpofu.com/pt-BR/calorias/bacalhau.html
+br,Feijoada,"1 porção, 300 g",300,450,150,28,https://getpofu.com/pt-BR/calorias/feijoada.html
+br,Coxinha,"1 unidade, 90 g",90,240,267,9,https://getpofu.com/pt-BR/calorias/coxinha.html
+nl,Hutspot,"1 bord, 350 g",350,220,63,3.9,https://getpofu.com/nl/calorieen/hutspot.html
+nl,Zuurkoolstamppot,"1 bord, 350 g",350,238,68,5.3,https://getpofu.com/nl/calorieen/zuurkoolstamppot.html
+nl,Erwtensoep,"1 kom, 400 g",400,308,77,19.6,https://getpofu.com/nl/calorieen/erwtensoep.html
+nl,Vla,"1 kommetje, 150 g",150,130,87,3.2,https://getpofu.com/nl/calorieen/vla.html
+nl,Andijviestamppot met gehaktbal en spekjes,"1 bord, 350 g",350,354,101,18.2,https://getpofu.com/nl/calorieen/andijviestamppot-met-gehaktbal-en-spekjes.html
+nl,Boerenkoolstamppot met rookworst en spekjes,"1 bord, 350 g",350,480,137,18.2,https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html
+nl,Nasi goreng,"1 bord, 300 g",300,432,144,13.2,https://getpofu.com/nl/calorieen/nasi-goreng.html
+nl,Poffertjes,"1 portie (ca. 10 stuks), 100 g",100,154,154,5.7,https://getpofu.com/nl/calorieen/poffertjes.html
+nl,Rauwe haring,"1 haring, 80 g",80,159,199,12.8,https://getpofu.com/nl/calorieen/rauwe-haring.html
+nl,Pannenkoek,"1 pannenkoek, 120 g",120,247,206,10,https://getpofu.com/nl/calorieen/pannenkoek.html
+nl,Haring in het zuur,"1 haring, 80 g",80,166,208,12.8,https://getpofu.com/nl/calorieen/haring-in-het-zuur.html
+nl,Kapsalon,"1 bakje, 450 g",450,972,216,43.2,https://getpofu.com/nl/calorieen/kapsalon.html
+nl,Broodje gezond,"1 broodje, 200 g",200,436,218,23.4,https://getpofu.com/nl/calorieen/broodje-gezond.html
+nl,Vlaai met fruit,"1 punt, 110 g",110,251,228,3.2,https://getpofu.com/nl/calorieen/vlaai-met-fruit.html
+nl,Patatje speciaal,"1 bakje, 300 g",300,747,249,7.8,https://getpofu.com/nl/calorieen/patatje-speciaal.html
+nl,Frikandel,"1 stuk, 75 g",75,188,251,10.4,https://getpofu.com/nl/calorieen/frikandel.html
+nl,Oliebol met krenten en rozijnen,"1 stuk, 80 g",80,207,259,4.7,https://getpofu.com/nl/calorieen/oliebol-met-krenten-en-rozijnen.html
+nl,Gehaktbal,"1 stuk, 100 g",100,262,262,20.5,https://getpofu.com/nl/calorieen/gehaktbal.html
+nl,Patat,"1 klein bakje, 150 g",150,394,263,4.7,https://getpofu.com/nl/calorieen/patat.html
+nl,Kroket,"1 stuk, 70 g",70,190,271,6.2,https://getpofu.com/nl/calorieen/kroket.html
+nl,Appelflap,"1 stuk, 100 g",100,307,307,3.6,https://getpofu.com/nl/calorieen/appelflap.html
+nl,Kaassoufflé,"1 stuk, 85 g",85,305,359,6.2,https://getpofu.com/nl/calorieen/kaassouffle.html
+nl,Bitterballen,"4 stuks, 80 g",80,290,362,7.9,https://getpofu.com/nl/calorieen/bitterballen.html
+nl,Worstenbroodje,"1 stuk, 110 g",110,420,382,13,https://getpofu.com/nl/calorieen/worstenbroodje.html
+pl,Rosół z makaronem,"1 miska, 300 g",300,159,53,11.5,https://getpofu.com/pl/kalorie/rosol-z-makaronem.html
+pl,Mizeria (ogórki ze śmietaną),"1 porcja, 130 g",130,86,66,1.7,https://getpofu.com/pl/kalorie/mizeria.html
+pl,Zupa fasolowa z mięsem,"1 talerz, 300 g",300,252,84,17.6,https://getpofu.com/pl/kalorie/zupa-fasolowa.html
+pl,Zupa ziemniaczana (kartoflanka),"1 talerz, 250 g",250,225,90,3.8,https://getpofu.com/pl/kalorie/zupa-ziemniaczana.html
+pl,Gołąbki,"2 sztuki, 250 g",250,285,114,20.8,https://getpofu.com/pl/kalorie/golabki.html
+pl,Pulpety w sosie,"3 pulpety, 200 g",200,286,143,24.4,https://getpofu.com/pl/kalorie/pulpety-w-sosie.html
+pl,Twaróg,"1 porcja, 100 g",100,148,148,11.0,https://getpofu.com/pl/kalorie/twarog.html
+pl,Sałatka ziemniaczana z jajkiem,"1 porcja, 150 g",150,236,157,2.9,https://getpofu.com/pl/kalorie/salatka-ziemniaczana.html
+pl,Papryka faszerowana mięsem i ryżem,"1 papryka, 200 g",200,356,178,15.7,https://getpofu.com/pl/kalorie/papryka-faszerowana.html
+pl,Pieczeń wieprzowa,"1 porcja, 120 g",120,217,181,32.0,https://getpofu.com/pl/kalorie/pieczen-wieprzowa.html
+pl,Pierogi,"6 sztuk, 180 g",180,351,195,9.5,https://getpofu.com/pl/kalorie/pierogi.html
+pl,Placki ziemniaczane,"2 sztuki, 120 g",120,235,196,5.4,https://getpofu.com/pl/kalorie/placki-ziemniaczane.html
+pl,Śledź marynowany,"1 filet, 60 g",60,125,208,9.6,https://getpofu.com/pl/kalorie/sledz-marynowany.html
+pl,Sernik,"1 kawałek, 120 g",120,262,218,6.6,https://getpofu.com/pl/kalorie/sernik.html
+pl,Naleśniki (puste),"2 naleśniki, 130 g",130,291,224,11.5,https://getpofu.com/pl/kalorie/nalesniki.html
+pl,Kotlet schabowy,"1 kotlet, 150 g",150,344,229,37.6,https://getpofu.com/pl/kalorie/kotlet-schabowy.html
+pl,Szarlotka (ciasto jabłkowe),"1 kawałek, 125 g",125,370,296,3.4,https://getpofu.com/pl/kalorie/szarlotka.html
+pl,Kiełbasa,"1 kawałek, 100 g",100,337,337,12.5,https://getpofu.com/pl/kalorie/kielbasa.html
+pl,Pączek,"1 pączek, 60 g",60,253,422,3.7,https://getpofu.com/pl/kalorie/paczek.html
+ru,Куриный суп с лапшой,"1 тарелка, 300 g",300,159,53,11.5,https://getpofu.com/ru/kalorii/kurinyj-sup-s-lapshoj.html
+ru,Манная каша,"1 тарелка, 250 g",250,162,65,3.6,https://getpofu.com/ru/kalorii/mannaya-kasha.html
+ru,Салат из огурцов со сметаной,"1 порция, 130 g",130,86,66,1.7,https://getpofu.com/ru/kalorii/salat-ogurcy-smetana.html
+ru,Гороховый суп,"1 тарелка, 300 g",300,240,80,16.7,https://getpofu.com/ru/kalorii/gorokhovyy-sup.html
+ru,Шашлык из курицы с овощами,"1 шампур, 202 g",202,210,104,26.3,https://getpofu.com/ru/kalorii/shashlyk-kuritsa.html
+ru,Голубцы,"2 шт., 250 g",250,285,114,20.8,https://getpofu.com/ru/kalorii/golubtsy.html
+ru,Гречка варёная,"1 тарелка, 180 g",180,212,118,5.8,https://getpofu.com/ru/kalorii/grechka-varenaya.html
+ru,Пшённая каша,"1 тарелка, 200 g",200,236,118,7.0,https://getpofu.com/ru/kalorii/pshennaya-kasha.html
+ru,Шашлык из свинины с овощами,"1 шампур, 202 g",202,250,124,28.0,https://getpofu.com/ru/kalorii/shashlyk-svinina.html
+ru,Печень с луком,"1 порция, 200 g",200,258,129,33.4,https://getpofu.com/ru/kalorii/pechen-s-lukom.html
+ru,Тефтели в соусе,"3 шт., 200 g",200,286,143,24.4,https://getpofu.com/ru/kalorii/tefteli.html
+ru,Творог,"1 порция, 150 g",150,222,148,16.4,https://getpofu.com/ru/kalorii/tvorog.html
+ru,Бефстроганов,"1 порция, 250 g",250,375,150,25.2,https://getpofu.com/ru/kalorii/befstroganov.html
+ru,Блины с мясом,"2 блина, 155 g",155,268,173,19.9,https://getpofu.com/ru/kalorii/bliny-s-myasom.html
+ru,Фаршированный перец,"1 шт., 200 g",200,356,178,15.7,https://getpofu.com/ru/kalorii/farshirovannyy-perets.html
+ru,Вареники,"5 шт., 200 g",200,390,195,10.5,https://getpofu.com/ru/kalorii/vareniki.html
+ru,Драники,"3 шт., 150 g",150,294,196,6.7,https://getpofu.com/ru/kalorii/draniki.html
+ru,Блины,"2 шт., 100 g",100,224,224,8.8,https://getpofu.com/ru/kalorii/bliny.html
+ru,Котлета по-киевски,"1 шт., 150 g",150,420,280,32.0,https://getpofu.com/ru/kalorii/kotleta-po-kievski.html
+ua,Курячий суп з локшиною,"1 тарілка, 300 g",300,159,53,11.5,https://getpofu.com/uk/kalorii/kuryachyi-sup-z-lokshynoyu.html
+ua,Манна каша,"1 тарілка, 250 g",250,162,65,3.6,https://getpofu.com/uk/kalorii/manna-kasha.html
+ua,Салат з огірків зі сметаною,"1 порція, 130 g",130,86,66,1.7,https://getpofu.com/uk/kalorii/salat-ohirky-smetana.html
+ua,Гороховий суп,"1 тарілка, 300 g",300,240,80,16.7,https://getpofu.com/uk/kalorii/horokhovyy-sup.html
+ua,Квасолевий суп з м'ясом,"1 тарілка, 300 g",300,252,84,17.6,https://getpofu.com/uk/kalorii/kvasolevyi-sup.html
+ua,Картопляний суп,"1 тарілка, 300 g",300,270,90,4.5,https://getpofu.com/uk/kalorii/kartoplyanyi-sup.html
+ua,Шашлик з курки з овочами,"1 шампур, 202 g",202,210,104,26.3,https://getpofu.com/uk/kalorii/shashlyk-kurka.html
+ua,Голубці,"2 шт., 250 g",250,285,114,20.8,https://getpofu.com/uk/kalorii/holubtsi.html
+ua,Гречана каша,"1 тарілка, 180 g",180,212,118,5.8,https://getpofu.com/uk/kalorii/hrechana-kasha.html
+ua,Пшоняна каша,"1 тарілка, 200 g",200,236,118,7.0,https://getpofu.com/uk/kalorii/pshonyana-kasha.html
+ua,Шашлик зі свинини з овочами,"1 шампур, 202 g",202,250,124,28.0,https://getpofu.com/uk/kalorii/shashlyk-svynyna.html
+ua,Печінка з цибулею,"1 порція, 200 g",200,258,129,33.4,https://getpofu.com/uk/kalorii/pechinka-z-tsybuleyu.html
+ua,Тефтелі в соусі,"3 шт., 200 g",200,286,143,24.4,https://getpofu.com/uk/kalorii/tefteli.html
+ua,Сир кисломолочний,"1 порція, 150 g",150,222,148,16.4,https://getpofu.com/uk/kalorii/syr-kyslomolochnyy.html
+ua,Налисники з м'ясом,"2 шт., 155 g",155,268,173,19.9,https://getpofu.com/uk/kalorii/nalysnyky-z-myasom.html
+ua,Фарширований перець,"1 шт., 200 g",200,356,178,15.7,https://getpofu.com/uk/kalorii/farshyrovanyy-perets.html
+ua,Вареники,"5 шт., 200 g",200,390,195,10.5,https://getpofu.com/uk/kalorii/varenyky.html
+ua,Деруни,"3 шт., 150 g",150,294,196,6.7,https://getpofu.com/uk/kalorii/deruny.html
+ua,Налисники,"2 шт., 100 g",100,224,224,8.8,https://getpofu.com/uk/kalorii/nalysnyky.html
+ua,Котлета по-київськи,"1 шт., 150 g",150,420,280,32.0,https://getpofu.com/uk/kalorii/kotleta-po-kyyivsky.html
+cz,Bramboračka,"1 talíř, 300 g",300,156,52,4.5,https://getpofu.com/cs/kalorie/bramboracka.html
+cz,Chlupaté knedlíky,"3 kusy, 200 g",200,226,113,7.2,https://getpofu.com/cs/kalorie/chlupate-knedliky.html
+cz,Bramborové knedlíky,"4 plátky, 200 g",200,276,138,9.0,https://getpofu.com/cs/kalorie/bramborove-knedliky.html
+cz,Rajská omáčka s hovězím a knedlíkem,"1 porce, 350 g",350,550,157,32.9,https://getpofu.com/cs/kalorie/rajska-omacka-s-hovezim-a-knedlikem.html
+cz,Houbová omáčka s hovězím a knedlíkem,"1 porce, 350 g",350,550,157,35.0,https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html
+cz,Koprová omáčka s hovězím a knedlíkem,"1 porce, 350 g",350,609,174,37.1,https://getpofu.com/cs/kalorie/koprova-omacka-s-hovezim-a-knedlikem.html
+cz,Svíčková na smetaně s knedlíkem,"1 porce, 350 g",350,640,183,32.9,https://getpofu.com/cs/kalorie/svickova-na-smetane-s-knedlikem.html
+cz,Houskové knedlíky,"4 plátky, 200 g",200,396,198,15.0,https://getpofu.com/cs/kalorie/houskove-knedliky.html
+cz,Palačinka se zavařeninou,"1 kus, 100 g",100,199,199,5.2,https://getpofu.com/cs/kalorie/palacinka-se-zavareninou.html
+cz,Tlačenka,"1 porce, 100 g",100,211,211,16.9,https://getpofu.com/cs/kalorie/tlacenka.html
+cz,Škubánky s mákem,"1 porce, 250 g",250,545,218,10.8,https://getpofu.com/cs/kalorie/skubanky-s-makem.html
+cz,Bramborový salát,"1 porce, 150 g",150,328,219,2.7,https://getpofu.com/cs/kalorie/bramborovy-salat.html
+cz,Smaženka,"1 kus, 150 g",150,357,238,11.2,https://getpofu.com/cs/kalorie/smazenka.html
+cz,Bramborák,"2 kusy, 150 g",150,363,242,8.4,https://getpofu.com/cs/kalorie/bramborak.html
+cz,Párek v rohlíku,"1 kus, 130 g",130,317,244,12.2,https://getpofu.com/cs/kalorie/parek-v-rohliku.html
+cz,Buchty s tvarohem,"1 kus, 90 g",90,264,293,8.1,https://getpofu.com/cs/kalorie/buchty-s-tvarohem.html
+cz,Jablkový závin,"1 kus, 120 g",120,379,316,5.6,https://getpofu.com/cs/kalorie/jablkovy-zavin.html
+cz,Smažený sýr v housce,"1 kus, 200 g",200,640,320,20.4,https://getpofu.com/cs/kalorie/smazeny-syr-v-housce.html
+cz,Hermelínový salát,"1 porce, 120 g",120,390,325,12.1,https://getpofu.com/cs/kalorie/hermelinovy-salat.html
+cz,Langoš,"1 kus, 180 g",180,598,332,13.3,https://getpofu.com/cs/kalorie/langos.html
+cz,Bábovka,"1 kus, 80 g",80,290,362,4.5,https://getpofu.com/cs/kalorie/babovka.html
+cz,Smažený sýr,"1 kus, 120 g",120,461,384,26.4,https://getpofu.com/cs/kalorie/smazeny-syr.html
+ro,Ciorbă de legume cu carne,"1 castron, 300 g",300,132,44,10.1,https://getpofu.com/ro/calorii/ciorba-de-legume-cu-carne.html
+ro,Supă de pui cu tăiței,"1 castron, 300 g",300,159,53,11.5,https://getpofu.com/ro/calorii/supa-de-pui-cu-taitei.html
+ro,Mămăligă,"1 porție, 250 g",250,145,58,2.8,https://getpofu.com/ro/calorii/mamaliga.html
+ro,Ciorbă de fasole cu carne,"1 castron, 300 g",300,252,84,17.6,https://getpofu.com/ro/calorii/ciorba-de-fasole.html
+ro,Tocană de pui,"1 porție, 255 g",255,214,84,23.6,https://getpofu.com/ro/calorii/tocana-de-pui.html
+ro,Ciorbă de cartofi,"1 castron, 300 g",300,270,90,4.5,https://getpofu.com/ro/calorii/ciorba-de-cartofi.html
+ro,Brânză de vaci,"1 porție, 150 g",150,154,103,17.4,https://getpofu.com/ro/calorii/branza-de-vaci.html
+ro,Tocană de vită,"1 porție, 255 g",255,273,107,22.3,https://getpofu.com/ro/calorii/tocana-de-vita.html
+ro,Tocană de porc,"1 porție, 255 g",255,278,109,21.3,https://getpofu.com/ro/calorii/tocana-de-porc.html
+ro,Sarmale,"3 bucăți, 300 g",300,342,114,24.9,https://getpofu.com/ro/calorii/sarmale.html
+ro,Ficat cu ceapă,"1 porție, 200 g",200,258,129,33.4,https://getpofu.com/ro/calorii/ficat-cu-ceapa.html
+ro,Chifteluțe în sos,"3 bucăți, 200 g",200,286,143,24.4,https://getpofu.com/ro/calorii/chiftelute-in-sos.html
+ro,Salată de cartofi cu ou,"1 porție, 150 g",150,236,157,2.9,https://getpofu.com/ro/calorii/salata-de-cartofi.html
+ro,Ardei umpluți,"1 bucată, 200 g",200,356,178,15.7,https://getpofu.com/ro/calorii/ardei-umpluti.html
+ro,Salată de vinete,"1 porție, 100 g",100,183,183,4.8,https://getpofu.com/ro/calorii/salata-de-vinete.html
+ro,Clătite cu dulceață,"2 bucăți, 140 g",140,263,188,6.4,https://getpofu.com/ro/calorii/clatite-cu-dulceata.html
+ro,Ștrudel cu mere,"1 felie, 125 g",125,351,281,2.5,https://getpofu.com/ro/calorii/strudel-cu-mere.html
+ro,Plăcintă cu mere,"1 felie, 125 g",125,370,296,3.4,https://getpofu.com/ro/calorii/placinta-cu-mere.html
+ro,Cârnați de porc,"2 bucăți, 100 g",100,325,325,18.5,https://getpofu.com/ro/calorii/carnati-de-porc.html
+ro,Gogoși,"1 bucată, 60 g",60,253,422,3.7,https://getpofu.com/ro/calorii/gogosi.html
+se,Kalops,"1 portion, 300 g",300,231,77,21.6,https://getpofu.com/sv/kalorier/kalops.html
+se,Ärtsoppa med fläsk,"1 tallrik, 400 g",400,340,85,25.6,https://getpofu.com/sv/kalorier/artsoppa-med-flask.html
+se,Risgrynsgröt,"1 portion, 300 g",300,258,86,9.6,https://getpofu.com/sv/kalorier/risgrynsgrot.html
+se,Potatismos,"1 portion, 200 g",200,176,88,4.6,https://getpofu.com/sv/kalorier/potatismos.html
+se,Sjömansbiff,"1 portion, 350 g",350,315,90,23.8,https://getpofu.com/sv/kalorier/sjomansbiff.html
+se,Kåldolmar,"3 st, 250 g",250,270,108,13.3,https://getpofu.com/sv/kalorier/kaldolmar.html
+se,Pannkakor,"2 st, 120 g",120,163,136,6.6,https://getpofu.com/sv/kalorier/pannkakor.html
+se,Pytt i panna,"1 portion, 300 g",300,417,139,18,https://getpofu.com/sv/kalorier/pytt-i-panna.html
+se,Raggmunk,"2 st, 150 g",150,224,149,6.3,https://getpofu.com/sv/kalorier/raggmunk.html
+se,Kroppkakor,"2 st, 250 g",250,390,156,11.5,https://getpofu.com/sv/kalorier/kroppkakor.html
+se,Janssons frestelse,"1 portion, 300 g",300,483,161,10.8,https://getpofu.com/sv/kalorier/janssons-frestelse.html
+se,Skagenröra,"1 portion, 100 g",100,161,161,12.6,https://getpofu.com/sv/kalorier/skagenrora.html
+se,Gravad lax,"1 portion, 80 g",80,133,166,15,https://getpofu.com/sv/kalorier/gravad-lax.html
+se,Ostkaka,"1 bit, 120 g",120,206,172,12.5,https://getpofu.com/sv/kalorier/ostkaka.html
+se,Köttbullar,"6 st, 120 g",120,212,177,19,https://getpofu.com/sv/kalorier/kottbullar.html
+se,Smörgåstårta,"1 bit, 150 g",150,356,237,13.1,https://getpofu.com/sv/kalorier/smorgastarta.html
+se,Inlagd sill,"3 bitar, 60 g",60,147,245,5.9,https://getpofu.com/sv/kalorier/inlagd-sill.html
+se,Wallenbergare,"1 st, 150 g",150,369,246,25.1,https://getpofu.com/sv/kalorier/wallenbergare.html
+se,Korv stroganoff,"1 portion, 250 g",250,632,253,15.8,https://getpofu.com/sv/kalorier/korv-stroganoff.html
+se,Stekt falukorv,"1 portion, 150 g",150,402,268,20.1,https://getpofu.com/sv/kalorier/stekt-falukorv.html
+se,Semla,"1 st, 130 g",130,384,295,7.9,https://getpofu.com/sv/kalorier/semla.html
+se,Prinsesstårta,"1 bit, 100 g",100,295,295,4.3,https://getpofu.com/sv/kalorier/prinsesstarta.html
+se,Kanelbulle,"1 st, 75 g",75,243,324,4.4,https://getpofu.com/sv/kalorier/kanelbulle.html
+se,Kladdkaka,"1 bit, 80 g",80,333,416,3.7,https://getpofu.com/sv/kalorier/kladdkaka.html
+jp,インスタントラーメン（調理後）,"1個, 440 g",440,290,66,6.7,https://getpofu.com/ja/karori/instant-ramen.html
+jp,野菜巻き寿司,"6切れ, 132 g",132,123,93,2.4,https://getpofu.com/ja/karori/vegetable-maki.html
+jp,カリフォルニアロール,"6切れ, 180 g",180,169,94,5.3,https://getpofu.com/ja/karori/california-roll.html
+jp,鉄火巻き（マグロ巻き）,"6切れ, 180 g",180,175,97,13.3,https://getpofu.com/ja/karori/tuna-maki.html
+jp,マグロ握り寿司,"6貫, 210 g",210,210,100,20.3,https://getpofu.com/ja/karori/tuna-nigiri.html
+jp,エビ握り寿司,"6貫, 210 g",210,216,103,19.1,https://getpofu.com/ja/karori/shrimp-nigiri.html
+jp,サーモン巻き寿司,"6切れ, 180 g",180,185,103,12.4,https://getpofu.com/ja/karori/salmon-maki.html
+jp,サーモン握り寿司,"6貫, 210 g",210,225,107,18.7,https://getpofu.com/ja/karori/salmon-nigiri.html
+jp,蒸し餃子,"6個, 150 g",150,170,113,10.4,https://getpofu.com/ja/karori/steamed-gyoza.html
+jp,玉子握り寿司,"4貫, 200 g",200,238,119,14.6,https://getpofu.com/ja/karori/tamago-nigiri.html
+jp,エビの照り焼き,"1人前, 113 g",113,136,120,24.4,https://getpofu.com/ja/karori/teriyaki-shrimp.html
+jp,うなぎ握り寿司,"6貫, 210 g",210,265,126,16,https://getpofu.com/ja/karori/unagi-nigiri.html
+jp,ラーメン,"1杯, 400 g",400,508,127,28.5,https://getpofu.com/ja/karori/ramen.html
+jp,枝豆,"1人前, 80 g",80,112,140,9.2,https://getpofu.com/ja/karori/edamame.html
+jp,照り焼きチキン,"1人前, 150 g",150,244,163,38.6,https://getpofu.com/ja/karori/teriyaki-chicken.html
+jp,天ぷら盛り合わせ,"1人前, 134 g",134,237,177,5.4,https://getpofu.com/ja/karori/tempura-moriawase.html
+jp,揚げ餃子,"6個, 150 g",150,288,192,13.1,https://getpofu.com/ja/karori/fried-gyoza.html
+jp,牛肉の照り焼き,"1人前, 183 g",183,362,198,52.8,https://getpofu.com/ja/karori/teriyaki-beef.html
+jp,野菜の天ぷら,"5個, 150 g",150,358,239,5.7,https://getpofu.com/ja/karori/yasai-tempura.html
+kr,비빔밥,"1그릇, 400 g",400,304,76,22,https://getpofu.com/ko/kallori/bibimbap.html
+kr,찐만두,"6개, 150 g",150,170,113,10.4,https://getpofu.com/ko/kallori/steamed-mandu.html
+kr,떡볶이,"1인분, 250 g",250,328,131,10.3,https://getpofu.com/ko/kallori/tteokbokki.html
+kr,군만두,"6개, 150 g",150,288,192,13.1,https://getpofu.com/ko/kallori/fried-mandu.html
+cn,馄饨汤,"1碗, 300 g",300,99,33,7.2,https://getpofu.com/zh-Hans/kaluli/huntun-tang.html
+cn,酸辣汤,"1碗, 245 g",245,96,39,6.3,https://getpofu.com/zh-Hans/kaluli/suanla-tang.html
+cn,白粥,"1碗, 255 g",255,99,39,2,https://getpofu.com/zh-Hans/kaluli/bai-zhou.html
+cn,肉粥,"1碗, 255 g",255,148,58,11.1,https://getpofu.com/zh-Hans/kaluli/rou-zhou.html
+cn,蒸饺,"8个, 200 g",200,226,113,13.8,https://getpofu.com/zh-Hans/kaluli/zheng-jiaozi.html
+cn,宫保鸡丁,"1盘, 250 g",250,322,129,24.4,https://getpofu.com/zh-Hans/kaluli/gongbao-jiding.html
+cn,猪肉捞面,"1盘, 300 g",300,414,138,28.4,https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html
+cn,猪肉炒面,"1盘, 250 g",250,358,143,26,https://getpofu.com/zh-Hans/kaluli/zhurou-chaomian.html
+cn,木须肉,"1份, 150 g",150,230,153,15.6,https://getpofu.com/zh-Hans/kaluli/muxu-rou.html
+cn,北京烤鸭,"1份, 100 g",100,154,154,5.3,https://getpofu.com/zh-Hans/kaluli/beijing-kaoya.html
+cn,西兰花炒牛肉,"1盘, 200 g",200,320,160,20.9,https://getpofu.com/zh-Hans/kaluli/xilanhua-chao-niurou.html
+cn,鸡肉炒饭,"1碗, 250 g",250,432,173,18.2,https://getpofu.com/zh-Hans/kaluli/jirou-chaofan.html
+cn,炒饭,"1碗, 250 g",250,435,174,9.6,https://getpofu.com/zh-Hans/kaluli/chaofan.html
+cn,锅贴,"6个, 150 g",150,288,192,13.1,https://getpofu.com/zh-Hans/kaluli/guotie.html
+cn,米粉糕点,"1块, 70 g",70,169,241,1.9,https://getpofu.com/zh-Hans/kaluli/mi-gaodian.html
+cn,糖醋肉,"1盘, 200 g",200,520,260,17.8,https://getpofu.com/zh-Hans/kaluli/tangcu-rou.html
+cn,素包子,"1个, 100 g",100,268,268,6.7,https://getpofu.com/zh-Hans/kaluli/su-baozi.html
+cn,肉包子,"1个, 100 g",100,273,273,11.2,https://getpofu.com/zh-Hans/kaluli/rou-baozi.html
+id,Soto ayam (sup ayam dengan mi),"1 mangkuk, 300 g",300,159,53,11.5,https://getpofu.com/id/kalori/soto-ayam.html
+id,Cap cay ayam,"1 piring, 220 g",220,183,83,21.5,https://getpofu.com/id/kalori/cap-cay-ayam.html
+id,Kari sayur,"1 mangkuk, 240 g",240,206,86,3.8,https://getpofu.com/id/kalori/kari-sayur.html
+id,Kari ikan,"1 mangkuk, 240 g",240,223,93,11.9,https://getpofu.com/id/kalori/kari-ikan.html
+id,Tumis tahu sayur,"1 piring, 217 g",217,202,93,9.1,https://getpofu.com/id/kalori/tumis-tahu-sayur.html
+id,Kari ayam,"1 mangkuk, 240 g",240,257,107,15.6,https://getpofu.com/id/kalori/kari-ayam.html
+id,Kari sapi,"1 mangkuk, 240 g",240,271,113,18.2,https://getpofu.com/id/kalori/kari-sapi.html
+id,Mi goreng ayam (setara lo mein),"1 piring, 250 g",250,325,130,22.9,https://getpofu.com/id/kalori/mi-goreng-ayam.html
+id,Pisang goreng (tanpa tepung),"1 buah, 150 g",150,216,144,1.9,https://getpofu.com/id/kalori/pisang-goreng.html
+id,Tahu goreng tepung,"1 porsi, 100 g",100,150,150,8.4,https://getpofu.com/id/kalori/tahu-goreng.html
+id,Nasi goreng udang,"1 piring, 250 g",250,415,166,16.7,https://getpofu.com/id/kalori/nasi-goreng-udang.html
+id,Nasi goreng ayam,"1 piring, 250 g",250,432,173,18.2,https://getpofu.com/id/kalori/nasi-goreng-ayam.html
+id,Nasi goreng sapi,"1 piring, 250 g",250,445,178,19.7,https://getpofu.com/id/kalori/nasi-goreng-sapi.html
+id,Singkong rebus,"1 porsi, 160 g",160,306,191,2.3,https://getpofu.com/id/kalori/singkong-rebus.html
+id,Telur dadar,"2 butir telur, 110 g",110,211,192,12.7,https://getpofu.com/id/kalori/telur-dadar.html
+id,Udang goreng tepung,"1 porsi, 135 g",135,294,218,16.6,https://getpofu.com/id/kalori/udang-goreng-tepung.html
+id,Nasi uduk (nasi santan),"1 piring, 200 g",200,534,267,7.1,https://getpofu.com/id/kalori/nasi-uduk.html
+vn,Hoành thánh (súp),"1 tô, 300 g",300,99,33,7.2,https://getpofu.com/vi/calo/hoanh-thanh.html
+vn,Phở chay (không thịt),"1 tô, 500 g",500,185,37,7.1,https://getpofu.com/vi/calo/pho-chay.html
+vn,Phở bò,"1 tô, 500 g",500,385,77,29.0,https://getpofu.com/vi/calo/pho-bo.html
+vn,Đậu hũ xào rau,"1 đĩa, 217 g",217,202,93,9.1,https://getpofu.com/vi/calo/dau-hu-xao-rau.html
+vn,Bún (bún gạo đã nấu),"1 tô, 200 g",200,214,107,3.6,https://getpofu.com/vi/calo/bun.html
+vn,Cơm cà ri cá,"1 đĩa, 300 g",300,321,107,12.1,https://getpofu.com/vi/calo/com-ca-ri-ca.html
+vn,Há cảo hấp,"4 cái, 100 g",100,113,113,6.9,https://getpofu.com/vi/calo/ha-cao-hap.html
+vn,Cơm cà ri gà,"1 đĩa, 300 g",300,348,116,14.9,https://getpofu.com/vi/calo/com-ca-ri-ga.html
+vn,Cơm cà ri bò,"1 đĩa, 300 g",300,357,119,16.8,https://getpofu.com/vi/calo/com-ca-ri-bo.html
+vn,Mì xào gà (kiểu lo mein),"1 đĩa, 250 g",250,325,130,22.9,https://getpofu.com/vi/calo/mi-xao-ga.html
+vn,Trứng chiên,"2 quả trứng, 110 g",110,157,143,13.6,https://getpofu.com/vi/calo/trung-chien.html
+vn,Đậu hũ chiên giòn (tẩm bột),"1 phần, 100 g",100,150,150,8.4,https://getpofu.com/vi/calo/dau-hu-chien.html
+vn,Cơm chiên tôm,"1 đĩa, 250 g",250,415,166,16.7,https://getpofu.com/vi/calo/com-chien-tom.html
+vn,Cơm chiên gà,"1 đĩa, 250 g",250,432,173,18.2,https://getpofu.com/vi/calo/com-chien-ga.html
+vn,Cơm chiên thịt heo,"1 đĩa, 250 g",250,448,179,18.9,https://getpofu.com/vi/calo/com-chien-thit-heo.html
+vn,Khoai mì luộc,"1 chén, 160 g",160,306,191,2.3,https://getpofu.com/vi/calo/khoai-mi-luoc.html
+vn,Thịt heo xào chua ngọt,"1 đĩa, 226 g",226,588,260,20.1,https://getpofu.com/vi/calo/thit-heo-chua-ngot.html
+vn,Chả giò (kiểu egg roll thịt heo/bò),"2 cuốn, 128 g",128,348,272,9.7,https://getpofu.com/vi/calo/cha-gio.html
+th,เส้นก๋วยเตี๋ยวต้ม (เส้นเปล่า),"1 ถ้วย, 200 g",200,214,107,3.6,https://getpofu.com/th/khalori/sen-kuaitiao.html
+th,ไข่เจียว,"1 ฟอง, 110 g",110,157,143,13.6,https://getpofu.com/th/khalori/khai-chiao.html
+th,ผัดไทยทะเล,"1 จาน, 300 g",300,441,147,20.5,https://getpofu.com/th/khalori/phat-thai-thale.html
+th,ผัดไทยไก่,"1 จาน, 300 g",300,462,154,24.4,https://getpofu.com/th/khalori/phat-thai-kai.html
+th,ข้าวผัดกุ้ง,"1 จาน, 250 g",250,415,166,16.7,https://getpofu.com/th/khalori/khao-phat-kung.html
+th,ข้าวผัดไก่,"1 จาน, 250 g",250,432,173,18.2,https://getpofu.com/th/khalori/khao-phat-kai.html
+th,ข้าวผัดหมู,"1 จาน, 250 g",250,448,179,18.9,https://getpofu.com/th/khalori/khao-phat-mu.html
+in,सब्ज़ी करी,"1 कटोरी, 200 g",200,172,86,3.2,https://getpofu.com/hi/calories/sabzi-curry.html
+in,चना पालक (छोले-पालक सब्ज़ी),"1 कटोरी, 150 g",150,134,89,6.1,https://getpofu.com/hi/calories/chana-palak.html
+in,मछली करी,"1 कटोरी, 200 g",200,186,93,9.9,https://getpofu.com/hi/calories/machhli-curry.html
+in,पालक पनीर,"1 कटोरी, 150 g",150,152,101,8.1,https://getpofu.com/hi/calories/palak-paneer.html
+in,चिकन बिरयानी,"1 प्लेट, 250 g",250,260,104,17.9,https://getpofu.com/hi/calories/chicken-biryani.html
+in,चिकन करी,"1 कटोरी, 200 g",200,214,107,13.0,https://getpofu.com/hi/calories/chicken-curry.html
+in,खीर (चावल की खीर),"1 कटोरी, 200 g",200,216,108,6.5,https://getpofu.com/hi/calories/kheer.html
+in,वेज बिरयानी,"1 प्लेट, 250 g",250,272,109,4.8,https://getpofu.com/hi/calories/veg-biryani.html
+in,चावल के साथ चिकन करी,"1 प्लेट, 300 g",300,348,116,14.9,https://getpofu.com/hi/calories/chicken-curry-chawal.html
+in,ऑमलेट,"2 अंडे, 110 g",110,157,143,13.6,https://getpofu.com/hi/calories/omelet.html
+in,फ़िरनी,"1 कटोरी, 200 g",200,288,144,7.2,https://getpofu.com/hi/calories/firni.html
+in,दाल,"1 कटोरी, 150 g",150,218,145,12.9,https://getpofu.com/hi/calories/dal.html
+in,मीट बिरयानी,"1 प्लेट, 250 g",250,362,145,21.2,https://getpofu.com/hi/calories/meat-biryani.html
+in,खिचड़ी (चावल-दाल),"1 प्लेट, 207 g",207,310,150,11.4,https://getpofu.com/hi/calories/khichdi.html
+in,मटन ग्रेवी,"1 कटोरी, 200 g",200,438,219,34.6,https://getpofu.com/hi/calories/mutton-gravy.html
+in,समोसा,"1 समोसा, 100 g",100,310,310,5.1,https://getpofu.com/hi/calories/samosa.html
+arab,شوربة عدس,"1 وعاء, 300 g",300,180,60,11.5,https://getpofu.com/ar/saarat/shorbat-adas.html
+arab,شيش طاووق مع خضار,"1 سيخ, 202 g",202,210,104,26.3,https://getpofu.com/ar/saarat/shish-tawook.html
+arab,أرز بالحليب,"1 كوب, 260 g",260,281,108,8.4,https://getpofu.com/ar/saarat/aruz-bi-haleeb.html
+arab,كسكسي مطبوخ,"1 كوب, 160 g",160,178,111,6.0,https://getpofu.com/ar/saarat/couscous.html
+arab,تبولة,"1 كوب, 160 g",160,203,127,2.6,https://getpofu.com/ar/saarat/tabbouleh.html
+arab,مجدرة (أرز بالعدس),"1 طبق, 207 g",207,310,150,11.4,https://getpofu.com/ar/saarat/mujaddara.html
+arab,فول مطبوخ,"1 كوب, 185 g",185,298,161,13.1,https://getpofu.com/ar/saarat/ful.html
+arab,شيش كباب لحم مع خضار,"1 سيخ, 202 g",202,327,162,24.3,https://getpofu.com/ar/saarat/shish-kabab-lahm.html
+arab,حمص مسلوق,"1 كوب, 180 g",180,293,163,15.9,https://getpofu.com/ar/saarat/hummus-masluq.html
+arab,ورق عنب بالأرز (يالنجي),"2 لفتين, 112 g",112,188,168,2.6,https://getpofu.com/ar/saarat/warak-enab-aruz.html
+arab,صدر فروج مشوي,"1 صدر, 150 g",150,262,175,39.6,https://getpofu.com/ar/saarat/frooj-mashwi.html
+arab,بابا غنوج (متبل الباذنجان),"4 ملاعق كبيرة, 60 g",60,110,183,2.9,https://getpofu.com/ar/saarat/baba-ghanoush.html
+arab,ساندويتش جايرو (قريب من الشاورما),"1 ساندويتش, 200 g",200,368,184,22.5,https://getpofu.com/ar/saarat/gyro-sandwich.html
+arab,فطيرة سبانخ,"1 فطيرة, 120 g",120,254,212,9.9,https://getpofu.com/ar/saarat/fatayer-sabanikh.html
+arab,ورق عنب بلحم البقر والأرز,"5 لفات, 105 g",105,239,228,8.6,https://getpofu.com/ar/saarat/warak-enab-lahm.html
+arab,حمص بالطحينة,"4 ملاعق كبيرة, 60 g",60,146,243,4.4,https://getpofu.com/ar/saarat/hummus.html
+arab,ساندويتش فلافل,"1 ساندويتش, 215 g",215,570,265,13.4,https://getpofu.com/ar/saarat/falafel-sandwich.html
+arab,خبز عربي (بيتا),"1 رغيف كبير, 85 g",85,234,275,7.7,https://getpofu.com/ar/saarat/khubz-arabi.html
+arab,بقلاوة,"1 قطعة, 80 g",80,352,440,5.3,https://getpofu.com/ar/saarat/baklava.html
+arab,فلافل,"4 أقراص, 68 g",68,350,515,5.6,https://getpofu.com/ar/saarat/falafel.html

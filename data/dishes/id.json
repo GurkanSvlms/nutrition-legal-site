@@ -1,0 +1,82 @@
+{
+ "title": "Kalori hidangan nasional: perbandingan 22 masakan (data 2026) | Pofu",
+ "desc": "Seberapa padat kalori hidangan khas dari 22 masakan? Kalori per porsi dan per 100 g untuk {n} hidangan lokal, lengkap dengan median tiap masakan dan unduhan CSV gratis.",
+ "h1": "Kalori hidangan nasional: perbandingan 22 masakan",
+ "lede": "Kami membandingkan kalori {n} hidangan lokal khas dari 22 masakan, dari sup lentil Turki sampai bibimbap Korea, per porsi dan per 100 g.",
+ "pill": "Data · November 2026",
+ "h_find": "Temuan utama",
+ "find_top": "Dalam sampel kami, hidangan {top} adalah yang paling padat kalori, dengan median {topk} kcal per 100 g.",
+ "find_low": "Hidangan {low} adalah yang paling ringan, dengan median {lowk} kcal per 100 g.",
+ "find_soup": "Sup dan hidangan sayur adalah yang paling ringan di sebagian besar masakan, sedangkan hidangan goreng, kue pastri, dan makanan manis adalah yang paling padat kalori.",
+ "find_portion": "Kalori per 100 g dan kalori per porsi bercerita lain: hidangan ringan yang dimakan dalam mangkuk besar bisa berjumlah lebih banyak daripada pastri kecil yang padat.",
+ "h_rank": "Masakan diurutkan menurut kepadatan kalori",
+ "rank_cols": [
+  "Masakan",
+  "Hidangan",
+  "Median kcal per 100 g",
+  "Hidangan teringan",
+  "Hidangan paling padat kalori"
+ ],
+ "h_detail": "Semua hidangan menurut masakan",
+ "detail_cols": [
+  "Hidangan",
+  "Porsi",
+  "kcal per porsi",
+  "kcal per 100 g"
+ ],
+ "h_method": "Cara kami membuat perbandingan ini",
+ "method": [
+  "<strong>Hidangan:</strong> hidangan lokal di halaman makanan kami untuk tiap bahasa, dipilih yang umum dan terkenal dari masakan itu. Minuman, saus, dan porsi pendamping kecil (di bawah 60 g atau 80 kcal per porsi) tidak dimasukkan. Ini sampel, bukan gambaran lengkap tentang apa yang dimakan orang di suatu negara.",
+  "<strong>Nilai:</strong> dari basis data komposisi pangan publik (USDA FoodData Central, NEVO, Badan Pangan Swedia, NutriDatabáze, CREA) dan basis data makanan aplikasi Pofu. Setiap halaman hidangan menautkan sumbernya jika ada.",
+  "<strong>Median:</strong> nilai tengah dari kalori per 100 g hidangan-hidangan itu, sehingga satu hidangan yang sangat berat atau sangat ringan tidak banyak menggeser hasilnya. Masakan dengan kurang dari 8 hidangan dalam sampel kami diberi tanda.",
+  "<strong>Batasan:</strong> resep, porsi, dan minyak masak berbeda menurut rumah, daerah, dan restoran, jadi setiap nilai adalah perkiraan umum. Varian satu hidangan (misalnya dengan ayam atau udang) dihitung terpisah."
+ ],
+ "small": "sampel kecil",
+ "csv": "Unduh datanya (CSV)",
+ "cite": "Kamu boleh memakai data ini dengan menautkan halaman ini.",
+ "h_faq": "Pertanyaan yang sering diajukan",
+ "faq": [
+  [
+   "Masakan mana yang hidangannya paling padat kalori?",
+   "Dalam sampel kami yang berisi {n} hidangan, hidangan {top} punya median tertinggi, sekitar {topk} kcal per 100 g. Resep sangat beragam, jadi anggap ini perbandingan kasar."
+  ],
+  [
+   "Masakan mana yang hidangannya paling ringan?",
+   "Hidangan {low} punya median terendah dalam sampel kami, sekitar {lowk} kcal per 100 g, terutama karena sup, semur, dan hidangan kukus banyak mengandung air."
+  ],
+  [
+   "Apakah kepadatan kalori menentukan sehat tidaknya sebuah hidangan?",
+   "Tidak. Angka itu hanya menunjukkan berapa kalori dalam sejumlah makanan. Protein, serat, sayuran, dan ukuran porsi sama pentingnya."
+  ],
+  [
+   "Bagaimana menghitung kalori hidangan nasional masakan rumahan?",
+   "Mulailah dari nilai umum seperti di sini, lalu sesuaikan porsinya dengan yang kamu makan. Di Pofu kamu bisa memotret piringmu dan mengoreksi perkiraannya."
+  ]
+ ],
+ "h_rel": "Terkait",
+ "rel_food": "Kalori semua makanan",
+ "cuisines": {
+  "us": "Amerika",
+  "tr": "Turki",
+  "de": "Jerman",
+  "fr": "Prancis",
+  "mx": "Meksiko",
+  "br": "Brasil",
+  "arab": "Arab dan Timur Tengah",
+  "cz": "Ceko",
+  "in": "India",
+  "id": "Indonesia",
+  "it": "Italia",
+  "jp": "Jepang",
+  "kr": "Korea",
+  "nl": "Belanda",
+  "pl": "Polandia",
+  "ro": "Rumania",
+  "ru": "Rusia",
+  "se": "Swedia",
+  "th": "Thailand",
+  "ua": "Ukraina",
+  "vn": "Vietnam",
+  "cn": "Tiongkok"
+ }
+}

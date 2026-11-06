@@ -152,7 +152,15 @@
     .stat b { display: block; font-size: 1.25rem; }
     .stat span { font-size: .88rem; color: var(--ink2); }
     [hidden] { display: none !important; }
+
+#embed textarea { width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }
+.embed-by { display: none; }
+.embed body { background: transparent; }
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer { display: none !important; }
+.embed #tool { margin: 0; padding: 0; }
+.embed .embed-by { display: block; margin: .6rem 0 0; font-size: .85rem; }
 </style>
+<script>if (/[?&]embed=1/.test(location.search)) { document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebApplication", "name": "लक्ष्य की तारीख़ के हिसाब से कैलोरी डेफिसिट कैलकुलेटर", "url": "https://getpofu.com/hi/calorie-deficit-calculator.html", "inLanguage": "hi", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "description": "महिलाओं के लिए मुफ़्त कैलोरी डेफिसिट कैलकुलेटर। लक्ष्य वज़न और तारीख़ भरिए और जानिए कि रोज़ कितनी कैलोरी चाहिए, और रफ़्तार सुरक्षित है या नहीं।"}
 </script>
@@ -205,7 +213,6 @@
 <header class="top">
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
-<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_deficit_hi&amp;mt=8">ऐप डाउनलोड करें</a>
 <!-- nav:start -->
 <div class="pnav">
 <nav class="pnav__links" aria-label="मेनू"><a href="guides.html">गाइड</a><a href="tools.html" aria-current="true">टूल</a><a href="calories/">कैलोरी</a><a href="questions/">सवाल-जवाब</a><a href="compare.html">तुलना</a></nav>
@@ -213,6 +220,7 @@
 <details class="plang"><summary aria-label="भाषाएँ">🌐 HI</summary><nav class="plang__panel" aria-label="भाषाएँ"><a href="../calorie-deficit-calculator.html" hreflang="en" lang="en">English</a><a href="../kalori-acigi-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/calorie-deficit-calculator.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/calorie-deficit-calculator.html" hreflang="fr" lang="fr">Français</a><a href="../es/calorie-deficit-calculator.html" hreflang="es" lang="es">Español</a><a href="../it/calorie-deficit-calculator.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/calorie-deficit-calculator.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/calorie-deficit-calculator.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/calorie-deficit-calculator.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/calorie-deficit-calculator.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/calorie-deficit-calculator.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/calorie-deficit-calculator.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/calorie-deficit-calculator.html" hreflang="ro" lang="ro">Română</a><a href="../sv/calorie-deficit-calculator.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/calorie-deficit-calculator.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/calorie-deficit-calculator.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/calorie-deficit-calculator.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/calorie-deficit-calculator.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/calorie-deficit-calculator.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/calorie-deficit-calculator.html" hreflang="th" lang="th">ไทย</a><a href="calorie-deficit-calculator.html" hreflang="hi" lang="hi" aria-current="page">हिन्दी</a><a href="../ar/calorie-deficit-calculator.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_deficit_hi&amp;mt=8">ऐप डाउनलोड करें</a>
 </div>
 </header>
 <main id="main" class="wrap">
@@ -236,6 +244,7 @@
 <p class="fine">सारा हिसाब आपके ब्राउज़र में ही होता है। आप जो भी भरती हैं, वह न भेजा जाता है, न सहेजा जाता है।</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="https://getpofu.com/hi/calorie-deficit-calculator.html">कैलकुलेटर: Pofu</a></p>
 </div>
 </section>
 <section id="how">
@@ -257,6 +266,13 @@
 <li>NHS. <a href="https://www.nhs.uk/better-health/lose-weight/">How to lose weight</a> (वज़न कैसे घटाएँ; लगभग 0.5 से 1 किग्रा प्रति हफ़्ता)।</li>
 </ul>
 <p class="fine">फ़ॉर्मूले ऊपर दिए गए प्रकाशित स्रोतों से लिए गए हैं और वही नियम हैं जो Pofu ऐप इस्तेमाल करता है। इस पेज की समीक्षा किसी डायटीशियन ने नहीं की है; इसे इन स्रोतों से मिलाकर जाँचा जाता है और स्रोत बदलने पर अपडेट किया जाता है। <a href="editorial-policy.html">हम अपना कंटेंट और स्रोत कैसे तैयार करते हैं</a>.</p>
+</section>
+<section id="embed">
+<h2>इस कैलकुलेटर को अपनी साइट पर जोड़िए</h2>
+<p>आपके ब्लॉग या वेबसाइट पर इस्तेमाल करना मुफ़्त है। नीचे दिया कोड कॉपी कीजिए: यह कैलकुलेटर और इस पेज का एक लिंक दिखाता है।</p>
+<textarea id="embed-code" readonly aria-label="इस कैलकुलेटर को अपनी साइट पर जोड़िए">&lt;iframe src=&quot;https://getpofu.com/hi/calorie-deficit-calculator.html?embed=1&quot; title=&quot;लक्ष्य की तारीख़ के हिसाब से कैलोरी डेफिसिट कैलकुलेटर&quot; width=&quot;100%&quot; height=&quot;940&quot; loading=&quot;lazy&quot; style=&quot;border:0;max-width:640px&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpofu.com/hi/calorie-deficit-calculator.html&quot;&gt;लक्ष्य की तारीख़ के हिसाब से कैलोरी डेफिसिट कैलकुलेटर&lt;/a&gt; · Pofu&lt;/p&gt;</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="कॉपी हो गया">कोड कॉपी करें</button></p>
 </section>
 <section id="faq">
 <h2>अक्सर पूछे जाने वाले सवाल</h2>
@@ -373,5 +389,7 @@
   });
 })();
 </script>
+<script>(function () { var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () { t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () { document.execCommand('copy'); }); b.textContent = b.dataset.done; }); })();</script>
 </body>
 </html>

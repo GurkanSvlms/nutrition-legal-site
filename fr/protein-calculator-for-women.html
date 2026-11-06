@@ -152,7 +152,15 @@
     .stat b { display: block; font-size: 1.25rem; }
     .stat span { font-size: .88rem; color: var(--ink2); }
     [hidden] { display: none !important; }
+
+#embed textarea { width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }
+.embed-by { display: none; }
+.embed body { background: transparent; }
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer { display: none !important; }
+.embed #tool { margin: 0; padding: 0; }
+.embed .embed-by { display: block; margin: .6rem 0 0; font-size: .85rem; }
 </style>
+<script>if (/[?&]embed=1/.test(location.search)) { document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculateur de protéines pour femmes", "url": "https://getpofu.com/fr/protein-calculator-for-women.html", "inLanguage": "fr", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "description": "Calculateur de protéines gratuit pour femmes. Obtiens ton besoin en protéines par jour, en grammes, pour maintenir ton poids, perdre du poids ou prendre du muscle, réparti par repas, avec les études à l’appui."}
 </script>
@@ -205,7 +213,6 @@
 <header class="top">
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
-<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_protein_fr&amp;mt=8">Télécharger l’appli</a>
 <!-- nav:start -->
 <div class="pnav">
 <nav class="pnav__links" aria-label="Menu"><a href="guides.html" aria-current="true">Guides</a><a href="tools.html">Outils</a><a href="calories/">Calories</a><a href="questions/">Questions</a><a href="compare.html">Comparatifs</a></nav>
@@ -213,6 +220,7 @@
 <details class="plang"><summary aria-label="Langues">🌐 FR</summary><nav class="plang__panel" aria-label="Langues"><a href="../protein-calculator-for-women.html" hreflang="en" lang="en">English</a><a href="../kadinlar-icin-protein-ihtiyaci-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/protein-calculator-for-women.html" hreflang="de" lang="de">Deutsch</a><a href="protein-calculator-for-women.html" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="../es/protein-calculator-for-women.html" hreflang="es" lang="es">Español</a><a href="../it/protein-calculator-for-women.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/protein-calculator-for-women.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/protein-calculator-for-women.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/protein-calculator-for-women.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/protein-calculator-for-women.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/protein-calculator-for-women.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/protein-calculator-for-women.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/protein-calculator-for-women.html" hreflang="ro" lang="ro">Română</a><a href="../sv/protein-calculator-for-women.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/protein-calculator-for-women.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/protein-calculator-for-women.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/protein-calculator-for-women.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/protein-calculator-for-women.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/protein-calculator-for-women.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/protein-calculator-for-women.html" hreflang="th" lang="th">ไทย</a><a href="../hi/protein-calculator-for-women.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/protein-calculator-for-women.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_protein_fr&amp;mt=8">Télécharger l’appli</a>
 </div>
 </header>
 <main id="main" class="wrap">
@@ -232,6 +240,7 @@
 <p class="fine">Tout est calculé dans ton navigateur. Rien de ce que tu saisis n’est envoyé ni enregistré.</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="https://getpofu.com/fr/protein-calculator-for-women.html">Calculateur par Pofu</a></p>
 </div>
 </section>
 <section id="how">
@@ -252,6 +261,13 @@
 <li>National Academies. <a href="https://nap.nationalacademies.org/catalog/10490">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (apports de référence en énergie, glucides, lipides et protéines), 2005 (0,8 g/kg au minimum chez l’adulte).</li>
 </ul>
 <p class="fine">Les formules proviennent des sources publiées ci-dessus et correspondent aux règles utilisées par l’appli Pofu. Cette page n’a pas été relue par une diététicienne ; elle est vérifiée à partir de ces sources et mise à jour quand elles changent. <a href="editorial-policy.html">Comment nous préparons nos contenus et nos sources</a>.</p>
+</section>
+<section id="embed">
+<h2>Ajouter ce calculateur à ton site</h2>
+<p>Gratuit pour ton blog ou ton site. Copie le code ci-dessous : il affiche le calculateur et un lien vers cette page.</p>
+<textarea id="embed-code" readonly aria-label="Ajouter ce calculateur à ton site">&lt;iframe src=&quot;https://getpofu.com/fr/protein-calculator-for-women.html?embed=1&quot; title=&quot;Calculateur de protéines pour femmes&quot; width=&quot;100%&quot; height=&quot;940&quot; loading=&quot;lazy&quot; style=&quot;border:0;max-width:640px&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpofu.com/fr/protein-calculator-for-women.html&quot;&gt;Calculateur de protéines pour femmes&lt;/a&gt; · Pofu&lt;/p&gt;</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="Copié">Copier le code</button></p>
 </section>
 <section id="faq">
 <h2>Questions fréquentes</h2>
@@ -279,6 +295,18 @@
 <section id="not-medical">
 <div class="note"><p>Ce calculateur donne des estimations générales pour les adultes, pas un avis médical. Si tu es enceinte ou si tu allaites, si tu as un problème de santé comme une maladie rénale ou un diabète, ou des antécédents de troubles des conduites alimentaires, parles-en à ton médecin ou à une diététicienne avant de changer ton alimentation.</p></div>
 </section>
+<!-- toolbox:start -->
+<section id="free-tools" class="toolbox">
+<h2>Plus d’outils gratuits</h2>
+<ul>
+<li><a href="protein-calculator-for-women.html">Calculateur de protéines pour femmes</a></li>
+<li><a href="calorie-deficit-calculator.html">Calculateur de déficit calorique par date cible</a></li>
+<li><a href="macro-calculator-for-women.html">Calculateur de macros pour femmes</a></li>
+<li><a href="bmi-calculator-for-women.html">Calculateur IMC pour femmes</a></li>
+<li><a href="cycle-calorie-calculator.html">Calculateur de calories pour femmes selon le cycle</a></li>
+</ul>
+</section>
+<!-- toolbox:end -->
 </main>
 <footer class="foot">
 <div class="wrap">
@@ -368,5 +396,7 @@
   });
 })();
 </script>
+<script>(function () { var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () { t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () { document.execCommand('copy'); }); b.textContent = b.dataset.done; }); })();</script>
 </body>
 </html>

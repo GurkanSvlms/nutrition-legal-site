@@ -422,6 +422,53 @@ def footer_block(L, r, text):
     return "\n".join(out)
 
 
+# ----------------------------------------------------------------------------- calculators box
+NEW_TOOLS = ["deficit", "protein", "macro", "bmi"]
+TOOL_FILE = {"protein": ("protein-calculator-for-women.html", "kadinlar-icin-protein-ihtiyaci-hesaplama.html"),
+             "macro": ("macro-calculator-for-women.html", "kadinlar-icin-makro-hesaplama.html"),
+             "deficit": ("calorie-deficit-calculator.html", "kalori-acigi-hesaplama.html"),
+             "bmi": ("bmi-calculator-for-women.html", "kadinlar-icin-vucut-kitle-endeksi-hesaplama.html"),
+             "cycle": ("cycle-calorie-calculator.html", "kadin-gunluk-kalori-ihtiyaci-hesaplama.html")}
+RELEVANCE = [("protein", ("protein",)), ("macro", ("macro", "carb", "fat-", "keto")),
+             ("bmi", ("bmi", "ideal-weight", "healthy-weight", "overweight")),
+             ("cycle", ("cycle", "period", "luteal", "pms", "menstrual", "regl", "ovulation", "pcos", "menopause")),
+             ("deficit", ("deficit", "lose", "weight-loss", "kilo", "plateau"))]
+_TOOLS_TEXT = {}
+
+
+def tools_text(L):
+    if L not in _TOOLS_TEXT:
+        f = ROOT / "data" / "tools" / f"{L}.json"
+        _TOOLS_TEXT[L] = json.loads(rd(f)) if f.exists() else None
+    return _TOOLS_TEXT[L]
+
+
+def toolbox_block(L, r):
+    """'More free tools' box for guides, Q&A and comparison pages (most relevant calculator first)."""
+    d = tools_text(L)
+    if not d or classify(L, r) not in ("guides", "qa", "compare") or os.path.basename(r) in NON_CONTENT:
+        return ""
+    base = os.path.basename(r).lower()
+    order = [k for k, words in RELEVANCE if any(w in base for w in words)]
+    order += [k for k in NEW_TOOLS + ["cycle"] if k not in order]
+    items = []
+    for k in order:
+        en, tr = TOOL_FILE[k]
+        tgt = tr if L == "tr" else en if L == "en" else f"{L}/{en}"
+        if not exists(tgt):
+            continue
+        if k == "cycle":
+            label = re.sub(r"<[^>]+>", "", re.search(r"<h1[^>]*>(.*?)</h1>", rd(ROOT / tgt), re.S).group(1)).strip()
+        else:
+            label = d["tools"][k]["h1"]
+        items.append(f'<li><a href="{href_to(tgt, r)}">{htmllib.escape(label, quote=False)}</a></li>')
+    if not items:
+        return ""
+    h = htmllib.escape(d["common"]["rel_h"], quote=False)
+    return ("<!-- toolbox:start -->\n<section id=\"free-tools\" class=\"toolbox\">\n"
+            f"<h2>{h}</h2>\n<ul>\n" + "\n".join(items) + "\n</ul>\n</section>\n<!-- toolbox:end -->")
+
+
 STD_HEADER = re.compile(r'(<header class="top">\s*<div class="wrap top__in">.*?)(\s*</div>\s*</header>)', re.S)
 
 
@@ -445,6 +492,11 @@ def process(path, text=None, write=True):
             new = re.sub(r"<!-- nav:start -->.*?<!-- nav:end -->", lambda m: hb, new, flags=re.S)
         else:
             new = STD_HEADER.sub(lambda m: m.group(1) + "\n" + hb + m.group(2), new, count=1)
+    tb = toolbox_block(L, r)
+    new = re.sub(r"\n?<!-- toolbox:start -->.*?<!-- toolbox:end -->", "", new, flags=re.S)
+    if tb and "</main>" in new:
+        i = new.rindex("</main>")
+        new = new[:i] + tb + "\n" + new[i:]
     fb = footer_block(L, r, new)
     if "<!-- footnav:start -->" in new:
         new = re.sub(r"<!-- footnav:start -->.*?<!-- footnav:end -->", lambda m: fb, new, flags=re.S)

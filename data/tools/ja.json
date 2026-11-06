@@ -31,7 +31,12 @@
     "badge_alt": "App StoreでPofuをダウンロード",
     "foot_nav": "法的情報とサポート", "privacy_l": "プライバシー", "terms_l": "利用規約", "support_l": "サポート",
     "updated": "最終更新：<time datetime=\"2026-11-06\">2026年11月6日</time>。",
-    "tm": "Apple、iPhone、App Storeは、Apple Inc.の商標です。 © 2026 Pofu."
+    "tm": "Apple、iPhone、App Storeは、Apple Inc.の商標です。 © 2026 Pofu.",
+    "embed_h": "この計算ツールをあなたのサイトに追加",
+    "embed_p": "ブログやウェブサイトで無料でお使いいただけます。下のコードをコピーしてください。計算ツールと、このページへのリンクが表示されます。",
+    "embed_copy": "コードをコピー",
+    "embed_copied": "コピーしました",
+    "embed_by": "計算ツール提供：Pofu"
   },
   "tools": {
     "protein": {

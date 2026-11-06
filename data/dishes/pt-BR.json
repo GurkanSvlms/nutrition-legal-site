@@ -1,0 +1,41 @@
+{
+  "title": "Calorias de pratos nacionais: 22 culinárias comparadas (2026) | Pofu",
+  "desc": "Quão calóricos são os pratos típicos de 22 culinárias? Calorias por porção e por 100 g de {n} pratos locais, com a mediana de cada culinária e um download em CSV gratuito.",
+  "h1": "Calorias de pratos nacionais: 22 culinárias comparadas",
+  "lede": "Comparamos as calorias de {n} pratos locais típicos de 22 culinárias, da sopa de lentilha turca ao bibimbap coreano, por porção e por 100 g.",
+  "pill": "Dados · novembro de 2026",
+  "h_find": "Principais resultados",
+  "find_top": "Na nossa amostra, os pratos da culinária {top} são os mais calóricos, com mediana de {topk} kcal por 100 g.",
+  "find_low": "Os pratos da culinária {low} são os mais leves, com mediana de {lowk} kcal por 100 g.",
+  "find_soup": "Sopas e pratos de legumes são os mais leves na maioria das culinárias, enquanto frituras, massas folhadas e doces são os mais calóricos.",
+  "find_portion": "Calorias por 100 g e calorias por porção contam histórias diferentes: um prato leve servido em uma tigela grande pode somar mais do que um doce pequeno e denso.",
+  "h_rank": "Culinárias por densidade calórica",
+  "rank_cols": ["Culinária", "Pratos", "Mediana de kcal por 100 g", "Prato mais leve", "Prato mais calórico"],
+  "h_detail": "Todos os pratos por culinária",
+  "detail_cols": ["Prato", "Porção", "kcal por porção", "kcal por 100 g"],
+  "h_method": "Como fizemos esta comparação",
+  "method": [
+    "<strong>Pratos:</strong> os pratos locais das nossas páginas de alimentos de cada idioma, escolhidos entre os pratos comuns e conhecidos de cada culinária. Bebidas, molhos e acompanhamentos pequenos (menos de 60 g ou 80 kcal por porção) ficam de fora. É uma amostra, não um retrato completo do que as pessoas comem em um país.",
+    "<strong>Valores:</strong> de bases públicas de composição de alimentos (USDA FoodData Central, NEVO, a Agência Sueca de Alimentos, NutriDatabáze, CREA) e da base de alimentos do app Pofu. Cada página de prato aponta sua fonte quando existe uma.",
+    "<strong>Mediana:</strong> o valor do meio das calorias por 100 g dos pratos, de modo que um prato muito pesado ou muito leve não muda muito o resultado. As culinárias com menos de 8 pratos na nossa amostra estão marcadas.",
+    "<strong>Limites:</strong> receitas, porções e óleo de cozinha variam conforme a casa, a região e o restaurante, então cada valor é uma estimativa típica. Variações de um mesmo prato (por exemplo com frango ou camarão) são contadas separadamente."
+  ],
+  "small": "amostra pequena",
+  "csv": "Baixar os dados (CSV)",
+  "cite": "Você pode usar estes dados com um link para esta página.",
+  "h_faq": "Perguntas frequentes",
+  "faq": [
+    ["Qual culinária tem os pratos mais calóricos?", "Na nossa amostra de {n} pratos, os da culinária {top} têm a maior mediana, cerca de {topk} kcal por 100 g. As receitas variam muito, então trate isso como uma comparação aproximada."],
+    ["Qual culinária tem os pratos mais leves?", "Os pratos da culinária {low} têm a menor mediana da nossa amostra, cerca de {lowk} kcal por 100 g, principalmente porque sopas, ensopados e pratos no vapor têm muita água."],
+    ["A densidade calórica define se um prato é saudável?", "Não. Ela mostra quantas calorias cabem em uma certa quantidade de comida. Proteína, fibras, legumes e o tamanho da porção importam igualmente."],
+    ["Como conto as calorias de um prato nacional feito em casa?", "Comece por um valor típico como os daqui e depois ajuste a porção para o que você comeu. No Pofu você pode tirar uma foto do prato e corrigir a estimativa."]
+  ],
+  "h_rel": "Leituras relacionadas",
+  "rel_food": "Calorias de todos os alimentos",
+  "cuisines": {
+    "us": "americana", "tr": "turca", "de": "alemã", "fr": "francesa", "mx": "mexicana", "br": "brasileira",
+    "arab": "árabe e do Oriente Médio", "cz": "tcheca", "in": "indiana", "id": "indonésia", "it": "italiana",
+    "jp": "japonesa", "kr": "coreana", "nl": "holandesa", "pl": "polonesa", "ro": "romena", "ru": "russa",
+    "se": "sueca", "th": "tailandesa", "ua": "ucraniana", "vn": "vietnamita", "cn": "chinesa"
+  }
+}

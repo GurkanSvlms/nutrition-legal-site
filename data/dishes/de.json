@@ -1,0 +1,41 @@
+{
+  "title": "Kalorien in Nationalgerichten: 22 Küchen im Vergleich (2026) | Pofu",
+  "desc": "Wie kalorienreich sind typische Gerichte aus 22 Küchen? Kalorien pro Portion und pro 100 g für {n} Gerichte, mit dem Median je Küche und einem kostenlosen CSV-Download.",
+  "h1": "Kalorien in Nationalgerichten: 22 Küchen im Vergleich",
+  "lede": "Wir haben die Kalorien von {n} typischen Gerichten aus 22 Küchen verglichen, von der türkischen Linsensuppe bis zum koreanischen Bibimbap, pro Portion und pro 100 g.",
+  "pill": "Daten · November 2026",
+  "h_find": "Die wichtigsten Ergebnisse",
+  "find_top": "In unserer Auswahl sind {top} Gerichte am kalorienreichsten, mit einem Median von {topk} kcal pro 100 g.",
+  "find_low": "Am leichtesten sind {low} Gerichte, mit einem Median von {lowk} kcal pro 100 g.",
+  "find_soup": "Suppen und Gemüsegerichte gehören in den meisten Küchen zu den leichtesten Gerichten, frittierte Gerichte, Gebäck und Süßes zu den kalorienreichsten.",
+  "find_portion": "Kalorien pro 100 g und Kalorien pro Portion erzählen unterschiedliche Geschichten: Ein leichtes Gericht in einer großen Schüssel kann mehr ergeben als ein kleines, dichtes Gebäckstück.",
+  "h_rank": "Küchen nach Kaloriendichte",
+  "rank_cols": ["Küche", "Gerichte", "Median kcal pro 100 g", "Leichtestes Gericht", "Kalorienreichstes Gericht"],
+  "h_detail": "Alle Gerichte nach Küche",
+  "detail_cols": ["Gericht", "Portion", "kcal pro Portion", "kcal pro 100 g"],
+  "h_method": "So haben wir den Vergleich erstellt",
+  "method": [
+    "<strong>Gerichte:</strong> die lokalen Gerichte auf unseren Lebensmittelseiten für jede Sprache, ausgewählt als verbreitete, bekannte Gerichte der jeweiligen Küche. Getränke, Soßen und kleine Beilagen (unter 60 g oder 80 kcal pro Portion) bleiben außen vor. Es ist eine Stichprobe und kein vollständiges Bild davon, was Menschen in einem Land essen.",
+    "<strong>Werte:</strong> aus öffentlichen Nährwertdatenbanken (USDA FoodData Central, NEVO, die schwedische Lebensmittelbehörde, NutriDatabáze, CREA) und der Lebensmitteldatenbank der Pofu-App. Jede Gerichtsseite verlinkt ihre Quelle, wo es eine gibt.",
+    "<strong>Median:</strong> der mittlere Wert der Kalorien pro 100 g der Gerichte, sodass ein sehr schweres oder sehr leichtes Gericht das Ergebnis kaum verschiebt. Küchen mit weniger als 8 Gerichten in unserer Stichprobe sind markiert.",
+    "<strong>Grenzen:</strong> Rezepte, Portionen und Kochöl unterscheiden sich je nach Haushalt, Region und Restaurant, daher ist jeder Wert eine typische Schätzung. Varianten eines Gerichts (zum Beispiel mit Hähnchen oder Garnelen) werden getrennt gezählt."
+  ],
+  "small": "kleine Stichprobe",
+  "csv": "Daten herunterladen (CSV)",
+  "cite": "Du darfst diese Daten mit einem Link auf diese Seite verwenden.",
+  "h_faq": "Häufig gestellte Fragen",
+  "faq": [
+    ["Welche Küche hat die kalorienreichsten Gerichte?", "In unserer Auswahl von {n} Gerichten haben {top} Gerichte den höchsten Median, etwa {topk} kcal pro 100 g. Rezepte unterscheiden sich stark, sieh es daher als groben Vergleich."],
+    ["Welche Küche hat die leichtesten Gerichte?", "In unserer Auswahl haben {low} Gerichte den niedrigsten Median, etwa {lowk} kcal pro 100 g, vor allem weil Suppen, Eintöpfe und gedämpfte Gerichte viel Wasser enthalten."],
+    ["Entscheidet die Kaloriendichte, ob ein Gericht gesund ist?", "Nein. Sie zeigt, wie viele Kalorien in eine bestimmte Menge Essen passen. Protein, Ballaststoffe, Gemüse und die Portionsgröße sind genauso wichtig."],
+    ["Wie zähle ich Kalorien bei einem selbst gekochten Nationalgericht?", "Starte mit einem typischen Wert wie hier und passe die Portion an das an, was du gegessen hast. In Pofu kannst du dein Essen fotografieren und die Schätzung korrigieren."]
+  ],
+  "h_rel": "Verwandte Seiten",
+  "rel_food": "Kalorien in allen Lebensmitteln",
+  "cuisines": {
+    "us": "amerikanische", "tr": "türkische", "de": "deutsche", "fr": "französische", "mx": "mexikanische", "br": "brasilianische",
+    "arab": "arabische und nahöstliche", "cz": "tschechische", "in": "indische", "id": "indonesische", "it": "italienische",
+    "jp": "japanische", "kr": "koreanische", "nl": "niederländische", "pl": "polnische", "ro": "rumänische", "ru": "russische",
+    "se": "schwedische", "th": "thailändische", "ua": "ukrainische", "vn": "vietnamesische", "cn": "chinesische"
+  }
+}

@@ -152,7 +152,15 @@
     .stat b { display: block; font-size: 1.25rem; }
     .stat span { font-size: .88rem; color: var(--ink2); }
     [hidden] { display: none !important; }
+
+#embed textarea { width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }
+.embed-by { display: none; }
+.embed body { background: transparent; }
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer { display: none !important; }
+.embed #tool { margin: 0; padding: 0; }
+.embed .embed-by { display: block; margin: .6rem 0 0; font-size: .85rem; }
 </style>
+<script>if (/[?&]embed=1/.test(location.search)) { document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebApplication", "name": "Kalkulačka maker pro ženy", "url": "https://getpofu.com/cs/macro-calculator-for-women.html", "inLanguage": "cs", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "datePublished": "2026-11-06", "dateModified": "2026-11-06", "description": "Bezplatná kalkulačka makroživin pro ženy. Zjisti své denní kalorie a gramy bílkovin, sacharidů a tuků pro udržení hmotnosti, hubnutí nebo budování svalů."}
 </script>
@@ -205,7 +213,6 @@
 <header class="top">
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
-<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_macro_cs&amp;mt=8">Stáhnout aplikaci</a>
 <!-- nav:start -->
 <div class="pnav">
 <nav class="pnav__links" aria-label="Menu"><a href="guides.html" aria-current="true">Průvodci</a><a href="tools.html">Nástroje</a><a href="kalorie/">Kalorie</a><a href="questions/">Otázky</a><a href="compare.html">Srovnání</a></nav>
@@ -213,6 +220,7 @@
 <details class="plang"><summary aria-label="Jazyky">🌐 CS</summary><nav class="plang__panel" aria-label="Jazyky"><a href="../macro-calculator-for-women.html" hreflang="en" lang="en">English</a><a href="../kadinlar-icin-makro-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/macro-calculator-for-women.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/macro-calculator-for-women.html" hreflang="fr" lang="fr">Français</a><a href="../es/macro-calculator-for-women.html" hreflang="es" lang="es">Español</a><a href="../it/macro-calculator-for-women.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/macro-calculator-for-women.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/macro-calculator-for-women.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/macro-calculator-for-women.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/macro-calculator-for-women.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/macro-calculator-for-women.html" hreflang="uk" lang="uk">Українська</a><a href="macro-calculator-for-women.html" hreflang="cs" lang="cs" aria-current="page">Čeština</a><a href="../ro/macro-calculator-for-women.html" hreflang="ro" lang="ro">Română</a><a href="../sv/macro-calculator-for-women.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/macro-calculator-for-women.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/macro-calculator-for-women.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/macro-calculator-for-women.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/macro-calculator-for-women.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/macro-calculator-for-women.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/macro-calculator-for-women.html" hreflang="th" lang="th">ไทย</a><a href="../hi/macro-calculator-for-women.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/macro-calculator-for-women.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_macro_cs&amp;mt=8">Stáhnout aplikaci</a>
 </div>
 </header>
 <main id="main" class="wrap">
@@ -235,6 +243,7 @@
 <p class="fine">Vše se počítá ve tvém prohlížeči. Nic, co zadáš, se neodesílá ani neukládá.</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="https://getpofu.com/cs/macro-calculator-for-women.html">Kalkulačka od Pofu</a></p>
 </div>
 </section>
 <section id="how">
@@ -255,6 +264,13 @@
 <li>Jäger R. et al. <a href="https://pubmed.ncbi.nlm.nih.gov/28642676/">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017.</li>
 </ul>
 <p class="fine">Vzorce vycházejí z výše uvedených publikovaných zdrojů a odpovídají pravidlům, která používá aplikace Pofu. Tuto stránku nekontroloval nutriční terapeut; je ověřována podle těchto zdrojů a aktualizuje se, když se změní. <a href="editorial-policy.html">Jak připravujeme obsah a zdroje</a>.</p>
+</section>
+<section id="embed">
+<h2>Přidej tuto kalkulačku na svůj web</h2>
+<p>Můžeš ji zdarma používat na svém blogu nebo webu. Zkopíruj kód níže: zobrazí kalkulačku a odkaz zpět na tuto stránku.</p>
+<textarea id="embed-code" readonly aria-label="Přidej tuto kalkulačku na svůj web">&lt;iframe src=&quot;https://getpofu.com/cs/macro-calculator-for-women.html?embed=1&quot; title=&quot;Kalkulačka maker pro ženy&quot; width=&quot;100%&quot; height=&quot;940&quot; loading=&quot;lazy&quot; style=&quot;border:0;max-width:640px&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://getpofu.com/cs/macro-calculator-for-women.html&quot;&gt;Kalkulačka maker pro ženy&lt;/a&gt; · Pofu&lt;/p&gt;</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="Zkopírováno">Kopírovat kód</button></p>
 </section>
 <section id="faq">
 <h2>Často kladené otázky</h2>
@@ -282,6 +298,18 @@
 <section id="not-medical">
 <div class="note"><p>Tato kalkulačka poskytuje obecné odhady pro dospělé, ne lékařskou radu. Pokud jsi těhotná nebo kojíš, máš zdravotní potíže, například onemocnění ledvin nebo cukrovku, nebo poruchu příjmu potravy v anamnéze, poraď se před změnou stravování s lékařem nebo nutričním terapeutem.</p></div>
 </section>
+<!-- toolbox:start -->
+<section id="free-tools" class="toolbox">
+<h2>Další nástroje zdarma</h2>
+<ul>
+<li><a href="macro-calculator-for-women.html">Kalkulačka maker pro ženy</a></li>
+<li><a href="calorie-deficit-calculator.html">Kalkulačka kalorického deficitu podle data cíle</a></li>
+<li><a href="protein-calculator-for-women.html">Kalkulačka bílkovin pro ženy</a></li>
+<li><a href="bmi-calculator-for-women.html">BMI kalkulačka pro ženy</a></li>
+<li><a href="cycle-calorie-calculator.html">Kalorická kalkulačka pro ženy podle cyklu</a></li>
+</ul>
+</section>
+<!-- toolbox:end -->
 </main>
 <footer class="foot">
 <div class="wrap">
@@ -371,5 +399,7 @@
   });
 })();
 </script>
+<script>(function () { var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () { t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () { document.execCommand('copy'); }); b.textContent = b.dataset.done; }); })();</script>
 </body>
 </html>

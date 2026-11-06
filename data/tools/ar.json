@@ -31,7 +31,12 @@
     "badge_alt": "تنزيل Pofu من App Store",
     "foot_nav": "الشؤون القانونية والدعم", "privacy_l": "الخصوصية", "terms_l": "الشروط", "support_l": "الدعم",
     "updated": "آخر تحديث: <time datetime=\"2026-11-06\">6 نوفمبر 2026</time>.",
-    "tm": "Apple وiPhone وApp Store علامات تجارية مملوكة لشركة Apple Inc. © 2026 Pofu."
+    "tm": "Apple وiPhone وApp Store علامات تجارية مملوكة لشركة Apple Inc. © 2026 Pofu.",
+    "embed_h": "أضيفي هذه الحاسبة إلى موقعك",
+    "embed_p": "مجانية الاستخدام في مدونتك أو موقعك. انسخي الكود أدناه: فهو يعرض الحاسبة ورابطًا يعود إلى هذه الصفحة.",
+    "embed_copy": "نسخ الكود",
+    "embed_copied": "تم النسخ",
+    "embed_by": "حاسبة من Pofu"
   },
   "tools": {
     "protein": {

@@ -1,0 +1,41 @@
+{
+  "title": "Calorie dei piatti nazionali: 22 cucine a confronto (2026) | Pofu",
+  "desc": "Quanto sono caloriche le ricette tipiche di 22 cucine? Calorie per porzione e per 100 g di {n} piatti locali, con la mediana di ogni cucina e un download CSV gratuito.",
+  "h1": "Calorie dei piatti nazionali: 22 cucine a confronto",
+  "lede": "Abbiamo confrontato le calorie di {n} piatti locali tipici di 22 cucine, dalla zuppa di lenticchie turca al bibimbap coreano, per porzione e per 100 g.",
+  "pill": "Dati · novembre 2026",
+  "h_find": "Risultati principali",
+  "find_top": "Nel nostro campione, i piatti della cucina {top} sono i più calorici, con una mediana di {topk} kcal per 100 g.",
+  "find_low": "I piatti della cucina {low} sono i più leggeri, con una mediana di {lowk} kcal per 100 g.",
+  "find_soup": "Zuppe e piatti di verdure sono i più leggeri nella maggior parte delle cucine, mentre fritti, dolci da forno e dolciumi sono i più calorici.",
+  "find_portion": "Le calorie per 100 g e le calorie per porzione raccontano storie diverse: un piatto leggero servito in una ciotola grande può sommare più di un dolcetto piccolo e denso.",
+  "h_rank": "Cucine in ordine di densità calorica",
+  "rank_cols": ["Cucina", "Piatti", "Mediana kcal per 100 g", "Piatto più leggero", "Piatto più calorico"],
+  "h_detail": "Tutti i piatti per cucina",
+  "detail_cols": ["Piatto", "Porzione", "kcal per porzione", "kcal per 100 g"],
+  "h_method": "Come abbiamo fatto questo confronto",
+  "method": [
+    "<strong>Piatti:</strong> i piatti locali delle nostre pagine degli alimenti per ogni lingua, scelti tra i piatti comuni e più noti di ciascuna cucina. Bevande, salse e piccoli contorni (sotto i 60 g o 80 kcal a porzione) sono esclusi. È un campione, non un quadro completo di ciò che si mangia in un paese.",
+    "<strong>Valori:</strong> da banche dati pubbliche di composizione degli alimenti (USDA FoodData Central, NEVO, l’Agenzia svedese per l’alimentazione, NutriDatabáze, CREA) e dalla banca dati degli alimenti dell’app Pofu. Ogni pagina di un piatto collega la sua fonte, quando esiste.",
+    "<strong>Mediana:</strong> il valore centrale delle calorie per 100 g dei piatti, così un piatto molto pesante o molto leggero non sposta molto il risultato. Le cucine con meno di 8 piatti nel nostro campione sono segnalate.",
+    "<strong>Limiti:</strong> ricette, porzioni e olio di cottura cambiano da casa a casa, da regione a regione e da ristorante a ristorante, quindi ogni valore è una stima tipica. Le varianti di uno stesso piatto (per esempio con pollo o gamberi) sono contate separatamente."
+  ],
+  "small": "campione piccolo",
+  "csv": "Scarica i dati (CSV)",
+  "cite": "Puoi usare questi dati con un link a questa pagina.",
+  "h_faq": "Domande frequenti",
+  "faq": [
+    ["Quale cucina ha i piatti più calorici?", "Nel nostro campione di {n} piatti, quelli della cucina {top} hanno la mediana più alta, circa {topk} kcal per 100 g. Le ricette variano molto, quindi considerala un confronto approssimativo."],
+    ["Quale cucina ha i piatti più leggeri?", "I piatti della cucina {low} hanno la mediana più bassa del nostro campione, circa {lowk} kcal per 100 g, soprattutto perché zuppe, stufati e piatti al vapore contengono molta acqua."],
+    ["La densità calorica decide se un piatto è sano?", "No. Mostra quante calorie stanno in una certa quantità di cibo. Proteine, fibre, verdure e dimensione della porzione contano altrettanto."],
+    ["Come conto le calorie di un piatto nazionale fatto in casa?", "Parti da un valore tipico come questi, poi regola la porzione su ciò che hai mangiato. In Pofu puoi fotografare il piatto e correggere la stima."]
+  ],
+  "h_rel": "Letture correlate",
+  "rel_food": "Calorie di tutti gli alimenti",
+  "cuisines": {
+    "us": "americana", "tr": "turca", "de": "tedesca", "fr": "francese", "mx": "messicana", "br": "brasiliana",
+    "arab": "araba e mediorientale", "cz": "ceca", "in": "indiana", "id": "indonesiana", "it": "italiana",
+    "jp": "giapponese", "kr": "coreana", "nl": "olandese", "pl": "polacca", "ro": "rumena", "ru": "russa",
+    "se": "svedese", "th": "thailandese", "ua": "ucraina", "vn": "vietnamita", "cn": "cinese"
+  }
+}

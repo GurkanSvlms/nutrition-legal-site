@@ -31,7 +31,12 @@
     "badge_alt": "App Store에서 Pofu 다운로드",
     "foot_nav": "법적 고지 및 지원", "privacy_l": "개인정보 처리방침", "terms_l": "이용약관", "support_l": "지원",
     "updated": "최종 업데이트: <time datetime=\"2026-11-06\">2026년 11월 6일</time>.",
-    "tm": "Apple, iPhone, App Store는 Apple Inc.의 상표입니다. © 2026 Pofu."
+    "tm": "Apple, iPhone, App Store는 Apple Inc.의 상표입니다. © 2026 Pofu.",
+    "embed_h": "이 계산기를 내 사이트에 추가하기",
+    "embed_p": "블로그나 웹사이트에서 무료로 사용할 수 있습니다. 아래 코드를 복사하세요. 계산기와 이 페이지로 연결되는 링크가 표시됩니다.",
+    "embed_copy": "코드 복사",
+    "embed_copied": "복사됨",
+    "embed_by": "계산기 제공: Pofu"
   },
   "tools": {
     "protein": {

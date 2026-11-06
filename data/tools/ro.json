@@ -31,7 +31,12 @@
     "badge_alt": "Descarcă Pofu din App Store",
     "foot_nav": "Informații legale și asistență", "privacy_l": "Confidențialitate", "terms_l": "Termeni", "support_l": "Asistență",
     "updated": "Ultima actualizare: <time datetime=\"2026-11-06\">6 noiembrie 2026</time>.",
-    "tm": "Apple, iPhone și App Store sunt mărci comerciale ale Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone și App Store sunt mărci comerciale ale Apple Inc. © 2026 Pofu.",
+    "embed_h": "Adaugă acest calculator pe site-ul tău",
+    "embed_p": "Poți să-l folosești gratuit pe blogul sau site-ul tău. Copiază codul de mai jos: afișează calculatorul și un link către această pagină.",
+    "embed_copy": "Copiază codul",
+    "embed_copied": "Copiat",
+    "embed_by": "Calculator de la Pofu"
   },
   "tools": {
     "protein": {

@@ -1,0 +1,41 @@
+{
+  "title": "Calorii în preparatele naționale: 22 de bucătării comparate (date 2026) | Pofu",
+  "desc": "Cât de dense în calorii sunt preparatele tipice din 22 de bucătării? Calorii pe porție și la 100 g pentru {n} preparate locale, cu mediana fiecărei bucătării și o descărcare CSV gratuită.",
+  "h1": "Calorii în preparatele naționale: 22 de bucătării comparate",
+  "lede": "Am comparat caloriile din {n} preparate locale tipice din 22 de bucătării, de la supa turcească de linte la bibimbap-ul coreean, pe porție și la 100 g.",
+  "pill": "Date · noiembrie 2026",
+  "h_find": "Concluzii principale",
+  "find_top": "În eșantionul nostru, preparatele din {top} sunt cele mai dense în calorii, cu o mediană de {topk} kcal la 100 g.",
+  "find_low": "Preparatele din {low} sunt cele mai ușoare, cu o mediană de {lowk} kcal la 100 g.",
+  "find_soup": "Supele și preparatele din legume sunt cele mai ușoare în majoritatea bucătăriilor, în timp ce mâncărurile prăjite, produsele de patiserie și dulciurile sunt cele mai dense în calorii.",
+  "find_portion": "Caloriile la 100 g și caloriile pe porție spun povești diferite: un preparat ușor mâncat dintr-un castron mare poate însuma mai mult decât o patiserie mică și densă.",
+  "h_rank": "Bucătăriile ordonate după densitatea calorică",
+  "rank_cols": ["Bucătărie", "Preparate", "Mediana kcal la 100 g", "Cel mai ușor preparat", "Cel mai dens în calorii"],
+  "h_detail": "Toate preparatele, pe bucătării",
+  "detail_cols": ["Preparat", "Porție", "kcal pe porție", "kcal la 100 g"],
+  "h_method": "Cum am făcut această comparație",
+  "method": [
+    "<strong>Preparate:</strong> preparatele locale de pe paginile noastre de alimente pentru fiecare limbă, alese ca preparate frecvente și bine cunoscute ale bucătăriei respective. Băuturile, sosurile și porțiile mici de garnitură (sub 60 g sau 80 kcal pe porție) sunt excluse. Este un eșantion, nu o imagine completă a ceea ce mănâncă oamenii dintr-o țară.",
+    "<strong>Valori:</strong> din baze de date publice de compoziție a alimentelor (USDA FoodData Central, NEVO, Agenția Suedeză pentru Alimente, NutriDatabáze, CREA) și din baza de date de alimente a aplicației Pofu. Pagina fiecărui preparat trimite la sursa sa, atunci când există una.",
+    "<strong>Mediana:</strong> valoarea de mijloc a caloriilor la 100 g ale preparatelor, astfel încât un preparat foarte greu sau foarte ușor să nu schimbe mult rezultatul. Bucătăriile cu mai puțin de 8 preparate în eșantionul nostru sunt marcate.",
+    "<strong>Limite:</strong> rețetele, porțiile și uleiul folosit la gătit diferă de la o casă, o regiune și un restaurant la altul, așa că fiecare valoare este o estimare tipică. Variantele aceluiași preparat (de exemplu cu pui sau cu creveți) sunt numărate separat."
+  ],
+  "small": "eșantion mic",
+  "csv": "Descarcă datele (CSV)",
+  "cite": "Poți folosi aceste date cu un link către această pagină.",
+  "h_faq": "Întrebări frecvente",
+  "faq": [
+    ["Care bucătărie are cele mai dense preparate în calorii?", "În eșantionul nostru de {n} preparate, preparatele din {top} au cea mai mare mediană, de aproximativ {topk} kcal la 100 g. Rețetele variază mult, așa că privește asta ca pe o comparație aproximativă."],
+    ["Care bucătărie are cele mai ușoare preparate?", "Preparatele din {low} au cea mai mică mediană din eșantionul nostru, de aproximativ {lowk} kcal la 100 g, mai ales pentru că supele, tocănițele și preparatele fierte la abur conțin multă apă."],
+    ["Densitatea calorică decide dacă un preparat este sănătos?", "Nu. Ea arată câte calorii încap într-o anumită cantitate de mâncare. Proteinele, fibrele, legumele și mărimea porției contează la fel de mult."],
+    ["Cum număr caloriile pentru un preparat național gătit acasă?", "Pornește de la o valoare tipică, ca cele de aici, apoi ajustează porția la ceea ce ai mâncat. În Pofu poți face o fotografie farfuriei și poți corecta estimarea."]
+  ],
+  "h_rel": "Pe aceeași temă",
+  "rel_food": "Calorii în toate alimentele",
+  "cuisines": {
+    "us": "Statele Unite", "tr": "Turcia", "de": "Germania", "fr": "Franța", "mx": "Mexic", "br": "Brazilia",
+    "arab": "Orientul Mijlociu și lumea arabă", "cz": "Cehia", "in": "India", "id": "Indonezia", "it": "Italia",
+    "jp": "Japonia", "kr": "Coreea", "nl": "Țările de Jos", "pl": "Polonia", "ro": "România", "ru": "Rusia",
+    "se": "Suedia", "th": "Thailanda", "ua": "Ucraina", "vn": "Vietnam", "cn": "China"
+  }
+}

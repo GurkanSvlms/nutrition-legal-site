@@ -256,6 +256,8 @@ def page(L, d, tool, style):
     how = "\n".join(f"<li>{x}</li>" for x in t["how"])
     src = "\n".join(f"<li>{x}</li>" for x in t["sources"])
     faq_html = "\n".join(f"<h3>{q}</h3>\n<p>{a}</p>" for q, a in t["faq"])
+    embed_code = (f'<iframe src="{me}?embed=1" title="{esc(t["h1"])}" width="100%" height="940" loading="lazy" '
+                  f'style="border:0;max-width:640px"></iframe>\n<p><a href="{me}">{esc(t["h1"])}</a> · Pofu</p>')
     dir_attr = ' dir="rtl"' if L == "ar" else ""
     tf = TRUST / f"{L}.json"
     method_label = json.loads(tf.read_text(encoding="utf-8"))["food"]["method_link"] if tf.exists() else ""
@@ -279,7 +281,15 @@ def page(L, d, tool, style):
 <meta property="og:image" content="https://getpofu.com/assets/img/{c['og_img']}">
 <link rel="icon" type="image/png" sizes="64x64" href="{pre}assets/pofu-favicon.png?v=20260703">
 <link rel="apple-touch-icon" sizes="180x180" href="{pre}assets/apple-touch-icon.png?v=20260703">
-<style>{style}</style>
+<style>{style}
+#embed textarea {{ width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }}
+.embed-by {{ display: none; }}
+.embed body {{ background: transparent; }}
+.embed .skip, .embed header.top, .embed .hero, .embed main > section:not(#tool), .embed footer {{ display: none !important; }}
+.embed #tool {{ margin: 0; padding: 0; }}
+.embed .embed-by {{ display: block; margin: .6rem 0 0; font-size: .85rem; }}
+</style>
+<script>if (/[?&]embed=1/.test(location.search)) {{ document.documentElement.classList.add('embed'); document.write('<base target="_blank">'); }}</script>
 <script type="application/ld+json">
 {json.dumps(app_ld, ensure_ascii=False)}
 </script>
@@ -311,6 +321,7 @@ def page(L, d, tool, style):
 <p class="fine">{c['privacy']}</p>
 </form>
 <div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<p class="embed-by"><a href="{me}">{c['embed_by']}</a></p>
 </div>
 </section>
 <section id="how">
@@ -326,6 +337,12 @@ def page(L, d, tool, style):
 {src}
 </ul>
 <p class="fine">{c['method_note']} <a href="{method_href}">{method_label}</a>.</p>
+</section>
+<section id="embed">
+<h2>{c['embed_h']}</h2>
+<p>{c['embed_p']}</p>
+<textarea id="embed-code" readonly aria-label="{esc(c['embed_h'])}">{esc(embed_code)}</textarea>
+<p><button class="btn btn--sm" type="button" id="embed-copy" data-done="{esc(c['embed_copied'])}">{c['embed_copy']}</button></p>
 </section>
 <section id="faq">
 <h2>{c['faq_h']}</h2>
@@ -354,6 +371,8 @@ def page(L, d, tool, style):
 <script src="{pre}assets/women-tools.js?v={TODAY}"></script>
 <script>window.__T = {json.dumps(T, ensure_ascii=False)};</script>
 <script>{SCRIPT}</script>
+<script>(function () {{ var b = document.getElementById('embed-copy'), t = document.getElementById('embed-code'); if (!b) return;
+  b.addEventListener('click', function () {{ t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(function () {{ document.execCommand('copy'); }}); b.textContent = b.dataset.done; }}); }})();</script>
 </body>
 </html>
 '''

@@ -31,7 +31,12 @@
     "badge_alt": "Stáhnout Pofu z App Store",
     "foot_nav": "Právní informace a podpora", "privacy_l": "Soukromí", "terms_l": "Podmínky", "support_l": "Podpora",
     "updated": "Naposledy aktualizováno: <time datetime=\"2026-11-06\">6. listopadu 2026</time>.",
-    "tm": "Apple, iPhone a App Store jsou ochranné známky společnosti Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone a App Store jsou ochranné známky společnosti Apple Inc. © 2026 Pofu.",
+    "embed_h": "Přidej tuto kalkulačku na svůj web",
+    "embed_p": "Můžeš ji zdarma používat na svém blogu nebo webu. Zkopíruj kód níže: zobrazí kalkulačku a odkaz zpět na tuto stránku.",
+    "embed_copy": "Kopírovat kód",
+    "embed_copied": "Zkopírováno",
+    "embed_by": "Kalkulačka od Pofu"
   },
   "tools": {
     "protein": {

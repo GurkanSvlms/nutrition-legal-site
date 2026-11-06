@@ -31,7 +31,12 @@
     "badge_alt": "Ladda ner Pofu från App Store",
     "foot_nav": "Juridik och support", "privacy_l": "Integritet", "terms_l": "Villkor", "support_l": "Support",
     "updated": "Senast uppdaterad: <time datetime=\"2026-11-06\">6 november 2026</time>.",
-    "tm": "Apple, iPhone och App Store är varumärken som tillhör Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone och App Store är varumärken som tillhör Apple Inc. © 2026 Pofu.",
+    "embed_h": "Lägg till kalkylatorn på din webbplats",
+    "embed_p": "Gratis att använda på din blogg eller webbplats. Kopiera koden nedan: den visar kalkylatorn och en länk tillbaka till den här sidan.",
+    "embed_copy": "Kopiera koden",
+    "embed_copied": "Kopierat",
+    "embed_by": "Kalkylator från Pofu"
   },
   "tools": {
     "protein": {

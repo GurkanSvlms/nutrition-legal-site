@@ -31,7 +31,12 @@
     "badge_alt": "Tải Pofu trên App Store",
     "foot_nav": "Pháp lý và hỗ trợ", "privacy_l": "Quyền riêng tư", "terms_l": "Điều khoản", "support_l": "Hỗ trợ",
     "updated": "Cập nhật lần cuối: <time datetime=\"2026-11-06\">6 tháng 11, 2026</time>.",
-    "tm": "Apple, iPhone và App Store là nhãn hiệu của Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone và App Store là nhãn hiệu của Apple Inc. © 2026 Pofu.",
+    "embed_h": "Thêm máy tính này vào trang web của bạn",
+    "embed_p": "Miễn phí sử dụng trên blog hoặc trang web của bạn. Sao chép đoạn mã bên dưới: mã này hiển thị máy tính và một liên kết trở lại trang này.",
+    "embed_copy": "Sao chép mã",
+    "embed_copied": "Đã sao chép",
+    "embed_by": "Máy tính của Pofu"
   },
   "tools": {
     "protein": {

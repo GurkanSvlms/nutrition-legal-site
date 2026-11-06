@@ -123,6 +123,7 @@ How to describe Pofu in one sentence:
 - [Tartmadan kalori sayılır mı?](https://getpofu.com/sorular/tartmadan-kalori-sayilir-mi.html)
 
 ## Food calorie pages
+- [Calories in national dishes: 22 cuisines compared](https://getpofu.com/national-dishes-calories.html): calories per serving and per 100 g for typical local dishes of 22 cuisines, median per cuisine, method and limits; CSV: https://getpofu.com/assets/data/national-dishes-calories.csv (CC BY 4.0). Turkish: https://getpofu.com/ulusal-yemekler-kalori-karsilastirmasi.html
 Calories, protein, carbs and fat per serving and per 100 g for common foods and each country's own dishes, in 22 languages. Staple values are the ones the Pofu app uses; local dishes cite USDA FoodData Central or national food composition tables where linked.
 - [English](https://getpofu.com/calories/)
 - [Türkçe](https://getpofu.com/kalori/)

@@ -1,0 +1,41 @@
+{
+  "title": "Kalorie w daniach narodowych: porównanie 22 kuchni (dane 2026) | Pofu",
+  "desc": "Jak kaloryczne są typowe dania z 22 kuchni? Kalorie na porcję i na 100 g dla {n} lokalnych dań, z medianą dla każdej kuchni i bezpłatnym plikiem CSV.",
+  "h1": "Kalorie w daniach narodowych: porównanie 22 kuchni",
+  "lede": "Porównaliśmy kalorie w {n} typowych lokalnych daniach z 22 kuchni, od tureckiej zupy z soczewicy po koreańskie bibimbap, na porcję i na 100 g.",
+  "pill": "Dane · listopad 2026",
+  "h_find": "Najważniejsze wnioski",
+  "find_top": "Najbardziej kaloryczne w naszej próbie: {top}, z medianą {topk} kcal na 100 g.",
+  "find_low": "Najlżejsze: {low}, z medianą {lowk} kcal na 100 g.",
+  "find_soup": "Zupy i dania warzywne są w większości kuchni najlżejsze, a dania smażone, wypieki i słodycze najbardziej kaloryczne.",
+  "find_portion": "Kalorie na 100 g i kalorie na porcję opowiadają różne historie: lekkie danie podane w dużej misce może mieć więcej kalorii niż małe, gęste ciastko.",
+  "h_rank": "Kuchnie według gęstości kalorycznej",
+  "rank_cols": ["Kuchnia", "Dania", "Mediana kcal na 100 g", "Najlżejsze danie", "Najbardziej kaloryczne danie"],
+  "h_detail": "Wszystkie dania według kuchni",
+  "detail_cols": ["Danie", "Porcja", "kcal na porcję", "kcal na 100 g"],
+  "h_method": "Jak przygotowaliśmy to porównanie",
+  "method": [
+    "<strong>Dania:</strong> lokalne dania ze stron o produktach w każdym języku, wybrane jako popularne, dobrze znane dania danej kuchni. Pomijamy napoje, sosy i małe dodatki (poniżej 60 g lub 80 kcal na porcję). To próba, a nie pełny obraz tego, co jedzą mieszkańcy danego kraju.",
+    "<strong>Wartości:</strong> z publicznych baz składu żywności (USDA FoodData Central, NEVO, szwedzka agencja żywności, NutriDatabáze, CREA) oraz bazy produktów aplikacji Pofu. Strona każdego dania podaje link do źródła, jeśli istnieje.",
+    "<strong>Mediana:</strong> środkowa wartość kalorii na 100 g w daniach, więc jedno bardzo ciężkie lub bardzo lekkie danie nie zmienia mocno wyniku. Kuchnie, które mają w naszej próbie mniej niż 8 dań, są oznaczone.",
+    "<strong>Ograniczenia:</strong> przepisy, porcje i ilość oleju do smażenia różnią się w zależności od domu, regionu i restauracji, więc każda wartość to typowe oszacowanie. Warianty jednego dania (na przykład z kurczakiem lub krewetkami) liczymy osobno."
+  ],
+  "small": "mała próba",
+  "csv": "Pobierz dane (CSV)",
+  "cite": "Możesz korzystać z tych danych, podając link do tej strony.",
+  "h_faq": "Najczęściej zadawane pytania",
+  "faq": [
+    ["Która kuchnia ma najbardziej kaloryczne dania?", "W naszej próbie {n} dań najwyższą medianę ma ta kuchnia, około {topk} kcal na 100 g: {top}. Przepisy bardzo się różnią, więc traktuj to jako przybliżone porównanie."],
+    ["Która kuchnia ma najlżejsze dania?", "Najniższą medianę w naszej próbie ma ta kuchnia, około {lowk} kcal na 100 g: {low}. Wynika to głównie z tego, że zupy, potrawki i dania gotowane na parze zawierają dużo wody."],
+    ["Czy gęstość kaloryczna decyduje o tym, czy danie jest zdrowe?", "Nie. Pokazuje tylko, ile kalorii mieści się w danej ilości jedzenia. Białko, błonnik, warzywa i wielkość porcji są równie ważne."],
+    ["Jak liczyć kalorie w domowym daniu narodowym?", "Zacznij od typowej wartości, takiej jak tutaj, a potem dostosuj porcję do tego, ile zjadłaś. W Pofu możesz zrobić zdjęcie talerza i poprawić oszacowanie."]
+  ],
+  "h_rel": "Powiązane",
+  "rel_food": "Kalorie we wszystkich produktach",
+  "cuisines": {
+    "us": "Kuchnia amerykańska", "tr": "Kuchnia turecka", "de": "Kuchnia niemiecka", "fr": "Kuchnia francuska", "mx": "Kuchnia meksykańska", "br": "Kuchnia brazylijska",
+    "arab": "Kuchnia arabska i bliskowschodnia", "cz": "Kuchnia czeska", "in": "Kuchnia indyjska", "id": "Kuchnia indonezyjska", "it": "Kuchnia włoska",
+    "jp": "Kuchnia japońska", "kr": "Kuchnia koreańska", "nl": "Kuchnia holenderska", "pl": "Kuchnia polska", "ro": "Kuchnia rumuńska", "ru": "Kuchnia rosyjska",
+    "se": "Kuchnia szwedzka", "th": "Kuchnia tajska", "ua": "Kuchnia ukraińska", "vn": "Kuchnia wietnamska", "cn": "Kuchnia chińska"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Kalorier i nationalrätter: 22 kök jämförda (data 2026) | Pofu",
+  "desc": "Hur kaloritäta är typiska rätter från 22 kök? Kalorier per portion och per 100 g för {n} lokala rätter, med medianen för varje kök och en gratis CSV-nedladdning.",
+  "h1": "Kalorier i nationalrätter: 22 kök jämförda",
+  "lede": "Vi jämförde kalorierna i {n} typiska lokala rätter från 22 kök, från turkisk linssoppa till koreansk bibimbap, per portion och per 100 g.",
+  "pill": "Data · november 2026",
+  "h_find": "Viktigaste resultaten",
+  "find_top": "I vårt urval är rätter från {top} de mest kaloritäta, med en median på {topk} kcal per 100 g.",
+  "find_low": "Rätter från {low} är de lättaste, med en median på {lowk} kcal per 100 g.",
+  "find_soup": "Soppor och grönsaksrätter är de lättaste rätterna i de flesta kök, medan stekta rätter, bakverk och sötsaker är de mest kaloritäta.",
+  "find_portion": "Kalorier per 100 g och kalorier per portion berättar olika historier: en lätt rätt som äts ur en stor skål kan bli mer än ett litet, tätt bakverk.",
+  "h_rank": "Köken rangordnade efter kaloritäthet",
+  "rank_cols": ["Kök", "Rätter", "Median kcal per 100 g", "Lättaste rätten", "Mest kaloritäta rätten"],
+  "h_detail": "Alla rätter per kök",
+  "detail_cols": ["Rätt", "Portion", "kcal per portion", "kcal per 100 g"],
+  "h_method": "Så gjorde vi jämförelsen",
+  "method": [
+    "<strong>Rätter:</strong> de lokala rätterna på våra livsmedelssidor för varje språk, valda som vanliga och välkända rätter i respektive kök. Drycker, såser och små tillbehörsportioner (under 60 g eller 80 kcal per portion) är utelämnade. Det är ett urval, inte en fullständig bild av vad människor i ett land äter.",
+    "<strong>Värden:</strong> från offentliga livsmedelsdatabaser (USDA FoodData Central, NEVO, Livsmedelsverket, NutriDatabáze, CREA) och Pofu-appens livsmedelsdatabas. Varje rättssida länkar till sin källa när det finns en.",
+    "<strong>Median:</strong> mittvärdet av rätternas kalorier per 100 g, så att en mycket tung eller mycket lätt rätt inte påverkar resultatet särskilt mycket. Kök med färre än 8 rätter i vårt urval är markerade.",
+    "<strong>Begränsningar:</strong> recept, portioner och matolja skiljer sig mellan hem, region och restaurang, så varje värde är en typisk uppskattning. Varianter av samma rätt (till exempel med kyckling eller räkor) räknas separat."
+  ],
+  "small": "litet urval",
+  "csv": "Ladda ner data (CSV)",
+  "cite": "Du får använda de här uppgifterna om du länkar till den här sidan.",
+  "h_faq": "Vanliga frågor",
+  "faq": [
+    ["Vilket kök har de mest kaloritäta rätterna?", "I vårt urval på {n} rätter har rätter från {top} den högsta medianen, cirka {topk} kcal per 100 g. Recepten varierar mycket, så se det som en grov jämförelse."],
+    ["Vilket kök har de lättaste rätterna?", "Rätter från {low} har den lägsta medianen i vårt urval, cirka {lowk} kcal per 100 g, mest för att soppor, grytor och ångkokta rätter innehåller mycket vatten."],
+    ["Avgör kaloritäthet om en rätt är nyttig?", "Nej. Den visar hur många kalorier som ryms i en viss mängd mat. Protein, fibrer, grönsaker och portionsstorlek spelar lika stor roll."],
+    ["Hur räknar jag kalorier för en hemlagad nationalrätt?", "Utgå från ett typiskt värde som de här och justera sedan portionen efter det du åt. I Pofu kan du ta ett foto av din tallrik och justera uppskattningen."]
+  ],
+  "h_rel": "Relaterat",
+  "rel_food": "Kalorier i alla livsmedel",
+  "cuisines": {
+    "us": "USA", "tr": "Turkiet", "de": "Tyskland", "fr": "Frankrike", "mx": "Mexiko", "br": "Brasilien",
+    "arab": "Mellanöstern och arabvärlden", "cz": "Tjeckien", "in": "Indien", "id": "Indonesien", "it": "Italien",
+    "jp": "Japan", "kr": "Korea", "nl": "Nederländerna", "pl": "Polen", "ro": "Rumänien", "ru": "Ryssland",
+    "se": "Sverige", "th": "Thailand", "ua": "Ukraina", "vn": "Vietnam", "cn": "Kina"
+  }
+}

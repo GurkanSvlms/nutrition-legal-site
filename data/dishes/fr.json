@@ -1,0 +1,41 @@
+{
+  "title": "Calories des plats nationaux : 22 cuisines comparées (2026) | Pofu",
+  "desc": "Quelle est la densité calorique des plats typiques de 22 cuisines ? Calories par portion et pour 100 g pour {n} plats locaux, avec la médiane de chaque cuisine et un téléchargement CSV gratuit.",
+  "h1": "Calories des plats nationaux : 22 cuisines comparées",
+  "lede": "Nous avons comparé les calories de {n} plats locaux typiques de 22 cuisines, de la soupe de lentilles turque au bibimbap coréen, par portion et pour 100 g.",
+  "pill": "Données · novembre 2026",
+  "h_find": "Principaux constats",
+  "find_top": "Dans notre échantillon, les plats de la cuisine {top} sont les plus caloriques, avec une médiane de {topk} kcal pour 100 g.",
+  "find_low": "Les plats de la cuisine {low} sont les plus légers, avec une médiane de {lowk} kcal pour 100 g.",
+  "find_soup": "Les soupes et les plats de légumes sont les plus légers dans la plupart des cuisines, tandis que les fritures, les pâtisseries et les sucreries sont les plus caloriques.",
+  "find_portion": "Les calories pour 100 g et les calories par portion racontent des histoires différentes : un plat léger servi dans un grand bol peut totaliser plus qu’une petite pâtisserie dense.",
+  "h_rank": "Cuisines classées par densité calorique",
+  "rank_cols": ["Cuisine", "Plats", "Médiane kcal pour 100 g", "Plat le plus léger", "Plat le plus calorique"],
+  "h_detail": "Tous les plats par cuisine",
+  "detail_cols": ["Plat", "Portion", "kcal par portion", "kcal pour 100 g"],
+  "h_method": "Comment nous avons réalisé cette comparaison",
+  "method": [
+    "<strong>Plats :</strong> les plats locaux de nos pages d’aliments pour chaque langue, choisis parmi les plats courants et bien connus de chaque cuisine. Les boissons, les sauces et les petits accompagnements (moins de 60 g ou 80 kcal par portion) sont exclus. C’est un échantillon, pas un tableau complet de ce que les gens mangent dans un pays.",
+    "<strong>Valeurs :</strong> issues de bases publiques de composition des aliments (USDA FoodData Central, NEVO, l’Agence suédoise de l’alimentation, NutriDatabáze, CREA) et de la base d’aliments de l’appli Pofu. Chaque page de plat renvoie à sa source quand il y en a une.",
+    "<strong>Médiane :</strong> la valeur centrale des calories pour 100 g des plats, de sorte qu’un plat très lourd ou très léger ne fait pas beaucoup bouger le résultat. Les cuisines de moins de 8 plats dans notre échantillon sont signalées.",
+    "<strong>Limites :</strong> les recettes, les portions et l’huile de cuisson varient selon le foyer, la région et le restaurant ; chaque valeur est donc une estimation typique. Les variantes d’un même plat (par exemple au poulet ou aux crevettes) sont comptées séparément."
+  ],
+  "small": "petit échantillon",
+  "csv": "Télécharger les données (CSV)",
+  "cite": "Tu peux utiliser ces données avec un lien vers cette page.",
+  "h_faq": "Questions fréquentes",
+  "faq": [
+    ["Quelle cuisine a les plats les plus caloriques ?", "Dans notre échantillon de {n} plats, ceux de la cuisine {top} ont la médiane la plus élevée, environ {topk} kcal pour 100 g. Les recettes varient beaucoup, prends donc cela comme une comparaison approximative."],
+    ["Quelle cuisine a les plats les plus légers ?", "Les plats de la cuisine {low} ont la médiane la plus basse de notre échantillon, environ {lowk} kcal pour 100 g, surtout parce que les soupes, les plats mijotés et les plats vapeur contiennent beaucoup d’eau."],
+    ["La densité calorique décide-t-elle si un plat est sain ?", "Non. Elle montre combien de calories tiennent dans une quantité donnée d’aliment. Les protéines, les fibres, les légumes et la taille de la portion comptent tout autant."],
+    ["Comment compter les calories d’un plat national fait maison ?", "Pars d’une valeur typique comme celles-ci, puis ajuste la portion à ce que tu as mangé. Dans Pofu, tu peux prendre ton assiette en photo et corriger l’estimation."]
+  ],
+  "h_rel": "À lire aussi",
+  "rel_food": "Calories de tous les aliments",
+  "cuisines": {
+    "us": "américaine", "tr": "turque", "de": "allemande", "fr": "française", "mx": "mexicaine", "br": "brésilienne",
+    "arab": "arabe et moyen-orientale", "cz": "tchèque", "in": "indienne", "id": "indonésienne", "it": "italienne",
+    "jp": "japonaise", "kr": "coréenne", "nl": "néerlandaise", "pl": "polonaise", "ro": "roumaine", "ru": "russe",
+    "se": "suédoise", "th": "thaïlandaise", "ua": "ukrainienne", "vn": "vietnamienne", "cn": "chinoise"
+  }
+}

@@ -31,7 +31,12 @@
     "badge_alt": "Download Pofu in de App Store",
     "foot_nav": "Juridisch en support", "privacy_l": "Privacy", "terms_l": "Voorwaarden", "support_l": "Support",
     "updated": "Laatst bijgewerkt op <time datetime=\"2026-11-06\">6 november 2026</time>.",
-    "tm": "Apple, iPhone en App Store zijn handelsmerken van Apple Inc. © 2026 Pofu."
+    "tm": "Apple, iPhone en App Store zijn handelsmerken van Apple Inc. © 2026 Pofu.",
+    "embed_h": "Voeg deze rekentool toe aan je site",
+    "embed_p": "Gratis te gebruiken op je blog of website. Kopieer de onderstaande code: die toont de rekentool en een link terug naar deze pagina.",
+    "embed_copy": "Code kopiëren",
+    "embed_copied": "Gekopieerd",
+    "embed_by": "Rekentool van Pofu"
   },
   "tools": {
     "protein": {

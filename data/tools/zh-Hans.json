@@ -31,7 +31,12 @@
     "badge_alt": "在App Store下载Pofu",
     "foot_nav": "法律与支持", "privacy_l": "隐私", "terms_l": "条款", "support_l": "支持",
     "updated": "最后更新：<time datetime=\"2026-11-06\">2026年11月6日</time>。",
-    "tm": "Apple、iPhone和App Store是Apple Inc.的商标。© 2026 Pofu."
+    "tm": "Apple、iPhone和App Store是Apple Inc.的商标。© 2026 Pofu.",
+    "embed_h": "把这个计算器添加到你的网站",
+    "embed_p": "可免费用于你的博客或网站。复制下面的代码：它会显示计算器，并附带指向本页的链接。",
+    "embed_copy": "复制代码",
+    "embed_copied": "已复制",
+    "embed_by": "计算器由 Pofu 提供"
   },
   "tools": {
     "protein": {

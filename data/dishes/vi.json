@@ -1,0 +1,82 @@
+{
+ "title": "Calo các món ăn quốc gia: so sánh 22 nền ẩm thực (2026) | Pofu",
+ "desc": "Các món đặc trưng của 22 nền ẩm thực có mật độ calo ra sao? Calo mỗi khẩu phần và mỗi 100 g của {n} món địa phương, kèm giá trị trung vị của từng nền ẩm thực và tệp CSV tải miễn phí.",
+ "h1": "Calo các món ăn quốc gia: so sánh 22 nền ẩm thực",
+ "lede": "Chúng tôi so sánh lượng calo của {n} món địa phương tiêu biểu từ 22 nền ẩm thực, từ súp đậu lăng Thổ Nhĩ Kỳ đến bibimbap Hàn Quốc, theo khẩu phần và theo 100 g.",
+ "pill": "Số liệu · Tháng 11 năm 2026",
+ "h_find": "Phát hiện chính",
+ "find_top": "Trong mẫu của chúng tôi, các món {top} có mật độ calo cao nhất, với trung vị {topk} kcal mỗi 100 g.",
+ "find_low": "Các món {low} nhẹ nhất, với trung vị {lowk} kcal mỗi 100 g.",
+ "find_soup": "Súp và các món rau là những món nhẹ nhất ở hầu hết các nền ẩm thực, còn món chiên, bánh ngọt nướng và đồ ngọt có mật độ calo cao nhất.",
+ "find_portion": "Calo mỗi 100 g và calo mỗi khẩu phần kể hai câu chuyện khác nhau: một món nhẹ ăn trong tô lớn có thể nhiều calo hơn một chiếc bánh nhỏ đậm đặc.",
+ "h_rank": "Xếp hạng các nền ẩm thực theo mật độ calo",
+ "rank_cols": [
+  "Nền ẩm thực",
+  "Số món",
+  "Trung vị kcal mỗi 100 g",
+  "Món nhẹ nhất",
+  "Món nhiều calo nhất"
+ ],
+ "h_detail": "Tất cả các món theo nền ẩm thực",
+ "detail_cols": [
+  "Món",
+  "Khẩu phần",
+  "kcal mỗi khẩu phần",
+  "kcal mỗi 100 g"
+ ],
+ "h_method": "Cách chúng tôi thực hiện phép so sánh này",
+ "method": [
+  "<strong>Các món:</strong> những món địa phương trên trang thực phẩm của chúng tôi cho từng ngôn ngữ, được chọn là các món phổ biến, nổi tiếng của nền ẩm thực đó. Đồ uống, nước sốt và các phần ăn kèm nhỏ (dưới 60 g hoặc 80 kcal mỗi khẩu phần) không được tính. Đây là một mẫu, không phải bức tranh đầy đủ về những gì người dân một nước ăn.",
+  "<strong>Giá trị:</strong> lấy từ các cơ sở dữ liệu thành phần thực phẩm công khai (USDA FoodData Central, NEVO, Cơ quan Thực phẩm Thụy Điển, NutriDatabáze, CREA) và cơ sở dữ liệu thực phẩm của ứng dụng Pofu. Trang của mỗi món có liên kết tới nguồn nếu có.",
+  "<strong>Trung vị:</strong> giá trị ở giữa của calo mỗi 100 g của các món, nên một món rất nặng hoặc rất nhẹ không làm kết quả lệch nhiều. Các nền ẩm thực có dưới 8 món trong mẫu của chúng tôi được đánh dấu.",
+  "<strong>Giới hạn:</strong> công thức, khẩu phần và lượng dầu ăn khác nhau theo từng nhà, từng vùng và từng nhà hàng, nên mỗi giá trị chỉ là ước tính điển hình. Các biến thể của một món (ví dụ với thịt gà hoặc tôm) được tính riêng."
+ ],
+ "small": "mẫu nhỏ",
+ "csv": "Tải dữ liệu (CSV)",
+ "cite": "Bạn có thể dùng dữ liệu này kèm liên kết tới trang này.",
+ "h_faq": "Câu hỏi thường gặp",
+ "faq": [
+  [
+   "Nền ẩm thực nào có các món nhiều calo nhất?",
+   "Trong mẫu {n} món của chúng tôi, các món {top} có trung vị cao nhất, khoảng {topk} kcal mỗi 100 g. Công thức rất khác nhau, nên hãy xem đây chỉ là phép so sánh sơ bộ."
+  ],
+  [
+   "Nền ẩm thực nào có các món nhẹ nhất?",
+   "Các món {low} có trung vị thấp nhất trong mẫu của chúng tôi, khoảng {lowk} kcal mỗi 100 g, chủ yếu vì súp, món hầm và món hấp chứa nhiều nước."
+  ],
+  [
+   "Mật độ calo có quyết định một món ăn tốt cho sức khỏe hay không?",
+   "Không. Nó chỉ cho biết một lượng thức ăn nhất định chứa bao nhiêu calo. Protein, chất xơ, rau củ và kích cỡ khẩu phần cũng quan trọng không kém."
+  ],
+  [
+   "Làm sao đếm calo cho một món ăn quốc gia nấu ở nhà?",
+   "Hãy bắt đầu từ một giá trị điển hình như ở đây, rồi điều chỉnh khẩu phần theo lượng bạn đã ăn. Trong Pofu, bạn có thể chụp ảnh đĩa ăn và sửa lại ước tính."
+  ]
+ ],
+ "h_rel": "Liên quan",
+ "rel_food": "Calo của tất cả thực phẩm",
+ "cuisines": {
+  "us": "Mỹ",
+  "tr": "Thổ Nhĩ Kỳ",
+  "de": "Đức",
+  "fr": "Pháp",
+  "mx": "Mexico",
+  "br": "Brazil",
+  "arab": "Ả Rập và Trung Đông",
+  "cz": "Séc",
+  "in": "Ấn Độ",
+  "id": "Indonesia",
+  "it": "Ý",
+  "jp": "Nhật Bản",
+  "kr": "Hàn Quốc",
+  "nl": "Hà Lan",
+  "pl": "Ba Lan",
+  "ro": "Romania",
+  "ru": "Nga",
+  "se": "Thụy Điển",
+  "th": "Thái Lan",
+  "ua": "Ukraina",
+  "vn": "Việt Nam",
+  "cn": "Trung Quốc"
+ }
+}

@@ -1,0 +1,82 @@
+{
+  "title": "Ulusal yemeklerin kalorisi: 22 mutfak karşılaştırması (2026) | Pofu",
+  "desc": "22 mutfağın tipik yemekleri ne kadar kalorili? {n} yöresel yemeğin porsiyon ve 100 g başına kalorisi, her mutfağın ortanca değeri ve ücretsiz CSV indirme.",
+  "h1": "Ulusal yemeklerin kalorisi: 22 mutfak karşılaştırması",
+  "lede": "Mercimek çorbasından Kore bibimbabına, 22 mutfaktan {n} tipik yöresel yemeğin kalorisini porsiyon ve 100 g başına karşılaştırdık.",
+  "pill": "Veri · Kasım 2026",
+  "h_find": "Öne çıkan bulgular",
+  "find_top": "Örneğimizde en yoğun kalorili yemekler {top} mutfağında: 100 g başına ortanca {topk} kcal.",
+  "find_low": "En hafif yemekler {low} mutfağında: 100 g başına ortanca {lowk} kcal.",
+  "find_soup": "Çoğu mutfakta en hafif yemekler çorbalar ve sebze yemekleri; en yoğun kalorililer ise kızartmalar, hamur işleri ve tatlılar.",
+  "find_portion": "100 g başına kalori ile porsiyon başına kalori farklı şeyler anlatır: büyük bir kâsede yenen hafif bir yemek, küçük ama yoğun bir hamur işinden daha fazla kalori edebilir.",
+  "h_rank": "Kalori yoğunluğuna göre mutfaklar",
+  "rank_cols": [
+    "Mutfak",
+    "Yemek sayısı",
+    "100 g başına ortanca kcal",
+    "En hafif yemek",
+    "En yoğun kalorili yemek"
+  ],
+  "h_detail": "Mutfaklara göre tüm yemekler",
+  "detail_cols": [
+    "Yemek",
+    "Porsiyon",
+    "Porsiyon başına kcal",
+    "100 g başına kcal"
+  ],
+  "h_method": "Bu karşılaştırmayı nasıl yaptık",
+  "method": [
+    "<strong>Yemekler:</strong> her dilin yemek sayfalarındaki yöresel yemekler; o mutfağın yaygın ve bilinen yemekleri olarak seçildi. İçecekler, soslar ve küçük yan porsiyonlar (porsiyonu 60 g ya da 80 kcal altında olanlar) dahil edilmedi. Bu bir örneklemdir, bir ülkede insanların ne yediğinin tam resmi değildir.",
+    "<strong>Değerler:</strong> açık besin içeriği veritabanlarından (USDA FoodData Central, NEVO, İsveç Gıda Ajansı, NutriDatabáze, CREA) ve Pofu uygulamasının yiyecek veritabanından. Her yemek sayfası, varsa kaynağına bağlantı verir.",
+    "<strong>Ortanca:</strong> yemeklerin 100 g başına kalorilerinin ortadaki değeri; böylece tek bir çok ağır ya da çok hafif yemek sonucu fazla değiştirmez. Örneğimizde 8’den az yemeği olan mutfaklar işaretlendi.",
+    "<strong>Sınırlar:</strong> tarifler, porsiyonlar ve kullanılan yağ evden eve, bölgeden bölgeye ve restorana göre değişir; bu yüzden her değer tipik bir tahmindir. Bir yemeğin farklı türleri (örneğin tavuklu ya da karidesli) ayrı sayıldı."
+  ],
+  "small": "küçük örneklem",
+  "csv": "Veriyi indir (CSV)",
+  "cite": "Bu veriyi bu sayfaya bağlantı vererek kullanabilirsin.",
+  "h_faq": "Sık sorulan sorular",
+  "faq": [
+    [
+      "Hangi mutfağın yemekleri en kalorili?",
+      "{n} yemeklik örneğimizde en yüksek ortanca {top} mutfağında, 100 g başına yaklaşık {topk} kcal. Tarifler çok değiştiği için bunu kaba bir karşılaştırma olarak gör."
+    ],
+    [
+      "Hangi mutfağın yemekleri en hafif?",
+      "Örneğimizde en düşük ortanca {low} mutfağında, 100 g başına yaklaşık {lowk} kcal; bunun başlıca nedeni çorba, haşlama ve buharda pişen yemeklerin çok su içermesi."
+    ],
+    [
+      "Kalori yoğunluğu bir yemeğin sağlıklı olup olmadığını belirler mi?",
+      "Hayır. Yalnızca belirli bir miktar yiyeceğe ne kadar kalori sığdığını gösterir. Protein, lif, sebze ve porsiyon büyüklüğü de en az onun kadar önemlidir."
+    ],
+    [
+      "Evde pişen yöresel bir yemeğin kalorisini nasıl hesaplarım?",
+      "Buradakiler gibi tipik bir değerden başla, sonra porsiyonu yediğin miktara göre ayarla. Pofu’da tabağının fotoğrafını çekip tahmini düzeltebilirsin."
+    ]
+  ],
+  "h_rel": "İlgili sayfalar",
+  "rel_food": "Tüm yiyeceklerin kalorisi",
+  "cuisines": {
+    "us": "Amerikan",
+    "tr": "Türk",
+    "de": "Alman",
+    "fr": "Fransız",
+    "mx": "Meksika",
+    "br": "Brezilya",
+    "arab": "Arap ve Orta Doğu",
+    "cz": "Çek",
+    "in": "Hint",
+    "id": "Endonezya",
+    "it": "İtalyan",
+    "jp": "Japon",
+    "kr": "Kore",
+    "nl": "Hollanda",
+    "pl": "Polonya",
+    "ro": "Romen",
+    "ru": "Rus",
+    "se": "İsveç",
+    "th": "Tay",
+    "ua": "Ukrayna",
+    "vn": "Vietnam",
+    "cn": "Çin"
+  }
+}
