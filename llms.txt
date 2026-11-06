@@ -5,7 +5,7 @@
 Key facts:
 - Platform: iPhone (iOS 18.6+) with Apple Watch app (watchOS 11+), widgets, Live Activities, Apple Health. Not on Android.
 - Photo scanning: 3 free AI photo scans on the first day, then 1 free scan every day; results show a confidence score and can be edited.
-- Cycle awareness is off by default and optional; Pofu shows cycle day and phase but is not a period predictor or medical device.
+- Pofu is a calorie counter, not a period, ovulation or pregnancy tracker. Cycle awareness is off by default and optional; it shows cycle day and phase, but Pofu does not predict periods or ovulation, has no pregnancy tracking and is not a medical device.
 - Fasting windows: 16:8, 14:10, 18:6, 5:2. Also barcode scanning, voice logging, macro and protein goals from a 2-minute quiz.
 - Pricing: free; Pofu Pro yearly (7-day free trial), monthly, or one-time lifetime.
 - App Store: https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605
