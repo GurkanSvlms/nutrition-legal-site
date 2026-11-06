@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Regl kilosu su mu, yağ mı? Ücretsiz hesaplama aracı | Pofu</title>
+<meta name="description" content="Ücretsiz regl kilosu aracı: son regl tarihini ve tartının ne kadar arttığını gir, artışın tipik ödem mi yoksa başka bir şey mi olduğunu gör. Girdiğin hiçbir şey tarayıcından çıkmaz.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/regl-kilosu-su-mu-yag-mi.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="tr" href="https://getpofu.com/regl-kilosu-su-mu-yag-mi.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/period-water-weight-calculator.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Regl kilosu su mu, yağ mı?">
+<meta property="og:description" content="Ücretsiz regl kilosu aracı: son regl tarihini ve tartının ne kadar arttığını gir, artışın tipik ödem mi yoksa başka bir şey mi olduğunu gör. Girdiğin hiçbir şey tarayıcından çıkmaz.">
+<meta property="og:url" content="https://getpofu.com/regl-kilosu-su-mu-yag-mi.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image-tr.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu tool page: system fonts, one small script, nothing leaves the browser. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  
+    .tool { margin-top: .4rem; }
+    .tool form { display: grid; gap: .9rem; }
+    .field label, .field legend { display: block; font-weight: 700; margin-bottom: .3rem; }
+    .field .hint { display: block; font-weight: 400; font-size: .9rem; color: var(--ink2); }
+    .field input, .field select { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: .7rem; padding: .65rem .8rem; min-height: 2.9rem; }
+    .row { display: grid; grid-template-columns: 1fr 6.5rem; gap: .6rem; }
+    .tool button { justify-self: start; font: inherit; border: 0; cursor: pointer; }
+    .result { margin-top: 1.1rem; padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .result[hidden] { display: none; }
+    .result h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .result .meta { font-size: .95rem; color: var(--ink2); }
+    .result .err { color: var(--pink-text); font-weight: 700; margin: 0; }
+    .bridge { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line); }
+    .bridge p { margin-bottom: .6rem; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Regl kilosu su mu, yağ mı?", "url": "https://getpofu.com/regl-kilosu-su-mu-yag-mi.html", "inLanguage": "tr", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "description": "Ücretsiz regl kilosu aracı: son regl tarihini ve tartının ne kadar arttığını gir, artışın tipik ödem mi yoksa başka bir şey mi olduğunu gör. Girdiğin hiçbir şey tarayıcından çıkmaz."}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/regl-kilosu-su-mu-yag-mi.html", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Regl döneminde kaç kilo alınır?", "acceptedAnswer": {"@type": "Answer", "text": "Pek çok kaynak çoğu su olan yaklaşık 0,5–2,3 kg (1–5 lb) artıştan söz ediyor; bazı kadınlarda hiç artış olmaz. 42 kadınla yapılan bir çalışmada ortalama artış yaklaşık 0,45 kg idi."}}, {"@type": "Question", "name": "Regl ödemi ne zaman geçer?", "acceptedAnswer": {"@type": "Answer", "text": "Genellikle regl başladıktan birkaç gün sonra. Olağan kilonu görmek için regl başladıktan yaklaşık bir hafta sonra aynı saatte tekrar tartıl."}}, {"@type": "Question", "name": "Regl döneminde yediklerimiz 0 kalori mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Luteal fazda dinlenme halinde harcanan enerji biraz artabilir, ama araştırmalar farkın küçük olduğunu gösteriyor; kaloriler yine sayılır."}}, {"@type": "Question", "name": "Regl öncesi tartı yükselince daha az mı yemeliyim?", "acceptedAnswer": {"@type": "Answer", "text": "Tek bir ölçüm yüzünden hayır. Ödem geçicidir; planını değiştirmeden önce regl sonrası eğilime bak."}}, {"@type": "Question", "name": "Bu araç verilerimi saklıyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Hesaplama tarayıcında yapılır, girdiğin hiçbir şey gönderilmez ya da kaydedilmez."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="tr/pofu.html" aria-label="Pofu"><img src="assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_water_tr&amp;mt=8">Uygulamayı indir</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">Ücretsiz araç · Kayıt yok</p>
+<h1>Regl kilosu su mu, yağ mı?</h1>
+<p class="lede">Regl öncesi ya da regl sırasında tartı mı yükseldi? Üç bilgi gir, artışın döngüye bağlı tipik ödem aralığında olup olmadığını gör.</p>
+<p class="fine">Ali Gürkan Sevilmiş, Pofu geliştiricisi · 6 Kasım 2026</p>
+</section>
+<section id="tool" class="tool" aria-labelledby="tool-h">
+<h2 id="tool-h">Tartıdaki artışı kontrol et</h2>
+<div class="card">
+<form id="pw-form" novalidate>
+<div class="field"><label for="start">Son regl ne zaman başladı?<span class="hint">Kanamanın ilk günü. Şu an regl isen bu reglin başladığı gün.</span></label><input id="start" name="start" type="date" required></div>
+<div class="field"><label for="len">Ortalama döngü uzunluğu (gün)<span class="hint">Bir regl başlangıcından diğerine. Emin değilsen 28.</span></label><input id="len" name="len" type="number" inputmode="numeric" min="21" max="40" value="28" required></div>
+<div class="field"><label for="change">Tartı ne kadar arttı?<span class="hint">1–2 hafta önceki olağan kilona göre. Azaldıysa başına eksi koy.</span></label>
+<div class="row"><input id="change" name="change" type="text" inputmode="decimal" placeholder="örn. 1,5" required><select name="unit" aria-label="Birim"><option value="kg" selected>kg</option><option value="lb">lb</option></select></div></div>
+<button class="btn" type="submit">Kontrol et</button>
+<p class="fine">Hesaplama tarayıcında yapılır. Girdiğin hiçbir şey gönderilmez ya da saklanmaz.</p>
+</form>
+<div id="pw-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+</div>
+</section>
+<section id="how">
+<h2>Bu araç nasıl çalışıyor?</h2>
+<ul>
+<li><strong>Döngüdeki yerin:</strong> son reglinin başladığı günden bugüne kadar geçen günleri sayar ve olağan döngü uzunluğunu kullanır. 1–5. günler regl dönemi, döngünün son haftası regl öncesi günler sayılır. Bir sonraki regli tahmin etmez.</li>
+<li><strong>Ödem dönemi:</strong> döngüye bağlı ödem en sık regl öncesi günlerde ve reglin ilk günlerinde bildiriliyor. Bu dönemde yaklaşık 2,3 kg’ye (5 lb) kadar artış “büyük ihtimalle su” olarak gösterilir.</li>
+<li><strong>Bu dönemin dışında:</strong> yaklaşık 1 kg’ye kadar değişimler günlük dalgalanma, daha büyükleri döngüyle açıklanması zor değişim olarak gösterilir.</li>
+</ul>
+<p>Bu sınırlar aşağıdaki kaynaklara dayanan basit kurallardır, tanı değildir. Herkesin vücudu farklıdır; bazı kadınlarda hiç değişim olmaz.</p>
+</section>
+<section id="research">
+<h2>Araştırmalar ne diyor?</h2>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/37395124/">42 kadınla yapılan bir çalışmada</a> kilo, regl sırasında döngünün ilk haftasına göre ortalama yaklaşık 0,45 kg daha yüksek çıktı; değişim yağla değil vücut suyuyla ilişkiliydi.</li>
+<li><a href="https://www.healthline.com/health/womens-health/weight-gain-during-period">Healthline</a> gibi sağlık kaynakları regl döneminde birkaç kiloluk (lb), çoğu su olan ve birkaç günde geçen artışlardan söz ediyor. <a href="https://health.clevelandclinic.org/do-you-gain-weight-when-on-your-period">Cleveland Clinic</a>, döngü boyunca kilonun 5 lb’den (yaklaşık 2,3 kg) fazla değişmesi durumunda doktora görünmeyi öneriyor.</li>
+<li><a href="https://www.nhs.uk/conditions/pre-menstrual-syndrome/">NHS</a>, şişkinliği yaygın regl öncesi belirtiler arasında sayıyor.</li>
+</ul>
+</section>
+<section id="faq">
+<h2>Sık sorulan sorular</h2>
+<h3>Regl döneminde kaç kilo alınır?</h3>
+<p>Pek çok kaynak çoğu su olan yaklaşık 0,5–2,3 kg (1–5 lb) artıştan söz ediyor; bazı kadınlarda hiç artış olmaz. 42 kadınla yapılan bir çalışmada ortalama artış yaklaşık 0,45 kg idi.</p>
+<h3>Regl ödemi ne zaman geçer?</h3>
+<p>Genellikle regl başladıktan birkaç gün sonra. Olağan kilonu görmek için regl başladıktan yaklaşık bir hafta sonra aynı saatte tekrar tartıl.</p>
+<h3>Regl döneminde yediklerimiz 0 kalori mi?</h3>
+<p>Hayır. Luteal fazda dinlenme halinde harcanan enerji biraz artabilir, ama araştırmalar farkın küçük olduğunu gösteriyor; kaloriler yine sayılır.</p>
+<h3>Regl öncesi tartı yükselince daha az mı yemeliyim?</h3>
+<p>Tek bir ölçüm yüzünden hayır. Ödem geçicidir; planını değiştirmeden önce regl sonrası eğilime bak.</p>
+<h3>Bu araç verilerimi saklıyor mu?</h3>
+<p>Hayır. Hesaplama tarayıcında yapılır, girdiğin hiçbir şey gönderilmez ya da kaydedilmez.</p>
+</section>
+<section id="related">
+<h2>İlgili yazılar</h2>
+<ul>
+<li><a href="regl-oncesi-kilo-artisi.html">Regl öncesi kilo artışı: su mu, yağ mı?</a></li>
+<li><a href="kalori-sayarken-sucluluk.html">Kalori sayarken suçluluk</a></li>
+<li><a href="period-water-weight-calculator.html" hreflang="en" lang="en">English version: Period water weight calculator</a></li>
+</ul>
+</section>
+<section id="not-medical">
+<div class="note"><p>Bu araç genel bilgi verir, tıbbi tavsiye değildir. Düzensiz döngün, şiddetli ağrın, ani ya da büyük kilo değişimlerin veya başka sağlık endişelerin varsa doktorunla konuş. Hamile, emziren ya da yeme bozukluğu geçmişi olan biriysen doktorunun veya diyetisyeninin önerisine uy.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Yasal ve destek">
+<a href="tr/pofu.html">Pofu</a>
+<a href="tr/privacy.html">Gizlilik</a>
+<a href="tr/terms.html">Koşullar</a>
+<a href="support.html">Destek</a>
+</nav>
+<p>Son güncelleme: <time datetime="2026-11-06">6 Kasım 2026</time>.</p>
+<p>Apple, iPhone ve App Store, Apple Inc.’in ticari markalarıdır. © 2026 Pofu.</p>
+</div>
+</footer>
+<script src="assets/period-water.js"></script>
+<script>window.__T = {"locale": "tr-TR", "phases": {"menstrual": "regl dönemi (1–5. gün)", "follicular": "foliküler faz", "early_luteal": "erken luteal faz", "late_luteal": "regl öncesi günler", "unknown": "bilinmeyen faz"}, "results": {"likely_water": {"title": "Büyük ihtimalle su (ödem)", "body": "Döngünün bu döneminde {kg} kg artış, pek çok kaynağın döngüye bağlı ödem için verdiği aralıkta: yaklaşık 0,5–2,3 kg (1–5 lb). Genellikle regl başladıktan birkaç gün sonra geçer. Bir şeyi değiştirmeden önce, regl başladıktan yaklaşık bir hafta sonra aynı saatte tekrar tartıl."}, "more_than_water": {"title": "Bir kısmı su olabilir, hepsi değil", "body": "{kg} kg artış, döngüye bağlı ödem için tipik kabul edilen 0,5–2,3 kg aralığından fazla. Bir kısmı yine de su olabilir. Önümüzdeki iki haftanın haftalık ortalamasına bak. Her döngüde 2,3 kg’yi (5 lb) aşan değişimler oluyorsa Cleveland Clinic doktorla konuşmayı öneriyor."}, "normal_noise": {"title": "Muhtemelen günlük dalgalanma", "body": "Döngüye bağlı ödemin en sık görüldüğü günlerde değilsin, ama {kg} kg küçük bir değişim. Tuz, karbonhidrat, sindirim ve tartılma saati tartıyı bu kadar oynatabilir. Tek tek ölçümler yerine haftalık ortalamaları karşılaştır."}, "unlikely_cycle": {"title": "Döngüyle açıklamak zor", "body": "Döngüye bağlı ödemin en sık görüldüğü günlerde değilsin ve {kg} kg, olağan günlük dalgalanmadan fazla. Tek bir ölçüm yine de yanıltabilir; karar vermeden önce iki haftalık ortalamana bak."}, "no_gain": {"title": "Açıklanacak bir artış yok", "body": "Tartı aynı ya da daha düşük. Bir hedef takip ediyorsan her ay döngünün aynı günlerini karşılaştırmaya devam et."}, "unknown_phase": {"title": "Döngüdeki yerini belirleyemiyoruz", "body": "Son reglin başlamasından bu yana {day} gün geçmiş; bu, olağan döngünden bir haftadan fazla uzun. Reglin gecikmişse ya da döngülerin değiştiyse doktorunla konuş. Bu araç regl tahmini yapmaz."}}, "errors": {"date": "Son reglinin başladığı tarihi gir.", "future": "Bu tarih gelecekte. Son reglinin başladığı günü gir.", "length": "21 ile 40 gün arasında bir döngü uzunluğu gir.", "change": "Tartının ne kadar değiştiğini gir, örneğin 1,5.", "too_big": "Bu değişim ödem için çok büyük. Sayıyı kontrol et; ani ve büyük kilo değişimleri için doktorunla konuş."}, "dayLine": "Döngünün {day}. günü · {phase}", "bridge": "<div class=\"bridge\"><p>Pofu bunu her gün senin yerine yapar. İsteğe bağlı döngü farkındalığı açıkken döngü gününü gösterir ve tartıdaki artışın su olabileceğini söyler; böylece yüksek bir ölçüm kötü bir güne dönüşmez.</p><p class=\"cta\"><a href=\"https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_water_tr&amp;mt=8\"><img src=\"assets/img/app-store-badge.png\" alt=\"Pofu’yu App Store’dan indir\" width=\"180\" height=\"60\"></a></p></div>"};</script>
+<script>
+(function () {
+  var T = window.__T, f = document.getElementById('pw-form'), out = document.getElementById('pw-result');
+  var d = new Date(); var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  f.start.max = today;
+  function fmt(n) { return (Math.round(n * 10) / 10).toLocaleString(T.locale); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var r = PeriodWater.assess({ lastStart: f.start.value, today: today, cycleLength: f.len.value, change: f.change.value.replace(',', '.'), unit: f.unit.value });
+    out.hidden = false;
+    if (r.error) { out.innerHTML = '<p class="err">' + T.errors[r.error] + '</p>'; out.focus(); return; }
+    var v = +f.change.value.replace(',', '.'), kg = f.unit.value === 'lb' ? v * 0.45359237 : v, lb = f.unit.value === 'lb' ? v : v / 0.45359237, m = T.results[r.result];
+    var body = m.body.replace(/\{day\}/g, r.cycleDay).replace(/\{phase\}/g, T.phases[r.phase]).replace(/\{kg\}/g, fmt(kg)).replace(/\{lb\}/g, fmt(lb));
+    out.innerHTML = '<h3>' + m.title + '</h3><p class="meta">' + T.dayLine.replace('{day}', r.cycleDay).replace('{phase}', T.phases[r.phase]) + '</p><p>' + body + '</p>' + T.bridge;
+    out.focus();
+  });
+})();
+</script>
+</body>
+</html>
