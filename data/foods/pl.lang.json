@@ -1,0 +1,67 @@
+{
+ "code": "pl",
+ "nav_name": "Polski",
+ "data_file": true,
+ "dir": "pl/kalorie",
+ "up": "../../",
+ "ct": "pl",
+ "locale": "pl_PL",
+ "ref": "pl/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Przejdź do treści",
+ "btn": "Pobierz aplikację",
+ "legal_aria": "Informacje prawne i pomoc",
+ "legal_names": [
+  "Prywatność",
+  "Regulamin",
+  "Pomoc"
+ ],
+ "updated": "Ostatnia aktualizacja: %s.",
+ "date": "6 listopada 2026",
+ "pill": "Wartości odżywcze",
+ "hubname": "Kalorie",
+ "tm": "Apple, iPhone, iPad, Apple Watch i App Store są znakami towarowymi Apple Inc. Wszystkie pozostałe nazwy produktów są znakami towarowymi ich właścicieli i są tu użyte wyłącznie w celu identyfikacji. © 2026 Pofu.",
+ "h1": "Ile kalorii zawiera: %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: około <strong>%s kcal</strong> w porcji (%s). Ta porcja zawiera %s g białka, %s g węglowodanów i %s g tłuszczu, czyli około %s kcal na 100 %s.",
+ "desc": "%s: około %s kcal w porcji (%s); %s g białka, %s g węglowodanów, %s g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.",
+ "h_table": "Kalorie i wartości odżywcze",
+ "cols": [
+  "W porcji (%s)",
+  "W 100 %s"
+ ],
+ "rows": [
+  "Kalorie",
+  "Białko",
+  "Węglowodany",
+  "Tłuszcz"
+ ],
+ "h_why": "Dlaczego wartość może się różnić",
+ "h_log": "Jak dodać to w Pofu",
+ "h_rel": "Podobne produkty",
+ "all_foods": "Wszystkie produkty",
+ "other_langs": "Ten produkt w innych językach",
+ "log": "Pofu to nasza aplikacja. Aby dodać ten produkt, zrób zdjęcie talerza: Pofu oszacuje danie i porcję oraz pokaże wskaźnik pewności, żebyś widziała, na ile trafna jest ocena, i mogła ją poprawić. Możesz też wyszukać po nazwie albo zeskanować kod kreskowy i ustawić porcję na to, co naprawdę zjadłaś. %s.",
+ "store_link": "Pobierz Pofu z App Store",
+ "source": "Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji.",
+ "src_link": "Źródło",
+ "medical": "Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.",
+ "why": {
+  "fat": "Największą różnicę robi tłuszcz. To, ile oleju, masła, sera lub tłuszczu do smażenia użyto i jak pełna jest łyżka lub chochla, zmienia kalorie najbardziej. Nawet dwa podobnie wyglądające talerze mogą się wyraźnie różnić.",
+  "prot": "Liczy się kawałek lub produkt, to, czy tłuszcz usunięto, czy zostawiono, oraz sposób przygotowania. Skóra, marynaty, sosy i tłuszcz do smażenia dodają kalorie, których nie widać po wadze. Porównując wartości, sprawdź, czy podana waga dotyczy produktu ugotowanego, czy surowego.",
+  "carb": "Wynik zależy od sposobu przygotowania dania oraz od ilości oleju, masła lub cukru. Waga po ugotowaniu i waga suchego produktu bardzo się różnią, dlatego pełny i płaski talerz dzieli duża różnica. Marka, rozmiar i grubość też zmieniają wartość.",
+  "light": "Te produkty składają się głównie z wody. Dlatego wielkość porcji i rzeczywista waga liczą się bardziej niż przepis. Rozmiar, dojrzałość i dodatki, takie jak cukier, dressing, olej czy mleko, zmieniają wartość.",
+  "mixed": "Przepisy domowe i restauracyjne różnią się ilością oleju, mięsa, sera i skrobi oraz wielkością porcji. Traktuj tę wartość jako punkt wyjścia i dostosuj porcję, jeśli twój talerz był mniejszy lub większy."
+ },
+ "hub_title": "Ile kalorii? Kalorie i wartości odżywcze dań oraz podstawowych produktów",
+ "hub_h1": "Ile kalorii ma twoje jedzenie?",
+ "hub_intro": "Kalorie, białko, węglowodany i tłuszcz w porcji i w 100 g dla %d produktów. Wartości to typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu i różnią się w zależności od przepisu i porcji.",
+ "hub_desc": "Kalorie w porcji i w 100 g dla %d dań i podstawowych produktów, z typowymi wartościami z publicznych baz danych o żywności i z aplikacji Pofu.",
+ "g_local": "Dania",
+ "g_staple": "Podstawowe produkty"
+}

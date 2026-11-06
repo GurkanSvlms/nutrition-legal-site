@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ứng dụng đếm calo không khiến bạn cảm thấy tội lỗi (hướng dẫn 2026)</title>
+<meta name="description" content="Điều gì khiến việc theo dõi calo có cảm giác bị trừng phạt, những tính năng ứng dụng giúp nhẹ nhàng hơn (ngày ân hạn, số liệu bình tĩnh, không cảnh báo đỏ) và cách bắt đầu lại sau một ngày bỏ lỡ.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/vi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="tr" href="https://getpofu.com/kalori-sayarken-sucluluk.html">
+<link rel="alternate" hreflang="de" href="https://getpofu.com/de/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="es" href="https://getpofu.com/es/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="it" href="https://getpofu.com/it/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="id" href="https://getpofu.com/id/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="th" href="https://getpofu.com/th/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/calorie-counter-app-without-guilt.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Ứng dụng đếm calo không khiến bạn cảm thấy tội lỗi">
+<meta property="og:description" content="Điều gì khiến việc theo dõi calo có cảm giác bị trừng phạt, những tính năng ứng dụng giúp nhẹ nhàng hơn (ngày ân hạn, số liệu bình tĩnh, không cảnh báo đỏ) và cách bắt đầu lại sau một ngày bỏ lỡ.">
+<meta property="og:url" content="https://getpofu.com/vi/calorie-counter-app-without-guilt.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Ứng dụng đếm calo không khiến bạn cảm thấy tội lỗi (hướng dẫn 2026)", "url": "https://getpofu.com/vi/calorie-counter-app-without-guilt.html", "inLanguage": "vi", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/vi/calorie-counter-app-without-guilt.html", "inLanguage": "vi", "mainEntity": [{"@type": "Question", "name": "Có ứng dụng đếm calo nào không khiến bạn cảm thấy tội lỗi không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Hãy tìm ứng dụng bảo vệ chuỗi ngày sau một ngày bỏ lỡ, hiển thị việc vượt mục tiêu dưới dạng con số thay vì cảnh báo đỏ, và cho phép bạn sửa ước lượng dễ dàng. Pofu được xây dựng xoay quanh những ý tưởng này: tối đa 2 ngày ân hạn tự động mỗi tháng và cách diễn đạt bình tĩnh khi bạn vượt mục tiêu."}}, {"@type": "Question", "name": "Tôi nên làm gì sau khi bỏ lỡ một ngày theo dõi?", "acceptedAnswer": {"@type": "Answer", "text": "Ghi bữa tiếp theo như bình thường. Thiếu một ngày không làm thay đổi nhiều xu hướng hằng tuần, và cố bù bằng cách ăn ít đi vào hôm sau thường phản tác dụng."}}, {"@type": "Question", "name": "Vượt mục tiêu calo có tệ không?", "acceptedAnswer": {"@type": "Answer", "text": "Vượt một ngày là bình thường và không xóa đi tiến triển. Hãy nhìn trung bình trong một tuần hoặc cả chu kỳ thay vì một ngày riêng lẻ."}}, {"@type": "Question", "name": "Đếm calo có thể gây hại không?", "acceptedAnswer": {"@type": "Answer", "text": "Với một số người, nó có thể làm tăng lo âu về thức ăn. Nếu việc theo dõi khiến bạn cảm thấy tệ hơn, hãy nghỉ một thời gian, và nếu bạn từng bị rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi đếm calo."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Chuyển đến nội dung</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_guilt_free">Tải ứng dụng</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">Hướng dẫn · tháng 11 năm 2026</p>
+<h1>Ứng dụng đếm calo không khiến bạn cảm thấy tội lỗi</h1>
+<p class="lede">Nhiều người ngừng theo dõi không phải vì đếm calo khó, mà vì ứng dụng khiến một ngày bỏ lỡ hay một con số cao có cảm giác như thất bại. Đây là những điều nên tìm ở một ứng dụng khác.</p>
+<p>Tác giả: Ali Gürkan Sevilmiş, nhà phát triển Pofu · 6 tháng 11, 2026</p>
+</section>
+<section id="short">
+<h2>Câu trả lời ngắn</h2>
+<p>Hãy chọn ứng dụng coi một ngày bỏ lỡ và một ngày vượt mục tiêu là chuyện bình thường: giữ chuỗi ngày của bạn bằng ngày ân hạn, hiển thị số liệu bình tĩnh thay vì màu đỏ, giúp ghi nhanh và cho phép bạn sửa ước lượng. Sau đó đánh giá tiến triển bằng trung bình hằng tuần, không phải từng ngày.</p>
+</section>
+<section id="why">
+<h2>Vì sao ứng dụng đếm calo có thể gây cảm giác bị trừng phạt</h2>
+<ul>
+<li><strong>Chuỗi ngày bị đứt:</strong> một ngày bỏ lỡ đưa tiến triển nhiều tuần về 0, nên nhiều người bỏ cuộc ngay sau đó.</li>
+<li><strong>Số màu đỏ và cảnh báo:</strong> vượt mục tiêu bị hiển thị như một lỗi, dù một ngày riêng lẻ nói lên rất ít về xu hướng của bạn.</li>
+<li><strong>Ghi chậm:</strong> nếu mỗi bữa mất vài phút để nhập, bỏ qua có cảm giác dễ hơn là ghi một ngày chưa hoàn hảo.</li>
+<li><strong>Bàn cân trước kỳ kinh:</strong> giữ nước có thể đẩy số cân lên trong vài ngày, trông như thất bại nếu ứng dụng đối xử mọi số đo như nhau.</li>
+</ul>
+</section>
+<section id="features">
+<h2>Nên tìm gì ở một ứng dụng đếm calo nhẹ nhàng hơn</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Tính năng</th><th>Vì sao hữu ích</th></tr></thead>
+<tbody>
+<tr><th>Ngày ân hạn hoặc bảo vệ chuỗi ngày</th><td>Một ngày bỏ lỡ không xóa tiến triển của bạn, nên bạn tiếp tục được.</td></tr>
+<tr><th>Hiển thị bình tĩnh khi bạn vượt mục tiêu</th><td>Bạn thấy con số mà không có giọng điệu cảnh báo, và bữa tiếp theo là một khởi đầu mới.</td></tr>
+<tr><th>Ghi nhanh (ảnh, mã vạch, giọng nói)</th><td>Ghi một ngày chưa hoàn hảo chỉ mất vài giây, nên bản ghi vẫn đầy đủ.</td></tr>
+<tr><th>Ước lượng có thể chỉnh sửa</th><td>Bạn có thể sửa khẩu phần thay vì cảm thấy bị mắc kẹt với một con số sai.</td></tr>
+<tr><th>Xem tiến triển theo tuần hoặc theo chu kỳ</th><td>Xu hướng quan trọng hơn một ngày; hãy so sánh các số trung bình.</td></tr>
+<tr><th>Nhận biết chu kỳ tùy chọn</th><td>Biết rằng số cân tăng vọt có thể là nước trước kỳ kinh sẽ loại bỏ một nguồn gây tội lỗi thường gặp.</td></tr>
+</tbody></table></div>
+<p>Bạn cũng có thể tự làm cho hầu hết ứng dụng nhẹ nhàng hơn: tắt thông báo chuỗi ngày gây căng thẳng, ẩn tổng số hằng ngày và xem trung bình hằng tuần, và đặt mục tiêu thực tế thay vì mục tiêu quyết liệt nhất.</p>
+</section>
+<section id="after">
+<h2>Sau một ngày bỏ lỡ hoặc một ngày vượt mục tiêu</h2>
+<ol>
+<li><strong>Ghi bữa tiếp theo như bình thường.</strong> Đừng cố &quot;bù&quot; bằng cách ăn ít đi nhiều; điều đó thường dẫn tới ăn bật lại.</li>
+<li><strong>Ghi những gì bạn nhớ, đại khái.</strong> Một ước lượng tốt hơn một ngày trống, và không ai chấm điểm nó.</li>
+<li><strong>Kiểm tra cả tuần, không phải một ngày.</strong> Một ngày cao hầu như không làm trung bình hằng tuần nhúc nhích.</li>
+<li><strong>Trước kỳ kinh, hãy chờ.</strong> Nếu số cân tăng vọt, hãy cân lại khoảng một tuần sau khi kỳ kinh bắt đầu. <a href="period-water-weight-calculator.html">Máy tính cân nặng do nước ngày hành kinh</a> miễn phí của chúng tôi giúp bạn kiểm tra.</li>
+</ol>
+</section>
+<section id="pofu">
+<h2>Cách Pofu xử lý</h2>
+<p>Công khai: tôi xây dựng Pofu. Đây là ứng dụng đếm calo trên iPhone dành cho phụ nữ, được thiết kế xoay quanh những điểm này:</p>
+<ul>
+<li>Tối đa 2 ngày ân hạn tự động mỗi tháng bảo vệ chuỗi ngày của bạn sau một ngày bỏ lỡ, không bị phạt.</li>
+<li>Khi vượt mục tiêu, ứng dụng hiển thị con số một cách bình tĩnh, không la mắng; bữa tiếp theo là một khởi đầu mới.</li>
+<li>Ghi bằng ảnh AI với điểm độ tin cậy trên mọi ước lượng, cùng ghi bằng mã vạch, tìm kiếm và nhập tay miễn phí. Các chỉnh sửa của bạn được ghi nhớ.</li>
+<li>Nhận biết chu kỳ tùy chọn (tắt theo mặc định, dữ liệu ở lại trên thiết bị) cho bạn biết khi nào số cân tăng vọt có thể là do nước. Pofu không dự đoán kỳ kinh.</li>
+</ul>
+<p class="cta"><a href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_guilt_free"><img src="../assets/img/app-store-badge.png" alt="Tải Pofu trên App Store" width="180" height="60"></a></p>
+</section>
+<section id="faq">
+<h2>Câu hỏi thường gặp</h2>
+<h3>Có ứng dụng đếm calo nào không khiến bạn cảm thấy tội lỗi không?</h3>
+<p>Có. Hãy tìm ứng dụng bảo vệ chuỗi ngày sau một ngày bỏ lỡ, hiển thị việc vượt mục tiêu dưới dạng con số thay vì cảnh báo đỏ, và cho phép bạn sửa ước lượng dễ dàng. Pofu được xây dựng xoay quanh những ý tưởng này: tối đa 2 ngày ân hạn tự động mỗi tháng và cách diễn đạt bình tĩnh khi bạn vượt mục tiêu.</p>
+<h3>Tôi nên làm gì sau khi bỏ lỡ một ngày theo dõi?</h3>
+<p>Ghi bữa tiếp theo như bình thường. Thiếu một ngày không làm thay đổi nhiều xu hướng hằng tuần, và cố bù bằng cách ăn ít đi vào hôm sau thường phản tác dụng.</p>
+<h3>Vượt mục tiêu calo có tệ không?</h3>
+<p>Vượt một ngày là bình thường và không xóa đi tiến triển. Hãy nhìn trung bình trong một tuần hoặc cả chu kỳ thay vì một ngày riêng lẻ.</p>
+<h3>Đếm calo có thể gây hại không?</h3>
+<p>Với một số người, nó có thể làm tăng lo âu về thức ăn. Nếu việc theo dõi khiến bạn cảm thấy tệ hơn, hãy nghỉ một thời gian, và nếu bạn từng bị rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi đếm calo.</p>
+</section>
+<section id="related">
+<h2>Đọc thêm</h2>
+<ul>
+<li><a href="best-calorie-counter-for-women.html">Ứng dụng đếm calo tốt nhất cho phụ nữ</a></li>
+<li><a href="calorie-tracking-menstrual-cycle.html">Theo dõi calo và chu kỳ kinh nguyệt</a></li>
+<li><a href="cycle-calorie-calculator.html">Công cụ miễn phí: máy tính calo theo chu kỳ</a></li>
+<li><a href="../kalori-sayarken-sucluluk.html" hreflang="tr" lang="tr">Türkçe: Kalori sayarken suçluluk</a></li>
+</ul>
+</section>
+<section id="not-medical">
+<div class="note"><p>Trang này chỉ là thông tin chung, không phải lời khuyên y tế. Nếu việc theo dõi calo làm tăng lo âu của bạn về thức ăn, hoặc bạn từng bị rối loạn ăn uống, hãy dừng lại và trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Pháp lý và hỗ trợ">
+<a href="pofu.html">Pofu</a>
+<a href="../privacy.html">Quyền riêng tư</a>
+<a href="../terms.html">Điều khoản</a>
+<a href="../support.html">Hỗ trợ</a>
+</nav>
+<p>Cập nhật lần cuối: <time datetime="2026-11-06">6 tháng 11, 2026</time>.</p>
+<p>Apple, iPhone và App Store là nhãn hiệu của Apple Inc. Mọi tên sản phẩm khác là nhãn hiệu của chủ sở hữu tương ứng. © 2026 Pofu.</p>
+</div>
+<nav class="langs" aria-label="Languages" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../calorie-counter-app-without-guilt.html" hreflang="en" lang="en">English</a> · <a href="../de/calorie-counter-app-without-guilt.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/calorie-counter-app-without-guilt.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/calorie-counter-app-without-guilt.html" hreflang="es" lang="es">Español</a> · <a href="../it/calorie-counter-app-without-guilt.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/calorie-counter-app-without-guilt.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../nl/calorie-counter-app-without-guilt.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/calorie-counter-app-without-guilt.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ru/calorie-counter-app-without-guilt.html" hreflang="ru" lang="ru">Русский</a> · <a href="../uk/calorie-counter-app-without-guilt.html" hreflang="uk" lang="uk">Українська</a> · <a href="../cs/calorie-counter-app-without-guilt.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../ro/calorie-counter-app-without-guilt.html" hreflang="ro" lang="ro">Română</a> · <a href="../sv/calorie-counter-app-without-guilt.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../ja/calorie-counter-app-without-guilt.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/calorie-counter-app-without-guilt.html" hreflang="ko" lang="ko">한국어</a> · <a href="../zh-Hans/calorie-counter-app-without-guilt.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../id/calorie-counter-app-without-guilt.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <strong>Tiếng Việt</strong> · <a href="../th/calorie-counter-app-without-guilt.html" hreflang="th" lang="th">ไทย</a> · <a href="../hi/calorie-counter-app-without-guilt.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../ar/calorie-counter-app-without-guilt.html" hreflang="ar" lang="ar">العربية</a></nav>
+</footer>
+</body>
+</html>

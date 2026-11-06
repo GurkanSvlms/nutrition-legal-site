@@ -1,0 +1,67 @@
+{
+ "code": "nl",
+ "nav_name": "Nederlands",
+ "data_file": true,
+ "dir": "nl/calorieen",
+ "up": "../../",
+ "ct": "nl",
+ "locale": "nl_NL",
+ "ref": "nl/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Direct naar de inhoud",
+ "btn": "Download de app",
+ "legal_aria": "Juridische informatie en support",
+ "legal_names": [
+  "Privacy",
+  "Voorwaarden",
+  "Support"
+ ],
+ "updated": "Laatst bijgewerkt op %s.",
+ "date": "6 november 2026",
+ "pill": "Voedingswaarden",
+ "hubname": "Calorieën",
+ "tm": "Apple, iPhone, iPad, Apple Watch en App Store zijn handelsmerken van Apple Inc. Alle andere productnamen zijn handelsmerken van hun respectieve eigenaren en worden hier alleen ter identificatie gebruikt. © 2026 Pofu.",
+ "h1": "Hoeveel calorieën zitten er in %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: ongeveer <strong>%s kcal</strong> per portie (%s). Deze portie bevat %s g eiwit, %s g koolhydraten en %s g vet, ongeveer %s kcal per 100 %s.",
+ "desc": "%s: ongeveer %s kcal per portie (%s); %s g eiwit, %s g koolhydraten, %s g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.",
+ "h_table": "Calorieën en voedingswaarden",
+ "cols": [
+  "Per portie (%s)",
+  "Per 100 %s"
+ ],
+ "rows": [
+  "Calorieën",
+  "Eiwit",
+  "Koolhydraten",
+  "Vet"
+ ],
+ "h_why": "Waarom de waarde kan verschillen",
+ "h_log": "Zo log je het in Pofu",
+ "h_rel": "Vergelijkbare producten",
+ "all_foods": "Alle producten",
+ "other_langs": "Dit product in andere talen",
+ "log": "Pofu is onze app. Om dit product te loggen, maak je een foto van je bord: Pofu schat het gerecht en de portie en toont een betrouwbaarheidsscore, zodat je ziet hoe zeker de schatting is en deze kunt aanpassen. Je kunt ook op naam zoeken of een barcode scannen en de portie instellen op wat je echt hebt gegeten. %s.",
+ "store_link": "Download Pofu in de App Store",
+ "source": "Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie.",
+ "src_link": "Bron",
+ "medical": "Deze pagina is bedoeld als algemene informatie en is geen medisch advies. Als je zwanger bent, borstvoeding geeft, een aandoening hebt of eerder een eetstoornis hebt gehad, overleg dan met je huisarts of een diëtist voordat je calorieën gaat tellen.",
+ "why": {
+  "fat": "Het vet maakt het grootste verschil. Hoeveel olie, boter, kaas of frituurvet er wordt gebruikt en hoe vol de lepel of schep is, verandert de calorieën het meest. Zelfs twee borden die er hetzelfde uitzien, kunnen flink uiteenlopen.",
+  "prot": "Het hangt af van het stuk of product, van weggesneden of achtergebleven vet en van de bereiding. Huid, marinades, sauzen en bakvet leveren calorieën die je aan het gewicht niet ziet. Check bij het vergelijken of een gewicht gaar of rauw bedoeld is.",
+  "carb": "De uitkomst hangt af van hoe het gerecht is bereid en hoeveel olie, boter of suiker erin zit. Gaar gewicht en droog gewicht verschillen sterk, daarom liggen een volle en een afgestreken portie ver uit elkaar. Merk, formaat en dikte veranderen de waarde ook.",
+  "light": "Deze producten bestaan vooral uit water. Daarom tellen portiegrootte en echt gewicht zwaarder dan het recept. Formaat, rijpheid en toevoegingen zoals suiker, dressing, olie of melk veranderen de waarde.",
+  "mixed": "Recepten thuis en in het restaurant verschillen in de hoeveelheid olie, vlees, kaas en zetmeel en in portiegrootte. Gebruik de waarde als uitgangspunt en pas de portie aan als je bord kleiner of groter was."
+ },
+ "hub_title": "Hoeveel calorieën? Calorieën en voedingswaarden van gerechten en basisproducten",
+ "hub_h1": "Hoeveel calorieën zitten er in je eten?",
+ "hub_intro": "Calorieën, eiwit, koolhydraten en vet per portie en per 100 g voor %d producten. De waarden zijn typische schattingen uit openbare voedingsdatabanken en de Pofu-app en verschillen per recept en portie.",
+ "hub_desc": "Calorieën per portie en per 100 g voor %d gerechten en basisproducten, met typische waarden uit openbare voedingsdatabanken en de Pofu-app.",
+ "g_local": "Gerechten",
+ "g_staple": "Basisproducten"
+}

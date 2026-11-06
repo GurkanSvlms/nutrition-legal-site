@@ -1,0 +1,67 @@
+{
+ "code": "cs",
+ "nav_name": "Čeština",
+ "dir": "cs/kalorie",
+ "up": "../../",
+ "ct": "cs",
+ "data_file": true,
+ "locale": "cs_CZ",
+ "ref": "cs/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Přejít na obsah",
+ "btn": "Stáhnout aplikaci",
+ "legal_aria": "Právní informace a podpora",
+ "legal_names": [
+  "Ochrana soukromí",
+  "Podmínky použití",
+  "Podpora"
+ ],
+ "updated": "Naposledy aktualizováno %s.",
+ "date": "6. listopadu 2026",
+ "pill": "Nutriční hodnoty",
+ "hubname": "Kalorie",
+ "tm": "Apple, iPhone, iPad, Apple Watch a App Store jsou ochranné známky společnosti Apple Inc. Všechny ostatní názvy produktů jsou ochranné známky svých vlastníků a jsou zde použity pouze k jejich označení. © 2026 Pofu.",
+ "h1": "Kolik kalorií má %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: asi <strong>%s kcal</strong> na porci (%s). Tato porce obsahuje %s g bílkovin, %s g sacharidů a %s g tuku, což je zhruba %s kcal na 100 %s.",
+ "desc": "%s: asi %s kcal na porci (%s); %s g bílkovin, %s g sacharidů, %s g tuku. Typické hodnoty z veřejných databází složení potravin a z aplikace Pofu.",
+ "h_table": "Kalorie a nutriční hodnoty",
+ "cols": [
+  "Na porci (%s)",
+  "Na 100 %s"
+ ],
+ "rows": [
+  "Kalorie",
+  "Bílkoviny",
+  "Sacharidy",
+  "Tuky"
+ ],
+ "h_why": "Proč se hodnota liší",
+ "h_log": "Jak to zapsat v Pofu",
+ "h_rel": "Podobné potraviny",
+ "all_foods": "Všechny potraviny",
+ "other_langs": "Tato potravina v dalších jazycích",
+ "log": "Pofu je naše aplikace. Chcete-li tuto potravinu zapsat, vyfoťte talíř: Pofu odhadne jídlo i porci a ukáže míru jistoty, takže vidíte, jak spolehlivý odhad je, a můžete ho upravit. Můžete také hledat podle názvu nebo naskenovat čárový kód a porci nastavit podle skutečného množství. %s.",
+ "store_link": "Stáhnout Pofu z App Store",
+ "source": "Hodnoty: typické odhady z veřejných databází složení potravin a z aplikace Pofu; liší se podle receptu a porce.",
+ "src_link": "Zdroj",
+ "medical": "Tato stránka slouží k obecné informaci a není lékařskou radou. Jste-li těhotná, kojíte, máte onemocnění nebo jste dříve měla poruchu příjmu potravy, proberte počítání kalorií se svým lékařem nebo nutričním terapeutem.",
+ "why": {
+  "fat": "Největší rozdíl dělá tuk. Kolik oleje, másla, sýra nebo fritovacího tuku se použije a jak plná je lžíce či naběračka, mění kalorie nejvíc. I dva podobně vypadající talíře se mohou výrazně lišit.",
+  "prot": "Záleží na kusu nebo produktu, na odříznutém či ponechaném tuku a na přípravě. Kůže, marinády, omáčky a tuk na smažení dodávají kalorie, které na váze nepoznáte. Při porovnávání dávejte pozor, zda jde o hmotnost vařeného, nebo syrového.",
+  "carb": "Výsledek závisí na tom, jak je jídlo připravené a kolik oleje, másla nebo cukru obsahuje. Hmotnost uvařeného a suchého se hodně liší, proto je porce s kopečkem a zarovnaná porce daleko od sebe. Značka, velikost a tloušťka hodnotu také mění.",
+  "light": "Tyto potraviny jsou převážně voda. Proto víc než recept záleží na velikosti porce a skutečné hmotnosti. Velikost, zralost a přísady jako cukr, dresink, olej nebo mléko hodnotu mění.",
+  "mixed": "Domácí a restaurační recepty se liší množstvím oleje, masa, sýra a škrobu i velikostí porce. Berte hodnotu jako výchozí bod a porci upravte, pokud byl váš talíř menší nebo větší."
+ },
+ "hub_title": "Kolik kalorií? Kalorie a nutriční hodnoty jídel a základních potravin",
+ "hub_h1": "Kolik kalorií má vaše jídlo?",
+ "hub_intro": "Kalorie, bílkoviny, sacharidy a tuky na porci a na 100 g u %d potravin. Hodnoty jsou typické odhady z veřejných databází složení potravin a z aplikace Pofu a liší se podle receptu a porce.",
+ "hub_desc": "Kalorie na porci a na 100 g u %d jídel a základních potravin; typické hodnoty z veřejných databází složení potravin a z aplikace Pofu.",
+ "g_local": "Jídla",
+ "g_staple": "Základní potraviny"
+}

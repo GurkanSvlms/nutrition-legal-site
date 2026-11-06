@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Un’app per contare le calorie che non ti fa sentire in colpa (guida 2026)</title>
+<meta name="description" content="Cosa rende punitivo il conteggio delle calorie, le funzioni delle app che lo rendono più gentile (giorni di grazia, numeri calmi, niente avvisi rossi) e come ripartire dopo un giorno saltato.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/it/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="tr" href="https://getpofu.com/kalori-sayarken-sucluluk.html">
+<link rel="alternate" hreflang="de" href="https://getpofu.com/de/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="es" href="https://getpofu.com/es/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="it" href="https://getpofu.com/it/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="id" href="https://getpofu.com/id/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="th" href="https://getpofu.com/th/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/calorie-counter-app-without-guilt.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Un’app per contare le calorie che non ti fa sentire in colpa">
+<meta property="og:description" content="Cosa rende punitivo il conteggio delle calorie, le funzioni delle app che lo rendono più gentile (giorni di grazia, numeri calmi, niente avvisi rossi) e come ripartire dopo un giorno saltato.">
+<meta property="og:url" content="https://getpofu.com/it/calorie-counter-app-without-guilt.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Un’app per contare le calorie che non ti fa sentire in colpa (guida 2026)", "url": "https://getpofu.com/it/calorie-counter-app-without-guilt.html", "inLanguage": "it", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/it/calorie-counter-app-without-guilt.html", "inLanguage": "it", "mainEntity": [{"@type": "Question", "name": "Esiste un’app per contare le calorie che non ti fa sentire in colpa?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Cerca un’app che protegga la tua serie dopo un giorno saltato, mostri il superamento dell’obiettivo come un numero e non come un avviso rosso, e ti permetta di correggere facilmente le stime. Pofu è costruita attorno a queste idee: fino a 2 giorni di grazia automatici al mese e parole calme quando superi l’obiettivo."}}, {"@type": "Question", "name": "Cosa devo fare dopo aver saltato un giorno di monitoraggio?", "acceptedAnswer": {"@type": "Answer", "text": "Registra il pasto successivo come al solito. Un giorno mancante non cambia molto un andamento settimanale, e cercare di recuperare mangiando meno il giorno dopo spesso si ritorce contro."}}, {"@type": "Question", "name": "Fa male superare il mio obiettivo calorico?", "acceptedAnswer": {"@type": "Answer", "text": "Un giorno oltre è normale e non annulla i progressi. Guarda la media di una settimana o di un ciclo intero invece di un singolo giorno."}}, {"@type": "Question", "name": "Contare le calorie può fare male?", "acceptedAnswer": {"@type": "Answer", "text": "Per alcune persone può aumentare l’ansia legata al cibo. Se il monitoraggio ti fa stare peggio, fai una pausa, e se hai una storia di disturbi del comportamento alimentare parlane con il tuo medico o con un dietista prima di contare le calorie."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/it/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_it_guilt_free">Scarica l’app</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">Guida · novembre 2026</p>
+<h1>Un’app per contare le calorie che non ti fa sentire in colpa</h1>
+<p class="lede">Molte persone smettono di monitorare non perché contare sia difficile, ma perché l’app fa sentire un giorno saltato o un numero alto come un fallimento. Ecco cosa cercare invece.</p>
+<p>Di Ali Gürkan Sevilmiş, sviluppatore di Pofu · 6 novembre 2026</p>
+</section>
+<section id="short">
+<h2>La risposta breve</h2>
+<p>Scegli un’app che tratta un giorno saltato e un giorno oltre l’obiettivo come normali: una che mantiene la tua serie con i giorni di grazia, mostra i numeri con calma invece che in rosso, rende veloce la registrazione e ti lascia correggere le stime. Poi valuta i tuoi progressi con le medie settimanali, non con i singoli giorni.</p>
+</section>
+<section id="why">
+<h2>Perché le app per le calorie possono sembrare punitive</h2>
+<ul>
+<li><strong>Serie interrotte:</strong> un giorno saltato azzera settimane di progressi, quindi molte persone smettono subito dopo.</li>
+<li><strong>Numeri rossi e avvisi:</strong> superare l’obiettivo viene mostrato come un errore, anche se un singolo giorno dice poco sul tuo andamento.</li>
+<li><strong>Registrazione lenta:</strong> se ogni pasto richiede minuti per essere inserito, saltare sembra più facile che registrare un giorno imperfetto.</li>
+<li><strong>La bilancia prima del ciclo:</strong> la ritenzione idrica può far salire la bilancia per alcuni giorni, il che sembra un fallimento se l’app tratta ogni misurazione allo stesso modo.</li>
+</ul>
+</section>
+<section id="features">
+<h2>Cosa cercare in un’app per le calorie più gentile</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Funzione</th><th>Perché aiuta</th></tr></thead>
+<tbody>
+<tr><th>Giorni di grazia o protezione della serie</th><td>Un giorno saltato non cancella i tuoi progressi, così continui.</td></tr>
+<tr><th>Visualizzazione calma quando superi l’obiettivo</th><td>Vedi il numero senza un tono di avviso, e il pasto successivo è un nuovo inizio.</td></tr>
+<tr><th>Registrazione veloce (foto, codice a barre, voce)</th><td>Registrare un giorno imperfetto richiede secondi, così il registro resta completo.</td></tr>
+<tr><th>Stime modificabili</th><td>Puoi correggere una porzione invece di sentirti bloccata con un numero sbagliato.</td></tr>
+<tr><th>Vista settimanale o a livello di ciclo dei progressi</th><td>Gli andamenti contano più di un singolo giorno; confronta le medie.</td></tr>
+<tr><th>Attenzione opzionale al ciclo</th><td>Sapere che un salto prima del ciclo può essere acqua elimina una fonte comune di senso di colpa.</td></tr>
+</tbody></table></div>
+<p>Puoi anche rendere più gentile la maggior parte delle app: disattiva le notifiche sulla serie che ti stressano, nascondi i totali giornalieri e controlla le medie settimanali, e imposta un obiettivo realistico invece del più aggressivo.</p>
+</section>
+<section id="after">
+<h2>Dopo un giorno saltato o un giorno oltre l’obiettivo</h2>
+<ol>
+<li><strong>Registra il pasto successivo come al solito.</strong> Non cercare di «recuperare» mangiando molto meno; spesso porta a un rimbalzo.</li>
+<li><strong>Registra ciò che ricordi, in modo approssimativo.</strong> Una stima è meglio di un giorno vuoto, e nessuno la giudica.</li>
+<li><strong>Controlla la settimana, non il giorno.</strong> Un giorno alto sposta appena una media settimanale.</li>
+<li><strong>Prima del ciclo, aspetta.</strong> Se la bilancia è salita, pesati di nuovo circa una settimana dopo l’inizio del ciclo. Il nostro <a href="period-water-weight-calculator.html">calcolatore gratuito del peso d’acqua del ciclo</a> ti aiuta a verificare.</li>
+</ol>
+</section>
+<section id="pofu">
+<h2>Come lo gestisce Pofu</h2>
+<p>Dichiarazione: sviluppo Pofu. È un contacalorie per iPhone pensato per le donne, progettato attorno a questi punti:</p>
+<ul>
+<li>Fino a 2 giorni di grazia automatici al mese proteggono la tua serie dopo un giorno saltato, senza penalità.</li>
+<li>Superare l’obiettivo mostra il numero con calma, senza rimproveri; il pasto successivo è un nuovo inizio.</li>
+<li>Registrazione con foto IA con un punteggio di affidabilità su ogni stima, più registrazione gratuita con codice a barre, ricerca e inserimento manuale. Le correzioni vengono ricordate.</li>
+<li>L’attenzione opzionale al ciclo (disattivata per impostazione predefinita, dati sul dispositivo) ti dice quando un salto sulla bilancia può essere acqua. Pofu non prevede le mestruazioni.</li>
+</ul>
+<p class="cta"><a href="https://apps.apple.com/it/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_it_guilt_free"><img src="../assets/img/app-store-badge.png" alt="Scarica Pofu sull’App Store" width="180" height="60"></a></p>
+</section>
+<section id="faq">
+<h2>Domande frequenti</h2>
+<h3>Esiste un’app per contare le calorie che non ti fa sentire in colpa?</h3>
+<p>Sì. Cerca un’app che protegga la tua serie dopo un giorno saltato, mostri il superamento dell’obiettivo come un numero e non come un avviso rosso, e ti permetta di correggere facilmente le stime. Pofu è costruita attorno a queste idee: fino a 2 giorni di grazia automatici al mese e parole calme quando superi l’obiettivo.</p>
+<h3>Cosa devo fare dopo aver saltato un giorno di monitoraggio?</h3>
+<p>Registra il pasto successivo come al solito. Un giorno mancante non cambia molto un andamento settimanale, e cercare di recuperare mangiando meno il giorno dopo spesso si ritorce contro.</p>
+<h3>Fa male superare il mio obiettivo calorico?</h3>
+<p>Un giorno oltre è normale e non annulla i progressi. Guarda la media di una settimana o di un ciclo intero invece di un singolo giorno.</p>
+<h3>Contare le calorie può fare male?</h3>
+<p>Per alcune persone può aumentare l’ansia legata al cibo. Se il monitoraggio ti fa stare peggio, fai una pausa, e se hai una storia di disturbi del comportamento alimentare parlane con il tuo medico o con un dietista prima di contare le calorie.</p>
+</section>
+<section id="related">
+<h2>Letture correlate</h2>
+<ul>
+<li><a href="best-calorie-counter-for-women.html">Il miglior contacalorie per le donne</a></li>
+<li><a href="calorie-tracking-menstrual-cycle.html">Contare le calorie e il tuo ciclo mestruale</a></li>
+<li><a href="cycle-calorie-calculator.html">Strumento gratuito: calcolatore delle calorie per il ciclo</a></li>
+<li><a href="../kalori-sayarken-sucluluk.html" hreflang="tr" lang="tr">Türkçe: Kalori sayarken suçluluk</a></li>
+</ul>
+</section>
+<section id="not-medical">
+<div class="note"><p>Questa pagina contiene informazioni generali, non consigli medici. Se il conteggio delle calorie aumenta la tua ansia legata al cibo, o hai una storia di disturbi del comportamento alimentare, fermati e parlane con il tuo medico o con un dietista.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Note legali e assistenza">
+<a href="pofu.html">Pofu</a>
+<a href="../privacy.html">Privacy</a>
+<a href="../terms.html">Termini</a>
+<a href="../support.html">Assistenza</a>
+</nav>
+<p>Ultimo aggiornamento: <time datetime="2026-11-06">6 novembre 2026</time>.</p>
+<p>Apple, iPhone e App Store sono marchi di Apple Inc. Tutti gli altri nomi di prodotti sono marchi dei rispettivi proprietari. © 2026 Pofu.</p>
+</div>
+</footer>
+</body>
+</html>

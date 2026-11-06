@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Een caloriecounter-app die je geen schuldgevoel geeft (gids 2026)</title>
+<meta name="description" content="Wat calorieën bijhouden als straf laat voelen, welke appfuncties het milder maken (gratiedagen, rustige cijfers, geen rode waarschuwingen) en hoe je weer begint na een gemiste dag.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/nl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="tr" href="https://getpofu.com/kalori-sayarken-sucluluk.html">
+<link rel="alternate" hreflang="de" href="https://getpofu.com/de/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="es" href="https://getpofu.com/es/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="it" href="https://getpofu.com/it/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="id" href="https://getpofu.com/id/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="th" href="https://getpofu.com/th/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/calorie-counter-app-without-guilt.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/calorie-counter-app-without-guilt.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Een caloriecounter die je geen schuldgevoel geeft">
+<meta property="og:description" content="Wat calorieën bijhouden als straf laat voelen, welke appfuncties het milder maken (gratiedagen, rustige cijfers, geen rode waarschuwingen) en hoe je weer begint na een gemiste dag.">
+<meta property="og:url" content="https://getpofu.com/nl/calorie-counter-app-without-guilt.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Een caloriecounter-app die je geen schuldgevoel geeft (gids 2026)", "url": "https://getpofu.com/nl/calorie-counter-app-without-guilt.html", "inLanguage": "nl", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "author": {"@type": "Person", "name": "Ali Gürkan Sevilmiş"}, "publisher": {"@id": "https://getpofu.com/#org", "@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/nl/calorie-counter-app-without-guilt.html", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Is er een caloriecounter-app die je geen schuldgevoel geeft?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Zoek een app die je reeks beschermt na een gemiste dag, het overschrijden van je doel als getal toont in plaats van als rode waarschuwing en je schattingen makkelijk laat corrigeren. Pofu is rond deze ideeën gebouwd: maximaal 2 automatische gratiedagen per maand en rustige bewoordingen als je boven je doel uitkomt."}}, {"@type": "Question", "name": "Wat moet ik doen nadat ik een dag heb gemist met bijhouden?", "acceptedAnswer": {"@type": "Answer", "text": "Log je volgende maaltijd zoals gebruikelijk. Eén ontbrekende dag verandert een weektrend nauwelijks, en proberen het goed te maken door de volgende dag minder te eten pakt vaak averechts uit."}}, {"@type": "Question", "name": "Is het erg als ik boven mijn caloriedoel uitkom?", "acceptedAnswer": {"@type": "Answer", "text": "Eén dag erboven is normaal en maakt je voortgang niet ongedaan. Kijk naar het gemiddelde over een week of een hele cyclus in plaats van naar één dag."}}, {"@type": "Question", "name": "Kan calorieën tellen schadelijk zijn?", "acceptedAnswer": {"@type": "Answer", "text": "Voor sommige mensen kan het de angst rond eten vergroten. Voel je je slechter door het bijhouden, neem dan een pauze, en heb je een voorgeschiedenis van een eetstoornis, praat dan met je arts of een diëtist voordat je calorieën gaat tellen."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Direct naar de inhoud</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/nl/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_nl_guilt_free">Download de app</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">Gids · november 2026</p>
+<h1>Een caloriecounter-app die je geen schuldgevoel geeft</h1>
+<p class="lede">Veel mensen stoppen met bijhouden, niet omdat tellen moeilijk is, maar omdat de app een gemiste dag of een hoog getal als falen laat voelen. Dit zoek je in plaats daarvan.</p>
+<p>Door Ali Gürkan Sevilmiş, ontwikkelaar van Pofu · 6 november 2026</p>
+</section>
+<section id="short">
+<h2>Het korte antwoord</h2>
+<p>Kies een app die een gemiste dag en een dag boven je doel als normaal behandelt: een app die je reeks behoudt met gratiedagen, cijfers rustig toont in plaats van in het rood, snel loggen mogelijk maakt en je schattingen laat aanpassen. Beoordeel je voortgang daarna op weekgemiddelden, niet op losse dagen.</p>
+</section>
+<section id="why">
+<h2>Waarom calorie-apps als straf kunnen voelen</h2>
+<ul>
+<li><strong>Verbroken reeksen:</strong> één gemiste dag zet weken aan voortgang terug op nul, waardoor veel mensen er direct daarna mee stoppen.</li>
+<li><strong>Rode cijfers en waarschuwingen:</strong> boven je doel uitkomen wordt als fout weergegeven, terwijl één enkele dag weinig zegt over je trend.</li>
+<li><strong>Traag loggen:</strong> als elke maaltijd minuten kost om in te voeren, voelt overslaan makkelijker dan een onvolmaakte dag loggen.</li>
+<li><strong>De weegschaal vóór je menstruatie:</strong> vochtvasthouden kan de weegschaal een paar dagen omhoog duwen, wat op falen lijkt als de app elke meting hetzelfde behandelt.</li>
+</ul>
+</section>
+<section id="features">
+<h2>Waar je op let bij een mildere caloriecounter</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Functie</th><th>Waarom het helpt</th></tr></thead>
+<tbody>
+<tr><th>Gratiedagen of reeksbescherming</th><td>Een gemiste dag wist je voortgang niet uit, dus je blijft doorgaan.</td></tr>
+<tr><th>Rustige weergave als je erboven zit</th><td>Je ziet het getal zonder waarschuwende toon, en de volgende maaltijd is een nieuwe start.</td></tr>
+<tr><th>Snel loggen (foto, barcode, spraak)</th><td>Een onvolmaakte dag loggen kost seconden, zodat je logboek compleet blijft.</td></tr>
+<tr><th>Aanpasbare schattingen</th><td>Je kunt een portie corrigeren in plaats van vast te zitten aan een verkeerd getal.</td></tr>
+<tr><th>Overzicht per week of per cyclus</th><td>Trends tellen zwaarder dan één dag; vergelijk gemiddelden.</td></tr>
+<tr><th>Optioneel cyclusbewustzijn</th><td>Weten dat een uitschieter vóór je menstruatie vocht kan zijn, neemt een veelvoorkomende bron van schuldgevoel weg.</td></tr>
+</tbody></table></div>
+<p>Je kunt de meeste apps ook zelf milder maken: zet reeksmeldingen uit die je stress geven, verberg dagtotalen en kijk naar weekgemiddelden, en stel een realistisch doel in in plaats van het meest agressieve.</p>
+</section>
+<section id="after">
+<h2>Na een gemiste dag of een dag erboven</h2>
+<ol>
+<li><strong>Log de volgende maaltijd zoals gebruikelijk.</strong> Probeer het niet “goed te maken” door veel minder te eten; dat leidt vaak tot terugslag.</li>
+<li><strong>Log wat je je herinnert, ruwweg.</strong> Een schatting is beter dan een lege dag, en niemand geeft er een cijfer voor.</li>
+<li><strong>Kijk naar de week, niet naar de dag.</strong> Eén hoge dag verschuift een weekgemiddelde nauwelijks.</li>
+<li><strong>Wacht vóór je menstruatie af.</strong> Is de weegschaal omhooggesprongen, weeg jezelf dan ongeveer een week nadat je menstruatie begint opnieuw. Onze gratis <a href="period-water-weight-calculator.html">rekenhulp voor vochtgewicht tijdens je menstruatie</a> helpt je dit te controleren.</li>
+</ol>
+</section>
+<section id="pofu">
+<h2>Hoe Pofu dit aanpakt</h2>
+<p>Transparantie: ik bouw Pofu. Het is een caloriecounter voor vrouwen op iPhone en iPad, ontworpen rond deze punten:</p>
+<ul>
+<li>Maximaal 2 automatische gratiedagen per maand beschermen je reeks na een gemiste dag, zonder straf.</li>
+<li>Boven je doel uitkomen toont het getal rustig, zonder standje; de volgende maaltijd is een nieuwe start.</li>
+<li>AI-fotologging met een betrouwbaarheidsscore bij elke schatting, plus gratis barcode scannen, zoeken en handmatig loggen. Correcties worden onthouden.</li>
+<li>Optioneel cyclusbewustzijn (standaard uit, gegevens blijven op het apparaat) vertelt je wanneer een uitschieter op de weegschaal vocht kan zijn. Pofu voorspelt geen menstruatie.</li>
+</ul>
+<p class="cta"><a href="https://apps.apple.com/nl/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_nl_guilt_free"><img src="../assets/img/app-store-badge.png" alt="Download Pofu in de App Store" width="180" height="60"></a></p>
+</section>
+<section id="faq">
+<h2>Veelgestelde vragen</h2>
+<h3>Is er een caloriecounter-app die je geen schuldgevoel geeft?</h3>
+<p>Ja. Zoek een app die je reeks beschermt na een gemiste dag, het overschrijden van je doel als getal toont in plaats van als rode waarschuwing en je schattingen makkelijk laat corrigeren. Pofu is rond deze ideeën gebouwd: maximaal 2 automatische gratiedagen per maand en rustige bewoordingen als je boven je doel uitkomt.</p>
+<h3>Wat moet ik doen nadat ik een dag heb gemist met bijhouden?</h3>
+<p>Log je volgende maaltijd zoals gebruikelijk. Eén ontbrekende dag verandert een weektrend nauwelijks, en proberen het goed te maken door de volgende dag minder te eten pakt vaak averechts uit.</p>
+<h3>Is het erg als ik boven mijn caloriedoel uitkom?</h3>
+<p>Eén dag erboven is normaal en maakt je voortgang niet ongedaan. Kijk naar het gemiddelde over een week of een hele cyclus in plaats van naar één dag.</p>
+<h3>Kan calorieën tellen schadelijk zijn?</h3>
+<p>Voor sommige mensen kan het de angst rond eten vergroten. Voel je je slechter door het bijhouden, neem dan een pauze, en heb je een voorgeschiedenis van een eetstoornis, praat dan met je arts of een diëtist voordat je calorieën gaat tellen.</p>
+</section>
+<section id="related">
+<h2>Verder lezen</h2>
+<ul>
+<li><a href="best-calorie-counter-for-women.html">Beste caloriecounter voor vrouwen</a></li>
+<li><a href="calorie-tracking-menstrual-cycle.html">Calorieën bijhouden en je menstruatiecyclus</a></li>
+<li><a href="cycle-calorie-calculator.html">Gratis tool: caloriecalculator voor je cyclus</a></li>
+<li><a href="../kalori-sayarken-sucluluk.html" hreflang="tr" lang="tr">Türkçe: Kalori sayarken suçluluk</a></li>
+</ul>
+</section>
+<section id="not-medical">
+<div class="note"><p>Deze pagina bevat algemene informatie en geen medisch advies. Neemt het bijhouden van calorieën je angst rond eten toe, of heb je een voorgeschiedenis van een eetstoornis, stop dan en praat met je arts of een diëtist.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Juridisch en support">
+<a href="pofu.html">Pofu</a>
+<a href="../privacy.html">Privacy</a>
+<a href="../terms.html">Voorwaarden</a>
+<a href="../support.html">Support</a>
+</nav>
+<p>Laatst bijgewerkt op <time datetime="2026-11-06">6 november 2026</time>.</p>
+<p>Apple, iPhone en App Store zijn handelsmerken van Apple Inc. Alle andere productnamen zijn handelsmerken van hun respectieve eigenaren. © 2026 Pofu.</p>
+</div>
+<nav class="langs" aria-label="Talen" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../calorie-counter-app-without-guilt.html" hreflang="en" lang="en">English</a> · <a href="../de/calorie-counter-app-without-guilt.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/calorie-counter-app-without-guilt.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/calorie-counter-app-without-guilt.html" hreflang="es" lang="es">Español</a> · <a href="../it/calorie-counter-app-without-guilt.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/calorie-counter-app-without-guilt.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <strong>Nederlands</strong> · <a href="../pl/calorie-counter-app-without-guilt.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ru/calorie-counter-app-without-guilt.html" hreflang="ru" lang="ru">Русский</a> · <a href="../uk/calorie-counter-app-without-guilt.html" hreflang="uk" lang="uk">Українська</a> · <a href="../cs/calorie-counter-app-without-guilt.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../ro/calorie-counter-app-without-guilt.html" hreflang="ro" lang="ro">Română</a> · <a href="../sv/calorie-counter-app-without-guilt.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../ja/calorie-counter-app-without-guilt.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/calorie-counter-app-without-guilt.html" hreflang="ko" lang="ko">한국어</a> · <a href="../zh-Hans/calorie-counter-app-without-guilt.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../id/calorie-counter-app-without-guilt.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../vi/calorie-counter-app-without-guilt.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../th/calorie-counter-app-without-guilt.html" hreflang="th" lang="th">ไทย</a> · <a href="../hi/calorie-counter-app-without-guilt.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../ar/calorie-counter-app-without-guilt.html" hreflang="ar" lang="ar">العربية</a></nav>
+</footer>
+</body>
+</html>

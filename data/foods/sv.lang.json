@@ -1,0 +1,67 @@
+{
+ "code": "sv",
+ "nav_name": "Svenska",
+ "data_file": true,
+ "dir": "sv/kalorier",
+ "up": "../../",
+ "ct": "sv",
+ "locale": "sv_SE",
+ "ref": "sv/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Hoppa till innehållet",
+ "btn": "Hämta appen",
+ "legal_aria": "Juridik och support",
+ "legal_names": [
+  "Integritet",
+  "Villkor",
+  "Support"
+ ],
+ "updated": "Senast uppdaterad %s.",
+ "date": "6 november 2026",
+ "pill": "Näringsvärden",
+ "hubname": "Kalorier",
+ "tm": "Apple, iPhone, iPad, Apple Watch och App Store är varumärken som tillhör Apple Inc. Alla andra produktnamn är varumärken som tillhör respektive ägare och används här endast för identifiering. © 2026 Pofu.",
+ "h1": "Hur många kalorier innehåller %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: cirka <strong>%s kcal</strong> per portion (%s). Portionen innehåller %s g protein, %s g kolhydrater och %s g fett, vilket motsvarar cirka %s kcal per 100 %s.",
+ "desc": "%s: cirka %s kcal per portion (%s); %s g protein, %s g kolhydrater, %s g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.",
+ "h_table": "Kalorier och näringsvärden",
+ "cols": [
+  "Per portion (%s)",
+  "Per 100 %s"
+ ],
+ "rows": [
+  "Kalorier",
+  "Protein",
+  "Kolhydrater",
+  "Fett"
+ ],
+ "h_why": "Därför varierar värdet",
+ "h_log": "Så loggar du det i Pofu",
+ "h_rel": "Liknande livsmedel",
+ "all_foods": "Alla livsmedel",
+ "other_langs": "Det här livsmedlet på andra språk",
+ "log": "Pofu är vår app. För att logga det här livsmedlet fotograferar du tallriken: Pofu uppskattar rätten och portionen och visar ett säkerhetsvärde, så att du ser hur säker uppskattningen är och kan justera den. Du kan också söka på namn eller skanna en streckkod och ställa in portionen på det du faktiskt åt. %s.",
+ "store_link": "Hämta Pofu i App Store",
+ "source": "Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion.",
+ "src_link": "Källa",
+ "medical": "Den här sidan är allmän information och ingen medicinsk rådgivning. Om du är gravid, ammar, har en sjukdom eller tidigare har haft en ätstörning, prata med din läkare eller en dietist innan du börjar räkna kalorier.",
+ "why": {
+  "fat": "Fettet gör störst skillnad. Hur mycket olja, smör, ost eller frityrfett som används och hur full skeden eller slevan är påverkar kalorierna mest. Till och med två tallrikar som ser lika ut kan skilja sig tydligt.",
+  "prot": "Det beror på styckningsdelen eller produkten, på om fettet skurits bort eller sparats och på tillagningen. Skinn, marinader, såser och stekfett ger kalorier som man inte ser på vikten. Kontrollera när du jämför om en vikt avser tillagat eller rått.",
+  "carb": "Resultatet beror på hur rätten tillagats och hur mycket olja, smör eller socker den innehåller. Tillagad vikt och torr vikt skiljer sig mycket, därför ligger en toppad och en struken portion långt ifrån varandra. Märke, storlek och tjocklek påverkar också värdet.",
+  "light": "De här livsmedlen består mest av vatten. Därför betyder portionsstorlek och verklig vikt mer än receptet. Storlek, mognadsgrad och tillsatser som socker, dressing, olja eller mjölk ändrar värdet.",
+  "mixed": "Recept hemma och på restaurang skiljer sig i mängden olja, kött, ost och stärkelse och i portionsstorlek. Se värdet som en utgångspunkt och justera portionen om din tallrik var mindre eller större."
+ },
+ "hub_title": "Hur många kalorier? Kalorier och näringsvärden för maträtter och basvaror",
+ "hub_h1": "Hur många kalorier har din mat?",
+ "hub_intro": "Kalorier, protein, kolhydrater och fett per portion och per 100 g för %d livsmedel. Värdena är typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen och varierar med recept och portion.",
+ "hub_desc": "Kalorier per portion och per 100 g för %d maträtter och basvaror, med typiska värden från öppna livsmedelsdatabaser och Pofu-appen.",
+ "g_local": "Maträtter",
+ "g_staple": "Basvaror"
+}

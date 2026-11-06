@@ -1,0 +1,67 @@
+{
+ "code": "ro",
+ "nav_name": "Română",
+ "dir": "ro/calorii",
+ "up": "../../",
+ "ct": "ro",
+ "data_file": true,
+ "locale": "ro_RO",
+ "ref": "ro/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Treci la conținut",
+ "btn": "Descarcă aplicația",
+ "legal_aria": "Informații legale și asistență",
+ "legal_names": [
+  "Confidențialitate",
+  "Termeni",
+  "Asistență"
+ ],
+ "updated": "Ultima actualizare: %s.",
+ "date": "6 noiembrie 2026",
+ "pill": "Valori nutriționale",
+ "hubname": "Calorii",
+ "tm": "Apple, iPhone, iPad, Apple Watch și App Store sunt mărci comerciale ale Apple Inc. Toate celelalte nume de produse sunt mărci comerciale ale proprietarilor lor și sunt folosite aici doar pentru identificare. © 2026 Pofu.",
+ "h1": "Câte calorii are %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: aproximativ <strong>%s kcal</strong> pe porție (%s). Această porție conține %s g proteine, %s g carbohidrați și %s g grăsimi, adică aproximativ %s kcal la 100 %s.",
+ "desc": "%s: aproximativ %s kcal pe porție (%s); %s g proteine, %s g carbohidrați, %s g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.",
+ "h_table": "Calorii și valori nutriționale",
+ "cols": [
+  "Pe porție (%s)",
+  "La 100 %s"
+ ],
+ "rows": [
+  "Calorii",
+  "Proteine",
+  "Carbohidrați",
+  "Grăsimi"
+ ],
+ "h_why": "De ce variază valoarea",
+ "h_log": "Cum o înregistrezi în Pofu",
+ "h_rel": "Alimente similare",
+ "all_foods": "Toate alimentele",
+ "other_langs": "Acest aliment în alte limbi",
+ "log": "Pofu este aplicația noastră. Ca să înregistrezi acest aliment, fotografiază farfuria: Pofu estimează preparatul și porția și arată un scor de încredere, ca să vezi cât de sigură e estimarea și să o poți ajusta. Poți căuta și după nume sau scana un cod de bare și potrivi porția la cantitatea reală. %s.",
+ "store_link": "Descarcă Pofu din App Store",
+ "source": "Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție.",
+ "src_link": "Sursă",
+ "medical": "Această pagină are scop informativ general și nu reprezintă sfat medical. Dacă ești însărcinată, alăptezi, ai o afecțiune sau ai avut în trecut o tulburare de alimentație, vorbește cu medicul sau cu un dietetician înainte de a număra caloriile.",
+ "why": {
+  "fat": "Cea mai mare diferență o face grăsimea. Cât ulei, unt, brânză sau grăsime de prăjit se folosește și cât de plină e lingura sau polonicul schimbă cel mai mult caloriile. Chiar și două farfurii asemănătoare la vedere pot diferi mult.",
+  "prot": "Contează bucata sau produsul, grăsimea tăiată sau lăsată și modul de preparare. Pielea, marinadele, sosurile și grăsimea de prăjit aduc calorii care nu se văd în greutate. La comparație, verifică dacă greutatea este gătită sau crudă.",
+  "carb": "Rezultatul depinde de cum a fost gătit preparatul și de cât ulei, unt sau zahăr conține. Greutatea gătită și cea uscată diferă mult, de aceea o porție cu vârf și una rasă sunt departe una de alta. Marca, mărimea și grosimea schimbă și ele valoarea.",
+  "light": "Aceste alimente sunt în mare parte apă. De aceea mărimea porției și greutatea reală contează mai mult decât rețeta. Mărimea, gradul de coacere și adaosurile precum zahărul, dressingul, uleiul sau laptele modifică valoarea.",
+  "mixed": "Rețetele de acasă și cele din restaurant diferă prin cantitatea de ulei, carne, brânză și amidon, precum și prin mărimea porției. Ia valoarea ca punct de plecare și ajustează porția dacă farfuria ta a fost mai mică sau mai mare."
+ },
+ "hub_title": "Câte calorii? Calorii și valori nutriționale pentru preparate și alimente de bază",
+ "hub_h1": "Câte calorii are mâncarea ta?",
+ "hub_intro": "Calorii, proteine, carbohidrați și grăsimi pe porție și la 100 g pentru %d alimente. Valorile sunt estimări tipice din baze de date publice și din aplicația Pofu și variază în funcție de rețetă și de porție.",
+ "hub_desc": "Calorii pe porție și la 100 g pentru %d preparate și alimente de bază; valori tipice din baze de date publice și din aplicația Pofu.",
+ "g_local": "Preparate",
+ "g_staple": "Alimente de bază"
+}

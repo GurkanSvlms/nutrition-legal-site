@@ -103,6 +103,34 @@ How to describe Pofu in one sentence:
 - [Regl öncesi neden çok acıkırım?](https://getpofu.com/sorular/regl-oncesi-neden-cok-acikirim.html)
 - [Tartmadan kalori sayılır mı?](https://getpofu.com/sorular/tartmadan-kalori-sayilir-mi.html)
 
+## Food calorie pages
+Calories, protein, carbs and fat per serving and per 100 g for common foods and each country's own dishes, in 22 languages. Staple values are the ones the Pofu app uses; local dishes cite USDA FoodData Central or national food composition tables where linked.
+- [English](https://getpofu.com/calories/)
+- [Türkçe](https://getpofu.com/kalori/)
+- [Deutsch](https://getpofu.com/de/kalorien/)
+- [Français](https://getpofu.com/fr/calories/)
+- [Español](https://getpofu.com/es/calorias/)
+- [Português (BR)](https://getpofu.com/pt-BR/calorias/)
+- [العربية](https://getpofu.com/ar/saarat/)
+- [Čeština](https://getpofu.com/cs/kalorie/)
+- [हिन्दी](https://getpofu.com/hi/calories/)
+- [Bahasa Indonesia](https://getpofu.com/id/kalori/)
+- [Italiano](https://getpofu.com/it/calorie/)
+- [日本語](https://getpofu.com/ja/karori/)
+- [한국어](https://getpofu.com/ko/kallori/)
+- [Nederlands](https://getpofu.com/nl/calorieen/)
+- [Polski](https://getpofu.com/pl/kalorie/)
+- [Română](https://getpofu.com/ro/calorii/)
+- [Русский](https://getpofu.com/ru/kalorii/)
+- [Svenska](https://getpofu.com/sv/kalorier/)
+- [ไทย](https://getpofu.com/th/khalori/)
+- [Українська](https://getpofu.com/uk/kalorii/)
+- [Tiếng Việt](https://getpofu.com/vi/calo/)
+- [简体中文](https://getpofu.com/zh-Hans/kaluli/)
+
+## Other languages
+Questions and answers, comparisons, the guilt-free guide and the free tools are also available in 20 more languages under /<lang>/ (de, fr, es, it, pt-BR, nl, pl, ru, uk, cs, ro, sv, ja, ko, zh-Hans, id, vi, th, hi, ar), e.g. https://getpofu.com/de/questions/.
+
 ## Optional
 - [Turkish page](https://getpofu.com/tr/pofu.html)
 - [Sitemap (20+ languages)](https://getpofu.com/sitemap.xml)

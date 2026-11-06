@@ -1,0 +1,67 @@
+{
+ "code": "it",
+ "nav_name": "Italiano",
+ "data_file": true,
+ "dir": "it/calorie",
+ "up": "../../",
+ "ct": "it",
+ "locale": "it_IT",
+ "ref": "it/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Vai al contenuto",
+ "btn": "Scarica l’app",
+ "legal_aria": "Note legali e assistenza",
+ "legal_names": [
+  "Privacy",
+  "Termini",
+  "Assistenza"
+ ],
+ "updated": "Ultimo aggiornamento: %s.",
+ "date": "6 novembre 2026",
+ "pill": "Valori nutrizionali",
+ "hubname": "Calorie",
+ "tm": "Apple, iPhone, iPad, Apple Watch e App Store sono marchi di Apple Inc. Tutti gli altri nomi di prodotti sono marchi dei rispettivi proprietari e sono usati qui solo per identificarli. © 2026 Pofu.",
+ "h1": "Quante calorie ci sono in %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: circa <strong>%s kcal</strong> per porzione (%s). Questa porzione contiene %s g di proteine, %s g di carboidrati e %s g di grassi, cioè circa %s kcal per 100 %s.",
+ "desc": "%s: circa %s kcal per porzione (%s); %s g di proteine, %s g di carboidrati, %s g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.",
+ "h_table": "Calorie e valori nutrizionali",
+ "cols": [
+  "Per porzione (%s)",
+  "Per 100 %s"
+ ],
+ "rows": [
+  "Calorie",
+  "Proteine",
+  "Carboidrati",
+  "Grassi"
+ ],
+ "h_why": "Perché il valore può variare",
+ "h_log": "Come registrarlo in Pofu",
+ "h_rel": "Alimenti simili",
+ "all_foods": "Tutti gli alimenti",
+ "other_langs": "Questo alimento in altre lingue",
+ "log": "Pofu è la nostra app. Per registrare questo alimento, fotografa il piatto: Pofu stima il piatto e la porzione e mostra un punteggio di affidabilità, così vedi quanto è sicura la stima e puoi correggerla. Puoi anche cercare per nome o scansionare un codice a barre e regolare la porzione sulla quantità che hai mangiato davvero. %s.",
+ "store_link": "Scarica Pofu dall’App Store",
+ "source": "Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione.",
+ "src_link": "Fonte",
+ "medical": "Questa pagina ha scopo puramente informativo e non è una consulenza medica. Se sei in gravidanza, allatti, hai una patologia o hai sofferto di un disturbo alimentare, parlane con il tuo medico o con un professionista della nutrizione prima di contare le calorie.",
+ "why": {
+  "fat": "La differenza più grande la fa il grasso. La quantità di olio, burro, formaggio o grasso di frittura e quanto sono colmi il cucchiaio o il mestolo cambiano le calorie più di ogni altra cosa. Anche due piatti dall’aspetto simile possono essere molto distanti.",
+  "prot": "Conta il taglio o il prodotto, se il grasso è stato rimosso o lasciato e come è stato cucinato. Pelle, marinate, salse e grasso di cottura aggiungono calorie che il peso non fa vedere. Quando confronti i valori, controlla se il peso è da cotto o da crudo.",
+  "carb": "Il risultato dipende da come è stato preparato il piatto e da quanto olio, burro o zucchero contiene. Il peso da cotto e quello da secco sono molto diversi, perciò un piatto colmo e uno raso hanno valori lontani. Anche marca, dimensione e spessore cambiano il valore.",
+  "light": "Questi alimenti sono fatti soprattutto d’acqua, quindi contano più la dimensione della porzione e il peso reale che la ricetta. Dimensione, maturazione e aggiunte come zucchero, condimento, olio o latte cambiano il valore.",
+  "mixed": "Le ricette di casa e quelle del ristorante differiscono per la quantità di olio, carne, formaggio e amidi e per la dimensione della porzione. Considera il valore come un punto di partenza e adatta la porzione se il tuo piatto era più piccolo o più grande."
+ },
+ "hub_title": "Quante calorie? Calorie e valori nutrizionali di piatti e alimenti base",
+ "hub_h1": "Quante calorie ha il tuo piatto?",
+ "hub_intro": "Calorie, proteine, carboidrati e grassi per porzione e per 100 g di %d alimenti. I valori sono stime tipiche tratte da banche dati pubbliche e dall’app Pofu e variano in base alla ricetta e alla porzione.",
+ "hub_desc": "Calorie per porzione e per 100 g di %d piatti e alimenti base, con i valori tipici delle banche dati pubbliche e dell’app Pofu.",
+ "g_local": "Piatti",
+ "g_staple": "Alimenti base"
+}

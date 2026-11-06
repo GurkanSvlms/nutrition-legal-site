@@ -1,0 +1,67 @@
+{
+ "code": "id",
+ "nav_name": "Bahasa Indonesia",
+ "data_file": true,
+ "dir": "id/kalori",
+ "up": "../../",
+ "ct": "id",
+ "locale": "id_ID",
+ "ref": "id/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Langsung ke konten",
+ "btn": "Unduh aplikasi",
+ "legal_aria": "Informasi hukum dan dukungan",
+ "legal_names": [
+  "Privasi",
+  "Ketentuan",
+  "Dukungan"
+ ],
+ "updated": "Terakhir diperbarui pada %s.",
+ "date": "6 November 2026",
+ "pill": "Nilai gizi",
+ "hubname": "Kalori",
+ "tm": "Apple, iPhone, iPad, Apple Watch, dan App Store adalah merek dagang Apple Inc. Semua nama produk lain adalah merek dagang pemiliknya masing-masing dan hanya digunakan di sini untuk identifikasi. © 2026 Pofu.",
+ "h1": "Berapa kalori dalam %s?",
+ "title_all": "%s (%s)",
+ "answer": "%s: sekitar <strong>%s kkal</strong> per porsi (%s). Porsi ini mengandung %s g protein, %s g karbohidrat, dan %s g lemak, atau sekitar %s kkal per 100 %s.",
+ "desc": "%s: sekitar %s kkal per porsi (%s); %s g protein, %s g karbohidrat, %s g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.",
+ "h_table": "Kalori dan nilai gizi",
+ "cols": [
+  "Per porsi (%s)",
+  "Per 100 %s"
+ ],
+ "rows": [
+  "Kalori",
+  "Protein",
+  "Karbohidrat",
+  "Lemak"
+ ],
+ "h_why": "Mengapa angkanya bisa berbeda",
+ "h_log": "Cara mencatatnya di Pofu",
+ "h_rel": "Makanan serupa",
+ "all_foods": "Semua makanan",
+ "other_langs": "Makanan ini dalam bahasa lain",
+ "log": "Pofu adalah aplikasi kami. Untuk mencatat makanan ini, foto piringmu: Pofu memperkirakan hidangan dan porsinya, lalu menampilkan skor keyakinan agar kamu tahu seberapa pasti perkiraannya dan bisa mengubahnya. Kamu juga bisa mencari berdasarkan nama atau memindai barcode, lalu menyesuaikan porsi dengan jumlah yang sebenarnya kamu makan. %s.",
+ "store_link": "Unduh Pofu di App Store",
+ "source": "Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi.",
+ "src_link": "Sumber",
+ "medical": "Halaman ini hanya berisi informasi umum dan bukan nasihat medis. Jika kamu sedang hamil, menyusui, memiliki kondisi medis, atau pernah mengalami gangguan makan, bicarakan dengan dokter atau ahli gizi sebelum menghitung kalori.",
+ "why": {
+  "fat": "Lemak paling besar pengaruhnya. Banyaknya minyak, mentega, keju, atau minyak penggorengan yang dipakai, serta seberapa penuh sendok atau sendok sayur, paling mengubah jumlah kalori. Dua piring yang tampak mirip pun bisa berbeda jauh.",
+  "prot": "Yang menentukan adalah potongan atau produknya, lemak yang dibuang atau dibiarkan, dan cara memasaknya. Kulit, bumbu rendam, saus, dan minyak goreng menambah kalori yang tidak terlihat dari beratnya. Saat membandingkan, perhatikan apakah beratnya dihitung matang atau mentah.",
+  "carb": "Hasilnya bergantung pada cara hidangan dimasak serta banyaknya minyak, mentega, atau gula di dalamnya. Berat matang dan berat kering sangat berbeda, sehingga piring yang menggunung dan piring yang rata bisa terpaut jauh. Merek, ukuran, dan ketebalan juga mengubah nilainya.",
+  "light": "Makanan ini sebagian besar terdiri dari air, jadi ukuran porsi dan berat sebenarnya lebih penting daripada resep. Ukuran, tingkat kematangan, dan tambahan seperti gula, saus, minyak, atau susu mengubah nilainya.",
+  "mixed": "Resep rumahan dan restoran berbeda dalam jumlah minyak, daging, keju, dan pati, serta ukuran porsinya. Anggap angka ini titik awal, lalu sesuaikan porsi jika piringmu lebih kecil atau lebih besar."
+ },
+ "hub_title": "Berapa kalori? Kalori dan nilai gizi hidangan serta makanan pokok",
+ "hub_h1": "Berapa kalori makananmu?",
+ "hub_intro": "Kalori, protein, karbohidrat, dan lemak per porsi dan per 100 g untuk %d makanan. Nilainya adalah perkiraan umum dari basis data pangan publik dan aplikasi Pofu dan bisa berbeda tergantung resep dan porsi.",
+ "hub_desc": "Kalori per porsi dan per 100 g untuk %d hidangan dan makanan pokok, dengan nilai umum dari basis data pangan publik dan aplikasi Pofu.",
+ "g_local": "Hidangan",
+ "g_staple": "Makanan pokok"
+}

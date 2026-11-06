@@ -1,0 +1,67 @@
+{
+ "code": "vi",
+ "nav_name": "Tiếng Việt",
+ "data_file": true,
+ "dir": "vi/calo",
+ "up": "../../",
+ "ct": "vi",
+ "locale": "vi_VN",
+ "ref": "vi/does-menstrual-cycle-affect-calorie-needs.html",
+ "home": "../pofu.html",
+ "legal": [
+  "../../privacy.html",
+  "../../terms.html",
+  "../../support.html"
+ ],
+ "skip": "Chuyển đến nội dung",
+ "btn": "Tải ứng dụng",
+ "legal_aria": "Pháp lý và hỗ trợ",
+ "legal_names": [
+  "Quyền riêng tư",
+  "Điều khoản sử dụng",
+  "Hỗ trợ"
+ ],
+ "updated": "Cập nhật lần cuối ngày %s.",
+ "date": "6 tháng 11, 2026",
+ "pill": "Giá trị dinh dưỡng",
+ "hubname": "Calo",
+ "tm": "Apple, iPhone, iPad, Apple Watch và App Store là nhãn hiệu của Apple Inc. Mọi tên sản phẩm khác là nhãn hiệu của chủ sở hữu tương ứng và chỉ được dùng ở đây để nhận diện. © 2026 Pofu.",
+ "h1": "%s có bao nhiêu calo?",
+ "title_all": "%s (%s)",
+ "answer": "%s: khoảng <strong>%s kcal</strong> mỗi khẩu phần (%s). Khẩu phần này có %s g protein, %s g carbohydrate và %s g chất béo, tương đương khoảng %s kcal trên 100 %s.",
+ "desc": "%s: khoảng %s kcal mỗi khẩu phần (%s); %s g protein, %s g carbohydrate, %s g chất béo. Giá trị tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu.",
+ "h_table": "Calo và giá trị dinh dưỡng",
+ "cols": [
+  "Mỗi khẩu phần (%s)",
+  "Trên 100 %s"
+ ],
+ "rows": [
+  "Calo",
+  "Protein",
+  "Carbohydrate",
+  "Chất béo"
+ ],
+ "h_why": "Vì sao con số có thể thay đổi",
+ "h_log": "Cách ghi lại trong Pofu",
+ "h_rel": "Món tương tự",
+ "all_foods": "Tất cả món ăn",
+ "other_langs": "Món này bằng các ngôn ngữ khác",
+ "log": "Pofu là ứng dụng của chúng tôi. Để ghi lại món này, hãy chụp ảnh đĩa ăn: Pofu ước tính món ăn và khẩu phần, đồng thời hiển thị mức độ tin cậy để bạn biết ước tính chắc chắn đến đâu và có thể chỉnh lại. Bạn cũng có thể tìm theo tên hoặc quét mã vạch, rồi điều chỉnh khẩu phần cho đúng với lượng bạn thực sự ăn. %s.",
+ "store_link": "Tải Pofu trên App Store",
+ "source": "Giá trị: ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu; chúng thay đổi theo công thức và khẩu phần.",
+ "src_link": "Nguồn",
+ "medical": "Trang này chỉ mang tính thông tin chung và không phải lời khuyên y tế. Nếu bạn đang mang thai, cho con bú, có bệnh lý hoặc từng có rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi đếm calo.",
+ "why": {
+  "fat": "Chất béo tạo ra khác biệt lớn nhất. Lượng dầu, bơ, phô mai hay dầu chiên được dùng, và việc muỗng hay vá múc đầy đến đâu, làm thay đổi lượng calo nhiều nhất. Hai đĩa trông giống nhau vẫn có thể chênh lệch đáng kể.",
+  "prot": "Điều quan trọng là miếng thịt hay sản phẩm cụ thể, phần mỡ đã cắt bỏ hay còn giữ lại, và cách chế biến. Da, nước ướp, nước sốt và dầu chiên mang thêm calo mà cân nặng không cho thấy. Khi so sánh, hãy chú ý trọng lượng là đã nấu hay còn sống.",
+  "carb": "Kết quả phụ thuộc vào cách chế biến món và lượng dầu, bơ hoặc đường bên trong. Trọng lượng đã nấu và trọng lượng khô khác nhau rất nhiều, nên một đĩa đầy và một đĩa vừa phải có thể chênh nhau xa. Thương hiệu, kích cỡ và độ dày cũng làm giá trị thay đổi.",
+  "light": "Những món này chủ yếu là nước, nên khẩu phần và trọng lượng thực tế quan trọng hơn công thức. Kích cỡ, độ chín và các thứ thêm vào như đường, nước sốt, dầu hay sữa sẽ làm giá trị thay đổi.",
+  "mixed": "Công thức nấu ở nhà và ở nhà hàng khác nhau về lượng dầu, thịt, phô mai và tinh bột cũng như kích cỡ khẩu phần. Hãy xem con số này là điểm xuất phát và điều chỉnh khẩu phần nếu đĩa của bạn nhỏ hơn hoặc lớn hơn."
+ },
+ "hub_title": "Bao nhiêu calo? Calo và giá trị dinh dưỡng của các món ăn và thực phẩm cơ bản",
+ "hub_h1": "Bữa ăn của bạn có bao nhiêu calo?",
+ "hub_intro": "Calo, protein, carbohydrate và chất béo mỗi khẩu phần và trên 100 g cho %d thực phẩm. Giá trị là ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu và thay đổi theo công thức và khẩu phần.",
+ "hub_desc": "Calo mỗi khẩu phần và trên 100 g cho %d món ăn và thực phẩm cơ bản, với giá trị tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu.",
+ "g_local": "Món ăn",
+ "g_staple": "Thực phẩm cơ bản"
+}
