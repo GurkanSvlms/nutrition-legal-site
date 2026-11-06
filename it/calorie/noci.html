@@ -172,6 +172,15 @@
 .pfoot strong{color:var(--ink,#222)}
 .pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
 .pfoot [aria-current]{font-weight:700}
+.plang{margin-inline-start:auto}
+.top__in:has(.plang) .btn{margin-inline-start:0}
+.plang summary{list-style:none;display:inline-flex;align-items:center;gap:.3rem;min-width:44px;min-height:44px;padding:0 .7rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.9rem;line-height:1;cursor:pointer}
+.plang summary::-webkit-details-marker{display:none}
+.plang[open] summary{background:var(--soft,rgba(222,81,135,.12))}
+.plang__panel{position:absolute;inset-inline:0;top:100%;z-index:31;display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:0 .75rem;padding:.4rem max(1rem,env(safe-area-inset-left)) 1rem;background:var(--bg,#fff);border-bottom:1px solid var(--line,rgba(0,0,0,.18));box-shadow:0 14px 26px rgba(0,0,0,.14)}
+.plang__panel a{display:flex;align-items:center;min-height:44px;padding:0 .2rem;color:var(--ink,#222);text-decoration:none;border-bottom:1px solid var(--line,rgba(0,0,0,.1))}
+.plang__panel a[aria-current]{color:var(--pink-text,#A32F5E);font-weight:700}
+.plang__panel a:hover{text-decoration:underline}
 /* nav:css:end */</style>
 </head>
 <body>
@@ -184,6 +193,7 @@
 <div class="pnav">
 <nav class="pnav__links" aria-label="Menu"><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a></nav>
 <details class="pnav__m"><summary><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Menu</span></summary><nav class="pnav__panel" aria-label="Menu"><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a></nav></details>
+<details class="plang"><summary aria-label="Lingue">🌐 IT</summary><nav class="plang__panel" aria-label="Lingue"><a href="../../calories/walnuts.html" hreflang="en" lang="en">English</a><a href="../../kalori/ceviz.html" hreflang="tr" lang="tr">Türkçe</a><a href="../../de/kalorien/walnusse.html" hreflang="de" lang="de">Deutsch</a><a href="../../fr/calories/noix.html" hreflang="fr" lang="fr">Français</a><a href="../../es/calorias/nueces.html" hreflang="es" lang="es">Español</a><a href="noci.html" hreflang="it" lang="it" aria-current="page">Italiano</a><a href="../../pt-BR/calorias/nozes.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../../nl/calorieen/walnoten.html" hreflang="nl" lang="nl">Nederlands</a><a href="../../pl/kalorie/orzechy-woskie.html" hreflang="pl" lang="pl">Polski</a><a href="../../ru/kalorii/gretskie-orekhi.html" hreflang="ru" lang="ru">Русский</a><a href="../../uk/kalorii/voloski-horikhy.html" hreflang="uk" lang="uk">Українська</a><a href="../../cs/kalorie/vlasske-orechy.html" hreflang="cs" lang="cs">Čeština</a><a href="../../ro/calorii/nuci.html" hreflang="ro" lang="ro">Română</a><a href="../../sv/kalorier/valnotter.html" hreflang="sv" lang="sv">Svenska</a><a href="../../ja/karori/walnuts.html" hreflang="ja" lang="ja">日本語</a><a href="../../ko/kallori/walnuts.html" hreflang="ko" lang="ko">한국어</a><a href="../../zh-Hans/kaluli/walnuts.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../../id/kalori/kenari.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../../vi/calo/oc-cho.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../../th/khalori/walnuts.html" hreflang="th" lang="th">ไทย</a><a href="../../hi/calories/walnuts.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../../ar/saarat/walnuts.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
 </div>

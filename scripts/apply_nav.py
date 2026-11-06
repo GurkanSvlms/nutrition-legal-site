@@ -326,20 +326,45 @@ NAV_CSS = """/* nav:css:start */
 .pfoot strong{color:var(--ink,#222)}
 .pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
 .pfoot [aria-current]{font-weight:700}
+.plang{margin-inline-start:auto}
+.top__in:has(.plang) .btn{margin-inline-start:0}
+.plang summary{list-style:none;display:inline-flex;align-items:center;gap:.3rem;min-width:44px;min-height:44px;padding:0 .7rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.9rem;line-height:1;cursor:pointer}
+.plang summary::-webkit-details-marker{display:none}
+.plang[open] summary{background:var(--soft,rgba(222,81,135,.12))}
+.plang__panel{position:absolute;inset-inline:0;top:100%;z-index:31;display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:0 .75rem;padding:.4rem max(1rem,env(safe-area-inset-left)) 1rem;background:var(--bg,#fff);border-bottom:1px solid var(--line,rgba(0,0,0,.18));box-shadow:0 14px 26px rgba(0,0,0,.14)}
+.plang__panel a{display:flex;align-items:center;min-height:44px;padding:0 .2rem;color:var(--ink,#222);text-decoration:none;border-bottom:1px solid var(--line,rgba(0,0,0,.1))}
+.plang__panel a[aria-current]{color:var(--pink-text,#A32F5E);font-weight:700}
+.plang__panel a:hover{text-decoration:underline}
 /* nav:css:end */"""
 
 MENU_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" '
              'fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>')
 
 
-def header_block(L, r):
+def lang_menu(L, r, text):
+    """Header language switcher: every translation of this page (from its hreflang links), current one marked."""
+    have = dict(alt_links(text, r))
+    have[L] = href_to(r, r)
+    for c in ALL:  # no translation of this page: send that language to its home page
+        home = "index.html" if c == "en" else "tr/index.html" if c == "tr" else f"{c}/pofu.html"
+        if c not in have and exists(home):
+            have[c] = href_to(home, r)
+    l = htmllib.escape(LABELS[L]["l"], quote=False)
+    items = sorted(have.items(), key=lambda a: ALL.index(a[0]) if a[0] in ALL else 99)
+    links = "".join(f'<a href="{h}" hreflang="{c}" lang="{c}"' + (' aria-current="page"' if c == L else "")
+                    + f">{NAMES.get(c, c)}</a>" for c, h in items)
+    return (f'<details class="plang"><summary aria-label="{l}">\U0001F310 {L.split("-")[0].upper()}</summary>'
+            f'<nav class="plang__panel" aria-label="{l}">{links}</nav></details>\n')
+
+
+def header_block(L, r, text=""):
     links = a_tags(nav_links(L, r))
     m = htmllib.escape(LABELS[L]["m"], quote=False)
     return ("<!-- nav:start -->\n"
             f'<div class="pnav">\n<nav class="pnav__links" aria-label="{m}">{links}</nav>\n'
             f'<details class="pnav__m"><summary>{MENU_ICON}<span>{m}</span></summary>'
-            f'<nav class="pnav__panel" aria-label="{m}">{links}</nav></details>\n</div>\n'
-            "<!-- nav:end -->")
+            f'<nav class="pnav__panel" aria-label="{m}">{links}</nav></details>\n'
+            + lang_menu(L, r, text) + "</div>\n<!-- nav:end -->")
 
 
 def alt_links(text, r):
@@ -397,7 +422,7 @@ def process(path, text=None, write=True):
     else:
         new = new.replace("</head>", css + "\n</head>", 1)
     if standard:
-        hb = header_block(L, r)
+        hb = header_block(L, r, new)
         if "<!-- nav:start -->" in new:
             new = re.sub(r"<!-- nav:start -->.*?<!-- nav:end -->", lambda m: hb, new, flags=re.S)
         else:

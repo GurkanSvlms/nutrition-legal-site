@@ -178,6 +178,15 @@
 .pfoot strong{color:var(--ink,#222)}
 .pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
 .pfoot [aria-current]{font-weight:700}
+.plang{margin-inline-start:auto}
+.top__in:has(.plang) .btn{margin-inline-start:0}
+.plang summary{list-style:none;display:inline-flex;align-items:center;gap:.3rem;min-width:44px;min-height:44px;padding:0 .7rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.9rem;line-height:1;cursor:pointer}
+.plang summary::-webkit-details-marker{display:none}
+.plang[open] summary{background:var(--soft,rgba(222,81,135,.12))}
+.plang__panel{position:absolute;inset-inline:0;top:100%;z-index:31;display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:0 .75rem;padding:.4rem max(1rem,env(safe-area-inset-left)) 1rem;background:var(--bg,#fff);border-bottom:1px solid var(--line,rgba(0,0,0,.18));box-shadow:0 14px 26px rgba(0,0,0,.14)}
+.plang__panel a{display:flex;align-items:center;min-height:44px;padding:0 .2rem;color:var(--ink,#222);text-decoration:none;border-bottom:1px solid var(--line,rgba(0,0,0,.1))}
+.plang__panel a[aria-current]{color:var(--pink-text,#A32F5E);font-weight:700}
+.plang__panel a:hover{text-decoration:underline}
 /* nav:css:end */</style>
 </head>
 <body>
@@ -190,6 +199,7 @@
 <div class="pnav">
 <nav class="pnav__links" aria-label="Меню"><a href="guides.html">Руководства</a><a href="tools.html" aria-current="true">Инструменты</a><a href="kalorii/">Калории</a><a href="questions/">Вопросы</a><a href="compare.html">Сравнения</a></nav>
 <details class="pnav__m"><summary><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Меню</span></summary><nav class="pnav__panel" aria-label="Меню"><a href="guides.html">Руководства</a><a href="tools.html" aria-current="true">Инструменты</a><a href="kalorii/">Калории</a><a href="questions/">Вопросы</a><a href="compare.html">Сравнения</a></nav></details>
+<details class="plang"><summary aria-label="Языки">🌐 RU</summary><nav class="plang__panel" aria-label="Языки"><a href="../period-water-weight-calculator.html" hreflang="en" lang="en">English</a><a href="../regl-kilosu-su-mu-yag-mi.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/period-water-weight-calculator.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/period-water-weight-calculator.html" hreflang="fr" lang="fr">Français</a><a href="../es/period-water-weight-calculator.html" hreflang="es" lang="es">Español</a><a href="../it/period-water-weight-calculator.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/period-water-weight-calculator.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/period-water-weight-calculator.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/period-water-weight-calculator.html" hreflang="pl" lang="pl">Polski</a><a href="period-water-weight-calculator.html" hreflang="ru" lang="ru" aria-current="page">Русский</a><a href="../uk/period-water-weight-calculator.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/period-water-weight-calculator.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/period-water-weight-calculator.html" hreflang="ro" lang="ro">Română</a><a href="../sv/period-water-weight-calculator.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/period-water-weight-calculator.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/period-water-weight-calculator.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/period-water-weight-calculator.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/period-water-weight-calculator.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/period-water-weight-calculator.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/period-water-weight-calculator.html" hreflang="th" lang="th">ไทย</a><a href="../hi/period-water-weight-calculator.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/period-water-weight-calculator.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
 </div>

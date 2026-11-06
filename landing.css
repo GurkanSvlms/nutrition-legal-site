@@ -238,7 +238,7 @@ html.js .rv.in { opacity: 1; transform: none; }
   font-weight: 600; font-size: .95rem; color: inherit;
 }
 .top__nav a:hover { background: rgba(255, 255, 255, .16); }
-.top__nav a[href="#features"], .top__nav a[href="#faq"] { display: none; }
+.top__nav a[href="#features"], .top__nav a[href="#faq"], .top__nav .nav-x { display: none; }
 .top__cta { display: none; }
 
 /* ---------- Hero ---------- */
@@ -618,7 +618,7 @@ html.js .step:not(.in) .ring__bar { stroke-dashoffset: 301.6; }
 /* ---------- Breakpoints ---------- */
 
 @media (min-width: 560px) {
-  .top__nav a[href="#features"], .top__nav a[href="#faq"] { display: inline-block; }
+  .top__nav a[href="#features"], .top__nav a[href="#faq"], .top__nav .nav-x { display: inline-block; }
   .facts--inline { grid-template-columns: 1fr 1fr; }
 }
 
@@ -735,3 +735,14 @@ html.js .step:not(.in) .ring__bar { stroke-dashoffset: 301.6; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
   .hero__video { display: none; }
 }
+
+/* Language menu (all site languages) */
+.langmenu { position: relative; margin-left: 6px; }
+.langmenu summary { list-style: none; cursor: pointer; padding: 8px 10px; border-radius: 999px; font-weight: 600; font-size: .95rem; min-height: 40px; display: inline-flex; align-items: center; }
+.langmenu summary::-webkit-details-marker { display: none; }
+.langmenu summary:focus-visible { outline: 3px solid #DE5187; outline-offset: 2px; }
+.langmenu__list { position: absolute; inset-inline-end: 0; top: calc(100% + 6px); z-index: 50; width: min(260px, 86vw); max-height: 70vh; overflow: auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 8px; border-radius: 14px; background: #fff; color: #3D1F38; box-shadow: 0 12px 32px rgba(61,31,56,.22); }
+.langmenu__list a { padding: 8px 10px; border-radius: 8px; text-decoration: none; color: inherit; font-size: .92rem; min-height: 40px; display: flex; align-items: center; }
+.langmenu__list a:hover, .langmenu__list a[aria-current] { background: #FCE9F1; }
+@media (prefers-color-scheme: dark) { .langmenu__list { background: #45203F; color: #FCE9F1; } .langmenu__list a:hover, .langmenu__list a[aria-current] { background: rgba(245,155,192,.16); } }

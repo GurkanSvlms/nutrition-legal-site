@@ -163,6 +163,15 @@
 .pfoot strong{color:var(--ink,#222)}
 .pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
 .pfoot [aria-current]{font-weight:700}
+.plang{margin-inline-start:auto}
+.top__in:has(.plang) .btn{margin-inline-start:0}
+.plang summary{list-style:none;display:inline-flex;align-items:center;gap:.3rem;min-width:44px;min-height:44px;padding:0 .7rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.9rem;line-height:1;cursor:pointer}
+.plang summary::-webkit-details-marker{display:none}
+.plang[open] summary{background:var(--soft,rgba(222,81,135,.12))}
+.plang__panel{position:absolute;inset-inline:0;top:100%;z-index:31;display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:0 .75rem;padding:.4rem max(1rem,env(safe-area-inset-left)) 1rem;background:var(--bg,#fff);border-bottom:1px solid var(--line,rgba(0,0,0,.18));box-shadow:0 14px 26px rgba(0,0,0,.14)}
+.plang__panel a{display:flex;align-items:center;min-height:44px;padding:0 .2rem;color:var(--ink,#222);text-decoration:none;border-bottom:1px solid var(--line,rgba(0,0,0,.1))}
+.plang__panel a[aria-current]{color:var(--pink-text,#A32F5E);font-weight:700}
+.plang__panel a:hover{text-decoration:underline}
 /* nav:css:end */</style>
 </head>
 <body>
@@ -175,6 +184,7 @@
 <div class="pnav">
 <nav class="pnav__links" aria-label="Menü"><a href="../guides.html">Ratgeber</a><a href="../tools.html">Rechner</a><a href="../kalorien/">Kalorien</a><a href="./" aria-current="true">Fragen</a><a href="../compare.html">Vergleiche</a></nav>
 <details class="pnav__m"><summary><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Menü</span></summary><nav class="pnav__panel" aria-label="Menü"><a href="../guides.html">Ratgeber</a><a href="../tools.html">Rechner</a><a href="../kalorien/">Kalorien</a><a href="./" aria-current="true">Fragen</a><a href="../compare.html">Vergleiche</a></nav></details>
+<details class="plang"><summary aria-label="Sprachen">🌐 DE</summary><nav class="plang__panel" aria-label="Sprachen"><a href="../../questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="en" lang="en">English</a><a href="../../sorular/kadinin-gunluk-kalori-ihtiyaci-ne-kadar.html" hreflang="tr" lang="tr">Türkçe</a><a href="how-many-calories-should-a-woman-eat-a-day.html" hreflang="de" lang="de" aria-current="page">Deutsch</a><a href="../../fr/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="fr" lang="fr">Français</a><a href="../../es/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="es" lang="es">Español</a><a href="../../it/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="it" lang="it">Italiano</a><a href="../../pt-BR/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../../nl/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="nl" lang="nl">Nederlands</a><a href="../../pl/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="pl" lang="pl">Polski</a><a href="../../ru/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="ru" lang="ru">Русский</a><a href="../../uk/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="uk" lang="uk">Українська</a><a href="../../cs/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="cs" lang="cs">Čeština</a><a href="../../ro/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="ro" lang="ro">Română</a><a href="../../sv/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="sv" lang="sv">Svenska</a><a href="../../ja/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="ja" lang="ja">日本語</a><a href="../../ko/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="ko" lang="ko">한국어</a><a href="../../zh-Hans/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../../id/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../../vi/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../../th/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="th" lang="th">ไทย</a><a href="../../hi/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../../ar/questions/how-many-calories-should-a-woman-eat-a-day.html" hreflang="ar" lang="ar">العربية</a></nav></details>
 </div>
 <!-- nav:end -->
 </div>
