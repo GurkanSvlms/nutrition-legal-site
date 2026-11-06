@@ -159,6 +159,37 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/fr/cycle-calorie-calculator.html", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "Combien de calories une femme doit-elle manger par jour ?", "acceptedAnswer": {"@type": "Answer", "text": "Cela dépend de l’âge, de la taille, du poids et de l’activité. Beaucoup de femmes maintiennent leur poids autour de 1 800 à 2 400 kcal par jour ; ce calculateur estime ton propre chiffre avec l’équation de Mifflin-St Jeor."}}, {"@type": "Question", "name": "Dois-je manger plus en phase lutéale ?", "acceptedAnswer": {"@type": "Answer", "text": "Tu peux t’autoriser un peu plus. Les recherches suggèrent que la dépense au repos peut légèrement augmenter et que beaucoup de personnes mangent environ 170 kcal de plus en moyenne ; ce calculateur ajoute donc une petite marge de 80 à 150 kcal. Tu n’es pas obligée de l’utiliser."}}, {"@type": "Question", "name": "Les calories comptent-elles pendant les règles ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. La variation de la dépense d’énergie au cours du cycle est faible, donc les calories comptent chaque jour."}}, {"@type": "Question", "name": "Quel est l’objectif calorique le plus bas donné par ce calculateur ?", "acceptedAnswer": {"@type": "Answer", "text": "1 200 kcal par jour. Descendre plus bas sans suivi médical n’est pas recommandé."}}, {"@type": "Question", "name": "Ce calculateur prédit-il mes règles ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il utilise seulement la date de début de tes dernières règles pour afficher la phase du jour. Il ne prédit ni les règles ni l’ovulation."}}]}
 </script>
+<style>/* nav:css:start */
+.top{position:relative}
+.top__in{flex-wrap:wrap;gap:.5rem .75rem}
+.top__in .btn{margin-inline-start:auto}
+.pnav{display:contents}
+.pnav__links{display:none}
+.pnav__m summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-width:44px;min-height:44px;padding:0 .8rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.95rem;line-height:1;cursor:pointer}
+.pnav__m summary::-webkit-details-marker{display:none}
+.pnav__m[open] summary{background:var(--soft,rgba(222,81,135,.12))}
+.pnav__m svg{width:20px;height:20px;flex:none}
+.pnav__m summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pnav__panel{position:absolute;inset-inline:0;top:100%;z-index:30;display:flex;flex-direction:column;padding:.4rem max(1rem,env(safe-area-inset-left)) 1rem;background:var(--bg,#fff);border-bottom:1px solid var(--line,rgba(0,0,0,.18));box-shadow:0 14px 26px rgba(0,0,0,.14)}
+.pnav__panel a,.pnav__links a{display:flex;align-items:center;min-height:44px;color:var(--ink,#222);font-weight:600;text-decoration:none}
+.pnav__panel a{padding:.4rem .2rem;border-bottom:1px solid var(--line,rgba(0,0,0,.14))}
+.pnav a[aria-current]{color:var(--pink-text,#A32F5E)}
+.pnav__panel a[aria-current]{box-shadow:inset 3px 0 0 var(--pink,#DE5187);padding-inline-start:.7rem}
+.pnav a:hover{text-decoration:underline}
+@media (max-width:24rem){.top__in{gap:.5rem}.top__in .btn{padding:.5rem .7rem;font-size:.85rem}.brand{font-size:1.1rem}}
+@media (min-width:30rem){.pnav__m summary span{position:static;width:auto;height:auto;clip:auto}}
+@media (min-width:44rem){
+.pnav__m{display:none}
+.pnav__links{display:flex;flex-wrap:wrap;gap:.35rem .5rem;flex-basis:100%;order:3;padding-bottom:.1rem}
+.pnav__links a{min-height:2.5rem;padding:0 .95rem;border:1px solid var(--line,rgba(0,0,0,.14));border-radius:999px;background:var(--card,#fff);font-size:.95rem}
+.pnav__links a[aria-current]{background:var(--soft,rgba(222,81,135,.12));border-color:transparent}
+}
+.pfoot{margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line,rgba(0,0,0,.14))}
+.pfoot nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 1rem;margin:0 0 .5rem}
+.pfoot strong{color:var(--ink,#222)}
+.pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
+.pfoot [aria-current]{font-weight:700}
+/* nav:css:end */</style>
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
@@ -166,6 +197,12 @@
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
 <a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_cycle_fr&amp;mt=8">Télécharger l’appli</a>
+<!-- nav:start -->
+<div class="pnav">
+<nav class="pnav__links" aria-label="Menu"><a href="guides.html">Guides</a><a href="tools.html" aria-current="true">Outils</a><a href="calories/">Calories</a><a href="questions/">Questions</a><a href="compare.html">Comparatifs</a></nav>
+<details class="pnav__m"><summary><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Menu</span></summary><nav class="pnav__panel" aria-label="Menu"><a href="guides.html">Guides</a><a href="tools.html" aria-current="true">Outils</a><a href="calories/">Calories</a><a href="questions/">Questions</a><a href="compare.html">Comparatifs</a></nav></details>
+</div>
+<!-- nav:end -->
 </div>
 </header>
 <main id="main" class="wrap">
@@ -250,6 +287,12 @@
 <p>Dernière mise à jour le <time datetime="2026-11-06">6 novembre 2026</time>.</p>
 <p>Apple, iPhone et App Store sont des marques d’Apple Inc. © 2026 Pofu.</p>
 </div>
+<!-- footnav:start -->
+<div class="wrap pfoot">
+<nav aria-label="Explorer"><strong>Explorer</strong><a href="guides.html">Guides</a><a href="tools.html" aria-current="true">Outils</a><a href="calories/">Calories</a><a href="questions/">Questions</a><a href="compare.html">Comparatifs</a></nav>
+<nav aria-label="Langues"><strong>Langues</strong><a href="../cycle-calorie-calculator.html" hreflang="en" lang="en">English</a><a href="../kadin-gunluk-kalori-ihtiyaci-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/cycle-calorie-calculator.html" hreflang="de" lang="de">Deutsch</a><a href="../es/cycle-calorie-calculator.html" hreflang="es" lang="es">Español</a><a href="../it/cycle-calorie-calculator.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/cycle-calorie-calculator.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/cycle-calorie-calculator.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/cycle-calorie-calculator.html" hreflang="pl" lang="pl">Polski</a><a href="../ru/cycle-calorie-calculator.html" hreflang="ru" lang="ru">Русский</a><a href="../uk/cycle-calorie-calculator.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/cycle-calorie-calculator.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/cycle-calorie-calculator.html" hreflang="ro" lang="ro">Română</a><a href="../sv/cycle-calorie-calculator.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/cycle-calorie-calculator.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/cycle-calorie-calculator.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/cycle-calorie-calculator.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/cycle-calorie-calculator.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/cycle-calorie-calculator.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/cycle-calorie-calculator.html" hreflang="th" lang="th">ไทย</a><a href="../hi/cycle-calorie-calculator.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/cycle-calorie-calculator.html" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
+<!-- footnav:end -->
 </footer>
 <script src="../assets/cycle-calories.js"></script>
 <script>window.__T = {"locale": "fr-FR", "phases": {"menstrual": "tes règles", "follicular": "la phase folliculaire", "ovulation": "autour de l’ovulation", "luteal": "la phase lutéale", "unknown": "une phase inconnue"}, "errors": {"age": "Saisis un âge entre 18 et 80 ans.", "height": "Saisis ta taille (130–210 cm).", "weight": "Saisis ton poids (35–250 kg).", "activity": "Choisis un niveau d’activité.", "goal": "Choisis un objectif.", "date": "Saisis la date de début de tes dernières règles, ou laisse le champ vide.", "future": "Cette date est dans le futur. Saisis le jour où tes dernières règles ont commencé.", "length": "Saisis une durée de cycle comprise entre 21 et 40 jours."}, "todayHead": "Objectif du jour · jour {day} du cycle, {phase}", "dailyHead": "Ton objectif quotidien", "unknown": "Il s’est écoulé {day} jours depuis le début de tes dernières règles, soit plus que ton cycle habituel plus une semaine, donc la phase ne peut pas être située. Cet outil ne prédit pas les règles.", "sTarget": "Objectif quotidien", "sLuteal": "Objectif en phase lutéale (+{a} kcal)", "sMaint": "Maintien (TDEE)", "sProtein": "Protéines par jour", "floor": "Ton objectif est fixé à 1 200 kcal, le plus bas que nous suggérons. Descendre plus bas n’est pas recommandé sans médecin ni diététicienne.", "explain": "La marge pour la phase lutéale est petite volontairement : les recherches suggèrent que la dépense au repos peut légèrement augmenter avant tes règles, et beaucoup de personnes ont plus faim. C’est de la place dans ton plan, pas une règle pour manger plus.", "bridge": "<div class=\"bridge\"><p>Pofu utilise cette même formule. Avec la prise en compte du cycle activée (facultative), l’appli ajoute elle-même la marge lutéale les bons jours, et tu peux la désactiver.</p><p class=\"cta\"><a href=\"https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_cycle_fr&amp;mt=8\"><img src=\"../assets/img/app-store-badge.png\" alt=\"Télécharger Pofu sur l’App Store\" width=\"180\" height=\"60\"></a></p></div>"};</script>

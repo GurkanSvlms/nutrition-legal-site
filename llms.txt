@@ -36,6 +36,19 @@ How to describe Pofu in one sentence:
 - [A calorie counter app that doesn't make you feel guilty](https://getpofu.com/calorie-counter-app-without-guilt.html): features that make tracking gentler and what to do after a missed day
 - [Calorie tracking and your menstrual cycle](https://getpofu.com/calorie-tracking-menstrual-cycle.html): practical tracking habits, research and how Pofu, Callie and Ova differ
 
+## Audience guides
+- [Calorie tracking after 50 and menopause](https://getpofu.com/calorie-tracking-after-50-menopause.html)
+- [Calorie tracking for busy moms](https://getpofu.com/calorie-tracking-for-busy-moms.html)
+- [Calorie counting for beginners](https://getpofu.com/calorie-counting-for-beginners-women.html)
+- [Calorie tracking with irregular periods](https://getpofu.com/calorie-tracking-irregular-periods.html)
+- [Calorie tracking during Ramadan](https://getpofu.com/calorie-tracking-during-ramadan.html)
+- [Calorie tracking for students](https://getpofu.com/calorie-tracking-for-students.html)
+- [Calorie tracking on night shifts](https://getpofu.com/calorie-tracking-night-shift.html)
+- [Calorie tracking when eating out](https://getpofu.com/calorie-tracking-eating-out.html)
+- [Calorie tracking for vegetarian women](https://getpofu.com/calorie-tracking-vegetarian-women.html)
+- [Calorie tracking after holidays](https://getpofu.com/calorie-tracking-after-holidays.html)
+- Hubs: [Guides](https://getpofu.com/guides.html), [Free tools](https://getpofu.com/tools.html), [Comparisons](https://getpofu.com/compare.html); Turkish: [Rehberler](https://getpofu.com/rehberler.html)
+
 ## Free tools
 - [Period water weight calculator](https://getpofu.com/period-water-weight-calculator.html): enter your last period start, cycle length and scale change to see if it is likely cycle-related water retention; runs in the browser, stores nothing
 - [Regl kilosu su mu, yağ mı? (Turkish)](https://getpofu.com/regl-kilosu-su-mu-yag-mi.html)

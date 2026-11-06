@@ -159,6 +159,37 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/ru/cycle-calorie-calculator.html", "inLanguage": "ru", "mainEntity": [{"@type": "Question", "name": "Сколько калорий в день нужно есть женщине?", "acceptedAnswer": {"@type": "Answer", "text": "Это зависит от возраста, роста, веса и активности. Многие женщины поддерживают вес примерно при 1 800–2 400 ккал в день; этот калькулятор оценивает ваше значение по уравнению Миффлина — Сан-Жеора."}}, {"@type": "Question", "name": "Нужно ли есть больше в лютеиновой фазе?", "acceptedAnswer": {"@type": "Answer", "text": "Можно позволить себе чуть больше. Исследования показывают, что расход энергии в покое может немного расти, а многие едят в среднем примерно на 170 ккал больше, поэтому калькулятор добавляет небольшую надбавку 80–150 ккал. Пользоваться ею не обязательно."}}, {"@type": "Question", "name": "Считаются ли калории во время месячных?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Изменение расхода энергии в течение цикла невелико, поэтому калории учитываются каждый день."}}, {"@type": "Question", "name": "Какую самую низкую цель по калориям даёт этот калькулятор?", "acceptedAnswer": {"@type": "Answer", "text": "1 200 ккал в день. Опускаться ниже без наблюдения врача не рекомендуется."}}, {"@type": "Question", "name": "Предсказывает ли этот калькулятор мои месячные?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Он использует только дату начала последних месячных, чтобы показать сегодняшнюю фазу. Он не предсказывает ни месячные, ни овуляцию."}}]}
 </script>
+<style>/* nav:css:start */
+.top{position:relative}
+.top__in{flex-wrap:wrap;gap:.5rem .75rem}
+.top__in .btn{margin-inline-start:auto}
+.pnav{display:contents}
+.pnav__links{display:none}
+.pnav__m summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-width:44px;min-height:44px;padding:0 .8rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.95rem;line-height:1;cursor:pointer}
+.pnav__m summary::-webkit-details-marker{display:none}
+.pnav__m[open] summary{background:var(--soft,rgba(222,81,135,.12))}
+.pnav__m svg{width:20px;height:20px;flex:none}
+.pnav__m summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pnav__panel{position:absolute;inset-inline:0;top:100%;z-index:30;display:flex;flex-direction:column;padding:.4rem max(1rem,env(safe-area-inset-left)) 1rem;background:var(--bg,#fff);border-bottom:1px solid var(--line,rgba(0,0,0,.18));box-shadow:0 14px 26px rgba(0,0,0,.14)}
+.pnav__panel a,.pnav__links a{display:flex;align-items:center;min-height:44px;color:var(--ink,#222);font-weight:600;text-decoration:none}
+.pnav__panel a{padding:.4rem .2rem;border-bottom:1px solid var(--line,rgba(0,0,0,.14))}
+.pnav a[aria-current]{color:var(--pink-text,#A32F5E)}
+.pnav__panel a[aria-current]{box-shadow:inset 3px 0 0 var(--pink,#DE5187);padding-inline-start:.7rem}
+.pnav a:hover{text-decoration:underline}
+@media (max-width:24rem){.top__in{gap:.5rem}.top__in .btn{padding:.5rem .7rem;font-size:.85rem}.brand{font-size:1.1rem}}
+@media (min-width:30rem){.pnav__m summary span{position:static;width:auto;height:auto;clip:auto}}
+@media (min-width:44rem){
+.pnav__m{display:none}
+.pnav__links{display:flex;flex-wrap:wrap;gap:.35rem .5rem;flex-basis:100%;order:3;padding-bottom:.1rem}
+.pnav__links a{min-height:2.5rem;padding:0 .95rem;border:1px solid var(--line,rgba(0,0,0,.14));border-radius:999px;background:var(--card,#fff);font-size:.95rem}
+.pnav__links a[aria-current]{background:var(--soft,rgba(222,81,135,.12));border-color:transparent}
+}
+.pfoot{margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line,rgba(0,0,0,.14))}
+.pfoot nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 1rem;margin:0 0 .5rem}
+.pfoot strong{color:var(--ink,#222)}
+.pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
+.pfoot [aria-current]{font-weight:700}
+/* nav:css:end */</style>
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержимому</a>
@@ -166,6 +197,12 @@
 <div class="wrap top__in">
 <a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
 <a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_cycle_ru&amp;mt=8">Скачать приложение</a>
+<!-- nav:start -->
+<div class="pnav">
+<nav class="pnav__links" aria-label="Меню"><a href="guides.html">Руководства</a><a href="tools.html" aria-current="true">Инструменты</a><a href="kalorii/">Калории</a><a href="questions/">Вопросы</a><a href="compare.html">Сравнения</a></nav>
+<details class="pnav__m"><summary><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Меню</span></summary><nav class="pnav__panel" aria-label="Меню"><a href="guides.html">Руководства</a><a href="tools.html" aria-current="true">Инструменты</a><a href="kalorii/">Калории</a><a href="questions/">Вопросы</a><a href="compare.html">Сравнения</a></nav></details>
+</div>
+<!-- nav:end -->
 </div>
 </header>
 <main id="main" class="wrap">
@@ -250,6 +287,12 @@
 <p>Последнее обновление: <time datetime="2026-11-06">6 ноября 2026 г.</time>.</p>
 <p>Apple, iPhone и App Store являются товарными знаками Apple Inc. © 2026 Pofu.</p>
 </div>
+<!-- footnav:start -->
+<div class="wrap pfoot">
+<nav aria-label="Разделы"><strong>Разделы</strong><a href="guides.html">Руководства</a><a href="tools.html" aria-current="true">Инструменты</a><a href="kalorii/">Калории</a><a href="questions/">Вопросы</a><a href="compare.html">Сравнения</a></nav>
+<nav aria-label="Языки"><strong>Языки</strong><a href="../cycle-calorie-calculator.html" hreflang="en" lang="en">English</a><a href="../kadin-gunluk-kalori-ihtiyaci-hesaplama.html" hreflang="tr" lang="tr">Türkçe</a><a href="../de/cycle-calorie-calculator.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/cycle-calorie-calculator.html" hreflang="fr" lang="fr">Français</a><a href="../es/cycle-calorie-calculator.html" hreflang="es" lang="es">Español</a><a href="../it/cycle-calorie-calculator.html" hreflang="it" lang="it">Italiano</a><a href="../pt-BR/cycle-calorie-calculator.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../nl/cycle-calorie-calculator.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/cycle-calorie-calculator.html" hreflang="pl" lang="pl">Polski</a><a href="../uk/cycle-calorie-calculator.html" hreflang="uk" lang="uk">Українська</a><a href="../cs/cycle-calorie-calculator.html" hreflang="cs" lang="cs">Čeština</a><a href="../ro/cycle-calorie-calculator.html" hreflang="ro" lang="ro">Română</a><a href="../sv/cycle-calorie-calculator.html" hreflang="sv" lang="sv">Svenska</a><a href="../ja/cycle-calorie-calculator.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/cycle-calorie-calculator.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/cycle-calorie-calculator.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="../id/cycle-calorie-calculator.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../vi/cycle-calorie-calculator.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../th/cycle-calorie-calculator.html" hreflang="th" lang="th">ไทย</a><a href="../hi/cycle-calorie-calculator.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../ar/cycle-calorie-calculator.html" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
+<!-- footnav:end -->
 </footer>
 <script src="../assets/cycle-calories.js"></script>
 <script>window.__T = {"locale": "ru-RU", "phases": {"menstrual": "месячные", "follicular": "фолликулярная фаза", "ovulation": "период около овуляции", "luteal": "лютеиновая фаза", "unknown": "неопределённая фаза"}, "errors": {"age": "Введите возраст от 18 до 80 лет.", "height": "Введите свой рост (130–210 см).", "weight": "Введите свой вес (35–250 кг).", "activity": "Выберите уровень активности.", "goal": "Выберите цель.", "date": "Введите дату начала последних месячных или оставьте поле пустым.", "future": "Эта дата в будущем. Введите день, когда начались последние месячные.", "length": "Введите длину цикла от 21 до 40 дней."}, "todayHead": "Цель на сегодня · день цикла {day}, {phase}", "dailyHead": "Ваша дневная цель", "unknown": "С начала последних месячных прошло {day} дн., это больше вашего обычного цикла плюс неделя, поэтому фазу определить нельзя. Этот инструмент не предсказывает месячные.", "sTarget": "Дневная цель", "sLuteal": "Цель в лютеиновую фазу (+{a} ккал)", "sMaint": "Поддержание веса (TDEE)", "sProtein": "Белок в день", "floor": "Ваша цель установлена на 1 200 ккал — это самая низкая дневная цель, которую мы предлагаем. Опускаться ниже без врача или диетолога не рекомендуется.", "explain": "Надбавка на лютеиновую фазу намеренно небольшая: исследования показывают, что расход энергии в покое может немного вырасти перед месячными, и многие чувствуют себя голоднее. Это запас в вашем плане, а не правило есть больше.", "bridge": "<div class=\"bridge\"><p>Pofu использует эту же формулу. При включённом необязательном учёте цикла приложение само добавляет лютеиновую надбавку в нужные дни, и вы можете отключить его.</p><p class=\"cta\"><a href=\"https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_cycle_ru&amp;mt=8\"><img src=\"../assets/img/app-store-badge.png\" alt=\"Загрузите Pofu из App Store\" width=\"180\" height=\"60\"></a></p></div>"};</script>
