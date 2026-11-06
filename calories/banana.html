@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/calories/banana.html", "url": "https://getpofu.com/calories/banana.html", "name": "How many calories in banana? (1 piece, 120 g)", "description": "Banana: about 105 kcal per serving (1 piece, 120 g); 1.3 g protein, 27 g carbs, 0.4 g fat. Typical values used in the Pofu app.", "inLanguage": "en", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Banana", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "105 kcal", "proteinContent": "1.3 g", "carbohydrateContent": "27 g", "fatContent": "0.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/calories/"}, {"@type": "ListItem", "position": 3, "name": "Banana", "item": "https://getpofu.com/calories/banana.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/calories/banana.html", "url": "https://getpofu.com/calories/banana.html", "name": "How many calories in banana? (1 piece, 120 g)", "description": "Banana: about 105 kcal per serving (1 piece, 120 g); 1.3 g protein, 27 g carbs, 0.4 g fat. Typical values used in the Pofu app.", "inLanguage": "en", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Banana", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "105 kcal", "proteinContent": "1.3 g", "carbohydrateContent": "27 g", "fatContent": "0.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/calories/"}, {"@type": "ListItem", "position": 3, "name": "Banana", "item": "https://getpofu.com/calories/banana.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/calories/banana.html#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Banana: how many calories are in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "About 88 kcal per 100 g, with 1.1 g of protein, 22.5 g of carbohydrates and 0.3 g of fat."}}, {"@type": "Question", "name": "Banana: is it high in protein?", "acceptedAnswer": {"@type": "Answer", "text": "Not much: 1.3 g per portion, about 5% of its calories. Pair it with a protein food, such as eggs, yogurt, legumes, fish or chicken, if you want a more filling meal."}}, {"@type": "Question", "name": "Banana: how do I log it in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Take a photo of your plate or search for the name, then set the portion to what you actually ate. You can correct the estimate, and Pofu remembers your correction next time."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Smaller or larger portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Calories</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Half a portion (60 g)</th><td>52 kcal</td><td>0.7 g</td></tr>
+<tr><th scope="row">Typical portion (120 g)</th><td>105 kcal</td><td>1.3 g</td></tr>
+<tr><th scope="row">One and a half portions (180 g)</th><td>158 kcal</td><td>2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Where the calories come from</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:4%"></span><span class="sc" style="width:92%"></span><span class="sf" style="width:4%"></span></div>
+<p>4% of the calories come from protein, 92% from carbohydrates and 4% from fat. In short: most of the calories come from carbohydrates.</p>
+<p>One portion is about 5% of a 2,000 kcal day, the reference value used on food labels.</p>
+</section>
 <section id="why">
 <h2>Why the number varies</h2>
 <p>The result depends on how it was cooked and how much oil, butter or sugar went into it. Cooked and dry weights are very different, so a heaped plate and a level one can differ a lot. Brand, size and thickness change it further.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>How to log it in Pofu</h2>
 <p>Pofu is our app. To log this food, take a photo of your plate: Pofu estimates the food and portion and shows a confidence score, so you can see how sure it is and correct it. You can also search by name or scan a barcode, then set the serving to match what you ate. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_en&amp;mt=8">Get Pofu on the App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../assets/video/demo-scan.jpg" aria-label="Pofu app: logging a meal from a photo"><source src="../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Screen recording from the Pofu app (English interface): take a photo, check the estimate, add it to today.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Related foods</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">All foods</a></p>
 </section>
+<section id="faq">
+<h2>Questions about this food</h2>
+<h3>Banana: how many calories are in 100 g?</h3>
+<p>About 88 kcal per 100 g, with 1.1 g of protein, 22.5 g of carbohydrates and 0.3 g of fat.</p>
+<h3>Banana: is it high in protein?</h3>
+<p>Not much: 1.3 g per portion, about 5% of its calories. Pair it with a protein food, such as eggs, yogurt, legumes, fish or chicken, if you want a more filling meal.</p>
+<h3>Banana: how do I log it in Pofu?</h3>
+<p>Take a photo of your plate or search for the name, then set the portion to what you actually ate. You can correct the estimate, and Pofu remembers your correction next time.</p>
+</section>
 <section id="source">
-<p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion.</p>
+<p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion. <a href="../editorial-policy.html">How we prepare our content and sources</a>.</p>
 <div class="note"><p>This page is general information, not medical advice. If you are pregnant, breastfeeding, have a medical condition or a history of an eating disorder, talk to your doctor or dietitian before counting calories.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="This food in other languages" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><strong>English</strong> · <a href="../kalori/muz.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../de/kalorien/banane.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/calories/banane.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/calorias/platano.html" hreflang="es" lang="es">Español</a> · <a href="../pt-BR/calorias/banana.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../ar/saarat/banana.html" hreflang="ar" lang="ar">العربية</a> · <a href="../cs/kalorie/banan.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../hi/calories/banana.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../id/kalori/pisang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../it/calorie/banana.html" hreflang="it" lang="it">Italiano</a> · <a href="../ja/karori/banana.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/kallori/banana.html" hreflang="ko" lang="ko">한국어</a> · <a href="../nl/calorieen/banaan.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/kalorie/banan.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ro/calorii/banana.html" hreflang="ro" lang="ro">Română</a> · <a href="../ru/kalorii/banan.html" hreflang="ru" lang="ru">Русский</a> · <a href="../sv/kalorier/banan.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../th/khalori/banana.html" hreflang="th" lang="th">ไทย</a> · <a href="../uk/kalorii/banan.html" hreflang="uk" lang="uk">Українська</a> · <a href="../vi/calo/chuoi.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../zh-Hans/kaluli/banana.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explore"><strong>Explore</strong><a href="../guides.html">Guides</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">Compare</a></nav>
+<nav aria-label="Explore"><strong>Explore</strong><a href="../guides.html">Guides</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">Compare</a><a href="../editorial-policy.html">Content and sources</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

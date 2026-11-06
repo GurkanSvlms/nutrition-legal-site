@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/es/calorias/paella.html", "url": "https://getpofu.com/es/calorias/paella.html", "name": "¿Cuántas calorías hay en paella? (1 porción, 300 g)", "description": "Paella: unas 420 kcal por porción (1 porción, 300 g); 22 g de proteína, 50 g de carbohidratos, 14 g de grasa. Valores típicos que usa la app Pofu.", "inLanguage": "es", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Paella", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "420 kcal", "proteinContent": "22 g", "carbohydrateContent": "50 g", "fatContent": "14 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/es/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorías", "item": "https://getpofu.com/es/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Paella", "item": "https://getpofu.com/es/calorias/paella.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/es/calorias/paella.html", "url": "https://getpofu.com/es/calorias/paella.html", "name": "¿Cuántas calorías hay en paella? (1 porción, 300 g)", "description": "Paella: unas 420 kcal por porción (1 porción, 300 g); 22 g de proteína, 50 g de carbohidratos, 14 g de grasa. Valores típicos que usa la app Pofu.", "inLanguage": "es", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Paella", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "420 kcal", "proteinContent": "22 g", "carbohydrateContent": "50 g", "fatContent": "14 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/es/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorías", "item": "https://getpofu.com/es/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Paella", "item": "https://getpofu.com/es/calorias/paella.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/es/calorias/paella.html#faq", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "Paella: ¿cuántas calorías hay en 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Unas 140 kcal por 100 g, con 7,3 g de proteína, 16,7 g de carbohidratos y 4,7 g de grasa."}}, {"@type": "Question", "name": "Paella: ¿es rico en proteína?", "acceptedAnswer": {"@type": "Answer", "text": "Tiene algo de proteína: 22 g por ración, cerca del 21 % de sus calorías."}}, {"@type": "Question", "name": "Paella: ¿cómo lo registro en Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Ración más pequeña o más grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Ración</th><th scope="col">Calorías</th><th scope="col">Proteína</th></tr></thead>
+<tbody>
+<tr><th scope="row">Media ración (150 g)</th><td>210 kcal</td><td>11 g</td></tr>
+<tr><th scope="row">Ración habitual (300 g)</th><td>420 kcal</td><td>22 g</td></tr>
+<tr><th scope="row">Ración y media (450 g)</th><td>630 kcal</td><td>33 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De dónde vienen las calorías</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:21%"></span><span class="sc" style="width:48%"></span><span class="sf" style="width:31%"></span></div>
+<p>El 21 % de las calorías viene de la proteína, el 48 % de los carbohidratos y el 31 % de la grasa. En resumen: una mezcla de proteína, carbohidratos y grasa.</p>
+<p>Una ración equivale a cerca del 21 % de un día de 2.000 kcal, el valor de referencia que se usa en las etiquetas de los alimentos.</p>
+</section>
 <section id="why">
 <h2>Por qué varía el valor</h2>
 <p>Las recetas caseras y las de restaurante difieren en la cantidad de aceite, carne, queso y almidón, y en el tamaño de la porción. Toma el valor como punto de partida y ajusta la porción si tu plato fue más chico o más grande.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Cómo registrarlo en Pofu</h2>
 <p>Pofu es nuestra app. Para registrar este alimento, toma una foto de tu plato: Pofu estima la comida y la porción y muestra una puntuación de confianza, para que veas qué tan segura es la estimación y puedas corregirla. También puedes buscar por nombre o escanear un código de barras y ajustar la porción a lo que comiste. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_es&amp;mt=8">Descarga Pofu en el App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrar una comida a partir de una foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Grabación de pantalla de la app Pofu (interfaz en inglés): haz una foto, revisa la estimación y añádela a hoy.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimentos relacionados</h2>
@@ -213,10 +237,23 @@
 <li><a href="salmon-al-horno.html">Salmón al horno</a> <span class="k">· 280 kcal (1 porción, 150 g)</span></li>
 <li><a href="garbanzos-cocidos.html">Garbanzos cocidos</a> <span class="k">· 270 kcal (1 tazón, 200 g)</span></li>
 </ul>
+<h3>Opciones más ligeras del mismo grupo</h3>
+<ul class="foodlist">
+<li><a href="pozole.html">Pozole</a> <span class="k">· 80 kcal por 100 g</span></li>
+</ul>
 <p><a href="./">Todos los alimentos</a></p>
 </section>
+<section id="faq">
+<h2>Preguntas sobre este alimento</h2>
+<h3>Paella: ¿cuántas calorías hay en 100 g?</h3>
+<p>Unas 140 kcal por 100 g, con 7,3 g de proteína, 16,7 g de carbohidratos y 4,7 g de grasa.</p>
+<h3>Paella: ¿es rico en proteína?</h3>
+<p>Tiene algo de proteína: 22 g por ración, cerca del 21 % de sus calorías.</p>
+<h3>Paella: ¿cómo lo registro en Pofu?</h3>
+<p>Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez.</p>
+</section>
 <section id="source">
-<p class="fine">Valores: estimaciones típicas que usa la app Pofu; varían según la receta y la porción.</p>
+<p class="fine">Valores: estimaciones típicas que usa la app Pofu; varían según la receta y la porción. <a href="../editorial-policy.html">Cómo preparamos nuestros contenidos y fuentes</a>.</p>
 <div class="note"><p>Esta página es información general, no consejo médico. Si estás embarazada, en período de lactancia, tienes una condición médica o antecedentes de trastorno alimentario, habla con tu médico o nutricionista antes de contar calorías.</p></div>
 </section>
 </main>
@@ -233,7 +270,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guías</a><a href="../tools.html">Herramientas</a><a href="./" aria-current="true">Calorías</a><a href="../questions/">Preguntas</a><a href="../compare.html">Comparativas</a></nav>
+<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guías</a><a href="../tools.html">Herramientas</a><a href="./" aria-current="true">Calorías</a><a href="../questions/">Preguntas</a><a href="../compare.html">Comparativas</a><a href="../editorial-policy.html">Contenidos y fuentes</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

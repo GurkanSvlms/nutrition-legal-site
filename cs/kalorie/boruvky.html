@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/cs/kalorie/boruvky.html", "url": "https://getpofu.com/cs/kalorie/boruvky.html", "name": "Kolik kalorií má Borůvky? (1 miska, 150 g)", "description": "Borůvky: asi 85 kcal na porci (1 miska, 150 g); 1,1 g bílkovin, 21 g sacharidů, 0,5 g tuku. Typické hodnoty z veřejných databází složení potravin a z aplikace Pofu.", "inLanguage": "cs", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Borůvky", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "85 kcal", "proteinContent": "1.1 g", "carbohydrateContent": "21 g", "fatContent": "0.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/cs/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/cs/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Borůvky", "item": "https://getpofu.com/cs/kalorie/boruvky.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/cs/kalorie/boruvky.html", "url": "https://getpofu.com/cs/kalorie/boruvky.html", "name": "Kolik kalorií má Borůvky? (1 miska, 150 g)", "description": "Borůvky: asi 85 kcal na porci (1 miska, 150 g); 1,1 g bílkovin, 21 g sacharidů, 0,5 g tuku. Typické hodnoty z veřejných databází složení potravin a z aplikace Pofu.", "inLanguage": "cs", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Borůvky", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "85 kcal", "proteinContent": "1.1 g", "carbohydrateContent": "21 g", "fatContent": "0.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/cs/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/cs/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Borůvky", "item": "https://getpofu.com/cs/kalorie/boruvky.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/cs/kalorie/boruvky.html#faq", "inLanguage": "cs", "mainEntity": [{"@type": "Question", "name": "Borůvky: kolik kalorií je ve 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Asi 57 kcal na 100 g, z toho 0,7 g bílkovin, 14 g sacharidů a 0,3 g tuku."}}, {"@type": "Question", "name": "Borůvky: obsahuje hodně bílkovin?", "acceptedAnswer": {"@type": "Answer", "text": "Moc ne: 1,1 g na porci, což je asi 5 % kalorií. Pokud chceš sytější jídlo, doplň ho bílkovinnou potravinou, například vejci, tvarohem, jogurtem, luštěninami, rybou nebo kuřecím masem."}}, {"@type": "Question", "name": "Borůvky: jak to zapíšu v Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Vyfoť talíř nebo vyhledej název a nastav porci podle toho, kolik jsi opravdu snědla. Odhad můžeš opravit a Pofu si tvou opravu příště zapamatuje."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Menší nebo větší porce</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porce</th><th scope="col">Kalorie</th><th scope="col">Bílkoviny</th></tr></thead>
+<tbody>
+<tr><th scope="row">Půl porce (75 g)</th><td>42 kcal</td><td>0,6 g</td></tr>
+<tr><th scope="row">Obvyklá porce (150 g)</th><td>85 kcal</td><td>1,1 g</td></tr>
+<tr><th scope="row">Půldruhé porce (225 g)</th><td>128 kcal</td><td>1,7 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Odkud se berou kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:5%"></span><span class="sc" style="width:90%"></span><span class="sf" style="width:5%"></span></div>
+<p>5 % kalorií pochází z bílkovin, 90 % ze sacharidů a 5 % z tuku. Stručně: lehká potravina, která je většinou z vody.</p>
+<p>Jedna porce je asi 4 % dne o 2 000 kcal, tedy referenční hodnoty používané na etiketách potravin.</p>
+</section>
 <section id="why">
 <h2>Proč se hodnota liší</h2>
 <p>Tyto potraviny jsou převážně voda. Proto víc než recept záleží na velikosti porce a skutečné hmotnosti. Velikost, zralost a přísady jako cukr, dresink, olej nebo mléko hodnotu mění.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Jak to zapsat v Pofu</h2>
 <p>Pofu je naše aplikace. Chcete-li tuto potravinu zapsat, vyfoťte talíř: Pofu odhadne jídlo i porci a ukáže míru jistoty, takže vidíte, jak spolehlivý odhad je, a můžete ho upravit. Můžete také hledat podle názvu nebo naskenovat čárový kód a porci nastavit podle skutečného množství. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_cs&amp;mt=8">Stáhnout Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikace Pofu: zapsání jídla podle fotky"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Záznam obrazovky z aplikace Pofu (anglické rozhraní): vyfoť, zkontroluj odhad, přidej do dnešního dne.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobné potraviny</h2>
@@ -234,10 +258,25 @@
 <li><a href="bramboracka.html">Bramboračka</a> <span class="k">· 156 kcal (1 talíř, 300 g)</span></li>
 <li><a href="rohlik.html">Rohlík</a> <span class="k">· 130 kcal (1 kus, 43 g)</span></li>
 </ul>
+<h3>Lehčí možnosti ze stejné skupiny</h3>
+<ul class="foodlist">
+<li><a href="latte.html">Latte</a> <span class="k">· 43 kcal na 100 g</span></li>
+<li><a href="brokolice.html">Brokolice</a> <span class="k">· 37 kcal na 100 g</span></li>
+<li><a href="jahody.html">Jahody</a> <span class="k">· 33 kcal na 100 g</span></li>
+</ul>
 <p><a href="./">Všechny potraviny</a></p>
 </section>
+<section id="faq">
+<h2>Otázky k této potravině</h2>
+<h3>Borůvky: kolik kalorií je ve 100 g?</h3>
+<p>Asi 57 kcal na 100 g, z toho 0,7 g bílkovin, 14 g sacharidů a 0,3 g tuku.</p>
+<h3>Borůvky: obsahuje hodně bílkovin?</h3>
+<p>Moc ne: 1,1 g na porci, což je asi 5 % kalorií. Pokud chceš sytější jídlo, doplň ho bílkovinnou potravinou, například vejci, tvarohem, jogurtem, luštěninami, rybou nebo kuřecím masem.</p>
+<h3>Borůvky: jak to zapíšu v Pofu?</h3>
+<p>Vyfoť talíř nebo vyhledej název a nastav porci podle toho, kolik jsi opravdu snědla. Odhad můžeš opravit a Pofu si tvou opravu příště zapamatuje.</p>
+</section>
 <section id="source">
-<p class="fine">Hodnoty: typické odhady z veřejných databází složení potravin a z aplikace Pofu; liší se podle receptu a porce.</p>
+<p class="fine">Hodnoty: typické odhady z veřejných databází složení potravin a z aplikace Pofu; liší se podle receptu a porce. <a href="../editorial-policy.html">Jak připravujeme obsah a zdroje</a>.</p>
 <div class="note"><p>Tato stránka slouží k obecné informaci a není lékařskou radou. Jste-li těhotná, kojíte, máte onemocnění nebo jste dříve měla poruchu příjmu potravy, proberte počítání kalorií se svým lékařem nebo nutričním terapeutem.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Tato potravina v dalších jazycích" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/blueberries.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/yaban-mersini.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/heidelbeeren.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/myrtilles.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/arandanos.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/mirtilos.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/blueberries.html" hreflang="ar" lang="ar">العربية</a> · <strong>Čeština</strong> · <a href="../../hi/calories/blueberries.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/blueberry.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/mirtilli.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/blueberries.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/blueberries.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/blauwe-bessen.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/borowki.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/afine.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/golubika.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/blabar.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/blueberries.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/lokhyna.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/viet-quat.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/blueberries.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Prozkoumat"><strong>Prozkoumat</strong><a href="../guides.html">Průvodci</a><a href="../tools.html">Nástroje</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Otázky</a><a href="../compare.html">Srovnání</a></nav>
+<nav aria-label="Prozkoumat"><strong>Prozkoumat</strong><a href="../guides.html">Průvodci</a><a href="../tools.html">Nástroje</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Otázky</a><a href="../compare.html">Srovnání</a><a href="../editorial-policy.html">Obsah a zdroje</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

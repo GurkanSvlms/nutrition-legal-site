@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html", "url": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html", "name": "Quantas calorias há em carne moída (15%)? (1 porção, 100 g)", "description": "Carne moída (15%): cerca de 250 kcal por porção (1 porção, 100 g); 26 g de proteína, 0 g de carboidratos, 16 g de gordura. Valores típicos usados no app Pofu.", "inLanguage": "pt-BR", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Carne moída (15%)", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "250 kcal", "proteinContent": "26 g", "carbohydrateContent": "0 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pt-BR/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorias", "item": "https://getpofu.com/pt-BR/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Carne moída (15%)", "item": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html", "url": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html", "name": "Quantas calorias há em carne moída (15%)? (1 porção, 100 g)", "description": "Carne moída (15%): cerca de 250 kcal por porção (1 porção, 100 g); 26 g de proteína, 0 g de carboidratos, 16 g de gordura. Valores típicos usados no app Pofu.", "inLanguage": "pt-BR", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Carne moída (15%)", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "250 kcal", "proteinContent": "26 g", "carbohydrateContent": "0 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pt-BR/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorias", "item": "https://getpofu.com/pt-BR/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Carne moída (15%)", "item": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pt-BR/calorias/carne-moida-15.html#faq", "inLanguage": "pt-BR", "mainEntity": [{"@type": "Question", "name": "Carne moída (15%): quantas calorias tem em 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Cerca de 250 kcal por 100 g, com 26 g de proteína, 0 g de carboidratos e 16 g de gordura."}}, {"@type": "Question", "name": "Carne moída (15%): é rico em proteína?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Uma porção tem 26 g de proteína, cerca de 42% das suas calorias."}}, {"@type": "Question", "name": "Carne moída (15%): como registrar no Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porção menor ou maior</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porção</th><th scope="col">Calorias</th><th scope="col">Proteína</th></tr></thead>
+<tbody>
+<tr><th scope="row">Meia porção (50 g)</th><td>125 kcal</td><td>13 g</td></tr>
+<tr><th scope="row">Porção típica (100 g)</th><td>250 kcal</td><td>26 g</td></tr>
+<tr><th scope="row">Uma porção e meia (150 g)</th><td>375 kcal</td><td>39 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De onde vêm as calorias</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:42%"></span><span class="sc" style="width:0%"></span><span class="sf" style="width:58%"></span></div>
+<p>42% das calorias vêm da proteína, 0% dos carboidratos e 58% da gordura. Resumindo: a maior parte das calorias vem da gordura, então uma pequena mudança na quantidade faz grande diferença.</p>
+<p>Uma porção é cerca de 12% de um dia de 2.000 kcal, o valor de referência usado nos rótulos dos alimentos.</p>
+</section>
 <section id="why">
 <h2>Por que o valor varia</h2>
 <p>A gordura é o que mais pesa. A quantidade de óleo, manteiga, queijo ou gordura de fritura, e o quanto a colher ou a concha vai cheia, muda as calorias mais do que qualquer outra coisa. Dois pratos parecidos podem ser bem diferentes.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Como registrar no Pofu</h2>
 <p>O Pofu é o nosso app. Para registrar este alimento, tire uma foto do seu prato: o Pofu estima a comida e a porção e mostra uma pontuação de confiança, para você ver o quanto ele tem certeza e corrigir se precisar. Você também pode buscar pelo nome ou escanear um código de barras e ajustar a porção ao que você comeu. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pt_br&amp;mt=8">Baixe o Pofu na App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrando uma refeição a partir de uma foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Gravação de tela do app Pofu (interface em inglês): tire uma foto, confira a estimativa e adicione ao dia de hoje.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimentos relacionados</h2>
@@ -234,10 +258,24 @@
 <li><a href="pao-de-queijo.html">Pão de queijo</a> <span class="k">· 90 kcal (1 unidade, 30 g)</span></li>
 <li><a href="coxinha.html">Coxinha</a> <span class="k">· 240 kcal (1 unidade, 90 g)</span></li>
 </ul>
+<h3>Opções mais leves do mesmo grupo</h3>
+<ul class="foodlist">
+<li><a href="salmao-assado.html">Salmão assado</a> <span class="k">· 187 kcal por 100 g</span></li>
+<li><a href="ovo-cozido.html">Ovo cozido</a> <span class="k">· 156 kcal por 100 g</span></li>
+</ul>
 <p><a href="./">Todos os alimentos</a></p>
 </section>
+<section id="faq">
+<h2>Perguntas sobre este alimento</h2>
+<h3>Carne moída (15%): quantas calorias tem em 100 g?</h3>
+<p>Cerca de 250 kcal por 100 g, com 26 g de proteína, 0 g de carboidratos e 16 g de gordura.</p>
+<h3>Carne moída (15%): é rico em proteína?</h3>
+<p>Sim. Uma porção tem 26 g de proteína, cerca de 42% das suas calorias.</p>
+<h3>Carne moída (15%): como registrar no Pofu?</h3>
+<p>Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez.</p>
+</section>
 <section id="source">
-<p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção.</p>
+<p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção. <a href="../editorial-policy.html">Como preparamos nossos conteúdos e fontes</a>.</p>
 <div class="note"><p>Esta página traz informações gerais e não é aconselhamento médico. Se você está grávida, amamentando, tem alguma condição de saúde ou histórico de transtorno alimentar, converse com seu médico ou nutricionista antes de contar calorias.</p></div>
 </section>
 </main>
@@ -256,7 +294,7 @@
 <nav class="langs" aria-label="Este alimento em outros idiomas" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/ground-beef-15-fat.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/dana-kiyma-15-yag.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/rinderhackfleisch-15-fett.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/boeuf-hache-15.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/carne-molida-15.html" hreflang="es" lang="es">Español</a> · <strong>Português (BR)</strong> · <a href="../../ar/saarat/ground-beef-15-fat.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/hovezi-mlete-maso.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/ground-beef-15-fat.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/daging-sapi-giling-15-lemak.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/carne-macinata-di-manzo-15-di-grasso.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/ground-beef-15-fat.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/ground-beef-15-fat.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/rundergehakt-15-vet.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/mielona-woowina-15-tuszczu.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/carne-de-vita-tocata.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/govyazhiy-farsh.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/notfars-15-fett.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/ground-beef-15-fat.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/yalovychyy-farsh.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/thit-bo-xay-15-mo.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/ground-beef-15-fat.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guias</a><a href="../tools.html">Ferramentas</a><a href="./" aria-current="true">Calorias</a><a href="../questions/">Perguntas</a><a href="../compare.html">Comparativos</a></nav>
+<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guias</a><a href="../tools.html">Ferramentas</a><a href="./" aria-current="true">Calorias</a><a href="../questions/">Perguntas</a><a href="../compare.html">Comparativos</a><a href="../editorial-policy.html">Conteúdo e fontes</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

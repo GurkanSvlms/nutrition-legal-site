@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/banan.html", "url": "https://getpofu.com/uk/kalorii/banan.html", "name": "Банан: скільки калорій? (1 шт., 120 g)", "description": "Банан: близько 105 ккал на порцію (1 шт., 120 g); 1,3 г білків, 27 г вуглеводів, 0,4 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Банан", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "105 kcal", "proteinContent": "1.3 g", "carbohydrateContent": "27 g", "fatContent": "0.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Банан", "item": "https://getpofu.com/uk/kalorii/banan.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/banan.html", "url": "https://getpofu.com/uk/kalorii/banan.html", "name": "Банан: скільки калорій? (1 шт., 120 g)", "description": "Банан: близько 105 ккал на порцію (1 шт., 120 g); 1,3 г білків, 27 г вуглеводів, 0,4 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Банан", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "105 kcal", "proteinContent": "1.3 g", "carbohydrateContent": "27 g", "fatContent": "0.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Банан", "item": "https://getpofu.com/uk/kalorii/banan.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/uk/kalorii/banan.html#faq", "inLanguage": "uk", "mainEntity": [{"@type": "Question", "name": "Банан: скільки калорій у 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Близько 88 ккал на 100 g, з них 1,1 г білка, 22,5 г вуглеводів і 0,3 г жиру."}}, {"@type": "Question", "name": "Банан: чи багато в ньому білка?", "acceptedAnswer": {"@type": "Answer", "text": "Небагато: 1,3 г на порцію, це близько 5% калорій. Якщо хочеш ситніший прийом їжі, поєднуй його з білковим продуктом, наприклад із яйцями, сиром, йогуртом, бобовими, рибою чи куркою."}}, {"@type": "Question", "name": "Банан: як записати це в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Менша або більша порція</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порція</th><th scope="col">Калорії</th><th scope="col">Білок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порції (60 g)</th><td>52 kcal</td><td>0,7 g</td></tr>
+<tr><th scope="row">Звичайна порція (120 g)</th><td>105 kcal</td><td>1,3 g</td></tr>
+<tr><th scope="row">Півтори порції (180 g)</th><td>158 kcal</td><td>2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Звідки беруться калорії</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:4%"></span><span class="sc" style="width:92%"></span><span class="sf" style="width:4%"></span></div>
+<p>4% калорій припадає на білок, 92% на вуглеводи та 4% на жир. Коротко: більшість калорій припадає на вуглеводи.</p>
+<p>Одна порція — це близько 5% дня на 2 000 ккал, тобто еталонного значення, яке використовують на етикетках продуктів.</p>
+</section>
 <section id="why">
 <h2>Чому значення відрізняється</h2>
 <p>Результат залежить від того, як приготовано страву і скільки в ній олії, вершкового масла чи цукру. Вага вареного й сухого продукту дуже різниться, тому порція з гіркою і рівна порція помітно відрізняються. Марка, розмір і товщина також впливають на значення.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Як записати це в Pofu</h2>
 <p>Pofu — наш застосунок. Щоб записати цей продукт, сфотографуйте тарілку: Pofu оцінить страву й порцію та покаже рівень упевненості, щоб ви бачили, наскільки точна оцінка, і могли її підправити. Можна також знайти страву за назвою або відсканувати штрихкод і підлаштувати порцію під реальну кількість. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_uk&amp;mt=8">Завантажити Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Застосунок Pofu: запис прийому їжі за фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запис екрана застосунку Pofu (інтерфейс англійською): зроби фото, перевір оцінку, додай до сьогоднішнього дня.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Схожі продукти</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Усі продукти</a></p>
 </section>
+<section id="faq">
+<h2>Запитання про цей продукт</h2>
+<h3>Банан: скільки калорій у 100 g?</h3>
+<p>Близько 88 ккал на 100 g, з них 1,1 г білка, 22,5 г вуглеводів і 0,3 г жиру.</p>
+<h3>Банан: чи багато в ньому білка?</h3>
+<p>Небагато: 1,3 г на порцію, це близько 5% калорій. Якщо хочеш ситніший прийом їжі, поєднуй його з білковим продуктом, наприклад із яйцями, сиром, йогуртом, бобовими, рибою чи куркою.</p>
+<h3>Банан: як записати це в Pofu?</h3>
+<p>Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу.</p>
+</section>
 <section id="source">
-<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції.</p>
+<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції. <a href="../editorial-policy.html">Як ми готуємо матеріали та джерела</a>.</p>
 <div class="note"><p>Ця сторінка має довідковий характер і не є медичною консультацією. Якщо ви вагітні, годуєте груддю, маєте захворювання або в минулому мали розлад харчової поведінки, обговоріть підрахунок калорій з лікарем або дієтологом.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Ця страва іншими мовами" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/banana.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/muz.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/banane.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/banane.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/platano.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/banana.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/banana.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/banan.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/banana.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/pisang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/banana.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/banana.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/banana.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/banaan.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/banan.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/banana.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/banan.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/banan.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/banana.html" hreflang="th" lang="th">ไทย</a> · <strong>Українська</strong> · <a href="../../vi/calo/chuoi.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/banana.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a></nav>
+<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a><a href="../editorial-policy.html">Матеріали та джерела</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

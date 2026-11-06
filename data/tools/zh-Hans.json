@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "zh-Hans", "locale": "zh-CN", "og_locale": "zh_CN", "og_img": "og-image.jpg", "us": false,
+    "skip": "跳到正文", "get_app": "获取应用", "pill": "免费工具 · 无需注册",
+    "byline": "作者：Ali Gürkan Sevilmiş，Pofu开发者 · 2026年11月6日",
+    "submit": "计算",
+    "privacy": "所有内容都在你的浏览器中计算。你输入的任何信息都不会被发送或保存。",
+    "f_age": "年龄", "f_system": "单位", "sys_us": "美制（ft、lb）", "sys_metric": "公制（cm、kg）",
+    "f_height": "身高", "a_ft": "身高（英尺）", "a_in": "身高（英寸）", "f_weight": "当前体重",
+    "f_activity": "活动水平",
+    "activity": {
+      "sedentary": "以久坐为主（坐办公室，几乎不运动）",
+      "light": "轻度活动（每周 1–3 天轻度运动）",
+      "moderate": "中度活动（每周 3–5 天运动）",
+      "active": "非常活跃（每周 6–7 天高强度运动）",
+      "very_active": "极度活跃（体力工作加训练）"
+    },
+    "errors": {
+      "age": "请输入 18 到 80 之间的年龄。",
+      "height": "请输入你的身高（130–210 cm）。",
+      "weight": "请输入你的体重（35–250 kg）。",
+      "activity": "请选择活动水平。",
+      "goal": "请选择目标。"
+    },
+    "how_h": "这个计算器如何工作",
+    "src_h": "参考来源",
+    "method_note": "这些公式来自上面列出的已发表资料，与 Pofu 应用使用的规则一致。本页未经营养师审核；我们会对照这些资料进行核对，并在资料更新时同步修改。",
+    "faq_h": "常见问题",
+    "rel_h": "更多免费工具",
+    "medical": "本计算器提供的是面向成年人的一般性估算，不构成医疗建议。如果你正在怀孕或哺乳、患有肾病或糖尿病等疾病，或有进食障碍史，请在改变饮食方式之前先咨询医生或营养师。",
+    "badge_alt": "在App Store下载Pofu",
+    "foot_nav": "法律与支持", "privacy_l": "隐私", "terms_l": "条款", "support_l": "支持",
+    "updated": "最后更新：<time datetime=\"2026-11-06\">2026年11月6日</time>。",
+    "tm": "Apple、iPhone和App Store是Apple Inc.的商标。© 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "蛋白质摄入量计算器（女性）：每天吃多少克？ | Pofu",
+      "og_title": "女性蛋白质摄入量计算器",
+      "desc": "免费的女性蛋白质摄入量计算器。按维持体重、减脂或增肌，算出每天需要的蛋白质克数，并分配到每一餐，同时附上背后的研究依据。",
+      "h1": "女性蛋白质摄入量计算器",
+      "lede": "每天需要吃多少蛋白质？输入体重和目标，就能得到每日目标克数，以及每餐大约需要多少。",
+      "tool_h": "计算你的蛋白质摄入量",
+      "f_goal": "目标",
+      "goals": {"maintain": "保持健康、维持体重", "lose": "减重", "muscle": "增肌或变得更有力量"},
+      "res_head": "你每天的蛋白质摄入量",
+      "s_meal3": "每天 3 餐时，每餐",
+      "s_meal4": "每天 4 餐时，每餐",
+      "s_range": "研究中使用的范围（1.2–2.0 g/kg）",
+      "explain": "把蛋白质分配到每一餐，比一次吃完更容易做到。对大多数健康的人来说，吃得比这个更多并无害处，但通常也不会带来额外的好处。",
+      "how": [
+        "<strong>维持：</strong>每天每公斤体重 1.4 g 蛋白质。",
+        "<strong>减重：</strong>每公斤 1.6 g。吃得少的时候，多一点蛋白质有助于保住肌肉，也更耐饿。",
+        "<strong>增肌：</strong>每公斤 1.8 g，并配合力量训练。",
+        "结果限制在每天 75 到 230 g 之间，并平均分配到 3 餐或 4 餐。"
+      ],
+      "note": "成年人避免缺乏的最低量约为每公斤 0.8 g。上面更高的数值适用于活跃的女性和减重期，研究显示这时有益处。这与 Pofu 应用使用的规则相同。",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017（国际运动营养学会立场声明：蛋白质与运动；活跃人群为 1.4–2.0 g/kg）。",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a>. Br J Sports Med, 2018（益处在约 1.6 g/kg 时趋于平稳）。",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005（成年人最低 0.8 g/kg）。"
+      ],
+      "faq": [
+        ["女性每天需要吃多少蛋白质？", "成年人的最低量约为每公斤体重 0.8 g。对活跃的女性和减重期，研究支持每公斤约 1.2 到 2.0 g。对一位正在减重、体重 65 kg 的女性，这个计算器给出每天 104 g。"],
+        ["女性每天吃 100 g 蛋白质是不是太多？", "对大多数健康女性来说不算多，它在活跃人群的研究范围之内。如果你有肾病，请先咨询医生。"],
+        ["每餐应该吃多少蛋白质？", "把每日目标除以餐数即可。每天 104 g、3 餐的话，每餐约 35 g，比如一份鸡胸肉，或者一块鱼配一个鸡蛋和一份豆腐。"],
+        ["蛋白质有助于减重吗？", "它能帮你在吃得少的时候保住肌肉，也更耐饿。不过减重归根结底还是要吃得比消耗的热量少。"],
+        ["应该按当前体重还是目标体重来算？", "请用当前体重。如果体重很高，用一个较低的参考体重会得到更现实的数字；每天 230 g 的上限也能让结果保持合理。"]
+      ],
+      "bridge": "Pofu 用同样的规则设定你的蛋白质目标，并通过拍照、扫条码或搜索，显示你今天已经吃了多少。"
+    },
+    "macro": {
+      "title": "宏量营养素计算器（女性）：每天碳水、蛋白质和脂肪 | Pofu",
+      "og_title": "女性宏量营养素计算器",
+      "desc": "免费的女性宏量营养素计算器。按维持体重、减脂或增肌，算出每天的热量，以及蛋白质、碳水化合物和脂肪的克数。",
+      "h1": "女性宏量营养素计算器",
+      "lede": "把每天的热量分配成蛋白质、碳水化合物和脂肪，同时给出克数和占总热量的比例。",
+      "tool_h": "计算你的宏量营养素",
+      "f_goal": "目标",
+      "goals": {"maintain": "维持体重", "lose_slow": "缓慢减重（每天约 −250 kcal）", "lose": "减重（每天约 −400 kcal）", "lose_fast": "较快减重（每天约 −550 kcal）", "muscle": "增肌（每天约 +225 kcal）"},
+      "res_head": "你每天的热量和宏量营养素",
+      "s_p": "蛋白质", "s_c": "碳水化合物", "s_f": "脂肪",
+      "pct": "占热量的 {p}%",
+      "floor": "你的热量已设为 1,200 kcal，这是我们建议的每日最低目标。没有医生或营养师的指导，不建议再低。",
+      "explain": "先确定蛋白质，脂肪设为热量的 28%，其余由碳水化合物补足。吃够热量比每一克都精确更重要，差几克没有关系。",
+      "how": [
+        "<strong>热量：</strong>女性适用的 Mifflin-St Jeor 公式 × 你的活动系数（1.2 到 1.9），再加上你的目标。永远不低于 1,200 kcal。",
+        "<strong>蛋白质：</strong>维持每公斤 1.4 g，减重每公斤 1.6 g，增肌每公斤 1.8 g（75–230 g）。",
+        "<strong>脂肪：</strong>占热量的 28%，每天至少 40 g。",
+        "<strong>碳水化合物：</strong>剩下的热量，每天至少 50 g。蛋白质和碳水化合物每克 4 kcal，脂肪每克 9 kcal。"
+      ],
+      "note": "28% 的脂肪处在成年人推荐的 20–35% 范围内，碳水化合物通常落在 40–50% 左右。这与 Pofu 应用使用的规则相同。",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990（健康成年人静息能量消耗的新预测公式）。",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005（脂肪 20–35%，碳水化合物 45–65%）。",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017。"
+      ],
+      "faq": [
+        ["女性适合什么样的宏量营养素比例？", "没有唯一最好的比例。常见且容易坚持的分配大约是蛋白质 25–30%、脂肪 28–30%，其余是碳水化合物。选一个你能长期做到的，先把总热量吃对。"],
+        ["减重时宏量营养素怎么分配比较好？", "吃得比消耗的热量少，并保持较高的蛋白质（约每公斤 1.6 g）。脂肪和碳水化合物可以按你的喜好分配。"],
+        ["宏量营养素一定要算得很精确吗？", "不用。蛋白质和碳水化合物相差 10 g 左右、脂肪相差 5 g 左右，就算足够接近。一周的平均值比单独某一天更重要。"],
+        ["女性吃低碳水更好吗？", "在热量相同的情况下，比较低碳水和低脂饮食的研究发现，减重效果相近。选更适合你的饮食习惯和精力状态的那种就好。"],
+        ["月经周期里宏量营养素需要调整吗？", "变化不大。有些人经前会更容易饿；我们的周期热量计算器为这个阶段提供了一小份可选的额外热量。"]
+      ],
+      "bridge": "Pofu 帮你记录这些宏量营养素：给餐食拍张照，它会估算热量、蛋白质、碳水化合物和脂肪，你也可以自己修改。"
+    },
+    "deficit": {
+      "title": "热量缺口计算器：按目标日期算每天吃多少热量 | Pofu",
+      "og_title": "按目标日期计算的热量缺口计算器",
+      "desc": "免费的女性热量缺口计算器。输入目标体重和日期，看看每天需要摄入多少热量，以及这个速度是否安全。",
+      "h1": "按目标日期计算的热量缺口计算器",
+      "lede": "想在某个日期前达到目标体重？看看每天需要多少热量；如果速度太快，还会给出一个更现实的日期。",
+      "tool_h": "计算你的热量缺口",
+      "f_goal_kg": "目标体重",
+      "f_date": "目标日期",
+      "errors": {
+        "goalkg": "请输入比当前体重更低的目标体重。这个工具用于减重。",
+        "date": "请选择一个未来的目标日期。",
+        "nodeficit": "你的维持热量已经接近 1,200 kcal，所以我们无法建议安全的热量缺口。请就你的目标咨询医生或营养师。"
+      },
+      "res_ok": "要在 {date} 前达到 {goal}，每天大约摄入",
+      "s_target": "安全速度下的每日热量",
+      "s_deficit": "每日热量缺口",
+      "s_week": "预计每周减重",
+      "s_maint": "维持热量（TDEE）",
+      "too_fast": "这个日期需要每天 {need} kcal 的热量缺口，超过了我们建议的每天 {max} kcal。按每天 {target} kcal 的安全速度，你大约会在 {date} 达到 {goal}。",
+      "low_goal": "按你的身高，你的目标体重低于 BMI 18.5，属于体重过低。请与医生确认你的目标。",
+      "explain": "这只是估算：减重通常会随时间变慢，水分也会让体重秤上的数字每天不同，经前尤其明显。请比较每周平均值，而不是某一天的数字。",
+      "how": [
+        "<strong>维持热量：</strong>女性适用的 Mifflin-St Jeor 公式 × 你的活动系数（1.2 到 1.9）。",
+        "<strong>所需热量缺口：</strong>要减的体重 × 每公斤 7,700 kcal，再除以距离目标日期的天数。",
+        "<strong>安全上限：</strong>最多比维持热量低每天 550 kcal，且每天不低于 1,200 kcal。如果你的日期需要更多，计算器会显示按安全速度大约何时能达到。",
+        "最快的速度约为每周 0.5 kg，与常见的公共卫生建议一致。"
+      ],
+      "note": "每公斤 7,700 kcal 是广泛使用的估算值。随着体重下降，身体消耗的能量会减少，所以头几周之后实际减重往往更慢，请把日期当作参考。",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> Int J Obes, 2008（每减一个单位体重需要多少能量缺口？）。",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990。",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a>（展示减重如何随时间变慢的研究模型）。",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a>（每周约 0.5 到 1 kg）。"
+      ],
+      "faq": [
+        ["热量缺口应该多大？", "对大多数女性来说，比维持热量每天少 250 到 550 kcal 是可以坚持的，大约相当于每周减 0.25 到 0.5 kg。缺口更大会更难坚持，还可能损失肌肉。"],
+        ["减 5 kg 需要多久？", "每天缺口 550 kcal 的话约 10 周；每天 400 kcal 的话约 14 周。实际进度往往会稍慢一些。"],
+        ["为什么这个计算器不让我吃到 1,200 kcal 以下？", "每天低于 1,200 kcal，很难从食物中获得足够的营养。要再低，只应在医疗监督下进行。"],
+        ["7,700 kcal 真的等于一公斤吗？", "这是对体脂的粗略估算。刚开始时有一部分减掉的是水分，之后身体还会适应，所以这条规则只是参考，不是承诺。"],
+        ["明明有热量缺口，为什么体重反而上升了？", "水分、盐分、一顿吃得多一些，以及经前的几天，都可能让体重秤上的数字上升几天。请看 2 到 4 周的整体趋势。"]
+      ],
+      "bridge": "在 Pofu 里，你可以设定目标体重和速度；应用会用同样的规则计算你的每日目标，并以每周趋势显示你的进展。"
+    },
+    "bmi": {
+      "title": "BMI计算器（女性）：你的身高对应的健康体重范围 | Pofu",
+      "og_title": "女性BMI计算器",
+      "desc": "免费的成年女性BMI计算器。查看你的体质指数、它的含义，以及你的身高对应的健康体重范围，并了解BMI的局限。",
+      "h1": "女性BMI计算器",
+      "lede": "计算你的体质指数，并查看你的身高对应的健康体重范围。",
+      "tool_h": "计算你的BMI",
+      "res_head": "你的BMI",
+      "cats": {"under": "体重过低（低于 18.5）", "normal": "健康体重（18.5 到 24.9）", "over": "超重（25 到 29.9）", "obese": "肥胖（30 及以上）"},
+      "range": "你的身高对应的健康体重范围大约是 {low} 到 {high}。",
+      "explain": "BMI 只是一个快速筛查的数字，不是诊断。它分不清肌肉和脂肪，所以肌肉很发达的女性数值可能偏高；它也不适用于孕期。",
+      "how": [
+        "<strong>公式：</strong>体重（kg）除以身高（m）的平方（kg/m²）。",
+        "<strong>分类（WHO，成年人）：</strong>低于 18.5 体重过低，18.5–24.9 健康，25–29.9 超重，30 及以上肥胖。",
+        "<strong>健康范围：</strong>在你的身高下，BMI 为 18.5 到 24.9 的体重。",
+        "女性和男性使用同一个公式；它不适用于儿童、青少年和孕期。"
+      ],
+      "note": "我国成年人的国家标准与此不同：BMI 24 及以上为超重，28 及以上为肥胖，而这个计算器显示的是 WHO 分类（25 及以上超重，30 及以上肥胖）。WHO 也指出，对部分亚洲人群来说，健康风险会在更低的 BMI（约从 23 起）出现。结合腰围和你自己的感受来看，会比只看数字更全面。",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a>（肥胖与超重情况说明）。",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004（适合亚洲人群的体质指数）。"
+      ],
+      "faq": [
+        ["女性的健康BMI是多少？", "对成年人来说，BMI 在 18.5 到 24.9 之间属于健康体重。女性和男性使用相同的范围。"],
+        ["女性的BMI标准不一样吗？", "公式和分类都相同。在相同BMI下，女性的体脂通常比男性高，这也是BMI只能作为粗略参考的原因之一。"],
+        ["BMI准确吗？", "它适合用于群体和作为初步检查，但并不测量体脂。肌肉量、年龄和体型都会改变同一个BMI对你的意义。"],
+        ["我的身高对应多重的体重才合适？", "只要体重对应的BMI在 18.5 到 24.9 之间，就在健康范围内。身高 165 cm 的话，大约是 50 到 68 kg。"],
+        ["怀孕期间可以用BMI吗？", "不可以。孕期的体重增长，请遵循助产士或医生的建议。"]
+      ],
+      "bridge": "Pofu 关注的是习惯，而不是某一个数字：每日热量和蛋白质、每周的体重趋势，以及宽限日，让漏记一天也不会中断你的连续记录。"
+    }
+  }
+}

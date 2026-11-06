@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/fr/calories/myrtilles.html", "url": "https://getpofu.com/fr/calories/myrtilles.html", "name": "Myrtilles : combien de calories ? (1 bol, 150 g)", "description": "Myrtilles : environ 85 kcal par portion (1 bol, 150 g) ; 1,1 g de protéines, 21 g de glucides, 0,5 g de lipides. Valeurs typiques utilisées dans l’appli Pofu.", "inLanguage": "fr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Myrtilles", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "85 kcal", "proteinContent": "1.1 g", "carbohydrateContent": "21 g", "fatContent": "0.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/fr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/fr/calories/"}, {"@type": "ListItem", "position": 3, "name": "Myrtilles", "item": "https://getpofu.com/fr/calories/myrtilles.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/fr/calories/myrtilles.html", "url": "https://getpofu.com/fr/calories/myrtilles.html", "name": "Myrtilles : combien de calories ? (1 bol, 150 g)", "description": "Myrtilles : environ 85 kcal par portion (1 bol, 150 g) ; 1,1 g de protéines, 21 g de glucides, 0,5 g de lipides. Valeurs typiques utilisées dans l’appli Pofu.", "inLanguage": "fr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Myrtilles", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "85 kcal", "proteinContent": "1.1 g", "carbohydrateContent": "21 g", "fatContent": "0.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/fr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/fr/calories/"}, {"@type": "ListItem", "position": 3, "name": "Myrtilles", "item": "https://getpofu.com/fr/calories/myrtilles.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/fr/calories/myrtilles.html#faq", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "Myrtilles : combien de calories pour 100 g ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ 57 kcal pour 100 g, avec 0,7 g de protéines, 14 g de glucides et 0,3 g de lipides."}}, {"@type": "Question", "name": "Myrtilles : est-ce riche en protéines ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas beaucoup : 1,1 g par portion, soit environ 5 % de ses calories. Associe-le à un aliment riche en protéines, comme des œufs, du yaourt, des légumineuses, du poisson ou du poulet, si tu veux un repas plus rassasiant."}}, {"@type": "Question", "name": "Myrtilles : comment l’enregistrer dans Pofu ?", "acceptedAnswer": {"@type": "Answer", "text": "Prends ton assiette en photo ou cherche le nom, puis règle la portion sur ce que tu as vraiment mangé. Tu peux corriger l’estimation, et Pofu retient ta correction pour la prochaine fois."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Portion plus petite ou plus grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Calories</th><th scope="col">Protéines</th></tr></thead>
+<tbody>
+<tr><th scope="row">Une demi-portion (75 g)</th><td>42 kcal</td><td>0,6 g</td></tr>
+<tr><th scope="row">Portion habituelle (150 g)</th><td>85 kcal</td><td>1,1 g</td></tr>
+<tr><th scope="row">Une portion et demie (225 g)</th><td>128 kcal</td><td>1,7 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>D’où viennent les calories</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:5%"></span><span class="sc" style="width:90%"></span><span class="sf" style="width:5%"></span></div>
+<p>5 % des calories viennent des protéines, 90 % des glucides et 5 % des lipides. En bref : un aliment léger, composé surtout d’eau.</p>
+<p>Une portion représente environ 4 % d’une journée à 2 000 kcal, la valeur de référence utilisée sur les étiquettes alimentaires.</p>
+</section>
 <section id="why">
 <h2>Pourquoi la valeur varie</h2>
 <p>Ces aliments sont surtout composés d’eau : la taille de la portion et le poids réel comptent plus que la recette. La taille, la maturité et les ajouts comme le sucre, la vinaigrette, l’huile ou le lait font varier la valeur.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Comment l’enregistrer dans Pofu</h2>
 <p>Pofu est notre appli. Pour enregistrer cet aliment, prenez votre assiette en photo : Pofu estime le plat et la portion et affiche un score de confiance, pour que vous voyiez son degré de certitude et puissiez corriger. Vous pouvez aussi chercher par nom ou scanner un code-barres, puis régler la portion selon ce que vous avez mangé. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_fr&amp;mt=8">Découvrir Pofu sur l’App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Appli Pofu : enregistrer un repas à partir d’une photo"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Enregistrement d’écran de l’appli Pofu (interface en anglais) : prends une photo, vérifie l’estimation, ajoute-la à aujourd’hui.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Aliments similaires</h2>
@@ -234,10 +258,25 @@
 <li><a href="ratatouille.html">Ratatouille</a> <span class="k">· 150 kcal (1 portion, 250 g)</span></li>
 <li><a href="soupe-a-l-oignon.html">Soupe à l&#x27;oignon</a> <span class="k">· 220 kcal (1 bol, 300 g)</span></li>
 </ul>
+<h3>Options plus légères dans le même groupe</h3>
+<ul class="foodlist">
+<li><a href="cafe-latte.html">Café latte</a> <span class="k">· 43 kcal pour 100 g</span></li>
+<li><a href="brocoli.html">Brocoli</a> <span class="k">· 37 kcal pour 100 g</span></li>
+<li><a href="fraises.html">Fraises</a> <span class="k">· 33 kcal pour 100 g</span></li>
+</ul>
 <p><a href="./">Tous les aliments</a></p>
 </section>
+<section id="faq">
+<h2>Questions sur cet aliment</h2>
+<h3>Myrtilles : combien de calories pour 100 g ?</h3>
+<p>Environ 57 kcal pour 100 g, avec 0,7 g de protéines, 14 g de glucides et 0,3 g de lipides.</p>
+<h3>Myrtilles : est-ce riche en protéines ?</h3>
+<p>Pas beaucoup : 1,1 g par portion, soit environ 5 % de ses calories. Associe-le à un aliment riche en protéines, comme des œufs, du yaourt, des légumineuses, du poisson ou du poulet, si tu veux un repas plus rassasiant.</p>
+<h3>Myrtilles : comment l’enregistrer dans Pofu ?</h3>
+<p>Prends ton assiette en photo ou cherche le nom, puis règle la portion sur ce que tu as vraiment mangé. Tu peux corriger l’estimation, et Pofu retient ta correction pour la prochaine fois.</p>
+</section>
 <section id="source">
-<p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion.</p>
+<p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion. <a href="../editorial-policy.html">Comment nous préparons nos contenus et nos sources</a>.</p>
 <div class="note"><p>Cette page donne des informations générales et ne constitue pas un avis médical. Si vous êtes enceinte, si vous allaitez, si vous avez un problème de santé ou des antécédents de trouble alimentaire, parlez-en à votre médecin ou à votre diététicien(ne) avant de compter les calories.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Cet aliment dans d’autres langues" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/blueberries.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/yaban-mersini.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/heidelbeeren.html" hreflang="de" lang="de">Deutsch</a> · <strong>Français</strong> · <a href="../../es/calorias/arandanos.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/mirtilos.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/blueberries.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/boruvky.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/blueberries.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/blueberry.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/mirtilli.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/blueberries.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/blueberries.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/blauwe-bessen.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/borowki.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/afine.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/golubika.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/blabar.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/blueberries.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/lokhyna.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/viet-quat.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/blueberries.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorer"><strong>Explorer</strong><a href="../guides.html">Guides</a><a href="../tools.html">Outils</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Questions</a><a href="../compare.html">Comparatifs</a></nav>
+<nav aria-label="Explorer"><strong>Explorer</strong><a href="../guides.html">Guides</a><a href="../tools.html">Outils</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Questions</a><a href="../compare.html">Comparatifs</a><a href="../editorial-policy.html">Contenus et sources</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

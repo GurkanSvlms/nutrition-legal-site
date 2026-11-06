@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/kawa-latte.html", "url": "https://getpofu.com/pl/kalorie/kawa-latte.html", "name": "Ile kalorii zawiera: Kawa latte? (1 filiżanka, 350 g)", "description": "Kawa latte: około 150 kcal w porcji (1 filiżanka, 350 g); 8 g białka, 15 g węglowodanów, 6 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Kawa latte", "nutrition": {"@type": "NutritionInformation", "servingSize": "350 g", "calories": "150 kcal", "proteinContent": "8 g", "carbohydrateContent": "15 g", "fatContent": "6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Kawa latte", "item": "https://getpofu.com/pl/kalorie/kawa-latte.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/kawa-latte.html", "url": "https://getpofu.com/pl/kalorie/kawa-latte.html", "name": "Ile kalorii zawiera: Kawa latte? (1 filiżanka, 350 g)", "description": "Kawa latte: około 150 kcal w porcji (1 filiżanka, 350 g); 8 g białka, 15 g węglowodanów, 6 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Kawa latte", "nutrition": {"@type": "NutritionInformation", "servingSize": "350 g", "calories": "150 kcal", "proteinContent": "8 g", "carbohydrateContent": "15 g", "fatContent": "6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Kawa latte", "item": "https://getpofu.com/pl/kalorie/kawa-latte.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pl/kalorie/kawa-latte.html#faq", "inLanguage": "pl", "mainEntity": [{"@type": "Question", "name": "Kawa latte: ile kalorii jest w 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Około 43 kcal na 100 g, w tym 2,3 g białka, 4,3 g węglowodanów i 1,7 g tłuszczu."}}, {"@type": "Question", "name": "Kawa latte: czy zawiera dużo białka?", "acceptedAnswer": {"@type": "Answer", "text": "Ma trochę białka: 8 g na porcję, czyli około 21% kalorii."}}, {"@type": "Question", "name": "Kawa latte: jak to zapisać w Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mniejsza lub większa porcja</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porcja</th><th scope="col">Kalorie</th><th scope="col">Białko</th></tr></thead>
+<tbody>
+<tr><th scope="row">Pół porcji (175 g)</th><td>75 kcal</td><td>4 g</td></tr>
+<tr><th scope="row">Typowa porcja (350 g)</th><td>150 kcal</td><td>8 g</td></tr>
+<tr><th scope="row">Półtorej porcji (525 g)</th><td>225 kcal</td><td>12 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Skąd pochodzą kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:22%"></span><span class="sc" style="width:41%"></span><span class="sf" style="width:37%"></span></div>
+<p>22% kalorii pochodzi z białka, 41% z węglowodanów i 37% z tłuszczu. W skrócie: lekki produkt, który w większości składa się z wody.</p>
+<p>Jedna porcja to około 8% dnia o wartości 2 000 kcal, czyli wartości odniesienia stosowanej na etykietach produktów.</p>
+</section>
 <section id="why">
 <h2>Dlaczego wartość może się różnić</h2>
 <p>Te produkty składają się głównie z wody. Dlatego wielkość porcji i rzeczywista waga liczą się bardziej niż przepis. Rozmiar, dojrzałość i dodatki, takie jak cukier, dressing, olej czy mleko, zmieniają wartość.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Jak dodać to w Pofu</h2>
 <p>Pofu to nasza aplikacja. Aby dodać ten produkt, zrób zdjęcie talerza: Pofu oszacuje danie i porcję oraz pokaże wskaźnik pewności, żebyś widziała, na ile trafna jest ocena, i mogła ją poprawić. Możesz też wyszukać po nazwie albo zeskanować kod kreskowy i ustawić porcję na to, co naprawdę zjadłaś. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pl&amp;mt=8">Pobierz Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikacja Pofu: zapisywanie posiłku ze zdjęcia"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Nagranie ekranu z aplikacji Pofu (interfejs po angielsku): zrób zdjęcie, sprawdź oszacowanie, dodaj do dzisiejszego dnia.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobne produkty</h2>
@@ -234,10 +258,25 @@
 <li><a href="rosol-z-makaronem.html">Rosół z makaronem</a> <span class="k">· 159 kcal (1 miska, 300 g)</span></li>
 <li><a href="kefir.html">Kefir</a> <span class="k">· 100 kcal (1 szklanka, 250 g)</span></li>
 </ul>
+<h3>Lżejsze opcje z tej samej grupy</h3>
+<ul class="foodlist">
+<li><a href="truskawki.html">Truskawki</a> <span class="k">· 33 kcal na 100 g</span></li>
+<li><a href="szpinak.html">Szpinak</a> <span class="k">· 23 kcal na 100 g</span></li>
+<li><a href="barszcz-czerwony.html">Barszcz czerwony</a> <span class="k">· 20 kcal na 100 g</span></li>
+</ul>
 <p><a href="./">Wszystkie produkty</a></p>
 </section>
+<section id="faq">
+<h2>Pytania o ten produkt</h2>
+<h3>Kawa latte: ile kalorii jest w 100 g?</h3>
+<p>Około 43 kcal na 100 g, w tym 2,3 g białka, 4,3 g węglowodanów i 1,7 g tłuszczu.</p>
+<h3>Kawa latte: czy zawiera dużo białka?</h3>
+<p>Ma trochę białka: 8 g na porcję, czyli około 21% kalorii.</p>
+<h3>Kawa latte: jak to zapisać w Pofu?</h3>
+<p>Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz.</p>
+</section>
 <section id="source">
-<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji.</p>
+<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="../editorial-policy.html">Jak przygotowujemy treści i źródła</a>.</p>
 <div class="note"><p>Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Ten produkt w innych językach" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/latte.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/latte.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/latte-macchiato.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/cafe-latte.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/cafe-con-leche.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/cafe-com-leite.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/latte.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/latte.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/latte.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/latte.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/caffe-latte.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/latte.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/latte.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/latte.html" hreflang="nl" lang="nl">Nederlands</a> · <strong>Polski</strong> · <a href="../../ro/calorii/latte.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/latte.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/latte.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/latte.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/latte.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/ca-phe-latte.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/latte.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a></nav>
+<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a><a href="../editorial-policy.html">Treści i źródła</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

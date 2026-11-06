@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "sv", "locale": "sv-SE", "og_locale": "sv_SE", "og_img": "og-image.jpg", "us": false,
+    "skip": "Hoppa till innehållet", "get_app": "Hämta appen", "pill": "Gratis verktyg · Ingen registrering",
+    "byline": "Av Ali Gürkan Sevilmiş, utvecklare av Pofu · 6 november 2026",
+    "submit": "Beräkna",
+    "privacy": "Allt beräknas i din webbläsare. Inget du skriver in skickas eller sparas.",
+    "f_age": "Ålder", "f_system": "Enheter", "sys_us": "USA (ft, lb)", "sys_metric": "Metriska (cm, kg)",
+    "f_height": "Längd", "a_ft": "Längd, fot", "a_in": "Längd, tum", "f_weight": "Nuvarande vikt",
+    "f_activity": "Aktivitetsnivå",
+    "activity": {
+      "sedentary": "Mest stillasittande (kontorsjobb, lite motion)",
+      "light": "Lätt aktiv (lätt motion 1–3 dagar i veckan)",
+      "moderate": "Måttligt aktiv (motion 3–5 dagar i veckan)",
+      "active": "Mycket aktiv (hård träning 6–7 dagar i veckan)",
+      "very_active": "Extremt aktiv (fysiskt arbete plus träning)"
+    },
+    "errors": {
+      "age": "Ange en ålder mellan 18 och 80.",
+      "height": "Ange din längd (130–210 cm).",
+      "weight": "Ange din vikt (35–250 kg).",
+      "activity": "Välj en aktivitetsnivå.",
+      "goal": "Välj ett mål."
+    },
+    "how_h": "Så fungerar kalkylatorn",
+    "src_h": "Källor",
+    "method_note": "Formlerna kommer från de publicerade källorna ovan och motsvarar reglerna som Pofu-appen använder. Den här sidan har inte granskats av en dietist; den kontrolleras mot källorna och uppdateras när de ändras.",
+    "faq_h": "Vanliga frågor",
+    "rel_h": "Fler gratis verktyg",
+    "medical": "Den här kalkylatorn ger allmänna uppskattningar för vuxna, inte medicinsk rådgivning. Om du är gravid eller ammar, har ett medicinskt tillstånd som njursjukdom eller diabetes, eller har haft ätstörningar, prata med din läkare eller dietist innan du ändrar hur du äter.",
+    "badge_alt": "Ladda ner Pofu från App Store",
+    "foot_nav": "Juridik och support", "privacy_l": "Integritet", "terms_l": "Villkor", "support_l": "Support",
+    "updated": "Senast uppdaterad: <time datetime=\"2026-11-06\">6 november 2026</time>.",
+    "tm": "Apple, iPhone och App Store är varumärken som tillhör Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Proteinkalkylator för kvinnor: hur mycket protein per dag? | Pofu",
+      "og_title": "Proteinkalkylator för kvinnor",
+      "desc": "Gratis proteinkalkylator för kvinnor. Få ditt dagliga proteinbehov i gram för att behålla vikten, gå ner i vikt eller bygga muskler, fördelat per måltid, med forskningen bakom.",
+      "h1": "Proteinkalkylator för kvinnor",
+      "lede": "Hur mycket protein behöver du per dag? Ange din vikt och ditt mål så får du ett dagsmål i gram och hur mycket det blir per måltid.",
+      "tool_h": "Räkna ut ditt protein",
+      "f_goal": "Mål",
+      "goals": {"maintain": "Må bra och behålla min vikt", "lose": "Gå ner i vikt", "muscle": "Bygga muskler eller bli starkare"},
+      "res_head": "Ditt dagliga protein",
+      "s_meal3": "per måltid vid 3 måltider",
+      "s_meal4": "per måltid vid 4 måltider",
+      "s_range": "intervall som används i studier (1,2–2,0 g/kg)",
+      "explain": "Det är enklare att sprida proteinet över dagens måltider än att äta allt på en gång. Mer protein än så är inte skadligt för de flesta friska personer, men det ger sällan någon extra nytta.",
+      "how": [
+        "<strong>Behålla vikten:</strong> 1,4 g protein per kg kroppsvikt och dag.",
+        "<strong>Gå ner i vikt:</strong> 1,6 g per kg, eftersom mer protein hjälper dig att behålla musklerna medan du äter mindre och håller dig mätt längre.",
+        "<strong>Bygga muskler:</strong> 1,8 g per kg, tillsammans med styrketräning.",
+        "Resultatet hålls mellan 75 och 230 g per dag och delas lika på 3 eller 4 måltider."
+      ],
+      "note": "Miniminivån för att undvika brist hos vuxna är ungefär 0,8 g per kg. De högre värdena ovan gäller aktiva kvinnor och viktnedgång, där studier visar en nytta. Det är samma regler som Pofu-appen använder.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg för aktiva personer).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a>. Br J Sports Med, 2018 (nyttan planar ut vid ungefär 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (minst 0,8 g/kg för vuxna)."
+      ],
+      "faq": [
+        ["Hur mycket protein behöver en kvinna per dag?", "Miniminivån för vuxna är ungefär 0,8 g per kg kroppsvikt. För aktiva kvinnor och vid viktnedgång stöder forskningen ungefär 1,2 till 2,0 g per kg. För en kvinna på 65 kg som går ner i vikt ger den här kalkylatorn 104 g per dag."],
+        ["Är 100 g protein om dagen för mycket för en kvinna?", "För de flesta friska kvinnor är det inte det. Det ligger inom det intervall som studerats hos aktiva personer. Har du njursjukdom bör du fråga din läkare först."],
+        ["Hur mycket protein ska jag äta per måltid?", "Dela ditt dagsmål med antalet måltider. Med 104 g per dag och 3 måltider blir det ungefär 35 g per måltid, till exempel ett kycklingbröst eller en skål grekisk yoghurt med ägg."],
+        ["Hjälper protein vid viktnedgång?", "Det hjälper dig att behålla musklerna medan du äter mindre och håller dig mätt längre. Viktnedgången kommer ändå av att du äter färre kalorier än du förbrukar."],
+        ["Ska jag utgå från min nuvarande vikt eller målvikt?", "Använd din nuvarande vikt. Om din vikt är mycket hög ger en lägre referensvikt ett mer realistiskt tal; taket på 230 g per dag håller resultatet rimligt."]
+      ],
+      "bridge": "Pofu sätter ditt proteinmål efter samma regel och visar hur mycket du har ätit hittills idag, med hjälp av foton, streckkoder eller sökning."
+    },
+    "macro": {
+      "title": "Makrokalkylator för kvinnor: protein, kolhydrater och fett per dag | Pofu",
+      "og_title": "Makrokalkylator för kvinnor",
+      "desc": "Gratis makrokalkylator för kvinnor. Få dina dagliga kalorier och gram protein, kolhydrater och fett för att behålla vikten, gå ner i vikt eller bygga muskler.",
+      "h1": "Makrokalkylator för kvinnor",
+      "lede": "Få dina dagliga kalorier fördelade på protein, kolhydrater och fett, i gram och som andel av kalorierna.",
+      "tool_h": "Räkna ut dina makron",
+      "f_goal": "Mål",
+      "goals": {"maintain": "Behålla min vikt", "lose_slow": "Gå ner långsamt i vikt (cirka −250 kcal per dag)", "lose": "Gå ner i vikt (cirka −400 kcal per dag)", "lose_fast": "Gå ner snabbare i vikt (cirka −550 kcal per dag)", "muscle": "Bygga muskler (cirka +225 kcal per dag)"},
+      "res_head": "Dina dagliga kalorier och makron",
+      "s_p": "Protein", "s_c": "Kolhydrater", "s_f": "Fett",
+      "pct": "{p} % av kalorierna",
+      "floor": "Dina kalorier är satta till 1 200 kcal, det lägsta dagsmål vi föreslår. Att gå lägre rekommenderas inte utan en läkare eller dietist.",
+      "explain": "Protein kommer först, fettet sätts till 28 % av kalorierna och kolhydraterna fyller resten. Att nå sina kalorier är viktigare än att pricka varje gram; några gram hit eller dit gör inget.",
+      "how": [
+        "<strong>Kalorier:</strong> Mifflin-St Jeor-ekvationen för kvinnor gånger din aktivitetsfaktor (1,2 till 1,9), plus ditt mål. Aldrig under 1 200 kcal.",
+        "<strong>Protein:</strong> 1,4 g per kg för att behålla vikten, 1,6 g per kg vid viktnedgång, 1,8 g per kg för att bygga muskler (75–230 g).",
+        "<strong>Fett:</strong> 28 % av kalorierna, minst 40 g per dag.",
+        "<strong>Kolhydrater:</strong> kalorierna som blir över, minst 50 g per dag. Protein och kolhydrater ger 4 kcal per gram, fett 9 kcal."
+      ],
+      "note": "Fett på 28 % ligger inom det rekommenderade intervallet på 20–35 % för vuxna, och kolhydraterna hamnar oftast på 40–50 %. Det är samma regler som Pofu-appen använder.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (fett 20–35 %, kolhydrater 45–65 % av kalorierna).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Vilken makrofördelning är bra för kvinnor?", "Det finns ingen enskild bästa fördelning. En vanlig och hållbar fördelning är ungefär 25–30 % protein, 28–30 % fett och resten kolhydrater. Välj en du kan hålla och se först till att du når dina kalorier."],
+        ["Vilka makron är bra för viktnedgång?", "Ät färre kalorier än du förbrukar och håll proteinet högt (ungefär 1,6 g per kg). Fett och kolhydrater kan fördelas som du föredrar."],
+        ["Måste jag pricka mina makron exakt?", "Nej. Inom cirka 10 g för protein och kolhydrater och 5 g för fett är nära nog. Ditt veckogenomsnitt betyder mer än en enskild dag."],
+        ["Är lågkolhydratkost bättre för kvinnor?", "Studier som jämför lågkolhydrat- och lågfettkost med samma kalorier visar liknande viktnedgång. Välj det som passar din mat och din energi."],
+        ["Ändras makron under menscykeln?", "Inte särskilt mycket. Vissa blir hungrigare före mensen; vår kalorikalkylator för menscykeln lägger till ett litet valfritt tillägg för den fasen."]
+      ],
+      "bridge": "Pofu håller koll på de här makrona åt dig: ta ett foto av din måltid så uppskattar appen kalorier, protein, kolhydrater och fett, som du kan justera."
+    },
+    "deficit": {
+      "title": "Kaloriunderskott-kalkylator: hur många kalorier till ditt mål och datum | Pofu",
+      "og_title": "Kaloriunderskott-kalkylator efter måldatum",
+      "desc": "Gratis kalkylator för kaloriunderskott för kvinnor. Ange din målvikt och ditt datum så ser du hur många kalorier per dag du behöver och om takten är säker.",
+      "h1": "Kaloriunderskott-kalkylator efter måldatum",
+      "lede": "Vill du nå en viss vikt till ett visst datum? Se hur många kalorier per dag det kräver, och ett realistiskt datum om takten är för snabb.",
+      "tool_h": "Räkna ut ditt underskott",
+      "f_goal_kg": "Målvikt",
+      "f_date": "Måldatum",
+      "errors": {
+        "goalkg": "Ange en målvikt som är lägre än din nuvarande vikt. Verktyget är till för viktnedgång.",
+        "date": "Välj ett måldatum i framtiden.",
+        "nodeficit": "Ditt underhållsintag ligger redan nära 1 200 kcal, så vi kan inte föreslå ett säkert underskott. Prata med en läkare eller dietist om ditt mål."
+      },
+      "res_ok": "För att nå {goal} till {date} behöver du äta cirka",
+      "s_target": "Kalorier per dag i säker takt",
+      "s_deficit": "dagligt underskott",
+      "s_week": "förväntad viktnedgång per vecka",
+      "s_maint": "underhåll (TDEE)",
+      "too_fast": "Det datumet kräver ett underskott på {need} kcal per dag, mer än de {max} kcal per dag som vi föreslår. I en säker takt på {target} kcal per dag skulle du nå {goal} runt {date}.",
+      "low_goal": "Din målvikt ligger under ett BMI på 18,5 för din längd, vilket räknas som undervikt. Prata gärna om ditt mål med en läkare.",
+      "explain": "Det här är en uppskattning: viktnedgången brukar sakta av med tiden och vätska påverkar vågen från dag till dag, särskilt före mensen. Jämför veckogenomsnitt, inte enstaka dagar.",
+      "how": [
+        "<strong>Underhåll:</strong> Mifflin-St Jeor-ekvationen för kvinnor gånger din aktivitetsfaktor (1,2 till 1,9).",
+        "<strong>Underskott som behövs:</strong> vikten du vill gå ner × 7 700 kcal per kg, delat med antalet dagar till ditt datum.",
+        "<strong>Säker gräns:</strong> högst 550 kcal per dag under underhåll, och aldrig under 1 200 kcal per dag. Om ditt datum kräver mer visar kalkylatorn när du skulle vara framme i säker takt.",
+        "Den snabbaste takten är cirka 0,5 kg i veckan, i linje med vanliga folkhälsorekommendationer."
+      ],
+      "note": "7 700 kcal per kg är en allmänt använd uppskattning. Den verkliga viktnedgången är ofta långsammare efter de första veckorna eftersom kroppen använder mindre energi när du blir lättare, så se datumet som en vägledning.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (en forskningsmodell för hur viktnedgången avtar över tid).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (cirka 0,5 till 1 kg i veckan)."
+      ],
+      "faq": [
+        ["Hur stort ska mitt kaloriunderskott vara?", "För de flesta kvinnor är 250 till 550 kcal per dag under underhåll hållbart. Det motsvarar ungefär 0,25 till 0,5 kg i veckan. Större underskott är svårare att hålla och kan kosta muskler."],
+        ["Hur lång tid tar det att gå ner 5 kg?", "Med ett underskott på 550 kcal per dag cirka 10 veckor; med 400 kcal per dag cirka 14 veckor. Verkliga framsteg går ofta lite långsammare."],
+        ["Varför låter kalkylatorn mig inte äta under 1 200 kcal?", "Under 1 200 kcal per dag är det svårt att få i sig tillräckligt med näring från maten. Att gå lägre bör bara ske under medicinsk övervakning."],
+        ["Är 7 700 kalorier verkligen ett kilo?", "Det är en grov uppskattning för kroppsfett. I början är en del av viktnedgången vatten, och senare anpassar sig kroppen, så regeln är en vägledning, inte ett löfte."],
+        ["Varför gick jag upp i vikt trots att jag låg i underskott?", "Vätska, salt, en större måltid och dagarna före mensen kan alla driva upp vågen i några dagar. Titta på trenden över 2 till 4 veckor."]
+      ],
+      "bridge": "I Pofu kan du sätta en målvikt och en takt; appen räknar ut ditt dagsmål med samma regler och visar dina framsteg som en veckotrend."
+    },
+    "bmi": {
+      "title": "BMI-kalkylator för kvinnor: hälsosamt viktintervall för din längd | Pofu",
+      "og_title": "BMI-kalkylator för kvinnor",
+      "desc": "Gratis BMI-kalkylator för vuxna kvinnor. Se ditt body mass index, vad det betyder och det hälsosamma viktintervallet för din längd, med BMI:s begränsningar förklarade.",
+      "h1": "BMI-kalkylator för kvinnor",
+      "lede": "Räkna ut ditt body mass index och se vilket viktintervall som räknas som hälsosamt för din längd.",
+      "tool_h": "Räkna ut ditt BMI",
+      "res_head": "Ditt BMI",
+      "cats": {"under": "Undervikt (under 18,5)", "normal": "Normalvikt (18,5 till 24,9)", "over": "Övervikt (25 till 29,9)", "obese": "Fetma (30 eller mer)"},
+      "range": "Ett hälsosamt viktintervall för din längd är cirka {low} till {high}.",
+      "explain": "BMI är ett snabbt screeningtal, inte en diagnos. Det skiljer inte på muskler och fett, så mycket muskulösa kvinnor kan få höga värden, och det gäller inte under graviditet.",
+      "how": [
+        "<strong>Formel:</strong> vikt i kg delat med längden i meter i kvadrat (kg/m²).",
+        "<strong>Kategorier (WHO, vuxna):</strong> under 18,5 undervikt, 18,5–24,9 normalvikt, 25–29,9 övervikt, 30 eller mer fetma.",
+        "<strong>Hälsosamt intervall:</strong> de vikter som ger ett BMI på 18,5 till 24,9 vid din längd.",
+        "Samma formel används för kvinnor och män; den är inte avsedd för barn, tonåringar eller graviditet."
+      ],
+      "note": "För vissa asiatiska befolkningsgrupper anger WHO att hälsoriskerna börjar vid ett lägre BMI (från cirka 23). Midjemått och hur du mår ger ett användbart sammanhang till siffran.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a>.",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004."
+      ],
+      "faq": [
+        ["Vilket BMI är hälsosamt för en kvinna?", "För vuxna räknas ett BMI på 18,5 till 24,9 som normalvikt. Samma intervall används för kvinnor och män."],
+        ["Är BMI annorlunda för kvinnor?", "Formeln och kategorierna är desamma. Kvinnor har vanligtvis mer kroppsfett än män vid samma BMI, vilket är en av anledningarna till att BMI bara är en grov vägledning."],
+        ["Är BMI exakt?", "Det är användbart för grupper och som en första koll, men det mäter inte kroppsfett. Muskler, ålder och kroppsform påverkar vad ett visst BMI betyder för dig."],
+        ["Vilken vikt bör jag ha för min längd?", "Alla vikter som ger ett BMI mellan 18,5 och 24,9 ligger inom det hälsosamma intervallet. För en längd på 165 cm är det ungefär 50 till 68 kg."],
+        ["Kan jag använda BMI när jag är gravid?", "Nej. Under graviditeten ska du följa barnmorskans eller läkarens råd om viktuppgång."]
+      ],
+      "bridge": "Pofu fokuserar på vanor i stället för en enda siffra: dagliga kalorier och protein, en veckotrend för vikten och jokerdagar så att en missad dag inte bryter din svit."
+    }
+  }
+}

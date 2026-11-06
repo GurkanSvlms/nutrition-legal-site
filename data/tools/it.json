@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "it", "locale": "it-IT", "og_locale": "it_IT", "og_img": "og-image.jpg", "us": false,
+    "skip": "Vai al contenuto", "get_app": "Scarica l’app", "pill": "Strumento gratuito · Senza registrazione",
+    "byline": "Di Ali Gürkan Sevilmiş, sviluppatore di Pofu · 6 novembre 2026",
+    "submit": "Calcola",
+    "privacy": "Tutto viene calcolato nel tuo browser. Nulla di ciò che inserisci viene inviato o salvato.",
+    "f_age": "Età", "f_system": "Unità", "sys_us": "USA (ft, lb)", "sys_metric": "Metrico (cm, kg)",
+    "f_height": "Altezza", "a_ft": "Altezza, piedi", "a_in": "Altezza, pollici", "f_weight": "Peso attuale",
+    "f_activity": "Livello di attività",
+    "activity": {
+      "sedentary": "Per lo più seduta (lavoro d’ufficio, poco esercizio)",
+      "light": "Poco attiva (esercizio leggero 1–3 giorni a settimana)",
+      "moderate": "Moderatamente attiva (esercizio 3–5 giorni a settimana)",
+      "active": "Molto attiva (esercizio intenso 6–7 giorni a settimana)",
+      "very_active": "Estremamente attiva (lavoro fisico più allenamento)"
+    },
+    "errors": {
+      "age": "Inserisci un’età tra 18 e 80 anni.",
+      "height": "Inserisci la tua altezza (130–210 cm).",
+      "weight": "Inserisci il tuo peso (35–250 kg).",
+      "activity": "Scegli un livello di attività.",
+      "goal": "Scegli un obiettivo."
+    },
+    "how_h": "Come funziona questo calcolatore",
+    "src_h": "Fonti",
+    "method_note": "Le formule provengono dalle fonti pubblicate qui sopra e corrispondono alle regole usate dall’app Pofu. Questa pagina non è stata rivista da un dietista; viene verificata su queste fonti e aggiornata quando cambiano.",
+    "faq_h": "Domande frequenti",
+    "rel_h": "Altri strumenti gratuiti",
+    "medical": "Questo calcolatore fornisce stime generali per adulte, non un parere medico. Se sei incinta o allatti, hai una condizione medica come una malattia renale o il diabete, o una storia di disturbi del comportamento alimentare, parlane con il tuo medico o con un dietista prima di cambiare il modo in cui mangi.",
+    "badge_alt": "Scarica Pofu sull’App Store",
+    "foot_nav": "Note legali e assistenza", "privacy_l": "Privacy", "terms_l": "Termini", "support_l": "Assistenza",
+    "updated": "Ultimo aggiornamento: <time datetime=\"2026-11-06\">6 novembre 2026</time>.",
+    "tm": "Apple, iPhone e App Store sono marchi di Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Calcolatore proteine per donne: fabbisogno proteico al giorno | Pofu",
+      "og_title": "Calcolatore proteine per donne",
+      "desc": "Calcolatore di proteine gratuito per donne. Scopri il tuo fabbisogno proteico giornaliero in grammi per mantenere il peso, dimagrire o costruire muscoli, diviso per pasto, con la ricerca alle spalle.",
+      "h1": "Calcolatore proteine per donne",
+      "lede": "Di quante proteine hai bisogno al giorno? Inserisci il tuo peso e il tuo obiettivo per ottenere un target giornaliero in grammi e quanto fa per pasto.",
+      "tool_h": "Calcola il tuo fabbisogno proteico",
+      "f_goal": "Obiettivo",
+      "goals": {"maintain": "Restare in salute e mantenere il mio peso", "lose": "Perdere peso", "muscle": "Costruire muscoli o diventare più forte"},
+      "res_head": "Le tue proteine giornaliere",
+      "s_meal3": "a pasto con 3 pasti",
+      "s_meal4": "a pasto con 4 pasti",
+      "s_range": "intervallo usato negli studi (1,2–2,0 g/kg)",
+      "explain": "Distribuire le proteine sui tuoi pasti è più facile che mangiarle tutte in una volta. Più proteine di così non fanno male alla maggior parte delle persone sane, ma raramente portano un beneficio in più.",
+      "how": [
+        "<strong>Mantenimento:</strong> 1,4 g di proteine per kg di peso corporeo al giorno.",
+        "<strong>Perdere peso:</strong> 1,6 g per kg, perché più proteine aiutano a conservare i muscoli mentre mangi meno e danno sazietà più a lungo.",
+        "<strong>Costruire muscoli:</strong> 1,8 g per kg, insieme all’allenamento con i pesi.",
+        "Il risultato viene mantenuto tra 75 e 230 g al giorno e diviso in parti uguali su 3 o 4 pasti."
+      ],
+      "note": "Il minimo per evitare una carenza negli adulti è circa 0,8 g per kg. I valori più alti qui sopra sono per le donne attive e per il dimagrimento, dove gli studi mostrano un beneficio. Sono le stesse regole usate dall’app Pofu.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a> (posizione della società su proteine ed esercizio). J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg per le persone attive).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a> (integrazione di proteine e allenamento di forza: revisione sistematica e metanalisi). Br J Sports Med, 2018 (il beneficio si stabilizza intorno a 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (apporti di riferimento per energia, carboidrati, grassi e proteine), 2005 (0,8 g/kg come minimo per gli adulti)."
+      ],
+      "faq": [
+        ["Di quante proteine ha bisogno una donna al giorno?", "Il minimo per gli adulti è circa 0,8 g per kg di peso corporeo. Per le donne attive e durante il dimagrimento, la ricerca supporta circa 1,2–2,0 g per kg. Per una donna di 65 kg che vuole perdere peso, questo calcolatore indica 104 g al giorno."],
+        ["100 g di proteine al giorno sono troppi per una donna?", "Per la maggior parte delle donne sane no. Rientra nell’intervallo studiato nelle persone attive. Se hai una malattia renale, chiedi prima al tuo medico."],
+        ["Quante proteine dovrei mangiare a ogni pasto?", "Dividi il tuo obiettivo giornaliero per il numero di pasti. Con 104 g al giorno e 3 pasti sono circa 35 g a pasto, per esempio un petto di pollo oppure una ciotola di yogurt greco con uova."],
+        ["Le proteine aiutano a dimagrire?", "Ti aiutano a conservare i muscoli mentre mangi meno e danno sazietà più a lungo. Dimagrire resta comunque una questione di mangiare meno calorie di quelle che consumi."],
+        ["Devo usare il mio peso attuale o il peso obiettivo?", "Usa il tuo peso attuale. Se il tuo peso è molto alto, un peso di riferimento più basso dà un numero più realistico; il tetto di 230 g al giorno mantiene il risultato ragionevole."]
+      ],
+      "bridge": "Pofu imposta il tuo obiettivo di proteine con questa stessa regola e ti mostra quanto hai mangiato finora oggi, da foto, codici a barre o ricerca."
+    },
+    "macro": {
+      "title": "Calcolatore macro per donne: proteine, carboidrati e grassi | Pofu",
+      "og_title": "Calcolatore macro per donne",
+      "desc": "Calcolatore di macro gratuito per donne. Scopri le tue calorie giornaliere e i grammi di proteine, carboidrati e grassi per mantenere il peso, dimagrire o costruire muscoli.",
+      "h1": "Calcolatore macro per donne",
+      "lede": "Ottieni le tue calorie giornaliere divise in proteine, carboidrati e grassi, in grammi e come quota delle tue calorie.",
+      "tool_h": "Calcola i tuoi macro",
+      "f_goal": "Obiettivo",
+      "goals": {"maintain": "Mantenere il mio peso", "lose_slow": "Perdere peso lentamente (circa −250 kcal al giorno)", "lose": "Perdere peso (circa −400 kcal al giorno)", "lose_fast": "Perdere peso più in fretta (circa −550 kcal al giorno)", "muscle": "Costruire muscoli (circa +225 kcal al giorno)"},
+      "res_head": "Le tue calorie e i tuoi macro giornalieri",
+      "s_p": "Proteine", "s_c": "Carboidrati", "s_f": "Grassi",
+      "pct": "{p}% delle calorie",
+      "floor": "Le tue calorie sono impostate a 1.200 kcal, l’obiettivo giornaliero più basso che suggeriamo. Scendere sotto non è consigliato senza un medico o un dietista.",
+      "explain": "Le proteine vengono per prime, i grassi sono fissati al 28% delle calorie e i carboidrati riempiono il resto. Centrare le calorie conta più che centrare ogni grammo; pochi grammi di scarto vanno bene.",
+      "how": [
+        "<strong>Calorie:</strong> l’equazione di Mifflin-St Jeor per le donne, moltiplicata per il tuo fattore di attività (da 1,2 a 1,9), più il tuo obiettivo. Mai sotto 1.200 kcal.",
+        "<strong>Proteine:</strong> 1,4 g per kg per mantenere, 1,6 g per kg per dimagrire, 1,8 g per kg per costruire muscoli (75–230 g).",
+        "<strong>Grassi:</strong> 28% delle calorie, almeno 40 g al giorno.",
+        "<strong>Carboidrati:</strong> le calorie che restano, almeno 50 g al giorno. Proteine e carboidrati hanno 4 kcal per grammo, i grassi 9 kcal."
+      ],
+      "note": "I grassi al 28% rientrano nell’intervallo 20–35% raccomandato per gli adulti, e i carboidrati di solito si attestano intorno al 40–50%. Sono le stesse regole usate dall’app Pofu.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (una nuova equazione predittiva per il dispendio energetico a riposo in persone sane). Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (apporti di riferimento per energia, carboidrati, grassi e proteine), 2005 (grassi 20–35%, carboidrati 45–65% delle calorie).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a> (posizione della società su proteine ed esercizio). J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Qual è una buona ripartizione dei macro per le donne?", "Non esiste una ripartizione migliore in assoluto. Una suddivisione comune e sostenibile è circa 25–30% di proteine, 28–30% di grassi e il resto carboidrati. Scegline una che riesci a mantenere e centra prima di tutto le calorie."],
+        ["Quali macro vanno bene per dimagrire?", "Mangia meno calorie di quelle che consumi e tieni alte le proteine (circa 1,6 g per kg). Grassi e carboidrati puoi dividerli come preferisci."],
+        ["Devo centrare i macro esattamente?", "No. Stare entro circa 10 g per proteine e carboidrati e 5 g per i grassi è abbastanza preciso. La tua media settimanale conta più di un singolo giorno."],
+        ["Il low carb è meglio per le donne?", "Gli studi che confrontano diete low carb e low fat a parità di calorie trovano una perdita di peso simile. Scegli ciò che si adatta a come mangi e alla tua energia."],
+        ["I macro cambiano durante il ciclo mestruale?", "Non molto. Alcune donne hanno più fame prima del ciclo; il nostro calcolatore di calorie in base al ciclo aggiunge un piccolo margine facoltativo per quella fase."]
+      ],
+      "bridge": "Pofu tiene traccia di questi macro per te: scatta una foto del pasto e l’app stima calorie, proteine, carboidrati e grassi, che puoi correggere."
+    },
+    "deficit": {
+      "title": "Calcolatore deficit calorico con data obiettivo | Pofu",
+      "og_title": "Calcolatore deficit calorico per data obiettivo",
+      "desc": "Calcolatore di deficit calorico gratuito per donne. Inserisci il peso obiettivo e la data per vedere quante calorie al giorno ti servono e se il ritmo è sicuro.",
+      "h1": "Calcolatore deficit calorico per data obiettivo",
+      "lede": "Vuoi raggiungere un peso entro una certa data? Scopri quante calorie al giorno servono e una data realistica se il ritmo è troppo veloce.",
+      "tool_h": "Calcola il tuo deficit",
+      "f_goal_kg": "Peso obiettivo",
+      "f_date": "Data obiettivo",
+      "errors": {
+        "goalkg": "Inserisci un peso obiettivo inferiore al tuo peso attuale. Questo strumento serve a perdere peso.",
+        "date": "Scegli una data obiettivo nel futuro.",
+        "nodeficit": "Le tue calorie di mantenimento sono già vicine a 1.200 kcal, quindi non possiamo suggerire un deficit sicuro. Parla del tuo obiettivo con un medico o un dietista."
+      },
+      "res_ok": "Per arrivare a {goal} entro il {date}, mangia circa",
+      "s_target": "Calorie al giorno a un ritmo sicuro",
+      "s_deficit": "deficit giornaliero",
+      "s_week": "perdita prevista a settimana",
+      "s_maint": "mantenimento (TDEE)",
+      "too_fast": "Quella data richiede un deficit di {need} kcal al giorno, più delle {max} kcal al giorno che suggeriamo. A un ritmo sicuro di {target} kcal al giorno arriveresti a {goal} intorno al {date}.",
+      "low_goal": "Il tuo peso obiettivo è sotto un BMI di 18,5 per la tua altezza, valore considerato sottopeso. Controlla il tuo obiettivo con un medico.",
+      "explain": "È una stima: il dimagrimento di solito rallenta nel tempo e l’acqua fa variare la bilancia da un giorno all’altro, soprattutto prima del ciclo. Confronta le medie settimanali, non i singoli giorni.",
+      "how": [
+        "<strong>Mantenimento:</strong> l’equazione di Mifflin-St Jeor per le donne moltiplicata per il tuo fattore di attività (da 1,2 a 1,9).",
+        "<strong>Deficit necessario:</strong> il peso da perdere × 7.700 kcal per kg, diviso per i giorni che mancano alla tua data.",
+        "<strong>Limite di sicurezza:</strong> al massimo 550 kcal al giorno sotto il mantenimento e mai sotto 1.200 kcal al giorno. Se la tua data richiede di più, il calcolatore mostra quando arriveresti a un ritmo sicuro.",
+        "Il ritmo più veloce è circa 0,5 kg a settimana, in linea con i consigli comuni di sanità pubblica."
+      ],
+      "note": "7.700 kcal per kg è una stima molto usata. La perdita reale spesso è più lenta dopo le prime settimane, perché il corpo consuma meno energia man mano che diventi più leggera; considera la data come una guida.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> (qual è il deficit energetico richiesto per unità di peso perso?) Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (una nuova equazione predittiva per il dispendio energetico a riposo in persone sane). Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (un modello di ricerca su come il dimagrimento rallenta nel tempo).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (circa 0,5–1 kg a settimana)."
+      ],
+      "faq": [
+        ["Quanto deve essere grande il mio deficit calorico?", "Per la maggior parte delle donne 250–550 kcal al giorno sotto il mantenimento sono sostenibili. Sono circa 0,25–0,5 kg a settimana. Deficit più grandi sono più difficili da mantenere e possono costare massa muscolare."],
+        ["Quanto tempo ci vuole per perdere 5 kg?", "Con un deficit di 550 kcal al giorno circa 10 settimane; con 400 kcal al giorno circa 14 settimane. I progressi reali spesso sono un po’ più lenti."],
+        ["Perché questo calcolatore non mi fa mangiare meno di 1.200 kcal?", "Sotto 1.200 kcal al giorno è difficile coprire i nutrienti con il cibo. Scendere ancora dovrebbe avvenire solo sotto controllo medico."],
+        ["7.700 calorie sono davvero un chilo?", "È una stima approssimativa per il grasso corporeo. All’inizio una parte della perdita è acqua e più avanti il corpo si adatta, quindi la regola è una guida, non una promessa."],
+        ["Perché il mio peso è salito anche se ero in deficit?", "Acqua, sale, un pasto più abbondante e i giorni prima del ciclo possono far salire la bilancia per qualche giorno. Guarda l’andamento su 2–4 settimane."]
+      ],
+      "bridge": "In Pofu puoi impostare un peso obiettivo e un ritmo; l’app calcola il tuo obiettivo giornaliero con queste stesse regole e mostra i tuoi progressi come andamento settimanale."
+    },
+    "bmi": {
+      "title": "Calcolatore BMI per donne: peso sano in base all’altezza | Pofu",
+      "og_title": "Calcolatore BMI per donne",
+      "desc": "Calcolatore BMI gratuito per donne adulte. Scopri il tuo indice di massa corporea, cosa significa e l’intervallo di peso sano per la tua altezza, con i limiti del BMI spiegati.",
+      "h1": "Calcolatore BMI per donne",
+      "lede": "Calcola il tuo indice di massa corporea e scopri quale intervallo di peso è considerato sano per la tua altezza.",
+      "tool_h": "Calcola il tuo BMI",
+      "res_head": "Il tuo BMI",
+      "cats": {"under": "Sottopeso (sotto 18,5)", "normal": "Peso sano (da 18,5 a 24,9)", "over": "Sovrappeso (da 25 a 29,9)", "obese": "Obesità (30 o più)"},
+      "range": "Un intervallo di peso sano per la tua altezza è circa da {low} a {high}.",
+      "explain": "Il BMI è un numero di screening rapido, non una diagnosi. Non distingue il muscolo dal grasso, quindi donne molto muscolose possono avere un valore alto, e non vale in gravidanza.",
+      "how": [
+        "<strong>Formula:</strong> peso in kg diviso per l’altezza in metri al quadrato (kg/m²).",
+        "<strong>Categorie (OMS, adulti):</strong> sotto 18,5 sottopeso, 18,5–24,9 peso sano, 25–29,9 sovrappeso, 30 o più obesità.",
+        "<strong>Intervallo sano:</strong> i pesi che danno un BMI da 18,5 a 24,9 alla tua altezza.",
+        "La stessa formula vale per donne e uomini; non è pensata per bambini, adolescenti o gravidanza."
+      ],
+      "note": "Per alcune popolazioni asiatiche l’OMS indica che i rischi per la salute iniziano a un BMI più basso (da circa 23). La circonferenza vita e come ti senti aggiungono un contesto utile al numero.",
+      "sources": [
+        "OMS. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (scheda informativa su obesità e sovrappeso).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a> (indice di massa corporea appropriato per le popolazioni asiatiche). Lancet, 2004."
+      ],
+      "faq": [
+        ["Qual è un BMI sano per una donna?", "Per gli adulti un BMI da 18,5 a 24,9 è considerato un peso sano. Gli stessi intervalli valgono per donne e uomini."],
+        ["Il BMI è diverso per le donne?", "La formula e le categorie sono le stesse. A parità di BMI, le donne hanno di solito più grasso corporeo degli uomini, ed è uno dei motivi per cui il BMI è solo una guida approssimativa."],
+        ["Il BMI è preciso?", "È utile per i gruppi e come primo controllo, ma non misura il grasso corporeo. Muscoli, età e forma del corpo cambiano ciò che un dato BMI significa per te."],
+        ["Che peso dovrei avere per la mia altezza?", "Qualsiasi peso che dia un BMI tra 18,5 e 24,9 rientra nell’intervallo sano. Per un’altezza di 165 cm sono circa 50–68 kg."],
+        ["Posso usare il BMI se sono incinta?", "No. In gravidanza segui il consiglio della tua ostetrica o del tuo medico sull’aumento di peso."]
+      ],
+      "bridge": "Pofu si concentra sulle abitudini invece che su un singolo numero: calorie e proteine giornaliere, un andamento settimanale del peso e giorni jolly, così un giorno saltato non spezza la tua serie."
+    }
+  }
+}

@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ro/calorii/tocana-de-porc.html", "url": "https://getpofu.com/ro/calorii/tocana-de-porc.html", "name": "Câte calorii are Tocană de porc? (1 porție, 255 g)", "description": "Tocană de porc: aproximativ 278 kcal pe porție (1 porție, 255 g); 21,3 g proteine, 16 g carbohidrați, 13,8 g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.", "inLanguage": "ro", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tocană de porc", "nutrition": {"@type": "NutritionInformation", "servingSize": "255 g", "calories": "278 kcal", "proteinContent": "21.3 g", "carbohydrateContent": "16 g", "fatContent": "13.8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ro/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorii", "item": "https://getpofu.com/ro/calorii/"}, {"@type": "ListItem", "position": 3, "name": "Tocană de porc", "item": "https://getpofu.com/ro/calorii/tocana-de-porc.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ro/calorii/tocana-de-porc.html", "url": "https://getpofu.com/ro/calorii/tocana-de-porc.html", "name": "Câte calorii are Tocană de porc? (1 porție, 255 g)", "description": "Tocană de porc: aproximativ 278 kcal pe porție (1 porție, 255 g); 21,3 g proteine, 16 g carbohidrați, 13,8 g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.", "inLanguage": "ro", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tocană de porc", "nutrition": {"@type": "NutritionInformation", "servingSize": "255 g", "calories": "278 kcal", "proteinContent": "21.3 g", "carbohydrateContent": "16 g", "fatContent": "13.8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ro/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorii", "item": "https://getpofu.com/ro/calorii/"}, {"@type": "ListItem", "position": 3, "name": "Tocană de porc", "item": "https://getpofu.com/ro/calorii/tocana-de-porc.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ro/calorii/tocana-de-porc.html#faq", "inLanguage": "ro", "mainEntity": [{"@type": "Question", "name": "Tocană de porc: câte calorii sunt în 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Aproximativ 109 kcal la 100 g, cu 8,4 g de proteine, 6,3 g de carbohidrați și 5,4 g de grăsimi."}}, {"@type": "Question", "name": "Tocană de porc: este bogat în proteine?", "acceptedAnswer": {"@type": "Answer", "text": "Da. O porție are 21,3 g de proteine, aproximativ 31% din calorii."}}, {"@type": "Question", "name": "Tocană de porc: cum îl înregistrez în Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Fă o fotografie farfuriei sau caută numele, apoi setează porția la ceea ce ai mâncat de fapt. Poți corecta estimarea, iar Pofu își amintește corecția data viitoare."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porție mai mică sau mai mare</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porție</th><th scope="col">Calorii</th><th scope="col">Proteine</th></tr></thead>
+<tbody>
+<tr><th scope="row">O jumătate de porție (128 g)</th><td>139 kcal</td><td>10,7 g</td></tr>
+<tr><th scope="row">Porție obișnuită (255 g)</th><td>278 kcal</td><td>21,3 g</td></tr>
+<tr><th scope="row">O porție și jumătate (382 g)</th><td>417 kcal</td><td>32 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De unde vin caloriile</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:31%"></span><span class="sc" style="width:23%"></span><span class="sf" style="width:46%"></span></div>
+<p>31% din calorii provin din proteine, 23% din carbohidrați și 46% din grăsimi. Pe scurt: un amestec de proteine, carbohidrați și grăsimi.</p>
+<p>O porție reprezintă aproximativ 14% dintr-o zi de 2.000 kcal, valoarea de referință folosită pe etichetele alimentelor.</p>
+</section>
 <section id="why">
 <h2>De ce variază valoarea</h2>
 <p>Rețetele de acasă și cele din restaurant diferă prin cantitatea de ulei, carne, brânză și amidon, precum și prin mărimea porției. Ia valoarea ca punct de plecare și ajustează porția dacă farfuria ta a fost mai mică sau mai mare.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Cum o înregistrezi în Pofu</h2>
 <p>Pofu este aplicația noastră. Ca să înregistrezi acest aliment, fotografiază farfuria: Pofu estimează preparatul și porția și arată un scor de încredere, ca să vezi cât de sigură e estimarea și să o poți ajusta. Poți căuta și după nume sau scana un cod de bare și potrivi porția la cantitatea reală. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ro&amp;mt=8">Descarcă Pofu din App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplicația Pofu: înregistrarea unei mese dintr-o fotografie"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Înregistrare de ecran din aplicația Pofu (interfață în engleză): fă o fotografie, verifică estimarea, adaugă-o la ziua de azi.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimente similare</h2>
@@ -213,10 +237,23 @@
 <li><a href="somon-la-cuptor.html">Somon la cuptor</a> <span class="k">· 280 kcal (1 porție, 150 g)</span></li>
 <li><a href="naut-fiert.html">Năut fiert</a> <span class="k">· 270 kcal (1 bol, 200 g)</span></li>
 </ul>
+<h3>Variante mai ușoare din aceeași grupă</h3>
+<ul class="foodlist">
+<li><a href="ciorba-de-fasole.html">Ciorbă de fasole cu carne</a> <span class="k">· 84 kcal la 100 g</span></li>
+</ul>
 <p><a href="./">Toate alimentele</a></p>
 </section>
+<section id="faq">
+<h2>Întrebări despre acest aliment</h2>
+<h3>Tocană de porc: câte calorii sunt în 100 g?</h3>
+<p>Aproximativ 109 kcal la 100 g, cu 8,4 g de proteine, 6,3 g de carbohidrați și 5,4 g de grăsimi.</p>
+<h3>Tocană de porc: este bogat în proteine?</h3>
+<p>Da. O porție are 21,3 g de proteine, aproximativ 31% din calorii.</p>
+<h3>Tocană de porc: cum îl înregistrez în Pofu?</h3>
+<p>Fă o fotografie farfuriei sau caută numele, apoi setează porția la ceea ce ai mâncat de fapt. Poți corecta estimarea, iar Pofu își amintește corecția data viitoare.</p>
+</section>
 <section id="source">
-<p class="fine">Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție. <a href="https://fdc.nal.usda.gov/food-details/2706519/nutrients" rel="nofollow noopener">Sursă</a>.</p>
+<p class="fine">Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție. <a href="https://fdc.nal.usda.gov/food-details/2706519/nutrients" rel="nofollow noopener">Sursă</a>. <a href="../editorial-policy.html">Cum pregătim conținutul și sursele noastre</a>.</p>
 <div class="note"><p>Această pagină are scop informativ general și nu reprezintă sfat medical. Dacă ești însărcinată, alăptezi, ai o afecțiune sau ai avut în trecut o tulburare de alimentație, vorbește cu medicul sau cu un dietetician înainte de a număra caloriile.</p></div>
 </section>
 </main>
@@ -233,7 +270,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorează"><strong>Explorează</strong><a href="../guides.html">Ghiduri</a><a href="../tools.html">Instrumente</a><a href="./" aria-current="true">Calorii</a><a href="../questions/">Întrebări</a><a href="../compare.html">Comparații</a></nav>
+<nav aria-label="Explorează"><strong>Explorează</strong><a href="../guides.html">Ghiduri</a><a href="../tools.html">Instrumente</a><a href="./" aria-current="true">Calorii</a><a href="../questions/">Întrebări</a><a href="../compare.html">Comparații</a><a href="../editorial-policy.html">Conținut și surse</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

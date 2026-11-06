@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "de", "locale": "de-DE", "og_locale": "de_DE", "og_img": "og-image.jpg", "us": false,
+    "skip": "Zum Inhalt springen", "get_app": "App laden", "pill": "Kostenloses Tool · Ohne Anmeldung",
+    "byline": "Von Ali Gürkan Sevilmiş, Entwickler von Pofu · 6. November 2026",
+    "submit": "Berechnen",
+    "privacy": "Alles wird in deinem Browser berechnet. Nichts, was du eingibst, wird gesendet oder gespeichert.",
+    "f_age": "Alter", "f_system": "Einheiten", "sys_us": "US (ft, lb)", "sys_metric": "Metrisch (cm, kg)",
+    "f_height": "Größe", "a_ft": "Größe, Fuß", "a_in": "Größe, Zoll", "f_weight": "Aktuelles Gewicht",
+    "f_activity": "Aktivitätslevel",
+    "activity": {
+      "sedentary": "Überwiegend sitzend (Bürojob, kaum Sport)",
+      "light": "Leicht aktiv (leichter Sport an 1–3 Tagen pro Woche)",
+      "moderate": "Mäßig aktiv (Sport an 3–5 Tagen pro Woche)",
+      "active": "Sehr aktiv (intensiver Sport an 6–7 Tagen pro Woche)",
+      "very_active": "Extrem aktiv (körperliche Arbeit plus Training)"
+    },
+    "errors": {
+      "age": "Gib ein Alter zwischen 18 und 80 ein.",
+      "height": "Gib deine Größe ein (130–210 cm).",
+      "weight": "Gib dein Gewicht ein (35–250 kg).",
+      "activity": "Wähle ein Aktivitätslevel.",
+      "goal": "Wähle ein Ziel."
+    },
+    "how_h": "So funktioniert dieser Rechner",
+    "src_h": "Quellen",
+    "method_note": "Die Formeln stammen aus den oben genannten veröffentlichten Quellen und entsprechen den Regeln, die die Pofu-App nutzt. Diese Seite wurde nicht von einer Ernährungsberatung geprüft; sie wird mit diesen Quellen abgeglichen und aktualisiert, wenn sich diese ändern.",
+    "faq_h": "Häufig gestellte Fragen",
+    "rel_h": "Weitere kostenlose Rechner",
+    "medical": "Dieser Rechner liefert allgemeine Schätzungen für Erwachsene und keine medizinische Beratung. Wenn du schwanger bist oder stillst, eine Erkrankung wie Nierenerkrankung oder Diabetes hast oder Erfahrungen mit Essstörungen hast, sprich mit deiner Ärztin, deinem Arzt oder deiner Ernährungsberatung, bevor du deine Ernährung änderst.",
+    "badge_alt": "Pofu im App Store laden",
+    "foot_nav": "Rechtliches und Support", "privacy_l": "Datenschutz", "terms_l": "Nutzungsbedingungen", "support_l": "Support",
+    "updated": "Zuletzt aktualisiert am <time datetime=\"2026-11-06\">6. November 2026</time>.",
+    "tm": "Apple, iPhone und App Store sind Marken der Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Proteinrechner für Frauen: Proteinbedarf pro Tag | Pofu",
+      "og_title": "Proteinrechner für Frauen",
+      "desc": "Kostenloser Proteinrechner für Frauen. Berechne deinen täglichen Proteinbedarf in Gramm zum Halten, Abnehmen oder Muskelaufbau, aufgeteilt auf die Mahlzeiten, mit den Studien dahinter.",
+      "h1": "Proteinrechner für Frauen",
+      "lede": "Wie viel Protein brauchst du am Tag? Gib dein Gewicht und dein Ziel ein und erhalte dein Tagesziel in Gramm und die Menge pro Mahlzeit.",
+      "tool_h": "Berechne deinen Proteinbedarf",
+      "f_goal": "Ziel",
+      "goals": {"maintain": "Gesund bleiben und mein Gewicht halten", "lose": "Abnehmen", "muscle": "Muskeln aufbauen oder stärker werden"},
+      "res_head": "Dein tägliches Protein",
+      "s_meal3": "pro Mahlzeit bei 3 Mahlzeiten",
+      "s_meal4": "pro Mahlzeit bei 4 Mahlzeiten",
+      "s_range": "in Studien verwendeter Bereich (1,2–2,0 g/kg)",
+      "explain": "Protein auf mehrere Mahlzeiten zu verteilen ist einfacher, als alles auf einmal zu essen. Mehr Protein als hier ist für die meisten gesunden Menschen nicht schädlich, bringt aber selten zusätzlichen Nutzen.",
+      "how": [
+        "<strong>Halten:</strong> 1,4 g Protein pro kg Körpergewicht am Tag.",
+        "<strong>Abnehmen:</strong> 1,6 g pro kg, weil mehr Protein hilft, Muskeln zu erhalten, während du weniger isst, und länger satt macht.",
+        "<strong>Muskelaufbau:</strong> 1,8 g pro kg, zusammen mit Krafttraining.",
+        "Das Ergebnis wird auf 75 bis 230 g am Tag begrenzt und gleichmäßig auf 3 oder 4 Mahlzeiten verteilt."
+      ],
+      "note": "Das Minimum zur Vermeidung eines Mangels liegt für Erwachsene bei etwa 0,8 g pro kg. Die höheren Werte oben gelten für aktive Frauen und fürs Abnehmen, wo Studien einen Nutzen zeigen. Das sind dieselben Regeln, die die Pofu-App nutzt.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a> (Positionspapier zu Protein und Sport). J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg für aktive Menschen).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a> (Proteinzufuhr und Krafttraining: systematische Übersichtsarbeit mit Metaanalyse). Br J Sports Med, 2018 (der Nutzen flacht bei etwa 1,6 g/kg ab).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (Referenzwerte für Energie, Kohlenhydrate, Fett und Protein), 2005 (0,8 g/kg als Minimum für Erwachsene)."
+      ],
+      "faq": [
+        ["Wie viel Protein braucht eine Frau am Tag?", "Das Minimum für Erwachsene liegt bei etwa 0,8 g pro kg Körpergewicht. Für aktive Frauen und beim Abnehmen sprechen Studien für etwa 1,2 bis 2,0 g pro kg. Für eine Frau mit 65 kg, die abnehmen möchte, ergibt dieser Rechner 104 g am Tag."],
+        ["Sind 100 g Protein am Tag zu viel für eine Frau?", "Für die meisten gesunden Frauen nicht. Es liegt im Bereich, der bei aktiven Menschen untersucht wurde. Wenn du eine Nierenerkrankung hast, frag vorher deine Ärztin oder deinen Arzt."],
+        ["Wie viel Protein sollte ich pro Mahlzeit essen?", "Teile dein Tagesziel durch die Zahl deiner Mahlzeiten. Bei 104 g am Tag und 3 Mahlzeiten sind das etwa 35 g pro Mahlzeit, zum Beispiel ein Hähnchenbrustfilet oder eine Schüssel Quark mit Eiern."],
+        ["Hilft Protein beim Abnehmen?", "Es hilft dir, Muskeln zu erhalten, während du weniger isst, und es macht länger satt. Abnehmen funktioniert trotzdem nur, wenn du weniger Kalorien isst, als du verbrauchst."],
+        ["Soll ich mein aktuelles Gewicht oder mein Wunschgewicht nehmen?", "Nimm dein aktuelles Gewicht. Wenn dein Gewicht sehr hoch ist, ergibt ein niedrigeres Bezugsgewicht eine realistischere Zahl; die Obergrenze von 230 g am Tag hält das Ergebnis im vernünftigen Rahmen."]
+      ],
+      "bridge": "Pofu setzt dein Proteinziel nach genau dieser Regel und zeigt dir, wie viel du heute schon gegessen hast, per Foto, Barcode oder Suche."
+    },
+    "macro": {
+      "title": "Makrorechner für Frauen: Protein, Kohlenhydrate, Fett | Pofu",
+      "og_title": "Makrorechner für Frauen",
+      "desc": "Kostenloser Makrorechner für Frauen. Berechne deine täglichen Kalorien und die Gramm an Protein, Kohlenhydraten und Fett zum Halten, Abnehmen oder Muskelaufbau.",
+      "h1": "Makrorechner für Frauen",
+      "lede": "Erhalte deine Tageskalorien aufgeteilt in Protein, Kohlenhydrate und Fett, in Gramm und als Anteil deiner Kalorien.",
+      "tool_h": "Berechne deine Makros",
+      "f_goal": "Ziel",
+      "goals": {"maintain": "Mein Gewicht halten", "lose_slow": "Langsam abnehmen (etwa −250 kcal pro Tag)", "lose": "Abnehmen (etwa −400 kcal pro Tag)", "lose_fast": "Schneller abnehmen (etwa −550 kcal pro Tag)", "muscle": "Muskeln aufbauen (etwa +225 kcal pro Tag)"},
+      "res_head": "Deine täglichen Kalorien und Makros",
+      "s_p": "Protein", "s_c": "Kohlenhydrate", "s_f": "Fett",
+      "pct": "{p} % der Kalorien",
+      "floor": "Deine Kalorien wurden auf 1.200 kcal gesetzt, das niedrigste Tagesziel, das wir vorschlagen. Weniger ist ohne Arzt oder Ernährungsberatung nicht empfehlenswert.",
+      "explain": "Zuerst kommt das Protein, das Fett wird auf 28 % der Kalorien gesetzt, und die Kohlenhydrate füllen den Rest. Deine Kalorien zu treffen ist wichtiger, als jedes Gramm zu treffen; ein paar Gramm Abweichung sind in Ordnung.",
+      "how": [
+        "<strong>Kalorien:</strong> die Mifflin-St-Jeor-Formel für Frauen, mal dein Aktivitätsfaktor (1,2 bis 1,9), plus dein Ziel. Nie unter 1.200 kcal.",
+        "<strong>Protein:</strong> 1,4 g pro kg zum Halten, 1,6 g pro kg zum Abnehmen, 1,8 g pro kg für den Muskelaufbau (75–230 g).",
+        "<strong>Fett:</strong> 28 % der Kalorien, mindestens 40 g am Tag.",
+        "<strong>Kohlenhydrate:</strong> die übrigen Kalorien, mindestens 50 g am Tag. Protein und Kohlenhydrate haben 4 kcal pro Gramm, Fett 9 kcal."
+      ],
+      "note": "Fett mit 28 % liegt im empfohlenen Bereich von 20–35 % für Erwachsene, und die Kohlenhydrate landen meist bei etwa 40–50 %. Das sind dieselben Regeln, die die Pofu-App nutzt.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (neue Schätzgleichung für den Grundumsatz gesunder Menschen). Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (Referenzwerte für Energie, Kohlenhydrate, Fett und Protein), 2005 (Fett 20–35 %, Kohlenhydrate 45–65 % der Kalorien).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a> (Positionspapier zu Protein und Sport). J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Welche Makroverteilung ist für Frauen gut?", "Die eine beste Verteilung gibt es nicht. Eine verbreitete, gut durchhaltbare Aufteilung sind etwa 25–30 % Protein, 28–30 % Fett und der Rest Kohlenhydrate. Wähle eine, die du durchhalten kannst, und triff zuerst deine Kalorien."],
+        ["Welche Makros sind zum Abnehmen sinnvoll?", "Iss weniger Kalorien, als du verbrauchst, und halte das Protein hoch (etwa 1,6 g pro kg). Fett und Kohlenhydrate kannst du so aufteilen, wie es dir lieber ist."],
+        ["Muss ich meine Makros genau treffen?", "Nein. Etwa 10 g Abweichung bei Protein und Kohlenhydraten und 5 g beim Fett sind nah genug. Dein Wochendurchschnitt zählt mehr als ein einzelner Tag."],
+        ["Ist Low Carb für Frauen besser?", "Studien, die Low-Carb- und Low-Fat-Ernährung bei gleichen Kalorien vergleichen, finden einen ähnlichen Gewichtsverlust. Wähle, was zu deinem Essen und deiner Energie passt."],
+        ["Ändern sich die Makros im Menstruationszyklus?", "Nicht stark. Manche Frauen haben vor der Periode mehr Hunger; unser Kalorienrechner mit Zyklus fügt für diese Phase einen kleinen optionalen Zuschlag hinzu."]
+      ],
+      "bridge": "Pofu verfolgt diese Makros für dich: Mach ein Foto von deiner Mahlzeit, und die App schätzt Kalorien, Protein, Kohlenhydrate und Fett, die du korrigieren kannst."
+    },
+    "deficit": {
+      "title": "Kaloriendefizit-Rechner: Kalorien bis zum Wunschdatum | Pofu",
+      "og_title": "Kaloriendefizit-Rechner mit Wunschdatum",
+      "desc": "Kostenloser Kaloriendefizit-Rechner für Frauen. Gib dein Wunschgewicht und das Datum ein und sieh, wie viele Kalorien am Tag du brauchst und ob das Tempo sicher ist.",
+      "h1": "Kaloriendefizit-Rechner mit Wunschdatum",
+      "lede": "Du möchtest bis zu einem bestimmten Datum ein bestimmtes Gewicht erreichen? Sieh, wie viele Kalorien am Tag dafür nötig sind, und ein realistisches Datum, falls das Tempo zu hoch ist.",
+      "tool_h": "Berechne dein Defizit",
+      "f_goal_kg": "Wunschgewicht",
+      "f_date": "Wunschdatum",
+      "errors": {
+        "goalkg": "Gib ein Wunschgewicht ein, das unter deinem aktuellen Gewicht liegt. Dieses Tool ist zum Abnehmen gedacht.",
+        "date": "Wähle ein Wunschdatum in der Zukunft.",
+        "nodeficit": "Dein Erhaltungsbedarf liegt bereits nahe bei 1.200 kcal, daher können wir kein sicheres Defizit vorschlagen. Sprich mit einer Ärztin, einem Arzt oder einer Ernährungsberatung über dein Ziel."
+      },
+      "res_ok": "Um bis zum {date} {goal} zu erreichen, iss etwa",
+      "s_target": "Tageskalorien bei sicherem Tempo",
+      "s_deficit": "tägliches Defizit",
+      "s_week": "erwarteter Verlust pro Woche",
+      "s_maint": "Erhaltungsbedarf (TDEE)",
+      "too_fast": "Für dieses Datum brauchst du ein Defizit von {need} kcal am Tag, mehr als die {max} kcal am Tag, die wir vorschlagen. Bei einem sicheren Tempo von {target} kcal am Tag erreichst du {goal} etwa am {date}.",
+      "low_goal": "Dein Wunschgewicht liegt für deine Größe unter einem BMI von 18,5 und gilt damit als Untergewicht. Bitte besprich dein Ziel mit einer Ärztin oder einem Arzt.",
+      "explain": "Das ist eine Schätzung: Die Gewichtsabnahme verlangsamt sich meist mit der Zeit, und Wasser verändert die Waage von Tag zu Tag, besonders vor der Periode. Vergleiche Wochendurchschnitte, nicht einzelne Tage.",
+      "how": [
+        "<strong>Erhaltungsbedarf:</strong> die Mifflin-St-Jeor-Formel für Frauen mal dein Aktivitätsfaktor (1,2 bis 1,9).",
+        "<strong>Nötiges Defizit:</strong> das abzunehmende Gewicht × 7.700 kcal pro kg, geteilt durch die Tage bis zu deinem Datum.",
+        "<strong>Sichere Grenze:</strong> höchstens 550 kcal am Tag unter dem Erhaltungsbedarf und nie unter 1.200 kcal am Tag. Braucht dein Datum mehr, zeigt der Rechner, wann du bei sicherem Tempo ankommst.",
+        "Das schnellste Tempo liegt bei etwa 0,5 kg pro Woche, im Einklang mit gängigen Empfehlungen der öffentlichen Gesundheit."
+      ],
+      "note": "7.700 kcal pro kg sind eine weit verbreitete Schätzung. Der tatsächliche Verlust ist nach den ersten Wochen oft langsamer, weil dein Körper mit weniger Gewicht weniger Energie verbraucht. Sieh das Datum also als Richtwert.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> (Welches Energiedefizit ist pro Einheit Gewichtsverlust nötig?) Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (neue Schätzgleichung für den Grundumsatz gesunder Menschen). Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (ein Forschungsmodell dafür, wie sich die Gewichtsabnahme mit der Zeit verlangsamt).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (etwa 0,5 bis 1 kg pro Woche)."
+      ],
+      "faq": [
+        ["Wie groß sollte mein Kaloriendefizit sein?", "Für die meisten Frauen sind 250 bis 550 kcal am Tag unter dem Erhaltungsbedarf gut durchzuhalten. Das sind etwa 0,25 bis 0,5 kg pro Woche. Größere Defizite sind schwerer durchzuhalten und können Muskeln kosten."],
+        ["Wie lange dauert es, 5 kg abzunehmen?", "Bei einem Defizit von 550 kcal am Tag etwa 10 Wochen, bei 400 kcal am Tag etwa 14 Wochen. In der Praxis geht es oft etwas langsamer."],
+        ["Warum lässt mich dieser Rechner nicht unter 1.200 kcal essen?", "Unter 1.200 kcal am Tag ist es schwer, über das Essen genug Nährstoffe zu bekommen. Weniger sollte nur unter ärztlicher Aufsicht stattfinden."],
+        ["Sind 7.700 Kalorien wirklich ein Kilogramm?", "Das ist eine grobe Schätzung für Körperfett. Am Anfang besteht ein Teil des Verlusts aus Wasser, und später passt sich der Körper an. Die Regel ist also ein Richtwert, kein Versprechen."],
+        ["Warum habe ich zugenommen, obwohl ich im Defizit war?", "Wasser, Salz, eine größere Mahlzeit und die Tage vor der Periode können die Waage für ein paar Tage nach oben treiben. Schau auf den Trend über 2 bis 4 Wochen."]
+      ],
+      "bridge": "In Pofu kannst du ein Wunschgewicht und ein Tempo festlegen; die App berechnet dein Tagesziel nach denselben Regeln und zeigt deinen Fortschritt als Wochentrend."
+    },
+    "bmi": {
+      "title": "BMI-Rechner für Frauen: Normalgewicht für deine Größe | Pofu",
+      "og_title": "BMI-Rechner für Frauen",
+      "desc": "Kostenloser BMI-Rechner für erwachsene Frauen. Sieh deinen Body-Mass-Index, was er bedeutet und den gesunden Gewichtsbereich für deine Größe, mit den Grenzen des BMI erklärt.",
+      "h1": "BMI-Rechner für Frauen",
+      "lede": "Berechne deinen Body-Mass-Index und sieh, welcher Gewichtsbereich für deine Größe als gesund gilt.",
+      "tool_h": "Berechne deinen BMI",
+      "res_head": "Dein BMI",
+      "cats": {"under": "Untergewicht (unter 18,5)", "normal": "Normalgewicht (18,5 bis 24,9)", "over": "Übergewicht (25 bis 29,9)", "obese": "Adipositas (30 oder mehr)"},
+      "range": "Ein gesunder Gewichtsbereich für deine Größe liegt bei etwa {low} bis {high}.",
+      "explain": "Der BMI ist eine schnelle Orientierungszahl, keine Diagnose. Er unterscheidet nicht zwischen Muskeln und Fett, daher können sehr muskulöse Frauen hohe Werte haben, und in der Schwangerschaft gilt er nicht.",
+      "how": [
+        "<strong>Formel:</strong> Gewicht in kg geteilt durch die Körpergröße in Metern zum Quadrat (kg/m²).",
+        "<strong>Kategorien (WHO, Erwachsene):</strong> unter 18,5 Untergewicht, 18,5–24,9 Normalgewicht, 25–29,9 Übergewicht, 30 oder mehr Adipositas.",
+        "<strong>Gesunder Bereich:</strong> die Gewichte, die bei deiner Größe einen BMI von 18,5 bis 24,9 ergeben.",
+        "Für Frauen und Männer gilt dieselbe Formel; sie ist nicht für Kinder, Jugendliche oder die Schwangerschaft gedacht."
+      ],
+      "note": "Für manche asiatischen Bevölkerungsgruppen weist die WHO darauf hin, dass Gesundheitsrisiken schon bei einem niedrigeren BMI beginnen (ab etwa 23). Der Taillenumfang und dein Befinden liefern nützlichen Kontext zur Zahl.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (Faktenblatt zu Adipositas und Übergewicht).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a> (passender Body-Mass-Index für asiatische Bevölkerungsgruppen). Lancet, 2004."
+      ],
+      "faq": [
+        ["Was ist ein gesunder BMI für eine Frau?", "Bei Erwachsenen gilt ein BMI von 18,5 bis 24,9 als Normalgewicht. Für Frauen und Männer werden dieselben Bereiche verwendet."],
+        ["Ist der BMI bei Frauen anders?", "Die Formel und die Kategorien sind gleich. Frauen haben bei gleichem BMI meist mehr Körperfett als Männer, was ein Grund ist, warum der BMI nur ein grober Richtwert ist."],
+        ["Ist der BMI genau?", "Er ist für Gruppen und als erster Check nützlich, misst aber kein Körperfett. Muskeln, Alter und Körperbau verändern, was ein bestimmter BMI für dich bedeutet."],
+        ["Welches Gewicht sollte ich bei meiner Größe haben?", "Jedes Gewicht mit einem BMI zwischen 18,5 und 24,9 liegt im gesunden Bereich. Bei einer Größe von 165 cm sind das etwa 50 bis 68 kg."],
+        ["Kann ich den BMI in der Schwangerschaft nutzen?", "Nein. In der Schwangerschaft richte dich bei der Gewichtszunahme nach dem Rat deiner Hebamme oder deiner Ärztin."]
+      ],
+      "bridge": "Pofu setzt auf Gewohnheiten statt auf eine einzelne Zahl: tägliche Kalorien und Protein, einen wöchentlichen Gewichtstrend und Joker-Tage, damit ein verpasster Tag deine Serie nicht bricht."
+    }
+  }
+}

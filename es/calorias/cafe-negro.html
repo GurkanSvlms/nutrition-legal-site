@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/es/calorias/cafe-negro.html", "url": "https://getpofu.com/es/calorias/cafe-negro.html", "name": "¿Cuántas calorías hay en café negro? (1 taza, 240 g)", "description": "Café negro: unas 2 kcal por porción (1 taza, 240 g); 0,3 g de proteína, 0 g de carbohidratos, 0 g de grasa. Valores típicos que usa la app Pofu.", "inLanguage": "es", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Café negro", "nutrition": {"@type": "NutritionInformation", "servingSize": "240 g", "calories": "2 kcal", "proteinContent": "0.3 g", "carbohydrateContent": "0 g", "fatContent": "0 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/es/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorías", "item": "https://getpofu.com/es/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Café negro", "item": "https://getpofu.com/es/calorias/cafe-negro.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/es/calorias/cafe-negro.html", "url": "https://getpofu.com/es/calorias/cafe-negro.html", "name": "¿Cuántas calorías hay en café negro? (1 taza, 240 g)", "description": "Café negro: unas 2 kcal por porción (1 taza, 240 g); 0,3 g de proteína, 0 g de carbohidratos, 0 g de grasa. Valores típicos que usa la app Pofu.", "inLanguage": "es", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Café negro", "nutrition": {"@type": "NutritionInformation", "servingSize": "240 g", "calories": "2 kcal", "proteinContent": "0.3 g", "carbohydrateContent": "0 g", "fatContent": "0 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/es/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorías", "item": "https://getpofu.com/es/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Café negro", "item": "https://getpofu.com/es/calorias/cafe-negro.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/es/calorias/cafe-negro.html#faq", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "Café negro: ¿cuántas calorías hay en 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Unas 1 kcal por 100 g, con 0,1 g de proteína, 0 g de carbohidratos y 0 g de grasa."}}, {"@type": "Question", "name": "Café negro: ¿cómo lo registro en Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,17 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Ración más pequeña o más grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Ración</th><th scope="col">Calorías</th><th scope="col">Proteína</th></tr></thead>
+<tbody>
+<tr><th scope="row">Media ración (120 g)</th><td>1 kcal</td><td>0,1 g</td></tr>
+<tr><th scope="row">Ración habitual (240 g)</th><td>2 kcal</td><td>0,3 g</td></tr>
+<tr><th scope="row">Ración y media (360 g)</th><td>3 kcal</td><td>0,4 g</td></tr>
+</tbody>
+</table></div>
+</section>
 <section id="why">
 <h2>Por qué varía el valor</h2>
 <p>Estos alimentos son sobre todo agua, así que el tamaño de la porción y el peso real importan más que la receta. El tamaño, el punto de madurez y los extras como azúcar, aderezo, aceite o leche cambian el valor.</p>
@@ -223,6 +240,7 @@
 <section id="log">
 <h2>Cómo registrarlo en Pofu</h2>
 <p>Pofu es nuestra app. Para registrar este alimento, toma una foto de tu plato: Pofu estima la comida y la porción y muestra una puntuación de confianza, para que veas qué tan segura es la estimación y puedas corregirla. También puedes buscar por nombre o escanear un código de barras y ajustar la porción a lo que comiste. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_es&amp;mt=8">Descarga Pofu en el App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrar una comida a partir de una foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Grabación de pantalla de la app Pofu (interfaz en inglés): haz una foto, revisa la estimación y añádela a hoy.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimentos relacionados</h2>
@@ -236,8 +254,15 @@
 </ul>
 <p><a href="./">Todos los alimentos</a></p>
 </section>
+<section id="faq">
+<h2>Preguntas sobre este alimento</h2>
+<h3>Café negro: ¿cuántas calorías hay en 100 g?</h3>
+<p>Unas 1 kcal por 100 g, con 0,1 g de proteína, 0 g de carbohidratos y 0 g de grasa.</p>
+<h3>Café negro: ¿cómo lo registro en Pofu?</h3>
+<p>Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez.</p>
+</section>
 <section id="source">
-<p class="fine">Valores: estimaciones típicas que usa la app Pofu; varían según la receta y la porción.</p>
+<p class="fine">Valores: estimaciones típicas que usa la app Pofu; varían según la receta y la porción. <a href="../editorial-policy.html">Cómo preparamos nuestros contenidos y fuentes</a>.</p>
 <div class="note"><p>Esta página es información general, no consejo médico. Si estás embarazada, en período de lactancia, tienes una condición médica o antecedentes de trastorno alimentario, habla con tu médico o nutricionista antes de contar calorías.</p></div>
 </section>
 </main>
@@ -256,7 +281,7 @@
 <nav class="langs" aria-label="Este alimento en otros idiomas" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/black-coffee.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/kahve-sade.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/schwarzer-kaffee.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/cafe-noir.html" hreflang="fr" lang="fr">Français</a> · <strong>Español</strong> · <a href="../../pt-BR/calorias/cafe-preto.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/black-coffee.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/cerna-kava.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/black-coffee.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/kopi-hitam.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/caffe-nero.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/black-coffee.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/black-coffee.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/zwarte-koffie.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/czarna-kawa.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/cafea-neagra.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/chernyy-kofe.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/svart-kaffe.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/black-coffee.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/chorna-kava.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/ca-phe-den.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/black-coffee.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guías</a><a href="../tools.html">Herramientas</a><a href="./" aria-current="true">Calorías</a><a href="../questions/">Preguntas</a><a href="../compare.html">Comparativas</a></nav>
+<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guías</a><a href="../tools.html">Herramientas</a><a href="./" aria-current="true">Calorías</a><a href="../questions/">Preguntas</a><a href="../compare.html">Comparativas</a><a href="../editorial-policy.html">Contenidos y fuentes</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

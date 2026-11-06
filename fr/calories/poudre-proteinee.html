@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/fr/calories/poudre-proteinee.html", "url": "https://getpofu.com/fr/calories/poudre-proteinee.html", "name": "Poudre protéinée : combien de calories ? (1 dose, 30 g)", "description": "Poudre protéinée : environ 120 kcal par portion (1 dose, 30 g) ; 24 g de protéines, 3 g de glucides, 1,5 g de lipides. Valeurs typiques utilisées dans l’appli Pofu.", "inLanguage": "fr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Poudre protéinée", "nutrition": {"@type": "NutritionInformation", "servingSize": "30 g", "calories": "120 kcal", "proteinContent": "24 g", "carbohydrateContent": "3 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/fr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/fr/calories/"}, {"@type": "ListItem", "position": 3, "name": "Poudre protéinée", "item": "https://getpofu.com/fr/calories/poudre-proteinee.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/fr/calories/poudre-proteinee.html", "url": "https://getpofu.com/fr/calories/poudre-proteinee.html", "name": "Poudre protéinée : combien de calories ? (1 dose, 30 g)", "description": "Poudre protéinée : environ 120 kcal par portion (1 dose, 30 g) ; 24 g de protéines, 3 g de glucides, 1,5 g de lipides. Valeurs typiques utilisées dans l’appli Pofu.", "inLanguage": "fr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Poudre protéinée", "nutrition": {"@type": "NutritionInformation", "servingSize": "30 g", "calories": "120 kcal", "proteinContent": "24 g", "carbohydrateContent": "3 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/fr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/fr/calories/"}, {"@type": "ListItem", "position": 3, "name": "Poudre protéinée", "item": "https://getpofu.com/fr/calories/poudre-proteinee.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/fr/calories/poudre-proteinee.html#faq", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "Poudre protéinée : combien de calories pour 100 g ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ 400 kcal pour 100 g, avec 80 g de protéines, 10 g de glucides et 5 g de lipides."}}, {"@type": "Question", "name": "Poudre protéinée : est-ce riche en protéines ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Une portion contient 24 g de protéines, soit environ 80 % de ses calories."}}, {"@type": "Question", "name": "Poudre protéinée : comment l’enregistrer dans Pofu ?", "acceptedAnswer": {"@type": "Answer", "text": "Prends ton assiette en photo ou cherche le nom, puis règle la portion sur ce que tu as vraiment mangé. Tu peux corriger l’estimation, et Pofu retient ta correction pour la prochaine fois."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Portion plus petite ou plus grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Calories</th><th scope="col">Protéines</th></tr></thead>
+<tbody>
+<tr><th scope="row">Une demi-portion (15 g)</th><td>60 kcal</td><td>12 g</td></tr>
+<tr><th scope="row">Portion habituelle (30 g)</th><td>120 kcal</td><td>24 g</td></tr>
+<tr><th scope="row">Une portion et demie (45 g)</th><td>180 kcal</td><td>36 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>D’où viennent les calories</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:79%"></span><span class="sc" style="width:10%"></span><span class="sf" style="width:11%"></span></div>
+<p>79 % des calories viennent des protéines, 10 % des glucides et 11 % des lipides. En bref : une bonne source de protéines.</p>
+<p>Une portion représente environ 6 % d’une journée à 2 000 kcal, la valeur de référence utilisée sur les étiquettes alimentaires.</p>
+</section>
 <section id="why">
 <h2>Pourquoi la valeur varie</h2>
 <p>La pièce ou le produit, la part de gras retirée ou conservée et le mode de cuisson comptent. La peau, les marinades, les sauces et la matière grasse de cuisson ajoutent des calories qu’on ne voit pas sur la balance. Vérifiez si un poids est cru ou cuit avant de comparer.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Comment l’enregistrer dans Pofu</h2>
 <p>Pofu est notre appli. Pour enregistrer cet aliment, prenez votre assiette en photo : Pofu estime le plat et la portion et affiche un score de confiance, pour que vous voyiez son degré de certitude et puissiez corriger. Vous pouvez aussi chercher par nom ou scanner un code-barres, puis régler la portion selon ce que vous avez mangé. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_fr&amp;mt=8">Découvrir Pofu sur l’App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Appli Pofu : enregistrer un repas à partir d’une photo"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Enregistrement d’écran de l’appli Pofu (interface en anglais) : prends une photo, vérifie l’estimation, ajoute-la à aujourd’hui.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Aliments similaires</h2>
@@ -234,10 +258,25 @@
 <li><a href="crepe-nature.html">Crêpe nature</a> <span class="k">· 150 kcal (1 pièce, 70 g)</span></li>
 <li><a href="ratatouille.html">Ratatouille</a> <span class="k">· 150 kcal (1 portion, 250 g)</span></li>
 </ul>
+<h3>Options plus légères dans le même groupe</h3>
+<ul class="foodlist">
+<li><a href="blanc-de-poulet-grille.html">Blanc de poulet grillé</a> <span class="k">· 130 kcal pour 100 g</span></li>
+<li><a href="blanc-de-dinde.html">Blanc de dinde</a> <span class="k">· 107 kcal pour 100 g</span></li>
+<li><a href="crevettes.html">Crevettes</a> <span class="k">· 100 kcal pour 100 g</span></li>
+</ul>
 <p><a href="./">Tous les aliments</a></p>
 </section>
+<section id="faq">
+<h2>Questions sur cet aliment</h2>
+<h3>Poudre protéinée : combien de calories pour 100 g ?</h3>
+<p>Environ 400 kcal pour 100 g, avec 80 g de protéines, 10 g de glucides et 5 g de lipides.</p>
+<h3>Poudre protéinée : est-ce riche en protéines ?</h3>
+<p>Oui. Une portion contient 24 g de protéines, soit environ 80 % de ses calories.</p>
+<h3>Poudre protéinée : comment l’enregistrer dans Pofu ?</h3>
+<p>Prends ton assiette en photo ou cherche le nom, puis règle la portion sur ce que tu as vraiment mangé. Tu peux corriger l’estimation, et Pofu retient ta correction pour la prochaine fois.</p>
+</section>
 <section id="source">
-<p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion.</p>
+<p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion. <a href="../editorial-policy.html">Comment nous préparons nos contenus et nos sources</a>.</p>
 <div class="note"><p>Cette page donne des informations générales et ne constitue pas un avis médical. Si vous êtes enceinte, si vous allaitez, si vous avez un problème de santé ou des antécédents de trouble alimentaire, parlez-en à votre médecin ou à votre diététicien(ne) avant de compter les calories.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Cet aliment dans d’autres langues" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/protein-powder.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/protein-tozu.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/proteinpulver.html" hreflang="de" lang="de">Deutsch</a> · <strong>Français</strong> · <a href="../../es/calorias/proteina-en-polvo.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/whey.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/protein-powder.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/proteinovy-prasek.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/protein-powder.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/bubuk-protein-1-sendok-takar.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/proteine-in-polvere.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/protein-powder-1-scoop.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/protein-powder-1-scoop.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/eiwitpoeder.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/odzywka-biakowa.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/proteine-pudra.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/proteinovyy-poroshok.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/proteinpulver.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/protein-powder-1-scoop.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/proteyinovyy-poroshok.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/bot-protein-1-muong.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/protein-powder-1-scoop.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorer"><strong>Explorer</strong><a href="../guides.html">Guides</a><a href="../tools.html">Outils</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Questions</a><a href="../compare.html">Comparatifs</a></nav>
+<nav aria-label="Explorer"><strong>Explorer</strong><a href="../guides.html">Guides</a><a href="../tools.html">Outils</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Questions</a><a href="../compare.html">Comparatifs</a><a href="../editorial-policy.html">Contenus et sources</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

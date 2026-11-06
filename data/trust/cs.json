@@ -1,0 +1,40 @@
+{
+  "food": {
+    "h_port": "Menší nebo větší porce",
+    "port_cols": ["Porce", "Kalorie", "Bílkoviny"],
+    "port_rows": ["Půl porce ({g} {u})", "Obvyklá porce ({g} {u})", "Půldruhé porce ({g} {u})"],
+    "h_split": "Odkud se berou kalorie",
+    "split": "{p} % kalorií pochází z bílkovin, {c} % ze sacharidů a {f} % z tuku.",
+    "cat": {"fat": "Stručně: většina kalorií pochází z tuku, takže malá změna množství udělá velký rozdíl.", "prot": "Stručně: dobrý zdroj bílkovin.", "carb": "Stručně: většina kalorií pochází ze sacharidů.", "light": "Stručně: lehká potravina, která je většinou z vody.", "mixed": "Stručně: směs bílkovin, sacharidů a tuku."},
+    "ref": "Jedna porce je asi {pct} % dne o 2 000 kcal, tedy referenční hodnoty používané na etiketách potravin.",
+    "h_lighter": "Lehčí možnosti ze stejné skupiny",
+    "per100": "na 100 {u}",
+    "h_faq": "Otázky k této potravině",
+    "q100": "{name}: kolik kalorií je ve 100 {u}?",
+    "a100": "Asi {kcal} kcal na 100 {u}, z toho {p} g bílkovin, {c} g sacharidů a {f} g tuku.",
+    "qprot": "{name}: obsahuje hodně bílkovin?",
+    "aprot_high": "Ano. Jedna porce má {p} g bílkovin, což je asi {pp} % kalorií.",
+    "aprot_mid": "Nějaké bílkoviny obsahuje: {p} g na porci, což je asi {pp} % kalorií.",
+    "aprot_low": "Moc ne: {p} g na porci, což je asi {pp} % kalorií. Pokud chceš sytější jídlo, doplň ho bílkovinnou potravinou, například vejci, tvarohem, jogurtem, luštěninami, rybou nebo kuřecím masem.",
+    "qlog": "{name}: jak to zapíšu v Pofu?",
+    "alog": "Vyfoť talíř nebo vyhledej název a nastav porci podle toho, kolik jsi opravdu snědla. Odhad můžeš opravit a Pofu si tvou opravu příště zapamatuje.",
+    "video_caption": "Záznam obrazovky z aplikace Pofu (anglické rozhraní): vyfoť, zkontroluj odhad, přidej do dnešního dne.",
+    "video_alt": "Aplikace Pofu: zapsání jídla podle fotky",
+    "method_link": "Jak připravujeme obsah a zdroje"
+  },
+  "method": {
+    "title": "Jak připravujeme obsah a zdroje | Pofu",
+    "desc": "Kdo píše průvodce a kalkulačky Pofu, odkud pocházejí hodnoty kalorií a vzorce, jak využíváme AI a jak opravujeme chyby.",
+    "h1": "Jak připravujeme obsah a zdroje",
+    "lede": "Chceme, aby se každé číslo na tomto webu dalo ověřit. Tato stránka vysvětluje, kdo obsah píše, odkud hodnoty pocházejí a co nedělá.",
+    "sections": [
+      ["Kdo obsah píše", "<p>Pofu vytvořil Ali Gürkan Sevilmiş, nezávislý vývojář. Průvodce, kalkulačky a stránky o potravinách na tomto webu píše a udržuje on sám na základě publikovaných zdrojů uvedených níže.</p><p>Žádný nutriční terapeut ani lékař tento obsah zatím nekontroloval. Říkáme to otevřeně, místo abychom ukazovali odznak o kontrole, která neproběhla. Pokud jsi odbornice na výživu a vidíš něco k vylepšení, ozvi se nám, rádi to uslyšíme.</p>"],
+      ["Odkud pocházejí hodnoty potravin", "<p>Kalorie, bílkoviny, sacharidy a tuky na stránkách o potravinách pocházejí z veřejných databází složení potravin a z databáze potravin uvnitř aplikace Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (ministerstvo zemědělství USA)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Nizozemsko)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (švédská potravinová agentura)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Česko)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Itálie)</li></ul><p>Když stránka používá záznam z databáze, odkazuje na něj. Domácí a restaurační recepty se liší, takže každá hodnota je typický odhad pro zobrazenou porci a každá stránka to říká.</p>"],
+      ["Odkud pocházejí vzorce", "<p>Kalkulačky používají stejná pravidla jako aplikace Pofu, převzatá z publikovaného výzkumu: Mifflinovu–St Jeorovu rovnici pro klidový výdej energie (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), rozmezí bílkovin od <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, rozmezí tuků a sacharidů od <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, kategorie BMI od <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Světové zdravotnické organizace</a> a energii potřebnou na kilogram z práce <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Halla (2008)</a>. Každá kalkulačka uvádí své zdroje a vysvětluje každý krok.</p><p>Nikdy nedoporučujeme méně než 1 200 kcal denně. Kalkulačky žádají, abys nepoužívala kalorický deficit, pokud jsi těhotná nebo kojíš, a aplikace Pofu deficit nenastaví, pokud jí to sdělíš.</p>"],
+      ["Jak využíváme AI", "<p>Aplikace Pofu používá AI k odhadu jídla podle fotky. Každý odhad ukazuje skóre jistoty a lze ho opravit. Na tomto webu nám nástroje AI pomáhají psát texty a překládat je z anglických a tureckých originálů; vývojář čísla kontroluje podle zdrojů uvedených výše. Překlady zatím ne všechny zkontrolovali rodilí mluvčí; pokud ti nějaká věta v tvém jazyce zní špatně, dej nám prosím vědět.</p>"],
+      ["Co neděláme", "<ul><li>Neposkytujeme lékařské rady ani diagnózy.</li><li>Pofu nepředpovídá menstruaci ani ovulaci a nemá sledování těhotenství; volitelná funkce cyklu používá jen datum, které zadáš.</li><li>Neslibujeme výsledky hubnutí a neukazujeme fotky před a po.</li><li>Nepublikujeme falešné recenze ani hodnocení.</li><li>Naše srovnávací stránky píší tvůrci Pofu a každá z nich to uvádí.</li><li>Kalkulačky běží ve tvém prohlížeči; nic, co zadáš, se neodesílá ani neukládá.</li></ul>"],
+      ["Aktualizace a opravy", "<p>Každá stránka ukazuje, kdy byla naposledy aktualizována. Stránky procházíme, když se změní zdroj. Pokud najdeš chybu, napiš na <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; ověříme ji podle zdroje, potvrzené chyby opravíme a aktualizujeme datum na stránce.</p>"]
+    ],
+    "nav": "Obsah a zdroje"
+  }
+}

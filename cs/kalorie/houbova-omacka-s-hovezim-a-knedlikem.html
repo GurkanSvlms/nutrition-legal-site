@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html", "url": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html", "name": "Kolik kalorií má Houbová omáčka s hovězím a knedlíkem? (1 porce, 350 g)", "description": "Houbová omáčka s hovězím a knedlíkem: asi 550 kcal na porci (1 porce, 350 g); 35 g bílkovin, 57,4 g sacharidů, 19,2 g tuku. Typické hodnoty z veřejných databází složení potravin a z aplikace Pofu.", "inLanguage": "cs", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Houbová omáčka s hovězím a knedlíkem", "nutrition": {"@type": "NutritionInformation", "servingSize": "350 g", "calories": "550 kcal", "proteinContent": "35 g", "carbohydrateContent": "57.4 g", "fatContent": "19.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/cs/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/cs/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Houbová omáčka s hovězím a knedlíkem", "item": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html", "url": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html", "name": "Kolik kalorií má Houbová omáčka s hovězím a knedlíkem? (1 porce, 350 g)", "description": "Houbová omáčka s hovězím a knedlíkem: asi 550 kcal na porci (1 porce, 350 g); 35 g bílkovin, 57,4 g sacharidů, 19,2 g tuku. Typické hodnoty z veřejných databází složení potravin a z aplikace Pofu.", "inLanguage": "cs", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Houbová omáčka s hovězím a knedlíkem", "nutrition": {"@type": "NutritionInformation", "servingSize": "350 g", "calories": "550 kcal", "proteinContent": "35 g", "carbohydrateContent": "57.4 g", "fatContent": "19.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/cs/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/cs/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Houbová omáčka s hovězím a knedlíkem", "item": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/cs/kalorie/houbova-omacka-s-hovezim-a-knedlikem.html#faq", "inLanguage": "cs", "mainEntity": [{"@type": "Question", "name": "Houbová omáčka s hovězím a knedlíkem: kolik kalorií je ve 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Asi 157 kcal na 100 g, z toho 10 g bílkovin, 16,4 g sacharidů a 5,5 g tuku."}}, {"@type": "Question", "name": "Houbová omáčka s hovězím a knedlíkem: obsahuje hodně bílkovin?", "acceptedAnswer": {"@type": "Answer", "text": "Ano. Jedna porce má 35 g bílkovin, což je asi 25 % kalorií."}}, {"@type": "Question", "name": "Houbová omáčka s hovězím a knedlíkem: jak to zapíšu v Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Vyfoť talíř nebo vyhledej název a nastav porci podle toho, kolik jsi opravdu snědla. Odhad můžeš opravit a Pofu si tvou opravu příště zapamatuje."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Menší nebo větší porce</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porce</th><th scope="col">Kalorie</th><th scope="col">Bílkoviny</th></tr></thead>
+<tbody>
+<tr><th scope="row">Půl porce (175 g)</th><td>275 kcal</td><td>17,5 g</td></tr>
+<tr><th scope="row">Obvyklá porce (350 g)</th><td>550 kcal</td><td>35 g</td></tr>
+<tr><th scope="row">Půldruhé porce (525 g)</th><td>825 kcal</td><td>52,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Odkud se berou kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:26%"></span><span class="sc" style="width:42%"></span><span class="sf" style="width:32%"></span></div>
+<p>26 % kalorií pochází z bílkovin, 42 % ze sacharidů a 32 % z tuku. Stručně: směs bílkovin, sacharidů a tuku.</p>
+<p>Jedna porce je asi 28 % dne o 2 000 kcal, tedy referenční hodnoty používané na etiketách potravin.</p>
+</section>
 <section id="why">
 <h2>Proč se hodnota liší</h2>
 <p>Domácí a restaurační recepty se liší množstvím oleje, masa, sýra a škrobu i velikostí porce. Berte hodnotu jako výchozí bod a porci upravte, pokud byl váš talíř menší nebo větší.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Jak to zapsat v Pofu</h2>
 <p>Pofu je naše aplikace. Chcete-li tuto potravinu zapsat, vyfoťte talíř: Pofu odhadne jídlo i porci a ukáže míru jistoty, takže vidíte, jak spolehlivý odhad je, a můžete ho upravit. Můžete také hledat podle názvu nebo naskenovat čárový kód a porci nastavit podle skutečného množství. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_cs&amp;mt=8">Stáhnout Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikace Pofu: zapsání jídla podle fotky"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Záznam obrazovky z aplikace Pofu (anglické rozhraní): vyfoť, zkontroluj odhad, přidej do dnešního dne.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobné potraviny</h2>
@@ -215,8 +239,17 @@
 </ul>
 <p><a href="./">Všechny potraviny</a></p>
 </section>
+<section id="faq">
+<h2>Otázky k této potravině</h2>
+<h3>Houbová omáčka s hovězím a knedlíkem: kolik kalorií je ve 100 g?</h3>
+<p>Asi 157 kcal na 100 g, z toho 10 g bílkovin, 16,4 g sacharidů a 5,5 g tuku.</p>
+<h3>Houbová omáčka s hovězím a knedlíkem: obsahuje hodně bílkovin?</h3>
+<p>Ano. Jedna porce má 35 g bílkovin, což je asi 25 % kalorií.</p>
+<h3>Houbová omáčka s hovězím a knedlíkem: jak to zapíšu v Pofu?</h3>
+<p>Vyfoť talíř nebo vyhledej název a nastav porci podle toho, kolik jsi opravdu snědla. Odhad můžeš opravit a Pofu si tvou opravu příště zapamatuje.</p>
+</section>
 <section id="source">
-<p class="fine">Hodnoty: typické odhady z veřejných databází složení potravin a z aplikace Pofu; liší se podle receptu a porce. <a href="https://www.nutridatabaze.cz/potraviny/?id=158" rel="nofollow noopener">Zdroj</a>.</p>
+<p class="fine">Hodnoty: typické odhady z veřejných databází složení potravin a z aplikace Pofu; liší se podle receptu a porce. <a href="https://www.nutridatabaze.cz/potraviny/?id=158" rel="nofollow noopener">Zdroj</a>. <a href="../editorial-policy.html">Jak připravujeme obsah a zdroje</a>.</p>
 <div class="note"><p>Tato stránka slouží k obecné informaci a není lékařskou radou. Jste-li těhotná, kojíte, máte onemocnění nebo jste dříve měla poruchu příjmu potravy, proberte počítání kalorií se svým lékařem nebo nutričním terapeutem.</p></div>
 </section>
 </main>
@@ -233,7 +266,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Prozkoumat"><strong>Prozkoumat</strong><a href="../guides.html">Průvodci</a><a href="../tools.html">Nástroje</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Otázky</a><a href="../compare.html">Srovnání</a></nav>
+<nav aria-label="Prozkoumat"><strong>Prozkoumat</strong><a href="../guides.html">Průvodci</a><a href="../tools.html">Nástroje</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Otázky</a><a href="../compare.html">Srovnání</a><a href="../editorial-policy.html">Obsah a zdroje</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

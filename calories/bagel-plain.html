@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/calories/bagel-plain.html", "url": "https://getpofu.com/calories/bagel-plain.html", "name": "How many calories in bagel (plain)? (1 piece, 95 g)", "description": "Bagel (plain): about 250 kcal per serving (1 piece, 95 g); 10 g protein, 49 g carbs, 1.5 g fat. Typical values used in the Pofu app.", "inLanguage": "en", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Bagel (plain)", "nutrition": {"@type": "NutritionInformation", "servingSize": "95 g", "calories": "250 kcal", "proteinContent": "10 g", "carbohydrateContent": "49 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/calories/"}, {"@type": "ListItem", "position": 3, "name": "Bagel (plain)", "item": "https://getpofu.com/calories/bagel-plain.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/calories/bagel-plain.html", "url": "https://getpofu.com/calories/bagel-plain.html", "name": "How many calories in bagel (plain)? (1 piece, 95 g)", "description": "Bagel (plain): about 250 kcal per serving (1 piece, 95 g); 10 g protein, 49 g carbs, 1.5 g fat. Typical values used in the Pofu app.", "inLanguage": "en", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Bagel (plain)", "nutrition": {"@type": "NutritionInformation", "servingSize": "95 g", "calories": "250 kcal", "proteinContent": "10 g", "carbohydrateContent": "49 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/calories/"}, {"@type": "ListItem", "position": 3, "name": "Bagel (plain)", "item": "https://getpofu.com/calories/bagel-plain.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/calories/bagel-plain.html#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Bagel (plain): how many calories are in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "About 263 kcal per 100 g, with 10.5 g of protein, 51.6 g of carbohydrates and 1.6 g of fat."}}, {"@type": "Question", "name": "Bagel (plain): is it high in protein?", "acceptedAnswer": {"@type": "Answer", "text": "It has some protein: 10 g per portion, about 16% of its calories."}}, {"@type": "Question", "name": "Bagel (plain): how do I log it in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Take a photo of your plate or search for the name, then set the portion to what you actually ate. You can correct the estimate, and Pofu remembers your correction next time."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Smaller or larger portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Calories</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Half a portion (48 g)</th><td>125 kcal</td><td>5 g</td></tr>
+<tr><th scope="row">Typical portion (95 g)</th><td>250 kcal</td><td>10 g</td></tr>
+<tr><th scope="row">One and a half portions (142 g)</th><td>375 kcal</td><td>15 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Where the calories come from</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:16%"></span><span class="sc" style="width:79%"></span><span class="sf" style="width:5%"></span></div>
+<p>16% of the calories come from protein, 79% from carbohydrates and 5% from fat. In short: most of the calories come from carbohydrates.</p>
+<p>One portion is about 12% of a 2,000 kcal day, the reference value used on food labels.</p>
+</section>
 <section id="why">
 <h2>Why the number varies</h2>
 <p>The result depends on how it was cooked and how much oil, butter or sugar went into it. Cooked and dry weights are very different, so a heaped plate and a level one can differ a lot. Brand, size and thickness change it further.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>How to log it in Pofu</h2>
 <p>Pofu is our app. To log this food, take a photo of your plate: Pofu estimates the food and portion and shows a confidence score, so you can see how sure it is and correct it. You can also search by name or scan a barcode, then set the serving to match what you ate. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_en&amp;mt=8">Get Pofu on the App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../assets/video/demo-scan.jpg" aria-label="Pofu app: logging a meal from a photo"><source src="../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Screen recording from the Pofu app (English interface): take a photo, check the estimate, add it to today.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Related foods</h2>
@@ -213,10 +237,25 @@
 <li><a href="cooked-chickpeas.html">Cooked Chickpeas</a> <span class="k">· 270 kcal (1 bowl, 200 g)</span></li>
 <li><a href="cooked-lentils.html">Cooked Lentils</a> <span class="k">· 230 kcal (1 bowl, 200 g)</span></li>
 </ul>
+<h3>Lighter options in the same group</h3>
+<ul class="foodlist">
+<li><a href="sushi-8-pieces.html">Sushi (8 pieces)</a> <span class="k">· 175 kcal per 100 g</span></li>
+<li><a href="cooked-pasta.html">Cooked Pasta</a> <span class="k">· 157 kcal per 100 g</span></li>
+<li><a href="cooked-chickpeas.html">Cooked Chickpeas</a> <span class="k">· 135 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">All foods</a></p>
 </section>
+<section id="faq">
+<h2>Questions about this food</h2>
+<h3>Bagel (plain): how many calories are in 100 g?</h3>
+<p>About 263 kcal per 100 g, with 10.5 g of protein, 51.6 g of carbohydrates and 1.6 g of fat.</p>
+<h3>Bagel (plain): is it high in protein?</h3>
+<p>It has some protein: 10 g per portion, about 16% of its calories.</p>
+<h3>Bagel (plain): how do I log it in Pofu?</h3>
+<p>Take a photo of your plate or search for the name, then set the portion to what you actually ate. You can correct the estimate, and Pofu remembers your correction next time.</p>
+</section>
 <section id="source">
-<p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion.</p>
+<p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion. <a href="../editorial-policy.html">How we prepare our content and sources</a>.</p>
 <div class="note"><p>This page is general information, not medical advice. If you are pregnant, breastfeeding, have a medical condition or a history of an eating disorder, talk to your doctor or dietitian before counting calories.</p></div>
 </section>
 </main>
@@ -233,7 +272,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explore"><strong>Explore</strong><a href="../guides.html">Guides</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">Compare</a></nav>
+<nav aria-label="Explore"><strong>Explore</strong><a href="../guides.html">Guides</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">Compare</a><a href="../editorial-policy.html">Content and sources</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

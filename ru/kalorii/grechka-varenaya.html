@@ -118,9 +118,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ru/kalorii/grechka-varenaya.html", "url": "https://getpofu.com/ru/kalorii/grechka-varenaya.html", "name": "Гречка варёная: сколько калорий? (1 тарелка, 180 g)", "description": "Гречка варёная: около 212 ккал на порцию (1 тарелка, 180 g); 5,8 г белков, 34,2 г углеводов, 7,1 г жиров. Типичные значения из открытых баз данных о продуктах и из приложения Pofu.", "inLanguage": "ru", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Гречка варёная", "nutrition": {"@type": "NutritionInformation", "servingSize": "180 g", "calories": "212 kcal", "proteinContent": "5.8 g", "carbohydrateContent": "34.2 g", "fatContent": "7.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ru/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калории", "item": "https://getpofu.com/ru/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Гречка варёная", "item": "https://getpofu.com/ru/kalorii/grechka-varenaya.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ru/kalorii/grechka-varenaya.html", "url": "https://getpofu.com/ru/kalorii/grechka-varenaya.html", "name": "Гречка варёная: сколько калорий? (1 тарелка, 180 g)", "description": "Гречка варёная: около 212 ккал на порцию (1 тарелка, 180 g); 5,8 г белков, 34,2 г углеводов, 7,1 г жиров. Типичные значения из открытых баз данных о продуктах и из приложения Pofu.", "inLanguage": "ru", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Гречка варёная", "nutrition": {"@type": "NutritionInformation", "servingSize": "180 g", "calories": "212 kcal", "proteinContent": "5.8 g", "carbohydrateContent": "34.2 g", "fatContent": "7.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ru/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калории", "item": "https://getpofu.com/ru/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Гречка варёная", "item": "https://getpofu.com/ru/kalorii/grechka-varenaya.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ru/kalorii/grechka-varenaya.html#faq", "inLanguage": "ru", "mainEntity": [{"@type": "Question", "name": "Гречка варёная: сколько калорий в 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Около 118 ккал на 100 g, из них 3,2 г белка, 19 г углеводов и 3,9 г жира."}}, {"@type": "Question", "name": "Гречка варёная: много ли в нём белка?", "acceptedAnswer": {"@type": "Answer", "text": "Немного: 5,8 г на порцию, это около 11% калорий. Если хотите более сытный приём пищи, сочетайте его с белковым продуктом, например с яйцами, творогом, йогуртом, бобовыми, рыбой или курицей."}}, {"@type": "Question", "name": "Гречка варёная: как записать это в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографируйте тарелку или найдите блюдо по названию, затем укажите порцию, которую вы действительно съели. Вы можете поправить оценку, и Pofu запомнит вашу поправку на следующий раз."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -196,6 +202,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Меньшая или большая порция</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порция</th><th scope="col">Калории</th><th scope="col">Белок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порции (90 g)</th><td>106 kcal</td><td>2,9 g</td></tr>
+<tr><th scope="row">Обычная порция (180 g)</th><td>212 kcal</td><td>5,8 g</td></tr>
+<tr><th scope="row">Полторы порции (270 g)</th><td>318 kcal</td><td>8,7 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Откуда берутся калории</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:10%"></span><span class="sc" style="width:61%"></span><span class="sf" style="width:29%"></span></div>
+<p>10% калорий приходится на белок, 61% на углеводы и 29% на жир. Коротко: большая часть калорий приходится на углеводы.</p>
+<p>Одна порция — это около 11% дня в 2 000 ккал, то есть эталонного значения, которое используется на этикетках продуктов.</p>
+</section>
 <section id="why">
 <h2>Почему значение отличается</h2>
 <p>Результат зависит от того, как блюдо приготовлено и сколько в нём масла, сливочного масла или сахара. Вес варёного и сухого продукта сильно различается, поэтому порция с горкой и ровная порция заметно отличаются. Марка, размер и толщина тоже влияют на значение.</p>
@@ -203,6 +226,7 @@
 <section id="log">
 <h2>Как записать это в Pofu</h2>
 <p>Pofu — наше приложение. Чтобы записать этот продукт, сфотографируйте тарелку: Pofu оценит блюдо и порцию и покажет уровень уверенности, чтобы вы видели, насколько точна оценка, и могли её поправить. Можно также найти блюдо по названию или отсканировать штрихкод и подогнать порцию под реальное количество. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ru&amp;mt=8">Скачать Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Приложение Pofu: запись приёма пищи по фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запись экрана приложения Pofu (интерфейс на английском): сделайте фото, проверьте оценку, добавьте в сегодняшний день.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Похожие продукты</h2>
@@ -214,10 +238,25 @@
 <li><a href="varenyy-buryy-ris.html">Варёный бурый рис</a> <span class="k">· 215 kcal (1 миска, 195 g)</span></li>
 <li><a href="varenyy-belyy-ris.html">Варёный белый рис</a> <span class="k">· 205 kcal (1 миска, 158 g)</span></li>
 </ul>
+<h3>Более лёгкие варианты из той же группы</h3>
+<ul class="foodlist">
+<li><a href="banan.html">Банан</a> <span class="k">· 88 kcal на 100 g</span></li>
+<li><a href="batat.html">Батат</a> <span class="k">· 88 kcal на 100 g</span></li>
+<li><a href="varenyy-kartofel.html">Варёный картофель</a> <span class="k">· 87 kcal на 100 g</span></li>
+</ul>
 <p><a href="./">Все продукты</a></p>
 </section>
+<section id="faq">
+<h2>Вопросы об этом продукте</h2>
+<h3>Гречка варёная: сколько калорий в 100 g?</h3>
+<p>Около 118 ккал на 100 g, из них 3,2 г белка, 19 г углеводов и 3,9 г жира.</p>
+<h3>Гречка варёная: много ли в нём белка?</h3>
+<p>Немного: 5,8 г на порцию, это около 11% калорий. Если хотите более сытный приём пищи, сочетайте его с белковым продуктом, например с яйцами, творогом, йогуртом, бобовыми, рыбой или курицей.</p>
+<h3>Гречка варёная: как записать это в Pofu?</h3>
+<p>Сфотографируйте тарелку или найдите блюдо по названию, затем укажите порцию, которую вы действительно съели. Вы можете поправить оценку, и Pofu запомнит вашу поправку на следующий раз.</p>
+</section>
 <section id="source">
-<p class="fine">Значения: типичные оценки, из открытых баз данных о продуктах и из приложения Pofu; они меняются в зависимости от рецепта и порции. <a href="https://fdc.nal.usda.gov/food-details/2708362/nutrients" rel="nofollow noopener">Источник</a>.</p>
+<p class="fine">Значения: типичные оценки, из открытых баз данных о продуктах и из приложения Pofu; они меняются в зависимости от рецепта и порции. <a href="https://fdc.nal.usda.gov/food-details/2708362/nutrients" rel="nofollow noopener">Источник</a>. <a href="../editorial-policy.html">Как мы готовим материалы и источники</a>.</p>
 <div class="note"><p>Эта страница носит справочный характер и не является медицинской консультацией. Если вы беременны, кормите грудью, у вас есть заболевание или в прошлом было расстройство пищевого поведения, обсудите подсчёт калорий с врачом или диетологом.</p></div>
 </section>
 </main>
@@ -236,7 +275,7 @@
 <nav class="langs" aria-label="Это блюдо на других языках" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><strong>Русский</strong> · <a href="../../uk/kalorii/hrechana-kasha.html" hreflang="uk" lang="uk">Українська</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Разделы"><strong>Разделы</strong><a href="../guides.html">Руководства</a><a href="../tools.html">Инструменты</a><a href="./" aria-current="true">Калории</a><a href="../questions/">Вопросы</a><a href="../compare.html">Сравнения</a></nav>
+<nav aria-label="Разделы"><strong>Разделы</strong><a href="../guides.html">Руководства</a><a href="../tools.html">Инструменты</a><a href="./" aria-current="true">Калории</a><a href="../questions/">Вопросы</a><a href="../compare.html">Сравнения</a><a href="../editorial-policy.html">Материалы и источники</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

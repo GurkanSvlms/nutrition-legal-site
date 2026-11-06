@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html", "url": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html", "name": "Hoeveel calorieën zitten er in Boerenkoolstamppot met rookworst en spekjes? (1 bord, 350 g)", "description": "Boerenkoolstamppot met rookworst en spekjes: ongeveer 480 kcal per portie (1 bord, 350 g); 18,2 g eiwit, 32,9 g koolhydraten, 29,4 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Boerenkoolstamppot met rookworst en spekjes", "nutrition": {"@type": "NutritionInformation", "servingSize": "350 g", "calories": "480 kcal", "proteinContent": "18.2 g", "carbohydrateContent": "32.9 g", "fatContent": "29.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Boerenkoolstamppot met rookworst en spekjes", "item": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html", "url": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html", "name": "Hoeveel calorieën zitten er in Boerenkoolstamppot met rookworst en spekjes? (1 bord, 350 g)", "description": "Boerenkoolstamppot met rookworst en spekjes: ongeveer 480 kcal per portie (1 bord, 350 g); 18,2 g eiwit, 32,9 g koolhydraten, 29,4 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Boerenkoolstamppot met rookworst en spekjes", "nutrition": {"@type": "NutritionInformation", "servingSize": "350 g", "calories": "480 kcal", "proteinContent": "18.2 g", "carbohydrateContent": "32.9 g", "fatContent": "29.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Boerenkoolstamppot met rookworst en spekjes", "item": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/nl/calorieen/boerenkoolstamppot-met-rookworst-en-spekjes.html#faq", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Boerenkoolstamppot met rookworst en spekjes: hoeveel calorieën zitten er in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Ongeveer 137 kcal per 100 g, met 5,2 g eiwit, 9,4 g koolhydraten en 8,4 g vet."}}, {"@type": "Question", "name": "Boerenkoolstamppot met rookworst en spekjes: bevat het veel eiwit?", "acceptedAnswer": {"@type": "Answer", "text": "Het bevat wat eiwit: 18,2 g per portie, ongeveer 15% van de calorieën."}}, {"@type": "Question", "name": "Boerenkoolstamppot met rookworst en spekjes: hoe log ik het in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere of grotere portie</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portie</th><th scope="col">Calorieën</th><th scope="col">Eiwit</th></tr></thead>
+<tbody>
+<tr><th scope="row">Een halve portie (175 g)</th><td>240 kcal</td><td>9,1 g</td></tr>
+<tr><th scope="row">Gebruikelijke portie (350 g)</th><td>480 kcal</td><td>18,2 g</td></tr>
+<tr><th scope="row">Anderhalve portie (525 g)</th><td>720 kcal</td><td>27,3 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Waar de calorieën vandaan komen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:16%"></span><span class="sc" style="width:28%"></span><span class="sf" style="width:56%"></span></div>
+<p>16% van de calorieën komt uit eiwit, 28% uit koolhydraten en 56% uit vet. Kort gezegd: de meeste calorieën komen uit vet, dus een kleine verandering in hoeveelheid maakt een groot verschil.</p>
+<p>Eén portie is ongeveer 24% van een dag van 2.000 kcal, de referentiewaarde op voedingsetiketten.</p>
+</section>
 <section id="why">
 <h2>Waarom de waarde kan verschillen</h2>
 <p>Het vet maakt het grootste verschil. Hoeveel olie, boter, kaas of frituurvet er wordt gebruikt en hoe vol de lepel of schep is, verandert de calorieën het meest. Zelfs twee borden die er hetzelfde uitzien, kunnen flink uiteenlopen.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Zo log je het in Pofu</h2>
 <p>Pofu is onze app. Om dit product te loggen, maak je een foto van je bord: Pofu schat het gerecht en de portie en toont een betrouwbaarheidsscore, zodat je ziet hoe zeker de schatting is en deze kunt aanpassen. Je kunt ook op naam zoeken of een barcode scannen en de portie instellen op wat je echt hebt gegeten. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_nl&amp;mt=8">Download Pofu in de App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-app: een maaltijd loggen met een foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Schermopname van de Pofu-app (Engelse interface): maak een foto, controleer de schatting, voeg het toe aan vandaag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Vergelijkbare producten</h2>
@@ -215,8 +239,17 @@
 </ul>
 <p><a href="./">Alle producten</a></p>
 </section>
+<section id="faq">
+<h2>Vragen over dit voedingsmiddel</h2>
+<h3>Boerenkoolstamppot met rookworst en spekjes: hoeveel calorieën zitten er in 100 g?</h3>
+<p>Ongeveer 137 kcal per 100 g, met 5,2 g eiwit, 9,4 g koolhydraten en 8,4 g vet.</p>
+<h3>Boerenkoolstamppot met rookworst en spekjes: bevat het veel eiwit?</h3>
+<p>Het bevat wat eiwit: 18,2 g per portie, ongeveer 15% van de calorieën.</p>
+<h3>Boerenkoolstamppot met rookworst en spekjes: hoe log ik het in Pofu?</h3>
+<p>Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer.</p>
+</section>
 <section id="source">
-<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="https://nevo-online.rivm.nl/Home/GetProductsDetailsByNevoCode?nevoCode=5401&amp;langSetting=nl" rel="nofollow noopener">Bron</a>.</p>
+<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="https://nevo-online.rivm.nl/Home/GetProductsDetailsByNevoCode?nevoCode=5401&amp;langSetting=nl" rel="nofollow noopener">Bron</a>. <a href="../editorial-policy.html">Hoe we onze inhoud en bronnen opstellen</a>.</p>
 <div class="note"><p>Deze pagina is bedoeld als algemene informatie en is geen medisch advies. Als je zwanger bent, borstvoeding geeft, een aandoening hebt of eerder een eetstoornis hebt gehad, overleg dan met je huisarts of een diëtist voordat je calorieën gaat tellen.</p></div>
 </section>
 </main>
@@ -233,7 +266,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a></nav>
+<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a><a href="../editorial-policy.html">Inhoud en bronnen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

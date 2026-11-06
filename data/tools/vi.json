@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "vi", "locale": "vi-VN", "og_locale": "vi_VN", "og_img": "og-image.jpg", "us": false,
+    "skip": "Chuyển đến nội dung", "get_app": "Tải ứng dụng", "pill": "Công cụ miễn phí · Không cần đăng ký",
+    "byline": "Tác giả: Ali Gürkan Sevilmiş, nhà phát triển Pofu · 6 tháng 11, 2026",
+    "submit": "Tính",
+    "privacy": "Mọi thứ được tính ngay trong trình duyệt của bạn. Những gì bạn nhập không được gửi đi hay lưu lại.",
+    "f_age": "Tuổi", "f_system": "Đơn vị", "sys_us": "Hệ Mỹ (ft, lb)", "sys_metric": "Hệ mét (cm, kg)",
+    "f_height": "Chiều cao", "a_ft": "Chiều cao, feet", "a_in": "Chiều cao, inch", "f_weight": "Cân nặng hiện tại",
+    "f_activity": "Mức độ vận động",
+    "activity": {
+      "sedentary": "Chủ yếu ngồi (làm văn phòng, ít tập thể dục)",
+      "light": "Vận động nhẹ (tập nhẹ 1–3 ngày mỗi tuần)",
+      "moderate": "Vận động vừa phải (tập 3–5 ngày mỗi tuần)",
+      "active": "Rất năng động (tập nặng 6–7 ngày mỗi tuần)",
+      "very_active": "Cực kỳ năng động (công việc tay chân cộng với tập luyện)"
+    },
+    "errors": {
+      "age": "Nhập độ tuổi từ 18 đến 80.",
+      "height": "Nhập chiều cao của bạn (130–210 cm).",
+      "weight": "Nhập cân nặng của bạn (35–250 kg).",
+      "activity": "Chọn mức độ vận động.",
+      "goal": "Chọn một mục tiêu."
+    },
+    "how_h": "Máy tính này hoạt động thế nào",
+    "src_h": "Nguồn tham khảo",
+    "method_note": "Các công thức lấy từ những nguồn đã công bố ở trên và khớp với quy tắc ứng dụng Pofu đang dùng. Trang này chưa được chuyên gia dinh dưỡng thẩm định; nội dung được đối chiếu với các nguồn này và cập nhật khi nguồn thay đổi.",
+    "faq_h": "Câu hỏi thường gặp",
+    "rel_h": "Thêm công cụ miễn phí",
+    "medical": "Máy tính này đưa ra ước tính chung cho người trưởng thành, không phải lời khuyên y tế. Nếu bạn đang mang thai hoặc cho con bú, có bệnh lý như bệnh thận hay tiểu đường, hoặc từng có rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi thay đổi cách ăn.",
+    "badge_alt": "Tải Pofu trên App Store",
+    "foot_nav": "Pháp lý và hỗ trợ", "privacy_l": "Quyền riêng tư", "terms_l": "Điều khoản", "support_l": "Hỗ trợ",
+    "updated": "Cập nhật lần cuối: <time datetime=\"2026-11-06\">6 tháng 11, 2026</time>.",
+    "tm": "Apple, iPhone và App Store là nhãn hiệu của Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Tính lượng protein cho phụ nữ: mỗi ngày cần bao nhiêu? | Pofu",
+      "og_title": "Máy tính lượng protein cho phụ nữ",
+      "desc": "Máy tính protein miễn phí cho phụ nữ. Biết lượng protein mỗi ngày (gam) để giữ cân, giảm cân hoặc tăng cơ, chia theo từng bữa, kèm các nghiên cứu làm cơ sở.",
+      "h1": "Tính lượng protein cho phụ nữ",
+      "lede": "Mỗi ngày bạn cần bao nhiêu protein? Nhập cân nặng và mục tiêu để biết lượng cần ăn mỗi ngày (gam) và mỗi bữa là bao nhiêu.",
+      "tool_h": "Tính lượng protein của bạn",
+      "f_goal": "Mục tiêu",
+      "goals": {"maintain": "Giữ sức khỏe và giữ nguyên cân nặng", "lose": "Giảm cân", "muscle": "Tăng cơ hoặc khỏe hơn"},
+      "res_head": "Lượng protein mỗi ngày của bạn",
+      "s_meal3": "mỗi bữa nếu ăn 3 bữa",
+      "s_meal4": "mỗi bữa nếu ăn 4 bữa",
+      "s_range": "khoảng được dùng trong các nghiên cứu (1,2–2,0 g/kg)",
+      "explain": "Chia protein ra các bữa dễ hơn là ăn dồn một lần. Ăn nhiều protein hơn mức này không gây hại với đa số người khỏe mạnh, nhưng hiếm khi mang thêm lợi ích.",
+      "how": [
+        "<strong>Giữ cân:</strong> 1,4 g protein cho mỗi kg cân nặng mỗi ngày.",
+        "<strong>Giảm cân:</strong> 1,6 g cho mỗi kg, vì nhiều protein hơn giúp giữ cơ khi bạn ăn ít đi và giúp no lâu hơn.",
+        "<strong>Tăng cơ:</strong> 1,8 g cho mỗi kg, kết hợp tập tạ.",
+        "Kết quả được giữ trong khoảng 75 đến 230 g mỗi ngày và chia đều cho 3 hoặc 4 bữa."
+      ],
+      "note": "Mức tối thiểu để tránh thiếu hụt ở người trưởng thành là khoảng 0,8 g cho mỗi kg. Các mức cao hơn ở trên dành cho phụ nữ năng động và khi giảm cân, nơi các nghiên cứu cho thấy có lợi ích. Đây là quy tắc ứng dụng Pofu đang dùng.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a> (tuyên bố quan điểm về protein và tập luyện). J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg cho người vận động).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a> (bổ sung protein và tập kháng lực: tổng quan hệ thống và phân tích tổng hợp). Br J Sports Med, 2018 (lợi ích chững lại quanh mức 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (mức tham chiếu dinh dưỡng về năng lượng, tinh bột, chất béo và protein), 2005 (tối thiểu 0,8 g/kg cho người trưởng thành)."
+      ],
+      "faq": [
+        ["Phụ nữ cần bao nhiêu protein mỗi ngày?", "Mức tối thiểu cho người trưởng thành là khoảng 0,8 g cho mỗi kg cân nặng. Với phụ nữ năng động và khi giảm cân, các nghiên cứu ủng hộ mức khoảng 1,2 đến 2,0 g cho mỗi kg. Với một phụ nữ nặng 65 kg đang giảm cân, máy tính này cho ra 104 g mỗi ngày."],
+        ["Ăn 100 g protein mỗi ngày có quá nhiều với phụ nữ không?", "Với đa số phụ nữ khỏe mạnh thì không. Mức này nằm trong khoảng đã được nghiên cứu ở người vận động. Nếu bạn có bệnh thận, hãy hỏi bác sĩ trước."],
+        ["Mỗi bữa nên ăn bao nhiêu protein?", "Lấy mục tiêu mỗi ngày chia cho số bữa. Với 104 g mỗi ngày và 3 bữa, mỗi bữa khoảng 35 g, ví dụ một miếng cá, hai quả trứng và một ít đậu phụ."],
+        ["Protein có giúp giảm cân không?", "Protein giúp bạn giữ cơ khi ăn ít đi và no lâu hơn. Giảm cân vẫn đến từ việc ăn ít calo hơn lượng bạn tiêu hao."],
+        ["Nên dùng cân nặng hiện tại hay cân nặng mục tiêu?", "Hãy dùng cân nặng hiện tại. Nếu cân nặng của bạn rất cao, dùng một mức cân tham chiếu thấp hơn sẽ cho con số thực tế hơn; mức trần 230 g mỗi ngày giữ cho kết quả hợp lý."]
+      ],
+      "bridge": "Pofu đặt mục tiêu protein của bạn theo đúng quy tắc này và cho biết hôm nay bạn đã ăn được bao nhiêu, từ ảnh, mã vạch hoặc tìm kiếm."
+    },
+    "macro": {
+      "title": "Tính macro cho phụ nữ: protein, tinh bột và chất béo | Pofu",
+      "og_title": "Máy tính macro cho phụ nữ",
+      "desc": "Máy tính macro miễn phí cho phụ nữ. Biết lượng calo mỗi ngày và số gam protein, tinh bột, chất béo để giữ cân, giảm cân hoặc tăng cơ.",
+      "h1": "Tính macro cho phụ nữ",
+      "lede": "Nhận lượng calo mỗi ngày được chia thành protein, tinh bột và chất béo, theo gam và theo tỷ lệ phần trăm calo.",
+      "tool_h": "Tính macro của bạn",
+      "f_goal": "Mục tiêu",
+      "goals": {"maintain": "Giữ nguyên cân nặng", "lose_slow": "Giảm cân từ từ (khoảng −250 kcal mỗi ngày)", "lose": "Giảm cân (khoảng −400 kcal mỗi ngày)", "lose_fast": "Giảm cân nhanh hơn (khoảng −550 kcal mỗi ngày)", "muscle": "Tăng cơ (khoảng +225 kcal mỗi ngày)"},
+      "res_head": "Calo và macro mỗi ngày của bạn",
+      "s_p": "Protein", "s_c": "Tinh bột", "s_f": "Chất béo",
+      "pct": "{p}% lượng calo",
+      "floor": "Lượng calo của bạn được đặt ở 1.200 kcal, mức thấp nhất mỗi ngày mà chúng tôi gợi ý. Ăn thấp hơn mức này không được khuyến khích nếu không có bác sĩ hoặc chuyên gia dinh dưỡng theo dõi.",
+      "explain": "Protein được tính trước, chất béo chiếm 28% lượng calo, phần còn lại là tinh bột. Đủ calo quan trọng hơn là đủ từng gam; lệch vài gam cũng không sao.",
+      "how": [
+        "<strong>Calo:</strong> phương trình Mifflin-St Jeor cho phụ nữ, nhân với hệ số vận động của bạn (1,2 đến 1,9), cộng với mục tiêu. Không bao giờ dưới 1.200 kcal.",
+        "<strong>Protein:</strong> 1,4 g cho mỗi kg để giữ cân, 1,6 g cho mỗi kg để giảm cân, 1,8 g cho mỗi kg để tăng cơ (75–230 g).",
+        "<strong>Chất béo:</strong> 28% lượng calo, tối thiểu 40 g mỗi ngày.",
+        "<strong>Tinh bột:</strong> phần calo còn lại, tối thiểu 50 g mỗi ngày. Protein và tinh bột có 4 kcal mỗi gam, chất béo có 9 kcal."
+      ],
+      "note": "Chất béo ở mức 28% nằm trong khoảng 20–35% được khuyến nghị cho người trưởng thành, còn tinh bột thường rơi vào khoảng 40–50%. Đây là quy tắc ứng dụng Pofu đang dùng.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (phương trình mới ước tính năng lượng tiêu hao khi nghỉ ở người khỏe mạnh). Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (mức tham chiếu dinh dưỡng về năng lượng, tinh bột, chất béo và protein), 2005 (chất béo 20–35%, tinh bột 45–65% lượng calo).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a> (tuyên bố quan điểm của ISSN về protein và tập luyện). J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Tỷ lệ macro nào tốt cho phụ nữ?", "Không có một tỷ lệ tốt nhất duy nhất. Một cách chia phổ biến và dễ duy trì là khoảng 25–30% protein, 28–30% chất béo và phần còn lại là tinh bột. Hãy chọn kiểu bạn theo được lâu dài và ăn đủ calo trước."],
+        ["Macro nào tốt để giảm cân?", "Ăn ít calo hơn lượng bạn tiêu hao và giữ protein ở mức cao (khoảng 1,6 g cho mỗi kg). Chất béo và tinh bột có thể chia theo sở thích của bạn."],
+        ["Tôi có phải ăn đúng từng gam macro không?", "Không. Lệch trong khoảng 10 g protein và tinh bột, 5 g chất béo là đủ gần. Trung bình theo tuần quan trọng hơn một ngày riêng lẻ."],
+        ["Ăn ít tinh bột (low carb) có tốt hơn cho phụ nữ không?", "Các nghiên cứu so sánh chế độ ít tinh bột với chế độ ít chất béo ở cùng lượng calo cho thấy mức giảm cân tương tự. Hãy chọn kiểu hợp với món ăn và năng lượng của bạn."],
+        ["Macro có thay đổi theo chu kỳ kinh nguyệt không?", "Không nhiều. Một số người thấy đói hơn trước kỳ kinh; máy tính calo theo chu kỳ của chúng tôi có thêm một khoản nhỏ tùy chọn cho giai đoạn đó."]
+      ],
+      "bridge": "Pofu theo dõi macro này giúp bạn: chụp ảnh bữa ăn và ứng dụng ước tính calo, protein, tinh bột, chất béo, bạn có thể chỉnh lại."
+    },
+    "deficit": {
+      "title": "Tính thâm hụt calo: ăn bao nhiêu calo để đạt cân nặng đúng hạn | Pofu",
+      "og_title": "Máy tính thâm hụt calo theo ngày mục tiêu",
+      "desc": "Máy tính thâm hụt calo miễn phí cho phụ nữ. Nhập cân nặng mục tiêu và ngày đạt được để biết mỗi ngày cần ăn bao nhiêu calo, và tốc độ đó có an toàn không.",
+      "h1": "Tính thâm hụt calo theo ngày mục tiêu",
+      "lede": "Muốn đạt một mức cân nặng vào một ngày nhất định? Xem mỗi ngày cần bao nhiêu calo, và một ngày thực tế hơn nếu tốc độ quá nhanh.",
+      "tool_h": "Tính mức thâm hụt của bạn",
+      "f_goal_kg": "Cân nặng mục tiêu",
+      "f_date": "Ngày mục tiêu",
+      "errors": {
+        "goalkg": "Nhập cân nặng mục tiêu thấp hơn cân nặng hiện tại. Công cụ này dành cho việc giảm cân.",
+        "date": "Chọn một ngày mục tiêu trong tương lai.",
+        "nodeficit": "Lượng calo duy trì của bạn đã gần mức 1.200 kcal, nên chúng tôi không thể gợi ý mức thâm hụt an toàn. Hãy trao đổi về mục tiêu của bạn với bác sĩ hoặc chuyên gia dinh dưỡng."
+      },
+      "res_ok": "Để đạt {goal} vào {date}, hãy ăn khoảng",
+      "s_target": "Calo mỗi ngày ở tốc độ an toàn",
+      "s_deficit": "thâm hụt mỗi ngày",
+      "s_week": "mức giảm dự kiến mỗi tuần",
+      "s_maint": "mức duy trì (TDEE)",
+      "too_fast": "Ngày đó cần thâm hụt {need} kcal mỗi ngày, nhiều hơn mức {max} kcal mỗi ngày mà chúng tôi gợi ý. Với tốc độ an toàn {target} kcal mỗi ngày, bạn sẽ đạt {goal} vào khoảng {date}.",
+      "low_goal": "Cân nặng mục tiêu của bạn thấp hơn BMI 18,5 so với chiều cao, tức là thiếu cân. Hãy kiểm tra lại mục tiêu với bác sĩ.",
+      "explain": "Đây chỉ là ước tính: tốc độ giảm cân thường chậm dần theo thời gian và nước làm số cân thay đổi từng ngày, nhất là trước kỳ kinh. Hãy so sánh trung bình theo tuần, đừng so từng ngày.",
+      "how": [
+        "<strong>Mức duy trì:</strong> phương trình Mifflin-St Jeor cho phụ nữ nhân với hệ số vận động (1,2 đến 1,9).",
+        "<strong>Mức thâm hụt cần có:</strong> số cân cần giảm × 7.700 kcal mỗi kg, chia cho số ngày đến ngày mục tiêu.",
+        "<strong>Giới hạn an toàn:</strong> thấp hơn mức duy trì tối đa 550 kcal mỗi ngày, và không bao giờ dưới 1.200 kcal mỗi ngày. Nếu ngày bạn chọn cần nhiều hơn, máy tính sẽ cho biết khi nào bạn đạt được ở tốc độ an toàn.",
+        "Tốc độ nhanh nhất là khoảng 0,5 kg mỗi tuần, phù hợp với lời khuyên y tế cộng đồng phổ biến."
+      ],
+      "note": "7.700 kcal cho mỗi kg là một ước tính được dùng rộng rãi. Mức giảm thực tế thường chậm hơn sau vài tuần đầu vì cơ thể tiêu hao ít năng lượng hơn khi nhẹ đi, nên hãy xem ngày dự kiến chỉ là gợi ý.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> (cần thâm hụt bao nhiêu năng lượng cho mỗi đơn vị cân nặng giảm?) Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (phương trình mới ước tính năng lượng tiêu hao khi nghỉ ở người khỏe mạnh). Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (mô hình nghiên cứu cho thấy giảm cân chậm dần theo thời gian).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (cách giảm cân; khoảng 0,5 đến 1 kg mỗi tuần)."
+      ],
+      "faq": [
+        ["Mức thâm hụt calo của tôi nên là bao nhiêu?", "Với đa số phụ nữ, thấp hơn mức duy trì 250 đến 550 kcal mỗi ngày là mức có thể duy trì lâu dài. Đó là khoảng 0,25 đến 0,5 kg mỗi tuần. Thâm hụt lớn hơn khó giữ hơn và có thể làm mất cơ."],
+        ["Giảm 5 kg mất bao lâu?", "Với mức thâm hụt 550 kcal mỗi ngày, khoảng 10 tuần; với 400 kcal mỗi ngày, khoảng 14 tuần. Tiến triển thực tế thường chậm hơn một chút."],
+        ["Vì sao máy tính này không cho tôi ăn dưới 1.200 kcal?", "Dưới 1.200 kcal mỗi ngày rất khó nạp đủ dưỡng chất từ thức ăn. Chỉ nên ăn thấp hơn khi có sự theo dõi của bác sĩ."],
+        ["7.700 calo có thật sự bằng một ký không?", "Đó là ước tính sơ bộ cho mỡ cơ thể. Lúc đầu, một phần cân giảm là nước, và về sau cơ thể thích nghi, nên quy tắc này chỉ là gợi ý, không phải lời hứa."],
+        ["Vì sao tôi đang thâm hụt calo mà cân nặng lại tăng?", "Nước, muối, một bữa ăn nhiều hơn và những ngày trước kỳ kinh đều có thể đẩy số cân lên vài ngày. Hãy nhìn xu hướng trong 2 đến 4 tuần."]
+      ],
+      "bridge": "Trong Pofu, bạn có thể đặt cân nặng mục tiêu và tốc độ; ứng dụng tính mục tiêu mỗi ngày theo đúng các quy tắc này và hiển thị tiến trình của bạn dưới dạng xu hướng theo tuần."
+    },
+    "bmi": {
+      "title": "Tính BMI cho phụ nữ: cân nặng hợp lý theo chiều cao | Pofu",
+      "og_title": "Máy tính BMI cho phụ nữ",
+      "desc": "Máy tính BMI miễn phí cho phụ nữ trưởng thành. Xem chỉ số khối cơ thể của bạn, ý nghĩa của nó và khoảng cân nặng khỏe mạnh theo chiều cao, kèm giải thích những hạn chế của BMI.",
+      "h1": "Tính BMI cho phụ nữ",
+      "lede": "Tính chỉ số khối cơ thể và xem khoảng cân nặng được coi là khỏe mạnh theo chiều cao của bạn.",
+      "tool_h": "Tính BMI của bạn",
+      "res_head": "BMI của bạn",
+      "cats": {"under": "Thiếu cân (dưới 18,5)", "normal": "Cân nặng khỏe mạnh (18,5 đến 24,9)", "over": "Thừa cân (25 đến 29,9)", "obese": "Béo phì (30 trở lên)"},
+      "range": "Khoảng cân nặng khỏe mạnh theo chiều cao của bạn là khoảng {low} đến {high}.",
+      "explain": "BMI là con số sàng lọc nhanh, không phải chẩn đoán. BMI không phân biệt được cơ và mỡ, nên phụ nữ nhiều cơ có thể ra chỉ số cao, và BMI không áp dụng khi mang thai.",
+      "how": [
+        "<strong>Công thức:</strong> cân nặng (kg) chia cho bình phương chiều cao (m) (kg/m²).",
+        "<strong>Phân loại (WHO, người trưởng thành):</strong> dưới 18,5 thiếu cân, 18,5–24,9 khỏe mạnh, 25–29,9 thừa cân, từ 30 trở lên béo phì.",
+        "<strong>Khoảng khỏe mạnh:</strong> các mức cân nặng cho BMI từ 18,5 đến 24,9 ở chiều cao của bạn.",
+        "Công thức này dùng chung cho nữ và nam; không dành cho trẻ em, thanh thiếu niên hay phụ nữ mang thai."
+      ],
+      "note": "Hướng dẫn tại Việt Nam và nhiều nước châu Á thường dùng ngưỡng riêng cho người châu Á (thừa cân từ khoảng 23), còn máy tính này hiển thị các mức phân loại của WHO. WHO cũng nêu rằng với một số nhóm dân cư châu Á, nguy cơ sức khỏe bắt đầu ở BMI thấp hơn (từ khoảng 23). Vòng eo và cảm nhận của bạn về sức khỏe cho thêm thông tin hữu ích bên cạnh con số.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (tóm tắt về béo phì và thừa cân).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a> (chỉ số khối cơ thể phù hợp cho người châu Á). Lancet, 2004."
+      ],
+      "faq": [
+        ["BMI bao nhiêu là khỏe mạnh với phụ nữ?", "Với người trưởng thành, BMI từ 18,5 đến 24,9 được coi là cân nặng khỏe mạnh. Các khoảng này dùng chung cho nữ và nam."],
+        ["BMI của phụ nữ có khác không?", "Công thức và các mức phân loại là như nhau. Ở cùng một chỉ số BMI, phụ nữ thường có nhiều mỡ cơ thể hơn nam giới, và đó là một lý do BMI chỉ là hướng dẫn sơ bộ."],
+        ["BMI có chính xác không?", "BMI hữu ích cho nhóm dân số và như một bước kiểm tra đầu tiên, nhưng không đo được mỡ cơ thể. Cơ bắp, tuổi tác và vóc dáng đều làm thay đổi ý nghĩa của một chỉ số BMI đối với bạn."],
+        ["Tôi nên nặng bao nhiêu với chiều cao của mình?", "Bất kỳ cân nặng nào cho BMI từ 18,5 đến 24,9 đều nằm trong khoảng khỏe mạnh. Với chiều cao 165 cm, đó là khoảng 50 đến 68 kg."],
+        ["Tôi có thể dùng BMI khi đang mang thai không?", "Không. Khi mang thai, hãy làm theo lời khuyên của nữ hộ sinh hoặc bác sĩ về việc tăng cân."]
+      ],
+      "bridge": "Pofu tập trung vào thói quen thay vì một con số duy nhất: calo và protein mỗi ngày, xu hướng cân nặng theo tuần và ngày ân hạn để một ngày bỏ lỡ không làm đứt chuỗi của bạn."
+    }
+  }
+}

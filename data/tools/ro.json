@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "ro", "locale": "ro-RO", "og_locale": "ro_RO", "og_img": "og-image.jpg", "us": false,
+    "skip": "Sari la conținut", "get_app": "Obține aplicația", "pill": "Instrument gratuit · Fără înregistrare",
+    "byline": "De Ali Gürkan Sevilmiş, dezvoltatorul Pofu · 6 noiembrie 2026",
+    "submit": "Calculează",
+    "privacy": "Totul se calculează în browserul tău. Nimic din ce introduci nu este trimis sau stocat.",
+    "f_age": "Vârstă", "f_system": "Unități", "sys_us": "SUA (ft, lb)", "sys_metric": "Metric (cm, kg)",
+    "f_height": "Înălțime", "a_ft": "Înălțime, picioare", "a_in": "Înălțime, țoli", "f_weight": "Greutatea actuală",
+    "f_activity": "Nivel de activitate",
+    "activity": {
+      "sedentary": "Mai ales sedentară (muncă de birou, puțin sport)",
+      "light": "Ușor activă (exerciții ușoare 1–3 zile pe săptămână)",
+      "moderate": "Moderat activă (exerciții 3–5 zile pe săptămână)",
+      "active": "Foarte activă (exerciții intense 6–7 zile pe săptămână)",
+      "very_active": "Extrem de activă (muncă fizică plus antrenament)"
+    },
+    "errors": {
+      "age": "Introdu o vârstă între 18 și 80 de ani.",
+      "height": "Introdu înălțimea ta (130–210 cm).",
+      "weight": "Introdu greutatea ta (35–250 kg).",
+      "activity": "Alege un nivel de activitate.",
+      "goal": "Alege un obiectiv."
+    },
+    "how_h": "Cum funcționează acest calculator",
+    "src_h": "Surse",
+    "method_note": "Formulele sunt preluate din sursele publicate de mai sus și corespund regulilor folosite de aplicația Pofu. Această pagină nu a fost revizuită de un dietetician; este verificată în raport cu aceste surse și actualizată atunci când ele se schimbă.",
+    "faq_h": "Întrebări frecvente",
+    "rel_h": "Mai multe instrumente gratuite",
+    "medical": "Acest calculator oferă estimări generale pentru adulți, nu sfaturi medicale. Dacă ești însărcinată sau alăptezi, ai o afecțiune medicală precum boli de rinichi sau diabet ori un istoric de tulburări de alimentație, vorbește cu medicul sau cu un dietetician înainte să-ți schimbi alimentația.",
+    "badge_alt": "Descarcă Pofu din App Store",
+    "foot_nav": "Informații legale și asistență", "privacy_l": "Confidențialitate", "terms_l": "Termeni", "support_l": "Asistență",
+    "updated": "Ultima actualizare: <time datetime=\"2026-11-06\">6 noiembrie 2026</time>.",
+    "tm": "Apple, iPhone și App Store sunt mărci comerciale ale Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Calculator proteine pentru femei: câte proteine pe zi? | Pofu",
+      "og_title": "Calculator proteine pentru femei",
+      "desc": "Calculator gratuit de proteine pentru femei. Află câte grame de proteine ai nevoie pe zi ca să te menții, să slăbești sau să-ți construiești mușchii, împărțite pe mese, cu cercetările din spate.",
+      "h1": "Calculator proteine pentru femei",
+      "lede": "Câte proteine ai nevoie pe zi? Introdu greutatea și obiectivul și primești o țintă zilnică în grame și cât înseamnă asta la fiecare masă.",
+      "tool_h": "Calculează-ți proteinele",
+      "f_goal": "Obiectiv",
+      "goals": {"maintain": "Să rămân sănătoasă și să-mi mențin greutatea", "lose": "Să slăbesc", "muscle": "Să-mi construiesc mușchii sau să devin mai puternică"},
+      "res_head": "Proteinele tale zilnice",
+      "s_meal3": "la fiecare masă, cu 3 mese",
+      "s_meal4": "la fiecare masă, cu 4 mese",
+      "s_range": "interval folosit în studii (1,2–2,0 g/kg)",
+      "explain": "E mai ușor să împarți proteinele pe mai multe mese decât să le mănânci pe toate odată. Mai multe proteine decât atât nu dăunează majorității persoanelor sănătoase, dar rareori aduc un beneficiu în plus.",
+      "how": [
+        "<strong>Menținere:</strong> 1,4 g de proteine pe kg de greutate corporală pe zi.",
+        "<strong>Slăbit:</strong> 1,6 g pe kg, pentru că mai multe proteine ajută la păstrarea mușchilor cât timp mănânci mai puțin și îți dau senzația de sațietate mai mult timp.",
+        "<strong>Construirea mușchilor:</strong> 1,8 g pe kg, împreună cu antrenamente de forță.",
+        "Rezultatul este păstrat între 75 și 230 g pe zi și este împărțit egal la 3 sau 4 mese."
+      ],
+      "note": "Minimul pentru a evita o carență la adulți este de aproximativ 0,8 g pe kg. Valorile mai mari de mai sus sunt pentru femeile active și pentru slăbit, unde studiile arată un beneficiu. Sunt aceleași reguli pe care le folosește aplicația Pofu.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg pentru persoanele active).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a>. Br J Sports Med, 2018 (beneficiul se stabilizează în jur de 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (minimum 0,8 g/kg pentru adulți)."
+      ],
+      "faq": [
+        ["Câte proteine are nevoie o femeie pe zi?", "Minimul pentru adulți este de aproximativ 0,8 g pe kg de greutate corporală. Pentru femeile active și în timpul slăbitului, cercetările susțin aproximativ 1,2–2,0 g pe kg. Pentru o femeie de 65 kg care slăbește, acest calculator dă 104 g pe zi."],
+        ["Sunt 100 g de proteine pe zi prea mult pentru o femeie?", "Pentru majoritatea femeilor sănătoase, nu. Se încadrează în intervalul studiat la persoanele active. Dacă ai o boală de rinichi, întreabă mai întâi medicul."],
+        ["Câte proteine ar trebui să mănânc la o masă?", "Împarte ținta zilnică la numărul de mese. Cu 104 g pe zi și 3 mese, ies aproximativ 35 g la masă, de exemplu un piept de pui sau un bol de iaurt grecesc cu ouă."],
+        ["Ajută proteinele la slăbit?", "Te ajută să-ți păstrezi mușchii cât timp mănânci mai puțin și îți dau senzația de sațietate mai mult timp. Slăbitul vine tot din a mânca mai puține calorii decât consumi."],
+        ["Să folosesc greutatea actuală sau pe cea dorită?", "Folosește greutatea actuală. Dacă greutatea ta este foarte mare, o greutate de referință mai mică dă un rezultat mai realist; limita de 230 g pe zi păstrează rezultatul rezonabil."]
+      ],
+      "bridge": "Pofu îți stabilește ținta de proteine cu aceeași regulă și îți arată cât ai mâncat până acum azi, din fotografii, coduri de bare sau căutare."
+    },
+    "macro": {
+      "title": "Calculator macronutrienți pentru femei: proteine, carbohidrați și grăsimi pe zi | Pofu",
+      "og_title": "Calculator macronutrienți pentru femei",
+      "desc": "Calculator gratuit de macronutrienți pentru femei. Află caloriile zilnice și gramele de proteine, carbohidrați și grăsimi pentru menținere, slăbit sau construirea mușchilor.",
+      "h1": "Calculator macronutrienți pentru femei",
+      "lede": "Primești caloriile zilnice împărțite în proteine, carbohidrați și grăsimi, în grame și ca procent din calorii.",
+      "tool_h": "Calculează-ți macronutrienții",
+      "f_goal": "Obiectiv",
+      "goals": {"maintain": "Să-mi mențin greutatea", "lose_slow": "Să slăbesc încet (aproximativ −250 kcal pe zi)", "lose": "Să slăbesc (aproximativ −400 kcal pe zi)", "lose_fast": "Să slăbesc mai repede (aproximativ −550 kcal pe zi)", "muscle": "Să-mi construiesc mușchii (aproximativ +225 kcal pe zi)"},
+      "res_head": "Caloriile și macronutrienții tăi zilnici",
+      "s_p": "Proteine", "s_c": "Carbohidrați", "s_f": "Grăsimi",
+      "pct": "{p}% din calorii",
+      "floor": "Caloriile tale au fost setate la 1.200 kcal, cea mai mică țintă zilnică pe care o sugerăm. Să cobori sub această valoare nu este recomandat fără un medic sau un dietetician.",
+      "explain": "Proteinele vin primele, grăsimile sunt setate la 28% din calorii, iar carbohidrații completează restul. Să te încadrezi în calorii contează mai mult decât să nimerești fiecare gram; o abatere de câteva grame nu e o problemă.",
+      "how": [
+        "<strong>Calorii:</strong> ecuația Mifflin-St Jeor pentru femei, înmulțită cu factorul tău de activitate (1,2 până la 1,9), plus obiectivul tău. Niciodată sub 1.200 kcal.",
+        "<strong>Proteine:</strong> 1,4 g pe kg pentru menținere, 1,6 g pe kg pentru slăbit, 1,8 g pe kg pentru construirea mușchilor (75–230 g).",
+        "<strong>Grăsimi:</strong> 28% din calorii, cel puțin 40 g pe zi.",
+        "<strong>Carbohidrați:</strong> caloriile rămase, cel puțin 50 g pe zi. Proteinele și carbohidrații au 4 kcal pe gram, grăsimile 9 kcal."
+      ],
+      "note": "Grăsimile la 28% se încadrează în intervalul de 20–35% recomandat adulților, iar carbohidrații ajung de obicei la 40–50%. Sunt aceleași reguli pe care le folosește aplicația Pofu.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (grăsimi 20–35%, carbohidrați 45–65% din calorii).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Care este un raport bun de macronutrienți pentru femei?", "Nu există un singur raport ideal. O împărțire frecventă și ușor de menținut este de aproximativ 25–30% proteine, 28–30% grăsimi, iar restul carbohidrați. Alege unul pe care îl poți ține și respectă întâi caloriile."],
+        ["Care sunt macronutrienții potriviți pentru slăbit?", "Mănâncă mai puține calorii decât consumi și păstrează proteinele ridicate (aproximativ 1,6 g pe kg). Grăsimile și carbohidrații pot fi împărțiți așa cum preferi."],
+        ["Trebuie să respect macronutrienții exact?", "Nu. O abatere de aproximativ 10 g la proteine și carbohidrați și de 5 g la grăsimi este suficient de aproape. Media pe o săptămână contează mai mult decât o singură zi."],
+        ["Este dieta low-carb mai bună pentru femei?", "Studiile care compară dietele cu puțini carbohidrați și cele cu puține grăsimi, la aceleași calorii, găsesc o scădere în greutate similară. Alege ce se potrivește cu mâncarea ta preferată și cu nivelul tău de energie."],
+        ["Se schimbă macronutrienții în timpul ciclului menstrual?", "Nu prea. Unele persoane se simt mai flămânde înainte de menstruație; calculatorul nostru de calorii după ciclu adaugă o mică marjă opțională pentru acea fază."]
+      ],
+      "bridge": "Pofu urmărește acești macronutrienți pentru tine: fă o poză mesei și aplicația estimează caloriile, proteinele, carbohidrații și grăsimile, iar tu le poți corecta."
+    },
+    "deficit": {
+      "title": "Calculator deficit caloric: câte calorii ca să ajungi la țintă până la o dată | Pofu",
+      "og_title": "Calculator deficit caloric după data-țintă",
+      "desc": "Calculator gratuit de deficit caloric pentru femei. Introdu greutatea dorită și data și vezi câte calorii pe zi ai nevoie și dacă ritmul este sigur.",
+      "h1": "Calculator deficit caloric după data-țintă",
+      "lede": "Vrei să ajungi la o anumită greutate până la o anumită dată? Vezi câte calorii pe zi sunt necesare și o dată realistă, dacă ritmul este prea rapid.",
+      "tool_h": "Calculează-ți deficitul",
+      "f_goal_kg": "Greutatea dorită",
+      "f_date": "Data-țintă",
+      "errors": {
+        "goalkg": "Introdu o greutate dorită mai mică decât cea actuală. Instrumentul este pentru slăbit.",
+        "date": "Alege o dată-țintă din viitor.",
+        "nodeficit": "Caloriile tale de menținere sunt deja aproape de 1.200 kcal, așa că nu putem sugera un deficit sigur. Vorbește cu un medic sau cu un dietetician despre obiectivul tău."
+      },
+      "res_ok": "Ca să ajungi la {goal} până la {date}, mănâncă aproximativ",
+      "s_target": "Calorii zilnice într-un ritm sigur",
+      "s_deficit": "deficit zilnic",
+      "s_week": "scădere estimată pe săptămână",
+      "s_maint": "menținere (TDEE)",
+      "too_fast": "Data aceasta cere un deficit de {need} kcal pe zi, mai mult decât cele {max} kcal pe zi pe care le sugerăm. Într-un ritm sigur, de {target} kcal pe zi, ai ajunge la {goal} în jurul datei de {date}.",
+      "low_goal": "Greutatea ta dorită este sub un IMC de 18,5 pentru înălțimea ta, ceea ce înseamnă subponderal. Te rugăm să discuți obiectivul cu un medic.",
+      "explain": "Este o estimare: scăderea în greutate încetinește de obicei în timp, iar apa schimbă cifra de pe cântar de la o zi la alta, mai ales înainte de menstruație. Compară mediile săptămânale, nu zilele izolate.",
+      "how": [
+        "<strong>Menținere:</strong> ecuația Mifflin-St Jeor pentru femei înmulțită cu factorul tău de activitate (1,2 până la 1,9).",
+        "<strong>Deficitul necesar:</strong> kilogramele de slăbit × 7.700 kcal pe kg, împărțite la numărul de zile până la data ta.",
+        "<strong>Limita sigură:</strong> cel mult 550 kcal pe zi sub menținere și niciodată sub 1.200 kcal pe zi. Dacă data ta cere mai mult, calculatorul îți arată când ai ajunge acolo într-un ritm sigur.",
+        "Cel mai rapid ritm este de aproximativ 0,5 kg pe săptămână, în linie cu recomandările obișnuite de sănătate publică."
+      ],
+      "note": "7.700 kcal pe kg este o estimare folosită pe scară largă. Scăderea reală este adesea mai lentă după primele săptămâni, pentru că organismul folosește mai puțină energie pe măsură ce devii mai ușoară, așa că privește data ca pe un reper.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (un model de cercetare despre cum încetinește scăderea în greutate în timp).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (aproximativ 0,5–1 kg pe săptămână)."
+      ],
+      "faq": [
+        ["Cât de mare ar trebui să fie deficitul meu caloric?", "Pentru majoritatea femeilor, 250–550 kcal pe zi sub menținere este un deficit sustenabil. Asta înseamnă aproximativ 0,25–0,5 kg pe săptămână. Deficitele mai mari sunt mai greu de ținut și pot costa masă musculară."],
+        ["Cât durează să slăbesc 5 kg?", "La un deficit de 550 kcal pe zi, aproximativ 10 săptămâni; la 400 kcal pe zi, aproximativ 14 săptămâni. Progresul real este adesea ceva mai lent."],
+        ["De ce nu mă lasă calculatorul să mănânc sub 1.200 kcal?", "Sub 1.200 kcal pe zi este greu să primești suficiente nutrienți din alimente. Să cobori sub această valoare se face doar sub supraveghere medicală."],
+        ["Chiar înseamnă 7.700 de calorii un kilogram?", "Este o estimare aproximativă pentru grăsimea corporală. La început, o parte din scădere este apă, iar mai târziu organismul se adaptează, așa că regula este un reper, nu o promisiune."],
+        ["De ce am luat în greutate deși eram în deficit?", "Apa, sarea, o masă mai consistentă și zilele de dinainte de menstruație pot ridica cifra de pe cântar câteva zile. Uită-te la tendința pe 2–4 săptămâni."]
+      ],
+      "bridge": "În Pofu poți seta o greutate dorită și un ritm; aplicația îți calculează ținta zilnică cu aceleași reguli și îți arată progresul ca tendință săptămânală."
+    },
+    "bmi": {
+      "title": "Calculator IMC pentru femei: intervalul de greutate sănătoasă pentru înălțimea ta | Pofu",
+      "og_title": "Calculator IMC pentru femei",
+      "desc": "Calculator gratuit de IMC pentru femei adulte. Vezi indicele tău de masă corporală, ce înseamnă și intervalul de greutate sănătoasă pentru înălțimea ta, cu limitele IMC explicate.",
+      "h1": "Calculator IMC pentru femei",
+      "lede": "Calculează-ți indicele de masă corporală și vezi intervalul de greutate considerat sănătos pentru înălțimea ta.",
+      "tool_h": "Calculează-ți IMC",
+      "res_head": "IMC-ul tău",
+      "cats": {"under": "Subponderal (sub 18,5)", "normal": "Greutate sănătoasă (18,5 – 24,9)", "over": "Supraponderal (25 – 29,9)", "obese": "Obezitate (30 sau mai mult)"},
+      "range": "Un interval de greutate sănătoasă pentru înălțimea ta este de aproximativ {low} – {high}.",
+      "explain": "IMC este un număr rapid de orientare, nu un diagnostic. Nu face diferența între mușchi și grăsime, așa că femeile foarte musculoase pot avea valori mari, și nu se aplică în sarcină.",
+      "how": [
+        "<strong>Formula:</strong> greutatea în kg împărțită la înălțimea în metri la pătrat (kg/m²).",
+        "<strong>Categorii (OMS, adulți):</strong> sub 18,5 subponderal, 18,5–24,9 sănătos, 25–29,9 supraponderal, 30 sau mai mult obezitate.",
+        "<strong>Intervalul sănătos:</strong> greutățile care dau un IMC de 18,5–24,9 la înălțimea ta.",
+        "Aceeași formulă se folosește pentru femei și bărbați; nu este făcută pentru copii, adolescenți sau sarcină."
+      ],
+      "note": "Pentru unele populații asiatice, OMS sugerează că riscurile pentru sănătate încep la un IMC mai mic (de la aproximativ 23). Circumferința taliei și modul în care te simți adaugă un context util cifrei.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a>.",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004."
+      ],
+      "faq": [
+        ["Care este un IMC sănătos pentru o femeie?", "La adulți, un IMC între 18,5 și 24,9 înseamnă o greutate sănătoasă. Aceleași intervale se folosesc pentru femei și bărbați."],
+        ["Este IMC diferit pentru femei?", "Formula și categoriile sunt aceleași. Femeile au de obicei mai multă grăsime corporală decât bărbații la același IMC, iar acesta este unul dintre motivele pentru care IMC este doar un reper aproximativ."],
+        ["Este IMC exact?", "Este util pentru grupuri și ca prim control, dar nu măsoară grăsimea corporală. Mușchii, vârsta și conformația corpului schimbă ce înseamnă un anumit IMC pentru tine."],
+        ["Ce greutate ar trebui să am pentru înălțimea mea?", "Orice greutate care dă un IMC între 18,5 și 24,9 se află în intervalul sănătos. Pentru o înălțime de 165 cm, asta înseamnă aproximativ 50–68 kg."],
+        ["Pot folosi IMC când sunt însărcinată?", "Nu. În timpul sarcinii, urmează sfaturile moașei sau ale medicului despre creșterea în greutate."]
+      ],
+      "bridge": "Pofu se concentrează pe obiceiuri, nu pe un singur număr: calorii și proteine zilnice, o tendință săptămânală a greutății și zile joker, ca o zi ratată să nu-ți strice seria."
+    }
+  }
+}

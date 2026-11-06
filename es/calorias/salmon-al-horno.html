@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/es/calorias/salmon-al-horno.html", "url": "https://getpofu.com/es/calorias/salmon-al-horno.html", "name": "¿Cuántas calorías hay en salmón al horno? (1 porción, 150 g)", "description": "Salmón al horno: unas 280 kcal por porción (1 porción, 150 g); 34 g de proteína, 0 g de carbohidratos, 16 g de grasa. Valores típicos que usa la app Pofu.", "inLanguage": "es", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Salmón al horno", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "280 kcal", "proteinContent": "34 g", "carbohydrateContent": "0 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/es/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorías", "item": "https://getpofu.com/es/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Salmón al horno", "item": "https://getpofu.com/es/calorias/salmon-al-horno.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/es/calorias/salmon-al-horno.html", "url": "https://getpofu.com/es/calorias/salmon-al-horno.html", "name": "¿Cuántas calorías hay en salmón al horno? (1 porción, 150 g)", "description": "Salmón al horno: unas 280 kcal por porción (1 porción, 150 g); 34 g de proteína, 0 g de carbohidratos, 16 g de grasa. Valores típicos que usa la app Pofu.", "inLanguage": "es", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Salmón al horno", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "280 kcal", "proteinContent": "34 g", "carbohydrateContent": "0 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/es/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorías", "item": "https://getpofu.com/es/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Salmón al horno", "item": "https://getpofu.com/es/calorias/salmon-al-horno.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/es/calorias/salmon-al-horno.html#faq", "inLanguage": "es", "mainEntity": [{"@type": "Question", "name": "Salmón al horno: ¿cuántas calorías hay en 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Unas 187 kcal por 100 g, con 22,7 g de proteína, 0 g de carbohidratos y 10,7 g de grasa."}}, {"@type": "Question", "name": "Salmón al horno: ¿es rico en proteína?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Una ración tiene 34 g de proteína, cerca del 49 % de sus calorías."}}, {"@type": "Question", "name": "Salmón al horno: ¿cómo lo registro en Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Ración más pequeña o más grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Ración</th><th scope="col">Calorías</th><th scope="col">Proteína</th></tr></thead>
+<tbody>
+<tr><th scope="row">Media ración (75 g)</th><td>140 kcal</td><td>17 g</td></tr>
+<tr><th scope="row">Ración habitual (150 g)</th><td>280 kcal</td><td>34 g</td></tr>
+<tr><th scope="row">Ración y media (225 g)</th><td>420 kcal</td><td>51 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De dónde vienen las calorías</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:49%"></span><span class="sc" style="width:0%"></span><span class="sf" style="width:51%"></span></div>
+<p>El 49 % de las calorías viene de la proteína, el 0 % de los carbohidratos y el 51 % de la grasa. En resumen: la mayoría de las calorías viene de la grasa, así que un pequeño cambio de cantidad marca una gran diferencia.</p>
+<p>Una ración equivale a cerca del 14 % de un día de 2.000 kcal, el valor de referencia que se usa en las etiquetas de los alimentos.</p>
+</section>
 <section id="why">
 <h2>Por qué varía el valor</h2>
 <p>La grasa es la palanca más grande. La cantidad de aceite, mantequilla, queso o grasa de fritura, y lo llena que vaya la cuchara o el cucharón, cambia las calorías más que cualquier otra cosa. Dos platos que se ven parecidos pueden diferir bastante.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cómo registrarlo en Pofu</h2>
 <p>Pofu es nuestra app. Para registrar este alimento, toma una foto de tu plato: Pofu estima la comida y la porción y muestra una puntuación de confianza, para que veas qué tan segura es la estimación y puedas corregirla. También puedes buscar por nombre o escanear un código de barras y ajustar la porción a lo que comiste. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_es&amp;mt=8">Descarga Pofu en el App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrar una comida a partir de una foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Grabación de pantalla de la app Pofu (interfaz en inglés): haz una foto, revisa la estimación y añádela a hoy.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimentos relacionados</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Todos los alimentos</a></p>
 </section>
+<section id="faq">
+<h2>Preguntas sobre este alimento</h2>
+<h3>Salmón al horno: ¿cuántas calorías hay en 100 g?</h3>
+<p>Unas 187 kcal por 100 g, con 22,7 g de proteína, 0 g de carbohidratos y 10,7 g de grasa.</p>
+<h3>Salmón al horno: ¿es rico en proteína?</h3>
+<p>Sí. Una ración tiene 34 g de proteína, cerca del 49 % de sus calorías.</p>
+<h3>Salmón al horno: ¿cómo lo registro en Pofu?</h3>
+<p>Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez.</p>
+</section>
 <section id="source">
-<p class="fine">Valores: estimaciones típicas que usa la app Pofu; varían según la receta y la porción.</p>
+<p class="fine">Valores: estimaciones típicas que usa la app Pofu; varían según la receta y la porción. <a href="../editorial-policy.html">Cómo preparamos nuestros contenidos y fuentes</a>.</p>
 <div class="note"><p>Esta página es información general, no consejo médico. Si estás embarazada, en período de lactancia, tienes una condición médica o antecedentes de trastorno alimentario, habla con tu médico o nutricionista antes de contar calorías.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Este alimento en otros idiomas" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/baked-salmon.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/somon-firinlanmis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/lachs-gebacken.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/saumon-au-four.html" hreflang="fr" lang="fr">Français</a> · <strong>Español</strong> · <a href="../../pt-BR/calorias/salmao-assado.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/baked-salmon.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/peceny-losos.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/baked-salmon.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/salmon-panggang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/salmone-al-forno.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/baked-salmon.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/baked-salmon.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/gebakken-zalm.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/pieczony-osos.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/somon-la-cuptor.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/zapechennyy-losos.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/ugnsbakad-lax.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/baked-salmon.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/zapechenyy-losos.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/ca-hoi-nuong.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/baked-salmon.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guías</a><a href="../tools.html">Herramientas</a><a href="./" aria-current="true">Calorías</a><a href="../questions/">Preguntas</a><a href="../compare.html">Comparativas</a></nav>
+<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guías</a><a href="../tools.html">Herramientas</a><a href="./" aria-current="true">Calorías</a><a href="../questions/">Preguntas</a><a href="../compare.html">Comparativas</a><a href="../editorial-policy.html">Contenidos y fuentes</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ja/karori/broccoli.html", "url": "https://getpofu.com/ja/karori/broccoli.html", "name": "ブロッコリーのカロリーは？（1杯, 150 g）", "description": "ブロッコリー：約55 kcal（1食：1杯, 150 g）、たんぱく質3.7 g、炭水化物11 g、脂質0.6 g。一般的な目安値です。", "inLanguage": "ja", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "ブロッコリー", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "55 kcal", "proteinContent": "3.7 g", "carbohydrateContent": "11 g", "fatContent": "0.6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ja/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "カロリー", "item": "https://getpofu.com/ja/karori/"}, {"@type": "ListItem", "position": 3, "name": "ブロッコリー", "item": "https://getpofu.com/ja/karori/broccoli.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ja/karori/broccoli.html", "url": "https://getpofu.com/ja/karori/broccoli.html", "name": "ブロッコリーのカロリーは？（1杯, 150 g）", "description": "ブロッコリー：約55 kcal（1食：1杯, 150 g）、たんぱく質3.7 g、炭水化物11 g、脂質0.6 g。一般的な目安値です。", "inLanguage": "ja", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "ブロッコリー", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "55 kcal", "proteinContent": "3.7 g", "carbohydrateContent": "11 g", "fatContent": "0.6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ja/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "カロリー", "item": "https://getpofu.com/ja/karori/"}, {"@type": "ListItem", "position": 3, "name": "ブロッコリー", "item": "https://getpofu.com/ja/karori/broccoli.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ja/karori/broccoli.html#faq", "inLanguage": "ja", "mainEntity": [{"@type": "Question", "name": "ブロッコリー：100 gあたり何kcalですか？", "acceptedAnswer": {"@type": "Answer", "text": "100 gあたり約37 kcalで、たんぱく質2.5 g、炭水化物7.3 g、脂質0.4 gです。"}}, {"@type": "Question", "name": "ブロッコリー：たんぱく質は多いですか？", "acceptedAnswer": {"@type": "Answer", "text": "ある程度含まれています。1人前あたり3.7 gで、カロリーの約27%です。"}}, {"@type": "Question", "name": "ブロッコリー：Pofuにはどう記録しますか？", "acceptedAnswer": {"@type": "Answer", "text": "お皿の写真を撮るか、名前で検索して、実際に食べた量に合わせて分量を設定します。推定値は修正でき、Pofuは次回その修正を覚えています。"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>少なめ・多めの場合</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">量</th><th scope="col">カロリー</th><th scope="col">たんぱく質</th></tr></thead>
+<tbody>
+<tr><th scope="row">半人前（75 g）</th><td>28 kcal</td><td>1.9 g</td></tr>
+<tr><th scope="row">ふつうの1人前（150 g）</th><td>55 kcal</td><td>3.7 g</td></tr>
+<tr><th scope="row">1.5人前（225 g）</th><td>82 kcal</td><td>5.6 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>カロリーの内訳</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:23%"></span><span class="sc" style="width:69%"></span><span class="sf" style="width:8%"></span></div>
+<p>カロリーの23%がたんぱく質、69%が炭水化物、8%が脂質に由来します。 ひとことで言うと：ほとんどが水分の、軽い食べ物です。</p>
+<p>1人前は、食品表示で基準値として使われる2,000 kcalの1日分の約3%にあたります。</p>
+</section>
 <section id="why">
 <h2>数値が変わる理由</h2>
 <p>これらの食品はほとんどが水分なので、レシピよりも分量と実際の重さのほうが重要です。大きさ、熟し具合、砂糖・ドレッシング・油・牛乳などの追加が数値を左右します。</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Pofuでの記録方法</h2>
 <p>Pofuは私たちのアプリです。この食品を記録するには、お皿を撮影してください。Pofuが料理と分量を推定し、信頼度スコアを表示するので、推定の確かさを確認して修正できます。名前で検索したりバーコードをスキャンしたりして、分量を実際の量に合わせて調整することもできます。<a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ja&amp;mt=8">App StoreでPofuを入手</a>。</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofuアプリ：写真から食事を記録する"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofuアプリの画面収録（英語表示）：写真を撮り、推定値を確認して、今日の記録に追加します。</figcaption></figure>
 </section>
 <section id="related">
 <h2>似ている食品</h2>
@@ -234,10 +258,25 @@
 <li><a href="miso-soup.html">味噌汁</a> <span class="k">· 48 kcal (1杯, 200 g)</span></li>
 <li><a href="instant-ramen.html">インスタントラーメン（調理後）</a> <span class="k">· 290 kcal (1個, 440 g)</span></li>
 </ul>
+<h3>同じグループの、より軽い選択肢</h3>
+<ul class="foodlist">
+<li><a href="miso-soup.html">味噌汁</a> <span class="k">· 24 kcal 100 gあたり</span></li>
+<li><a href="spinach.html">ほうれん草</a> <span class="k">· 23 kcal 100 gあたり</span></li>
+<li><a href="tomato.html">トマト</a> <span class="k">· 18 kcal 100 gあたり</span></li>
+</ul>
 <p><a href="./">すべての食品</a></p>
 </section>
+<section id="faq">
+<h2>この食品についてのQ&A</h2>
+<h3>ブロッコリー：100 gあたり何kcalですか？</h3>
+<p>100 gあたり約37 kcalで、たんぱく質2.5 g、炭水化物7.3 g、脂質0.4 gです。</p>
+<h3>ブロッコリー：たんぱく質は多いですか？</h3>
+<p>ある程度含まれています。1人前あたり3.7 gで、カロリーの約27%です。</p>
+<h3>ブロッコリー：Pofuにはどう記録しますか？</h3>
+<p>お皿の写真を撮るか、名前で検索して、実際に食べた量に合わせて分量を設定します。推定値は修正でき、Pofuは次回その修正を覚えています。</p>
+</section>
 <section id="source">
-<p class="fine">数値は一般的な目安で、レシピや分量によって変わります。出典がある場合はリンクを掲載しています。</p>
+<p class="fine">数値は一般的な目安で、レシピや分量によって変わります。出典がある場合はリンクを掲載しています。 <a href="../editorial-policy.html">コンテンツと情報源の作り方</a>.</p>
 <div class="note"><p>このページは一般的な情報の提供を目的としたもので、医療上のアドバイスではありません。妊娠中・授乳中の方、持病のある方、摂食障害の経験がある方は、カロリー計算を始める前に、医師または管理栄養士にご相談ください。</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="他の言語で見る" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/broccoli.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/brokoli.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/brokkoli.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/brocoli.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/brocoli.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/brocolis.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/broccoli.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/brokolice.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/broccoli.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/brokoli.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/broccoli.html" hreflang="it" lang="it">Italiano</a> · <strong>日本語</strong> · <a href="../../ko/kallori/broccoli.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/broccoli.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/brokuy.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/broccoli.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/brokkoli.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/broccoli.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/broccoli.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/brokoli.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/bong-cai-xanh.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/broccoli.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="見る"><strong>見る</strong><a href="../guides.html">ガイド</a><a href="../tools.html">ツール</a><a href="./" aria-current="true">カロリー</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">比較</a></nav>
+<nav aria-label="見る"><strong>見る</strong><a href="../guides.html">ガイド</a><a href="../tools.html">ツール</a><a href="./" aria-current="true">カロリー</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">比較</a><a href="../editorial-policy.html">コンテンツと情報源</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

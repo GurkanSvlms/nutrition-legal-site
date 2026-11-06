@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/calories/greek-yogurt.html", "url": "https://getpofu.com/calories/greek-yogurt.html", "name": "How many calories in Greek yogurt? (1 bowl, 170 g)", "description": "Greek Yogurt: about 130 kcal per serving (1 bowl, 170 g); 17 g protein, 6 g carbs, 0.7 g fat. Typical values used in the Pofu app.", "inLanguage": "en", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Greek Yogurt", "nutrition": {"@type": "NutritionInformation", "servingSize": "170 g", "calories": "130 kcal", "proteinContent": "17 g", "carbohydrateContent": "6 g", "fatContent": "0.7 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/calories/"}, {"@type": "ListItem", "position": 3, "name": "Greek Yogurt", "item": "https://getpofu.com/calories/greek-yogurt.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/calories/greek-yogurt.html", "url": "https://getpofu.com/calories/greek-yogurt.html", "name": "How many calories in Greek yogurt? (1 bowl, 170 g)", "description": "Greek Yogurt: about 130 kcal per serving (1 bowl, 170 g); 17 g protein, 6 g carbs, 0.7 g fat. Typical values used in the Pofu app.", "inLanguage": "en", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Greek Yogurt", "nutrition": {"@type": "NutritionInformation", "servingSize": "170 g", "calories": "130 kcal", "proteinContent": "17 g", "carbohydrateContent": "6 g", "fatContent": "0.7 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/calories/"}, {"@type": "ListItem", "position": 3, "name": "Greek Yogurt", "item": "https://getpofu.com/calories/greek-yogurt.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/calories/greek-yogurt.html#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Greek Yogurt: how many calories are in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "About 76 kcal per 100 g, with 10 g of protein, 3.5 g of carbohydrates and 0.4 g of fat."}}, {"@type": "Question", "name": "Greek Yogurt: is it high in protein?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. One portion has 17 g of protein, about 52% of its calories."}}, {"@type": "Question", "name": "Greek Yogurt: how do I log it in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Take a photo of your plate or search for the name, then set the portion to what you actually ate. You can correct the estimate, and Pofu remembers your correction next time."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Smaller or larger portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Calories</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Half a portion (85 g)</th><td>65 kcal</td><td>8.5 g</td></tr>
+<tr><th scope="row">Typical portion (170 g)</th><td>130 kcal</td><td>17 g</td></tr>
+<tr><th scope="row">One and a half portions (255 g)</th><td>195 kcal</td><td>25.5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Where the calories come from</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:69%"></span><span class="sc" style="width:24%"></span><span class="sf" style="width:7%"></span></div>
+<p>69% of the calories come from protein, 24% from carbohydrates and 7% from fat. In short: a light food that is mostly water.</p>
+<p>One portion is about 6% of a 2,000 kcal day, the reference value used on food labels.</p>
+</section>
 <section id="why">
 <h2>Why the number varies</h2>
 <p>These foods are mostly water, so portion size and the real weight matter more than the recipe. Size, ripeness and extras such as sugar, dressing, oil or milk are what change the number.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>How to log it in Pofu</h2>
 <p>Pofu is our app. To log this food, take a photo of your plate: Pofu estimates the food and portion and shows a confidence score, so you can see how sure it is and correct it. You can also search by name or scan a barcode, then set the serving to match what you ate. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_en&amp;mt=8">Get Pofu on the App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../assets/video/demo-scan.jpg" aria-label="Pofu app: logging a meal from a photo"><source src="../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Screen recording from the Pofu app (English interface): take a photo, check the estimate, add it to today.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Related foods</h2>
@@ -234,10 +258,25 @@
 <li><a href="falafel.html">Falafel</a> <span class="k">· 110 kcal (3 pieces, 50 g)</span></li>
 <li><a href="hummus.html">Hummus</a> <span class="k">· 180 kcal (1 serving, 100 g)</span></li>
 </ul>
+<h3>Lighter options in the same group</h3>
+<ul class="foodlist">
+<li><a href="plain-yogurt.html">Plain Yogurt</a> <span class="k">· 60 kcal per 100 g</span></li>
+<li><a href="whole-milk.html">Whole Milk</a> <span class="k">· 60 kcal per 100 g</span></li>
+<li><a href="blueberries.html">Blueberries</a> <span class="k">· 57 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">All foods</a></p>
 </section>
+<section id="faq">
+<h2>Questions about this food</h2>
+<h3>Greek Yogurt: how many calories are in 100 g?</h3>
+<p>About 76 kcal per 100 g, with 10 g of protein, 3.5 g of carbohydrates and 0.4 g of fat.</p>
+<h3>Greek Yogurt: is it high in protein?</h3>
+<p>Yes. One portion has 17 g of protein, about 52% of its calories.</p>
+<h3>Greek Yogurt: how do I log it in Pofu?</h3>
+<p>Take a photo of your plate or search for the name, then set the portion to what you actually ate. You can correct the estimate, and Pofu remembers your correction next time.</p>
+</section>
 <section id="source">
-<p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion.</p>
+<p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion. <a href="../editorial-policy.html">How we prepare our content and sources</a>.</p>
 <div class="note"><p>This page is general information, not medical advice. If you are pregnant, breastfeeding, have a medical condition or a history of an eating disorder, talk to your doctor or dietitian before counting calories.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="This food in other languages" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><strong>English</strong> · <a href="../kalori/yunan-yogurdu.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../de/kalorien/griechischer-joghurt.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/calories/yaourt-grec.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/calorias/yogur-griego.html" hreflang="es" lang="es">Español</a> · <a href="../pt-BR/calorias/iogurte-grego.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../ar/saarat/greek-yogurt.html" hreflang="ar" lang="ar">العربية</a> · <a href="../cs/kalorie/recky-jogurt.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../hi/calories/greek-yogurt.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../id/kalori/yogurt-yunani.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../it/calorie/yogurt-greco.html" hreflang="it" lang="it">Italiano</a> · <a href="../ja/karori/greek-yogurt.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/kallori/greek-yogurt.html" hreflang="ko" lang="ko">한국어</a> · <a href="../nl/calorieen/griekse-yoghurt.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/kalorie/jogurt-grecki.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ro/calorii/iaurt-grecesc.html" hreflang="ro" lang="ro">Română</a> · <a href="../ru/kalorii/grecheskiy-yogurt.html" hreflang="ru" lang="ru">Русский</a> · <a href="../sv/kalorier/grekisk-yoghurt.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../th/khalori/greek-yogurt.html" hreflang="th" lang="th">ไทย</a> · <a href="../uk/kalorii/hretskyy-yohurt.html" hreflang="uk" lang="uk">Українська</a> · <a href="../vi/calo/sua-chua-hy-lap.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../zh-Hans/kaluli/greek-yogurt.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explore"><strong>Explore</strong><a href="../guides.html">Guides</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">Compare</a></nav>
+<nav aria-label="Explore"><strong>Explore</strong><a href="../guides.html">Guides</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">Compare</a><a href="../editorial-policy.html">Content and sources</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

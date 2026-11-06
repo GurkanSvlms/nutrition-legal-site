@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html", "url": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html", "name": "Ile kalorii zawiera: Kapusta kiszona? (1 porcja, 100 g)", "description": "Kapusta kiszona: około 40 kcal w porcji (1 porcja, 100 g); 0,9 g białka, 4,2 g węglowodanów, 2,5 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Kapusta kiszona", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "40 kcal", "proteinContent": "0.9 g", "carbohydrateContent": "4.2 g", "fatContent": "2.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Kapusta kiszona", "item": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html", "url": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html", "name": "Ile kalorii zawiera: Kapusta kiszona? (1 porcja, 100 g)", "description": "Kapusta kiszona: około 40 kcal w porcji (1 porcja, 100 g); 0,9 g białka, 4,2 g węglowodanów, 2,5 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Kapusta kiszona", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "40 kcal", "proteinContent": "0.9 g", "carbohydrateContent": "4.2 g", "fatContent": "2.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Kapusta kiszona", "item": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pl/kalorie/kapusta-kiszona.html#faq", "inLanguage": "pl", "mainEntity": [{"@type": "Question", "name": "Kapusta kiszona: ile kalorii jest w 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Około 40 kcal na 100 g, w tym 0,9 g białka, 4,2 g węglowodanów i 2,5 g tłuszczu."}}, {"@type": "Question", "name": "Kapusta kiszona: czy zawiera dużo białka?", "acceptedAnswer": {"@type": "Answer", "text": "Niewiele: 0,9 g na porcję, czyli około 9% kalorii. Jeśli chcesz bardziej sycący posiłek, połącz go z produktem białkowym, takim jak jajka, jogurt, twaróg, strączki, ryba lub kurczak."}}, {"@type": "Question", "name": "Kapusta kiszona: jak to zapisać w Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mniejsza lub większa porcja</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porcja</th><th scope="col">Kalorie</th><th scope="col">Białko</th></tr></thead>
+<tbody>
+<tr><th scope="row">Pół porcji (50 g)</th><td>20 kcal</td><td>0,5 g</td></tr>
+<tr><th scope="row">Typowa porcja (100 g)</th><td>40 kcal</td><td>0,9 g</td></tr>
+<tr><th scope="row">Półtorej porcji (150 g)</th><td>60 kcal</td><td>1,4 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Skąd pochodzą kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:8%"></span><span class="sc" style="width:39%"></span><span class="sf" style="width:53%"></span></div>
+<p>8% kalorii pochodzi z białka, 39% z węglowodanów i 53% z tłuszczu. W skrócie: większość kalorii pochodzi z tłuszczu, więc niewielka zmiana ilości robi dużą różnicę.</p>
+<p>Jedna porcja to około 2% dnia o wartości 2 000 kcal, czyli wartości odniesienia stosowanej na etykietach produktów.</p>
+</section>
 <section id="why">
 <h2>Dlaczego wartość może się różnić</h2>
 <p>Największą różnicę robi tłuszcz. To, ile oleju, masła, sera lub tłuszczu do smażenia użyto i jak pełna jest łyżka lub chochla, zmienia kalorie najbardziej. Nawet dwa podobnie wyglądające talerze mogą się wyraźnie różnić.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Jak dodać to w Pofu</h2>
 <p>Pofu to nasza aplikacja. Aby dodać ten produkt, zrób zdjęcie talerza: Pofu oszacuje danie i porcję oraz pokaże wskaźnik pewności, żebyś widziała, na ile trafna jest ocena, i mogła ją poprawić. Możesz też wyszukać po nazwie albo zeskanować kod kreskowy i ustawić porcję na to, co naprawdę zjadłaś. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pl&amp;mt=8">Pobierz Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikacja Pofu: zapisywanie posiłku ze zdjęcia"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Nagranie ekranu z aplikacji Pofu (interfejs po angielsku): zrób zdjęcie, sprawdź oszacowanie, dodaj do dzisiejszego dnia.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobne produkty</h2>
@@ -215,8 +239,17 @@
 </ul>
 <p><a href="./">Wszystkie produkty</a></p>
 </section>
+<section id="faq">
+<h2>Pytania o ten produkt</h2>
+<h3>Kapusta kiszona: ile kalorii jest w 100 g?</h3>
+<p>Około 40 kcal na 100 g, w tym 0,9 g białka, 4,2 g węglowodanów i 2,5 g tłuszczu.</p>
+<h3>Kapusta kiszona: czy zawiera dużo białka?</h3>
+<p>Niewiele: 0,9 g na porcję, czyli około 9% kalorii. Jeśli chcesz bardziej sycący posiłek, połącz go z produktem białkowym, takim jak jajka, jogurt, twaróg, strączki, ryba lub kurczak.</p>
+<h3>Kapusta kiszona: jak to zapisać w Pofu?</h3>
+<p>Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz.</p>
+</section>
 <section id="source">
-<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="https://fdc.nal.usda.gov/food-details/2709982/nutrients" rel="nofollow noopener">Źródło</a>.</p>
+<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="https://fdc.nal.usda.gov/food-details/2709982/nutrients" rel="nofollow noopener">Źródło</a>. <a href="../editorial-policy.html">Jak przygotowujemy treści i źródła</a>.</p>
 <div class="note"><p>Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.</p></div>
 </section>
 </main>
@@ -233,7 +266,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a></nav>
+<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a><a href="../editorial-policy.html">Treści i źródła</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

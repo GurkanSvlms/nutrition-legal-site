@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "pl", "locale": "pl-PL", "og_locale": "pl_PL", "og_img": "og-image.jpg", "us": false,
+    "skip": "Przejdź do treści", "get_app": "Pobierz aplikację", "pill": "Bezpłatne narzędzie · Bez rejestracji",
+    "byline": "Autor: Ali Gürkan Sevilmiş, twórca Pofu · 6 listopada 2026",
+    "submit": "Oblicz",
+    "privacy": "Wszystko jest liczone w Twojej przeglądarce. Nic, co wpiszesz, nie jest wysyłane ani zapisywane.",
+    "f_age": "Wiek", "f_system": "Jednostki", "sys_us": "USA (ft, lb)", "sys_metric": "Metryczne (cm, kg)",
+    "f_height": "Wzrost", "a_ft": "Wzrost, stopy", "a_in": "Wzrost, cale", "f_weight": "Aktualna waga",
+    "f_activity": "Poziom aktywności",
+    "activity": {
+      "sedentary": "Głównie siedząca (praca biurowa, mało ruchu)",
+      "light": "Lekko aktywna (lekki wysiłek 1–3 dni w tygodniu)",
+      "moderate": "Umiarkowanie aktywna (ćwiczenia 3–5 dni w tygodniu)",
+      "active": "Bardzo aktywna (intensywne ćwiczenia 6–7 dni w tygodniu)",
+      "very_active": "Wyjątkowo aktywna (praca fizyczna plus treningi)"
+    },
+    "errors": {
+      "age": "Wpisz wiek od 18 do 80 lat.",
+      "height": "Wpisz swój wzrost (130–210 cm).",
+      "weight": "Wpisz swoją wagę (35–250 kg).",
+      "activity": "Wybierz poziom aktywności.",
+      "goal": "Wybierz cel."
+    },
+    "how_h": "Jak działa ten kalkulator",
+    "src_h": "Źródła",
+    "method_note": "Wzory pochodzą z opublikowanych źródeł wymienionych powyżej i odpowiadają zasadom, których używa aplikacja Pofu. Ta strona nie była weryfikowana przez dietetyka; jest sprawdzana z tymi źródłami i aktualizowana, gdy się zmieniają.",
+    "faq_h": "Najczęściej zadawane pytania",
+    "rel_h": "Więcej bezpłatnych narzędzi",
+    "medical": "Ten kalkulator podaje ogólne szacunki dla osób dorosłych, a nie poradę medyczną. Jeśli jesteś w ciąży lub karmisz piersią, masz schorzenie, takie jak choroba nerek lub cukrzyca, albo zaburzenia odżywiania w przeszłości, porozmawiaj z lekarzem lub dietetykiem, zanim zmienisz sposób odżywiania.",
+    "badge_alt": "Pobierz Pofu z App Store",
+    "foot_nav": "Informacje prawne i pomoc", "privacy_l": "Prywatność", "terms_l": "Regulamin", "support_l": "Pomoc",
+    "updated": "Ostatnia aktualizacja: <time datetime=\"2026-11-06\">6 listopada 2026</time>.",
+    "tm": "Apple, iPhone i App Store są znakami towarowymi firmy Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Kalkulator białka dla kobiet: ile białka dziennie? | Pofu",
+      "og_title": "Kalkulator białka dla kobiet",
+      "desc": "Bezpłatny kalkulator białka dla kobiet. Sprawdź dzienne zapotrzebowanie na białko w gramach przy utrzymaniu wagi, odchudzaniu lub budowaniu mięśni, z podziałem na posiłki i badaniami, na których się opiera.",
+      "h1": "Kalkulator białka dla kobiet",
+      "lede": "Ile białka potrzebujesz dziennie? Wpisz swoją wagę i cel, a otrzymasz dzienny cel w gramach oraz ile to wychodzi na posiłek.",
+      "tool_h": "Oblicz swoje białko",
+      "f_goal": "Cel",
+      "goals": {"maintain": "Zadbać o zdrowie i utrzymać wagę", "lose": "Schudnąć", "muscle": "Zbudować mięśnie lub być silniejszą"},
+      "res_head": "Twoje dzienne białko",
+      "s_meal3": "na posiłek przy 3 posiłkach",
+      "s_meal4": "na posiłek przy 4 posiłkach",
+      "s_range": "zakres stosowany w badaniach (1,2–2,0 g/kg)",
+      "explain": "Rozłożenie białka na kilka posiłków jest łatwiejsze niż zjedzenie wszystkiego naraz. Więcej białka niż tutaj nie szkodzi większości zdrowych osób, ale rzadko daje dodatkową korzyść.",
+      "how": [
+        "<strong>Utrzymanie wagi:</strong> 1,4 g białka na kg masy ciała dziennie.",
+        "<strong>Odchudzanie:</strong> 1,6 g na kg, bo więcej białka pomaga zachować mięśnie, gdy jesz mniej, i dłużej syci.",
+        "<strong>Budowanie mięśni:</strong> 1,8 g na kg, razem z treningiem siłowym.",
+        "Wynik mieści się w granicach od 75 do 230 g dziennie i jest dzielony równo na 3 lub 4 posiłki."
+      ],
+      "note": "Minimum, które chroni dorosłych przed niedoborem, to około 0,8 g na kg. Wyższe wartości powyżej dotyczą aktywnych kobiet i odchudzania, gdzie badania wykazują korzyść. To te same zasady, których używa aplikacja Pofu.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017 (stanowisko dotyczące białka i wysiłku; 1,4–2,0 g/kg dla osób aktywnych).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a>. Br J Sports Med, 2018 (suplementacja białka i trening oporowy; korzyść wyrównuje się przy około 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (minimum 0,8 g/kg dla dorosłych)."
+      ],
+      "faq": [
+        ["Ile białka dziennie potrzebuje kobieta?", "Minimum dla dorosłych to około 0,8 g na kg masy ciała. Dla aktywnych kobiet i podczas odchudzania badania wspierają około 1,2 do 2,0 g na kg. Dla kobiety ważącej 65 kg, która chce schudnąć, ten kalkulator podaje 104 g dziennie."],
+        ["Czy 100 g białka dziennie to za dużo dla kobiety?", "Dla większości zdrowych kobiet nie. Mieści się to w zakresie badanym u osób aktywnych. Jeśli masz chorobę nerek, najpierw zapytaj lekarza."],
+        ["Ile białka powinnam zjeść na posiłek?", "Podziel dzienny cel przez liczbę posiłków. Przy 104 g dziennie i 3 posiłkach wychodzi około 35 g na posiłek, na przykład pierś z kurczaka albo miska twarogu z jajkami."],
+        ["Czy białko pomaga schudnąć?", "Pomaga zachować mięśnie, gdy jesz mniej, i dłużej syci. Odchudzanie nadal wynika z jedzenia mniej kalorii, niż spalasz."],
+        ["Czy liczyć od obecnej wagi, czy od wagi docelowej?", "Użyj obecnej wagi. Jeśli Twoja waga jest bardzo wysoka, niższa waga referencyjna da bardziej realistyczny wynik; limit 230 g dziennie utrzymuje rozsądną wartość."]
+      ],
+      "bridge": "Pofu ustawia Twój cel białkowy według tej samej zasady i pokazuje, ile już dziś zjadłaś, na podstawie zdjęć, kodów kreskowych lub wyszukiwania."
+    },
+    "macro": {
+      "title": "Kalkulator makroskładników dla kobiet: białko, węglowodany, tłuszcz | Pofu",
+      "og_title": "Kalkulator makroskładników dla kobiet",
+      "desc": "Bezpłatny kalkulator makroskładników dla kobiet. Sprawdź dzienne kalorie oraz gramy białka, węglowodanów i tłuszczu przy utrzymaniu wagi, odchudzaniu lub budowaniu mięśni.",
+      "h1": "Kalkulator makroskładników dla kobiet",
+      "lede": "Zobacz swoje dzienne kalorie podzielone na białko, węglowodany i tłuszcz, w gramach i jako udział w kaloriach.",
+      "tool_h": "Oblicz swoje makroskładniki",
+      "f_goal": "Cel",
+      "goals": {"maintain": "Utrzymać wagę", "lose_slow": "Powoli schudnąć (około −250 kcal dziennie)", "lose": "Schudnąć (około −400 kcal dziennie)", "lose_fast": "Schudnąć szybciej (około −550 kcal dziennie)", "muscle": "Zbudować mięśnie (około +225 kcal dziennie)"},
+      "res_head": "Twoje dzienne kalorie i makroskładniki",
+      "s_p": "Białko", "s_c": "Węglowodany", "s_f": "Tłuszcz",
+      "pct": "{p}% kalorii",
+      "floor": "Twoje kalorie zostały ustawione na 1 200 kcal, czyli najniższy dzienny cel, jaki proponujemy. Zejście poniżej nie jest zalecane bez lekarza lub dietetyka.",
+      "explain": "Najpierw ustalamy białko, tłuszcz to 28% kalorii, a węglowodany wypełniają resztę. Trafienie w kalorie jest ważniejsze niż trafienie w każdy gram; kilka gramów odchylenia jest w porządku.",
+      "how": [
+        "<strong>Kalorie:</strong> równanie Mifflina-St Jeora dla kobiet razy współczynnik aktywności (od 1,2 do 1,9), plus Twój cel. Nigdy poniżej 1 200 kcal.",
+        "<strong>Białko:</strong> 1,4 g na kg przy utrzymaniu wagi, 1,6 g na kg przy odchudzaniu, 1,8 g na kg przy budowaniu mięśni (75–230 g).",
+        "<strong>Tłuszcz:</strong> 28% kalorii, co najmniej 40 g dziennie.",
+        "<strong>Węglowodany:</strong> pozostałe kalorie, co najmniej 50 g dziennie. Białko i węglowodany dają 4 kcal na gram, tłuszcz 9 kcal."
+      ],
+      "note": "Tłuszcz na poziomie 28% mieści się w zalecanym dla dorosłych zakresie 20–35%, a węglowodany zwykle wychodzą na poziomie około 40–50%. To te same zasady, których używa aplikacja Pofu.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990 (nowe równanie do szacowania spoczynkowego wydatku energetycznego).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (tłuszcz 20–35%, węglowodany 45–65% kalorii).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Jaki podział makroskładników jest dobry dla kobiet?", "Nie ma jednego najlepszego podziału. Typowy, możliwy do utrzymania podział to około 25–30% białka, 28–30% tłuszczu, a reszta to węglowodany. Wybierz taki, który utrzymasz, i najpierw trafiaj w kalorie."],
+        ["Jakie makroskładniki są dobre przy odchudzaniu?", "Jedz mniej kalorii, niż spalasz, i trzymaj wysoko białko (około 1,6 g na kg). Tłuszcz i węglowodany możesz podzielić tak, jak wolisz."],
+        ["Czy muszę trafiać w makroskładniki co do grama?", "Nie. Odchylenie około 10 g białka i węglowodanów oraz 5 g tłuszczu to wystarczająco blisko. Ważniejsza jest Twoja średnia z tygodnia niż jeden dzień."],
+        ["Czy dieta niskowęglowodanowa jest lepsza dla kobiet?", "Badania porównujące diety niskowęglowodanowe i niskotłuszczowe o tej samej kaloryczności pokazują podobną utratę wagi. Wybierz to, co pasuje do Twojego jedzenia i energii."],
+        ["Czy makroskładniki zmieniają się w trakcie cyklu menstruacyjnego?", "Niewiele. Niektóre osoby czują większy głód przed miesiączką; nasz kalkulator kalorii a cykl dodaje na tę fazę niewielki, opcjonalny zapas."]
+      ],
+      "bridge": "Pofu śledzi te makroskładniki za Ciebie: zrób zdjęcie posiłku, a aplikacja oszacuje kalorie, białko, węglowodany i tłuszcz, które możesz poprawić."
+    },
+    "deficit": {
+      "title": "Kalkulator deficytu kalorycznego: ile kalorii do celu na dany dzień | Pofu",
+      "og_title": "Kalkulator deficytu kalorycznego do daty celu",
+      "desc": "Bezpłatny kalkulator deficytu kalorycznego dla kobiet. Wpisz wagę docelową i datę, aby zobaczyć, ile kalorii dziennie potrzebujesz i czy tempo jest bezpieczne.",
+      "h1": "Kalkulator deficytu kalorycznego do daty celu",
+      "lede": "Chcesz osiągnąć określoną wagę do konkretnej daty? Zobacz, ile kalorii dziennie to wymaga, oraz realistyczną datę, jeśli tempo jest zbyt szybkie.",
+      "tool_h": "Oblicz swój deficyt",
+      "f_goal_kg": "Waga docelowa",
+      "f_date": "Data celu",
+      "errors": {
+        "goalkg": "Wpisz wagę docelową niższą niż obecna. To narzędzie jest przeznaczone do odchudzania.",
+        "date": "Wybierz datę celu w przyszłości.",
+        "nodeficit": "Twoje kalorie na utrzymanie wagi są już blisko 1 200 kcal, więc nie możemy zaproponować bezpiecznego deficytu. Porozmawiaj o swoim celu z lekarzem lub dietetykiem."
+      },
+      "res_ok": "Aby osiągnąć {goal} do {date}, jedz około",
+      "s_target": "Dzienne kalorie w bezpiecznym tempie",
+      "s_deficit": "dzienny deficyt",
+      "s_week": "oczekiwana utrata tygodniowo",
+      "s_maint": "utrzymanie wagi (TDEE)",
+      "too_fast": "Ta data wymaga deficytu {need} kcal dziennie, więcej niż proponowane przez nas {max} kcal dziennie. W bezpiecznym tempie {target} kcal dziennie osiągniesz {goal} około {date}.",
+      "low_goal": "Twoja waga docelowa jest poniżej BMI 18,5 dla Twojego wzrostu, co oznacza niedowagę. Skonsultuj swój cel z lekarzem.",
+      "explain": "To jest szacunek: utrata wagi zwykle z czasem zwalnia, a woda sprawia, że waga zmienia się z dnia na dzień, zwłaszcza przed miesiączką. Porównuj średnie tygodniowe, a nie pojedyncze dni.",
+      "how": [
+        "<strong>Utrzymanie wagi:</strong> równanie Mifflina-St Jeora dla kobiet razy współczynnik aktywności (od 1,2 do 1,9).",
+        "<strong>Potrzebny deficyt:</strong> masa do zrzucenia × 7 700 kcal na kg, podzielona przez liczbę dni do Twojej daty.",
+        "<strong>Bezpieczna granica:</strong> co najwyżej 550 kcal dziennie poniżej zapotrzebowania na utrzymanie wagi i nigdy poniżej 1 200 kcal dziennie. Jeśli Twoja data wymaga więcej, kalkulator pokaże, kiedy dojdziesz do celu w bezpiecznym tempie.",
+        "Najszybsze tempo to około 0,5 kg tygodniowo, zgodnie z powszechnymi zaleceniami zdrowia publicznego."
+      ],
+      "note": "7 700 kcal na kg to powszechnie stosowane oszacowanie. Rzeczywista utrata jest po pierwszych tygodniach często wolniejsza, bo wraz ze spadkiem wagi organizm zużywa mniej energii, więc traktuj datę jako wskazówkę.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> Int J Obes, 2008 (jaki deficyt energii jest potrzebny na jednostkę utraconej wagi).",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (model badawczy pokazujący, jak z czasem zwalnia utrata wagi).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (około 0,5 do 1 kg tygodniowo)."
+      ],
+      "faq": [
+        ["Jak duży powinien być mój deficyt kaloryczny?", "Dla większości kobiet 250 do 550 kcal dziennie poniżej zapotrzebowania na utrzymanie wagi da się utrzymać. To około 0,25 do 0,5 kg tygodniowo. Większe deficyty trudniej wytrwać i mogą kosztować mięśnie."],
+        ["Jak długo trwa schudnięcie 5 kg?", "Przy deficycie 550 kcal dziennie około 10 tygodni; przy 400 kcal dziennie około 14 tygodni. W praktyce postępy bywają trochę wolniejsze."],
+        ["Dlaczego ten kalkulator nie pozwala jeść poniżej 1 200 kcal?", "Poniżej 1 200 kcal dziennie trudno dostarczyć z jedzenia wystarczająco dużo składników odżywczych. Zejście niżej powinno odbywać się tylko pod kontrolą lekarza."],
+        ["Czy 7 700 kalorii to naprawdę jeden kilogram?", "To przybliżone oszacowanie dla tkanki tłuszczowej. Na początku część utraty to woda, a później organizm się adaptuje, więc ta reguła jest wskazówką, a nie obietnicą."],
+        ["Dlaczego moja waga wzrosła, chociaż miałam deficyt?", "Woda, sól, większy posiłek i dni przed miesiączką mogą na kilka dni podbić wagę. Patrz na trend z 2 do 4 tygodni."]
+      ],
+      "bridge": "W Pofu możesz ustawić wagę docelową i tempo; aplikacja oblicza Twój dzienny cel według tych samych zasad i pokazuje postępy jako tygodniowy trend."
+    },
+    "bmi": {
+      "title": "Kalkulator BMI dla kobiet: prawidłowa waga dla Twojego wzrostu | Pofu",
+      "og_title": "Kalkulator BMI dla kobiet",
+      "desc": "Bezpłatny kalkulator BMI dla dorosłych kobiet. Sprawdź swój wskaźnik masy ciała, co oznacza i jaki zakres wagi jest prawidłowy dla Twojego wzrostu, wraz z wyjaśnieniem ograniczeń BMI.",
+      "h1": "Kalkulator BMI dla kobiet",
+      "lede": "Oblicz swój wskaźnik masy ciała i zobacz, jaki zakres wagi uznaje się za prawidłowy dla Twojego wzrostu.",
+      "tool_h": "Oblicz swoje BMI",
+      "res_head": "Twoje BMI",
+      "cats": {"under": "Niedowaga (poniżej 18,5)", "normal": "Prawidłowa waga (18,5 do 24,9)", "over": "Nadwaga (25 do 29,9)", "obese": "Otyłość (30 lub więcej)"},
+      "range": "Prawidłowy zakres wagi dla Twojego wzrostu to około {low} do {high}.",
+      "explain": "BMI to szybki wskaźnik przesiewowy, a nie diagnoza. Nie odróżnia mięśni od tłuszczu, więc bardzo umięśnione kobiety mogą mieć wysoki wynik, i nie dotyczy okresu ciąży.",
+      "how": [
+        "<strong>Wzór:</strong> waga w kg podzielona przez wzrost w metrach do kwadratu (kg/m²).",
+        "<strong>Kategorie (WHO, dorośli):</strong> poniżej 18,5 niedowaga, 18,5–24,9 prawidłowa waga, 25–29,9 nadwaga, 30 lub więcej otyłość.",
+        "<strong>Prawidłowy zakres:</strong> wagi, które dla Twojego wzrostu dają BMI od 18,5 do 24,9.",
+        "Ten sam wzór stosuje się u kobiet i mężczyzn; nie jest przeznaczony dla dzieci, nastolatków ani kobiet w ciąży."
+      ],
+      "note": "Dla niektórych populacji azjatyckich WHO sugeruje, że ryzyko zdrowotne zaczyna się przy niższym BMI (od około 23). Obwód talii i to, jak się czujesz, dają przydatny kontekst dla tej liczby.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (karta informacyjna o otyłości i nadwadze).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004 (odpowiednie BMI dla populacji azjatyckich)."
+      ],
+      "faq": [
+        ["Jakie BMI jest prawidłowe dla kobiety?", "U dorosłych BMI od 18,5 do 24,9 oznacza prawidłową wagę. Te same zakresy stosuje się u kobiet i mężczyzn."],
+        ["Czy BMI jest inne dla kobiet?", "Wzór i kategorie są takie same. Kobiety zwykle mają przy tym samym BMI więcej tkanki tłuszczowej niż mężczyźni, co jest jednym z powodów, dla których BMI to tylko przybliżona wskazówka."],
+        ["Czy BMI jest dokładne?", "Przydaje się w badaniach grup i jako pierwsza kontrola, ale nie mierzy tkanki tłuszczowej. Mięśnie, wiek i budowa ciała zmieniają to, co dane BMI oznacza dla Ciebie."],
+        ["Ile powinnam ważyć przy moim wzroście?", "Każda waga dająca BMI między 18,5 a 24,9 mieści się w prawidłowym zakresie. Dla wzrostu 165 cm to około 50 do 68 kg."],
+        ["Czy mogę korzystać z BMI w ciąży?", "Nie. W ciąży postępuj zgodnie z zaleceniami położnej lub lekarza dotyczącymi przyrostu wagi."]
+      ],
+      "bridge": "Pofu skupia się na nawykach, a nie na jednej liczbie: dziennych kaloriach i białku, tygodniowym trendzie wagi oraz dniach ochronnych, żeby jeden brak wpisu nie przerwał Twojej serii."
+    }
+  }
+}

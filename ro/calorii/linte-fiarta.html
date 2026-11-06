@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ro/calorii/linte-fiarta.html", "url": "https://getpofu.com/ro/calorii/linte-fiarta.html", "name": "Câte calorii are Linte fiartă? (1 bol, 200 g)", "description": "Linte fiartă: aproximativ 230 kcal pe porție (1 bol, 200 g); 18 g proteine, 40 g carbohidrați, 0,8 g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.", "inLanguage": "ro", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Linte fiartă", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "230 kcal", "proteinContent": "18 g", "carbohydrateContent": "40 g", "fatContent": "0.8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ro/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorii", "item": "https://getpofu.com/ro/calorii/"}, {"@type": "ListItem", "position": 3, "name": "Linte fiartă", "item": "https://getpofu.com/ro/calorii/linte-fiarta.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ro/calorii/linte-fiarta.html", "url": "https://getpofu.com/ro/calorii/linte-fiarta.html", "name": "Câte calorii are Linte fiartă? (1 bol, 200 g)", "description": "Linte fiartă: aproximativ 230 kcal pe porție (1 bol, 200 g); 18 g proteine, 40 g carbohidrați, 0,8 g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.", "inLanguage": "ro", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Linte fiartă", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "230 kcal", "proteinContent": "18 g", "carbohydrateContent": "40 g", "fatContent": "0.8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ro/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorii", "item": "https://getpofu.com/ro/calorii/"}, {"@type": "ListItem", "position": 3, "name": "Linte fiartă", "item": "https://getpofu.com/ro/calorii/linte-fiarta.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ro/calorii/linte-fiarta.html#faq", "inLanguage": "ro", "mainEntity": [{"@type": "Question", "name": "Linte fiartă: câte calorii sunt în 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Aproximativ 115 kcal la 100 g, cu 9 g de proteine, 20 g de carbohidrați și 0,4 g de grăsimi."}}, {"@type": "Question", "name": "Linte fiartă: este bogat în proteine?", "acceptedAnswer": {"@type": "Answer", "text": "Da. O porție are 18 g de proteine, aproximativ 31% din calorii."}}, {"@type": "Question", "name": "Linte fiartă: cum îl înregistrez în Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Fă o fotografie farfuriei sau caută numele, apoi setează porția la ceea ce ai mâncat de fapt. Poți corecta estimarea, iar Pofu își amintește corecția data viitoare."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porție mai mică sau mai mare</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porție</th><th scope="col">Calorii</th><th scope="col">Proteine</th></tr></thead>
+<tbody>
+<tr><th scope="row">O jumătate de porție (100 g)</th><td>115 kcal</td><td>9 g</td></tr>
+<tr><th scope="row">Porție obișnuită (200 g)</th><td>230 kcal</td><td>18 g</td></tr>
+<tr><th scope="row">O porție și jumătate (300 g)</th><td>345 kcal</td><td>27 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De unde vin caloriile</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:30%"></span><span class="sc" style="width:67%"></span><span class="sf" style="width:3%"></span></div>
+<p>30% din calorii provin din proteine, 67% din carbohidrați și 3% din grăsimi. Pe scurt: cea mai mare parte a caloriilor vine din carbohidrați.</p>
+<p>O porție reprezintă aproximativ 12% dintr-o zi de 2.000 kcal, valoarea de referință folosită pe etichetele alimentelor.</p>
+</section>
 <section id="why">
 <h2>De ce variază valoarea</h2>
 <p>Rezultatul depinde de cum a fost gătit preparatul și de cât ulei, unt sau zahăr conține. Greutatea gătită și cea uscată diferă mult, de aceea o porție cu vârf și una rasă sunt departe una de alta. Marca, mărimea și grosimea schimbă și ele valoarea.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cum o înregistrezi în Pofu</h2>
 <p>Pofu este aplicația noastră. Ca să înregistrezi acest aliment, fotografiază farfuria: Pofu estimează preparatul și porția și arată un scor de încredere, ca să vezi cât de sigură e estimarea și să o poți ajusta. Poți căuta și după nume sau scana un cod de bare și potrivi porția la cantitatea reală. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ro&amp;mt=8">Descarcă Pofu din App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplicația Pofu: înregistrarea unei mese dintr-o fotografie"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Înregistrare de ecran din aplicația Pofu (interfață în engleză): fă o fotografie, verifică estimarea, adaugă-o la ziua de azi.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimente similare</h2>
@@ -234,10 +258,25 @@
 <li><a href="salata-de-cartofi.html">Salată de cartofi cu ou</a> <span class="k">· 236 kcal (1 porție, 150 g)</span></li>
 <li><a href="tocana-de-pui.html">Tocană de pui</a> <span class="k">· 214 kcal (1 porție, 255 g)</span></li>
 </ul>
+<h3>Variante mai ușoare din aceeași grupă</h3>
+<ul class="foodlist">
+<li><a href="banana.html">Banană</a> <span class="k">· 88 kcal la 100 g</span></li>
+<li><a href="cartof-dulce.html">Cartof dulce</a> <span class="k">· 88 kcal la 100 g</span></li>
+<li><a href="cartof-fiert.html">Cartof fiert</a> <span class="k">· 87 kcal la 100 g</span></li>
+</ul>
 <p><a href="./">Toate alimentele</a></p>
 </section>
+<section id="faq">
+<h2>Întrebări despre acest aliment</h2>
+<h3>Linte fiartă: câte calorii sunt în 100 g?</h3>
+<p>Aproximativ 115 kcal la 100 g, cu 9 g de proteine, 20 g de carbohidrați și 0,4 g de grăsimi.</p>
+<h3>Linte fiartă: este bogat în proteine?</h3>
+<p>Da. O porție are 18 g de proteine, aproximativ 31% din calorii.</p>
+<h3>Linte fiartă: cum îl înregistrez în Pofu?</h3>
+<p>Fă o fotografie farfuriei sau caută numele, apoi setează porția la ceea ce ai mâncat de fapt. Poți corecta estimarea, iar Pofu își amintește corecția data viitoare.</p>
+</section>
 <section id="source">
-<p class="fine">Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție.</p>
+<p class="fine">Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție. <a href="../editorial-policy.html">Cum pregătim conținutul și sursele noastre</a>.</p>
 <div class="note"><p>Această pagină are scop informativ general și nu reprezintă sfat medical. Dacă ești însărcinată, alăptezi, ai o afecțiune sau ai avut în trecut o tulburare de alimentație, vorbește cu medicul sau cu un dietetician înainte de a număra caloriile.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Acest aliment în alte limbi" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/cooked-lentils.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/mercimek-haslanmis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochte-linsen.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/lentilles-cuites.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/lentejas-cocidas.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/lentilhas-cozidas.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/cooked-lentils.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varena-cocka.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/cooked-lentils.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/lentil-matang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/lenticchie-cotte.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/cooked-lentils.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/cooked-lentils.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/gekookte-linzen.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/gotowana-soczewica.html" hreflang="pl" lang="pl">Polski</a> · <strong>Română</strong> · <a href="../../ru/kalorii/varenaya-chechevitsa.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/kokta-linser.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/cooked-lentils.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/varena-sochevytsya.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/dau-lang-nau-chin.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/cooked-lentils.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorează"><strong>Explorează</strong><a href="../guides.html">Ghiduri</a><a href="../tools.html">Instrumente</a><a href="./" aria-current="true">Calorii</a><a href="../questions/">Întrebări</a><a href="../compare.html">Comparații</a></nav>
+<nav aria-label="Explorează"><strong>Explorează</strong><a href="../guides.html">Ghiduri</a><a href="../tools.html">Instrumente</a><a href="./" aria-current="true">Calorii</a><a href="../questions/">Întrebări</a><a href="../compare.html">Comparații</a><a href="../editorial-policy.html">Conținut și surse</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

@@ -1,11 +1,12 @@
 // Cycle calorie calculator: same math as the Pofu app (QuizPlanCalculator, CycleIntelligence).
 // Mifflin-St Jeor (female), activity multiplier, goal delta, 1200 kcal floor, 4200 cap,
-// luteal allowance = 5% of target clipped to 80–150 kcal, protein 1.6 g/kg when losing else 1.4 (75–230 g).
+// luteal allowance = 5% of target clipped to 80–150 kcal, protein 1.8 g/kg for muscle, 1.6 when losing else 1.4 (75–230 g),
+// fat 28% of calories (min 40 g), carbs the rest (min 50 g).
 // Phases follow the app: days 1–5 menstrual, ovulation = cycle length − 14 (3 days), luteal after.
 // It never predicts a future period: it only places today in the cycle from a past start date.
 (function (root) {
   var ACTIVITY = { sedentary: 1.2, light: 1.375, moderate: 1.55, active: 1.725, very_active: 1.9 };
-  var GOAL = { maintain: 0, lose_slow: -250, lose: -400, lose_fast: -550 };
+  var GOAL = { maintain: 0, lose_slow: -250, lose: -400, lose_fast: -550, muscle: 225 };
   var FLOOR = 1200, CAP = 4200;
 
   function dayDiff(fromISO, toISO) {
@@ -40,8 +41,10 @@
     var out = {
       bmr: Math.round(bmr), tdee: Math.round(tdee), target: target, floorApplied: raw < FLOOR,
       allowance: allowance, lutealTarget: target + allowance,
-      proteinG: Math.round(Math.min(Math.max(w * (GOAL[input.goal] < 0 ? 1.6 : 1.4), 75), 230))
+      proteinG: Math.round(Math.min(Math.max(w * (input.goal === 'muscle' ? 1.8 : GOAL[input.goal] < 0 ? 1.6 : 1.4), 75), 230))
     };
+    out.fatG = Math.round(Math.max(target * 0.28 / 9, 40));
+    out.carbsG = Math.round(Math.max((target - out.proteinG * 4 - out.fatG * 9) / 4, 50));
     if (input.lastStart) {
       var len = Math.round(+input.cycleLength);
       if (!/^\d{4}-\d{2}-\d{2}$/.test(input.lastStart)) return { error: 'date' };

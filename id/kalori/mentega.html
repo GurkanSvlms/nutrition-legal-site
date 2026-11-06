@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/id/kalori/mentega.html", "url": "https://getpofu.com/id/kalori/mentega.html", "name": "Berapa kalori dalam Mentega? (1 sdm, 10 g)", "description": "Mentega: sekitar 72 kkal per porsi (1 sdm, 10 g); 0,1 g protein, 0 g karbohidrat, 8 g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.", "inLanguage": "id", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Mentega", "nutrition": {"@type": "NutritionInformation", "servingSize": "10 g", "calories": "72 kcal", "proteinContent": "0.1 g", "carbohydrateContent": "0 g", "fatContent": "8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/id/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/id/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Mentega", "item": "https://getpofu.com/id/kalori/mentega.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/id/kalori/mentega.html", "url": "https://getpofu.com/id/kalori/mentega.html", "name": "Berapa kalori dalam Mentega? (1 sdm, 10 g)", "description": "Mentega: sekitar 72 kkal per porsi (1 sdm, 10 g); 0,1 g protein, 0 g karbohidrat, 8 g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.", "inLanguage": "id", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Mentega", "nutrition": {"@type": "NutritionInformation", "servingSize": "10 g", "calories": "72 kcal", "proteinContent": "0.1 g", "carbohydrateContent": "0 g", "fatContent": "8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/id/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/id/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Mentega", "item": "https://getpofu.com/id/kalori/mentega.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/id/kalori/mentega.html#faq", "inLanguage": "id", "mainEntity": [{"@type": "Question", "name": "Mentega: berapa kalori dalam 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Sekitar 720 kcal per 100 g, dengan 1 g protein, 0 g karbohidrat, dan 80 g lemak."}}, {"@type": "Question", "name": "Mentega: apakah tinggi protein?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak banyak: 0,1 g per porsi, sekitar 1% dari kalorinya. Padukan dengan makanan berprotein, seperti telur, yogurt, kacang-kacangan, tempe, ikan, atau ayam, kalau kamu ingin makanan yang lebih mengenyangkan."}}, {"@type": "Question", "name": "Mentega: bagaimana mencatatnya di Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porsi lebih kecil atau lebih besar</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porsi</th><th scope="col">Kalori</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Setengah porsi (5 g)</th><td>36 kcal</td><td>0,1 g</td></tr>
+<tr><th scope="row">Porsi biasa (10 g)</th><td>72 kcal</td><td>0,1 g</td></tr>
+<tr><th scope="row">Satu setengah porsi (15 g)</th><td>108 kcal</td><td>0,2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Dari mana kalorinya berasal</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:1%"></span><span class="sc" style="width:0%"></span><span class="sf" style="width:99%"></span></div>
+<p>1% kalori berasal dari protein, 0% dari karbohidrat, dan 99% dari lemak. Singkatnya: sebagian besar kalorinya berasal dari lemak, jadi perubahan jumlah sedikit saja berpengaruh besar.</p>
+<p>Satu porsi sekitar 4% dari kebutuhan 2.000 kcal sehari, nilai acuan yang dipakai pada label makanan.</p>
+</section>
 <section id="why">
 <h2>Mengapa angkanya bisa berbeda</h2>
 <p>Lemak paling besar pengaruhnya. Banyaknya minyak, mentega, keju, atau minyak penggorengan yang dipakai, serta seberapa penuh sendok atau sendok sayur, paling mengubah jumlah kalori. Dua piring yang tampak mirip pun bisa berbeda jauh.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cara mencatatnya di Pofu</h2>
 <p>Pofu adalah aplikasi kami. Untuk mencatat makanan ini, foto piringmu: Pofu memperkirakan hidangan dan porsinya, lalu menampilkan skor keyakinan agar kamu tahu seberapa pasti perkiraannya dan bisa mengubahnya. Kamu juga bisa mencari berdasarkan nama atau memindai barcode, lalu menyesuaikan porsi dengan jumlah yang sebenarnya kamu makan. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_id&amp;mt=8">Unduh Pofu di App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikasi Pofu: mencatat makanan dari foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Rekaman layar dari aplikasi Pofu (antarmuka dalam bahasa Inggris): ambil foto, cek perkiraannya, tambahkan ke hari ini.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Makanan serupa</h2>
@@ -234,10 +258,25 @@
 <li><a href="bumbu-kacang.html">Bumbu kacang (saus kacang)</a> <span class="k">· 82 kcal (2 sdm, 32 g)</span></li>
 <li><a href="tahu-goreng.html">Tahu goreng tepung</a> <span class="k">· 150 kcal (1 porsi, 100 g)</span></li>
 </ul>
+<h3>Pilihan yang lebih ringan dalam kelompok yang sama</h3>
+<ul class="foodlist">
+<li><a href="keju-cheddar.html">Keju cheddar</a> <span class="k">· 400 kcal per 100 g</span></li>
+<li><a href="nasi-uduk.html">Nasi uduk (nasi santan)</a> <span class="k">· 267 kcal per 100 g</span></li>
+<li><a href="keju-feta.html">Keju feta</a> <span class="k">· 260 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Semua makanan</a></p>
 </section>
+<section id="faq">
+<h2>Pertanyaan tentang makanan ini</h2>
+<h3>Mentega: berapa kalori dalam 100 g?</h3>
+<p>Sekitar 720 kcal per 100 g, dengan 1 g protein, 0 g karbohidrat, dan 80 g lemak.</p>
+<h3>Mentega: apakah tinggi protein?</h3>
+<p>Tidak banyak: 0,1 g per porsi, sekitar 1% dari kalorinya. Padukan dengan makanan berprotein, seperti telur, yogurt, kacang-kacangan, tempe, ikan, atau ayam, kalau kamu ingin makanan yang lebih mengenyangkan.</p>
+<h3>Mentega: bagaimana mencatatnya di Pofu?</h3>
+<p>Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali.</p>
+</section>
 <section id="source">
-<p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi.</p>
+<p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi. <a href="../editorial-policy.html">Cara kami menyiapkan konten dan sumber kami</a>.</p>
 <div class="note"><p>Halaman ini hanya berisi informasi umum dan bukan nasihat medis. Jika kamu sedang hamil, menyusui, memiliki kondisi medis, atau pernah mengalami gangguan makan, bicarakan dengan dokter atau ahli gizi sebelum menghitung kalori.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Makanan ini dalam bahasa lain" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/butter.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/tereyagi.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/butter.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/beurre.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/mantequilla.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/manteiga.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/butter.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/maslo.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/butter.html" hreflang="hi" lang="hi">हिन्दी</a> · <strong>Bahasa Indonesia</strong> · <a href="../../it/calorie/burro.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/butter.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/butter.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/boter.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/maso.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/unt.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/slivochnoe-maslo.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/smor.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/butter.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/vershkove-maslo.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/bo-dong-vat.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/butter.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Jelajahi"><strong>Jelajahi</strong><a href="../guides.html">Panduan</a><a href="../tools.html">Alat</a><a href="./" aria-current="true">Kalori</a><a href="../questions/">Tanya Jawab</a><a href="../compare.html">Perbandingan</a></nav>
+<nav aria-label="Jelajahi"><strong>Jelajahi</strong><a href="../guides.html">Panduan</a><a href="../tools.html">Alat</a><a href="./" aria-current="true">Kalori</a><a href="../questions/">Tanya Jawab</a><a href="../compare.html">Perbandingan</a><a href="../editorial-policy.html">Konten dan sumber</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

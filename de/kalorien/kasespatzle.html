@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/de/kalorien/kasespatzle.html", "url": "https://getpofu.com/de/kalorien/kasespatzle.html", "name": "Wie viele Kalorien stecken in Käsespätzle? (1 Portion, 250 g)", "description": "Käsespätzle: etwa 520 kcal pro Portion (1 Portion, 250 g); 20 g Eiweiß, 50 g Kohlenhydrate, 26 g Fett. Typische Werte aus der Pofu-App.", "inLanguage": "de", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Käsespätzle", "nutrition": {"@type": "NutritionInformation", "servingSize": "250 g", "calories": "520 kcal", "proteinContent": "20 g", "carbohydrateContent": "50 g", "fatContent": "26 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/de/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorien", "item": "https://getpofu.com/de/kalorien/"}, {"@type": "ListItem", "position": 3, "name": "Käsespätzle", "item": "https://getpofu.com/de/kalorien/kasespatzle.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/de/kalorien/kasespatzle.html", "url": "https://getpofu.com/de/kalorien/kasespatzle.html", "name": "Wie viele Kalorien stecken in Käsespätzle? (1 Portion, 250 g)", "description": "Käsespätzle: etwa 520 kcal pro Portion (1 Portion, 250 g); 20 g Eiweiß, 50 g Kohlenhydrate, 26 g Fett. Typische Werte aus der Pofu-App.", "inLanguage": "de", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Käsespätzle", "nutrition": {"@type": "NutritionInformation", "servingSize": "250 g", "calories": "520 kcal", "proteinContent": "20 g", "carbohydrateContent": "50 g", "fatContent": "26 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/de/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorien", "item": "https://getpofu.com/de/kalorien/"}, {"@type": "ListItem", "position": 3, "name": "Käsespätzle", "item": "https://getpofu.com/de/kalorien/kasespatzle.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/de/kalorien/kasespatzle.html#faq", "inLanguage": "de", "mainEntity": [{"@type": "Question", "name": "Käsespätzle: Wie viele Kalorien hat es pro 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Etwa 208 kcal pro 100 g, mit 8 g Protein, 20 g Kohlenhydraten und 10,4 g Fett."}}, {"@type": "Question", "name": "Käsespätzle: Ist es proteinreich?", "acceptedAnswer": {"@type": "Answer", "text": "Es enthält etwas Protein: 20 g pro Portion, etwa 15 % der Kalorien."}}, {"@type": "Question", "name": "Käsespätzle: Wie trage ich es in Pofu ein?", "acceptedAnswer": {"@type": "Answer", "text": "Mach ein Foto von deinem Teller oder suche nach dem Namen und stelle dann die Portion auf das ein, was du wirklich gegessen hast. Du kannst die Schätzung korrigieren, und Pofu merkt sich deine Korrektur für das nächste Mal."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere oder größere Portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Kalorien</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Eine halbe Portion (125 g)</th><td>260 kcal</td><td>10 g</td></tr>
+<tr><th scope="row">Übliche Portion (250 g)</th><td>520 kcal</td><td>20 g</td></tr>
+<tr><th scope="row">Anderthalb Portionen (375 g)</th><td>780 kcal</td><td>30 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Woher die Kalorien kommen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:16%"></span><span class="sc" style="width:39%"></span><span class="sf" style="width:45%"></span></div>
+<p>16 % der Kalorien stammen aus Protein, 39 % aus Kohlenhydraten und 45 % aus Fett. Kurz gesagt: eine Mischung aus Protein, Kohlenhydraten und Fett.</p>
+<p>Eine Portion entspricht etwa 26 % eines Tages mit 2.000 kcal, dem Referenzwert auf Lebensmitteletiketten.</p>
+</section>
 <section id="why">
 <h2>Warum der Wert schwankt</h2>
 <p>Rezepte zu Hause und im Restaurant unterscheiden sich in der Menge an Öl, Fleisch, Käse und Stärke sowie in der Portionsgröße. Nimm den Wert als Ausgangspunkt und passe die Portion an, wenn dein Teller kleiner oder größer war.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>So erfasst du es in Pofu</h2>
 <p>Pofu ist unsere App. Um dieses Lebensmittel zu erfassen, fotografiere deinen Teller: Pofu schätzt Gericht und Portion und zeigt einen Konfidenzwert, damit du siehst, wie sicher die Schätzung ist, und sie anpassen kannst. Du kannst auch nach dem Namen suchen oder einen Barcode scannen und die Portion auf deine tatsächliche Menge einstellen. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_de&amp;mt=8">Pofu im App Store laden</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-App: eine Mahlzeit per Foto eintragen"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Bildschirmaufnahme aus der Pofu-App (englische Oberfläche): Foto machen, Schätzung prüfen, zu heute hinzufügen.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Ähnliche Lebensmittel</h2>
@@ -213,10 +237,24 @@
 <li><a href="lachs-gebacken.html">Lachs (gebacken)</a> <span class="k">· 280 kcal (1 Portion, 150 g)</span></li>
 <li><a href="gekochte-kichererbsen.html">Gekochte Kichererbsen</a> <span class="k">· 270 kcal (1 Schale, 200 g)</span></li>
 </ul>
+<h3>Leichtere Alternativen in derselben Gruppe</h3>
+<ul class="foodlist">
+<li><a href="musli-mit-joghurt.html">Müsli mit Joghurt</a> <span class="k">· 160 kcal pro 100 g</span></li>
+<li><a href="kartoffelsalat.html">Kartoffelsalat</a> <span class="k">· 127 kcal pro 100 g</span></li>
+</ul>
 <p><a href="./">Alle Lebensmittel</a></p>
 </section>
+<section id="faq">
+<h2>Fragen zu diesem Lebensmittel</h2>
+<h3>Käsespätzle: Wie viele Kalorien hat es pro 100 g?</h3>
+<p>Etwa 208 kcal pro 100 g, mit 8 g Protein, 20 g Kohlenhydraten und 10,4 g Fett.</p>
+<h3>Käsespätzle: Ist es proteinreich?</h3>
+<p>Es enthält etwas Protein: 20 g pro Portion, etwa 15 % der Kalorien.</p>
+<h3>Käsespätzle: Wie trage ich es in Pofu ein?</h3>
+<p>Mach ein Foto von deinem Teller oder suche nach dem Namen und stelle dann die Portion auf das ein, was du wirklich gegessen hast. Du kannst die Schätzung korrigieren, und Pofu merkt sich deine Korrektur für das nächste Mal.</p>
+</section>
 <section id="source">
-<p class="fine">Werte: typische Schätzwerte, wie sie in der Pofu-App verwendet werden; sie schwanken je nach Rezept und Portion.</p>
+<p class="fine">Werte: typische Schätzwerte, wie sie in der Pofu-App verwendet werden; sie schwanken je nach Rezept und Portion. <a href="../editorial-policy.html">Wie wir unsere Inhalte und Quellen erstellen</a>.</p>
 <div class="note"><p>Diese Seite dient der allgemeinen Information und ist keine medizinische Beratung. Wenn du schwanger bist, stillst, eine Erkrankung hast oder früher eine Essstörung hattest, sprich vor dem Kalorienzählen mit deiner Ärztin, deinem Arzt oder einer Ernährungsberatung.</p></div>
 </section>
 </main>
@@ -233,7 +271,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Entdecken"><strong>Entdecken</strong><a href="../guides.html">Ratgeber</a><a href="../tools.html">Rechner</a><a href="./" aria-current="true">Kalorien</a><a href="../questions/">Fragen</a><a href="../compare.html">Vergleiche</a></nav>
+<nav aria-label="Entdecken"><strong>Entdecken</strong><a href="../guides.html">Ratgeber</a><a href="../tools.html">Rechner</a><a href="./" aria-current="true">Kalorien</a><a href="../questions/">Fragen</a><a href="../compare.html">Vergleiche</a><a href="../editorial-policy.html">Inhalte und Quellen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

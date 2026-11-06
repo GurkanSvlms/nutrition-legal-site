@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "id", "locale": "id-ID", "og_locale": "id_ID", "og_img": "og-image.jpg", "us": false,
+    "skip": "Langsung ke konten", "get_app": "Unduh aplikasinya", "pill": "Alat gratis · Tanpa daftar",
+    "byline": "Oleh Ali Gürkan Sevilmiş, pengembang Pofu · 6 November 2026",
+    "submit": "Hitung",
+    "privacy": "Semua dihitung di browsermu. Apa pun yang kamu masukkan tidak dikirim atau disimpan.",
+    "f_age": "Usia", "f_system": "Satuan", "sys_us": "AS (ft, lb)", "sys_metric": "Metrik (cm, kg)",
+    "f_height": "Tinggi badan", "a_ft": "Tinggi badan, kaki", "a_in": "Tinggi badan, inci", "f_weight": "Berat badan saat ini",
+    "f_activity": "Tingkat aktivitas",
+    "activity": {
+      "sedentary": "Lebih banyak duduk (kerja kantoran, jarang olahraga)",
+      "light": "Aktif ringan (olahraga ringan 1–3 hari seminggu)",
+      "moderate": "Cukup aktif (olahraga 3–5 hari seminggu)",
+      "active": "Sangat aktif (olahraga berat 6–7 hari seminggu)",
+      "very_active": "Sangat amat aktif (pekerjaan fisik plus latihan)"
+    },
+    "errors": {
+      "age": "Masukkan usia antara 18 dan 80.",
+      "height": "Masukkan tinggi badanmu (130–210 cm).",
+      "weight": "Masukkan berat badanmu (35–250 kg).",
+      "activity": "Pilih tingkat aktivitas.",
+      "goal": "Pilih tujuan."
+    },
+    "how_h": "Cara kerja kalkulator ini",
+    "src_h": "Sumber",
+    "method_note": "Rumusnya diambil dari sumber-sumber terbitan di atas dan sama dengan aturan yang dipakai aplikasi Pofu. Halaman ini tidak ditinjau oleh ahli gizi; isinya dicek terhadap sumber-sumber tersebut dan diperbarui kalau sumbernya berubah.",
+    "faq_h": "Pertanyaan yang sering diajukan",
+    "rel_h": "Alat gratis lainnya",
+    "medical": "Kalkulator ini memberikan perkiraan umum untuk orang dewasa, bukan saran medis. Jika kamu sedang hamil atau menyusui, punya kondisi medis seperti penyakit ginjal atau diabetes, atau punya riwayat gangguan makan, bicarakan dulu dengan dokter atau ahli gizi sebelum mengubah pola makanmu.",
+    "badge_alt": "Unduh Pofu di App Store",
+    "foot_nav": "Hukum dan dukungan", "privacy_l": "Privasi", "terms_l": "Ketentuan", "support_l": "Dukungan",
+    "updated": "Terakhir diperbarui: <time datetime=\"2026-11-06\">6 November 2026</time>.",
+    "tm": "Apple, iPhone, dan App Store adalah merek dagang Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Kalkulator protein untuk wanita: berapa protein per hari? | Pofu",
+      "og_title": "Kalkulator protein untuk wanita",
+      "desc": "Kalkulator protein gratis untuk wanita. Hitung kebutuhan protein harian dalam gram untuk menjaga berat badan, menurunkan berat badan, atau membentuk otot, dibagi per kali makan, lengkap dengan penelitiannya.",
+      "h1": "Kalkulator protein untuk wanita",
+      "lede": "Berapa protein yang kamu butuhkan setiap hari? Masukkan berat badan dan tujuanmu untuk mendapat target harian dalam gram dan jumlahnya per kali makan.",
+      "tool_h": "Hitung kebutuhan proteinmu",
+      "f_goal": "Tujuan",
+      "goals": {"maintain": "Tetap sehat dan mempertahankan berat badanku", "lose": "Menurunkan berat badan", "muscle": "Membentuk otot atau jadi lebih kuat"},
+      "res_head": "Protein harianmu",
+      "s_meal3": "per kali makan jika makan 3 kali",
+      "s_meal4": "per kali makan jika makan 4 kali",
+      "s_range": "kisaran yang dipakai dalam penelitian (1,2–2,0 g/kg)",
+      "explain": "Membagi protein ke beberapa kali makan lebih mudah daripada memakannya sekaligus. Protein yang lebih banyak dari ini tidak berbahaya bagi kebanyakan orang sehat, tetapi jarang memberi manfaat tambahan.",
+      "how": [
+        "<strong>Mempertahankan:</strong> 1,4 g protein per kg berat badan per hari.",
+        "<strong>Menurunkan berat badan:</strong> 1,6 g per kg, karena protein yang lebih banyak membantu menjaga otot saat kamu makan lebih sedikit dan membuat kenyang lebih lama.",
+        "<strong>Membentuk otot:</strong> 1,8 g per kg, bersama latihan beban.",
+        "Hasilnya dijaga di antara 75 dan 230 g per hari, lalu dibagi rata untuk 3 atau 4 kali makan."
+      ],
+      "note": "Batas minimum untuk mencegah kekurangan pada orang dewasa sekitar 0,8 g per kg. Angka yang lebih tinggi di atas untuk wanita yang aktif dan saat menurunkan berat badan, ketika penelitian menunjukkan adanya manfaat. Ini aturan yang sama dengan yang dipakai aplikasi Pofu.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a> (pernyataan sikap tentang protein dan olahraga). J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg untuk orang yang aktif).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a> (suplemen protein dan latihan beban: tinjauan sistematis dan meta-analisis). Br J Sports Med, 2018 (manfaat mulai mendatar di sekitar 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (angka kecukupan energi, karbohidrat, lemak, dan protein), 2005 (minimum 0,8 g/kg untuk orang dewasa)."
+      ],
+      "faq": [
+        ["Berapa kebutuhan protein wanita per hari?", "Minimum untuk orang dewasa sekitar 0,8 g per kg berat badan. Untuk wanita yang aktif dan saat menurunkan berat badan, penelitian mendukung sekitar 1,2 sampai 2,0 g per kg. Untuk wanita 65 kg yang sedang menurunkan berat badan, kalkulator ini memberi 104 g per hari."],
+        ["Apakah 100 g protein per hari terlalu banyak untuk wanita?", "Bagi kebanyakan wanita yang sehat, tidak. Jumlah itu masih dalam kisaran yang diteliti pada orang yang aktif. Kalau kamu punya penyakit ginjal, tanyakan dulu ke dokter."],
+        ["Berapa protein yang sebaiknya dimakan per kali makan?", "Bagi target hariannya dengan jumlah makanmu. Dengan 104 g per hari dan 3 kali makan, itu sekitar 35 g per kali makan, misalnya sepotong ikan, dua butir telur, dan beberapa potong tempe atau tahu."],
+        ["Apakah protein membantu menurunkan berat badan?", "Protein membantu menjaga otot saat kamu makan lebih sedikit dan membuat kenyang lebih lama. Berat badan tetap turun karena kalori yang masuk lebih sedikit daripada yang terpakai."],
+        ["Sebaiknya pakai berat badan saat ini atau berat badan target?", "Pakai berat badanmu saat ini. Kalau berat badanmu sangat tinggi, memakai berat acuan yang lebih rendah memberi angka yang lebih realistis; batas 230 g per hari menjaga hasilnya tetap wajar."]
+      ],
+      "bridge": "Pofu menentukan target proteinmu dengan aturan yang sama dan menunjukkan berapa yang sudah kamu makan hari ini, dari foto, barcode, atau pencarian."
+    },
+    "macro": {
+      "title": "Kalkulator makro untuk wanita: protein, karbo, lemak | Pofu",
+      "og_title": "Kalkulator makro untuk wanita",
+      "desc": "Kalkulator makro gratis untuk wanita. Hitung kalori harian dan gram protein, karbohidrat, serta lemak untuk menjaga berat badan, menurunkan berat badan, atau membentuk otot.",
+      "h1": "Kalkulator makro untuk wanita",
+      "lede": "Dapatkan kalori hariannya terbagi menjadi protein, karbohidrat, dan lemak, dalam gram dan sebagai persentase dari kalorimu.",
+      "tool_h": "Hitung makromu",
+      "f_goal": "Tujuan",
+      "goals": {"maintain": "Mempertahankan berat badanku", "lose_slow": "Menurunkan berat badan perlahan (sekitar −250 kcal per hari)", "lose": "Menurunkan berat badan (sekitar −400 kcal per hari)", "lose_fast": "Menurunkan berat badan lebih cepat (sekitar −550 kcal per hari)", "muscle": "Membentuk otot (sekitar +225 kcal per hari)"},
+      "res_head": "Kalori dan makro harianmu",
+      "s_p": "Protein", "s_c": "Karbohidrat", "s_f": "Lemak",
+      "pct": "{p}% dari kalori",
+      "floor": "Kalorimu diatur ke 1.200 kcal, target harian terendah yang kami sarankan. Turun lebih rendah tidak disarankan tanpa dokter atau ahli gizi.",
+      "explain": "Protein ditentukan lebih dulu, lemak diatur 28% dari kalori, dan karbohidrat mengisi sisanya. Memenuhi kalori lebih penting daripada memenuhi setiap gram; selisih beberapa gram tidak masalah.",
+      "how": [
+        "<strong>Kalori:</strong> persamaan Mifflin-St Jeor untuk wanita, dikali faktor aktivitasmu (1,2 sampai 1,9), ditambah tujuanmu. Tidak pernah di bawah 1.200 kcal.",
+        "<strong>Protein:</strong> 1,4 g per kg untuk mempertahankan, 1,6 g per kg untuk menurunkan berat badan, 1,8 g per kg untuk membentuk otot (75–230 g).",
+        "<strong>Lemak:</strong> 28% dari kalori, minimal 40 g per hari.",
+        "<strong>Karbohidrat:</strong> sisa kalorinya, minimal 50 g per hari. Protein dan karbohidrat masing-masing 4 kcal per gram, lemak 9 kcal."
+      ],
+      "note": "Lemak 28% berada dalam kisaran 20–35% yang dianjurkan untuk orang dewasa, dan karbohidrat biasanya jatuh di sekitar 40–50%. Ini aturan yang sama dengan yang dipakai aplikasi Pofu.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (persamaan baru untuk memperkirakan pengeluaran energi istirahat pada orang sehat). Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (angka kecukupan energi, karbohidrat, lemak, dan protein), 2005 (lemak 20–35%, karbohidrat 45–65% dari kalori).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a> (pernyataan sikap ISSN tentang protein dan olahraga). J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Berapa rasio makro yang bagus untuk wanita?", "Tidak ada satu rasio yang paling baik. Pembagian yang umum dan mudah dijalani kira-kira 25–30% protein, 28–30% lemak, dan sisanya karbohidrat. Pilih yang bisa kamu jalani terus, dan penuhi dulu kalorinya."],
+        ["Makro seperti apa yang bagus untuk menurunkan berat badan?", "Makan lebih sedikit kalori daripada yang kamu pakai dan jaga proteinnya tetap tinggi (sekitar 1,6 g per kg). Lemak dan karbohidrat boleh dibagi sesuai seleramu."],
+        ["Apakah makro harus tepat sekali?", "Tidak. Selisih sekitar 10 g untuk protein dan karbohidrat, serta 5 g untuk lemak, sudah cukup dekat. Rata-rata mingguanmu lebih penting daripada satu hari."],
+        ["Apakah diet rendah karbo lebih baik untuk wanita?", "Penelitian yang membandingkan diet rendah karbo dengan diet rendah lemak pada kalori yang sama menemukan penurunan berat badan yang mirip. Pilih yang cocok dengan makananmu dan tenagamu."],
+        ["Apakah makro berubah selama siklus haidku?", "Tidak banyak. Sebagian orang merasa lebih lapar menjelang haid; kalkulator kalori siklus kami menambahkan kelonggaran kecil yang opsional untuk fase itu."]
+      ],
+      "bridge": "Pofu mencatat makro ini untukmu: foto makananmu dan aplikasi memperkirakan kalori, protein, karbohidrat, dan lemaknya, yang bisa kamu koreksi."
+    },
+    "deficit": {
+      "title": "Kalkulator defisit kalori: kalori per hari sampai tanggal target | Pofu",
+      "og_title": "Kalkulator defisit kalori sesuai tanggal target",
+      "desc": "Kalkulator defisit kalori gratis untuk wanita. Masukkan berat badan target dan tanggalnya untuk melihat berapa kalori per hari yang kamu perlukan, dan apakah lajunya aman.",
+      "h1": "Kalkulator defisit kalori sesuai tanggal target",
+      "lede": "Ingin mencapai berat badan tertentu pada tanggal tertentu? Lihat berapa kalori per hari yang dibutuhkan, dan tanggal yang realistis kalau lajunya terlalu cepat.",
+      "tool_h": "Hitung defisitmu",
+      "f_goal_kg": "Berat badan target",
+      "f_date": "Tanggal target",
+      "errors": {
+        "goalkg": "Masukkan berat badan target yang lebih rendah dari berat badanmu sekarang. Alat ini untuk menurunkan berat badan.",
+        "date": "Pilih tanggal target di masa depan.",
+        "nodeficit": "Kalori pemeliharaanmu sudah mendekati 1.200 kcal, jadi kami tidak bisa menyarankan defisit yang aman. Bicarakan tujuanmu dengan dokter atau ahli gizi."
+      },
+      "res_ok": "Untuk mencapai {goal} pada {date}, makanlah sekitar",
+      "s_target": "Kalori harian dengan laju yang aman",
+      "s_deficit": "defisit harian",
+      "s_week": "perkiraan penurunan per minggu",
+      "s_maint": "pemeliharaan (TDEE)",
+      "too_fast": "Tanggal itu membutuhkan defisit {need} kcal per hari, lebih dari {max} kcal per hari yang kami sarankan. Dengan laju aman {target} kcal per hari, kamu akan mencapai {goal} sekitar {date}.",
+      "low_goal": "Berat badan targetmu berada di bawah BMI 18,5 untuk tinggi badanmu, yang termasuk kekurangan berat badan. Mohon periksakan tujuanmu ke dokter.",
+      "explain": "Ini hanya perkiraan: penurunan berat badan biasanya melambat seiring waktu dan air membuat angka timbangan berubah dari hari ke hari, terutama menjelang haid. Bandingkan rata-rata mingguan, bukan hari per hari.",
+      "how": [
+        "<strong>Pemeliharaan:</strong> persamaan Mifflin-St Jeor untuk wanita dikali faktor aktivitasmu (1,2 sampai 1,9).",
+        "<strong>Defisit yang dibutuhkan:</strong> berat badan yang perlu turun × 7.700 kcal per kg, dibagi jumlah hari sampai tanggalmu.",
+        "<strong>Batas aman:</strong> paling banyak 550 kcal per hari di bawah pemeliharaan, dan tidak pernah di bawah 1.200 kcal per hari. Kalau tanggalmu butuh lebih dari itu, kalkulator menunjukkan kapan kamu sampai dengan laju yang aman.",
+        "Laju tercepat sekitar 0,5 kg per minggu, sejalan dengan saran kesehatan masyarakat yang umum."
+      ],
+      "note": "7.700 kcal per kg adalah perkiraan yang banyak dipakai. Penurunan nyata sering lebih lambat setelah beberapa minggu pertama karena tubuh memakai lebih sedikit energi saat makin ringan, jadi anggap tanggalnya sebagai panduan.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> (berapa defisit energi yang dibutuhkan untuk setiap unit penurunan berat badan?) Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (persamaan baru untuk memperkirakan pengeluaran energi istirahat pada orang sehat). Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (model penelitian tentang bagaimana penurunan berat badan melambat seiring waktu).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (cara menurunkan berat badan; sekitar 0,5 sampai 1 kg per minggu)."
+      ],
+      "faq": [
+        ["Seberapa besar defisit kalori yang sebaiknya aku ambil?", "Bagi kebanyakan wanita, 250 sampai 550 kcal per hari di bawah pemeliharaan masih bisa dijalani. Itu sekitar 0,25 sampai 0,5 kg per minggu. Defisit yang lebih besar lebih sulit dipertahankan dan bisa mengurangi otot."],
+        ["Berapa lama untuk menurunkan 5 kg?", "Dengan defisit 550 kcal per hari, sekitar 10 minggu; dengan 400 kcal per hari, sekitar 14 minggu. Kemajuan sebenarnya sering sedikit lebih lambat."],
+        ["Kenapa kalkulator ini tidak membolehkanku makan di bawah 1.200 kcal?", "Di bawah 1.200 kcal per hari, sulit mendapat cukup zat gizi dari makanan. Turun lebih rendah hanya boleh dilakukan dengan pengawasan medis."],
+        ["Apakah 7.700 kalori benar-benar sama dengan satu kilogram?", "Itu perkiraan kasar untuk lemak tubuh. Di awal, sebagian penurunan adalah air, dan lama-lama tubuh beradaptasi, jadi angka itu panduan, bukan janji."],
+        ["Kenapa berat badanku naik padahal aku sedang defisit?", "Air, garam, makan dalam porsi besar, dan hari-hari menjelang haid bisa membuat timbangan naik beberapa hari. Lihat tren selama 2 sampai 4 minggu."]
+      ],
+      "bridge": "Di Pofu kamu bisa menetapkan berat badan target dan lajunya; aplikasi menghitung target hariannya dengan aturan yang sama dan menunjukkan kemajuanmu sebagai tren mingguan."
+    },
+    "bmi": {
+      "title": "Kalkulator BMI untuk wanita: berat badan ideal sesuai tinggi | Pofu",
+      "og_title": "Kalkulator BMI untuk wanita",
+      "desc": "Kalkulator BMI gratis untuk wanita dewasa. Lihat indeks massa tubuhmu, artinya, dan rentang berat badan sehat untuk tinggi badanmu, beserta keterbatasan BMI.",
+      "h1": "Kalkulator BMI untuk wanita",
+      "lede": "Hitung indeks massa tubuhmu dan lihat rentang berat badan yang dianggap sehat untuk tinggi badanmu.",
+      "tool_h": "Hitung BMI-mu",
+      "res_head": "BMI-mu",
+      "cats": {"under": "Berat badan kurang (di bawah 18,5)", "normal": "Berat badan sehat (18,5 sampai 24,9)", "over": "Berat badan berlebih (25 sampai 29,9)", "obese": "Obesitas (30 atau lebih)"},
+      "range": "Rentang berat badan sehat untuk tinggi badanmu sekitar {low} sampai {high}.",
+      "explain": "BMI adalah angka skrining cepat, bukan diagnosis. BMI tidak membedakan otot dari lemak, jadi wanita yang sangat berotot bisa mendapat angka tinggi, dan BMI tidak berlaku saat hamil.",
+      "how": [
+        "<strong>Rumus:</strong> berat badan dalam kg dibagi tinggi badan dalam meter kuadrat (kg/m²).",
+        "<strong>Kategori (WHO, orang dewasa):</strong> di bawah 18,5 berat badan kurang, 18,5–24,9 sehat, 25–29,9 berat badan berlebih, 30 atau lebih obesitas.",
+        "<strong>Rentang sehat:</strong> berat badan yang menghasilkan BMI 18,5 sampai 24,9 pada tinggi badanmu.",
+        "Rumus yang sama dipakai untuk wanita dan pria; tidak dimaksudkan untuk anak, remaja, atau masa kehamilan."
+      ],
+      "note": "Panduan kesehatan di Indonesia dan banyak negara Asia sering memakai batas khusus Asia (berat badan berlebih mulai sekitar 23), sedangkan kalkulator ini menampilkan kategori WHO. WHO sendiri menyebut bahwa pada sebagian populasi Asia risiko kesehatan mulai di BMI yang lebih rendah (dari sekitar 23). Lingkar pinggang dan perasaanmu sehari-hari memberi konteks yang berguna di samping angkanya.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (lembar fakta obesitas dan berat badan berlebih).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a> (BMI yang tepat untuk populasi Asia). Lancet, 2004."
+      ],
+      "faq": [
+        ["Berapa BMI yang sehat untuk wanita?", "Untuk orang dewasa, BMI 18,5 sampai 24,9 dianggap berat badan sehat. Rentang yang sama dipakai untuk wanita dan pria."],
+        ["Apakah BMI wanita berbeda?", "Rumus dan kategorinya sama. Pada BMI yang sama, wanita biasanya punya lebih banyak lemak tubuh daripada pria, dan itu salah satu alasan BMI hanya panduan kasar."],
+        ["Apakah BMI akurat?", "BMI berguna untuk kelompok dan sebagai pengecekan awal, tetapi tidak mengukur lemak tubuh. Otot, usia, dan bentuk tubuh semuanya mengubah arti BMI tertentu bagimu."],
+        ["Berapa berat badan yang ideal untuk tinggi badanku?", "Berat badan apa pun yang menghasilkan BMI antara 18,5 dan 24,9 termasuk rentang sehat. Untuk tinggi badan 165 cm, itu sekitar 50 sampai 68 kg."],
+        ["Bolehkah memakai BMI saat hamil?", "Tidak. Selama kehamilan, ikuti saran bidan atau dokter tentang kenaikan berat badan."]
+      ],
+      "bridge": "Pofu berfokus pada kebiasaan, bukan satu angka: kalori dan protein harian, tren berat badan mingguan, dan hari joker supaya satu hari yang terlewat tidak memutus rangkaianmu."
+    }
+  }
+}

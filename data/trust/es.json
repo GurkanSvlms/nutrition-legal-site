@@ -1,0 +1,40 @@
+{
+  "food": {
+    "h_port": "Ración más pequeña o más grande",
+    "port_cols": ["Ración", "Calorías", "Proteína"],
+    "port_rows": ["Media ración ({g} {u})", "Ración habitual ({g} {u})", "Ración y media ({g} {u})"],
+    "h_split": "De dónde vienen las calorías",
+    "split": "El {p} % de las calorías viene de la proteína, el {c} % de los carbohidratos y el {f} % de la grasa.",
+    "cat": {"fat": "En resumen: la mayoría de las calorías viene de la grasa, así que un pequeño cambio de cantidad marca una gran diferencia.", "prot": "En resumen: una buena fuente de proteína.", "carb": "En resumen: la mayoría de las calorías viene de los carbohidratos.", "light": "En resumen: un alimento ligero, formado sobre todo por agua.", "mixed": "En resumen: una mezcla de proteína, carbohidratos y grasa."},
+    "ref": "Una ración equivale a cerca del {pct} % de un día de 2.000 kcal, el valor de referencia que se usa en las etiquetas de los alimentos.",
+    "h_lighter": "Opciones más ligeras del mismo grupo",
+    "per100": "por 100 {u}",
+    "h_faq": "Preguntas sobre este alimento",
+    "q100": "{name}: ¿cuántas calorías hay en 100 {u}?",
+    "a100": "Unas {kcal} kcal por 100 {u}, con {p} g de proteína, {c} g de carbohidratos y {f} g de grasa.",
+    "qprot": "{name}: ¿es rico en proteína?",
+    "aprot_high": "Sí. Una ración tiene {p} g de proteína, cerca del {pp} % de sus calorías.",
+    "aprot_mid": "Tiene algo de proteína: {p} g por ración, cerca del {pp} % de sus calorías.",
+    "aprot_low": "No mucha: {p} g por ración, cerca del {pp} % de sus calorías. Combínalo con un alimento proteico, como huevos, yogur, legumbres, pescado o pollo, si quieres una comida más saciante.",
+    "qlog": "{name}: ¿cómo lo registro en Pofu?",
+    "alog": "Haz una foto de tu plato o busca el nombre y ajusta la ración a lo que realmente has comido. Puedes corregir la estimación, y Pofu recuerda tu corrección la próxima vez.",
+    "video_caption": "Grabación de pantalla de la app Pofu (interfaz en inglés): haz una foto, revisa la estimación y añádela a hoy.",
+    "video_alt": "App Pofu: registrar una comida a partir de una foto",
+    "method_link": "Cómo preparamos nuestros contenidos y fuentes"
+  },
+  "method": {
+    "title": "Cómo preparamos nuestros contenidos y fuentes | Pofu",
+    "desc": "Quién escribe las guías y calculadoras de Pofu, de dónde salen los valores de calorías y las fórmulas, cómo se usa la IA y cómo corregimos los errores.",
+    "h1": "Cómo preparamos nuestros contenidos y fuentes",
+    "lede": "Queremos que cada cifra de este sitio se pueda comprobar. Esta página explica quién la escribe, de dónde salen los valores y qué no hacemos.",
+    "sections": [
+      ["Quién escribe los contenidos", "<p>Pofu lo crea Ali Gürkan Sevilmiş, desarrollador independiente. Las guías, calculadoras y páginas de alimentos de este sitio las escribe y las mantiene él, a partir de las fuentes publicadas que se indican abajo.</p><p>Ningún dietista ni médico ha revisado todavía estos contenidos. Lo decimos abiertamente en lugar de mostrar un sello de revisión por una revisión que no ha ocurrido. Si eres profesional de la nutrición y ves algo que mejorar, nos encantará saber de ti.</p>"],
+      ["De dónde salen los valores de los alimentos", "<p>Las calorías, proteínas, carbohidratos y grasas de las páginas de alimentos proceden de bases de datos públicas de composición de alimentos y de la base de alimentos de la app Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departamento de Agricultura de EE. UU.)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Países Bajos)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Agencia Sueca de Alimentación)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (República Checa)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italia)</li></ul><p>Cuando una página usa una entrada de una base de datos, enlaza a ella. Las recetas caseras y las de restaurante varían, así que cada valor es una estimación típica para la ración indicada, y cada página lo dice.</p>"],
+      ["De dónde salen las fórmulas", "<p>Las calculadoras usan las mismas reglas que la app Pofu, tomadas de investigación publicada: la ecuación de Mifflin-St Jeor para el gasto en reposo (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), los rangos de proteína de la <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, los rangos de grasa y carbohidratos de las <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies de EE. UU. (2005)</a>, las categorías de IMC de la <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organización Mundial de la Salud</a> y la energía necesaria por kilogramo según <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Cada calculadora indica sus fuentes y explica cada paso.</p><p>Nunca sugerimos menos de 1.200 kcal al día. Las calculadoras te piden que no uses un déficit de calorías si estás embarazada o en periodo de lactancia, y la app Pofu no fija ningún déficit cuando se lo indicas.</p>"],
+      ["Cómo usamos la IA", "<p>La app Pofu usa IA para estimar una comida a partir de una foto. Cada estimación muestra una puntuación de confianza y se puede corregir. En este sitio, las herramientas de IA nos ayudan a redactar textos y a traducirlos desde los originales en inglés y turco; el desarrollador comprueba las cifras con las fuentes de arriba. Todavía no todas las traducciones han sido revisadas por hablantes nativos; si una frase te suena mal en tu idioma, cuéntanoslo.</p>"],
+      ["Qué no hacemos", "<ul><li>No damos consejo médico ni diagnósticos.</li><li>Pofu no predice el periodo ni la ovulación y no tiene seguimiento del embarazo; la función opcional del ciclo solo usa una fecha que introduces tú.</li><li>No prometemos resultados de pérdida de peso ni mostramos fotos de antes y después.</li><li>No publicamos reseñas falsas.</li><li>Nuestras páginas de comparativas las escriben los creadores de Pofu, y cada una lo indica.</li><li>Las calculadoras funcionan en tu navegador; nada de lo que introduces se envía ni se guarda.</li></ul>"],
+      ["Actualizaciones y correcciones", "<p>Cada página muestra cuándo se actualizó por última vez. Revisamos las páginas cuando cambia una fuente. Si encuentras un error, escribe a <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; lo comprobamos con la fuente, corregimos los errores confirmados y actualizamos la fecha de la página.</p>"]
+    ],
+    "nav": "Contenidos y fuentes"
+  }
+}

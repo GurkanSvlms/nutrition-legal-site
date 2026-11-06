@@ -119,9 +119,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/pierogi.html", "url": "https://getpofu.com/pl/kalorie/pierogi.html", "name": "Ile kalorii zawiera: Pierogi? (6 sztuk, 180 g)", "description": "Pierogi: około 351 kcal w porcji (6 sztuk, 180 g); 9,5 g białka, 53,4 g węglowodanów, 11,1 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Pierogi", "nutrition": {"@type": "NutritionInformation", "servingSize": "180 g", "calories": "351 kcal", "proteinContent": "9.5 g", "carbohydrateContent": "53.4 g", "fatContent": "11.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Pierogi", "item": "https://getpofu.com/pl/kalorie/pierogi.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/pierogi.html", "url": "https://getpofu.com/pl/kalorie/pierogi.html", "name": "Ile kalorii zawiera: Pierogi? (6 sztuk, 180 g)", "description": "Pierogi: około 351 kcal w porcji (6 sztuk, 180 g); 9,5 g białka, 53,4 g węglowodanów, 11,1 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Pierogi", "nutrition": {"@type": "NutritionInformation", "servingSize": "180 g", "calories": "351 kcal", "proteinContent": "9.5 g", "carbohydrateContent": "53.4 g", "fatContent": "11.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Pierogi", "item": "https://getpofu.com/pl/kalorie/pierogi.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pl/kalorie/pierogi.html#faq", "inLanguage": "pl", "mainEntity": [{"@type": "Question", "name": "Pierogi: ile kalorii jest w 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Około 195 kcal na 100 g, w tym 5,3 g białka, 29,7 g węglowodanów i 6,2 g tłuszczu."}}, {"@type": "Question", "name": "Pierogi: czy zawiera dużo białka?", "acceptedAnswer": {"@type": "Answer", "text": "Ma trochę białka: 9,5 g na porcję, czyli około 11% kalorii."}}, {"@type": "Question", "name": "Pierogi: jak to zapisać w Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -197,6 +203,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mniejsza lub większa porcja</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porcja</th><th scope="col">Kalorie</th><th scope="col">Białko</th></tr></thead>
+<tbody>
+<tr><th scope="row">Pół porcji (90 g)</th><td>176 kcal</td><td>4,8 g</td></tr>
+<tr><th scope="row">Typowa porcja (180 g)</th><td>351 kcal</td><td>9,5 g</td></tr>
+<tr><th scope="row">Półtorej porcji (270 g)</th><td>526 kcal</td><td>14,2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Skąd pochodzą kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:11%"></span><span class="sc" style="width:61%"></span><span class="sf" style="width:28%"></span></div>
+<p>11% kalorii pochodzi z białka, 61% z węglowodanów i 28% z tłuszczu. W skrócie: większość kalorii pochodzi z węglowodanów.</p>
+<p>Jedna porcja to około 18% dnia o wartości 2 000 kcal, czyli wartości odniesienia stosowanej na etykietach produktów.</p>
+</section>
 <section id="why">
 <h2>Dlaczego wartość może się różnić</h2>
 <p>Wynik zależy od sposobu przygotowania dania oraz od ilości oleju, masła lub cukru. Waga po ugotowaniu i waga suchego produktu bardzo się różnią, dlatego pełny i płaski talerz dzieli duża różnica. Marka, rozmiar i grubość też zmieniają wartość.</p>
@@ -204,6 +227,7 @@
 <section id="log">
 <h2>Jak dodać to w Pofu</h2>
 <p>Pofu to nasza aplikacja. Aby dodać ten produkt, zrób zdjęcie talerza: Pofu oszacuje danie i porcję oraz pokaże wskaźnik pewności, żebyś widziała, na ile trafna jest ocena, i mogła ją poprawić. Możesz też wyszukać po nazwie albo zeskanować kod kreskowy i ustawić porcję na to, co naprawdę zjadłaś. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pl&amp;mt=8">Pobierz Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikacja Pofu: zapisywanie posiłku ze zdjęcia"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Nagranie ekranu z aplikacji Pofu (interfejs po angielsku): zrób zdjęcie, sprawdź oszacowanie, dodaj do dzisiejszego dnia.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobne produkty</h2>
@@ -215,10 +239,25 @@
 <li><a href="gotowana-ciecierzyca.html">Gotowana ciecierzyca</a> <span class="k">· 270 kcal (1 miska, 200 g)</span></li>
 <li><a href="gotowana-soczewica.html">Gotowana soczewica</a> <span class="k">· 230 kcal (1 miska, 200 g)</span></li>
 </ul>
+<h3>Lżejsze opcje z tej samej grupy</h3>
+<ul class="foodlist">
+<li><a href="gotowana-ciecierzyca.html">Gotowana ciecierzyca</a> <span class="k">· 135 kcal na 100 g</span></li>
+<li><a href="gotowany-biay-ryz.html">Gotowany biały ryż</a> <span class="k">· 130 kcal na 100 g</span></li>
+<li><a href="gotowana-komosa-ryzowa.html">Gotowana komosa ryżowa</a> <span class="k">· 119 kcal na 100 g</span></li>
+</ul>
 <p><a href="./">Wszystkie produkty</a></p>
 </section>
+<section id="faq">
+<h2>Pytania o ten produkt</h2>
+<h3>Pierogi: ile kalorii jest w 100 g?</h3>
+<p>Około 195 kcal na 100 g, w tym 5,3 g białka, 29,7 g węglowodanów i 6,2 g tłuszczu.</p>
+<h3>Pierogi: czy zawiera dużo białka?</h3>
+<p>Ma trochę białka: 9,5 g na porcję, czyli około 11% kalorii.</p>
+<h3>Pierogi: jak to zapisać w Pofu?</h3>
+<p>Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz.</p>
+</section>
 <section id="source">
-<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="https://fdc.nal.usda.gov/food-details/2708720/nutrients" rel="nofollow noopener">Źródło</a>.</p>
+<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="https://fdc.nal.usda.gov/food-details/2708720/nutrients" rel="nofollow noopener">Źródło</a>. <a href="../editorial-policy.html">Jak przygotowujemy treści i źródła</a>.</p>
 <div class="note"><p>Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.</p></div>
 </section>
 </main>
@@ -237,7 +276,7 @@
 <nav class="langs" aria-label="Ten produkt w innych językach" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><strong>Polski</strong> · <a href="../../ru/kalorii/vareniki.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../uk/kalorii/varenyky.html" hreflang="uk" lang="uk">Українська</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a></nav>
+<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a><a href="../editorial-policy.html">Treści i źródła</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

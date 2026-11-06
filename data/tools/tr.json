@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "tr", "locale": "tr-TR", "og_locale": "tr_TR", "og_img": "og-image-tr.jpg", "us": false,
+    "skip": "İçeriğe geç", "get_app": "Uygulamayı indir", "pill": "Ücretsiz araç · Kayıt yok",
+    "byline": "Ali Gürkan Sevilmiş, Pofu geliştiricisi · 6 Kasım 2026",
+    "submit": "Hesapla",
+    "privacy": "Hesaplama tarayıcında yapılır. Girdiğin hiçbir şey gönderilmez ya da saklanmaz.",
+    "f_age": "Yaş", "f_system": "Birim", "sys_us": "ABD (ft, lb)", "sys_metric": "Metrik (cm, kg)",
+    "f_height": "Boy", "a_ft": "Boy, fit", "a_in": "Boy, inç", "f_weight": "Şu anki kilon",
+    "f_activity": "Hareket düzeyi",
+    "activity": {
+      "sedentary": "Çoğunlukla oturarak (masa başı, az egzersiz)",
+      "light": "Hafif hareketli (haftada 1–3 gün hafif egzersiz)",
+      "moderate": "Orta hareketli (haftada 3–5 gün egzersiz)",
+      "active": "Çok hareketli (haftada 6–7 gün yoğun egzersiz)",
+      "very_active": "Aşırı hareketli (fiziksel iş ve antrenman)"
+    },
+    "errors": {
+      "age": "18 ile 80 arasında bir yaş gir.",
+      "height": "Boyunu gir (130–210 cm).",
+      "weight": "Kilonu gir (35–250 kg).",
+      "activity": "Bir hareket düzeyi seç.",
+      "goal": "Bir hedef seç."
+    },
+    "how_h": "Bu araç nasıl hesaplıyor",
+    "src_h": "Kaynaklar",
+    "method_note": "Formüller yukarıdaki yayımlanmış kaynaklardan alınmıştır ve Pofu uygulamasının kullandığı kurallarla aynıdır. Bu sayfa bir diyetisyen tarafından incelenmedi; bu kaynaklarla karşılaştırılarak kontrol edilir ve kaynaklar değiştiğinde güncellenir.",
+    "faq_h": "Sık sorulan sorular",
+    "rel_h": "Diğer ücretsiz araçlar",
+    "medical": "Bu araç yetişkinler için genel tahminler verir, tıbbi tavsiye değildir. Hamile ya da emziren biriysen, böbrek hastalığı veya diyabet gibi bir sağlık sorunun ya da yeme bozukluğu geçmişin varsa beslenmeni değiştirmeden önce doktoruna veya diyetisyenine danış.",
+    "badge_alt": "Pofu’yu App Store’dan indir",
+    "foot_nav": "Yasal ve destek", "privacy_l": "Gizlilik", "terms_l": "Koşullar", "support_l": "Destek",
+    "updated": "Son güncelleme: <time datetime=\"2026-11-06\">6 Kasım 2026</time>.",
+    "tm": "Apple, iPhone ve App Store, Apple Inc.’in ticari markalarıdır. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Kadınlar için günlük protein ihtiyacı hesaplama | Pofu",
+      "og_title": "Kadınlar için protein ihtiyacı hesaplama",
+      "desc": "Kadınlar için ücretsiz protein hesaplama: kilo korumak, kilo vermek ya da kas yapmak için günde kaç gram protein gerektiğini ve öğün başına dağılımını öğren.",
+      "h1": "Kadınlar için protein ihtiyacı hesaplama",
+      "lede": "Günde kaç gram protein almalısın? Kilonu ve hedefini gir; günlük hedefini ve bunun öğün başına ne kadar ettiğini gör.",
+      "tool_h": "Protein ihtiyacını hesapla",
+      "f_goal": "Hedef",
+      "goals": {"maintain": "Sağlıklı kalmak ve kilomu korumak", "lose": "Kilo vermek", "muscle": "Kas yapmak ya da güçlenmek"},
+      "res_head": "Günlük protein ihtiyacın",
+      "s_meal3": "3 öğünde öğün başına",
+      "s_meal4": "4 öğünde öğün başına",
+      "s_range": "araştırmalarda kullanılan aralık (1,2–2,0 g/kg)",
+      "explain": "Proteini öğünlere yaymak, hepsini bir seferde yemekten daha kolaydır. Sağlıklı çoğu insan için bundan fazlası zararlı değildir ama genellikle ek fayda da sağlamaz.",
+      "how": [
+        "<strong>Kilo korumak:</strong> kilogram başına günde 1,4 g protein.",
+        "<strong>Kilo vermek:</strong> kilogram başına 1,6 g; daha az yerken kası korumaya yardım eder ve daha uzun tok tutar.",
+        "<strong>Kas yapmak:</strong> kuvvet antrenmanıyla birlikte kilogram başına 1,8 g.",
+        "Sonuç günde 75 ile 230 g arasında tutulur ve 3 ya da 4 öğüne eşit bölünür."
+      ],
+      "note": "Yetişkinlerde eksikliği önleyen en düşük miktar kilogram başına yaklaşık 0,8 g’dır. Yukarıdaki daha yüksek değerler, araştırmaların fayda gösterdiği hareketli kadınlar ve kilo verme dönemi içindir. Pofu uygulaması da aynı kuralları kullanır.",
+      "sources": [
+        "Jäger R. ve ark. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a> (Uluslararası Spor Beslenmesi Derneği protein ve egzersiz görüş bildirisi). J Int Soc Sports Nutr, 2017 (hareketli kişiler için 1,4–2,0 g/kg).",
+        "Morton R.W. ve ark. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein takviyesi ve direnç antrenmanı: sistematik derleme ve meta-analiz</a>. Br J Sports Med, 2018 (fayda yaklaşık 1,6 g/kg’da sabitleniyor).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Enerji, karbonhidrat, yağ ve protein için Diyet Referans Alımları</a>, 2005 (yetişkinler için en az 0,8 g/kg)."
+      ],
+      "faq": [
+        ["Bir kadının günlük protein ihtiyacı ne kadar?", "Yetişkinler için en düşük miktar kilogram başına yaklaşık 0,8 g’dır. Hareketli kadınlar ve kilo verme döneminde araştırmalar kilogram başına 1,2 ile 2,0 g’ı destekliyor. Kilo vermek isteyen 65 kg’lık bir kadın için bu araç günde 104 g verir."],
+        ["Kadın için günde 100 g protein fazla mı?", "Sağlıklı kadınların çoğu için fazla değildir; hareketli kişiler için araştırılan aralığın içindedir. Böbrek hastalığın varsa önce doktoruna sor."],
+        ["Bir öğünde ne kadar protein almalıyım?", "Günlük hedefini öğün sayına böl. Günde 104 g ve 3 öğünle öğün başına yaklaşık 35 g eder; örneğin kahvaltıda 2 yumurta ve beyaz peynir, öğlen bir porsiyon tavuk ya da akşam mercimek çorbası ile yoğurt."],
+        ["Protein kilo vermeye yardım eder mi?", "Daha az yerken kasını korumana yardım eder ve daha uzun tok tutar. Kilo kaybı yine de harcadığından daha az kalori almaktan gelir."],
+        ["Şu anki kilomu mu yoksa hedef kilomu mu kullanmalıyım?", "Şu anki kilonu kullan. Kilon çok yüksekse daha düşük bir referans kilo daha gerçekçi bir sonuç verir; günde 230 g’lık üst sınır sonucu makul tutar."]
+      ],
+      "bridge": "Pofu protein hedefini aynı kuralla belirler ve bugün ne kadar protein aldığını fotoğraf, barkod ya da aramayla eklediğin öğünlerden gösterir."
+    },
+    "macro": {
+      "title": "Kadınlar için makro hesaplama: protein, karbonhidrat, yağ | Pofu",
+      "og_title": "Kadınlar için makro hesaplama",
+      "desc": "Kadınlar için ücretsiz makro hesaplama: kilo korumak, kilo vermek ya da kas yapmak için günlük kalori ile gram olarak protein, karbonhidrat ve yağ ihtiyacını öğren.",
+      "h1": "Kadınlar için makro hesaplama",
+      "lede": "Günlük kalorini protein, karbonhidrat ve yağ olarak gram ve yüzde cinsinden öğren.",
+      "tool_h": "Makrolarını hesapla",
+      "f_goal": "Hedef",
+      "goals": {"maintain": "Kilomu korumak", "lose_slow": "Yavaş kilo vermek (günde yaklaşık −250 kcal)", "lose": "Kilo vermek (günde yaklaşık −400 kcal)", "lose_fast": "Daha hızlı kilo vermek (günde yaklaşık −550 kcal)", "muscle": "Kas yapmak (günde yaklaşık +225 kcal)"},
+      "res_head": "Günlük kalorin ve makroların",
+      "s_p": "Protein", "s_c": "Karbonhidrat", "s_f": "Yağ",
+      "pct": "kalori payı %{p}",
+      "floor": "Kalorin, önerdiğimiz en düşük günlük hedef olan 1.200 kcal’ye ayarlandı. Doktor ya da diyetisyen olmadan daha aşağısı önerilmez.",
+      "explain": "Önce protein belirlenir, yağ kalorinin %28’i olarak ayarlanır, kalan kısmı karbonhidrat doldurur. Kalori hedefini tutturmak her gramı tutturmaktan daha önemlidir; birkaç gram fark sorun değildir.",
+      "how": [
+        "<strong>Kalori:</strong> kadınlar için Mifflin-St Jeor denklemi × hareket katsayın (1,2–1,9) + hedefin. Hiçbir zaman 1.200 kcal’nin altına inmez.",
+        "<strong>Protein:</strong> korumak için kilogram başına 1,4 g, kilo vermek için 1,6 g, kas yapmak için 1,8 g (75–230 g).",
+        "<strong>Yağ:</strong> kalorinin %28’i, günde en az 40 g.",
+        "<strong>Karbonhidrat:</strong> kalan kalori, günde en az 50 g. Protein ve karbonhidratın gramı 4 kcal, yağın gramı 9 kcal’dir."
+      ],
+      "note": "%28 yağ, yetişkinler için önerilen %20–35 aralığının içindedir; karbonhidrat genellikle %40–50 civarına düşer. Pofu uygulaması da aynı kuralları kullanır.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. ve ark. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Sağlıklı bireylerde dinlenme enerji harcaması için yeni bir tahmin denklemi</a>. Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Enerji, karbonhidrat, yağ ve protein için Diyet Referans Alımları</a>, 2005 (yağ kalorinin %20–35’i, karbonhidrat %45–65’i).",
+        "Jäger R. ve ark. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN protein ve egzersiz görüş bildirisi</a>. J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Kadınlar için iyi bir makro oranı nedir?", "Tek bir en iyi oran yok. Yaygın ve sürdürülebilir bir dağılım yaklaşık %25–30 protein, %28–30 yağ ve kalanı karbonhidrattır. Sürdürebileceğin oranı seç ve önce kalori hedefini tuttur."],
+        ["Kilo vermek için makrolar nasıl olmalı?", "Harcadığından daha az kalori al ve proteini yüksek tut (kilogram başına yaklaşık 1,6 g). Yağ ve karbonhidratı istediğin gibi bölebilirsin."],
+        ["Makrolarımı tam tutturmak zorunda mıyım?", "Hayır. Protein ve karbonhidratta yaklaşık 10 g, yağda 5 g fark yeterince yakındır. Tek bir günden çok haftalık ortalama önemlidir."],
+        ["Kadınlar için düşük karbonhidrat daha mı iyi?", "Aynı kaloride düşük karbonhidratlı ve düşük yağlı diyetleri karşılaştıran çalışmalar benzer kilo kaybı buluyor. Yemek alışkanlığına ve enerjine uyanı seç."],
+        ["Makrolar adet döngüsünde değişir mi?", "Çok değişmez. Bazı kadınlar regl öncesinde daha çok acıkır; kalori ihtiyacı aracımız bu faz için küçük ve isteğe bağlı bir pay ekler."]
+      ],
+      "bridge": "Pofu bu makroları senin yerine takip eder: öğününün fotoğrafını çek, kaloriyi, proteini, karbonhidratı ve yağı tahmin etsin; istersen düzeltebilirsin."
+    },
+    "deficit": {
+      "title": "Kalori açığı hesaplama: hedef tarihe göre günlük kalori | Pofu",
+      "og_title": "Hedef tarihe göre kalori açığı hesaplama",
+      "desc": "Kadınlar için ücretsiz kalori açığı hesaplama: hedef kilonu ve tarihini gir, günde kaç kalori alman gerektiğini ve bu hızın güvenli olup olmadığını gör.",
+      "h1": "Hedef tarihe göre kalori açığı hesaplama",
+      "lede": "Belirli bir tarihe kadar hedef kilona ulaşmak mı istiyorsun? Bunun için günde kaç kalori gerektiğini, hız çok yüksekse gerçekçi bir tarihi gör.",
+      "tool_h": "Kalori açığını hesapla",
+      "f_goal_kg": "Hedef kilo",
+      "f_date": "Hedef tarih",
+      "errors": {
+        "goalkg": "Şu anki kilondan düşük bir hedef kilo gir. Bu araç kilo vermek içindir.",
+        "date": "İleri bir tarih seç.",
+        "nodeficit": "Koruma kalorin zaten 1.200 kcal’ye yakın, bu yüzden güvenli bir açık öneremiyoruz. Hedefini bir doktor ya da diyetisyenle konuş."
+      },
+      "res_ok": "{date} tarihine kadar {goal} olmak için günde yaklaşık",
+      "s_target": "Güvenli hızda günlük kalori",
+      "s_deficit": "günlük açık",
+      "s_week": "haftalık beklenen kayıp",
+      "s_maint": "koruma kalorisi (TDEE)",
+      "too_fast": "Bu tarih için günde {need} kcal açık gerekiyor; bu, önerdiğimiz günlük {max} kcal’den fazla. Günde {target} kcal ile güvenli bir hızda {goal} hedefine yaklaşık {date} tarihinde ulaşırsın.",
+      "low_goal": "Hedef kilon, boyuna göre 18,5’in altında bir vücut kitle endeksine denk geliyor; bu zayıf kategorisine girer. Lütfen hedefini bir doktorla kontrol et.",
+      "explain": "Bu bir tahmindir: kilo kaybı zamanla genellikle yavaşlar ve tartı, özellikle regl öncesinde, su yüzünden günden güne değişir. Tek tek günleri değil, haftalık ortalamaları karşılaştır.",
+      "how": [
+        "<strong>Koruma kalorisi:</strong> kadınlar için Mifflin-St Jeor denklemi × hareket katsayın (1,2–1,9).",
+        "<strong>Gereken açık:</strong> verilecek kilo × kilogram başına 7.700 kcal, hedef tarihe kalan gün sayısına bölünür.",
+        "<strong>Güvenli sınır:</strong> koruma kalorisinin en fazla 550 kcal altı ve asla günde 1.200 kcal’nin altı değil. Tarihin bundan fazlasını gerektiriyorsa araç güvenli hızda ne zaman ulaşacağını gösterir.",
+        "En yüksek hız haftada yaklaşık 0,5 kg’dır; bu, yaygın halk sağlığı önerileriyle uyumludur."
+      ],
+      "note": "Kilogram başına 7.700 kcal yaygın kullanılan bir tahmindir. İlk haftalardan sonra vücut hafifledikçe daha az enerji harcadığı için gerçek kayıp çoğu zaman daha yavaştır; tarihi bir yol gösterici olarak gör.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Kilogram başına gereken enerji açığı nedir?</a> Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. ve ark. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Sağlıklı bireylerde dinlenme enerji harcaması için yeni bir tahmin denklemi</a>. Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (kilo kaybının zamanla nasıl yavaşladığını gösteren bir araştırma modeli).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (haftada yaklaşık 0,5–1 kg)."
+      ],
+      "faq": [
+        ["Kalori açığım ne kadar olmalı?", "Çoğu kadın için koruma kalorisinin günde 250–550 kcal altı sürdürülebilirdir; bu haftada yaklaşık 0,25–0,5 kg eder. Daha büyük açıkları sürdürmek zordur ve kas kaybına yol açabilir."],
+        ["5 kilo vermek ne kadar sürer?", "Günde 550 kcal açıkla yaklaşık 10 hafta, 400 kcal açıkla yaklaşık 14 hafta. Gerçek ilerleme çoğu zaman biraz daha yavaştır."],
+        ["Bu araç neden 1.200 kcal’nin altını önermiyor?", "Günde 1.200 kcal’nin altında yeterli besin öğesini yemekten almak zordur. Daha aşağısı yalnızca doktor gözetiminde olmalıdır."],
+        ["7.700 kalori gerçekten 1 kilo mu?", "Vücut yağı için kaba bir tahmindir. Başta kaybın bir kısmı sudur, sonra vücut uyum sağlar; bu yüzden kural bir yol göstericidir, söz değildir."],
+        ["Kalori açığındayken kilom neden arttı?", "Su, tuz, büyük bir öğün ve regl öncesi günler tartıyı birkaç gün yukarı itebilir. 2–4 haftalık eğilime bak."]
+      ],
+      "bridge": "Pofu’da hedef kilo ve hız belirleyebilirsin; uygulama günlük hedefini aynı kurallarla hesaplar ve ilerlemeni haftalık eğilim olarak gösterir."
+    },
+    "bmi": {
+      "title": "Kadınlar için vücut kitle endeksi (VKİ) hesaplama | Pofu",
+      "og_title": "Kadınlar için vücut kitle endeksi hesaplama",
+      "desc": "Yetişkin kadınlar için ücretsiz vücut kitle endeksi (VKİ, BMI) hesaplama: sonucun ne anlama geldiğini ve boyuna göre sağlıklı kilo aralığını gör.",
+      "h1": "Kadınlar için vücut kitle endeksi (VKİ) hesaplama",
+      "lede": "Vücut kitle endeksini hesapla ve boyuna göre sağlıklı sayılan kilo aralığını gör.",
+      "tool_h": "VKİ’ni hesapla",
+      "res_head": "Vücut kitle endeksin",
+      "cats": {"under": "Zayıf (18,5’in altı)", "normal": "Sağlıklı kilo (18,5–24,9)", "over": "Fazla kilolu (25–29,9)", "obese": "Obez (30 ve üzeri)"},
+      "range": "Boyuna göre sağlıklı kilo aralığı yaklaşık {low} ile {high} arası.",
+      "explain": "VKİ hızlı bir tarama sayısıdır, teşhis değildir. Kası yağdan ayırmaz; bu yüzden çok kaslı kadınlarda yüksek çıkabilir ve hamilelikte geçerli değildir.",
+      "how": [
+        "<strong>Formül:</strong> kilogram cinsinden kilo, metre cinsinden boyun karesine bölünür (kg/m²).",
+        "<strong>Kategoriler (DSÖ, yetişkinler):</strong> 18,5’in altı zayıf, 18,5–24,9 sağlıklı, 25–29,9 fazla kilolu, 30 ve üzeri obez.",
+        "<strong>Sağlıklı aralık:</strong> senin boyunda 18,5 ile 24,9 arası VKİ veren kilolar.",
+        "Kadın ve erkekte aynı formül kullanılır; çocuklar, ergenler ve hamilelik için değildir."
+      ],
+      "note": "DSÖ, bazı Asya toplumlarında sağlık risklerinin daha düşük VKİ’de (yaklaşık 23’ten itibaren) başladığını belirtiyor. Bel çevresi ve kendini nasıl hissettiğin bu sayıya faydalı bağlam katar.",
+      "sources": [
+        "DSÖ. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obezite ve fazla kilo bilgi notu</a>.",
+        "DSÖ Uzman Konsültasyonu. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Asya toplumları için uygun vücut kitle endeksi</a>. Lancet, 2004."
+      ],
+      "faq": [
+        ["Kadınlar için sağlıklı VKİ kaç?", "Yetişkinlerde 18,5 ile 24,9 arası VKİ sağlıklı kilo sayılır. Kadın ve erkekte aynı aralıklar kullanılır."],
+        ["VKİ kadınlarda farklı mı?", "Formül ve kategoriler aynıdır. Aynı VKİ’de kadınlarda vücut yağı genellikle erkeklerden fazladır; VKİ’nin yalnızca kaba bir ölçü olmasının bir nedeni de budur."],
+        ["VKİ doğru bir ölçü mü?", "Toplumlar için ve ilk kontrol olarak faydalıdır ama vücut yağını ölçmez. Kas, yaş ve vücut tipi belirli bir VKİ’nin senin için ne anlama geldiğini değiştirir."],
+        ["Boyuma göre kaç kilo olmalıyım?", "18,5 ile 24,9 arası VKİ veren her kilo sağlıklı aralıktadır. 165 cm boy için bu yaklaşık 50 ile 68 kg arasıdır."],
+        ["Hamileyken VKİ kullanabilir miyim?", "Hayır. Hamilelikte kilo alımı için ebenin ya da doktorunun önerilerini izle."]
+      ],
+      "bridge": "Pofu tek bir sayı yerine alışkanlıklara odaklanır: günlük kalori ve protein, haftalık kilo eğilimi ve kaçırdığın bir gün serini bozmasın diye joker günler."
+    }
+  }
+}

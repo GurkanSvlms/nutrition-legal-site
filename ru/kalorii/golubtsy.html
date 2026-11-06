@@ -119,9 +119,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ru/kalorii/golubtsy.html", "url": "https://getpofu.com/ru/kalorii/golubtsy.html", "name": "Голубцы: сколько калорий? (2 шт., 250 g)", "description": "Голубцы: около 285 ккал на порцию (2 шт., 250 g); 20,8 г белков, 22,1 г углеводов, 12,6 г жиров. Типичные значения из открытых баз данных о продуктах и из приложения Pofu.", "inLanguage": "ru", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Голубцы", "nutrition": {"@type": "NutritionInformation", "servingSize": "250 g", "calories": "285 kcal", "proteinContent": "20.8 g", "carbohydrateContent": "22.1 g", "fatContent": "12.6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ru/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калории", "item": "https://getpofu.com/ru/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Голубцы", "item": "https://getpofu.com/ru/kalorii/golubtsy.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ru/kalorii/golubtsy.html", "url": "https://getpofu.com/ru/kalorii/golubtsy.html", "name": "Голубцы: сколько калорий? (2 шт., 250 g)", "description": "Голубцы: около 285 ккал на порцию (2 шт., 250 g); 20,8 г белков, 22,1 г углеводов, 12,6 г жиров. Типичные значения из открытых баз данных о продуктах и из приложения Pofu.", "inLanguage": "ru", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Голубцы", "nutrition": {"@type": "NutritionInformation", "servingSize": "250 g", "calories": "285 kcal", "proteinContent": "20.8 g", "carbohydrateContent": "22.1 g", "fatContent": "12.6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ru/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калории", "item": "https://getpofu.com/ru/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Голубцы", "item": "https://getpofu.com/ru/kalorii/golubtsy.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ru/kalorii/golubtsy.html#faq", "inLanguage": "ru", "mainEntity": [{"@type": "Question", "name": "Голубцы: сколько калорий в 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Около 114 ккал на 100 g, из них 8,3 г белка, 8,8 г углеводов и 5 г жира."}}, {"@type": "Question", "name": "Голубцы: много ли в нём белка?", "acceptedAnswer": {"@type": "Answer", "text": "Да. В одной порции 20,8 г белка, это около 29% калорий."}}, {"@type": "Question", "name": "Голубцы: как записать это в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографируйте тарелку или найдите блюдо по названию, затем укажите порцию, которую вы действительно съели. Вы можете поправить оценку, и Pofu запомнит вашу поправку на следующий раз."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -197,6 +203,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Меньшая или большая порция</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порция</th><th scope="col">Калории</th><th scope="col">Белок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порции (125 g)</th><td>142 kcal</td><td>10,4 g</td></tr>
+<tr><th scope="row">Обычная порция (250 g)</th><td>285 kcal</td><td>20,8 g</td></tr>
+<tr><th scope="row">Полторы порции (375 g)</th><td>428 kcal</td><td>31,2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Откуда берутся калории</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:29%"></span><span class="sc" style="width:31%"></span><span class="sf" style="width:40%"></span></div>
+<p>29% калорий приходится на белок, 31% на углеводы и 40% на жир. Коротко: сочетание белка, углеводов и жира.</p>
+<p>Одна порция — это около 14% дня в 2 000 ккал, то есть эталонного значения, которое используется на этикетках продуктов.</p>
+</section>
 <section id="why">
 <h2>Почему значение отличается</h2>
 <p>Домашние и ресторанные рецепты различаются количеством масла, мяса, сыра и крахмала, а также размером порции. Считайте значение отправной точкой и корректируйте порцию, если ваша тарелка была меньше или больше.</p>
@@ -204,6 +227,7 @@
 <section id="log">
 <h2>Как записать это в Pofu</h2>
 <p>Pofu — наше приложение. Чтобы записать этот продукт, сфотографируйте тарелку: Pofu оценит блюдо и порцию и покажет уровень уверенности, чтобы вы видели, насколько точна оценка, и могли её поправить. Можно также найти блюдо по названию или отсканировать штрихкод и подогнать порцию под реальное количество. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ru&amp;mt=8">Скачать Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Приложение Pofu: запись приёма пищи по фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запись экрана приложения Pofu (интерфейс на английском): сделайте фото, проверьте оценку, добавьте в сегодняшний день.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Похожие продукты</h2>
@@ -215,10 +239,23 @@
 <li><a href="zapechennyy-losos.html">Запечённый лосось</a> <span class="k">· 280 kcal (1 порция, 150 g)</span></li>
 <li><a href="varenyy-nut.html">Варёный нут</a> <span class="k">· 270 kcal (1 миска, 200 g)</span></li>
 </ul>
+<h3>Более лёгкие варианты из той же группы</h3>
+<ul class="foodlist">
+<li><a href="gorokhovyy-sup.html">Гороховый суп</a> <span class="k">· 80 kcal на 100 g</span></li>
+</ul>
 <p><a href="./">Все продукты</a></p>
 </section>
+<section id="faq">
+<h2>Вопросы об этом продукте</h2>
+<h3>Голубцы: сколько калорий в 100 g?</h3>
+<p>Около 114 ккал на 100 g, из них 8,3 г белка, 8,8 г углеводов и 5 г жира.</p>
+<h3>Голубцы: много ли в нём белка?</h3>
+<p>Да. В одной порции 20,8 г белка, это около 29% калорий.</p>
+<h3>Голубцы: как записать это в Pofu?</h3>
+<p>Сфотографируйте тарелку или найдите блюдо по названию, затем укажите порцию, которую вы действительно съели. Вы можете поправить оценку, и Pofu запомнит вашу поправку на следующий раз.</p>
+</section>
 <section id="source">
-<p class="fine">Значения: типичные оценки, из открытых баз данных о продуктах и из приложения Pofu; они меняются в зависимости от рецепта и порции. <a href="https://fdc.nal.usda.gov/food-details/2706620/nutrients" rel="nofollow noopener">Источник</a>.</p>
+<p class="fine">Значения: типичные оценки, из открытых баз данных о продуктах и из приложения Pofu; они меняются в зависимости от рецепта и порции. <a href="https://fdc.nal.usda.gov/food-details/2706620/nutrients" rel="nofollow noopener">Источник</a>. <a href="../editorial-policy.html">Как мы готовим материалы и источники</a>.</p>
 <div class="note"><p>Эта страница носит справочный характер и не является медицинской консультацией. Если вы беременны, кормите грудью, у вас есть заболевание или в прошлом было расстройство пищевого поведения, обсудите подсчёт калорий с врачом или диетологом.</p></div>
 </section>
 </main>
@@ -237,7 +274,7 @@
 <nav class="langs" aria-label="Это блюдо на других языках" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../ro/calorii/sarmale.html" hreflang="ro" lang="ro">Română</a> · <strong>Русский</strong> · <a href="../../uk/kalorii/holubtsi.html" hreflang="uk" lang="uk">Українська</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Разделы"><strong>Разделы</strong><a href="../guides.html">Руководства</a><a href="../tools.html">Инструменты</a><a href="./" aria-current="true">Калории</a><a href="../questions/">Вопросы</a><a href="../compare.html">Сравнения</a></nav>
+<nav aria-label="Разделы"><strong>Разделы</strong><a href="../guides.html">Руководства</a><a href="../tools.html">Инструменты</a><a href="./" aria-current="true">Калории</a><a href="../questions/">Вопросы</a><a href="../compare.html">Сравнения</a><a href="../editorial-policy.html">Материалы и источники</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

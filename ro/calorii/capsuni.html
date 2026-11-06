@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ro/calorii/capsuni.html", "url": "https://getpofu.com/ro/calorii/capsuni.html", "name": "Câte calorii are Căpșuni? (1 bol, 150 g)", "description": "Căpșuni: aproximativ 50 kcal pe porție (1 bol, 150 g); 1 g proteine, 12 g carbohidrați, 0,5 g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.", "inLanguage": "ro", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Căpșuni", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "50 kcal", "proteinContent": "1 g", "carbohydrateContent": "12 g", "fatContent": "0.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ro/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorii", "item": "https://getpofu.com/ro/calorii/"}, {"@type": "ListItem", "position": 3, "name": "Căpșuni", "item": "https://getpofu.com/ro/calorii/capsuni.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ro/calorii/capsuni.html", "url": "https://getpofu.com/ro/calorii/capsuni.html", "name": "Câte calorii are Căpșuni? (1 bol, 150 g)", "description": "Căpșuni: aproximativ 50 kcal pe porție (1 bol, 150 g); 1 g proteine, 12 g carbohidrați, 0,5 g grăsimi. Valori tipice din baze de date publice și din aplicația Pofu.", "inLanguage": "ro", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Căpșuni", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "50 kcal", "proteinContent": "1 g", "carbohydrateContent": "12 g", "fatContent": "0.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ro/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorii", "item": "https://getpofu.com/ro/calorii/"}, {"@type": "ListItem", "position": 3, "name": "Căpșuni", "item": "https://getpofu.com/ro/calorii/capsuni.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ro/calorii/capsuni.html#faq", "inLanguage": "ro", "mainEntity": [{"@type": "Question", "name": "Căpșuni: câte calorii sunt în 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Aproximativ 33 kcal la 100 g, cu 0,7 g de proteine, 8 g de carbohidrați și 0,3 g de grăsimi."}}, {"@type": "Question", "name": "Căpșuni: este bogat în proteine?", "acceptedAnswer": {"@type": "Answer", "text": "Nu prea multe: 1 g pe porție, aproximativ 8% din calorii. Combină-l cu un aliment bogat în proteine, cum ar fi ouăle, iaurtul, leguminoasele, peștele sau puiul, dacă vrei o masă mai sățioasă."}}, {"@type": "Question", "name": "Căpșuni: cum îl înregistrez în Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Fă o fotografie farfuriei sau caută numele, apoi setează porția la ceea ce ai mâncat de fapt. Poți corecta estimarea, iar Pofu își amintește corecția data viitoare."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porție mai mică sau mai mare</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porție</th><th scope="col">Calorii</th><th scope="col">Proteine</th></tr></thead>
+<tbody>
+<tr><th scope="row">O jumătate de porție (75 g)</th><td>25 kcal</td><td>0,5 g</td></tr>
+<tr><th scope="row">Porție obișnuită (150 g)</th><td>50 kcal</td><td>1 g</td></tr>
+<tr><th scope="row">O porție și jumătate (225 g)</th><td>75 kcal</td><td>1,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De unde vin caloriile</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:7%"></span><span class="sc" style="width:85%"></span><span class="sf" style="width:8%"></span></div>
+<p>7% din calorii provin din proteine, 85% din carbohidrați și 8% din grăsimi. Pe scurt: un aliment ușor, format mai ales din apă.</p>
+<p>O porție reprezintă aproximativ 2% dintr-o zi de 2.000 kcal, valoarea de referință folosită pe etichetele alimentelor.</p>
+</section>
 <section id="why">
 <h2>De ce variază valoarea</h2>
 <p>Aceste alimente sunt în mare parte apă. De aceea mărimea porției și greutatea reală contează mai mult decât rețeta. Mărimea, gradul de coacere și adaosurile precum zahărul, dressingul, uleiul sau laptele modifică valoarea.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cum o înregistrezi în Pofu</h2>
 <p>Pofu este aplicația noastră. Ca să înregistrezi acest aliment, fotografiază farfuria: Pofu estimează preparatul și porția și arată un scor de încredere, ca să vezi cât de sigură e estimarea și să o poți ajusta. Poți căuta și după nume sau scana un cod de bare și potrivi porția la cantitatea reală. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ro&amp;mt=8">Descarcă Pofu din App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplicația Pofu: înregistrarea unei mese dintr-o fotografie"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Înregistrare de ecran din aplicația Pofu (interfață în engleză): fă o fotografie, verifică estimarea, adaugă-o la ziua de azi.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimente similare</h2>
@@ -234,10 +258,25 @@
 <li><a href="salata-de-varza.html">Salată de varză</a> <span class="k">· 68 kcal (1 porție, 150 g)</span></li>
 <li><a href="ciorba-de-legume-cu-carne.html">Ciorbă de legume cu carne</a> <span class="k">· 132 kcal (1 castron, 300 g)</span></li>
 </ul>
+<h3>Variante mai ușoare din aceeași grupă</h3>
+<ul class="foodlist">
+<li><a href="spanac.html">Spanac</a> <span class="k">· 23 kcal la 100 g</span></li>
+<li><a href="rosie.html">Roșie</a> <span class="k">· 18 kcal la 100 g</span></li>
+<li><a href="castravete.html">Castravete</a> <span class="k">· 16 kcal la 100 g</span></li>
+</ul>
 <p><a href="./">Toate alimentele</a></p>
 </section>
+<section id="faq">
+<h2>Întrebări despre acest aliment</h2>
+<h3>Căpșuni: câte calorii sunt în 100 g?</h3>
+<p>Aproximativ 33 kcal la 100 g, cu 0,7 g de proteine, 8 g de carbohidrați și 0,3 g de grăsimi.</p>
+<h3>Căpșuni: este bogat în proteine?</h3>
+<p>Nu prea multe: 1 g pe porție, aproximativ 8% din calorii. Combină-l cu un aliment bogat în proteine, cum ar fi ouăle, iaurtul, leguminoasele, peștele sau puiul, dacă vrei o masă mai sățioasă.</p>
+<h3>Căpșuni: cum îl înregistrez în Pofu?</h3>
+<p>Fă o fotografie farfuriei sau caută numele, apoi setează porția la ceea ce ai mâncat de fapt. Poți corecta estimarea, iar Pofu își amintește corecția data viitoare.</p>
+</section>
 <section id="source">
-<p class="fine">Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție.</p>
+<p class="fine">Valori: estimări tipice din baze de date publice și din aplicația Pofu; variază în funcție de rețetă și de porție. <a href="../editorial-policy.html">Cum pregătim conținutul și sursele noastre</a>.</p>
 <div class="note"><p>Această pagină are scop informativ general și nu reprezintă sfat medical. Dacă ești însărcinată, alăptezi, ai o afecțiune sau ai avut în trecut o tulburare de alimentație, vorbește cu medicul sau cu un dietetician înainte de a număra caloriile.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Acest aliment în alte limbi" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/strawberries.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/cilek.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/erdbeeren.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/fraises.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/fresas.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/morangos.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/strawberries.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/jahody.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/strawberries.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/stroberi.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/fragole.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/strawberries.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/strawberries.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/aardbeien.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/truskawki.html" hreflang="pl" lang="pl">Polski</a> · <strong>Română</strong> · <a href="../../ru/kalorii/klubnika.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/jordgubbar.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/strawberries.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/polunytsya.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/dau-tay.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/strawberries.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorează"><strong>Explorează</strong><a href="../guides.html">Ghiduri</a><a href="../tools.html">Instrumente</a><a href="./" aria-current="true">Calorii</a><a href="../questions/">Întrebări</a><a href="../compare.html">Comparații</a></nav>
+<nav aria-label="Explorează"><strong>Explorează</strong><a href="../guides.html">Ghiduri</a><a href="../tools.html">Instrumente</a><a href="./" aria-current="true">Calorii</a><a href="../questions/">Întrebări</a><a href="../compare.html">Comparații</a><a href="../editorial-policy.html">Conținut și surse</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

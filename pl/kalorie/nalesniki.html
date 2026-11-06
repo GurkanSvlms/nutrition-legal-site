@@ -119,9 +119,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/nalesniki.html", "url": "https://getpofu.com/pl/kalorie/nalesniki.html", "name": "Ile kalorii zawiera: Naleśniki (puste)? (2 naleśniki, 130 g)", "description": "Naleśniki (puste): około 291 kcal w porcji (2 naleśniki, 130 g); 11,5 g białka, 28,6 g węglowodanów, 14,7 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Naleśniki (puste)", "nutrition": {"@type": "NutritionInformation", "servingSize": "130 g", "calories": "291 kcal", "proteinContent": "11.5 g", "carbohydrateContent": "28.6 g", "fatContent": "14.7 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Naleśniki (puste)", "item": "https://getpofu.com/pl/kalorie/nalesniki.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/nalesniki.html", "url": "https://getpofu.com/pl/kalorie/nalesniki.html", "name": "Ile kalorii zawiera: Naleśniki (puste)? (2 naleśniki, 130 g)", "description": "Naleśniki (puste): około 291 kcal w porcji (2 naleśniki, 130 g); 11,5 g białka, 28,6 g węglowodanów, 14,7 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Naleśniki (puste)", "nutrition": {"@type": "NutritionInformation", "servingSize": "130 g", "calories": "291 kcal", "proteinContent": "11.5 g", "carbohydrateContent": "28.6 g", "fatContent": "14.7 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Naleśniki (puste)", "item": "https://getpofu.com/pl/kalorie/nalesniki.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pl/kalorie/nalesniki.html#faq", "inLanguage": "pl", "mainEntity": [{"@type": "Question", "name": "Naleśniki (puste): ile kalorii jest w 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Około 224 kcal na 100 g, w tym 8,8 g białka, 22 g węglowodanów i 11,3 g tłuszczu."}}, {"@type": "Question", "name": "Naleśniki (puste): czy zawiera dużo białka?", "acceptedAnswer": {"@type": "Answer", "text": "Ma trochę białka: 11,5 g na porcję, czyli około 16% kalorii."}}, {"@type": "Question", "name": "Naleśniki (puste): jak to zapisać w Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -197,6 +203,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mniejsza lub większa porcja</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porcja</th><th scope="col">Kalorie</th><th scope="col">Białko</th></tr></thead>
+<tbody>
+<tr><th scope="row">Pół porcji (65 g)</th><td>146 kcal</td><td>5,8 g</td></tr>
+<tr><th scope="row">Typowa porcja (130 g)</th><td>291 kcal</td><td>11,5 g</td></tr>
+<tr><th scope="row">Półtorej porcji (195 g)</th><td>436 kcal</td><td>17,2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Skąd pochodzą kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:16%"></span><span class="sc" style="width:39%"></span><span class="sf" style="width:45%"></span></div>
+<p>16% kalorii pochodzi z białka, 39% z węglowodanów i 45% z tłuszczu. W skrócie: mieszanka białka, węglowodanów i tłuszczu.</p>
+<p>Jedna porcja to około 15% dnia o wartości 2 000 kcal, czyli wartości odniesienia stosowanej na etykietach produktów.</p>
+</section>
 <section id="why">
 <h2>Dlaczego wartość może się różnić</h2>
 <p>Przepisy domowe i restauracyjne różnią się ilością oleju, mięsa, sera i skrobi oraz wielkością porcji. Traktuj tę wartość jako punkt wyjścia i dostosuj porcję, jeśli twój talerz był mniejszy lub większy.</p>
@@ -204,6 +227,7 @@
 <section id="log">
 <h2>Jak dodać to w Pofu</h2>
 <p>Pofu to nasza aplikacja. Aby dodać ten produkt, zrób zdjęcie talerza: Pofu oszacuje danie i porcję oraz pokaże wskaźnik pewności, żebyś widziała, na ile trafna jest ocena, i mogła ją poprawić. Możesz też wyszukać po nazwie albo zeskanować kod kreskowy i ustawić porcję na to, co naprawdę zjadłaś. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pl&amp;mt=8">Pobierz Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikacja Pofu: zapisywanie posiłku ze zdjęcia"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Nagranie ekranu z aplikacji Pofu (interfejs po angielsku): zrób zdjęcie, sprawdź oszacowanie, dodaj do dzisiejszego dnia.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobne produkty</h2>
@@ -215,10 +239,25 @@
 <li><a href="pieczony-osos.html">Pieczony łosoś</a> <span class="k">· 280 kcal (1 porcja, 150 g)</span></li>
 <li><a href="gotowana-ciecierzyca.html">Gotowana ciecierzyca</a> <span class="k">· 270 kcal (1 miska, 200 g)</span></li>
 </ul>
+<h3>Lżejsze opcje z tej samej grupy</h3>
+<ul class="foodlist">
+<li><a href="pulpety-w-sosie.html">Pulpety w sosie</a> <span class="k">· 143 kcal na 100 g</span></li>
+<li><a href="golabki.html">Gołąbki</a> <span class="k">· 114 kcal na 100 g</span></li>
+<li><a href="zupa-ziemniaczana.html">Zupa ziemniaczana (kartoflanka)</a> <span class="k">· 90 kcal na 100 g</span></li>
+</ul>
 <p><a href="./">Wszystkie produkty</a></p>
 </section>
+<section id="faq">
+<h2>Pytania o ten produkt</h2>
+<h3>Naleśniki (puste): ile kalorii jest w 100 g?</h3>
+<p>Około 224 kcal na 100 g, w tym 8,8 g białka, 22 g węglowodanów i 11,3 g tłuszczu.</p>
+<h3>Naleśniki (puste): czy zawiera dużo białka?</h3>
+<p>Ma trochę białka: 11,5 g na porcję, czyli około 16% kalorii.</p>
+<h3>Naleśniki (puste): jak to zapisać w Pofu?</h3>
+<p>Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz.</p>
+</section>
 <section id="source">
-<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="https://fdc.nal.usda.gov/food-details/2708342/nutrients" rel="nofollow noopener">Źródło</a>.</p>
+<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="https://fdc.nal.usda.gov/food-details/2708342/nutrients" rel="nofollow noopener">Źródło</a>. <a href="../editorial-policy.html">Jak przygotowujemy treści i źródła</a>.</p>
 <div class="note"><p>Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.</p></div>
 </section>
 </main>
@@ -237,7 +276,7 @@
 <nav class="langs" aria-label="Ten produkt w innych językach" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><strong>Polski</strong> · <a href="../../ru/kalorii/bliny.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../uk/kalorii/nalysnyky.html" hreflang="uk" lang="uk">Українська</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a></nav>
+<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a><a href="../editorial-policy.html">Treści i źródła</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pt-BR/calorias/feijoada.html", "url": "https://getpofu.com/pt-BR/calorias/feijoada.html", "name": "Quantas calorias há em feijoada? (1 porção, 300 g)", "description": "Feijoada: cerca de 450 kcal por porção (1 porção, 300 g); 28 g de proteína, 35 g de carboidratos, 20 g de gordura. Valores típicos usados no app Pofu.", "inLanguage": "pt-BR", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Feijoada", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "450 kcal", "proteinContent": "28 g", "carbohydrateContent": "35 g", "fatContent": "20 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pt-BR/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorias", "item": "https://getpofu.com/pt-BR/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Feijoada", "item": "https://getpofu.com/pt-BR/calorias/feijoada.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pt-BR/calorias/feijoada.html", "url": "https://getpofu.com/pt-BR/calorias/feijoada.html", "name": "Quantas calorias há em feijoada? (1 porção, 300 g)", "description": "Feijoada: cerca de 450 kcal por porção (1 porção, 300 g); 28 g de proteína, 35 g de carboidratos, 20 g de gordura. Valores típicos usados no app Pofu.", "inLanguage": "pt-BR", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Feijoada", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "450 kcal", "proteinContent": "28 g", "carbohydrateContent": "35 g", "fatContent": "20 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pt-BR/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorias", "item": "https://getpofu.com/pt-BR/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Feijoada", "item": "https://getpofu.com/pt-BR/calorias/feijoada.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pt-BR/calorias/feijoada.html#faq", "inLanguage": "pt-BR", "mainEntity": [{"@type": "Question", "name": "Feijoada: quantas calorias tem em 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Cerca de 150 kcal por 100 g, com 9,3 g de proteína, 11,7 g de carboidratos e 6,7 g de gordura."}}, {"@type": "Question", "name": "Feijoada: é rico em proteína?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Uma porção tem 28 g de proteína, cerca de 25% das suas calorias."}}, {"@type": "Question", "name": "Feijoada: como registrar no Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porção menor ou maior</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porção</th><th scope="col">Calorias</th><th scope="col">Proteína</th></tr></thead>
+<tbody>
+<tr><th scope="row">Meia porção (150 g)</th><td>225 kcal</td><td>14 g</td></tr>
+<tr><th scope="row">Porção típica (300 g)</th><td>450 kcal</td><td>28 g</td></tr>
+<tr><th scope="row">Uma porção e meia (450 g)</th><td>675 kcal</td><td>42 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De onde vêm as calorias</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:26%"></span><span class="sc" style="width:32%"></span><span class="sf" style="width:42%"></span></div>
+<p>26% das calorias vêm da proteína, 32% dos carboidratos e 42% da gordura. Resumindo: uma mistura de proteína, carboidratos e gordura.</p>
+<p>Uma porção é cerca de 22% de um dia de 2.000 kcal, o valor de referência usado nos rótulos dos alimentos.</p>
+</section>
 <section id="why">
 <h2>Por que o valor varia</h2>
 <p>Receitas caseiras e de restaurante variam na quantidade de óleo, carne, queijo e amido e no tamanho da porção. Use o valor como ponto de partida e ajuste a porção se o seu prato foi menor ou maior.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Como registrar no Pofu</h2>
 <p>O Pofu é o nosso app. Para registrar este alimento, tire uma foto do seu prato: o Pofu estima a comida e a porção e mostra uma pontuação de confiança, para você ver o quanto ele tem certeza e corrigir se precisar. Você também pode buscar pelo nome ou escanear um código de barras e ajustar a porção ao que você comeu. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pt_br&amp;mt=8">Baixe o Pofu na App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrando uma refeição a partir de uma foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Gravação de tela do app Pofu (interface em inglês): tire uma foto, confira a estimativa e adicione ao dia de hoje.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimentos relacionados</h2>
@@ -215,8 +239,17 @@
 </ul>
 <p><a href="./">Todos os alimentos</a></p>
 </section>
+<section id="faq">
+<h2>Perguntas sobre este alimento</h2>
+<h3>Feijoada: quantas calorias tem em 100 g?</h3>
+<p>Cerca de 150 kcal por 100 g, com 9,3 g de proteína, 11,7 g de carboidratos e 6,7 g de gordura.</p>
+<h3>Feijoada: é rico em proteína?</h3>
+<p>Sim. Uma porção tem 28 g de proteína, cerca de 25% das suas calorias.</p>
+<h3>Feijoada: como registrar no Pofu?</h3>
+<p>Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez.</p>
+</section>
 <section id="source">
-<p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção.</p>
+<p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção. <a href="../editorial-policy.html">Como preparamos nossos conteúdos e fontes</a>.</p>
 <div class="note"><p>Esta página traz informações gerais e não é aconselhamento médico. Se você está grávida, amamentando, tem alguma condição de saúde ou histórico de transtorno alimentar, converse com seu médico ou nutricionista antes de contar calorias.</p></div>
 </section>
 </main>
@@ -233,7 +266,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guias</a><a href="../tools.html">Ferramentas</a><a href="./" aria-current="true">Calorias</a><a href="../questions/">Perguntas</a><a href="../compare.html">Comparativos</a></nav>
+<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guias</a><a href="../tools.html">Ferramentas</a><a href="./" aria-current="true">Calorias</a><a href="../questions/">Perguntas</a><a href="../compare.html">Comparativos</a><a href="../editorial-policy.html">Conteúdo e fontes</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

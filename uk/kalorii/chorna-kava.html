@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/chorna-kava.html", "url": "https://getpofu.com/uk/kalorii/chorna-kava.html", "name": "Чорна кава: скільки калорій? (1 чашка, 240 g)", "description": "Чорна кава: близько 2 ккал на порцію (1 чашка, 240 g); 0,3 г білків, 0 г вуглеводів, 0 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Чорна кава", "nutrition": {"@type": "NutritionInformation", "servingSize": "240 g", "calories": "2 kcal", "proteinContent": "0.3 g", "carbohydrateContent": "0 g", "fatContent": "0 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Чорна кава", "item": "https://getpofu.com/uk/kalorii/chorna-kava.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/chorna-kava.html", "url": "https://getpofu.com/uk/kalorii/chorna-kava.html", "name": "Чорна кава: скільки калорій? (1 чашка, 240 g)", "description": "Чорна кава: близько 2 ккал на порцію (1 чашка, 240 g); 0,3 г білків, 0 г вуглеводів, 0 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Чорна кава", "nutrition": {"@type": "NutritionInformation", "servingSize": "240 g", "calories": "2 kcal", "proteinContent": "0.3 g", "carbohydrateContent": "0 g", "fatContent": "0 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Чорна кава", "item": "https://getpofu.com/uk/kalorii/chorna-kava.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/uk/kalorii/chorna-kava.html#faq", "inLanguage": "uk", "mainEntity": [{"@type": "Question", "name": "Чорна кава: скільки калорій у 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Близько 1 ккал на 100 g, з них 0,1 г білка, 0 г вуглеводів і 0 г жиру."}}, {"@type": "Question", "name": "Чорна кава: як записати це в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,17 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Менша або більша порція</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порція</th><th scope="col">Калорії</th><th scope="col">Білок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порції (120 g)</th><td>1 kcal</td><td>0,1 g</td></tr>
+<tr><th scope="row">Звичайна порція (240 g)</th><td>2 kcal</td><td>0,3 g</td></tr>
+<tr><th scope="row">Півтори порції (360 g)</th><td>3 kcal</td><td>0,4 g</td></tr>
+</tbody>
+</table></div>
+</section>
 <section id="why">
 <h2>Чому значення відрізняється</h2>
 <p>Ці продукти здебільшого складаються з води. Тому розмір порції та реальна вага важливіші за рецепт. Розмір, стиглість і добавки на кшталт цукру, заправки, олії чи молока змінюють значення.</p>
@@ -223,6 +240,7 @@
 <section id="log">
 <h2>Як записати це в Pofu</h2>
 <p>Pofu — наш застосунок. Щоб записати цей продукт, сфотографуйте тарілку: Pofu оцінить страву й порцію та покаже рівень упевненості, щоб ви бачили, наскільки точна оцінка, і могли її підправити. Можна також знайти страву за назвою або відсканувати штрихкод і підлаштувати порцію під реальну кількість. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_uk&amp;mt=8">Завантажити Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Застосунок Pofu: запис прийому їжі за фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запис екрана застосунку Pofu (інтерфейс англійською): зроби фото, перевір оцінку, додай до сьогоднішнього дня.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Схожі продукти</h2>
@@ -236,8 +254,15 @@
 </ul>
 <p><a href="./">Усі продукти</a></p>
 </section>
+<section id="faq">
+<h2>Запитання про цей продукт</h2>
+<h3>Чорна кава: скільки калорій у 100 g?</h3>
+<p>Близько 1 ккал на 100 g, з них 0,1 г білка, 0 г вуглеводів і 0 г жиру.</p>
+<h3>Чорна кава: як записати це в Pofu?</h3>
+<p>Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу.</p>
+</section>
 <section id="source">
-<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції.</p>
+<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції. <a href="../editorial-policy.html">Як ми готуємо матеріали та джерела</a>.</p>
 <div class="note"><p>Ця сторінка має довідковий характер і не є медичною консультацією. Якщо ви вагітні, годуєте груддю, маєте захворювання або в минулому мали розлад харчової поведінки, обговоріть підрахунок калорій з лікарем або дієтологом.</p></div>
 </section>
 </main>
@@ -256,7 +281,7 @@
 <nav class="langs" aria-label="Ця страва іншими мовами" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/black-coffee.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/kahve-sade.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/schwarzer-kaffee.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/cafe-noir.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/cafe-negro.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/cafe-preto.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/black-coffee.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/cerna-kava.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/black-coffee.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/kopi-hitam.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/caffe-nero.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/black-coffee.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/black-coffee.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/zwarte-koffie.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/czarna-kawa.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/cafea-neagra.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/chernyy-kofe.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/svart-kaffe.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/black-coffee.html" hreflang="th" lang="th">ไทย</a> · <strong>Українська</strong> · <a href="../../vi/calo/ca-phe-den.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/black-coffee.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a></nav>
+<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a><a href="../editorial-policy.html">Матеріали та джерела</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

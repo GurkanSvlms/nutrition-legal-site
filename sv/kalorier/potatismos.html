@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/sv/kalorier/potatismos.html", "url": "https://getpofu.com/sv/kalorier/potatismos.html", "name": "Hur många kalorier innehåller Potatismos? (1 portion, 200 g)", "description": "Potatismos: cirka 176 kcal per portion (1 portion, 200 g); 4,6 g protein, 28,2 g kolhydrater, 4,2 g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.", "inLanguage": "sv", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Potatismos", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "176 kcal", "proteinContent": "4.6 g", "carbohydrateContent": "28.2 g", "fatContent": "4.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/sv/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorier", "item": "https://getpofu.com/sv/kalorier/"}, {"@type": "ListItem", "position": 3, "name": "Potatismos", "item": "https://getpofu.com/sv/kalorier/potatismos.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/sv/kalorier/potatismos.html", "url": "https://getpofu.com/sv/kalorier/potatismos.html", "name": "Hur många kalorier innehåller Potatismos? (1 portion, 200 g)", "description": "Potatismos: cirka 176 kcal per portion (1 portion, 200 g); 4,6 g protein, 28,2 g kolhydrater, 4,2 g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.", "inLanguage": "sv", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Potatismos", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "176 kcal", "proteinContent": "4.6 g", "carbohydrateContent": "28.2 g", "fatContent": "4.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/sv/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorier", "item": "https://getpofu.com/sv/kalorier/"}, {"@type": "ListItem", "position": 3, "name": "Potatismos", "item": "https://getpofu.com/sv/kalorier/potatismos.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/sv/kalorier/potatismos.html#faq", "inLanguage": "sv", "mainEntity": [{"@type": "Question", "name": "Potatismos: hur många kalorier är det i 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Cirka 88 kcal per 100 g, med 2,3 g protein, 14,1 g kolhydrater och 2,1 g fett."}}, {"@type": "Question", "name": "Potatismos: är det proteinrikt?", "acceptedAnswer": {"@type": "Answer", "text": "Inte mycket: 4,6 g per portion, cirka 10 % av kalorierna. Kombinera det med något proteinrikt, som ägg, yoghurt, baljväxter, fisk eller kyckling, om du vill ha en mer mättande måltid."}}, {"@type": "Question", "name": "Potatismos: hur loggar jag det i Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Ta ett foto av din tallrik eller sök på namnet och ställ sedan in portionen på det du faktiskt åt. Du kan justera uppskattningen, och Pofu kommer ihåg din justering nästa gång."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mindre eller större portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Kalorier</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">En halv portion (100 g)</th><td>88 kcal</td><td>2,3 g</td></tr>
+<tr><th scope="row">Vanlig portion (200 g)</th><td>176 kcal</td><td>4,6 g</td></tr>
+<tr><th scope="row">En och en halv portion (300 g)</th><td>264 kcal</td><td>6,9 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Varifrån kalorierna kommer</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:11%"></span><span class="sc" style="width:67%"></span><span class="sf" style="width:22%"></span></div>
+<p>11 % av kalorierna kommer från protein, 67 % från kolhydrater och 22 % från fett. Kort sagt: det mesta av kalorierna kommer från kolhydrater.</p>
+<p>En portion motsvarar ungefär 9 % av en dag på 2 000 kcal, referensvärdet som används på livsmedelsetiketter.</p>
+</section>
 <section id="why">
 <h2>Därför varierar värdet</h2>
 <p>Resultatet beror på hur rätten tillagats och hur mycket olja, smör eller socker den innehåller. Tillagad vikt och torr vikt skiljer sig mycket, därför ligger en toppad och en struken portion långt ifrån varandra. Märke, storlek och tjocklek påverkar också värdet.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Så loggar du det i Pofu</h2>
 <p>Pofu är vår app. För att logga det här livsmedlet fotograferar du tallriken: Pofu uppskattar rätten och portionen och visar ett säkerhetsvärde, så att du ser hur säker uppskattningen är och kan justera den. Du kan också söka på namn eller skanna en streckkod och ställa in portionen på det du faktiskt åt. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_sv&amp;mt=8">Hämta Pofu i App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-appen: logga en måltid från ett foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Skärminspelning från Pofu-appen (engelskt gränssnitt): ta ett foto, kontrollera uppskattningen och lägg till den för idag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Liknande livsmedel</h2>
@@ -215,8 +239,17 @@
 </ul>
 <p><a href="./">Alla livsmedel</a></p>
 </section>
+<section id="faq">
+<h2>Frågor om det här livsmedlet</h2>
+<h3>Potatismos: hur många kalorier är det i 100 g?</h3>
+<p>Cirka 88 kcal per 100 g, med 2,3 g protein, 14,1 g kolhydrater och 2,1 g fett.</p>
+<h3>Potatismos: är det proteinrikt?</h3>
+<p>Inte mycket: 4,6 g per portion, cirka 10 % av kalorierna. Kombinera det med något proteinrikt, som ägg, yoghurt, baljväxter, fisk eller kyckling, om du vill ha en mer mättande måltid.</p>
+<h3>Potatismos: hur loggar jag det i Pofu?</h3>
+<p>Ta ett foto av din tallrik eller sök på namnet och ställ sedan in portionen på det du faktiskt åt. Du kan justera uppskattningen, och Pofu kommer ihåg din justering nästa gång.</p>
+</section>
 <section id="source">
-<p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion. <a href="https://dataportal.livsmedelsverket.se/livsmedel/api/v1/livsmedel/274/naringsvarden?sprak=1" rel="nofollow noopener">Källa</a>.</p>
+<p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion. <a href="https://dataportal.livsmedelsverket.se/livsmedel/api/v1/livsmedel/274/naringsvarden?sprak=1" rel="nofollow noopener">Källa</a>. <a href="../editorial-policy.html">Så tar vi fram vårt innehåll och våra källor</a>.</p>
 <div class="note"><p>Den här sidan är allmän information och ingen medicinsk rådgivning. Om du är gravid, ammar, har en sjukdom eller tidigare har haft en ätstörning, prata med din läkare eller en dietist innan du börjar räkna kalorier.</p></div>
 </section>
 </main>
@@ -233,7 +266,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Utforska"><strong>Utforska</strong><a href="../guides.html">Guider</a><a href="../tools.html">Verktyg</a><a href="./" aria-current="true">Kalorier</a><a href="../questions/">Frågor</a><a href="../compare.html">Jämförelser</a></nav>
+<nav aria-label="Utforska"><strong>Utforska</strong><a href="../guides.html">Guider</a><a href="../tools.html">Verktyg</a><a href="./" aria-current="true">Kalorier</a><a href="../questions/">Frågor</a><a href="../compare.html">Jämförelser</a><a href="../editorial-policy.html">Innehåll och källor</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

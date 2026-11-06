@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html", "url": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html", "name": "كم سعرة حرارية في تونة معلّبة (في الماء)؟ (حصة واحدة, 100 g)", "description": "تونة معلّبة (في الماء): نحو 100 kcal للحصة الواحدة (حصة واحدة, 100 g)؛ 23 غ بروتين، 0 غ كربوهيدرات، 1 غ دهون. قيم نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu.", "inLanguage": "ar", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "تونة معلّبة (في الماء)", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "100 kcal", "proteinContent": "23 g", "carbohydrateContent": "0 g", "fatContent": "1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ar/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "السعرات", "item": "https://getpofu.com/ar/saarat/"}, {"@type": "ListItem", "position": 3, "name": "تونة معلّبة (في الماء)", "item": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html", "url": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html", "name": "كم سعرة حرارية في تونة معلّبة (في الماء)؟ (حصة واحدة, 100 g)", "description": "تونة معلّبة (في الماء): نحو 100 kcal للحصة الواحدة (حصة واحدة, 100 g)؛ 23 غ بروتين، 0 غ كربوهيدرات، 1 غ دهون. قيم نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu.", "inLanguage": "ar", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "تونة معلّبة (في الماء)", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "100 kcal", "proteinContent": "23 g", "carbohydrateContent": "0 g", "fatContent": "1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ar/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "السعرات", "item": "https://getpofu.com/ar/saarat/"}, {"@type": "ListItem", "position": 3, "name": "تونة معلّبة (في الماء)", "item": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ar/saarat/canned-tuna-in-water.html#faq", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "تونة معلّبة (في الماء): كم سعرة في 100 g؟", "acceptedAnswer": {"@type": "Answer", "text": "نحو 100 kcal لكل 100 g، مع 23 غ بروتين و0 غ كربوهيدرات و1 غ دهون."}}, {"@type": "Question", "name": "تونة معلّبة (في الماء): هل هو غني بالبروتين؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. تحتوي الحصة الواحدة على 23 غ من البروتين، أي نحو 92% من سعراتها."}}, {"@type": "Question", "name": "تونة معلّبة (في الماء): كيف أسجله في Pofu؟", "acceptedAnswer": {"@type": "Answer", "text": "صوّري طبقك أو ابحثي عن الاسم، ثم اضبطي الحصة على ما أكلتِه فعلًا. يمكنك تصحيح التقدير، وسيتذكر Pofu تصحيحك في المرة القادمة."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>حصة أصغر أو أكبر</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">الحصة</th><th scope="col">السعرات</th><th scope="col">البروتين</th></tr></thead>
+<tbody>
+<tr><th scope="row">نصف حصة (50 g)</th><td>50 kcal</td><td>11.5 g</td></tr>
+<tr><th scope="row">حصة عادية (100 g)</th><td>100 kcal</td><td>23 g</td></tr>
+<tr><th scope="row">حصة ونصف (150 g)</th><td>150 kcal</td><td>34.5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>من أين تأتي السعرات</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:91%"></span><span class="sc" style="width:0%"></span><span class="sf" style="width:9%"></span></div>
+<p>91% من السعرات يأتي من البروتين، و0% من الكربوهيدرات، و9% من الدهون. باختصار: مصدر جيد للبروتين.</p>
+<p>الحصة الواحدة تمثل نحو 5% من يوم قوامه 2,000 kcal، وهي القيمة المرجعية المستخدمة على ملصقات الأغذية.</p>
+</section>
 <section id="why">
 <h2>لماذا تختلف القيمة</h2>
 <p>يعتمد الأمر على القطعة أو المنتج، وعلى إزالة الدهن أو تركه، وعلى طريقة الطهي. فالجلد والتتبيلة والصلصات وزيت القلي تضيف سعرات لا يظهرها الوزن. عند المقارنة، انتبهي إن كان الوزن مطبوخًا أم نيئًا.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>كيف تسجّلينه في Pofu</h2>
 <p>Pofu هو تطبيقنا. لتسجيل هذا الطعام، صوّري طبقك: يقدّر Pofu الطبق والحصة ويعرض درجة ثقة لتعرفي مدى دقة التقدير ويمكنك تعديله. يمكنك أيضًا البحث بالاسم أو مسح الباركود، ثم ضبط الحصة على الكمية التي تناولتِها فعلًا. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ar&amp;mt=8">حمّلي Pofu من App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="تطبيق Pofu: تسجيل وجبة من صورة"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>تسجيل شاشة من تطبيق Pofu (الواجهة المعروضة بالإنجليزية): صوّري، وراجعي التقدير، وأضيفي إلى اليوم.</figcaption></figure>
 </section>
 <section id="related">
 <h2>أطعمة مشابهة</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">كل الأطعمة</a></p>
 </section>
+<section id="faq">
+<h2>أسئلة عن هذا الطعام</h2>
+<h3>تونة معلّبة (في الماء): كم سعرة في 100 g؟</h3>
+<p>نحو 100 kcal لكل 100 g، مع 23 غ بروتين و0 غ كربوهيدرات و1 غ دهون.</p>
+<h3>تونة معلّبة (في الماء): هل هو غني بالبروتين؟</h3>
+<p>نعم. تحتوي الحصة الواحدة على 23 غ من البروتين، أي نحو 92% من سعراتها.</p>
+<h3>تونة معلّبة (في الماء): كيف أسجله في Pofu؟</h3>
+<p>صوّري طبقك أو ابحثي عن الاسم، ثم اضبطي الحصة على ما أكلتِه فعلًا. يمكنك تصحيح التقدير، وسيتذكر Pofu تصحيحك في المرة القادمة.</p>
+</section>
 <section id="source">
-<p class="fine">القيم: تقديرات نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu، وتختلف بحسب الوصفة والحصة.</p>
+<p class="fine">القيم: تقديرات نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu، وتختلف بحسب الوصفة والحصة. <a href="../editorial-policy.html">كيف نُعدّ محتوانا ومصادرنا</a>.</p>
 <div class="note"><p>هذه الصفحة للمعلومات العامة فقط وليست نصيحة طبية. إذا كنتِ حاملًا أو مرضعة أو لديكِ حالة صحية أو سبق أن عانيتِ من اضطراب في الأكل، فتحدّثي إلى طبيبك أو أخصائية التغذية قبل عدّ السعرات.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="هذا الطعام بلغات أخرى" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/canned-tuna-in-water.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/ton-baligi-konserve-suda.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/thunfisch-dose-in-wasser.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/thon-en-conserve-a-l-eau.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/atun-en-lata-en-agua.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/atum-em-lata-em-agua.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <strong>العربية</strong> · <a href="../../cs/kalorie/tunak-v-konzerve.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/canned-tuna-in-water.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/tuna-kalengan-dalam-air.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/tonno-in-scatola-al-naturale.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/canned-tuna-in-water.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/canned-tuna-in-water.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/tonijn-uit-blik-op-water.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/tunczyk-z-puszki-we-wasnym-sosie.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/ton-la-conserva.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/tunets-konservirovannyy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/tonfisk-pa-burk-i-vatten.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/canned-tuna-in-water.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/tunets-konservovanyy.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/ca-ngu-dong-hop-ngam-nuoc.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/canned-tuna-in-water.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="استكشف"><strong>استكشف</strong><a href="../guides.html">الأدلة</a><a href="../tools.html">الأدوات</a><a href="./" aria-current="true">السعرات</a><a href="../questions/">أسئلة</a><a href="../compare.html">مقارنات</a></nav>
+<nav aria-label="استكشف"><strong>استكشف</strong><a href="../guides.html">الأدلة</a><a href="../tools.html">الأدوات</a><a href="./" aria-current="true">السعرات</a><a href="../questions/">أسئلة</a><a href="../compare.html">مقارنات</a><a href="../editorial-policy.html">المحتوى والمصادر</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

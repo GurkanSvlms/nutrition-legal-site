@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html", "url": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html", "name": "猪肉捞面有多少热量？（1盘, 300 g）", "description": "猪肉捞面：约 414 kcal（每份：1盘, 300 g）；蛋白质 28.4 g，碳水化合物 48.5 g，脂肪 11.4 g。为一般典型估算值。", "inLanguage": "zh-Hans", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "猪肉捞面", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "414 kcal", "proteinContent": "28.4 g", "carbohydrateContent": "48.5 g", "fatContent": "11.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/zh-Hans/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "热量", "item": "https://getpofu.com/zh-Hans/kaluli/"}, {"@type": "ListItem", "position": 3, "name": "猪肉捞面", "item": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html", "url": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html", "name": "猪肉捞面有多少热量？（1盘, 300 g）", "description": "猪肉捞面：约 414 kcal（每份：1盘, 300 g）；蛋白质 28.4 g，碳水化合物 48.5 g，脂肪 11.4 g。为一般典型估算值。", "inLanguage": "zh-Hans", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "猪肉捞面", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "414 kcal", "proteinContent": "28.4 g", "carbohydrateContent": "48.5 g", "fatContent": "11.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/zh-Hans/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "热量", "item": "https://getpofu.com/zh-Hans/kaluli/"}, {"@type": "ListItem", "position": 3, "name": "猪肉捞面", "item": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/zh-Hans/kaluli/zhurou-laomian.html#faq", "inLanguage": "zh-Hans", "mainEntity": [{"@type": "Question", "name": "猪肉捞面：100 g有多少热量？", "acceptedAnswer": {"@type": "Answer", "text": "每 100 g约 138 kcal，含蛋白质 9.5 g、碳水化合物 16.2 g、脂肪 3.8 g。"}}, {"@type": "Question", "name": "猪肉捞面：蛋白质含量高吗？", "acceptedAnswer": {"@type": "Answer", "text": "高。一份含蛋白质 28.4 g，约占其热量的 27%。"}}, {"@type": "Question", "name": "猪肉捞面：怎么在 Pofu 里记录？", "acceptedAnswer": {"@type": "Answer", "text": "给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>更小或更大的分量</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">分量</th><th scope="col">热量</th><th scope="col">蛋白质</th></tr></thead>
+<tbody>
+<tr><th scope="row">半份（150 g）</th><td>207 kcal</td><td>14.2 g</td></tr>
+<tr><th scope="row">一份常见分量（300 g）</th><td>414 kcal</td><td>28.4 g</td></tr>
+<tr><th scope="row">一份半（450 g）</th><td>621 kcal</td><td>42.6 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>热量从哪里来</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:28%"></span><span class="sc" style="width:47%"></span><span class="sf" style="width:25%"></span></div>
+<p>热量中有 28% 来自蛋白质，47% 来自碳水化合物，25% 来自脂肪。 简单来说：蛋白质、碳水化合物和脂肪兼有。</p>
+<p>一份大约占 2,000 kcal 一天摄入量的 21%，这是食品标签上使用的参考值。</p>
+</section>
 <section id="why">
 <h2>数值为什么会有差异</h2>
 <p>家常做法和餐厅做法在油、肉、奶酪和淀粉的用量以及分量上各不相同。请把这个数值当作起点，如果你的餐盘更小或更大，就相应调整分量。</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>如何在 Pofu 中记录</h2>
 <p>Pofu 是我们的应用。要记录这种食物，只需给餐盘拍张照片：Pofu 会估算食物和分量，并显示置信度分数，让你看到估算有多确定，也可以自行修正。你也可以按名称搜索或扫描条形码，再把分量调整为你实际吃的量。<a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_zh_hans&amp;mt=8">在 App Store 获取 Pofu</a>。</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu 应用：通过照片记录一餐"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofu 应用的屏幕录制（界面为英文）：拍照、核对估算，再添加到今天的记录中。</figcaption></figure>
 </section>
 <section id="related">
 <h2>相似食物</h2>
@@ -215,8 +239,17 @@
 </ul>
 <p><a href="./">全部食物</a></p>
 </section>
+<section id="faq">
+<h2>关于这种食物的问题</h2>
+<h3>猪肉捞面：100 g有多少热量？</h3>
+<p>每 100 g约 138 kcal，含蛋白质 9.5 g、碳水化合物 16.2 g、脂肪 3.8 g。</p>
+<h3>猪肉捞面：蛋白质含量高吗？</h3>
+<p>高。一份含蛋白质 28.4 g，约占其热量的 27%。</p>
+<h3>猪肉捞面：怎么在 Pofu 里记录？</h3>
+<p>给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。</p>
+</section>
 <section id="source">
-<p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。 <a href="https://fdc.nal.usda.gov/food-details/2708801/nutrients" rel="nofollow noopener">出处</a>.</p>
+<p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。 <a href="https://fdc.nal.usda.gov/food-details/2708801/nutrients" rel="nofollow noopener">出处</a>. <a href="../editorial-policy.html">我们如何准备内容和参考来源</a>.</p>
 <div class="note"><p>本页面仅提供一般性信息，不构成医疗建议。如果你正处于孕期或哺乳期、患有疾病或有进食障碍史，请在开始计算热量之前咨询医生或营养师。</p></div>
 </section>
 </main>
@@ -233,7 +266,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="探索"><strong>探索</strong><a href="../guides.html">指南</a><a href="../tools.html">工具</a><a href="./" aria-current="true">热量</a><a href="../questions/">问答</a><a href="../compare.html">对比</a></nav>
+<nav aria-label="探索"><strong>探索</strong><a href="../guides.html">指南</a><a href="../tools.html">工具</a><a href="./" aria-current="true">热量</a><a href="../questions/">问答</a><a href="../compare.html">对比</a><a href="../editorial-policy.html">内容与来源</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

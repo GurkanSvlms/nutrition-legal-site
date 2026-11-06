@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html", "url": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html", "name": "花生酱有多少热量？（1汤匙, 32 g）", "description": "花生酱：约 190 kcal（每份：1汤匙, 32 g）；蛋白质 7 g，碳水化合物 6 g，脂肪 16 g。为一般典型估算值。", "inLanguage": "zh-Hans", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "花生酱", "nutrition": {"@type": "NutritionInformation", "servingSize": "32 g", "calories": "190 kcal", "proteinContent": "7 g", "carbohydrateContent": "6 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/zh-Hans/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "热量", "item": "https://getpofu.com/zh-Hans/kaluli/"}, {"@type": "ListItem", "position": 3, "name": "花生酱", "item": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html", "url": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html", "name": "花生酱有多少热量？（1汤匙, 32 g）", "description": "花生酱：约 190 kcal（每份：1汤匙, 32 g）；蛋白质 7 g，碳水化合物 6 g，脂肪 16 g。为一般典型估算值。", "inLanguage": "zh-Hans", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "花生酱", "nutrition": {"@type": "NutritionInformation", "servingSize": "32 g", "calories": "190 kcal", "proteinContent": "7 g", "carbohydrateContent": "6 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/zh-Hans/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "热量", "item": "https://getpofu.com/zh-Hans/kaluli/"}, {"@type": "ListItem", "position": 3, "name": "花生酱", "item": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/zh-Hans/kaluli/peanut-butter.html#faq", "inLanguage": "zh-Hans", "mainEntity": [{"@type": "Question", "name": "花生酱：100 g有多少热量？", "acceptedAnswer": {"@type": "Answer", "text": "每 100 g约 594 kcal，含蛋白质 21.9 g、碳水化合物 18.8 g、脂肪 50 g。"}}, {"@type": "Question", "name": "花生酱：蛋白质含量高吗？", "acceptedAnswer": {"@type": "Answer", "text": "含有一些蛋白质：每份 7 g，约占其热量的 15%。"}}, {"@type": "Question", "name": "花生酱：怎么在 Pofu 里记录？", "acceptedAnswer": {"@type": "Answer", "text": "给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>更小或更大的分量</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">分量</th><th scope="col">热量</th><th scope="col">蛋白质</th></tr></thead>
+<tbody>
+<tr><th scope="row">半份（16 g）</th><td>95 kcal</td><td>3.5 g</td></tr>
+<tr><th scope="row">一份常见分量（32 g）</th><td>190 kcal</td><td>7 g</td></tr>
+<tr><th scope="row">一份半（48 g）</th><td>285 kcal</td><td>10.5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>热量从哪里来</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:14%"></span><span class="sc" style="width:12%"></span><span class="sf" style="width:74%"></span></div>
+<p>热量中有 14% 来自蛋白质，12% 来自碳水化合物，74% 来自脂肪。 简单来说：大部分热量来自脂肪，所以分量稍有变化，差别就很大。</p>
+<p>一份大约占 2,000 kcal 一天摄入量的 10%，这是食品标签上使用的参考值。</p>
+</section>
 <section id="why">
 <h2>数值为什么会有差异</h2>
 <p>影响最大的是脂肪。用了多少油、黄油、奶酪或炸油，勺子和汤勺盛得多满，都会让热量产生很大变化。两盘看起来差不多的菜，热量可能相差很多。</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>如何在 Pofu 中记录</h2>
 <p>Pofu 是我们的应用。要记录这种食物，只需给餐盘拍张照片：Pofu 会估算食物和分量，并显示置信度分数，让你看到估算有多确定，也可以自行修正。你也可以按名称搜索或扫描条形码，再把分量调整为你实际吃的量。<a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_zh_hans&amp;mt=8">在 App Store 获取 Pofu</a>。</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu 应用：通过照片记录一餐"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofu 应用的屏幕录制（界面为英文）：拍照、核对估算，再添加到今天的记录中。</figcaption></figure>
 </section>
 <section id="related">
 <h2>相似食物</h2>
@@ -234,10 +258,25 @@
 <li><a href="muxu-rou.html">木须肉</a> <span class="k">· 230 kcal (1份, 150 g)</span></li>
 <li><a href="beijing-kaoya.html">北京烤鸭</a> <span class="k">· 154 kcal (1份, 100 g)</span></li>
 </ul>
+<h3>同类中更清淡的选择</h3>
+<ul class="foodlist">
+<li><a href="cheddar-cheese.html">切达奶酪</a> <span class="k">· 400 kcal 每 100 g</span></li>
+<li><a href="feta-cheese.html">菲达奶酪</a> <span class="k">· 260 kcal 每 100 g</span></li>
+<li><a href="ground-beef-15-fat.html">牛肉末（15%脂肪）</a> <span class="k">· 250 kcal 每 100 g</span></li>
+</ul>
 <p><a href="./">全部食物</a></p>
 </section>
+<section id="faq">
+<h2>关于这种食物的问题</h2>
+<h3>花生酱：100 g有多少热量？</h3>
+<p>每 100 g约 594 kcal，含蛋白质 21.9 g、碳水化合物 18.8 g、脂肪 50 g。</p>
+<h3>花生酱：蛋白质含量高吗？</h3>
+<p>含有一些蛋白质：每份 7 g，约占其热量的 15%。</p>
+<h3>花生酱：怎么在 Pofu 里记录？</h3>
+<p>给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。</p>
+</section>
 <section id="source">
-<p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。</p>
+<p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。 <a href="../editorial-policy.html">我们如何准备内容和参考来源</a>.</p>
 <div class="note"><p>本页面仅提供一般性信息，不构成医疗建议。如果你正处于孕期或哺乳期、患有疾病或有进食障碍史，请在开始计算热量之前咨询医生或营养师。</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="其他语言版本" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/peanut-butter.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/fistik-ezmesi.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/erdnussbutter.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/beurre-de-cacahuete.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/crema-de-cacahuate.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/pasta-de-amendoim.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/peanut-butter.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/arasidove-maslo.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/peanut-butter.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/selai-kacang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/burro-di-arachidi.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/peanut-butter.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/peanut-butter.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/pindakaas.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/maso-orzechowe.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/unt-de-arahide.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/arakhisovaya-pasta.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/jordnotssmor.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/peanut-butter.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/arakhisova-pasta.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/bo-dau-phong.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <strong>简体中文</strong></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="探索"><strong>探索</strong><a href="../guides.html">指南</a><a href="../tools.html">工具</a><a href="./" aria-current="true">热量</a><a href="../questions/">问答</a><a href="../compare.html">对比</a></nav>
+<nav aria-label="探索"><strong>探索</strong><a href="../guides.html">指南</a><a href="../tools.html">工具</a><a href="./" aria-current="true">热量</a><a href="../questions/">问答</a><a href="../compare.html">对比</a><a href="../editorial-policy.html">内容与来源</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/sv/kalorier/tofu.html", "url": "https://getpofu.com/sv/kalorier/tofu.html", "name": "Hur många kalorier innehåller Tofu? (1 portion, 150 g)", "description": "Tofu: cirka 145 kcal per portion (1 portion, 150 g); 16 g protein, 4 g kolhydrater, 8 g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.", "inLanguage": "sv", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tofu", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "145 kcal", "proteinContent": "16 g", "carbohydrateContent": "4 g", "fatContent": "8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/sv/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorier", "item": "https://getpofu.com/sv/kalorier/"}, {"@type": "ListItem", "position": 3, "name": "Tofu", "item": "https://getpofu.com/sv/kalorier/tofu.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/sv/kalorier/tofu.html", "url": "https://getpofu.com/sv/kalorier/tofu.html", "name": "Hur många kalorier innehåller Tofu? (1 portion, 150 g)", "description": "Tofu: cirka 145 kcal per portion (1 portion, 150 g); 16 g protein, 4 g kolhydrater, 8 g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.", "inLanguage": "sv", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tofu", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "145 kcal", "proteinContent": "16 g", "carbohydrateContent": "4 g", "fatContent": "8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/sv/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorier", "item": "https://getpofu.com/sv/kalorier/"}, {"@type": "ListItem", "position": 3, "name": "Tofu", "item": "https://getpofu.com/sv/kalorier/tofu.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/sv/kalorier/tofu.html#faq", "inLanguage": "sv", "mainEntity": [{"@type": "Question", "name": "Tofu: hur många kalorier är det i 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Cirka 97 kcal per 100 g, med 10,7 g protein, 2,7 g kolhydrater och 5,3 g fett."}}, {"@type": "Question", "name": "Tofu: är det proteinrikt?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. En portion innehåller 16 g protein, cirka 44 % av kalorierna."}}, {"@type": "Question", "name": "Tofu: hur loggar jag det i Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Ta ett foto av din tallrik eller sök på namnet och ställ sedan in portionen på det du faktiskt åt. Du kan justera uppskattningen, och Pofu kommer ihåg din justering nästa gång."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mindre eller större portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Kalorier</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">En halv portion (75 g)</th><td>72 kcal</td><td>8 g</td></tr>
+<tr><th scope="row">Vanlig portion (150 g)</th><td>145 kcal</td><td>16 g</td></tr>
+<tr><th scope="row">En och en halv portion (225 g)</th><td>218 kcal</td><td>24 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Varifrån kalorierna kommer</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:42%"></span><span class="sc" style="width:11%"></span><span class="sf" style="width:47%"></span></div>
+<p>42 % av kalorierna kommer från protein, 11 % från kolhydrater och 47 % från fett. Kort sagt: en bra proteinkälla.</p>
+<p>En portion motsvarar ungefär 7 % av en dag på 2 000 kcal, referensvärdet som används på livsmedelsetiketter.</p>
+</section>
 <section id="why">
 <h2>Därför varierar värdet</h2>
 <p>Det beror på styckningsdelen eller produkten, på om fettet skurits bort eller sparats och på tillagningen. Skinn, marinader, såser och stekfett ger kalorier som man inte ser på vikten. Kontrollera när du jämför om en vikt avser tillagat eller rått.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Så loggar du det i Pofu</h2>
 <p>Pofu är vår app. För att logga det här livsmedlet fotograferar du tallriken: Pofu uppskattar rätten och portionen och visar ett säkerhetsvärde, så att du ser hur säker uppskattningen är och kan justera den. Du kan också söka på namn eller skanna en streckkod och ställa in portionen på det du faktiskt åt. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_sv&amp;mt=8">Hämta Pofu i App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-appen: logga en måltid från ett foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Skärminspelning från Pofu-appen (engelskt gränssnitt): ta ett foto, kontrollera uppskattningen och lägg till den för idag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Liknande livsmedel</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Alla livsmedel</a></p>
 </section>
+<section id="faq">
+<h2>Frågor om det här livsmedlet</h2>
+<h3>Tofu: hur många kalorier är det i 100 g?</h3>
+<p>Cirka 97 kcal per 100 g, med 10,7 g protein, 2,7 g kolhydrater och 5,3 g fett.</p>
+<h3>Tofu: är det proteinrikt?</h3>
+<p>Ja. En portion innehåller 16 g protein, cirka 44 % av kalorierna.</p>
+<h3>Tofu: hur loggar jag det i Pofu?</h3>
+<p>Ta ett foto av din tallrik eller sök på namnet och ställ sedan in portionen på det du faktiskt åt. Du kan justera uppskattningen, och Pofu kommer ihåg din justering nästa gång.</p>
+</section>
 <section id="source">
-<p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion.</p>
+<p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion. <a href="../editorial-policy.html">Så tar vi fram vårt innehåll och våra källor</a>.</p>
 <div class="note"><p>Den här sidan är allmän information och ingen medicinsk rådgivning. Om du är gravid, ammar, har en sjukdom eller tidigare har haft en ätstörning, prata med din läkare eller en dietist innan du börjar räkna kalorier.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Det här livsmedlet på andra språk" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/tofu.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/tofu.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/tofu.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/tofu.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/tofu.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/tofu.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/tofu.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/tofu.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/tofu.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/tahu.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/tofu.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/tofu.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/tofu.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/tofu.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/tofu.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/tofu.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/tofu.html" hreflang="ru" lang="ru">Русский</a> · <strong>Svenska</strong> · <a href="../../th/khalori/tofu.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/tofu.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/dau-phu.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/tofu.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Utforska"><strong>Utforska</strong><a href="../guides.html">Guider</a><a href="../tools.html">Verktyg</a><a href="./" aria-current="true">Kalorier</a><a href="../questions/">Frågor</a><a href="../compare.html">Jämförelser</a></nav>
+<nav aria-label="Utforska"><strong>Utforska</strong><a href="../guides.html">Guider</a><a href="../tools.html">Verktyg</a><a href="./" aria-current="true">Kalorier</a><a href="../questions/">Frågor</a><a href="../compare.html">Jämförelser</a><a href="../editorial-policy.html">Innehåll och källor</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

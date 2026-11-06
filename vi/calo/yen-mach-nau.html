@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/vi/calo/yen-mach-nau.html", "url": "https://getpofu.com/vi/calo/yen-mach-nau.html", "name": "Yến mạch nấu có bao nhiêu calo? (1 bát, 50 g)", "description": "Yến mạch nấu: khoảng 190 kcal mỗi khẩu phần (1 bát, 50 g); 7 g protein, 32 g carbohydrate, 3,5 g chất béo. Giá trị tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu.", "inLanguage": "vi", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Yến mạch nấu", "nutrition": {"@type": "NutritionInformation", "servingSize": "50 g", "calories": "190 kcal", "proteinContent": "7 g", "carbohydrateContent": "32 g", "fatContent": "3.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/vi/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calo", "item": "https://getpofu.com/vi/calo/"}, {"@type": "ListItem", "position": 3, "name": "Yến mạch nấu", "item": "https://getpofu.com/vi/calo/yen-mach-nau.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/vi/calo/yen-mach-nau.html", "url": "https://getpofu.com/vi/calo/yen-mach-nau.html", "name": "Yến mạch nấu có bao nhiêu calo? (1 bát, 50 g)", "description": "Yến mạch nấu: khoảng 190 kcal mỗi khẩu phần (1 bát, 50 g); 7 g protein, 32 g carbohydrate, 3,5 g chất béo. Giá trị tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu.", "inLanguage": "vi", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Yến mạch nấu", "nutrition": {"@type": "NutritionInformation", "servingSize": "50 g", "calories": "190 kcal", "proteinContent": "7 g", "carbohydrateContent": "32 g", "fatContent": "3.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/vi/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calo", "item": "https://getpofu.com/vi/calo/"}, {"@type": "ListItem", "position": 3, "name": "Yến mạch nấu", "item": "https://getpofu.com/vi/calo/yen-mach-nau.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/vi/calo/yen-mach-nau.html#faq", "inLanguage": "vi", "mainEntity": [{"@type": "Question", "name": "Yến mạch nấu: 100 g có bao nhiêu calo?", "acceptedAnswer": {"@type": "Answer", "text": "Khoảng 380 kcal mỗi 100 g, với 14 g protein, 64 g tinh bột và 7 g chất béo."}}, {"@type": "Question", "name": "Yến mạch nấu: có nhiều protein không?", "acceptedAnswer": {"@type": "Answer", "text": "Có một ít protein: 7 g mỗi khẩu phần, khoảng 15% lượng calo."}}, {"@type": "Question", "name": "Yến mạch nấu: ghi lại trong Pofu như thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Chụp ảnh đĩa ăn hoặc tìm theo tên, rồi chỉnh khẩu phần đúng với lượng bạn thực sự đã ăn. Bạn có thể sửa lại ước tính, và Pofu sẽ nhớ chỗ bạn sửa cho lần sau."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Khẩu phần nhỏ hơn hoặc lớn hơn</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Khẩu phần</th><th scope="col">Calo</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Nửa khẩu phần (25 g)</th><td>95 kcal</td><td>3,5 g</td></tr>
+<tr><th scope="row">Khẩu phần thông thường (50 g)</th><td>190 kcal</td><td>7 g</td></tr>
+<tr><th scope="row">Một rưỡi khẩu phần (75 g)</th><td>285 kcal</td><td>10,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Calo đến từ đâu</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:15%"></span><span class="sc" style="width:68%"></span><span class="sf" style="width:17%"></span></div>
+<p>15% lượng calo đến từ protein, 68% từ tinh bột và 17% từ chất béo. Tóm lại: phần lớn calo đến từ tinh bột.</p>
+<p>Một khẩu phần chiếm khoảng 10% nhu cầu 2.000 kcal mỗi ngày, mức tham chiếu được dùng trên nhãn thực phẩm.</p>
+</section>
 <section id="why">
 <h2>Vì sao con số có thể thay đổi</h2>
 <p>Kết quả phụ thuộc vào cách chế biến món và lượng dầu, bơ hoặc đường bên trong. Trọng lượng đã nấu và trọng lượng khô khác nhau rất nhiều, nên một đĩa đầy và một đĩa vừa phải có thể chênh nhau xa. Thương hiệu, kích cỡ và độ dày cũng làm giá trị thay đổi.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cách ghi lại trong Pofu</h2>
 <p>Pofu là ứng dụng của chúng tôi. Để ghi lại món này, hãy chụp ảnh đĩa ăn: Pofu ước tính món ăn và khẩu phần, đồng thời hiển thị mức độ tin cậy để bạn biết ước tính chắc chắn đến đâu và có thể chỉnh lại. Bạn cũng có thể tìm theo tên hoặc quét mã vạch, rồi điều chỉnh khẩu phần cho đúng với lượng bạn thực sự ăn. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_vi&amp;mt=8">Tải Pofu trên App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Ứng dụng Pofu: ghi lại bữa ăn từ ảnh"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Quay màn hình từ ứng dụng Pofu (giao diện tiếng Anh): chụp ảnh, kiểm tra ước tính, thêm vào hôm nay.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Món tương tự</h2>
@@ -234,10 +258,25 @@
 <li><a href="bun.html">Bún (bún gạo đã nấu)</a> <span class="k">· 214 kcal (1 tô, 200 g)</span></li>
 <li><a href="khoai-mi-luoc.html">Khoai mì luộc</a> <span class="k">· 306 kcal (1 chén, 160 g)</span></li>
 </ul>
+<h3>Lựa chọn nhẹ hơn trong cùng nhóm</h3>
+<ul class="foodlist">
+<li><a href="banh-mi-trang.html">Bánh mì trắng</a> <span class="k">· 250 kcal mỗi 100 g</span></li>
+<li><a href="banh-mi-nguyen-cam.html">Bánh mì nguyên cám</a> <span class="k">· 243 kcal mỗi 100 g</span></li>
+<li><a href="khoai-mi-luoc.html">Khoai mì luộc</a> <span class="k">· 191 kcal mỗi 100 g</span></li>
+</ul>
 <p><a href="./">Tất cả món ăn</a></p>
 </section>
+<section id="faq">
+<h2>Câu hỏi về món này</h2>
+<h3>Yến mạch nấu: 100 g có bao nhiêu calo?</h3>
+<p>Khoảng 380 kcal mỗi 100 g, với 14 g protein, 64 g tinh bột và 7 g chất béo.</p>
+<h3>Yến mạch nấu: có nhiều protein không?</h3>
+<p>Có một ít protein: 7 g mỗi khẩu phần, khoảng 15% lượng calo.</p>
+<h3>Yến mạch nấu: ghi lại trong Pofu như thế nào?</h3>
+<p>Chụp ảnh đĩa ăn hoặc tìm theo tên, rồi chỉnh khẩu phần đúng với lượng bạn thực sự đã ăn. Bạn có thể sửa lại ước tính, và Pofu sẽ nhớ chỗ bạn sửa cho lần sau.</p>
+</section>
 <section id="source">
-<p class="fine">Giá trị: ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu; chúng thay đổi theo công thức và khẩu phần.</p>
+<p class="fine">Giá trị: ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu; chúng thay đổi theo công thức và khẩu phần. <a href="../editorial-policy.html">Cách chúng tôi chuẩn bị nội dung và nguồn</a>.</p>
 <div class="note"><p>Trang này chỉ mang tính thông tin chung và không phải lời khuyên y tế. Nếu bạn đang mang thai, cho con bú, có bệnh lý hoặc từng có rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi đếm calo.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Món này bằng các ngôn ngữ khác" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/oatmeal.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/yulaf-ezmesi.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/haferflocken.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/flocons-d-avoine.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/avena.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/aveia.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/oatmeal.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/ovesne-vlocky.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/oatmeal.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/oatmeal.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/porridge-di-avena.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/oatmeal.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/oatmeal.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/havermout.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/owsianka.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/fulgi-de-ovaz.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/ovsyanye-khlopya.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/havregrynsgrot.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/oatmeal.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/vivsyani-plastivtsi.html" hreflang="uk" lang="uk">Українська</a> · <strong>Tiếng Việt</strong> · <a href="../../zh-Hans/kaluli/oatmeal.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Khám phá"><strong>Khám phá</strong><a href="../guides.html">Hướng dẫn</a><a href="../tools.html">Công cụ</a><a href="./" aria-current="true">Calo</a><a href="../questions/">Hỏi đáp</a><a href="../compare.html">So sánh</a></nav>
+<nav aria-label="Khám phá"><strong>Khám phá</strong><a href="../guides.html">Hướng dẫn</a><a href="../tools.html">Công cụ</a><a href="./" aria-current="true">Calo</a><a href="../questions/">Hỏi đáp</a><a href="../compare.html">So sánh</a><a href="../editorial-policy.html">Nội dung và nguồn</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/id/kalori/ubi-jalar.html", "url": "https://getpofu.com/id/kalori/ubi-jalar.html", "name": "Berapa kalori dalam Ubi jalar? (1 buah, 130 g)", "description": "Ubi jalar: sekitar 115 kkal per porsi (1 buah, 130 g); 2 g protein, 27 g karbohidrat, 0,1 g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.", "inLanguage": "id", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Ubi jalar", "nutrition": {"@type": "NutritionInformation", "servingSize": "130 g", "calories": "115 kcal", "proteinContent": "2 g", "carbohydrateContent": "27 g", "fatContent": "0.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/id/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/id/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Ubi jalar", "item": "https://getpofu.com/id/kalori/ubi-jalar.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/id/kalori/ubi-jalar.html", "url": "https://getpofu.com/id/kalori/ubi-jalar.html", "name": "Berapa kalori dalam Ubi jalar? (1 buah, 130 g)", "description": "Ubi jalar: sekitar 115 kkal per porsi (1 buah, 130 g); 2 g protein, 27 g karbohidrat, 0,1 g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.", "inLanguage": "id", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Ubi jalar", "nutrition": {"@type": "NutritionInformation", "servingSize": "130 g", "calories": "115 kcal", "proteinContent": "2 g", "carbohydrateContent": "27 g", "fatContent": "0.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/id/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/id/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Ubi jalar", "item": "https://getpofu.com/id/kalori/ubi-jalar.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/id/kalori/ubi-jalar.html#faq", "inLanguage": "id", "mainEntity": [{"@type": "Question", "name": "Ubi jalar: berapa kalori dalam 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Sekitar 88 kcal per 100 g, dengan 1,5 g protein, 20,8 g karbohidrat, dan 0,1 g lemak."}}, {"@type": "Question", "name": "Ubi jalar: apakah tinggi protein?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak banyak: 2 g per porsi, sekitar 7% dari kalorinya. Padukan dengan makanan berprotein, seperti telur, yogurt, kacang-kacangan, tempe, ikan, atau ayam, kalau kamu ingin makanan yang lebih mengenyangkan."}}, {"@type": "Question", "name": "Ubi jalar: bagaimana mencatatnya di Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porsi lebih kecil atau lebih besar</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porsi</th><th scope="col">Kalori</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Setengah porsi (65 g)</th><td>58 kcal</td><td>1 g</td></tr>
+<tr><th scope="row">Porsi biasa (130 g)</th><td>115 kcal</td><td>2 g</td></tr>
+<tr><th scope="row">Satu setengah porsi (195 g)</th><td>172 kcal</td><td>3 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Dari mana kalorinya berasal</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:7%"></span><span class="sc" style="width:92%"></span><span class="sf" style="width:1%"></span></div>
+<p>7% kalori berasal dari protein, 92% dari karbohidrat, dan 1% dari lemak. Singkatnya: sebagian besar kalorinya berasal dari karbohidrat.</p>
+<p>Satu porsi sekitar 6% dari kebutuhan 2.000 kcal sehari, nilai acuan yang dipakai pada label makanan.</p>
+</section>
 <section id="why">
 <h2>Mengapa angkanya bisa berbeda</h2>
 <p>Hasilnya bergantung pada cara hidangan dimasak serta banyaknya minyak, mentega, atau gula di dalamnya. Berat matang dan berat kering sangat berbeda, sehingga piring yang menggunung dan piring yang rata bisa terpaut jauh. Merek, ukuran, dan ketebalan juga mengubah nilainya.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cara mencatatnya di Pofu</h2>
 <p>Pofu adalah aplikasi kami. Untuk mencatat makanan ini, foto piringmu: Pofu memperkirakan hidangan dan porsinya, lalu menampilkan skor keyakinan agar kamu tahu seberapa pasti perkiraannya dan bisa mengubahnya. Kamu juga bisa mencari berdasarkan nama atau memindai barcode, lalu menyesuaikan porsi dengan jumlah yang sebenarnya kamu makan. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_id&amp;mt=8">Unduh Pofu di App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikasi Pofu: mencatat makanan dari foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Rekaman layar dari aplikasi Pofu (antarmuka dalam bahasa Inggris): ambil foto, cek perkiraannya, tambahkan ke hari ini.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Makanan serupa</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Semua makanan</a></p>
 </section>
+<section id="faq">
+<h2>Pertanyaan tentang makanan ini</h2>
+<h3>Ubi jalar: berapa kalori dalam 100 g?</h3>
+<p>Sekitar 88 kcal per 100 g, dengan 1,5 g protein, 20,8 g karbohidrat, dan 0,1 g lemak.</p>
+<h3>Ubi jalar: apakah tinggi protein?</h3>
+<p>Tidak banyak: 2 g per porsi, sekitar 7% dari kalorinya. Padukan dengan makanan berprotein, seperti telur, yogurt, kacang-kacangan, tempe, ikan, atau ayam, kalau kamu ingin makanan yang lebih mengenyangkan.</p>
+<h3>Ubi jalar: bagaimana mencatatnya di Pofu?</h3>
+<p>Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali.</p>
+</section>
 <section id="source">
-<p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi.</p>
+<p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi. <a href="../editorial-policy.html">Cara kami menyiapkan konten dan sumber kami</a>.</p>
 <div class="note"><p>Halaman ini hanya berisi informasi umum dan bukan nasihat medis. Jika kamu sedang hamil, menyusui, memiliki kondisi medis, atau pernah mengalami gangguan makan, bicarakan dengan dokter atau ahli gizi sebelum menghitung kalori.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Makanan ini dalam bahasa lain" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/sweet-potato.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/tatli-patates.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/susskartoffel.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/patate-douce.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/camote.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/batata-doce.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/sweet-potato.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/batat.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/sweet-potato.html" hreflang="hi" lang="hi">हिन्दी</a> · <strong>Bahasa Indonesia</strong> · <a href="../../it/calorie/patata-dolce.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/sweet-potato.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/sweet-potato.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/zoete-aardappel.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/batat.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/cartof-dulce.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/batat.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/sotpotatis.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/sweet-potato.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/batat.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/khoai-lang.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/sweet-potato.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Jelajahi"><strong>Jelajahi</strong><a href="../guides.html">Panduan</a><a href="../tools.html">Alat</a><a href="./" aria-current="true">Kalori</a><a href="../questions/">Tanya Jawab</a><a href="../compare.html">Perbandingan</a></nav>
+<nav aria-label="Jelajahi"><strong>Jelajahi</strong><a href="../guides.html">Panduan</a><a href="../tools.html">Alat</a><a href="./" aria-current="true">Kalori</a><a href="../questions/">Tanya Jawab</a><a href="../compare.html">Perbandingan</a><a href="../editorial-policy.html">Konten dan sumber</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

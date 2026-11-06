@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pt-BR/calorias/tomate.html", "url": "https://getpofu.com/pt-BR/calorias/tomate.html", "name": "Quantas calorias há em tomate? (1 unidade, 120 g)", "description": "Tomate: cerca de 22 kcal por porção (1 unidade, 120 g); 1,1 g de proteína, 4,8 g de carboidratos, 0,2 g de gordura. Valores típicos usados no app Pofu.", "inLanguage": "pt-BR", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tomate", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "22 kcal", "proteinContent": "1.1 g", "carbohydrateContent": "4.8 g", "fatContent": "0.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pt-BR/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorias", "item": "https://getpofu.com/pt-BR/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Tomate", "item": "https://getpofu.com/pt-BR/calorias/tomate.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pt-BR/calorias/tomate.html", "url": "https://getpofu.com/pt-BR/calorias/tomate.html", "name": "Quantas calorias há em tomate? (1 unidade, 120 g)", "description": "Tomate: cerca de 22 kcal por porção (1 unidade, 120 g); 1,1 g de proteína, 4,8 g de carboidratos, 0,2 g de gordura. Valores típicos usados no app Pofu.", "inLanguage": "pt-BR", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tomate", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "22 kcal", "proteinContent": "1.1 g", "carbohydrateContent": "4.8 g", "fatContent": "0.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pt-BR/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorias", "item": "https://getpofu.com/pt-BR/calorias/"}, {"@type": "ListItem", "position": 3, "name": "Tomate", "item": "https://getpofu.com/pt-BR/calorias/tomate.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pt-BR/calorias/tomate.html#faq", "inLanguage": "pt-BR", "mainEntity": [{"@type": "Question", "name": "Tomate: quantas calorias tem em 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Cerca de 18 kcal por 100 g, com 0,9 g de proteína, 4 g de carboidratos e 0,2 g de gordura."}}, {"@type": "Question", "name": "Tomate: é rico em proteína?", "acceptedAnswer": {"@type": "Answer", "text": "Tem alguma proteína: 1,1 g por porção, cerca de 20% das suas calorias."}}, {"@type": "Question", "name": "Tomate: como registrar no Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porção menor ou maior</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porção</th><th scope="col">Calorias</th><th scope="col">Proteína</th></tr></thead>
+<tbody>
+<tr><th scope="row">Meia porção (60 g)</th><td>11 kcal</td><td>0,6 g</td></tr>
+<tr><th scope="row">Porção típica (120 g)</th><td>22 kcal</td><td>1,1 g</td></tr>
+<tr><th scope="row">Uma porção e meia (180 g)</th><td>33 kcal</td><td>1,7 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>De onde vêm as calorias</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:17%"></span><span class="sc" style="width:76%"></span><span class="sf" style="width:7%"></span></div>
+<p>17% das calorias vêm da proteína, 76% dos carboidratos e 7% da gordura. Resumindo: um alimento leve, feito principalmente de água.</p>
+<p>Uma porção é cerca de 1% de um dia de 2.000 kcal, o valor de referência usado nos rótulos dos alimentos.</p>
+</section>
 <section id="why">
 <h2>Por que o valor varia</h2>
 <p>Esses alimentos são principalmente água, então o tamanho da porção e o peso real importam mais do que a receita. Tamanho, ponto de maturação e extras como açúcar, molho, óleo ou leite mudam o valor.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Como registrar no Pofu</h2>
 <p>O Pofu é o nosso app. Para registrar este alimento, tire uma foto do seu prato: o Pofu estima a comida e a porção e mostra uma pontuação de confiança, para você ver o quanto ele tem certeza e corrigir se precisar. Você também pode buscar pelo nome ou escanear um código de barras e ajustar a porção ao que você comeu. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pt_br&amp;mt=8">Baixe o Pofu na App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrando uma refeição a partir de uma foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Gravação de tela do app Pofu (interface em inglês): tire uma foto, confira a estimativa e adicione ao dia de hoje.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimentos relacionados</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Todos os alimentos</a></p>
 </section>
+<section id="faq">
+<h2>Perguntas sobre este alimento</h2>
+<h3>Tomate: quantas calorias tem em 100 g?</h3>
+<p>Cerca de 18 kcal por 100 g, com 0,9 g de proteína, 4 g de carboidratos e 0,2 g de gordura.</p>
+<h3>Tomate: é rico em proteína?</h3>
+<p>Tem alguma proteína: 1,1 g por porção, cerca de 20% das suas calorias.</p>
+<h3>Tomate: como registrar no Pofu?</h3>
+<p>Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez.</p>
+</section>
 <section id="source">
-<p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção.</p>
+<p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção. <a href="../editorial-policy.html">Como preparamos nossos conteúdos e fontes</a>.</p>
 <div class="note"><p>Esta página traz informações gerais e não é aconselhamento médico. Se você está grávida, amamentando, tem alguma condição de saúde ou histórico de transtorno alimentar, converse com seu médico ou nutricionista antes de contar calorias.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Este alimento em outros idiomas" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/tomato.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/domates.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/tomate.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/tomate.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/jitomate.html" hreflang="es" lang="es">Español</a> · <strong>Português (BR)</strong> · <a href="../../ar/saarat/tomato.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/rajce.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/tomato.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/tomat.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/pomodoro.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/tomato.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/tomato.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/tomaat.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/pomidor.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/rosie.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/pomidor.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/tomat.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/tomato.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/pomidor.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/ca-chua.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/tomato.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guias</a><a href="../tools.html">Ferramentas</a><a href="./" aria-current="true">Calorias</a><a href="../questions/">Perguntas</a><a href="../compare.html">Comparativos</a></nav>
+<nav aria-label="Explorar"><strong>Explorar</strong><a href="../guides.html">Guias</a><a href="../tools.html">Ferramentas</a><a href="./" aria-current="true">Calorias</a><a href="../questions/">Perguntas</a><a href="../compare.html">Comparativos</a><a href="../editorial-policy.html">Conteúdo e fontes</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

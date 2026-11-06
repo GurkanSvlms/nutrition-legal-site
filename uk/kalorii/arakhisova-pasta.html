@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html", "url": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html", "name": "Арахісова паста: скільки калорій? (1 ст. л., 32 g)", "description": "Арахісова паста: близько 190 ккал на порцію (1 ст. л., 32 g); 7 г білків, 6 г вуглеводів, 16 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Арахісова паста", "nutrition": {"@type": "NutritionInformation", "servingSize": "32 g", "calories": "190 kcal", "proteinContent": "7 g", "carbohydrateContent": "6 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Арахісова паста", "item": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html", "url": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html", "name": "Арахісова паста: скільки калорій? (1 ст. л., 32 g)", "description": "Арахісова паста: близько 190 ккал на порцію (1 ст. л., 32 g); 7 г білків, 6 г вуглеводів, 16 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Арахісова паста", "nutrition": {"@type": "NutritionInformation", "servingSize": "32 g", "calories": "190 kcal", "proteinContent": "7 g", "carbohydrateContent": "6 g", "fatContent": "16 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Арахісова паста", "item": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/uk/kalorii/arakhisova-pasta.html#faq", "inLanguage": "uk", "mainEntity": [{"@type": "Question", "name": "Арахісова паста: скільки калорій у 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Близько 594 ккал на 100 g, з них 21,9 г білка, 18,8 г вуглеводів і 50 г жиру."}}, {"@type": "Question", "name": "Арахісова паста: чи багато в ньому білка?", "acceptedAnswer": {"@type": "Answer", "text": "Білок є: 7 г на порцію, це близько 15% калорій."}}, {"@type": "Question", "name": "Арахісова паста: як записати це в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Менша або більша порція</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порція</th><th scope="col">Калорії</th><th scope="col">Білок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порції (16 g)</th><td>95 kcal</td><td>3,5 g</td></tr>
+<tr><th scope="row">Звичайна порція (32 g)</th><td>190 kcal</td><td>7 g</td></tr>
+<tr><th scope="row">Півтори порції (48 g)</th><td>285 kcal</td><td>10,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Звідки беруться калорії</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:14%"></span><span class="sc" style="width:12%"></span><span class="sf" style="width:74%"></span></div>
+<p>14% калорій припадає на білок, 12% на вуглеводи та 74% на жир. Коротко: більшість калорій припадає на жир, тож невелика зміна кількості сильно впливає на результат.</p>
+<p>Одна порція — це близько 10% дня на 2 000 ккал, тобто еталонного значення, яке використовують на етикетках продуктів.</p>
+</section>
 <section id="why">
 <h2>Чому значення відрізняється</h2>
 <p>Найбільше значення залежить від жиру. Кількість олії, вершкового масла, сиру чи фритюрного жиру та те, наскільки повна ложка або черпак, найсильніше змінюють калорійність. Навіть дві схожі на вигляд тарілки можуть помітно відрізнятися.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Як записати це в Pofu</h2>
 <p>Pofu — наш застосунок. Щоб записати цей продукт, сфотографуйте тарілку: Pofu оцінить страву й порцію та покаже рівень упевненості, щоб ви бачили, наскільки точна оцінка, і могли її підправити. Можна також знайти страву за назвою або відсканувати штрихкод і підлаштувати порцію під реальну кількість. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_uk&amp;mt=8">Завантажити Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Застосунок Pofu: запис прийому їжі за фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запис екрана застосунку Pofu (інтерфейс англійською): зроби фото, перевір оцінку, додай до сьогоднішнього дня.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Схожі продукти</h2>
@@ -234,10 +258,25 @@
 <li><a href="syr-kyslomolochnyy.html">Сир кисломолочний</a> <span class="k">· 222 kcal (1 порція, 150 g)</span></li>
 <li><a href="nalysnyky-z-myasom.html">Налисники з м&#x27;ясом</a> <span class="k">· 268 kcal (2 шт., 155 g)</span></li>
 </ul>
+<h3>Легші варіанти з тієї самої групи</h3>
+<ul class="foodlist">
+<li><a href="chedar.html">Чедар</a> <span class="k">· 400 kcal на 100 g</span></li>
+<li><a href="kotleta-po-kyyivsky.html">Котлета по-київськи</a> <span class="k">· 280 kcal на 100 g</span></li>
+<li><a href="feta.html">Фета</a> <span class="k">· 260 kcal на 100 g</span></li>
+</ul>
 <p><a href="./">Усі продукти</a></p>
 </section>
+<section id="faq">
+<h2>Запитання про цей продукт</h2>
+<h3>Арахісова паста: скільки калорій у 100 g?</h3>
+<p>Близько 594 ккал на 100 g, з них 21,9 г білка, 18,8 г вуглеводів і 50 г жиру.</p>
+<h3>Арахісова паста: чи багато в ньому білка?</h3>
+<p>Білок є: 7 г на порцію, це близько 15% калорій.</p>
+<h3>Арахісова паста: як записати це в Pofu?</h3>
+<p>Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу.</p>
+</section>
 <section id="source">
-<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції.</p>
+<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції. <a href="../editorial-policy.html">Як ми готуємо матеріали та джерела</a>.</p>
 <div class="note"><p>Ця сторінка має довідковий характер і не є медичною консультацією. Якщо ви вагітні, годуєте груддю, маєте захворювання або в минулому мали розлад харчової поведінки, обговоріть підрахунок калорій з лікарем або дієтологом.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Ця страва іншими мовами" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/peanut-butter.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/fistik-ezmesi.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/erdnussbutter.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/beurre-de-cacahuete.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/crema-de-cacahuate.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/pasta-de-amendoim.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/peanut-butter.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/arasidove-maslo.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/peanut-butter.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/selai-kacang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/burro-di-arachidi.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/peanut-butter.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/peanut-butter.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/pindakaas.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/maso-orzechowe.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/unt-de-arahide.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/arakhisovaya-pasta.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/jordnotssmor.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/peanut-butter.html" hreflang="th" lang="th">ไทย</a> · <strong>Українська</strong> · <a href="../../vi/calo/bo-dau-phong.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/peanut-butter.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a></nav>
+<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a><a href="../editorial-policy.html">Матеріали та джерела</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

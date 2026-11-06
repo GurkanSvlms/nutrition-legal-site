@@ -118,9 +118,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/th/khalori/khao-phat-kai.html", "url": "https://getpofu.com/th/khalori/khao-phat-kai.html", "name": "ข้าวผัดไก่ กี่แคลอรี? (1 จาน, 250 g)", "description": "ข้าวผัดไก่: ประมาณ 432 kcal ต่อ 1 เสิร์ฟ (1 จาน, 250 g) โปรตีน 18.2 g คาร์โบไฮเดรต 69 g ไขมัน 9.2 g เป็นค่าประมาณโดยทั่วไป", "inLanguage": "th", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "ข้าวผัดไก่", "nutrition": {"@type": "NutritionInformation", "servingSize": "250 g", "calories": "432 kcal", "proteinContent": "18.2 g", "carbohydrateContent": "69 g", "fatContent": "9.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/th/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "แคลอรี", "item": "https://getpofu.com/th/khalori/"}, {"@type": "ListItem", "position": 3, "name": "ข้าวผัดไก่", "item": "https://getpofu.com/th/khalori/khao-phat-kai.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/th/khalori/khao-phat-kai.html", "url": "https://getpofu.com/th/khalori/khao-phat-kai.html", "name": "ข้าวผัดไก่ กี่แคลอรี? (1 จาน, 250 g)", "description": "ข้าวผัดไก่: ประมาณ 432 kcal ต่อ 1 เสิร์ฟ (1 จาน, 250 g) โปรตีน 18.2 g คาร์โบไฮเดรต 69 g ไขมัน 9.2 g เป็นค่าประมาณโดยทั่วไป", "inLanguage": "th", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "ข้าวผัดไก่", "nutrition": {"@type": "NutritionInformation", "servingSize": "250 g", "calories": "432 kcal", "proteinContent": "18.2 g", "carbohydrateContent": "69 g", "fatContent": "9.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/th/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "แคลอรี", "item": "https://getpofu.com/th/khalori/"}, {"@type": "ListItem", "position": 3, "name": "ข้าวผัดไก่", "item": "https://getpofu.com/th/khalori/khao-phat-kai.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/th/khalori/khao-phat-kai.html#faq", "inLanguage": "th", "mainEntity": [{"@type": "Question", "name": "ข้าวผัดไก่: 100 g มีกี่แคลอรี่", "acceptedAnswer": {"@type": "Answer", "text": "ประมาณ 173 kcal ต่อ 100 g โดยมีโปรตีน 7.3 g คาร์โบไฮเดรต 27.6 g และไขมัน 3.7 g"}}, {"@type": "Question", "name": "ข้าวผัดไก่: มีโปรตีนสูงไหม", "acceptedAnswer": {"@type": "Answer", "text": "มีโปรตีนอยู่บ้าง: 18.2 g ต่อหนึ่งหน่วยบริโภค คิดเป็นประมาณ 17% ของแคลอรี่"}}, {"@type": "Question", "name": "ข้าวผัดไก่: บันทึกใน Pofu อย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ถ่ายรูปจานอาหารของคุณหรือค้นหาจากชื่อ แล้วปรับปริมาณให้ตรงกับที่กินจริง คุณแก้ค่าประมาณได้ และ Pofu จะจำสิ่งที่คุณแก้ไว้สำหรับครั้งต่อไป"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -196,6 +202,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>ปริมาณน้อยลงหรือมากขึ้น</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">ปริมาณ</th><th scope="col">แคลอรี่</th><th scope="col">โปรตีน</th></tr></thead>
+<tbody>
+<tr><th scope="row">ครึ่งหนึ่งของหนึ่งหน่วยบริโภค (125 g)</th><td>216 kcal</td><td>9.1 g</td></tr>
+<tr><th scope="row">หนึ่งหน่วยบริโภคปกติ (250 g)</th><td>432 kcal</td><td>18.2 g</td></tr>
+<tr><th scope="row">หนึ่งหน่วยบริโภคครึ่ง (375 g)</th><td>648 kcal</td><td>27.3 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>แคลอรี่มาจากไหน</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:17%"></span><span class="sc" style="width:64%"></span><span class="sf" style="width:19%"></span></div>
+<p>แคลอรี่ 17% มาจากโปรตีน 64% จากคาร์โบไฮเดรต และ 19% จากไขมัน สรุปสั้น ๆ: แคลอรี่ส่วนใหญ่มาจากคาร์โบไฮเดรต</p>
+<p>หนึ่งหน่วยบริโภคคิดเป็นประมาณ 22% ของวันที่กิน 2,000 kcal ซึ่งเป็นค่าอ้างอิงที่ใช้บนฉลากอาหาร</p>
+</section>
 <section id="why">
 <h2>ทำไมตัวเลขจึงต่างกันได้</h2>
 <p>ผลลัพธ์ขึ้นอยู่กับวิธีปรุงและปริมาณน้ำมัน เนย หรือน้ำตาลที่ใส่ น้ำหนักตอนสุกกับตอนแห้งต่างกันมาก ดังนั้นจานที่ตักพูนกับจานที่ตักเสมอปากจึงต่างกันมาก ยี่ห้อ ขนาด และความหนาก็ทำให้ตัวเลขเปลี่ยนด้วย</p>
@@ -203,6 +226,7 @@
 <section id="log">
 <h2>วิธีบันทึกใน Pofu</h2>
 <p>Pofu คือแอปของเรา หากต้องการบันทึกอาหารนี้ ให้ถ่ายรูปจานอาหารของคุณ Pofu จะประเมินอาหารและปริมาณ พร้อมแสดงคะแนนความเชื่อมั่น เพื่อให้คุณเห็นว่าการประเมินแน่นอนเพียงใดและแก้ไขได้ คุณยังค้นหาตามชื่อหรือสแกนบาร์โค้ด แล้วปรับปริมาณให้ตรงกับที่กินจริงได้ <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_th&amp;mt=8">ดาวน์โหลด Pofu บน App Store</a></p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="แอป Pofu: บันทึกมื้ออาหารจากรูปถ่าย"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>บันทึกหน้าจอจากแอป Pofu (หน้าจอเป็นภาษาอังกฤษ): ถ่ายรูป ตรวจค่าประมาณ แล้วเพิ่มลงในวันนี้</figcaption></figure>
 </section>
 <section id="related">
 <h2>อาหารที่คล้ายกัน</h2>
@@ -214,10 +238,25 @@
 <li><a href="cooked-chickpeas.html">ถั่วลูกไก่สุก</a> <span class="k">· 270 kcal (1 ถ้วย, 200 g)</span></li>
 <li><a href="cooked-lentils.html">ถั่วเลนทิลสุก</a> <span class="k">· 230 kcal (1 ถ้วย, 200 g)</span></li>
 </ul>
+<h3>ตัวเลือกที่เบากว่าในกลุ่มเดียวกัน</h3>
+<ul class="foodlist">
+<li><a href="cooked-chickpeas.html">ถั่วลูกไก่สุก</a> <span class="k">· 135 kcal ต่อ 100 g</span></li>
+<li><a href="cooked-white-rice.html">ข้าวสวย</a> <span class="k">· 130 kcal ต่อ 100 g</span></li>
+<li><a href="cooked-quinoa.html">ควินัวสุก</a> <span class="k">· 119 kcal ต่อ 100 g</span></li>
+</ul>
 <p><a href="./">อาหารทั้งหมด</a></p>
 </section>
+<section id="faq">
+<h2>คำถามเกี่ยวกับอาหารนี้</h2>
+<h3>ข้าวผัดไก่: 100 g มีกี่แคลอรี่</h3>
+<p>ประมาณ 173 kcal ต่อ 100 g โดยมีโปรตีน 7.3 g คาร์โบไฮเดรต 27.6 g และไขมัน 3.7 g</p>
+<h3>ข้าวผัดไก่: มีโปรตีนสูงไหม</h3>
+<p>มีโปรตีนอยู่บ้าง: 18.2 g ต่อหนึ่งหน่วยบริโภค คิดเป็นประมาณ 17% ของแคลอรี่</p>
+<h3>ข้าวผัดไก่: บันทึกใน Pofu อย่างไร</h3>
+<p>ถ่ายรูปจานอาหารของคุณหรือค้นหาจากชื่อ แล้วปรับปริมาณให้ตรงกับที่กินจริง คุณแก้ค่าประมาณได้ และ Pofu จะจำสิ่งที่คุณแก้ไว้สำหรับครั้งต่อไป</p>
+</section>
 <section id="source">
-<p class="fine">ตัวเลขเป็นค่าประมาณโดยทั่วไป ขึ้นอยู่กับสูตรและปริมาณ หากมีแหล่งที่มาจะแสดงลิงก์ไว้ <a href="https://fdc.nal.usda.gov/food-details/2708953/nutrients" rel="nofollow noopener">แหล่งที่มา</a>.</p>
+<p class="fine">ตัวเลขเป็นค่าประมาณโดยทั่วไป ขึ้นอยู่กับสูตรและปริมาณ หากมีแหล่งที่มาจะแสดงลิงก์ไว้ <a href="https://fdc.nal.usda.gov/food-details/2708953/nutrients" rel="nofollow noopener">แหล่งที่มา</a>. <a href="../editorial-policy.html">เราเตรียมเนื้อหาและแหล่งอ้างอิงอย่างไร</a>.</p>
 <div class="note"><p>หน้านี้ให้ข้อมูลทั่วไปเท่านั้น ไม่ใช่คำแนะนำทางการแพทย์ หากคุณตั้งครรภ์ อยู่ในช่วงให้นมบุตร มีโรคประจำตัว หรือเคยมีภาวะการกินผิดปกติ โปรดปรึกษาแพทย์หรือนักกำหนดอาหารก่อนเริ่มนับแคลอรี</p></div>
 </section>
 </main>
@@ -236,7 +275,7 @@
 <nav class="langs" aria-label="อาหารนี้ในภาษาอื่น" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><strong>ไทย</strong> · <a href="../../vi/calo/com-chien-ga.html" hreflang="vi" lang="vi">Tiếng Việt</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="สำรวจ"><strong>สำรวจ</strong><a href="../guides.html">คู่มือ</a><a href="../tools.html">เครื่องมือ</a><a href="./" aria-current="true">แคลอรี่</a><a href="../questions/">ถาม-ตอบ</a><a href="../compare.html">เปรียบเทียบ</a></nav>
+<nav aria-label="สำรวจ"><strong>สำรวจ</strong><a href="../guides.html">คู่มือ</a><a href="../tools.html">เครื่องมือ</a><a href="./" aria-current="true">แคลอรี่</a><a href="../questions/">ถาม-ตอบ</a><a href="../compare.html">เปรียบเทียบ</a><a href="../editorial-policy.html">เนื้อหาและแหล่งอ้างอิง</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

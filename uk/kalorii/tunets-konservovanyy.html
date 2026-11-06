@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html", "url": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html", "name": "Тунець консервований (у воді): скільки калорій? (1 порція, 100 g)", "description": "Тунець консервований (у воді): близько 100 ккал на порцію (1 порція, 100 g); 23 г білків, 0 г вуглеводів, 1 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Тунець консервований (у воді)", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "100 kcal", "proteinContent": "23 g", "carbohydrateContent": "0 g", "fatContent": "1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Тунець консервований (у воді)", "item": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html", "url": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html", "name": "Тунець консервований (у воді): скільки калорій? (1 порція, 100 g)", "description": "Тунець консервований (у воді): близько 100 ккал на порцію (1 порція, 100 g); 23 г білків, 0 г вуглеводів, 1 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Тунець консервований (у воді)", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "100 kcal", "proteinContent": "23 g", "carbohydrateContent": "0 g", "fatContent": "1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Тунець консервований (у воді)", "item": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/uk/kalorii/tunets-konservovanyy.html#faq", "inLanguage": "uk", "mainEntity": [{"@type": "Question", "name": "Тунець консервований (у воді): скільки калорій у 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Близько 100 ккал на 100 g, з них 23 г білка, 0 г вуглеводів і 1 г жиру."}}, {"@type": "Question", "name": "Тунець консервований (у воді): чи багато в ньому білка?", "acceptedAnswer": {"@type": "Answer", "text": "Так. В одній порції 23 г білка, це близько 92% калорій."}}, {"@type": "Question", "name": "Тунець консервований (у воді): як записати це в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Менша або більша порція</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порція</th><th scope="col">Калорії</th><th scope="col">Білок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порції (50 g)</th><td>50 kcal</td><td>11,5 g</td></tr>
+<tr><th scope="row">Звичайна порція (100 g)</th><td>100 kcal</td><td>23 g</td></tr>
+<tr><th scope="row">Півтори порції (150 g)</th><td>150 kcal</td><td>34,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Звідки беруться калорії</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:91%"></span><span class="sc" style="width:0%"></span><span class="sf" style="width:9%"></span></div>
+<p>91% калорій припадає на білок, 0% на вуглеводи та 9% на жир. Коротко: хороше джерело білка.</p>
+<p>Одна порція — це близько 5% дня на 2 000 ккал, тобто еталонного значення, яке використовують на етикетках продуктів.</p>
+</section>
 <section id="why">
 <h2>Чому значення відрізняється</h2>
 <p>Важливі відруб або продукт, зрізаний чи залишений жир і спосіб приготування. Шкіра, маринади, соуси та жир для смаження дають калорії, яких за вагою не видно. Під час порівняння дивіться, чи вказано вагу вареного, чи сирого продукту.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Як записати це в Pofu</h2>
 <p>Pofu — наш застосунок. Щоб записати цей продукт, сфотографуйте тарілку: Pofu оцінить страву й порцію та покаже рівень упевненості, щоб ви бачили, наскільки точна оцінка, і могли її підправити. Можна також знайти страву за назвою або відсканувати штрихкод і підлаштувати порцію під реальну кількість. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_uk&amp;mt=8">Завантажити Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Застосунок Pofu: запис прийому їжі за фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запис екрана застосунку Pofu (інтерфейс англійською): зроби фото, перевір оцінку, додай до сьогоднішнього дня.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Схожі продукти</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Усі продукти</a></p>
 </section>
+<section id="faq">
+<h2>Запитання про цей продукт</h2>
+<h3>Тунець консервований (у воді): скільки калорій у 100 g?</h3>
+<p>Близько 100 ккал на 100 g, з них 23 г білка, 0 г вуглеводів і 1 г жиру.</p>
+<h3>Тунець консервований (у воді): чи багато в ньому білка?</h3>
+<p>Так. В одній порції 23 г білка, це близько 92% калорій.</p>
+<h3>Тунець консервований (у воді): як записати це в Pofu?</h3>
+<p>Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу.</p>
+</section>
 <section id="source">
-<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції.</p>
+<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції. <a href="../editorial-policy.html">Як ми готуємо матеріали та джерела</a>.</p>
 <div class="note"><p>Ця сторінка має довідковий характер і не є медичною консультацією. Якщо ви вагітні, годуєте груддю, маєте захворювання або в минулому мали розлад харчової поведінки, обговоріть підрахунок калорій з лікарем або дієтологом.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Ця страва іншими мовами" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/canned-tuna-in-water.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/ton-baligi-konserve-suda.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/thunfisch-dose-in-wasser.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/thon-en-conserve-a-l-eau.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/atun-en-lata-en-agua.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/atum-em-lata-em-agua.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/canned-tuna-in-water.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/tunak-v-konzerve.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/canned-tuna-in-water.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/tuna-kalengan-dalam-air.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/tonno-in-scatola-al-naturale.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/canned-tuna-in-water.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/canned-tuna-in-water.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/tonijn-uit-blik-op-water.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/tunczyk-z-puszki-we-wasnym-sosie.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/ton-la-conserva.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/tunets-konservirovannyy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/tonfisk-pa-burk-i-vatten.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/canned-tuna-in-water.html" hreflang="th" lang="th">ไทย</a> · <strong>Українська</strong> · <a href="../../vi/calo/ca-ngu-dong-hop-ngam-nuoc.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/canned-tuna-in-water.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a></nav>
+<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a><a href="../editorial-policy.html">Матеріали та джерела</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

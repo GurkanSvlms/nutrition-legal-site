@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html", "url": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html", "name": "Hoeveel calorieën zitten er in Gekookte quinoa? (1 kom, 185 g)", "description": "Gekookte quinoa: ongeveer 220 kcal per portie (1 kom, 185 g); 8 g eiwit, 39 g koolhydraten, 3,5 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gekookte quinoa", "nutrition": {"@type": "NutritionInformation", "servingSize": "185 g", "calories": "220 kcal", "proteinContent": "8 g", "carbohydrateContent": "39 g", "fatContent": "3.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Gekookte quinoa", "item": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html", "url": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html", "name": "Hoeveel calorieën zitten er in Gekookte quinoa? (1 kom, 185 g)", "description": "Gekookte quinoa: ongeveer 220 kcal per portie (1 kom, 185 g); 8 g eiwit, 39 g koolhydraten, 3,5 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gekookte quinoa", "nutrition": {"@type": "NutritionInformation", "servingSize": "185 g", "calories": "220 kcal", "proteinContent": "8 g", "carbohydrateContent": "39 g", "fatContent": "3.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Gekookte quinoa", "item": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/nl/calorieen/gekookte-quinoa.html#faq", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Gekookte quinoa: hoeveel calorieën zitten er in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Ongeveer 119 kcal per 100 g, met 4,3 g eiwit, 21,1 g koolhydraten en 1,9 g vet."}}, {"@type": "Question", "name": "Gekookte quinoa: bevat het veel eiwit?", "acceptedAnswer": {"@type": "Answer", "text": "Het bevat wat eiwit: 8 g per portie, ongeveer 15% van de calorieën."}}, {"@type": "Question", "name": "Gekookte quinoa: hoe log ik het in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere of grotere portie</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portie</th><th scope="col">Calorieën</th><th scope="col">Eiwit</th></tr></thead>
+<tbody>
+<tr><th scope="row">Een halve portie (92 g)</th><td>110 kcal</td><td>4 g</td></tr>
+<tr><th scope="row">Gebruikelijke portie (185 g)</th><td>220 kcal</td><td>8 g</td></tr>
+<tr><th scope="row">Anderhalve portie (278 g)</th><td>330 kcal</td><td>12 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Waar de calorieën vandaan komen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:15%"></span><span class="sc" style="width:71%"></span><span class="sf" style="width:14%"></span></div>
+<p>15% van de calorieën komt uit eiwit, 71% uit koolhydraten en 14% uit vet. Kort gezegd: de meeste calorieën komen uit koolhydraten.</p>
+<p>Eén portie is ongeveer 11% van een dag van 2.000 kcal, de referentiewaarde op voedingsetiketten.</p>
+</section>
 <section id="why">
 <h2>Waarom de waarde kan verschillen</h2>
 <p>De uitkomst hangt af van hoe het gerecht is bereid en hoeveel olie, boter of suiker erin zit. Gaar gewicht en droog gewicht verschillen sterk, daarom liggen een volle en een afgestreken portie ver uit elkaar. Merk, formaat en dikte veranderen de waarde ook.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Zo log je het in Pofu</h2>
 <p>Pofu is onze app. Om dit product te loggen, maak je een foto van je bord: Pofu schat het gerecht en de portie en toont een betrouwbaarheidsscore, zodat je ziet hoe zeker de schatting is en deze kunt aanpassen. Je kunt ook op naam zoeken of een barcode scannen en de portie instellen op wat je echt hebt gegeten. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_nl&amp;mt=8">Download Pofu in de App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-app: een maaltijd loggen met een foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Schermopname van de Pofu-app (Engelse interface): maak een foto, controleer de schatting, voeg het toe aan vandaag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Vergelijkbare producten</h2>
@@ -234,10 +258,25 @@
 <li><a href="vlaai-met-fruit.html">Vlaai met fruit</a> <span class="k">· 251 kcal (1 punt, 110 g)</span></li>
 <li><a href="vla.html">Vla</a> <span class="k">· 130 kcal (1 kommetje, 150 g)</span></li>
 </ul>
+<h3>Lichtere opties in dezelfde groep</h3>
+<ul class="foodlist">
+<li><a href="banaan.html">Banaan</a> <span class="k">· 88 kcal per 100 g</span></li>
+<li><a href="zoete-aardappel.html">Zoete aardappel</a> <span class="k">· 88 kcal per 100 g</span></li>
+<li><a href="gekookte-aardappel.html">Gekookte aardappel</a> <span class="k">· 87 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Alle producten</a></p>
 </section>
+<section id="faq">
+<h2>Vragen over dit voedingsmiddel</h2>
+<h3>Gekookte quinoa: hoeveel calorieën zitten er in 100 g?</h3>
+<p>Ongeveer 119 kcal per 100 g, met 4,3 g eiwit, 21,1 g koolhydraten en 1,9 g vet.</p>
+<h3>Gekookte quinoa: bevat het veel eiwit?</h3>
+<p>Het bevat wat eiwit: 8 g per portie, ongeveer 15% van de calorieën.</p>
+<h3>Gekookte quinoa: hoe log ik het in Pofu?</h3>
+<p>Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer.</p>
+</section>
 <section id="source">
-<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie.</p>
+<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="../editorial-policy.html">Hoe we onze inhoud en bronnen opstellen</a>.</p>
 <div class="note"><p>Deze pagina is bedoeld als algemene informatie en is geen medisch advies. Als je zwanger bent, borstvoeding geeft, een aandoening hebt of eerder een eetstoornis hebt gehad, overleg dan met je huisarts of een diëtist voordat je calorieën gaat tellen.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Dit product in andere talen" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/cooked-quinoa.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/kinoa-pismis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochte-quinoa.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/quinoa-cuit.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/quinoa-cocida.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/quinoa-cozida.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/cooked-quinoa.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varena-quinoa.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/cooked-quinoa.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/quinoa-matang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/quinoa-cotta.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/cooked-quinoa.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/cooked-quinoa.html" hreflang="ko" lang="ko">한국어</a> · <strong>Nederlands</strong> · <a href="../../pl/kalorie/gotowana-komosa-ryzowa.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/quinoa-fiarta.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/varenaya-kinoa.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/kokt-quinoa.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/cooked-quinoa.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/varena-kinoa.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/quinoa-nau-chin.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/cooked-quinoa.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a></nav>
+<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a><a href="../editorial-policy.html">Inhoud en bronnen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

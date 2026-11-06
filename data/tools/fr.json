@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "fr", "locale": "fr-FR", "og_locale": "fr_FR", "og_img": "og-image.jpg", "us": false,
+    "skip": "Aller au contenu", "get_app": "Télécharger l’appli", "pill": "Outil gratuit · Sans inscription",
+    "byline": "Par Ali Gürkan Sevilmiş, développeur de Pofu · 6 novembre 2026",
+    "submit": "Calculer",
+    "privacy": "Tout est calculé dans ton navigateur. Rien de ce que tu saisis n’est envoyé ni enregistré.",
+    "f_age": "Âge", "f_system": "Unités", "sys_us": "US (ft, lb)", "sys_metric": "Métrique (cm, kg)",
+    "f_height": "Taille", "a_ft": "Taille, pieds", "a_in": "Taille, pouces", "f_weight": "Poids actuel",
+    "f_activity": "Niveau d’activité",
+    "activity": {
+      "sedentary": "Surtout assise (travail de bureau, peu de sport)",
+      "light": "Légèrement active (sport léger 1 à 3 jours par semaine)",
+      "moderate": "Modérément active (sport 3 à 5 jours par semaine)",
+      "active": "Très active (sport intense 6 à 7 jours par semaine)",
+      "very_active": "Extrêmement active (travail physique et entraînement)"
+    },
+    "errors": {
+      "age": "Saisis un âge entre 18 et 80 ans.",
+      "height": "Saisis ta taille (130–210 cm).",
+      "weight": "Saisis ton poids (35–250 kg).",
+      "activity": "Choisis un niveau d’activité.",
+      "goal": "Choisis un objectif."
+    },
+    "how_h": "Comment fonctionne ce calculateur",
+    "src_h": "Sources",
+    "method_note": "Les formules proviennent des sources publiées ci-dessus et correspondent aux règles utilisées par l’appli Pofu. Cette page n’a pas été relue par une diététicienne ; elle est vérifiée à partir de ces sources et mise à jour quand elles changent.",
+    "faq_h": "Questions fréquentes",
+    "rel_h": "Plus d’outils gratuits",
+    "medical": "Ce calculateur donne des estimations générales pour les adultes, pas un avis médical. Si tu es enceinte ou si tu allaites, si tu as un problème de santé comme une maladie rénale ou un diabète, ou des antécédents de troubles des conduites alimentaires, parles-en à ton médecin ou à une diététicienne avant de changer ton alimentation.",
+    "badge_alt": "Télécharger Pofu sur l’App Store",
+    "foot_nav": "Mentions légales et assistance", "privacy_l": "Confidentialité", "terms_l": "Conditions", "support_l": "Assistance",
+    "updated": "Dernière mise à jour le <time datetime=\"2026-11-06\">6 novembre 2026</time>.",
+    "tm": "Apple, iPhone et App Store sont des marques d’Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Calculateur de protéines pour femmes : besoin par jour | Pofu",
+      "og_title": "Calculateur de protéines pour femmes",
+      "desc": "Calculateur de protéines gratuit pour femmes. Obtiens ton besoin en protéines par jour, en grammes, pour maintenir ton poids, perdre du poids ou prendre du muscle, réparti par repas, avec les études à l’appui.",
+      "h1": "Calculateur de protéines pour femmes",
+      "lede": "De combien de protéines as-tu besoin par jour ? Saisis ton poids et ton objectif pour obtenir une cible quotidienne en grammes et la quantité par repas.",
+      "tool_h": "Calcule ton besoin en protéines",
+      "f_goal": "Objectif",
+      "goals": {"maintain": "Rester en bonne santé et maintenir mon poids", "lose": "Perdre du poids", "muscle": "Prendre du muscle ou gagner en force"},
+      "res_head": "Tes protéines par jour",
+      "s_meal3": "par repas avec 3 repas",
+      "s_meal4": "par repas avec 4 repas",
+      "s_range": "fourchette utilisée dans les études (1,2–2,0 g/kg)",
+      "explain": "Répartir les protéines sur tes repas est plus facile que de tout manger d’un coup. Plus de protéines que cela n’est pas nocif pour la plupart des personnes en bonne santé, mais apporte rarement un bénéfice en plus.",
+      "how": [
+        "<strong>Maintien :</strong> 1,4 g de protéines par kg de poids corporel par jour.",
+        "<strong>Perte de poids :</strong> 1,6 g par kg, car davantage de protéines aident à préserver le muscle quand tu manges moins et rassasient plus longtemps.",
+        "<strong>Prise de muscle :</strong> 1,8 g par kg, avec de la musculation.",
+        "Le résultat est maintenu entre 75 et 230 g par jour, et réparti à parts égales sur 3 ou 4 repas."
+      ],
+      "note": "Le minimum pour éviter une carence est d’environ 0,8 g par kg chez l’adulte. Les valeurs plus élevées ci-dessus concernent les femmes actives et la perte de poids, où les études montrent un bénéfice. Ce sont les mêmes règles que celles de l’appli Pofu.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a> (position de la société sur les protéines et l’exercice). J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg pour les personnes actives).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a> (supplémentation en protéines et musculation : revue systématique et méta-analyse). Br J Sports Med, 2018 (le bénéfice plafonne autour de 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (apports de référence en énergie, glucides, lipides et protéines), 2005 (0,8 g/kg au minimum chez l’adulte)."
+      ],
+      "faq": [
+        ["De combien de protéines une femme a-t-elle besoin par jour ?", "Le minimum pour un adulte est d’environ 0,8 g par kg de poids corporel. Pour les femmes actives et pendant une perte de poids, les études soutiennent environ 1,2 à 2,0 g par kg. Pour une femme de 65 kg qui perd du poids, ce calculateur donne 104 g par jour."],
+        ["100 g de protéines par jour, est-ce trop pour une femme ?", "Pour la plupart des femmes en bonne santé, non. C’est dans la fourchette étudiée chez les personnes actives. Si tu as une maladie rénale, demande d’abord l’avis de ton médecin."],
+        ["Combien de protéines dois-je manger par repas ?", "Divise ton objectif quotidien par le nombre de repas. Avec 104 g par jour et 3 repas, cela fait environ 35 g par repas, par exemple un blanc de poulet ou un bol de fromage blanc avec des œufs."],
+        ["Les protéines aident-elles à perdre du poids ?", "Elles t’aident à garder ton muscle quand tu manges moins et elles rassasient plus longtemps. La perte de poids vient quand même d’un apport en calories inférieur à ta dépense."],
+        ["Dois-je utiliser mon poids actuel ou mon poids cible ?", "Utilise ton poids actuel. Si ton poids est très élevé, un poids de référence plus bas donne un chiffre plus réaliste ; le plafond de 230 g par jour garde le résultat raisonnable."]
+      ],
+      "bridge": "Pofu fixe ton objectif de protéines avec cette même règle et te montre ce que tu as déjà mangé aujourd’hui, à partir de photos, de codes-barres ou d’une recherche."
+    },
+    "macro": {
+      "title": "Calculateur de macros pour femmes : par jour | Pofu",
+      "og_title": "Calculateur de macros pour femmes",
+      "desc": "Calculateur de macros gratuit pour femmes. Obtiens tes calories quotidiennes et tes grammes de protéines, de glucides et de lipides pour maintenir ton poids, perdre du poids ou prendre du muscle.",
+      "h1": "Calculateur de macros pour femmes",
+      "lede": "Obtiens tes calories quotidiennes réparties en protéines, glucides et lipides, en grammes et en part de tes calories.",
+      "tool_h": "Calcule tes macros",
+      "f_goal": "Objectif",
+      "goals": {"maintain": "Maintenir mon poids", "lose_slow": "Perdre du poids lentement (environ −250 kcal par jour)", "lose": "Perdre du poids (environ −400 kcal par jour)", "lose_fast": "Perdre du poids plus vite (environ −550 kcal par jour)", "muscle": "Prendre du muscle (environ +225 kcal par jour)"},
+      "res_head": "Tes calories et tes macros par jour",
+      "s_p": "Protéines", "s_c": "Glucides", "s_f": "Lipides",
+      "pct": "{p} % des calories",
+      "floor": "Tes calories sont fixées à 1 200 kcal, l’objectif quotidien le plus bas que nous proposons. Descendre plus bas n’est pas recommandé sans l’avis d’un médecin ou d’une diététicienne.",
+      "explain": "Les protéines passent en premier, les lipides sont fixés à 28 % des calories et les glucides complètent le reste. Atteindre tes calories compte plus que d’atteindre chaque gramme ; à quelques grammes près, c’est très bien.",
+      "how": [
+        "<strong>Calories :</strong> l’équation de Mifflin-St Jeor pour les femmes, multipliée par ton facteur d’activité (1,2 à 1,9), plus ton objectif. Jamais en dessous de 1 200 kcal.",
+        "<strong>Protéines :</strong> 1,4 g par kg pour maintenir, 1,6 g par kg pour perdre du poids, 1,8 g par kg pour prendre du muscle (75–230 g).",
+        "<strong>Lipides :</strong> 28 % des calories, au moins 40 g par jour.",
+        "<strong>Glucides :</strong> les calories restantes, au moins 50 g par jour. Les protéines et les glucides apportent 4 kcal par gramme, les lipides 9 kcal."
+      ],
+      "note": "Des lipides à 28 % se situent dans la fourchette de 20 à 35 % recommandée pour les adultes, et les glucides atteignent en général 40 à 50 %. Ce sont les mêmes règles que celles de l’appli Pofu.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (nouvelle équation de prédiction de la dépense énergétique de repos chez les personnes en bonne santé). Am J Clin Nutr, 1990.",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a> (apports de référence en énergie, glucides, lipides et protéines), 2005 (lipides 20–35 %, glucides 45–65 % des calories).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a> (position de la société sur les protéines et l’exercice). J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Quelle répartition de macros est bonne pour une femme ?", "Il n’existe pas de répartition idéale unique. Une répartition courante et tenable est d’environ 25 à 30 % de protéines, 28 à 30 % de lipides et le reste en glucides. Choisis celle que tu peux tenir et commence par atteindre tes calories."],
+        ["Quelles macros pour perdre du poids ?", "Mange moins de calories que tu n’en dépenses et garde des protéines élevées (environ 1,6 g par kg). Les lipides et les glucides peuvent se répartir comme tu préfères."],
+        ["Dois-je atteindre mes macros exactement ?", "Non. Rester à environ 10 g près pour les protéines et les glucides, et à 5 g près pour les lipides, c’est suffisant. Ta moyenne sur la semaine compte plus qu’une seule journée."],
+        ["Le régime pauvre en glucides est-il meilleur pour les femmes ?", "Les études qui comparent des régimes pauvres en glucides et pauvres en lipides à calories égales trouvent une perte de poids similaire. Choisis ce qui convient à ton alimentation et à ton énergie."],
+        ["Les macros changent-elles pendant mon cycle menstruel ?", "Pas beaucoup. Certaines femmes ont plus faim avant leurs règles ; notre calculateur de calories selon le cycle ajoute une petite marge facultative pour cette phase."]
+      ],
+      "bridge": "Pofu suit ces macros pour toi : prends ton repas en photo et l’appli estime les calories, les protéines, les glucides et les lipides, que tu peux corriger."
+    },
+    "deficit": {
+      "title": "Calculateur de déficit calorique avec date cible | Pofu",
+      "og_title": "Calculateur de déficit calorique par date cible",
+      "desc": "Calculateur de déficit calorique gratuit pour femmes. Saisis ton poids cible et ta date pour voir combien de calories par jour il te faut, et si le rythme est raisonnable.",
+      "h1": "Calculateur de déficit calorique par date cible",
+      "lede": "Tu veux atteindre un poids à une certaine date ? Vois combien de calories par jour cela demande, et une date réaliste si le rythme est trop rapide.",
+      "tool_h": "Calcule ton déficit",
+      "f_goal_kg": "Poids cible",
+      "f_date": "Date cible",
+      "errors": {
+        "goalkg": "Saisis un poids cible inférieur à ton poids actuel. Cet outil sert à perdre du poids.",
+        "date": "Choisis une date cible dans le futur.",
+        "nodeficit": "Tes calories d’entretien sont déjà proches de 1 200 kcal, nous ne pouvons donc pas proposer de déficit raisonnable. Parle de ton objectif à un médecin ou à une diététicienne."
+      },
+      "res_ok": "Pour atteindre {goal} d’ici le {date}, mange environ",
+      "s_target": "Calories par jour à un rythme sûr",
+      "s_deficit": "déficit quotidien",
+      "s_week": "perte attendue par semaine",
+      "s_maint": "calories d’entretien (TDEE)",
+      "too_fast": "Cette date demande un déficit de {need} kcal par jour, soit plus que les {max} kcal par jour que nous proposons. À un rythme sûr de {target} kcal par jour, tu atteindrais {goal} vers le {date}.",
+      "low_goal": "Ton poids cible correspond à un IMC inférieur à 18,5 pour ta taille, ce qui est considéré comme de la maigreur. Parles-en à ton médecin.",
+      "explain": "Ceci est une estimation : la perte de poids ralentit généralement avec le temps et l’eau fait varier la balance d’un jour à l’autre, surtout avant les règles. Compare des moyennes sur la semaine, pas des jours isolés.",
+      "how": [
+        "<strong>Entretien :</strong> l’équation de Mifflin-St Jeor pour les femmes, multipliée par ton facteur d’activité (1,2 à 1,9).",
+        "<strong>Déficit nécessaire :</strong> le poids à perdre × 7 700 kcal par kg, divisé par le nombre de jours jusqu’à ta date.",
+        "<strong>Limite de sécurité :</strong> au maximum 550 kcal par jour sous l’entretien, et jamais moins de 1 200 kcal par jour. Si ta date demande plus, le calculateur indique quand tu y arriverais à un rythme sûr.",
+        "Le rythme le plus rapide est d’environ 0,5 kg par semaine, en accord avec les conseils courants de santé publique."
+      ],
+      "note": "7 700 kcal par kg est une estimation très répandue. La perte réelle est souvent plus lente après les premières semaines, car ton corps dépense moins d’énergie quand tu es plus légère ; considère donc la date comme un repère.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> (quel déficit énergétique faut-il par unité de poids perdu ?) Int J Obes, 2008.",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a> (nouvelle équation de prédiction de la dépense énergétique de repos chez les personnes en bonne santé). Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (un modèle de recherche sur le ralentissement de la perte de poids au fil du temps).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (environ 0,5 à 1 kg par semaine)."
+      ],
+      "faq": [
+        ["Quelle taille doit avoir mon déficit calorique ?", "Pour la plupart des femmes, 250 à 550 kcal par jour sous l’entretien est tenable. Cela correspond à environ 0,25 à 0,5 kg par semaine. Les déficits plus importants sont plus difficiles à tenir et peuvent coûter du muscle."],
+        ["Combien de temps faut-il pour perdre 5 kg ?", "Avec un déficit de 550 kcal par jour, environ 10 semaines ; avec 400 kcal par jour, environ 14 semaines. Dans la réalité, c’est souvent un peu plus lent."],
+        ["Pourquoi ce calculateur ne me laisse-t-il pas manger moins de 1 200 kcal ?", "En dessous de 1 200 kcal par jour, il est difficile de couvrir ses besoins en nutriments avec l’alimentation. Descendre plus bas ne devrait se faire que sous suivi médical."],
+        ["7 700 calories font-elles vraiment un kilo ?", "C’est une estimation approximative pour la graisse corporelle. Au début, une partie de la perte est de l’eau, et plus tard le corps s’adapte ; la règle est donc un repère, pas une promesse."],
+        ["Pourquoi ai-je pris du poids alors que j’étais en déficit ?", "L’eau, le sel, un repas plus copieux et les jours avant les règles peuvent faire monter la balance pendant quelques jours. Regarde la tendance sur 2 à 4 semaines."]
+      ],
+      "bridge": "Dans Pofu, tu peux fixer un poids cible et un rythme ; l’appli calcule ton objectif quotidien avec ces mêmes règles et affiche ta progression sous forme de tendance hebdomadaire."
+    },
+    "bmi": {
+      "title": "Calculateur IMC pour femmes : poids santé selon ta taille | Pofu",
+      "og_title": "Calculateur IMC pour femmes",
+      "desc": "Calculateur IMC gratuit pour les femmes adultes. Vois ton indice de masse corporelle, ce qu’il signifie et la fourchette de poids santé pour ta taille, avec les limites de l’IMC expliquées.",
+      "h1": "Calculateur IMC pour femmes",
+      "lede": "Calcule ton indice de masse corporelle et vois la fourchette de poids considérée comme saine pour ta taille.",
+      "tool_h": "Calcule ton IMC",
+      "res_head": "Ton IMC",
+      "cats": {"under": "Insuffisance pondérale (moins de 18,5)", "normal": "Poids normal (18,5 à 24,9)", "over": "Surpoids (25 à 29,9)", "obese": "Obésité (30 ou plus)"},
+      "range": "Une fourchette de poids saine pour ta taille se situe autour de {low} à {high}.",
+      "explain": "L’IMC est un repère rapide, pas un diagnostic. Il ne distingue pas le muscle de la graisse : des femmes très musclées peuvent donc avoir un IMC élevé, et il ne s’applique pas pendant la grossesse.",
+      "how": [
+        "<strong>Formule :</strong> poids en kg divisé par la taille en mètres au carré (kg/m²).",
+        "<strong>Catégories (OMS, adultes) :</strong> moins de 18,5 insuffisance pondérale, 18,5–24,9 poids normal, 25–29,9 surpoids, 30 ou plus obésité.",
+        "<strong>Fourchette saine :</strong> les poids qui donnent un IMC de 18,5 à 24,9 pour ta taille.",
+        "La même formule sert pour les femmes et les hommes ; elle n’est pas conçue pour les enfants, les adolescents ni la grossesse."
+      ],
+      "note": "Pour certaines populations asiatiques, l’OMS indique que les risques pour la santé commencent à un IMC plus bas (à partir d’environ 23). Le tour de taille et ton ressenti apportent un contexte utile au chiffre.",
+      "sources": [
+        "OMS. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (aide-mémoire sur l’obésité et le surpoids).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a> (indice de masse corporelle approprié pour les populations asiatiques). Lancet, 2004."
+      ],
+      "faq": [
+        ["Quel est un IMC sain pour une femme ?", "Chez l’adulte, un IMC de 18,5 à 24,9 correspond à un poids normal. Les mêmes fourchettes servent pour les femmes et pour les hommes."],
+        ["L’IMC est-il différent pour les femmes ?", "La formule et les catégories sont les mêmes. À IMC égal, les femmes ont en général plus de masse grasse que les hommes, ce qui explique en partie pourquoi l’IMC n’est qu’un repère approximatif."],
+        ["L’IMC est-il fiable ?", "Il est utile pour des groupes et comme premier contrôle, mais il ne mesure pas la masse grasse. Le muscle, l’âge et la morphologie changent ce que signifie un IMC donné pour toi."],
+        ["Quel poids devrais-je avoir pour ma taille ?", "Tout poids qui donne un IMC entre 18,5 et 24,9 est dans la fourchette saine. Pour une taille de 165 cm, cela correspond à environ 50 à 68 kg."],
+        ["Puis-je utiliser l’IMC quand je suis enceinte ?", "Non. Pendant la grossesse, suis les conseils de ta sage-femme ou de ton médecin sur la prise de poids."]
+      ],
+      "bridge": "Pofu se concentre sur les habitudes plutôt que sur un seul chiffre : calories et protéines quotidiennes, tendance de poids hebdomadaire et jours joker pour qu’un jour manqué ne casse pas ta série."
+    }
+  }
+}

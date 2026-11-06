@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/sv/kalorier/kokt-pasta.html", "url": "https://getpofu.com/sv/kalorier/kokt-pasta.html", "name": "Hur många kalorier innehåller Kokt pasta? (1 skål, 140 g)", "description": "Kokt pasta: cirka 220 kcal per portion (1 skål, 140 g); 8 g protein, 43 g kolhydrater, 1,3 g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.", "inLanguage": "sv", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Kokt pasta", "nutrition": {"@type": "NutritionInformation", "servingSize": "140 g", "calories": "220 kcal", "proteinContent": "8 g", "carbohydrateContent": "43 g", "fatContent": "1.3 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/sv/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorier", "item": "https://getpofu.com/sv/kalorier/"}, {"@type": "ListItem", "position": 3, "name": "Kokt pasta", "item": "https://getpofu.com/sv/kalorier/kokt-pasta.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/sv/kalorier/kokt-pasta.html", "url": "https://getpofu.com/sv/kalorier/kokt-pasta.html", "name": "Hur många kalorier innehåller Kokt pasta? (1 skål, 140 g)", "description": "Kokt pasta: cirka 220 kcal per portion (1 skål, 140 g); 8 g protein, 43 g kolhydrater, 1,3 g fett. Typiska värden från öppna livsmedelsdatabaser och Pofu-appen.", "inLanguage": "sv", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Kokt pasta", "nutrition": {"@type": "NutritionInformation", "servingSize": "140 g", "calories": "220 kcal", "proteinContent": "8 g", "carbohydrateContent": "43 g", "fatContent": "1.3 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/sv/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorier", "item": "https://getpofu.com/sv/kalorier/"}, {"@type": "ListItem", "position": 3, "name": "Kokt pasta", "item": "https://getpofu.com/sv/kalorier/kokt-pasta.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/sv/kalorier/kokt-pasta.html#faq", "inLanguage": "sv", "mainEntity": [{"@type": "Question", "name": "Kokt pasta: hur många kalorier är det i 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Cirka 157 kcal per 100 g, med 5,7 g protein, 30,7 g kolhydrater och 0,9 g fett."}}, {"@type": "Question", "name": "Kokt pasta: är det proteinrikt?", "acceptedAnswer": {"@type": "Answer", "text": "Det innehåller en del protein: 8 g per portion, cirka 15 % av kalorierna."}}, {"@type": "Question", "name": "Kokt pasta: hur loggar jag det i Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Ta ett foto av din tallrik eller sök på namnet och ställ sedan in portionen på det du faktiskt åt. Du kan justera uppskattningen, och Pofu kommer ihåg din justering nästa gång."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mindre eller större portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Kalorier</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">En halv portion (70 g)</th><td>110 kcal</td><td>4 g</td></tr>
+<tr><th scope="row">Vanlig portion (140 g)</th><td>220 kcal</td><td>8 g</td></tr>
+<tr><th scope="row">En och en halv portion (210 g)</th><td>330 kcal</td><td>12 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Varifrån kalorierna kommer</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:15%"></span><span class="sc" style="width:80%"></span><span class="sf" style="width:5%"></span></div>
+<p>15 % av kalorierna kommer från protein, 80 % från kolhydrater och 5 % från fett. Kort sagt: det mesta av kalorierna kommer från kolhydrater.</p>
+<p>En portion motsvarar ungefär 11 % av en dag på 2 000 kcal, referensvärdet som används på livsmedelsetiketter.</p>
+</section>
 <section id="why">
 <h2>Därför varierar värdet</h2>
 <p>Resultatet beror på hur rätten tillagats och hur mycket olja, smör eller socker den innehåller. Tillagad vikt och torr vikt skiljer sig mycket, därför ligger en toppad och en struken portion långt ifrån varandra. Märke, storlek och tjocklek påverkar också värdet.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Så loggar du det i Pofu</h2>
 <p>Pofu är vår app. För att logga det här livsmedlet fotograferar du tallriken: Pofu uppskattar rätten och portionen och visar ett säkerhetsvärde, så att du ser hur säker uppskattningen är och kan justera den. Du kan också söka på namn eller skanna en streckkod och ställa in portionen på det du faktiskt åt. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_sv&amp;mt=8">Hämta Pofu i App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-appen: logga en måltid från ett foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Skärminspelning från Pofu-appen (engelskt gränssnitt): ta ett foto, kontrollera uppskattningen och lägg till den för idag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Liknande livsmedel</h2>
@@ -234,10 +258,25 @@
 <li><a href="risgrynsgrot.html">Risgrynsgröt</a> <span class="k">· 258 kcal (1 portion, 300 g)</span></li>
 <li><a href="potatismos.html">Potatismos</a> <span class="k">· 176 kcal (1 portion, 200 g)</span></li>
 </ul>
+<h3>Lättare alternativ i samma grupp</h3>
+<ul class="foodlist">
+<li><a href="kokt-quinoa.html">Kokt quinoa</a> <span class="k">· 119 kcal per 100 g</span></li>
+<li><a href="kokta-linser.html">Kokta linser</a> <span class="k">· 115 kcal per 100 g</span></li>
+<li><a href="kokt-brunt-ris.html">Kokt brunt ris</a> <span class="k">· 110 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Alla livsmedel</a></p>
 </section>
+<section id="faq">
+<h2>Frågor om det här livsmedlet</h2>
+<h3>Kokt pasta: hur många kalorier är det i 100 g?</h3>
+<p>Cirka 157 kcal per 100 g, med 5,7 g protein, 30,7 g kolhydrater och 0,9 g fett.</p>
+<h3>Kokt pasta: är det proteinrikt?</h3>
+<p>Det innehåller en del protein: 8 g per portion, cirka 15 % av kalorierna.</p>
+<h3>Kokt pasta: hur loggar jag det i Pofu?</h3>
+<p>Ta ett foto av din tallrik eller sök på namnet och ställ sedan in portionen på det du faktiskt åt. Du kan justera uppskattningen, och Pofu kommer ihåg din justering nästa gång.</p>
+</section>
 <section id="source">
-<p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion.</p>
+<p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion. <a href="../editorial-policy.html">Så tar vi fram vårt innehåll och våra källor</a>.</p>
 <div class="note"><p>Den här sidan är allmän information och ingen medicinsk rådgivning. Om du är gravid, ammar, har en sjukdom eller tidigare har haft en ätstörning, prata med din läkare eller en dietist innan du börjar räkna kalorier.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Det här livsmedlet på andra språk" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/cooked-pasta.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/makarna-pismis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochte-nudeln.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/pates-cuites.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/pasta-cocida.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/macarrao-cozido.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/cooked-pasta.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varene-testoviny.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/cooked-pasta.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/pasta-matang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/pasta-cotta.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/cooked-pasta.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/cooked-pasta.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/gekookte-pasta.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/gotowany-makaron.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/paste-fierte.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/varenaya-pasta.html" hreflang="ru" lang="ru">Русский</a> · <strong>Svenska</strong> · <a href="../../th/khalori/cooked-pasta.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/varena-pasta.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/mi-ong-nau-chin.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/cooked-pasta.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Utforska"><strong>Utforska</strong><a href="../guides.html">Guider</a><a href="../tools.html">Verktyg</a><a href="./" aria-current="true">Kalorier</a><a href="../questions/">Frågor</a><a href="../compare.html">Jämförelser</a></nav>
+<nav aria-label="Utforska"><strong>Utforska</strong><a href="../guides.html">Guider</a><a href="../tools.html">Verktyg</a><a href="./" aria-current="true">Kalorier</a><a href="../questions/">Frågor</a><a href="../compare.html">Jämförelser</a><a href="../editorial-policy.html">Innehåll och källor</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

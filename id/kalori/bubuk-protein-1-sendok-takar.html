@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html", "url": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html", "name": "Berapa kalori dalam Bubuk protein? (1 sendok takar, 30 g)", "description": "Bubuk protein: sekitar 120 kkal per porsi (1 sendok takar, 30 g); 24 g protein, 3 g karbohidrat, 1,5 g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.", "inLanguage": "id", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Bubuk protein", "nutrition": {"@type": "NutritionInformation", "servingSize": "30 g", "calories": "120 kcal", "proteinContent": "24 g", "carbohydrateContent": "3 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/id/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/id/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Bubuk protein", "item": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html", "url": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html", "name": "Berapa kalori dalam Bubuk protein? (1 sendok takar, 30 g)", "description": "Bubuk protein: sekitar 120 kkal per porsi (1 sendok takar, 30 g); 24 g protein, 3 g karbohidrat, 1,5 g lemak. Nilai umum dari basis data pangan publik dan aplikasi Pofu.", "inLanguage": "id", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Bubuk protein", "nutrition": {"@type": "NutritionInformation", "servingSize": "30 g", "calories": "120 kcal", "proteinContent": "24 g", "carbohydrateContent": "3 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/id/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/id/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Bubuk protein", "item": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/id/kalori/bubuk-protein-1-sendok-takar.html#faq", "inLanguage": "id", "mainEntity": [{"@type": "Question", "name": "Bubuk protein: berapa kalori dalam 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Sekitar 400 kcal per 100 g, dengan 80 g protein, 10 g karbohidrat, dan 5 g lemak."}}, {"@type": "Question", "name": "Bubuk protein: apakah tinggi protein?", "acceptedAnswer": {"@type": "Answer", "text": "Ya. Satu porsi mengandung 24 g protein, sekitar 80% dari kalorinya."}}, {"@type": "Question", "name": "Bubuk protein: bagaimana mencatatnya di Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porsi lebih kecil atau lebih besar</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porsi</th><th scope="col">Kalori</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Setengah porsi (15 g)</th><td>60 kcal</td><td>12 g</td></tr>
+<tr><th scope="row">Porsi biasa (30 g)</th><td>120 kcal</td><td>24 g</td></tr>
+<tr><th scope="row">Satu setengah porsi (45 g)</th><td>180 kcal</td><td>36 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Dari mana kalorinya berasal</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:79%"></span><span class="sc" style="width:10%"></span><span class="sf" style="width:11%"></span></div>
+<p>79% kalori berasal dari protein, 10% dari karbohidrat, dan 11% dari lemak. Singkatnya: sumber protein yang baik.</p>
+<p>Satu porsi sekitar 6% dari kebutuhan 2.000 kcal sehari, nilai acuan yang dipakai pada label makanan.</p>
+</section>
 <section id="why">
 <h2>Mengapa angkanya bisa berbeda</h2>
 <p>Yang menentukan adalah potongan atau produknya, lemak yang dibuang atau dibiarkan, dan cara memasaknya. Kulit, bumbu rendam, saus, dan minyak goreng menambah kalori yang tidak terlihat dari beratnya. Saat membandingkan, perhatikan apakah beratnya dihitung matang atau mentah.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Cara mencatatnya di Pofu</h2>
 <p>Pofu adalah aplikasi kami. Untuk mencatat makanan ini, foto piringmu: Pofu memperkirakan hidangan dan porsinya, lalu menampilkan skor keyakinan agar kamu tahu seberapa pasti perkiraannya dan bisa mengubahnya. Kamu juga bisa mencari berdasarkan nama atau memindai barcode, lalu menyesuaikan porsi dengan jumlah yang sebenarnya kamu makan. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_id&amp;mt=8">Unduh Pofu di App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikasi Pofu: mencatat makanan dari foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Rekaman layar dari aplikasi Pofu (antarmuka dalam bahasa Inggris): ambil foto, cek perkiraannya, tambahkan ke hari ini.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Makanan serupa</h2>
@@ -234,10 +258,25 @@
 <li><a href="cap-cay-ayam.html">Cap cay ayam</a> <span class="k">· 183 kcal (1 piring, 220 g)</span></li>
 <li><a href="tahu-goreng.html">Tahu goreng tepung</a> <span class="k">· 150 kcal (1 porsi, 100 g)</span></li>
 </ul>
+<h3>Pilihan yang lebih ringan dalam kelompok yang sama</h3>
+<ul class="foodlist">
+<li><a href="dada-ayam-panggang.html">Dada ayam panggang</a> <span class="k">· 130 kcal per 100 g</span></li>
+<li><a href="dada-kalkun.html">Dada kalkun</a> <span class="k">· 107 kcal per 100 g</span></li>
+<li><a href="tuna-kalengan-dalam-air.html">Tuna kalengan (dalam air)</a> <span class="k">· 100 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Semua makanan</a></p>
 </section>
+<section id="faq">
+<h2>Pertanyaan tentang makanan ini</h2>
+<h3>Bubuk protein: berapa kalori dalam 100 g?</h3>
+<p>Sekitar 400 kcal per 100 g, dengan 80 g protein, 10 g karbohidrat, dan 5 g lemak.</p>
+<h3>Bubuk protein: apakah tinggi protein?</h3>
+<p>Ya. Satu porsi mengandung 24 g protein, sekitar 80% dari kalorinya.</p>
+<h3>Bubuk protein: bagaimana mencatatnya di Pofu?</h3>
+<p>Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali.</p>
+</section>
 <section id="source">
-<p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi.</p>
+<p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi. <a href="../editorial-policy.html">Cara kami menyiapkan konten dan sumber kami</a>.</p>
 <div class="note"><p>Halaman ini hanya berisi informasi umum dan bukan nasihat medis. Jika kamu sedang hamil, menyusui, memiliki kondisi medis, atau pernah mengalami gangguan makan, bicarakan dengan dokter atau ahli gizi sebelum menghitung kalori.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Makanan ini dalam bahasa lain" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/protein-powder.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/protein-tozu.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/proteinpulver.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/poudre-proteinee.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/proteina-en-polvo.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/whey.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/protein-powder.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/proteinovy-prasek.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/protein-powder.html" hreflang="hi" lang="hi">हिन्दी</a> · <strong>Bahasa Indonesia</strong> · <a href="../../it/calorie/proteine-in-polvere.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/protein-powder-1-scoop.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/protein-powder-1-scoop.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/eiwitpoeder.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/odzywka-biakowa.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/proteine-pudra.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/proteinovyy-poroshok.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/proteinpulver.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/protein-powder-1-scoop.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/proteyinovyy-poroshok.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/bot-protein-1-muong.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/protein-powder-1-scoop.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Jelajahi"><strong>Jelajahi</strong><a href="../guides.html">Panduan</a><a href="../tools.html">Alat</a><a href="./" aria-current="true">Kalori</a><a href="../questions/">Tanya Jawab</a><a href="../compare.html">Perbandingan</a></nav>
+<nav aria-label="Jelajahi"><strong>Jelajahi</strong><a href="../guides.html">Panduan</a><a href="../tools.html">Alat</a><a href="./" aria-current="true">Kalori</a><a href="../questions/">Tanya Jawab</a><a href="../compare.html">Perbandingan</a><a href="../editorial-policy.html">Konten dan sumber</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

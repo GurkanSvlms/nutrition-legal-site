@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/th/khalori/cooked-quinoa.html", "url": "https://getpofu.com/th/khalori/cooked-quinoa.html", "name": "ควินัวสุก กี่แคลอรี? (1 ถ้วย, 185 g)", "description": "ควินัวสุก: ประมาณ 220 kcal ต่อ 1 เสิร์ฟ (1 ถ้วย, 185 g) โปรตีน 8 g คาร์โบไฮเดรต 39 g ไขมัน 3.5 g เป็นค่าประมาณโดยทั่วไป", "inLanguage": "th", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "ควินัวสุก", "nutrition": {"@type": "NutritionInformation", "servingSize": "185 g", "calories": "220 kcal", "proteinContent": "8 g", "carbohydrateContent": "39 g", "fatContent": "3.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/th/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "แคลอรี", "item": "https://getpofu.com/th/khalori/"}, {"@type": "ListItem", "position": 3, "name": "ควินัวสุก", "item": "https://getpofu.com/th/khalori/cooked-quinoa.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/th/khalori/cooked-quinoa.html", "url": "https://getpofu.com/th/khalori/cooked-quinoa.html", "name": "ควินัวสุก กี่แคลอรี? (1 ถ้วย, 185 g)", "description": "ควินัวสุก: ประมาณ 220 kcal ต่อ 1 เสิร์ฟ (1 ถ้วย, 185 g) โปรตีน 8 g คาร์โบไฮเดรต 39 g ไขมัน 3.5 g เป็นค่าประมาณโดยทั่วไป", "inLanguage": "th", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "ควินัวสุก", "nutrition": {"@type": "NutritionInformation", "servingSize": "185 g", "calories": "220 kcal", "proteinContent": "8 g", "carbohydrateContent": "39 g", "fatContent": "3.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/th/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "แคลอรี", "item": "https://getpofu.com/th/khalori/"}, {"@type": "ListItem", "position": 3, "name": "ควินัวสุก", "item": "https://getpofu.com/th/khalori/cooked-quinoa.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/th/khalori/cooked-quinoa.html#faq", "inLanguage": "th", "mainEntity": [{"@type": "Question", "name": "ควินัวสุก: 100 g มีกี่แคลอรี่", "acceptedAnswer": {"@type": "Answer", "text": "ประมาณ 119 kcal ต่อ 100 g โดยมีโปรตีน 4.3 g คาร์โบไฮเดรต 21.1 g และไขมัน 1.9 g"}}, {"@type": "Question", "name": "ควินัวสุก: มีโปรตีนสูงไหม", "acceptedAnswer": {"@type": "Answer", "text": "มีโปรตีนอยู่บ้าง: 8 g ต่อหนึ่งหน่วยบริโภค คิดเป็นประมาณ 15% ของแคลอรี่"}}, {"@type": "Question", "name": "ควินัวสุก: บันทึกใน Pofu อย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ถ่ายรูปจานอาหารของคุณหรือค้นหาจากชื่อ แล้วปรับปริมาณให้ตรงกับที่กินจริง คุณแก้ค่าประมาณได้ และ Pofu จะจำสิ่งที่คุณแก้ไว้สำหรับครั้งต่อไป"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>ปริมาณน้อยลงหรือมากขึ้น</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">ปริมาณ</th><th scope="col">แคลอรี่</th><th scope="col">โปรตีน</th></tr></thead>
+<tbody>
+<tr><th scope="row">ครึ่งหนึ่งของหนึ่งหน่วยบริโภค (92 g)</th><td>110 kcal</td><td>4 g</td></tr>
+<tr><th scope="row">หนึ่งหน่วยบริโภคปกติ (185 g)</th><td>220 kcal</td><td>8 g</td></tr>
+<tr><th scope="row">หนึ่งหน่วยบริโภคครึ่ง (278 g)</th><td>330 kcal</td><td>12 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>แคลอรี่มาจากไหน</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:15%"></span><span class="sc" style="width:71%"></span><span class="sf" style="width:14%"></span></div>
+<p>แคลอรี่ 15% มาจากโปรตีน 71% จากคาร์โบไฮเดรต และ 14% จากไขมัน สรุปสั้น ๆ: แคลอรี่ส่วนใหญ่มาจากคาร์โบไฮเดรต</p>
+<p>หนึ่งหน่วยบริโภคคิดเป็นประมาณ 11% ของวันที่กิน 2,000 kcal ซึ่งเป็นค่าอ้างอิงที่ใช้บนฉลากอาหาร</p>
+</section>
 <section id="why">
 <h2>ทำไมตัวเลขจึงต่างกันได้</h2>
 <p>ผลลัพธ์ขึ้นอยู่กับวิธีปรุงและปริมาณน้ำมัน เนย หรือน้ำตาลที่ใส่ น้ำหนักตอนสุกกับตอนแห้งต่างกันมาก ดังนั้นจานที่ตักพูนกับจานที่ตักเสมอปากจึงต่างกันมาก ยี่ห้อ ขนาด และความหนาก็ทำให้ตัวเลขเปลี่ยนด้วย</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>วิธีบันทึกใน Pofu</h2>
 <p>Pofu คือแอปของเรา หากต้องการบันทึกอาหารนี้ ให้ถ่ายรูปจานอาหารของคุณ Pofu จะประเมินอาหารและปริมาณ พร้อมแสดงคะแนนความเชื่อมั่น เพื่อให้คุณเห็นว่าการประเมินแน่นอนเพียงใดและแก้ไขได้ คุณยังค้นหาตามชื่อหรือสแกนบาร์โค้ด แล้วปรับปริมาณให้ตรงกับที่กินจริงได้ <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_th&amp;mt=8">ดาวน์โหลด Pofu บน App Store</a></p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="แอป Pofu: บันทึกมื้ออาหารจากรูปถ่าย"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>บันทึกหน้าจอจากแอป Pofu (หน้าจอเป็นภาษาอังกฤษ): ถ่ายรูป ตรวจค่าประมาณ แล้วเพิ่มลงในวันนี้</figcaption></figure>
 </section>
 <section id="related">
 <h2>อาหารที่คล้ายกัน</h2>
@@ -234,10 +258,25 @@
 <li><a href="sen-kuaitiao.html">เส้นก๋วยเตี๋ยวต้ม (เส้นเปล่า)</a> <span class="k">· 214 kcal (1 ถ้วย, 200 g)</span></li>
 <li><a href="khao-phat-kung.html">ข้าวผัดกุ้ง</a> <span class="k">· 415 kcal (1 จาน, 250 g)</span></li>
 </ul>
+<h3>ตัวเลือกที่เบากว่าในกลุ่มเดียวกัน</h3>
+<ul class="foodlist">
+<li><a href="banana.html">กล้วย</a> <span class="k">· 88 kcal ต่อ 100 g</span></li>
+<li><a href="sweet-potato.html">มันเทศ</a> <span class="k">· 88 kcal ต่อ 100 g</span></li>
+<li><a href="boiled-potato.html">มันฝรั่งต้ม</a> <span class="k">· 87 kcal ต่อ 100 g</span></li>
+</ul>
 <p><a href="./">อาหารทั้งหมด</a></p>
 </section>
+<section id="faq">
+<h2>คำถามเกี่ยวกับอาหารนี้</h2>
+<h3>ควินัวสุก: 100 g มีกี่แคลอรี่</h3>
+<p>ประมาณ 119 kcal ต่อ 100 g โดยมีโปรตีน 4.3 g คาร์โบไฮเดรต 21.1 g และไขมัน 1.9 g</p>
+<h3>ควินัวสุก: มีโปรตีนสูงไหม</h3>
+<p>มีโปรตีนอยู่บ้าง: 8 g ต่อหนึ่งหน่วยบริโภค คิดเป็นประมาณ 15% ของแคลอรี่</p>
+<h3>ควินัวสุก: บันทึกใน Pofu อย่างไร</h3>
+<p>ถ่ายรูปจานอาหารของคุณหรือค้นหาจากชื่อ แล้วปรับปริมาณให้ตรงกับที่กินจริง คุณแก้ค่าประมาณได้ และ Pofu จะจำสิ่งที่คุณแก้ไว้สำหรับครั้งต่อไป</p>
+</section>
 <section id="source">
-<p class="fine">ตัวเลขเป็นค่าประมาณโดยทั่วไป ขึ้นอยู่กับสูตรและปริมาณ หากมีแหล่งที่มาจะแสดงลิงก์ไว้</p>
+<p class="fine">ตัวเลขเป็นค่าประมาณโดยทั่วไป ขึ้นอยู่กับสูตรและปริมาณ หากมีแหล่งที่มาจะแสดงลิงก์ไว้ <a href="../editorial-policy.html">เราเตรียมเนื้อหาและแหล่งอ้างอิงอย่างไร</a>.</p>
 <div class="note"><p>หน้านี้ให้ข้อมูลทั่วไปเท่านั้น ไม่ใช่คำแนะนำทางการแพทย์ หากคุณตั้งครรภ์ อยู่ในช่วงให้นมบุตร มีโรคประจำตัว หรือเคยมีภาวะการกินผิดปกติ โปรดปรึกษาแพทย์หรือนักกำหนดอาหารก่อนเริ่มนับแคลอรี</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="อาหารนี้ในภาษาอื่น" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/cooked-quinoa.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/kinoa-pismis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochte-quinoa.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/quinoa-cuit.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/quinoa-cocida.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/quinoa-cozida.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/cooked-quinoa.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varena-quinoa.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/cooked-quinoa.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/quinoa-matang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/quinoa-cotta.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/cooked-quinoa.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/cooked-quinoa.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/gekookte-quinoa.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/gotowana-komosa-ryzowa.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/quinoa-fiarta.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/varenaya-kinoa.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/kokt-quinoa.html" hreflang="sv" lang="sv">Svenska</a> · <strong>ไทย</strong> · <a href="../../uk/kalorii/varena-kinoa.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/quinoa-nau-chin.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/cooked-quinoa.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="สำรวจ"><strong>สำรวจ</strong><a href="../guides.html">คู่มือ</a><a href="../tools.html">เครื่องมือ</a><a href="./" aria-current="true">แคลอรี่</a><a href="../questions/">ถาม-ตอบ</a><a href="../compare.html">เปรียบเทียบ</a></nav>
+<nav aria-label="สำรวจ"><strong>สำรวจ</strong><a href="../guides.html">คู่มือ</a><a href="../tools.html">เครื่องมือ</a><a href="./" aria-current="true">แคลอรี่</a><a href="../questions/">ถาม-ตอบ</a><a href="../compare.html">เปรียบเทียบ</a><a href="../editorial-policy.html">เนื้อหาและแหล่งอ้างอิง</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

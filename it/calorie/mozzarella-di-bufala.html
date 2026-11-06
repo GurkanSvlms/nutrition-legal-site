@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html", "url": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html", "name": "Quante calorie ci sono in Mozzarella di bufala? (1 mozzarella, 125 g)", "description": "Mozzarella di bufala: circa 321 kcal per porzione (1 mozzarella, 125 g); 17,6 g di proteine, 1,8 g di carboidrati, 27,1 g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.", "inLanguage": "it", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Mozzarella di bufala", "nutrition": {"@type": "NutritionInformation", "servingSize": "125 g", "calories": "321 kcal", "proteinContent": "17.6 g", "carbohydrateContent": "1.8 g", "fatContent": "27.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/it/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorie", "item": "https://getpofu.com/it/calorie/"}, {"@type": "ListItem", "position": 3, "name": "Mozzarella di bufala", "item": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html", "url": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html", "name": "Quante calorie ci sono in Mozzarella di bufala? (1 mozzarella, 125 g)", "description": "Mozzarella di bufala: circa 321 kcal per porzione (1 mozzarella, 125 g); 17,6 g di proteine, 1,8 g di carboidrati, 27,1 g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.", "inLanguage": "it", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Mozzarella di bufala", "nutrition": {"@type": "NutritionInformation", "servingSize": "125 g", "calories": "321 kcal", "proteinContent": "17.6 g", "carbohydrateContent": "1.8 g", "fatContent": "27.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/it/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorie", "item": "https://getpofu.com/it/calorie/"}, {"@type": "ListItem", "position": 3, "name": "Mozzarella di bufala", "item": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/it/calorie/mozzarella-di-bufala.html#faq", "inLanguage": "it", "mainEntity": [{"@type": "Question", "name": "Mozzarella di bufala: quante calorie ci sono in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Circa 257 kcal per 100 g, con 14,1 g di proteine, 1,4 g di carboidrati e 21,7 g di grassi."}}, {"@type": "Question", "name": "Mozzarella di bufala: è ricco di proteine?", "acceptedAnswer": {"@type": "Answer", "text": "Ha un po’ di proteine: 17,6 g a porzione, circa il 22% delle sue calorie."}}, {"@type": "Question", "name": "Mozzarella di bufala: come lo registro in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Scatta una foto del piatto o cerca il nome, poi imposta la porzione su ciò che hai mangiato davvero. Puoi correggere la stima, e Pofu ricorda la tua correzione la volta successiva."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porzione più piccola o più grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porzione</th><th scope="col">Calorie</th><th scope="col">Proteine</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mezza porzione (62 g)</th><td>160 kcal</td><td>8,8 g</td></tr>
+<tr><th scope="row">Porzione tipica (125 g)</th><td>321 kcal</td><td>17,6 g</td></tr>
+<tr><th scope="row">Una porzione e mezza (188 g)</th><td>482 kcal</td><td>26,4 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Da dove vengono le calorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:22%"></span><span class="sc" style="width:2%"></span><span class="sf" style="width:76%"></span></div>
+<p>Il 22% delle calorie viene dalle proteine, il 2% dai carboidrati e il 76% dai grassi. In breve: la maggior parte delle calorie viene dai grassi, quindi una piccola variazione di quantità fa una grande differenza.</p>
+<p>Una porzione vale circa il 16% di una giornata da 2.000 kcal, il valore di riferimento usato sulle etichette degli alimenti.</p>
+</section>
 <section id="why">
 <h2>Perché il valore può variare</h2>
 <p>La differenza più grande la fa il grasso. La quantità di olio, burro, formaggio o grasso di frittura e quanto sono colmi il cucchiaio o il mestolo cambiano le calorie più di ogni altra cosa. Anche due piatti dall’aspetto simile possono essere molto distanti.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Come registrarlo in Pofu</h2>
 <p>Pofu è la nostra app. Per registrare questo alimento, fotografa il piatto: Pofu stima il piatto e la porzione e mostra un punteggio di affidabilità, così vedi quanto è sicura la stima e puoi correggerla. Puoi anche cercare per nome o scansionare un codice a barre e regolare la porzione sulla quantità che hai mangiato davvero. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_it&amp;mt=8">Scarica Pofu dall’App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrare un pasto da una foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Registrazione dello schermo dell’app Pofu (interfaccia in inglese): scatta una foto, controlla la stima, aggiungila a oggi.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimenti simili</h2>
@@ -213,10 +237,24 @@
 <li><a href="salmone-al-forno.html">Salmone al forno</a> <span class="k">· 280 kcal (1 porzione, 150 g)</span></li>
 <li><a href="carne-macinata-di-manzo-15-di-grasso.html">Carne macinata di manzo (15% di grasso)</a> <span class="k">· 250 kcal (1 porzione, 100 g)</span></li>
 </ul>
+<h3>Opzioni più leggere dello stesso gruppo</h3>
+<ul class="foodlist">
+<li><a href="salmone-al-forno.html">Salmone al forno</a> <span class="k">· 187 kcal per 100 g</span></li>
+<li><a href="uovo-sodo.html">Uovo sodo</a> <span class="k">· 156 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Tutti gli alimenti</a></p>
 </section>
+<section id="faq">
+<h2>Domande su questo alimento</h2>
+<h3>Mozzarella di bufala: quante calorie ci sono in 100 g?</h3>
+<p>Circa 257 kcal per 100 g, con 14,1 g di proteine, 1,4 g di carboidrati e 21,7 g di grassi.</p>
+<h3>Mozzarella di bufala: è ricco di proteine?</h3>
+<p>Ha un po’ di proteine: 17,6 g a porzione, circa il 22% delle sue calorie.</p>
+<h3>Mozzarella di bufala: come lo registro in Pofu?</h3>
+<p>Scatta una foto del piatto o cerca il nome, poi imposta la porzione su ciò che hai mangiato davvero. Puoi correggere la stima, e Pofu ricorda la tua correzione la volta successiva.</p>
+</section>
 <section id="source">
-<p class="fine">Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione. <a href="https://www.alimentinutrizione.it/tabelle-nutrizionali/164811" rel="nofollow noopener">Fonte</a>.</p>
+<p class="fine">Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione. <a href="https://www.alimentinutrizione.it/tabelle-nutrizionali/164811" rel="nofollow noopener">Fonte</a>. <a href="../editorial-policy.html">Come prepariamo i nostri contenuti e le fonti</a>.</p>
 <div class="note"><p>Questa pagina ha scopo puramente informativo e non è una consulenza medica. Se sei in gravidanza, allatti, hai una patologia o hai sofferto di un disturbo alimentare, parlane con il tuo medico o con un professionista della nutrizione prima di contare le calorie.</p></div>
 </section>
 </main>
@@ -233,7 +271,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Esplora"><strong>Esplora</strong><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a></nav>
+<nav aria-label="Esplora"><strong>Esplora</strong><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a><a href="../editorial-policy.html">Contenuti e fonti</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

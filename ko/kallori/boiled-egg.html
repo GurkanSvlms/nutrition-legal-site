@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ko/kallori/boiled-egg.html", "url": "https://getpofu.com/ko/kallori/boiled-egg.html", "name": "삶은 달걀 칼로리는 얼마일까요? (1개, 50 g)", "description": "삶은 달걀: 약 78 kcal (1회 분량: 1개, 50 g), 단백질 6.3 g, 탄수화물 0.6 g, 지방 5.3 g. 일반적인 평균 추정값입니다.", "inLanguage": "ko", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "삶은 달걀", "nutrition": {"@type": "NutritionInformation", "servingSize": "50 g", "calories": "78 kcal", "proteinContent": "6.3 g", "carbohydrateContent": "0.6 g", "fatContent": "5.3 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ko/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "칼로리", "item": "https://getpofu.com/ko/kallori/"}, {"@type": "ListItem", "position": 3, "name": "삶은 달걀", "item": "https://getpofu.com/ko/kallori/boiled-egg.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ko/kallori/boiled-egg.html", "url": "https://getpofu.com/ko/kallori/boiled-egg.html", "name": "삶은 달걀 칼로리는 얼마일까요? (1개, 50 g)", "description": "삶은 달걀: 약 78 kcal (1회 분량: 1개, 50 g), 단백질 6.3 g, 탄수화물 0.6 g, 지방 5.3 g. 일반적인 평균 추정값입니다.", "inLanguage": "ko", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "삶은 달걀", "nutrition": {"@type": "NutritionInformation", "servingSize": "50 g", "calories": "78 kcal", "proteinContent": "6.3 g", "carbohydrateContent": "0.6 g", "fatContent": "5.3 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ko/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "칼로리", "item": "https://getpofu.com/ko/kallori/"}, {"@type": "ListItem", "position": 3, "name": "삶은 달걀", "item": "https://getpofu.com/ko/kallori/boiled-egg.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ko/kallori/boiled-egg.html#faq", "inLanguage": "ko", "mainEntity": [{"@type": "Question", "name": "삶은 달걀: 100 g에 몇 kcal인가요?", "acceptedAnswer": {"@type": "Answer", "text": "100 g당 약 156 kcal이며, 단백질 12.6 g, 탄수화물 1.2 g, 지방 10.6 g이 들어 있습니다."}}, {"@type": "Question", "name": "삶은 달걀: 단백질이 많은가요?", "acceptedAnswer": {"@type": "Answer", "text": "단백질이 어느 정도 들어 있습니다. 1인분에 6.3 g이며 칼로리의 약 32%입니다."}}, {"@type": "Question", "name": "삶은 달걀: Pofu에는 어떻게 기록하나요?", "acceptedAnswer": {"@type": "Answer", "text": "접시를 사진으로 찍거나 이름으로 검색한 다음, 실제로 먹은 양에 맞게 분량을 설정하세요. 추정값은 수정할 수 있고, Pofu는 다음에 그 수정 내용을 기억합니다."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>더 적거나 더 많은 양</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">양</th><th scope="col">칼로리</th><th scope="col">단백질</th></tr></thead>
+<tbody>
+<tr><th scope="row">반 인분(25 g)</th><td>39 kcal</td><td>3.1 g</td></tr>
+<tr><th scope="row">보통 1인분(50 g)</th><td>78 kcal</td><td>6.3 g</td></tr>
+<tr><th scope="row">1.5인분(75 g)</th><td>117 kcal</td><td>9.4 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>칼로리는 어디에서 오나요</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:33%"></span><span class="sc" style="width:3%"></span><span class="sf" style="width:64%"></span></div>
+<p>칼로리의 33%는 단백질, 3%는 탄수화물, 64%는 지방에서 나옵니다. 한마디로: 칼로리 대부분이 지방에서 나오기 때문에 양이 조금만 달라져도 차이가 큽니다.</p>
+<p>1인분은 식품 라벨의 기준값인 2,000 kcal 하루 섭취량의 약 4%입니다.</p>
+</section>
 <section id="why">
 <h2>수치가 달라지는 이유</h2>
 <p>가장 큰 영향을 주는 것은 지방입니다. 기름, 버터, 치즈, 튀김유가 얼마나 들어가는지, 숟가락이나 국자를 얼마나 가득 채우는지에 따라 칼로리가 크게 달라집니다. 겉보기에 비슷한 두 접시도 차이가 클 수 있습니다.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Pofu에서 기록하는 방법</h2>
 <p>Pofu는 저희가 만든 앱입니다. 이 음식을 기록하려면 접시를 사진으로 찍어 보세요. Pofu가 음식과 양을 추정하고 신뢰도 점수를 보여 주므로, 추정이 얼마나 확실한지 확인하고 직접 고칠 수 있습니다. 이름으로 검색하거나 바코드를 스캔한 뒤 실제 먹은 양에 맞게 분량을 조절할 수도 있습니다. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ko&amp;mt=8">App Store에서 Pofu 받기</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu 앱: 사진으로 식사 기록하기"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofu 앱 화면 녹화(영어 인터페이스): 사진을 찍고, 추정값을 확인한 뒤, 오늘 기록에 추가합니다.</figcaption></figure>
 </section>
 <section id="related">
 <h2>비슷한 음식</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">모든 음식</a></p>
 </section>
+<section id="faq">
+<h2>이 식품에 대한 질문</h2>
+<h3>삶은 달걀: 100 g에 몇 kcal인가요?</h3>
+<p>100 g당 약 156 kcal이며, 단백질 12.6 g, 탄수화물 1.2 g, 지방 10.6 g이 들어 있습니다.</p>
+<h3>삶은 달걀: 단백질이 많은가요?</h3>
+<p>단백질이 어느 정도 들어 있습니다. 1인분에 6.3 g이며 칼로리의 약 32%입니다.</p>
+<h3>삶은 달걀: Pofu에는 어떻게 기록하나요?</h3>
+<p>접시를 사진으로 찍거나 이름으로 검색한 다음, 실제로 먹은 양에 맞게 분량을 설정하세요. 추정값은 수정할 수 있고, Pofu는 다음에 그 수정 내용을 기억합니다.</p>
+</section>
 <section id="source">
-<p class="fine">수치는 일반적인 평균 추정값이며 레시피와 분량에 따라 달라집니다. 출처가 있는 경우 링크를 표시합니다.</p>
+<p class="fine">수치는 일반적인 평균 추정값이며 레시피와 분량에 따라 달라집니다. 출처가 있는 경우 링크를 표시합니다. <a href="../editorial-policy.html">콘텐츠와 출처를 만드는 방법</a>.</p>
 <div class="note"><p>이 페이지는 일반적인 정보 제공을 위한 것이며 의학적 조언이 아닙니다. 임신 중이거나 수유 중이거나, 질환이 있거나, 섭식장애를 겪은 적이 있다면 칼로리를 계산하기 전에 의사나 영양사와 상담하세요.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="다른 언어로 보기" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/boiled-egg.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/yumurta-haslanmis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochtes-ei.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/uf-dur.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/huevo-cocido.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/ovo-cozido.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/boiled-egg.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varene-vejce.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/boiled-egg.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/telur-rebus.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/uovo-sodo.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/boiled-egg.html" hreflang="ja" lang="ja">日本語</a> · <strong>한국어</strong> · <a href="../../nl/calorieen/gekookt-ei.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/jajko-na-twardo.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/ou-fiert.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/varenoe-yaytso.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/kokt-agg.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/boiled-egg.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/varene-yaytse.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/trung-luoc.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/boiled-egg.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="둘러보기"><strong>둘러보기</strong><a href="../guides.html">가이드</a><a href="../tools.html">도구</a><a href="./" aria-current="true">칼로리</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">비교</a></nav>
+<nav aria-label="둘러보기"><strong>둘러보기</strong><a href="../guides.html">가이드</a><a href="../tools.html">도구</a><a href="./" aria-current="true">칼로리</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">비교</a><a href="../editorial-policy.html">콘텐츠와 출처</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

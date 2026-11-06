@@ -1,0 +1,40 @@
+{
+  "food": {
+    "h_port": "Porção menor ou maior",
+    "port_cols": ["Porção", "Calorias", "Proteína"],
+    "port_rows": ["Meia porção ({g} {u})", "Porção típica ({g} {u})", "Uma porção e meia ({g} {u})"],
+    "h_split": "De onde vêm as calorias",
+    "split": "{p}% das calorias vêm da proteína, {c}% dos carboidratos e {f}% da gordura.",
+    "cat": {"fat": "Resumindo: a maior parte das calorias vem da gordura, então uma pequena mudança na quantidade faz grande diferença.", "prot": "Resumindo: uma boa fonte de proteína.", "carb": "Resumindo: a maior parte das calorias vem dos carboidratos.", "light": "Resumindo: um alimento leve, feito principalmente de água.", "mixed": "Resumindo: uma mistura de proteína, carboidratos e gordura."},
+    "ref": "Uma porção é cerca de {pct}% de um dia de 2.000 kcal, o valor de referência usado nos rótulos dos alimentos.",
+    "h_lighter": "Opções mais leves do mesmo grupo",
+    "per100": "por 100 {u}",
+    "h_faq": "Perguntas sobre este alimento",
+    "q100": "{name}: quantas calorias tem em 100 {u}?",
+    "a100": "Cerca de {kcal} kcal por 100 {u}, com {p} g de proteína, {c} g de carboidratos e {f} g de gordura.",
+    "qprot": "{name}: é rico em proteína?",
+    "aprot_high": "Sim. Uma porção tem {p} g de proteína, cerca de {pp}% das suas calorias.",
+    "aprot_mid": "Tem alguma proteína: {p} g por porção, cerca de {pp}% das suas calorias.",
+    "aprot_low": "Não muita: {p} g por porção, cerca de {pp}% das suas calorias. Combine com um alimento proteico, como ovos, iogurte, leguminosas, peixe ou frango, se quiser uma refeição mais saciante.",
+    "qlog": "{name}: como registrar no Pofu?",
+    "alog": "Tire uma foto do seu prato ou busque pelo nome e depois ajuste a porção para o que você realmente comeu. Você pode corrigir a estimativa, e o Pofu lembra da sua correção da próxima vez.",
+    "video_caption": "Gravação de tela do app Pofu (interface em inglês): tire uma foto, confira a estimativa e adicione ao dia de hoje.",
+    "video_alt": "App Pofu: registrando uma refeição a partir de uma foto",
+    "method_link": "Como preparamos nossos conteúdos e fontes"
+  },
+  "method": {
+    "title": "Como preparamos nossos conteúdos e fontes | Pofu",
+    "desc": "Quem escreve os guias e as calculadoras do Pofu, de onde vêm os valores de calorias e as fórmulas, como a IA é usada e como corrigimos erros.",
+    "h1": "Como preparamos nossos conteúdos e fontes",
+    "lede": "Queremos que cada número deste site possa ser conferido. Esta página explica quem o escreve, de onde vêm os valores e o que não fazemos.",
+    "sections": [
+      ["Quem escreve os conteúdos", "<p>O Pofu é feito por Ali Gürkan Sevilmiş, desenvolvedor independente. Os guias, as calculadoras e as páginas de alimentos deste site são escritos e mantidos por ele, com base nas fontes publicadas listadas abaixo.</p><p>Nenhum nutricionista ou médico revisou este conteúdo ainda. Dizemos isso abertamente, em vez de exibir um selo de revisão por uma revisão que não aconteceu. Se você é profissional de nutrição e vê algo a melhorar, ficaremos felizes em ouvir você.</p>"],
+      ["De onde vêm os valores dos alimentos", "<p>Calorias, proteína, carboidratos e gordura das páginas de alimentos vêm de bases públicas de composição de alimentos e da base de alimentos dentro do app Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departamento de Agricultura dos Estados Unidos)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Países Baixos)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Agência Sueca de Alimentos)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (República Tcheca)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Itália)</li></ul><p>Quando uma página usa um item de uma base de dados, ela aponta um link para ele. Receitas caseiras e de restaurante variam, então cada valor é uma estimativa típica para a porção mostrada, e cada página diz isso.</p>"],
+      ["De onde vêm as fórmulas", "<p>As calculadoras usam as mesmas regras do app Pofu, tiradas de pesquisas publicadas: a equação de Mifflin-St Jeor para o gasto em repouso (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), as faixas de proteína da <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, as faixas de gordura e carboidratos das <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies dos EUA (2005)</a>, as categorias de IMC da <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organização Mundial da Saúde</a> e a energia necessária por quilograma segundo <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Cada calculadora lista suas fontes e explica cada etapa.</p><p>Nunca sugerimos menos de 1.200 kcal por dia. As calculadoras pedem que você não use um déficit calórico se estiver grávida ou amamentando, e o app Pofu não define déficit quando você informa isso.</p>"],
+      ["Como usamos IA", "<p>O app Pofu usa IA para estimar uma refeição a partir de uma foto. Cada estimativa mostra uma pontuação de confiança e pode ser corrigida. Neste site, ferramentas de IA nos ajudam a rascunhar textos e a traduzi-los a partir dos originais em inglês e turco; o desenvolvedor confere os números com as fontes acima. Nem todas as traduções foram revisadas por falantes nativos ainda; se uma frase soar errada no seu idioma, avise a gente.</p>"],
+      ["O que não fazemos", "<ul><li>Não damos aconselhamento médico nem diagnósticos.</li><li>O Pofu não prevê menstruação nem ovulação e não tem acompanhamento de gravidez; o recurso opcional de ciclo usa apenas uma data que você informa.</li><li>Não prometemos resultados de emagrecimento nem mostramos fotos de antes e depois.</li><li>Não publicamos avaliações falsas.</li><li>Nossas páginas de comparativos são escritas pelos criadores do Pofu, e cada uma diz isso.</li><li>As calculadoras rodam no seu navegador; nada do que você digita é enviado ou guardado.</li></ul>"],
+      ["Atualizações e correções", "<p>Cada página mostra quando foi atualizada pela última vez. Revisamos as páginas quando uma fonte muda. Se você encontrar um erro, escreva para <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; conferimos com a fonte, corrigimos os erros confirmados e atualizamos a data da página.</p>"]
+    ],
+    "nav": "Conteúdo e fontes"
+  }
+}

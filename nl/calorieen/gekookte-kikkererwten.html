@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html", "url": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html", "name": "Hoeveel calorieën zitten er in Gekookte kikkererwten? (1 kom, 200 g)", "description": "Gekookte kikkererwten: ongeveer 270 kcal per portie (1 kom, 200 g); 15 g eiwit, 45 g koolhydraten, 4 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gekookte kikkererwten", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "270 kcal", "proteinContent": "15 g", "carbohydrateContent": "45 g", "fatContent": "4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Gekookte kikkererwten", "item": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html", "url": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html", "name": "Hoeveel calorieën zitten er in Gekookte kikkererwten? (1 kom, 200 g)", "description": "Gekookte kikkererwten: ongeveer 270 kcal per portie (1 kom, 200 g); 15 g eiwit, 45 g koolhydraten, 4 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gekookte kikkererwten", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "270 kcal", "proteinContent": "15 g", "carbohydrateContent": "45 g", "fatContent": "4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Gekookte kikkererwten", "item": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/nl/calorieen/gekookte-kikkererwten.html#faq", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Gekookte kikkererwten: hoeveel calorieën zitten er in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Ongeveer 135 kcal per 100 g, met 7,5 g eiwit, 22,5 g koolhydraten en 2 g vet."}}, {"@type": "Question", "name": "Gekookte kikkererwten: bevat het veel eiwit?", "acceptedAnswer": {"@type": "Answer", "text": "Het bevat wat eiwit: 15 g per portie, ongeveer 22% van de calorieën."}}, {"@type": "Question", "name": "Gekookte kikkererwten: hoe log ik het in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere of grotere portie</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portie</th><th scope="col">Calorieën</th><th scope="col">Eiwit</th></tr></thead>
+<tbody>
+<tr><th scope="row">Een halve portie (100 g)</th><td>135 kcal</td><td>7,5 g</td></tr>
+<tr><th scope="row">Gebruikelijke portie (200 g)</th><td>270 kcal</td><td>15 g</td></tr>
+<tr><th scope="row">Anderhalve portie (300 g)</th><td>405 kcal</td><td>22,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Waar de calorieën vandaan komen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:22%"></span><span class="sc" style="width:65%"></span><span class="sf" style="width:13%"></span></div>
+<p>22% van de calorieën komt uit eiwit, 65% uit koolhydraten en 13% uit vet. Kort gezegd: de meeste calorieën komen uit koolhydraten.</p>
+<p>Eén portie is ongeveer 14% van een dag van 2.000 kcal, de referentiewaarde op voedingsetiketten.</p>
+</section>
 <section id="why">
 <h2>Waarom de waarde kan verschillen</h2>
 <p>De uitkomst hangt af van hoe het gerecht is bereid en hoeveel olie, boter of suiker erin zit. Gaar gewicht en droog gewicht verschillen sterk, daarom liggen een volle en een afgestreken portie ver uit elkaar. Merk, formaat en dikte veranderen de waarde ook.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Zo log je het in Pofu</h2>
 <p>Pofu is onze app. Om dit product te loggen, maak je een foto van je bord: Pofu schat het gerecht en de portie en toont een betrouwbaarheidsscore, zodat je ziet hoe zeker de schatting is en deze kunt aanpassen. Je kunt ook op naam zoeken of een barcode scannen en de portie instellen op wat je echt hebt gegeten. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_nl&amp;mt=8">Download Pofu in de App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-app: een maaltijd loggen met een foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Schermopname van de Pofu-app (Engelse interface): maak een foto, controleer de schatting, voeg het toe aan vandaag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Vergelijkbare producten</h2>
@@ -234,10 +258,25 @@
 <li><a href="vlaai-met-fruit.html">Vlaai met fruit</a> <span class="k">· 251 kcal (1 punt, 110 g)</span></li>
 <li><a href="nasi-goreng.html">Nasi goreng</a> <span class="k">· 432 kcal (1 bord, 300 g)</span></li>
 </ul>
+<h3>Lichtere opties in dezelfde groep</h3>
+<ul class="foodlist">
+<li><a href="banaan.html">Banaan</a> <span class="k">· 88 kcal per 100 g</span></li>
+<li><a href="zoete-aardappel.html">Zoete aardappel</a> <span class="k">· 88 kcal per 100 g</span></li>
+<li><a href="gekookte-aardappel.html">Gekookte aardappel</a> <span class="k">· 87 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Alle producten</a></p>
 </section>
+<section id="faq">
+<h2>Vragen over dit voedingsmiddel</h2>
+<h3>Gekookte kikkererwten: hoeveel calorieën zitten er in 100 g?</h3>
+<p>Ongeveer 135 kcal per 100 g, met 7,5 g eiwit, 22,5 g koolhydraten en 2 g vet.</p>
+<h3>Gekookte kikkererwten: bevat het veel eiwit?</h3>
+<p>Het bevat wat eiwit: 15 g per portie, ongeveer 22% van de calorieën.</p>
+<h3>Gekookte kikkererwten: hoe log ik het in Pofu?</h3>
+<p>Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer.</p>
+</section>
 <section id="source">
-<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie.</p>
+<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="../editorial-policy.html">Hoe we onze inhoud en bronnen opstellen</a>.</p>
 <div class="note"><p>Deze pagina is bedoeld als algemene informatie en is geen medisch advies. Als je zwanger bent, borstvoeding geeft, een aandoening hebt of eerder een eetstoornis hebt gehad, overleg dan met je huisarts of een diëtist voordat je calorieën gaat tellen.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Dit product in andere talen" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/cooked-chickpeas.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/nohut-haslanmis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochte-kichererbsen.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/pois-chiches-cuits.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/garbanzos-cocidos.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/grao-de-bico-cozido.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/cooked-chickpeas.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varena-cizrna.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/cooked-chickpeas.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/kacang-arab-matang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/ceci-cotti.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/cooked-chickpeas.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/cooked-chickpeas.html" hreflang="ko" lang="ko">한국어</a> · <strong>Nederlands</strong> · <a href="../../pl/kalorie/gotowana-ciecierzyca.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/naut-fiert.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/varenyy-nut.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/kokta-kikartor.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/cooked-chickpeas.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/varenyy-nut.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/dau-ga-nau-chin.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/cooked-chickpeas.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a></nav>
+<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a><a href="../editorial-policy.html">Inhoud en bronnen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

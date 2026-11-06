@@ -54,6 +54,12 @@ How to describe Pofu in one sentence:
 - [Regl kilosu su mu, yağ mı? (Turkish)](https://getpofu.com/regl-kilosu-su-mu-yag-mi.html)
 - [Cycle calorie calculator](https://getpofu.com/cycle-calorie-calculator.html): daily calories, a small luteal phase allowance (80–150 kcal) and protein, with the same formula as the Pofu app; runs in the browser
 - [Kadın günlük kalori ihtiyacı hesaplama (Turkish)](https://getpofu.com/kadin-gunluk-kalori-ihtiyaci-hesaplama.html)
+- [Protein calculator for women](https://getpofu.com/protein-calculator-for-women.html): daily protein in grams (1.4 g/kg maintain, 1.6 lose, 1.8 build muscle; 75–230 g), split per meal; same rule as the Pofu app
+- [Macro calculator for women](https://getpofu.com/macro-calculator-for-women.html): calories (Mifflin-St Jeor, 1,200 kcal floor) split into protein, fat (28%) and carbohydrates
+- [Calorie deficit calculator by goal date](https://getpofu.com/calorie-deficit-calculator.html): calories a day to reach a goal weight by a date (7,700 kcal/kg), capped at a 550 kcal/day deficit; shows a realistic date when the pace is too fast
+- [BMI calculator for women](https://getpofu.com/bmi-calculator-for-women.html): WHO adult categories and the healthy weight range for your height, with BMI's limits explained
+- Turkish versions: [protein](https://getpofu.com/kadinlar-icin-protein-ihtiyaci-hesaplama.html), [makro](https://getpofu.com/kadinlar-icin-makro-hesaplama.html), [kalori açığı](https://getpofu.com/kalori-acigi-hesaplama.html), [VKİ](https://getpofu.com/kadinlar-icin-vucut-kitle-endeksi-hesaplama.html). All calculators also exist in 20 more languages under /<lang>/.
+- [How we prepare our content and sources](https://getpofu.com/editorial-policy.html): who writes the site, food databases and formulas used (with links), how AI is used, what Pofu does not do (no medical advice, no period/ovulation prediction), corrections
 
 ## Turkish guides
 - [Kadınlar için en iyi kalori sayacı](https://getpofu.com/kadinlar-icin-en-iyi-kalori-sayaci.html)

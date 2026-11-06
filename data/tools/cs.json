@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "cs", "locale": "cs-CZ", "og_locale": "cs_CZ", "og_img": "og-image.jpg", "us": false,
+    "skip": "Přeskočit na obsah", "get_app": "Stáhnout aplikaci", "pill": "Nástroj zdarma · Bez registrace",
+    "byline": "Autor: Ali Gürkan Sevilmiş, vývojář Pofu · 6. listopadu 2026",
+    "submit": "Spočítat",
+    "privacy": "Vše se počítá ve tvém prohlížeči. Nic, co zadáš, se neodesílá ani neukládá.",
+    "f_age": "Věk", "f_system": "Jednotky", "sys_us": "USA (ft, lb)", "sys_metric": "Metrické (cm, kg)",
+    "f_height": "Výška", "a_ft": "Výška, stopy", "a_in": "Výška, palce", "f_weight": "Aktuální hmotnost",
+    "f_activity": "Úroveň aktivity",
+    "activity": {
+      "sedentary": "Převážně sedím (kancelářská práce, málo pohybu)",
+      "light": "Lehce aktivní (lehké cvičení 1–3 dny v týdnu)",
+      "moderate": "Středně aktivní (cvičení 3–5 dní v týdnu)",
+      "active": "Velmi aktivní (náročné cvičení 6–7 dní v týdnu)",
+      "very_active": "Extrémně aktivní (fyzická práce a trénink)"
+    },
+    "errors": {
+      "age": "Zadej věk mezi 18 a 80 lety.",
+      "height": "Zadej svou výšku (130–210 cm).",
+      "weight": "Zadej svou hmotnost (35–250 kg).",
+      "activity": "Vyber úroveň aktivity.",
+      "goal": "Vyber cíl."
+    },
+    "how_h": "Jak tato kalkulačka funguje",
+    "src_h": "Zdroje",
+    "method_note": "Vzorce vycházejí z výše uvedených publikovaných zdrojů a odpovídají pravidlům, která používá aplikace Pofu. Tuto stránku nekontroloval nutriční terapeut; je ověřována podle těchto zdrojů a aktualizuje se, když se změní.",
+    "faq_h": "Často kladené otázky",
+    "rel_h": "Další nástroje zdarma",
+    "medical": "Tato kalkulačka poskytuje obecné odhady pro dospělé, ne lékařskou radu. Pokud jsi těhotná nebo kojíš, máš zdravotní potíže, například onemocnění ledvin nebo cukrovku, nebo poruchu příjmu potravy v anamnéze, poraď se před změnou stravování s lékařem nebo nutričním terapeutem.",
+    "badge_alt": "Stáhnout Pofu z App Store",
+    "foot_nav": "Právní informace a podpora", "privacy_l": "Soukromí", "terms_l": "Podmínky", "support_l": "Podpora",
+    "updated": "Naposledy aktualizováno: <time datetime=\"2026-11-06\">6. listopadu 2026</time>.",
+    "tm": "Apple, iPhone a App Store jsou ochranné známky společnosti Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Kalkulačka bílkovin pro ženy: kolik bílkovin denně? | Pofu",
+      "og_title": "Kalkulačka bílkovin pro ženy",
+      "desc": "Bezplatná kalkulačka bílkovin pro ženy. Zjisti svůj denní příjem bílkovin v gramech pro udržení hmotnosti, hubnutí nebo budování svalů, rozdělený na jídla a s výzkumem, o který se opírá.",
+      "h1": "Kalkulačka bílkovin pro ženy",
+      "lede": "Kolik bílkovin potřebuješ denně? Zadej svou hmotnost a cíl a získáš denní cíl v gramech i to, kolik z toho připadá na jedno jídlo.",
+      "tool_h": "Spočítej si bílkoviny",
+      "f_goal": "Cíl",
+      "goals": {"maintain": "Zůstat zdravá a udržet si hmotnost", "lose": "Zhubnout", "muscle": "Nabrat svaly nebo být silnější"},
+      "res_head": "Tvůj denní příjem bílkovin",
+      "s_meal3": "na jedno jídlo při 3 jídlech",
+      "s_meal4": "na jedno jídlo při 4 jídlech",
+      "s_range": "rozmezí používané ve studiích (1,2–2,0 g/kg)",
+      "explain": "Rozložit bílkoviny do jídel je snazší než sníst všechno naráz. Více bílkovin, než je tady, většině zdravých lidí neškodí, ale málokdy přinese další užitek.",
+      "how": [
+        "<strong>Udržení hmotnosti:</strong> 1,4 g bílkovin na kg tělesné hmotnosti denně.",
+        "<strong>Hubnutí:</strong> 1,6 g na kg, protože více bílkovin pomáhá zachovat svaly, když jíš méně, a déle zasytí.",
+        "<strong>Budování svalů:</strong> 1,8 g na kg spolu se silovým tréninkem.",
+        "Výsledek se drží v rozmezí 75 až 230 g denně a rozděluje se rovnoměrně na 3 nebo 4 jídla."
+      ],
+      "note": "Minimum, které dospělé chrání před nedostatkem, je asi 0,8 g na kg. Vyšší hodnoty výše platí pro aktivní ženy a pro hubnutí, kde studie ukazují přínos. Jsou to stejná pravidla, jaká používá aplikace Pofu.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017 (stanovisko k bílkovinám a pohybu; 1,4–2,0 g/kg pro aktivní lidi).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a>. Br J Sports Med, 2018 (doplňky bílkovin a silový trénink; přínos se zastavuje kolem 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (minimum 0,8 g/kg pro dospělé)."
+      ],
+      "faq": [
+        ["Kolik bílkovin denně potřebuje žena?", "Minimum pro dospělé je asi 0,8 g na kg tělesné hmotnosti. Pro aktivní ženy a při hubnutí výzkum podporuje zhruba 1,2 až 2,0 g na kg. Pro ženu s hmotností 65 kg, která hubne, vychází tato kalkulačka na 104 g denně."],
+        ["Je 100 g bílkovin denně pro ženu moc?", "Pro většinu zdravých žen ne. Je to v rozmezí zkoumaném u aktivních lidí. Pokud máš onemocnění ledvin, zeptej se nejdřív lékaře."],
+        ["Kolik bílkovin mám sníst na jedno jídlo?", "Vyděl denní cíl počtem jídel. Při 104 g denně a 3 jídlech to je asi 35 g na jídlo, třeba kuřecí prsa nebo miska tvarohu s vejci."],
+        ["Pomáhají bílkoviny při hubnutí?", "Pomáhají zachovat svaly, když jíš méně, a déle zasytí. Hubnutí ale stále vychází z toho, že sníš méně kalorií, než spotřebuješ."],
+        ["Mám počítat s aktuální, nebo s cílovou hmotností?", "Použij aktuální hmotnost. Pokud je tvoje hmotnost velmi vysoká, dá nižší referenční hmotnost realističtější číslo; strop 230 g denně drží výsledek v rozumných mezích."]
+      ],
+      "bridge": "Pofu nastaví tvůj cíl bílkovin podle stejného pravidla a ukáže, kolik jsi už dnes snědla, podle fotek, čárových kódů nebo vyhledávání."
+    },
+    "macro": {
+      "title": "Kalkulačka maker pro ženy: bílkoviny, sacharidy a tuky | Pofu",
+      "og_title": "Kalkulačka maker pro ženy",
+      "desc": "Bezplatná kalkulačka makroživin pro ženy. Zjisti své denní kalorie a gramy bílkovin, sacharidů a tuků pro udržení hmotnosti, hubnutí nebo budování svalů.",
+      "h1": "Kalkulačka maker pro ženy",
+      "lede": "Získej své denní kalorie rozdělené na bílkoviny, sacharidy a tuky, v gramech i jako podíl kalorií.",
+      "tool_h": "Spočítej si makra",
+      "f_goal": "Cíl",
+      "goals": {"maintain": "Udržet si hmotnost", "lose_slow": "Pomalu zhubnout (asi −250 kcal denně)", "lose": "Zhubnout (asi −400 kcal denně)", "lose_fast": "Zhubnout rychleji (asi −550 kcal denně)", "muscle": "Nabrat svaly (asi +225 kcal denně)"},
+      "res_head": "Tvoje denní kalorie a makra",
+      "s_p": "Bílkoviny", "s_c": "Sacharidy", "s_f": "Tuky",
+      "pct": "{p} % kalorií",
+      "floor": "Tvé kalorie jsou nastavené na 1 200 kcal, což je nejnižší denní cíl, který doporučujeme. Jít níž se bez lékaře nebo nutričního terapeuta nedoporučuje.",
+      "explain": "Nejdřív se určí bílkoviny, tuky tvoří 28 % kalorií a sacharidy doplní zbytek. Trefit kalorie je důležitější než trefit každý gram; odchylka o pár gramů je v pořádku.",
+      "how": [
+        "<strong>Kalorie:</strong> Mifflinova–St Jeorova rovnice pro ženy krát faktor aktivity (1,2 až 1,9) plus tvůj cíl. Nikdy pod 1 200 kcal.",
+        "<strong>Bílkoviny:</strong> 1,4 g na kg při udržování, 1,6 g na kg při hubnutí, 1,8 g na kg při budování svalů (75–230 g).",
+        "<strong>Tuky:</strong> 28 % kalorií, nejméně 40 g denně.",
+        "<strong>Sacharidy:</strong> zbylé kalorie, nejméně 50 g denně. Bílkoviny a sacharidy mají 4 kcal na gram, tuky 9 kcal."
+      ],
+      "note": "Tuky na úrovni 28 % se vejdou do doporučeného rozmezí 20–35 % pro dospělé a sacharidy obvykle vyjdou kolem 40–50 %. Jsou to stejná pravidla, jaká používá aplikace Pofu.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990 (nová rovnice pro odhad klidového výdeje energie).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (tuky 20–35 %, sacharidy 45–65 % kalorií).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Jaký poměr maker je pro ženy dobrý?", "Jeden nejlepší poměr neexistuje. Běžné a udržitelné rozdělení je zhruba 25–30 % bílkovin, 28–30 % tuků a zbytek sacharidy. Vyber si takové, které dokážeš dodržet, a nejdřív trefuj kalorie."],
+        ["Jaká makra jsou dobrá na hubnutí?", "Jez méně kalorií, než spotřebuješ, a drž bílkoviny vysoko (asi 1,6 g na kg). Tuky a sacharidy můžeš rozdělit, jak ti vyhovuje."],
+        ["Musím makra trefit přesně?", "Ne. Odchylka asi 10 g u bílkovin a sacharidů a 5 g u tuků je dost blízko. Důležitější je tvůj týdenní průměr než jeden den."],
+        ["Jsou nízkosacharidové diety pro ženy lepší?", "Studie, které porovnávají nízkosacharidovou a nízkotučnou stravu se stejnými kaloriemi, nacházejí podobný úbytek hmotnosti. Vyber si to, co sedí tvému jídlu a energii."],
+        ["Mění se makra během menstruačního cyklu?", "Moc ne. Někteří lidé mají před menstruací větší hlad; naše kalkulačka kalorií podle cyklu přidává pro tuto fázi malou volitelnou rezervu."]
+      ],
+      "bridge": "Pofu tato makra sleduje za tebe: vyfoť jídlo a aplikace odhadne kalorie, bílkoviny, sacharidy a tuky, které můžeš opravit."
+    },
+    "deficit": {
+      "title": "Kalorický deficit: kolik kalorií na cíl do určitého data | Pofu",
+      "og_title": "Kalkulačka kalorického deficitu podle data cíle",
+      "desc": "Bezplatná kalkulačka kalorického deficitu pro ženy. Zadej cílovou hmotnost a datum a uvidíš, kolik kalorií denně potřebuješ a jestli je tempo bezpečné.",
+      "h1": "Kalkulačka kalorického deficitu podle data cíle",
+      "lede": "Chceš dosáhnout určité hmotnosti k určitému datu? Zjisti, kolik kalorií denně to vyžaduje, a reálné datum, pokud je tempo příliš rychlé.",
+      "tool_h": "Spočítej si deficit",
+      "f_goal_kg": "Cílová hmotnost",
+      "f_date": "Datum cíle",
+      "errors": {
+        "goalkg": "Zadej cílovou hmotnost nižší, než je ta aktuální. Tento nástroj je určený k hubnutí.",
+        "date": "Vyber datum cíle v budoucnosti.",
+        "nodeficit": "Tvé udržovací kalorie jsou už blízko 1 200 kcal, takže nemůžeme navrhnout bezpečný deficit. Svůj cíl proberte s lékařem nebo nutričním terapeutem."
+      },
+      "res_ok": "Abys dosáhla {goal} do {date}, jez asi",
+      "s_target": "Denní kalorie při bezpečném tempu",
+      "s_deficit": "denní deficit",
+      "s_week": "očekávaný úbytek za týden",
+      "s_maint": "udržovací příjem (TDEE)",
+      "too_fast": "K tomuto datu je potřeba deficit {need} kcal denně, což je víc než {max} kcal denně, které doporučujeme. Při bezpečném tempu {target} kcal denně dosáhneš {goal} kolem {date}.",
+      "low_goal": "Tvá cílová hmotnost je pod BMI 18,5 pro tvou výšku, což se považuje za podváhu. Svůj cíl prosím proberte s lékařem.",
+      "explain": "Je to odhad: hubnutí se časem obvykle zpomaluje a voda mění údaj na váze ze dne na den, zvlášť před menstruací. Porovnávej týdenní průměry, ne jednotlivé dny.",
+      "how": [
+        "<strong>Udržovací příjem:</strong> Mifflinova–St Jeorova rovnice pro ženy krát faktor aktivity (1,2 až 1,9).",
+        "<strong>Potřebný deficit:</strong> hmotnost, kterou chceš zhubnout × 7 700 kcal na kg, vydělená počtem dní do tvého data.",
+        "<strong>Bezpečná mez:</strong> nejvýš 550 kcal denně pod udržovacím příjmem a nikdy méně než 1 200 kcal denně. Pokud tvé datum vyžaduje víc, kalkulačka ukáže, kdy bys cíle při bezpečném tempu dosáhla.",
+        "Nejrychlejší tempo je asi 0,5 kg týdně, v souladu s běžnými doporučeními veřejného zdraví."
+      ],
+      "note": "7 700 kcal na kg je široce používaný odhad. Skutečný úbytek je po prvních týdnech často pomalejší, protože tělo s klesající hmotností spotřebuje méně energie, takže datum ber jako orientaci.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> Int J Obes, 2008 (jaký energetický deficit je potřeba na jednotku úbytku hmotnosti).",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (výzkumný model toho, jak se hubnutí časem zpomaluje).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (asi 0,5 až 1 kg týdně)."
+      ],
+      "faq": [
+        ["Jak velký by měl být můj kalorický deficit?", "Pro většinu žen je udržitelných 250 až 550 kcal denně pod udržovacím příjmem. To je asi 0,25 až 0,5 kg týdně. Větší deficity se hůř dodržují a mohou stát svalovou hmotu."],
+        ["Jak dlouho trvá zhubnout 5 kg?", "Při deficitu 550 kcal denně asi 10 týdnů; při 400 kcal denně asi 14 týdnů. Skutečný postup bývá o něco pomalejší."],
+        ["Proč mi tato kalkulačka nedovolí jíst pod 1 200 kcal?", "Pod 1 200 kcal denně je těžké získat z jídla dost živin. Jít níž by se mělo jen pod lékařským dohledem."],
+        ["Je 7 700 kalorií opravdu jeden kilogram?", "Je to hrubý odhad pro tělesný tuk. Zpočátku je část úbytku voda a později se tělo přizpůsobí, takže pravidlo je orientační, ne příslib."],
+        ["Proč jsem přibrala, i když jsem měla deficit?", "Voda, sůl, větší jídlo a dny před menstruací mohou váhu na pár dní zvednout. Dívej se na trend za 2 až 4 týdny."]
+      ],
+      "bridge": "V Pofu si můžeš nastavit cílovou hmotnost a tempo; aplikace spočítá tvůj denní cíl podle stejných pravidel a ukáže pokrok jako týdenní trend."
+    },
+    "bmi": {
+      "title": "BMI kalkulačka pro ženy: zdravá hmotnost pro tvou výšku | Pofu",
+      "og_title": "BMI kalkulačka pro ženy",
+      "desc": "Bezplatná BMI kalkulačka pro dospělé ženy. Zjisti svůj index tělesné hmotnosti, co znamená a jaké rozmezí hmotnosti je zdravé pro tvou výšku, s vysvětlením omezení BMI.",
+      "h1": "BMI kalkulačka pro ženy",
+      "lede": "Spočítej si index tělesné hmotnosti a zjisti, které rozmezí hmotnosti se pro tvou výšku považuje za zdravé.",
+      "tool_h": "Spočítej si BMI",
+      "res_head": "Tvoje BMI",
+      "cats": {"under": "Podváha (pod 18,5)", "normal": "Zdravá hmotnost (18,5 až 24,9)", "over": "Nadváha (25 až 29,9)", "obese": "Obezita (30 a více)"},
+      "range": "Zdravé rozmezí hmotnosti pro tvou výšku je asi {low} až {high}.",
+      "explain": "BMI je rychlé orientační číslo, ne diagnóza. Nerozliší sval od tuku, takže velmi svalnaté ženy mohou mít vysoké hodnoty, a neplatí během těhotenství.",
+      "how": [
+        "<strong>Vzorec:</strong> hmotnost v kg dělená druhou mocninou výšky v metrech (kg/m²).",
+        "<strong>Kategorie (WHO, dospělí):</strong> pod 18,5 podváha, 18,5–24,9 zdravá hmotnost, 25–29,9 nadváha, 30 a více obezita.",
+        "<strong>Zdravé rozmezí:</strong> hmotnosti, při kterých vychází BMI 18,5 až 24,9 pro tvou výšku.",
+        "Stejný vzorec se používá pro ženy i muže; není určený pro děti, dospívající ani pro těhotenství."
+      ],
+      "note": "U některých asijských populací WHO uvádí, že zdravotní rizika začínají při nižším BMI (od zhruba 23). Obvod pasu a to, jak se cítíš, přidávají k číslu užitečný kontext.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (informační přehled o obezitě a nadváze).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004 (vhodné BMI pro asijské populace)."
+      ],
+      "faq": [
+        ["Jaké BMI je pro ženu zdravé?", "U dospělých se BMI 18,5 až 24,9 považuje za zdravou hmotnost. Pro ženy i muže platí stejná rozmezí."],
+        ["Je BMI pro ženy jiné?", "Vzorec i kategorie jsou stejné. Ženy mají při stejném BMI obvykle víc tělesného tuku než muži, což je jeden z důvodů, proč je BMI jen hrubé vodítko."],
+        ["Je BMI přesné?", "Je užitečné pro skupiny lidí a jako první kontrola, ale tělesný tuk neměří. Svaly, věk i tvar těla mění to, co dané BMI znamená pro tebe."],
+        ["Kolik bych měla vážit při své výšce?", "Každá hmotnost, při které vyjde BMI mezi 18,5 a 24,9, je ve zdravém rozmezí. Pro výšku 165 cm je to asi 50 až 68 kg."],
+        ["Můžu BMI používat v těhotenství?", "Ne. V těhotenství se řiď radou porodní asistentky nebo lékaře ohledně přibývání na váze."]
+      ],
+      "bridge": "Pofu se soustředí na návyky, ne na jedno číslo: denní kalorie a bílkoviny, týdenní trend hmotnosti a žolíkové dny, aby ti jeden nezapsaný den nepřerušil sérii."
+    }
+  }
+}

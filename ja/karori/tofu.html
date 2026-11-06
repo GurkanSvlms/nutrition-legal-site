@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ja/karori/tofu.html", "url": "https://getpofu.com/ja/karori/tofu.html", "name": "豆腐のカロリーは？（1人前, 150 g）", "description": "豆腐：約145 kcal（1食：1人前, 150 g）、たんぱく質16 g、炭水化物4 g、脂質8 g。一般的な目安値です。", "inLanguage": "ja", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "豆腐", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "145 kcal", "proteinContent": "16 g", "carbohydrateContent": "4 g", "fatContent": "8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ja/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "カロリー", "item": "https://getpofu.com/ja/karori/"}, {"@type": "ListItem", "position": 3, "name": "豆腐", "item": "https://getpofu.com/ja/karori/tofu.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ja/karori/tofu.html", "url": "https://getpofu.com/ja/karori/tofu.html", "name": "豆腐のカロリーは？（1人前, 150 g）", "description": "豆腐：約145 kcal（1食：1人前, 150 g）、たんぱく質16 g、炭水化物4 g、脂質8 g。一般的な目安値です。", "inLanguage": "ja", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "豆腐", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "145 kcal", "proteinContent": "16 g", "carbohydrateContent": "4 g", "fatContent": "8 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ja/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "カロリー", "item": "https://getpofu.com/ja/karori/"}, {"@type": "ListItem", "position": 3, "name": "豆腐", "item": "https://getpofu.com/ja/karori/tofu.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ja/karori/tofu.html#faq", "inLanguage": "ja", "mainEntity": [{"@type": "Question", "name": "豆腐：100 gあたり何kcalですか？", "acceptedAnswer": {"@type": "Answer", "text": "100 gあたり約97 kcalで、たんぱく質10.7 g、炭水化物2.7 g、脂質5.3 gです。"}}, {"@type": "Question", "name": "豆腐：たんぱく質は多いですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。1人前にたんぱく質が16 g含まれ、カロリーの約44%を占めます。"}}, {"@type": "Question", "name": "豆腐：Pofuにはどう記録しますか？", "acceptedAnswer": {"@type": "Answer", "text": "お皿の写真を撮るか、名前で検索して、実際に食べた量に合わせて分量を設定します。推定値は修正でき、Pofuは次回その修正を覚えています。"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>少なめ・多めの場合</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">量</th><th scope="col">カロリー</th><th scope="col">たんぱく質</th></tr></thead>
+<tbody>
+<tr><th scope="row">半人前（75 g）</th><td>72 kcal</td><td>8 g</td></tr>
+<tr><th scope="row">ふつうの1人前（150 g）</th><td>145 kcal</td><td>16 g</td></tr>
+<tr><th scope="row">1.5人前（225 g）</th><td>218 kcal</td><td>24 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>カロリーの内訳</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:42%"></span><span class="sc" style="width:11%"></span><span class="sf" style="width:47%"></span></div>
+<p>カロリーの42%がたんぱく質、11%が炭水化物、47%が脂質に由来します。 ひとことで言うと：たんぱく質の良い供給源です。</p>
+<p>1人前は、食品表示で基準値として使われる2,000 kcalの1日分の約7%にあたります。</p>
+</section>
 <section id="why">
 <h2>数値が変わる理由</h2>
 <p>部位や商品、脂身をどれだけ取り除くか、調理法によって変わります。皮、下味、ソース、調理に使う油は、重さだけでは分からないカロリーを加えます。比べるときは、その重さが調理後か生のままかを確認しましょう。</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Pofuでの記録方法</h2>
 <p>Pofuは私たちのアプリです。この食品を記録するには、お皿を撮影してください。Pofuが料理と分量を推定し、信頼度スコアを表示するので、推定の確かさを確認して修正できます。名前で検索したりバーコードをスキャンしたりして、分量を実際の量に合わせて調整することもできます。<a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ja&amp;mt=8">App StoreでPofuを入手</a>。</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofuアプリ：写真から食事を記録する"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofuアプリの画面収録（英語表示）：写真を撮り、推定値を確認して、今日の記録に追加します。</figcaption></figure>
 </section>
 <section id="related">
 <h2>似ている食品</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">すべての食品</a></p>
 </section>
+<section id="faq">
+<h2>この食品についてのQ&A</h2>
+<h3>豆腐：100 gあたり何kcalですか？</h3>
+<p>100 gあたり約97 kcalで、たんぱく質10.7 g、炭水化物2.7 g、脂質5.3 gです。</p>
+<h3>豆腐：たんぱく質は多いですか？</h3>
+<p>はい。1人前にたんぱく質が16 g含まれ、カロリーの約44%を占めます。</p>
+<h3>豆腐：Pofuにはどう記録しますか？</h3>
+<p>お皿の写真を撮るか、名前で検索して、実際に食べた量に合わせて分量を設定します。推定値は修正でき、Pofuは次回その修正を覚えています。</p>
+</section>
 <section id="source">
-<p class="fine">数値は一般的な目安で、レシピや分量によって変わります。出典がある場合はリンクを掲載しています。</p>
+<p class="fine">数値は一般的な目安で、レシピや分量によって変わります。出典がある場合はリンクを掲載しています。 <a href="../editorial-policy.html">コンテンツと情報源の作り方</a>.</p>
 <div class="note"><p>このページは一般的な情報の提供を目的としたもので、医療上のアドバイスではありません。妊娠中・授乳中の方、持病のある方、摂食障害の経験がある方は、カロリー計算を始める前に、医師または管理栄養士にご相談ください。</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="他の言語で見る" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/tofu.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/tofu.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/tofu.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/tofu.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/tofu.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/tofu.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/tofu.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/tofu.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/tofu.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/tahu.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/tofu.html" hreflang="it" lang="it">Italiano</a> · <strong>日本語</strong> · <a href="../../ko/kallori/tofu.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/tofu.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/tofu.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/tofu.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/tofu.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/tofu.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/tofu.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/tofu.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/dau-phu.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/tofu.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="見る"><strong>見る</strong><a href="../guides.html">ガイド</a><a href="../tools.html">ツール</a><a href="./" aria-current="true">カロリー</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">比較</a></nav>
+<nav aria-label="見る"><strong>見る</strong><a href="../guides.html">ガイド</a><a href="../tools.html">ツール</a><a href="./" aria-current="true">カロリー</a><a href="../questions/">Q&amp;A</a><a href="../compare.html">比較</a><a href="../editorial-policy.html">コンテンツと情報源</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

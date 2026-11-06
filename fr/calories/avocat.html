@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/fr/calories/avocat.html", "url": "https://getpofu.com/fr/calories/avocat.html", "name": "Avocat : combien de calories ? (Moitié, 100 g)", "description": "Avocat : environ 240 kcal par portion (Moitié, 100 g) ; 3 g de protéines, 12 g de glucides, 22 g de lipides. Valeurs typiques utilisées dans l’appli Pofu.", "inLanguage": "fr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Avocat", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "240 kcal", "proteinContent": "3 g", "carbohydrateContent": "12 g", "fatContent": "22 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/fr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/fr/calories/"}, {"@type": "ListItem", "position": 3, "name": "Avocat", "item": "https://getpofu.com/fr/calories/avocat.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/fr/calories/avocat.html", "url": "https://getpofu.com/fr/calories/avocat.html", "name": "Avocat : combien de calories ? (Moitié, 100 g)", "description": "Avocat : environ 240 kcal par portion (Moitié, 100 g) ; 3 g de protéines, 12 g de glucides, 22 g de lipides. Valeurs typiques utilisées dans l’appli Pofu.", "inLanguage": "fr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Avocat", "nutrition": {"@type": "NutritionInformation", "servingSize": "100 g", "calories": "240 kcal", "proteinContent": "3 g", "carbohydrateContent": "12 g", "fatContent": "22 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/fr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calories", "item": "https://getpofu.com/fr/calories/"}, {"@type": "ListItem", "position": 3, "name": "Avocat", "item": "https://getpofu.com/fr/calories/avocat.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/fr/calories/avocat.html#faq", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "Avocat : combien de calories pour 100 g ?", "acceptedAnswer": {"@type": "Answer", "text": "Environ 240 kcal pour 100 g, avec 3 g de protéines, 12 g de glucides et 22 g de lipides."}}, {"@type": "Question", "name": "Avocat : est-ce riche en protéines ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas beaucoup : 3 g par portion, soit environ 5 % de ses calories. Associe-le à un aliment riche en protéines, comme des œufs, du yaourt, des légumineuses, du poisson ou du poulet, si tu veux un repas plus rassasiant."}}, {"@type": "Question", "name": "Avocat : comment l’enregistrer dans Pofu ?", "acceptedAnswer": {"@type": "Answer", "text": "Prends ton assiette en photo ou cherche le nom, puis règle la portion sur ce que tu as vraiment mangé. Tu peux corriger l’estimation, et Pofu retient ta correction pour la prochaine fois."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Portion plus petite ou plus grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Calories</th><th scope="col">Protéines</th></tr></thead>
+<tbody>
+<tr><th scope="row">Une demi-portion (50 g)</th><td>120 kcal</td><td>1,5 g</td></tr>
+<tr><th scope="row">Portion habituelle (100 g)</th><td>240 kcal</td><td>3 g</td></tr>
+<tr><th scope="row">Une portion et demie (150 g)</th><td>360 kcal</td><td>4,5 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>D’où viennent les calories</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:5%"></span><span class="sc" style="width:19%"></span><span class="sf" style="width:76%"></span></div>
+<p>5 % des calories viennent des protéines, 19 % des glucides et 76 % des lipides. En bref : la plupart des calories viennent des lipides, donc une petite variation de quantité change beaucoup.</p>
+<p>Une portion représente environ 12 % d’une journée à 2 000 kcal, la valeur de référence utilisée sur les étiquettes alimentaires.</p>
+</section>
 <section id="why">
 <h2>Pourquoi la valeur varie</h2>
 <p>Le gras est le principal levier. La quantité d’huile, de beurre, de fromage ou de friture, et la façon dont la cuillère ou la louche est remplie, modifient les calories plus que tout le reste. Deux assiettes d’apparence identique peuvent être très différentes.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Comment l’enregistrer dans Pofu</h2>
 <p>Pofu est notre appli. Pour enregistrer cet aliment, prenez votre assiette en photo : Pofu estime le plat et la portion et affiche un score de confiance, pour que vous voyiez son degré de certitude et puissiez corriger. Vous pouvez aussi chercher par nom ou scanner un code-barres, puis régler la portion selon ce que vous avez mangé. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_fr&amp;mt=8">Découvrir Pofu sur l’App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Appli Pofu : enregistrer un repas à partir d’une photo"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Enregistrement d’écran de l’appli Pofu (interface en anglais) : prends une photo, vérifie l’estimation, ajoute-la à aujourd’hui.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Aliments similaires</h2>
@@ -234,10 +258,25 @@
 <li><a href="salade-nicoise.html">Salade niçoise</a> <span class="k">· 320 kcal (1 portion, 300 g)</span></li>
 <li><a href="quiche-lorraine.html">Quiche lorraine</a> <span class="k">· 380 kcal (1 tranche, 150 g)</span></li>
 </ul>
+<h3>Options plus légères dans le même groupe</h3>
+<ul class="foodlist">
+<li><a href="saumon-au-four.html">Saumon au four</a> <span class="k">· 187 kcal pour 100 g</span></li>
+<li><a href="coq-au-vin.html">Coq au vin</a> <span class="k">· 168 kcal pour 100 g</span></li>
+<li><a href="uf-dur.html">Œuf dur</a> <span class="k">· 156 kcal pour 100 g</span></li>
+</ul>
 <p><a href="./">Tous les aliments</a></p>
 </section>
+<section id="faq">
+<h2>Questions sur cet aliment</h2>
+<h3>Avocat : combien de calories pour 100 g ?</h3>
+<p>Environ 240 kcal pour 100 g, avec 3 g de protéines, 12 g de glucides et 22 g de lipides.</p>
+<h3>Avocat : est-ce riche en protéines ?</h3>
+<p>Pas beaucoup : 3 g par portion, soit environ 5 % de ses calories. Associe-le à un aliment riche en protéines, comme des œufs, du yaourt, des légumineuses, du poisson ou du poulet, si tu veux un repas plus rassasiant.</p>
+<h3>Avocat : comment l’enregistrer dans Pofu ?</h3>
+<p>Prends ton assiette en photo ou cherche le nom, puis règle la portion sur ce que tu as vraiment mangé. Tu peux corriger l’estimation, et Pofu retient ta correction pour la prochaine fois.</p>
+</section>
 <section id="source">
-<p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion.</p>
+<p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion. <a href="../editorial-policy.html">Comment nous préparons nos contenus et nos sources</a>.</p>
 <div class="note"><p>Cette page donne des informations générales et ne constitue pas un avis médical. Si vous êtes enceinte, si vous allaitez, si vous avez un problème de santé ou des antécédents de trouble alimentaire, parlez-en à votre médecin ou à votre diététicien(ne) avant de compter les calories.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Cet aliment dans d’autres langues" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/avocado.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/avokado.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/avocado.html" hreflang="de" lang="de">Deutsch</a> · <strong>Français</strong> · <a href="../../es/calorias/aguacate.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/abacate.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/avocado.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/avokado.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/avocado.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/alpukat.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/avocado.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/avocado.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/avocado.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/avocado.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/awokado.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/avocado.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/avokado.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/avokado.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/avocado.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/avokado.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/qua-bo.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/avocado.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Explorer"><strong>Explorer</strong><a href="../guides.html">Guides</a><a href="../tools.html">Outils</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Questions</a><a href="../compare.html">Comparatifs</a></nav>
+<nav aria-label="Explorer"><strong>Explorer</strong><a href="../guides.html">Guides</a><a href="../tools.html">Outils</a><a href="./" aria-current="true">Calories</a><a href="../questions/">Questions</a><a href="../compare.html">Comparatifs</a><a href="../editorial-policy.html">Contenus et sources</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

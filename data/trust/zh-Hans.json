@@ -1,0 +1,40 @@
+{
+  "food": {
+    "h_port": "更小或更大的分量",
+    "port_cols": ["分量", "热量", "蛋白质"],
+    "port_rows": ["半份（{g} {u}）", "一份常见分量（{g} {u}）", "一份半（{g} {u}）"],
+    "h_split": "热量从哪里来",
+    "split": "热量中有 {p}% 来自蛋白质，{c}% 来自碳水化合物，{f}% 来自脂肪。",
+    "cat": {"fat": "简单来说：大部分热量来自脂肪，所以分量稍有变化，差别就很大。", "prot": "简单来说：是不错的蛋白质来源。", "carb": "简单来说：大部分热量来自碳水化合物。", "light": "简单来说：主要成分是水的轻食。", "mixed": "简单来说：蛋白质、碳水化合物和脂肪兼有。"},
+    "ref": "一份大约占 2,000 kcal 一天摄入量的 {pct}%，这是食品标签上使用的参考值。",
+    "h_lighter": "同类中更清淡的选择",
+    "per100": "每 100 {u}",
+    "h_faq": "关于这种食物的问题",
+    "q100": "{name}：100 {u}有多少热量？",
+    "a100": "每 100 {u}约 {kcal} kcal，含蛋白质 {p} g、碳水化合物 {c} g、脂肪 {f} g。",
+    "qprot": "{name}：蛋白质含量高吗？",
+    "aprot_high": "高。一份含蛋白质 {p} g，约占其热量的 {pp}%。",
+    "aprot_mid": "含有一些蛋白质：每份 {p} g，约占其热量的 {pp}%。",
+    "aprot_low": "不算多：每份 {p} g，约占其热量的 {pp}%。如果想吃得更有饱腹感，可以搭配鸡蛋、酸奶、豆类、鱼或鸡肉等富含蛋白质的食物。",
+    "qlog": "{name}：怎么在 Pofu 里记录？",
+    "alog": "给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。",
+    "video_caption": "Pofu 应用的屏幕录制（界面为英文）：拍照、核对估算，再添加到今天的记录中。",
+    "video_alt": "Pofu 应用：通过照片记录一餐",
+    "method_link": "我们如何准备内容和参考来源"
+  },
+  "method": {
+    "title": "我们如何准备内容和参考来源 | Pofu",
+    "desc": "说明 Pofu 的指南和计算器由谁撰写、热量数值和公式从哪里来、如何使用 AI，以及如何更正错误。",
+    "h1": "我们如何准备内容和参考来源",
+    "lede": "我们希望本站的每一个数字都可以核查。本页说明谁在撰写内容、数值从哪里来，以及我们不做什么。",
+    "sections": [
+      ["谁来撰写", "<p>Pofu 由独立开发者 Ali Gürkan Sevilmiş 制作。本站的指南、计算器和食物页面均由他依据下面列出的已发表资料撰写并维护。</p><p>这些内容目前还没有经过营养师或医生的审核。我们坦率地说明这一点，而不是为一次没有发生的审核挂上审核标识。如果你是营养专业人士，发现有可以改进的地方，我们很乐意听取你的意见。</p>"],
+      ["食物数值从哪里来", "<p>食物页面上的热量、蛋白质、碳水化合物和脂肪，来自公开的食物成分数据库以及 Pofu 应用内的食物数据库：</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a>（美国农业部）</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a>（荷兰 RIVM）</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a>（瑞典食品局）</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a>（捷克）</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a>（意大利）</li></ul><p>页面使用数据库中的条目时，会附上链接。家庭做法和餐厅做法各不相同，所以每个数值都是所示分量的典型估算值，每个页面也都这样说明。</p>"],
+      ["公式从哪里来", "<p>计算器使用与 Pofu 应用相同的规则，均取自已发表的研究：静息能量采用 Mifflin-St Jeor 公式（<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>），蛋白质范围来自 <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition（2017）</a>，脂肪和碳水化合物范围来自 <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies（2005）</a>，BMI 分类来自<a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">世界卫生组织</a>，每公斤体重所需的能量来自 <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall（2008）</a>。每个计算器都会列出自己的参考来源，并解释每一步。</p><p>我们从不建议每天低于 1,200 kcal。计算器会提醒你，如果正在怀孕或哺乳，不要制造热量缺口；当你告诉 Pofu 应用这一点时，它也不会设置热量缺口。</p>"],
+      ["我们如何使用 AI", "<p>Pofu 应用使用 AI 根据照片估算一餐的热量。每个估算都会显示置信度，并且可以修改。在本站，AI 工具帮助我们起草文字，并从英文和土耳其文原文翻译；开发者会对照上面的来源核对数字。翻译还没有全部经过母语者审阅；如果某句话在你的语言里读起来不对劲，请告诉我们。</p>"],
+      ["我们不做什么", "<ul><li>我们不提供医疗建议或诊断。</li><li>Pofu 不预测月经或排卵，也没有怀孕记录功能；可选的周期功能只使用你自己输入的日期。</li><li>我们不承诺减重效果，也不展示前后对比照。</li><li>我们不发布虚假评价或评分。</li><li>我们的对比页面由 Pofu 的制作者撰写，每个页面都会注明这一点。</li><li>计算器在你的浏览器中运行；你输入的任何信息都不会被发送或保存。</li></ul>"],
+      ["更新与更正", "<p>每个页面都会显示最后更新的时间。来源有变化时，我们会重新检查页面。如果你发现了错误，请写信到 <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>；我们会对照来源核实，修正确认无误的错误，并更新页面上的日期。</p>"]
+    ],
+    "nav": "内容与来源"
+  }
+}

@@ -118,9 +118,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/vi/calo/com-ca-ri-ga.html", "url": "https://getpofu.com/vi/calo/com-ca-ri-ga.html", "name": "Cơm cà ri gà có bao nhiêu calo? (1 đĩa, 300 g)", "description": "Cơm cà ri gà: khoảng 348 kcal mỗi khẩu phần (1 đĩa, 300 g); 14,9 g protein, 45,4 g carbohydrate, 12 g chất béo. Giá trị tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu.", "inLanguage": "vi", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Cơm cà ri gà", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "348 kcal", "proteinContent": "14.9 g", "carbohydrateContent": "45.4 g", "fatContent": "12 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/vi/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calo", "item": "https://getpofu.com/vi/calo/"}, {"@type": "ListItem", "position": 3, "name": "Cơm cà ri gà", "item": "https://getpofu.com/vi/calo/com-ca-ri-ga.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/vi/calo/com-ca-ri-ga.html", "url": "https://getpofu.com/vi/calo/com-ca-ri-ga.html", "name": "Cơm cà ri gà có bao nhiêu calo? (1 đĩa, 300 g)", "description": "Cơm cà ri gà: khoảng 348 kcal mỗi khẩu phần (1 đĩa, 300 g); 14,9 g protein, 45,4 g carbohydrate, 12 g chất béo. Giá trị tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu.", "inLanguage": "vi", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Cơm cà ri gà", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "348 kcal", "proteinContent": "14.9 g", "carbohydrateContent": "45.4 g", "fatContent": "12 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/vi/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calo", "item": "https://getpofu.com/vi/calo/"}, {"@type": "ListItem", "position": 3, "name": "Cơm cà ri gà", "item": "https://getpofu.com/vi/calo/com-ca-ri-ga.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/vi/calo/com-ca-ri-ga.html#faq", "inLanguage": "vi", "mainEntity": [{"@type": "Question", "name": "Cơm cà ri gà: 100 g có bao nhiêu calo?", "acceptedAnswer": {"@type": "Answer", "text": "Khoảng 116 kcal mỗi 100 g, với 5 g protein, 15,1 g tinh bột và 4 g chất béo."}}, {"@type": "Question", "name": "Cơm cà ri gà: có nhiều protein không?", "acceptedAnswer": {"@type": "Answer", "text": "Có một ít protein: 14,9 g mỗi khẩu phần, khoảng 17% lượng calo."}}, {"@type": "Question", "name": "Cơm cà ri gà: ghi lại trong Pofu như thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Chụp ảnh đĩa ăn hoặc tìm theo tên, rồi chỉnh khẩu phần đúng với lượng bạn thực sự đã ăn. Bạn có thể sửa lại ước tính, và Pofu sẽ nhớ chỗ bạn sửa cho lần sau."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -196,6 +202,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Khẩu phần nhỏ hơn hoặc lớn hơn</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Khẩu phần</th><th scope="col">Calo</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Nửa khẩu phần (150 g)</th><td>174 kcal</td><td>7,5 g</td></tr>
+<tr><th scope="row">Khẩu phần thông thường (300 g)</th><td>348 kcal</td><td>14,9 g</td></tr>
+<tr><th scope="row">Một rưỡi khẩu phần (450 g)</th><td>522 kcal</td><td>22,4 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Calo đến từ đâu</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:17%"></span><span class="sc" style="width:52%"></span><span class="sf" style="width:31%"></span></div>
+<p>17% lượng calo đến từ protein, 52% từ tinh bột và 31% từ chất béo. Tóm lại: kết hợp giữa protein, tinh bột và chất béo.</p>
+<p>Một khẩu phần chiếm khoảng 17% nhu cầu 2.000 kcal mỗi ngày, mức tham chiếu được dùng trên nhãn thực phẩm.</p>
+</section>
 <section id="why">
 <h2>Vì sao con số có thể thay đổi</h2>
 <p>Công thức nấu ở nhà và ở nhà hàng khác nhau về lượng dầu, thịt, phô mai và tinh bột cũng như kích cỡ khẩu phần. Hãy xem con số này là điểm xuất phát và điều chỉnh khẩu phần nếu đĩa của bạn nhỏ hơn hoặc lớn hơn.</p>
@@ -203,6 +226,7 @@
 <section id="log">
 <h2>Cách ghi lại trong Pofu</h2>
 <p>Pofu là ứng dụng của chúng tôi. Để ghi lại món này, hãy chụp ảnh đĩa ăn: Pofu ước tính món ăn và khẩu phần, đồng thời hiển thị mức độ tin cậy để bạn biết ước tính chắc chắn đến đâu và có thể chỉnh lại. Bạn cũng có thể tìm theo tên hoặc quét mã vạch, rồi điều chỉnh khẩu phần cho đúng với lượng bạn thực sự ăn. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_vi&amp;mt=8">Tải Pofu trên App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Ứng dụng Pofu: ghi lại bữa ăn từ ảnh"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Quay màn hình từ ứng dụng Pofu (giao diện tiếng Anh): chụp ảnh, kiểm tra ước tính, thêm vào hôm nay.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Món tương tự</h2>
@@ -216,8 +240,17 @@
 </ul>
 <p><a href="./">Tất cả món ăn</a></p>
 </section>
+<section id="faq">
+<h2>Câu hỏi về món này</h2>
+<h3>Cơm cà ri gà: 100 g có bao nhiêu calo?</h3>
+<p>Khoảng 116 kcal mỗi 100 g, với 5 g protein, 15,1 g tinh bột và 4 g chất béo.</p>
+<h3>Cơm cà ri gà: có nhiều protein không?</h3>
+<p>Có một ít protein: 14,9 g mỗi khẩu phần, khoảng 17% lượng calo.</p>
+<h3>Cơm cà ri gà: ghi lại trong Pofu như thế nào?</h3>
+<p>Chụp ảnh đĩa ăn hoặc tìm theo tên, rồi chỉnh khẩu phần đúng với lượng bạn thực sự đã ăn. Bạn có thể sửa lại ước tính, và Pofu sẽ nhớ chỗ bạn sửa cho lần sau.</p>
+</section>
 <section id="source">
-<p class="fine">Giá trị: ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu; chúng thay đổi theo công thức và khẩu phần. <a href="https://fdc.nal.usda.gov/food-details/2706438/nutrients" rel="nofollow noopener">Nguồn</a>.</p>
+<p class="fine">Giá trị: ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu; chúng thay đổi theo công thức và khẩu phần. <a href="https://fdc.nal.usda.gov/food-details/2706438/nutrients" rel="nofollow noopener">Nguồn</a>. <a href="../editorial-policy.html">Cách chúng tôi chuẩn bị nội dung và nguồn</a>.</p>
 <div class="note"><p>Trang này chỉ mang tính thông tin chung và không phải lời khuyên y tế. Nếu bạn đang mang thai, cho con bú, có bệnh lý hoặc từng có rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi đếm calo.</p></div>
 </section>
 </main>
@@ -236,7 +269,7 @@
 <nav class="langs" aria-label="Món này bằng các ngôn ngữ khác" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../hi/calories/chicken-curry-chawal.html" hreflang="hi" lang="hi">हिन्दी</a> · <strong>Tiếng Việt</strong></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Khám phá"><strong>Khám phá</strong><a href="../guides.html">Hướng dẫn</a><a href="../tools.html">Công cụ</a><a href="./" aria-current="true">Calo</a><a href="../questions/">Hỏi đáp</a><a href="../compare.html">So sánh</a></nav>
+<nav aria-label="Khám phá"><strong>Khám phá</strong><a href="../guides.html">Hướng dẫn</a><a href="../tools.html">Công cụ</a><a href="./" aria-current="true">Calo</a><a href="../questions/">Hỏi đáp</a><a href="../compare.html">So sánh</a><a href="../editorial-policy.html">Nội dung và nguồn</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

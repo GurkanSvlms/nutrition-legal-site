@@ -41,7 +41,8 @@ OTHER = ["de", "fr", "es", "it", "pt-BR", "nl", "pl", "ru", "uk", "cs", "ro", "s
 ALL = ["en", "tr"] + OTHER
 SKIP_DIRS = {".git", "graphify-out", "node_modules", "data", "scripts", "assets"}
 LANDING = {"index.html", "tr/index.html", "get/index.html"}  # own header design, no nav injection
-NON_CONTENT = {"index.html", "pofu.html", "privacy.html", "terms.html", "support.html", "about.html"}
+NON_CONTENT = {"index.html", "pofu.html", "privacy.html", "terms.html", "support.html", "about.html",
+               "editorial-policy.html", "icerik-ve-kaynak-politikasi.html"}
 TOOL_NAMES = {"period-water-weight-calculator.html", "cycle-calorie-calculator.html",
               "regl-kilosu-su-mu-yag-mi.html", "kadin-gunluk-kalori-ihtiyaci-hesaplama.html"}
 GUIDE_ORDER = ["best-calorie-counter-for-women.html", "kadinlar-icin-en-iyi-kalori-sayaci.html",
@@ -49,7 +50,11 @@ GUIDE_ORDER = ["best-calorie-counter-for-women.html", "kadinlar-icin-en-iyi-kalo
                "how-accurate-is-photo-calorie-counting.html", "fotograftan-kalori-hesaplama-ne-kadar-dogru.html",
                "calorie-counter-app-without-guilt.html", "kalori-sayarken-sucluluk.html"]
 TOOL_ORDER = ["cycle-calorie-calculator.html", "period-water-weight-calculator.html",
-              "kadin-gunluk-kalori-ihtiyaci-hesaplama.html", "regl-kilosu-su-mu-yag-mi.html"]
+              "kadin-gunluk-kalori-ihtiyaci-hesaplama.html", "regl-kilosu-su-mu-yag-mi.html",
+              "calorie-deficit-calculator.html", "kalori-acigi-hesaplama.html",
+              "macro-calculator-for-women.html", "kadinlar-icin-makro-hesaplama.html",
+              "protein-calculator-for-women.html", "kadinlar-icin-protein-ihtiyaci-hesaplama.html",
+              "bmi-calculator-for-women.html", "kadinlar-icin-vucut-kitle-endeksi-hesaplama.html"]
 
 HUBFILE = {
     "en": {"guides": "guides.html", "tools": "tools.html", "compare": "compare.html"},
@@ -388,11 +393,24 @@ def alt_links(text, r):
     return out
 
 
+def policy_link(L, r):
+    """Footer link to the 'content and sources' page (label from data/trust/<L>.json)."""
+    tgt = "editorial-policy.html" if L == "en" else "icerik-ve-kaynak-politikasi.html" if L == "tr" else f"{L}/editorial-policy.html"
+    tf = ROOT / "data" / "trust" / f"{L}.json"
+    if not exists(tgt) or not tf.exists():
+        return ""
+    label = json.loads(rd(tf)).get("method", {}).get("nav")
+    if not label:
+        return ""
+    cur = ' aria-current="page"' if r == tgt else ""
+    return f'<a href="{href_to(tgt, r)}"{cur}>{htmllib.escape(label, quote=False)}</a>'
+
+
 def footer_block(L, r, text):
     lab = LABELS[L]
     x = htmllib.escape(lab["x"], quote=False)
     out = ['<!-- footnav:start -->', '<div class="wrap pfoot">',
-           f'<nav aria-label="{x}"><strong>{x}</strong>{a_tags(nav_links(L, r))}</nav>']
+           f'<nav aria-label="{x}"><strong>{x}</strong>{a_tags(nav_links(L, r))}{policy_link(L, r)}</nav>']
     stripped = re.sub(r"<!-- footnav:start -->.*?<!-- footnav:end -->", "", text, flags=re.S)
     if 'class="langs"' not in stripped:  # page already has its own language switcher
         alts = alt_links(text, r)

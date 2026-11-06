@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/de/kalorien/susskartoffel.html", "url": "https://getpofu.com/de/kalorien/susskartoffel.html", "name": "Wie viele Kalorien stecken in Süßkartoffel? (1 Stück, 130 g)", "description": "Süßkartoffel: etwa 115 kcal pro Portion (1 Stück, 130 g); 2 g Eiweiß, 27 g Kohlenhydrate, 0,1 g Fett. Typische Werte aus der Pofu-App.", "inLanguage": "de", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Süßkartoffel", "nutrition": {"@type": "NutritionInformation", "servingSize": "130 g", "calories": "115 kcal", "proteinContent": "2 g", "carbohydrateContent": "27 g", "fatContent": "0.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/de/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorien", "item": "https://getpofu.com/de/kalorien/"}, {"@type": "ListItem", "position": 3, "name": "Süßkartoffel", "item": "https://getpofu.com/de/kalorien/susskartoffel.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/de/kalorien/susskartoffel.html", "url": "https://getpofu.com/de/kalorien/susskartoffel.html", "name": "Wie viele Kalorien stecken in Süßkartoffel? (1 Stück, 130 g)", "description": "Süßkartoffel: etwa 115 kcal pro Portion (1 Stück, 130 g); 2 g Eiweiß, 27 g Kohlenhydrate, 0,1 g Fett. Typische Werte aus der Pofu-App.", "inLanguage": "de", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Süßkartoffel", "nutrition": {"@type": "NutritionInformation", "servingSize": "130 g", "calories": "115 kcal", "proteinContent": "2 g", "carbohydrateContent": "27 g", "fatContent": "0.1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/de/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorien", "item": "https://getpofu.com/de/kalorien/"}, {"@type": "ListItem", "position": 3, "name": "Süßkartoffel", "item": "https://getpofu.com/de/kalorien/susskartoffel.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/de/kalorien/susskartoffel.html#faq", "inLanguage": "de", "mainEntity": [{"@type": "Question", "name": "Süßkartoffel: Wie viele Kalorien hat es pro 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Etwa 88 kcal pro 100 g, mit 1,5 g Protein, 20,8 g Kohlenhydraten und 0,1 g Fett."}}, {"@type": "Question", "name": "Süßkartoffel: Ist es proteinreich?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht viel: 2 g pro Portion, etwa 7 % der Kalorien. Kombiniere es mit einem Proteinlieferanten wie Eiern, Joghurt, Hülsenfrüchten, Fisch oder Hähnchen, wenn du eine sättigendere Mahlzeit möchtest."}}, {"@type": "Question", "name": "Süßkartoffel: Wie trage ich es in Pofu ein?", "acceptedAnswer": {"@type": "Answer", "text": "Mach ein Foto von deinem Teller oder suche nach dem Namen und stelle dann die Portion auf das ein, was du wirklich gegessen hast. Du kannst die Schätzung korrigieren, und Pofu merkt sich deine Korrektur für das nächste Mal."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere oder größere Portion</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portion</th><th scope="col">Kalorien</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Eine halbe Portion (65 g)</th><td>58 kcal</td><td>1 g</td></tr>
+<tr><th scope="row">Übliche Portion (130 g)</th><td>115 kcal</td><td>2 g</td></tr>
+<tr><th scope="row">Anderthalb Portionen (195 g)</th><td>172 kcal</td><td>3 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Woher die Kalorien kommen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:7%"></span><span class="sc" style="width:92%"></span><span class="sf" style="width:1%"></span></div>
+<p>7 % der Kalorien stammen aus Protein, 92 % aus Kohlenhydraten und 1 % aus Fett. Kurz gesagt: Die meisten Kalorien stammen aus Kohlenhydraten.</p>
+<p>Eine Portion entspricht etwa 6 % eines Tages mit 2.000 kcal, dem Referenzwert auf Lebensmitteletiketten.</p>
+</section>
 <section id="why">
 <h2>Warum der Wert schwankt</h2>
 <p>Das Ergebnis hängt davon ab, wie das Gericht zubereitet wurde und wie viel Öl, Butter oder Zucker darin steckt. Gegartes und trockenes Gewicht unterscheiden sich stark, deshalb liegen ein gehäufter und ein gestrichener Teller weit auseinander. Marke, Größe und Dicke verändern den Wert zusätzlich.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>So erfasst du es in Pofu</h2>
 <p>Pofu ist unsere App. Um dieses Lebensmittel zu erfassen, fotografiere deinen Teller: Pofu schätzt Gericht und Portion und zeigt einen Konfidenzwert, damit du siehst, wie sicher die Schätzung ist, und sie anpassen kannst. Du kannst auch nach dem Namen suchen oder einen Barcode scannen und die Portion auf deine tatsächliche Menge einstellen. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_de&amp;mt=8">Pofu im App Store laden</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-App: eine Mahlzeit per Foto eintragen"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Bildschirmaufnahme aus der Pofu-App (englische Oberfläche): Foto machen, Schätzung prüfen, zu heute hinzufügen.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Ähnliche Lebensmittel</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Alle Lebensmittel</a></p>
 </section>
+<section id="faq">
+<h2>Fragen zu diesem Lebensmittel</h2>
+<h3>Süßkartoffel: Wie viele Kalorien hat es pro 100 g?</h3>
+<p>Etwa 88 kcal pro 100 g, mit 1,5 g Protein, 20,8 g Kohlenhydraten und 0,1 g Fett.</p>
+<h3>Süßkartoffel: Ist es proteinreich?</h3>
+<p>Nicht viel: 2 g pro Portion, etwa 7 % der Kalorien. Kombiniere es mit einem Proteinlieferanten wie Eiern, Joghurt, Hülsenfrüchten, Fisch oder Hähnchen, wenn du eine sättigendere Mahlzeit möchtest.</p>
+<h3>Süßkartoffel: Wie trage ich es in Pofu ein?</h3>
+<p>Mach ein Foto von deinem Teller oder suche nach dem Namen und stelle dann die Portion auf das ein, was du wirklich gegessen hast. Du kannst die Schätzung korrigieren, und Pofu merkt sich deine Korrektur für das nächste Mal.</p>
+</section>
 <section id="source">
-<p class="fine">Werte: typische Schätzwerte, wie sie in der Pofu-App verwendet werden; sie schwanken je nach Rezept und Portion.</p>
+<p class="fine">Werte: typische Schätzwerte, wie sie in der Pofu-App verwendet werden; sie schwanken je nach Rezept und Portion. <a href="../editorial-policy.html">Wie wir unsere Inhalte und Quellen erstellen</a>.</p>
 <div class="note"><p>Diese Seite dient der allgemeinen Information und ist keine medizinische Beratung. Wenn du schwanger bist, stillst, eine Erkrankung hast oder früher eine Essstörung hattest, sprich vor dem Kalorienzählen mit deiner Ärztin, deinem Arzt oder einer Ernährungsberatung.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Dieses Lebensmittel in anderen Sprachen" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/sweet-potato.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/tatli-patates.html" hreflang="tr" lang="tr">Türkçe</a> · <strong>Deutsch</strong> · <a href="../../fr/calories/patate-douce.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/camote.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/batata-doce.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/sweet-potato.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/batat.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/sweet-potato.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/ubi-jalar.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/patata-dolce.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/sweet-potato.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/sweet-potato.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/zoete-aardappel.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/batat.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/cartof-dulce.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/batat.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/sotpotatis.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/sweet-potato.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/batat.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/khoai-lang.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/sweet-potato.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Entdecken"><strong>Entdecken</strong><a href="../guides.html">Ratgeber</a><a href="../tools.html">Rechner</a><a href="./" aria-current="true">Kalorien</a><a href="../questions/">Fragen</a><a href="../compare.html">Vergleiche</a></nav>
+<nav aria-label="Entdecken"><strong>Entdecken</strong><a href="../guides.html">Ratgeber</a><a href="../tools.html">Rechner</a><a href="./" aria-current="true">Kalorien</a><a href="../questions/">Fragen</a><a href="../compare.html">Vergleiche</a><a href="../editorial-policy.html">Inhalte und Quellen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

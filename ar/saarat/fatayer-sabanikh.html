@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html", "url": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html", "name": "كم سعرة حرارية في فطيرة سبانخ؟ (1 فطيرة, 120 g)", "description": "فطيرة سبانخ: نحو 254 kcal للحصة الواحدة (1 فطيرة, 120 g)؛ 9.9 غ بروتين، 12.4 غ كربوهيدرات، 18.2 غ دهون. قيم نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu.", "inLanguage": "ar", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "فطيرة سبانخ", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "254 kcal", "proteinContent": "9.9 g", "carbohydrateContent": "12.4 g", "fatContent": "18.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ar/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "السعرات", "item": "https://getpofu.com/ar/saarat/"}, {"@type": "ListItem", "position": 3, "name": "فطيرة سبانخ", "item": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html", "url": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html", "name": "كم سعرة حرارية في فطيرة سبانخ؟ (1 فطيرة, 120 g)", "description": "فطيرة سبانخ: نحو 254 kcal للحصة الواحدة (1 فطيرة, 120 g)؛ 9.9 غ بروتين، 12.4 غ كربوهيدرات، 18.2 غ دهون. قيم نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu.", "inLanguage": "ar", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "فطيرة سبانخ", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "254 kcal", "proteinContent": "9.9 g", "carbohydrateContent": "12.4 g", "fatContent": "18.2 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/ar/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "السعرات", "item": "https://getpofu.com/ar/saarat/"}, {"@type": "ListItem", "position": 3, "name": "فطيرة سبانخ", "item": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/ar/saarat/fatayer-sabanikh.html#faq", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "فطيرة سبانخ: كم سعرة في 100 g؟", "acceptedAnswer": {"@type": "Answer", "text": "نحو 212 kcal لكل 100 g، مع 8.2 غ بروتين و10.3 غ كربوهيدرات و15.2 غ دهون."}}, {"@type": "Question", "name": "فطيرة سبانخ: هل هو غني بالبروتين؟", "acceptedAnswer": {"@type": "Answer", "text": "يحتوي على قدر من البروتين: 9.9 غ في الحصة، أي نحو 16% من سعراتها."}}, {"@type": "Question", "name": "فطيرة سبانخ: كيف أسجله في Pofu؟", "acceptedAnswer": {"@type": "Answer", "text": "صوّري طبقك أو ابحثي عن الاسم، ثم اضبطي الحصة على ما أكلتِه فعلًا. يمكنك تصحيح التقدير، وسيتذكر Pofu تصحيحك في المرة القادمة."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>حصة أصغر أو أكبر</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">الحصة</th><th scope="col">السعرات</th><th scope="col">البروتين</th></tr></thead>
+<tbody>
+<tr><th scope="row">نصف حصة (60 g)</th><td>127 kcal</td><td>5 g</td></tr>
+<tr><th scope="row">حصة عادية (120 g)</th><td>254 kcal</td><td>9.9 g</td></tr>
+<tr><th scope="row">حصة ونصف (180 g)</th><td>381 kcal</td><td>14.9 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>من أين تأتي السعرات</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:16%"></span><span class="sc" style="width:20%"></span><span class="sf" style="width:64%"></span></div>
+<p>16% من السعرات يأتي من البروتين، و20% من الكربوهيدرات، و64% من الدهون. باختصار: معظم السعرات تأتي من الدهون، لذا فتغيير بسيط في الكمية يصنع فرقًا كبيرًا.</p>
+<p>الحصة الواحدة تمثل نحو 13% من يوم قوامه 2,000 kcal، وهي القيمة المرجعية المستخدمة على ملصقات الأغذية.</p>
+</section>
 <section id="why">
 <h2>لماذا تختلف القيمة</h2>
 <p>الدهون هي الأكثر تأثيرًا. فكمية الزيت أو الزبدة أو الجبن أو زيت القلي، ومدى امتلاء الملعقة أو المغرفة، تغيّر السعرات أكثر من أي شيء آخر. وقد يختلف طبقان متشابهان في الشكل اختلافًا كبيرًا.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>كيف تسجّلينه في Pofu</h2>
 <p>Pofu هو تطبيقنا. لتسجيل هذا الطعام، صوّري طبقك: يقدّر Pofu الطبق والحصة ويعرض درجة ثقة لتعرفي مدى دقة التقدير ويمكنك تعديله. يمكنك أيضًا البحث بالاسم أو مسح الباركود، ثم ضبط الحصة على الكمية التي تناولتِها فعلًا. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_ar&amp;mt=8">حمّلي Pofu من App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="تطبيق Pofu: تسجيل وجبة من صورة"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>تسجيل شاشة من تطبيق Pofu (الواجهة المعروضة بالإنجليزية): صوّري، وراجعي التقدير، وأضيفي إلى اليوم.</figcaption></figure>
 </section>
 <section id="related">
 <h2>أطعمة مشابهة</h2>
@@ -213,10 +237,25 @@
 <li><a href="ground-beef-15-fat.html">لحم بقري مفروم (15% دهون)</a> <span class="k">· 250 kcal (حصة واحدة, 100 g)</span></li>
 <li><a href="avocado.html">أفوكادو</a> <span class="k">· 240 kcal (نصف حبة, 100 g)</span></li>
 </ul>
+<h3>خيارات أخف من المجموعة نفسها</h3>
+<ul class="foodlist">
+<li><a href="warak-enab-aruz.html">ورق عنب بالأرز (يالنجي)</a> <span class="k">· 168 kcal لكل 100 g</span></li>
+<li><a href="shish-kabab-lahm.html">شيش كباب لحم مع خضار</a> <span class="k">· 162 kcal لكل 100 g</span></li>
+<li><a href="boiled-egg.html">بيضة مسلوقة</a> <span class="k">· 156 kcal لكل 100 g</span></li>
+</ul>
 <p><a href="./">كل الأطعمة</a></p>
 </section>
+<section id="faq">
+<h2>أسئلة عن هذا الطعام</h2>
+<h3>فطيرة سبانخ: كم سعرة في 100 g؟</h3>
+<p>نحو 212 kcal لكل 100 g، مع 8.2 غ بروتين و10.3 غ كربوهيدرات و15.2 غ دهون.</p>
+<h3>فطيرة سبانخ: هل هو غني بالبروتين؟</h3>
+<p>يحتوي على قدر من البروتين: 9.9 غ في الحصة، أي نحو 16% من سعراتها.</p>
+<h3>فطيرة سبانخ: كيف أسجله في Pofu؟</h3>
+<p>صوّري طبقك أو ابحثي عن الاسم، ثم اضبطي الحصة على ما أكلتِه فعلًا. يمكنك تصحيح التقدير، وسيتذكر Pofu تصحيحك في المرة القادمة.</p>
+</section>
 <section id="source">
-<p class="fine">القيم: تقديرات نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu، وتختلف بحسب الوصفة والحصة. <a href="https://fdc.nal.usda.gov/food-details/2708729/nutrients" rel="nofollow noopener">المصدر</a>.</p>
+<p class="fine">القيم: تقديرات نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu، وتختلف بحسب الوصفة والحصة. <a href="https://fdc.nal.usda.gov/food-details/2708729/nutrients" rel="nofollow noopener">المصدر</a>. <a href="../editorial-policy.html">كيف نُعدّ محتوانا ومصادرنا</a>.</p>
 <div class="note"><p>هذه الصفحة للمعلومات العامة فقط وليست نصيحة طبية. إذا كنتِ حاملًا أو مرضعة أو لديكِ حالة صحية أو سبق أن عانيتِ من اضطراب في الأكل، فتحدّثي إلى طبيبك أو أخصائية التغذية قبل عدّ السعرات.</p></div>
 </section>
 </main>
@@ -233,7 +272,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="استكشف"><strong>استكشف</strong><a href="../guides.html">الأدلة</a><a href="../tools.html">الأدوات</a><a href="./" aria-current="true">السعرات</a><a href="../questions/">أسئلة</a><a href="../compare.html">مقارنات</a></nav>
+<nav aria-label="استكشف"><strong>استكشف</strong><a href="../guides.html">الأدلة</a><a href="../tools.html">الأدوات</a><a href="./" aria-current="true">السعرات</a><a href="../questions/">أسئلة</a><a href="../compare.html">مقارنات</a><a href="../editorial-policy.html">المحتوى والمصادر</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

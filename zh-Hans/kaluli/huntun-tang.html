@@ -118,9 +118,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html", "url": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html", "name": "馄饨汤有多少热量？（1碗, 300 g）", "description": "馄饨汤：约 99 kcal（每份：1碗, 300 g）；蛋白质 7.2 g，碳水化合物 8.9 g，脂肪 3.9 g。为一般典型估算值。", "inLanguage": "zh-Hans", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "馄饨汤", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "99 kcal", "proteinContent": "7.2 g", "carbohydrateContent": "8.9 g", "fatContent": "3.9 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/zh-Hans/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "热量", "item": "https://getpofu.com/zh-Hans/kaluli/"}, {"@type": "ListItem", "position": 3, "name": "馄饨汤", "item": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html", "url": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html", "name": "馄饨汤有多少热量？（1碗, 300 g）", "description": "馄饨汤：约 99 kcal（每份：1碗, 300 g）；蛋白质 7.2 g，碳水化合物 8.9 g，脂肪 3.9 g。为一般典型估算值。", "inLanguage": "zh-Hans", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "馄饨汤", "nutrition": {"@type": "NutritionInformation", "servingSize": "300 g", "calories": "99 kcal", "proteinContent": "7.2 g", "carbohydrateContent": "8.9 g", "fatContent": "3.9 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/zh-Hans/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "热量", "item": "https://getpofu.com/zh-Hans/kaluli/"}, {"@type": "ListItem", "position": 3, "name": "馄饨汤", "item": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/zh-Hans/kaluli/huntun-tang.html#faq", "inLanguage": "zh-Hans", "mainEntity": [{"@type": "Question", "name": "馄饨汤：100 g有多少热量？", "acceptedAnswer": {"@type": "Answer", "text": "每 100 g约 33 kcal，含蛋白质 2.4 g、碳水化合物 3 g、脂肪 1.3 g。"}}, {"@type": "Question", "name": "馄饨汤：蛋白质含量高吗？", "acceptedAnswer": {"@type": "Answer", "text": "含有一些蛋白质：每份 7.2 g，约占其热量的 29%。"}}, {"@type": "Question", "name": "馄饨汤：怎么在 Pofu 里记录？", "acceptedAnswer": {"@type": "Answer", "text": "给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。"}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -196,6 +202,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>更小或更大的分量</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">分量</th><th scope="col">热量</th><th scope="col">蛋白质</th></tr></thead>
+<tbody>
+<tr><th scope="row">半份（150 g）</th><td>50 kcal</td><td>3.6 g</td></tr>
+<tr><th scope="row">一份常见分量（300 g）</th><td>99 kcal</td><td>7.2 g</td></tr>
+<tr><th scope="row">一份半（450 g）</th><td>148 kcal</td><td>10.8 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>热量从哪里来</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:29%"></span><span class="sc" style="width:36%"></span><span class="sf" style="width:35%"></span></div>
+<p>热量中有 29% 来自蛋白质，36% 来自碳水化合物，35% 来自脂肪。 简单来说：主要成分是水的轻食。</p>
+<p>一份大约占 2,000 kcal 一天摄入量的 5%，这是食品标签上使用的参考值。</p>
+</section>
 <section id="why">
 <h2>数值为什么会有差异</h2>
 <p>这类食物大部分是水分，所以分量和实际重量比做法更重要。大小、成熟度，以及糖、沙拉酱、油或牛奶等额外添加，都会改变数值。</p>
@@ -203,6 +226,7 @@
 <section id="log">
 <h2>如何在 Pofu 中记录</h2>
 <p>Pofu 是我们的应用。要记录这种食物，只需给餐盘拍张照片：Pofu 会估算食物和分量，并显示置信度分数，让你看到估算有多确定，也可以自行修正。你也可以按名称搜索或扫描条形码，再把分量调整为你实际吃的量。<a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_zh_hans&amp;mt=8">在 App Store 获取 Pofu</a>。</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu 应用：通过照片记录一餐"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofu 应用的屏幕录制（界面为英文）：拍照、核对估算，再添加到今天的记录中。</figcaption></figure>
 </section>
 <section id="related">
 <h2>相似食物</h2>
@@ -214,10 +238,25 @@
 <li><a href="blueberries.html">蓝莓</a> <span class="k">· 85 kcal (1碗, 150 g)</span></li>
 <li><a href="plain-yogurt.html">原味酸奶</a> <span class="k">· 120 kcal (1碗, 200 g)</span></li>
 </ul>
+<h3>同类中更清淡的选择</h3>
+<ul class="foodlist">
+<li><a href="spinach.html">菠菜</a> <span class="k">· 23 kcal 每 100 g</span></li>
+<li><a href="tomato.html">番茄</a> <span class="k">· 18 kcal 每 100 g</span></li>
+<li><a href="cucumber.html">黄瓜</a> <span class="k">· 16 kcal 每 100 g</span></li>
+</ul>
 <p><a href="./">全部食物</a></p>
 </section>
+<section id="faq">
+<h2>关于这种食物的问题</h2>
+<h3>馄饨汤：100 g有多少热量？</h3>
+<p>每 100 g约 33 kcal，含蛋白质 2.4 g、碳水化合物 3 g、脂肪 1.3 g。</p>
+<h3>馄饨汤：蛋白质含量高吗？</h3>
+<p>含有一些蛋白质：每份 7.2 g，约占其热量的 29%。</p>
+<h3>馄饨汤：怎么在 Pofu 里记录？</h3>
+<p>给你的餐盘拍张照，或者搜索名称，然后把分量调成你实际吃的量。你可以修改估算值，Pofu 下次会记住你的修改。</p>
+</section>
 <section id="source">
-<p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。 <a href="https://fdc.nal.usda.gov/food-details/2709160/nutrients" rel="nofollow noopener">出处</a>.</p>
+<p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。 <a href="https://fdc.nal.usda.gov/food-details/2709160/nutrients" rel="nofollow noopener">出处</a>. <a href="../editorial-policy.html">我们如何准备内容和参考来源</a>.</p>
 <div class="note"><p>本页面仅提供一般性信息，不构成医疗建议。如果你正处于孕期或哺乳期、患有疾病或有进食障碍史，请在开始计算热量之前咨询医生或营养师。</p></div>
 </section>
 </main>
@@ -236,7 +275,7 @@
 <nav class="langs" aria-label="其他语言版本" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../vi/calo/hoanh-thanh.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <strong>简体中文</strong></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="探索"><strong>探索</strong><a href="../guides.html">指南</a><a href="../tools.html">工具</a><a href="./" aria-current="true">热量</a><a href="../questions/">问答</a><a href="../compare.html">对比</a></nav>
+<nav aria-label="探索"><strong>探索</strong><a href="../guides.html">指南</a><a href="../tools.html">工具</a><a href="./" aria-current="true">热量</a><a href="../questions/">问答</a><a href="../compare.html">对比</a><a href="../editorial-policy.html">内容与来源</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

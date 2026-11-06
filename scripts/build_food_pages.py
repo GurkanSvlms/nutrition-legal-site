@@ -304,6 +304,28 @@ def inline_name(code, name):
 def e(s): return html.escape(s, quote=True)
 
 
+def trust(code):
+    """Extra food-page strings (portions, calorie split, FAQ, video) from data/trust/<lang>.json."""
+    return json.load(open(os.path.join(SITE, "data/trust/%s.json" % code), encoding="utf-8"))["food"]
+
+
+def method_page(code):
+    return "editorial-policy.html" if code == "en" else "icerik-ve-kaynak-politikasi.html" if code == "tr" else code + "/editorial-policy.html"
+
+
+def fill(t, **kw):
+    return re.sub(r"\{(\w+)\}", lambda m: str(kw.get(m.group(1), m.group(0))), t)
+
+
+def shares(it):
+    """Percent of macro energy from protein, carbs, fat (sums to 100)."""
+    pe, ce, fe = it["p"] * 4, it["c"] * 4, it["fat"] * 9
+    tot = pe + ce + fe
+    if tot <= 0: return None
+    p, c = round(pe * 100 / tot), round(ce * 100 / tot)
+    return p, c, 100 - p - c
+
+
 # ---------------------------------------------------------------- templates
 EXTRA_CSS = """
     .answer { font-size: 1.2rem; color: var(--ink); }
@@ -316,6 +338,12 @@ EXTRA_CSS = """
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 """
 
 
@@ -424,6 +452,8 @@ def build():
             p = os.path.join(d, fn)
             if fn.endswith(".html") and MARK in open(p, encoding="utf-8").read(): os.remove(p)
         css = css_for(lc); items = data[code]; hub_url = hubs[code]; hubn = lc["hubname"]
+        T = trust(code); up = lc["up"]
+        mlink = os.path.relpath(os.path.join(SITE, method_page(code)), d)
         for it in items:
             unit = "ml" if "ml" in it["label"] else "g"
             lf = label_full(it["label"], it["grams"], unit); p100 = it["p100"]
@@ -459,6 +489,47 @@ def build():
             trs = "".join("<tr><th scope=\"row\">%s</th><td>%s</td><td>%s</td></tr>\n" % c for c in cells)
             src = ""
             if it.get("source"): src = ' <a href="%s" rel="nofollow noopener">%s</a>.' % (e(it["source"]), lc["src_link"])
+            sh = shares(it) if kc > 10 else None
+            g2 = lambda m: max(1, round(it["grams"] * m))
+            port = "".join("<tr><th scope=\"row\">%s</th><td>%s kcal</td><td>%s g</td></tr>\n" % (
+                e(fill(T["port_rows"][i], g=g2(m), u=unit)), round(kc * m), fnum(it["p"] * m, code)) for i, m in enumerate((0.5, 1, 1.5)))
+            extra = f"""<section id="portions">
+<h2>{T['h_port']}</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr>{''.join('<th scope="col">%s</th>' % c for c in T['port_cols'])}</tr></thead>
+<tbody>
+{port}</tbody>
+</table></div>
+</section>
+"""
+            faq = [(fill(T["q100"], name=nm, u=unit), fill(T["a100"], kcal=p100["kcal"], u=unit, p=fnum(p100["p"], code), c=fnum(p100["c"], code), f=fnum(p100["f"], code)))]
+            if sh:
+                extra += f"""<section id="split">
+<h2>{T['h_split']}</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:{sh[0]}%"></span><span class="sc" style="width:{sh[1]}%"></span><span class="sf" style="width:{sh[2]}%"></span></div>
+<p>{fill(T['split'], p=sh[0], c=sh[1], f=sh[2])} {T['cat'][it['cat']]}</p>
+<p>{fill(T['ref'], pct=max(1, round(kc / 20)))}</p>
+</section>
+"""
+                pp = round(it["p"] * 4 * 100 / kc)
+                lvl = "aprot_high" if pp >= 25 and it["p"] >= 10 else "aprot_mid" if pp >= 12 or it["p"] >= 8 else "aprot_low"
+                faq.append((fill(T["qprot"], name=nm), fill(T[lvl], p=fnum(it["p"], code), pp=pp)))
+            faq.append((fill(T["qlog"], name=nm), T["alog"]))
+            k100 = p100["kcal"]
+            lighter = sorted([o for o in items if o is not it and o["cat"] == it["cat"] and o["p100"]["kcal"] <= k100 * 0.8],
+                             key=lambda o: (-o["p100"]["kcal"], o["slug"]))[:3]
+            lighter_html = ""
+            if lighter and k100 > 30:
+                lighter_html = "<h3>%s</h3>\n<ul class=\"foodlist\">\n%s</ul>\n" % (T["h_lighter"], "".join(
+                    '<li><a href="%s.html">%s</a> <span class="k">· %s kcal %s</span></li>\n' % (
+                        o["slug"], e(o["name"]), o["p100"]["kcal"], e(fill(T["per100"], u="ml" if "ml" in o["label"] else "g"))) for o in lighter))
+            faq_html = "".join("<h3>%s</h3>\n<p>%s</p>\n" % (e(q), e(a)) for q, a in faq)
+            ld["@graph"].append({"@type": "FAQPage", "@id": it["url"] + "#faq", "inLanguage": code, "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+            video = (f'<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" '
+                     f'poster="{up}assets/video/demo-scan.jpg" aria-label="{e(T["video_alt"])}">'
+                     f'<source src="{up}assets/video/demo-scan.mp4" type="video/mp4"></video>'
+                     f'<figcaption>{e(T["video_caption"])}</figcaption></figure>')
             ln = langnav(lc, lc["other_langs"], [(l, os.path.relpath(u.replace(BASE, SITE + "/"), d)) for l, u in sorted(groups[it["base"]].items(), key=lambda x: list(LANGS).index(x[0]))])
             body = f"""<section class="hero">
 <p class="pill">{lc['pill']}</p>
@@ -473,22 +544,26 @@ def build():
 {trs}</tbody>
 </table></div>
 </section>
-<section id="why">
+{extra}<section id="why">
 <h2>{lc['h_why']}</h2>
 <p>{lc['why'][it['cat']]}</p>
 </section>
 <section id="log">
 <h2>{lc['h_log']}</h2>
 <p>{lc['log'] % ('<a href="%s">%s</a>' % (STORE % lc['ct'], lc['store_link']))}</p>
+{video}
 </section>
 <section id="related">
 <h2>{lc['h_rel']}</h2>
 <ul class="foodlist">
 {relh}</ul>
-<p><a href="./">{lc['all_foods']}</a></p>
+{lighter_html}<p><a href="./">{lc['all_foods']}</a></p>
 </section>
+<section id="faq">
+<h2>{T['h_faq']}</h2>
+{faq_html}</section>
 <section id="source">
-<p class="fine">{lc['source']}{src}</p>
+<p class="fine">{lc['source']}{src} <a href="{mlink}">{T['method_link']}</a>.</p>
 <div class="note"><p>{lc['medical']}</p></div>
 </section>
 """

@@ -1,0 +1,183 @@
+{
+  "common": {
+    "lang": "nl", "locale": "nl-NL", "og_locale": "nl_NL", "og_img": "og-image.jpg", "us": false,
+    "skip": "Direct naar de inhoud", "get_app": "Download de app", "pill": "Gratis tool · Zonder aanmelden",
+    "byline": "Door Ali Gürkan Sevilmiş, ontwikkelaar van Pofu · 6 november 2026",
+    "submit": "Berekenen",
+    "privacy": "Alles wordt in je browser berekend. Niets wat je invult wordt verzonden of opgeslagen.",
+    "f_age": "Leeftijd", "f_system": "Eenheden", "sys_us": "VS (ft, lb)", "sys_metric": "Metrisch (cm, kg)",
+    "f_height": "Lengte", "a_ft": "Lengte, voet", "a_in": "Lengte, inch", "f_weight": "Huidig gewicht",
+    "f_activity": "Activiteitsniveau",
+    "activity": {
+      "sedentary": "Meestal zittend (bureaubaan, weinig beweging)",
+      "light": "Licht actief (lichte training 1–3 dagen per week)",
+      "moderate": "Matig actief (training 3–5 dagen per week)",
+      "active": "Zeer actief (zware training 6–7 dagen per week)",
+      "very_active": "Extreem actief (fysiek werk plus training)"
+    },
+    "errors": {
+      "age": "Vul een leeftijd tussen 18 en 80 in.",
+      "height": "Vul je lengte in (130–210 cm).",
+      "weight": "Vul je gewicht in (35–250 kg).",
+      "activity": "Kies een activiteitsniveau.",
+      "goal": "Kies een doel."
+    },
+    "how_h": "Hoe deze rekentool werkt",
+    "src_h": "Bronnen",
+    "method_note": "De formules komen uit de hierboven genoemde bronnen en komen overeen met de regels die de Pofu-app gebruikt. Deze pagina is niet beoordeeld door een diëtist; ze is getoetst aan deze bronnen en wordt bijgewerkt als die veranderen.",
+    "faq_h": "Veelgestelde vragen",
+    "rel_h": "Meer gratis tools",
+    "medical": "Deze rekentool geeft algemene schattingen voor volwassenen, geen medisch advies. Ben je zwanger of geef je borstvoeding, heb je een medische aandoening zoals nierziekte of diabetes, of een voorgeschiedenis van een eetstoornis, praat dan met je arts of diëtist voordat je je eetpatroon aanpast.",
+    "badge_alt": "Download Pofu in de App Store",
+    "foot_nav": "Juridisch en support", "privacy_l": "Privacy", "terms_l": "Voorwaarden", "support_l": "Support",
+    "updated": "Laatst bijgewerkt op <time datetime=\"2026-11-06\">6 november 2026</time>.",
+    "tm": "Apple, iPhone en App Store zijn handelsmerken van Apple Inc. © 2026 Pofu."
+  },
+  "tools": {
+    "protein": {
+      "title": "Eiwitbehoefte berekenen voor vrouwen: hoeveel eiwit per dag? | Pofu",
+      "og_title": "Eiwitbehoefte berekenen voor vrouwen",
+      "desc": "Gratis eiwitrekentool voor vrouwen. Bereken je dagelijkse eiwit in gram om op gewicht te blijven, af te vallen of spieren op te bouwen, verdeeld per maaltijd, met het onderzoek erachter.",
+      "h1": "Eiwitbehoefte berekenen voor vrouwen",
+      "lede": "Hoeveel eiwit heb je per dag nodig? Vul je gewicht en doel in en krijg een dagdoel in gram, plus hoeveel dat per maaltijd is.",
+      "tool_h": "Bereken je eiwit",
+      "f_goal": "Doel",
+      "goals": {"maintain": "Gezond blijven en mijn gewicht behouden", "lose": "Afvallen", "muscle": "Spieren opbouwen of sterker worden"},
+      "res_head": "Je dagelijkse eiwit",
+      "s_meal3": "per maaltijd bij 3 maaltijden",
+      "s_meal4": "per maaltijd bij 4 maaltijden",
+      "s_range": "bereik uit onderzoeken (1,2–2,0 g/kg)",
+      "explain": "Eiwit verdelen over je maaltijden is makkelijker dan alles in één keer eten. Meer eiwit dan dit is voor de meeste gezonde mensen niet schadelijk, maar levert zelden extra voordeel op.",
+      "how": [
+        "<strong>Behouden:</strong> 1,4 g eiwit per kg lichaamsgewicht per dag.",
+        "<strong>Afvallen:</strong> 1,6 g per kg, omdat meer eiwit helpt om spiermassa te behouden terwijl je minder eet, en je langer vol houdt.",
+        "<strong>Spieren opbouwen:</strong> 1,8 g per kg, samen met krachttraining.",
+        "Het resultaat blijft tussen 75 en 230 g per dag en wordt gelijk verdeeld over 3 of 4 maaltijden."
+      ],
+      "note": "Het minimum om een tekort te voorkomen is voor volwassenen ongeveer 0,8 g per kg. De hogere waarden hierboven zijn voor actieve vrouwen en bij afvallen, waar onderzoek een voordeel laat zien. Dit zijn dezelfde regels als in de Pofu-app.",
+      "sources": [
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017 (1,4–2,0 g/kg voor actieve mensen).",
+        "Morton R.W. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28698222/\">Protein supplementation and resistance training: a systematic review and meta-analysis</a>. Br J Sports Med, 2018 (eiwitsupplementen en krachttraining; het voordeel vlakt af rond 1,6 g/kg).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (0,8 g/kg minimum voor volwassenen)."
+      ],
+      "faq": [
+        ["Hoeveel eiwit heeft een vrouw per dag nodig?", "Het minimum voor volwassenen is ongeveer 0,8 g per kg lichaamsgewicht. Voor actieve vrouwen en tijdens het afvallen ondersteunt onderzoek ongeveer 1,2 tot 2,0 g per kg. Voor een vrouw van 65 kg die afvalt komt deze rekentool uit op 104 g per dag."],
+        ["Is 100 g eiwit per dag te veel voor een vrouw?", "Voor de meeste gezonde vrouwen niet. Het valt binnen het bereik dat bij actieve mensen is onderzocht. Heb je een nierziekte, vraag het dan eerst aan je arts."],
+        ["Hoeveel eiwit moet ik per maaltijd eten?", "Deel je dagdoel door je aantal maaltijden. Bij 104 g per dag en 3 maaltijden is dat ongeveer 35 g per maaltijd, bijvoorbeeld een kipfilet of een kom kwark met een paar eieren."],
+        ["Helpt eiwit bij het afvallen?", "Het helpt je spiermassa te behouden terwijl je minder eet en je blijft er langer vol van. Afvallen komt nog steeds door minder calorieën te eten dan je verbruikt."],
+        ["Moet ik mijn huidige gewicht of streefgewicht gebruiken?", "Gebruik je huidige gewicht. Is je gewicht erg hoog, dan geeft een lager referentiegewicht een realistischer getal; de grens van 230 g per dag houdt het resultaat redelijk."]
+      ],
+      "bridge": "Pofu stelt je eiwitdoel in met dezelfde regel en laat zien hoeveel je vandaag al hebt gegeten, via foto's, barcodes of zoeken."
+    },
+    "macro": {
+      "title": "Macro's berekenen voor vrouwen: eiwit, koolhydraten, vet | Pofu",
+      "og_title": "Macro's berekenen voor vrouwen",
+      "desc": "Gratis macrorekentool voor vrouwen. Bereken je dagelijkse calorieën en gram eiwit, koolhydraten en vet om op gewicht te blijven, af te vallen of spieren op te bouwen.",
+      "h1": "Macro's berekenen voor vrouwen",
+      "lede": "Krijg je dagelijkse calorieën verdeeld in eiwit, koolhydraten en vet, in gram en als aandeel van je calorieën.",
+      "tool_h": "Bereken je macro's",
+      "f_goal": "Doel",
+      "goals": {"maintain": "Mijn gewicht behouden", "lose_slow": "Langzaam afvallen (ongeveer −250 kcal per dag)", "lose": "Afvallen (ongeveer −400 kcal per dag)", "lose_fast": "Sneller afvallen (ongeveer −550 kcal per dag)", "muscle": "Spieren opbouwen (ongeveer +225 kcal per dag)"},
+      "res_head": "Je dagelijkse calorieën en macro's",
+      "s_p": "Eiwit", "s_c": "Koolhydraten", "s_f": "Vet",
+      "pct": "{p}% van de calorieën",
+      "floor": "Je calorieën zijn ingesteld op 1.200 kcal, het laagste dagdoel dat we voorstellen. Lager gaan wordt niet aangeraden zonder arts of diëtist.",
+      "explain": "Eiwit komt eerst, vet is 28% van de calorieën en koolhydraten vullen de rest aan. Je calorieën halen is belangrijker dan elke gram precies halen; een paar gram erboven of eronder is prima.",
+      "how": [
+        "<strong>Calorieën:</strong> de Mifflin-St Jeor-formule voor vrouwen, maal je activiteitsfactor (1,2 tot 1,9), plus je doel. Nooit onder 1.200 kcal.",
+        "<strong>Eiwit:</strong> 1,4 g per kg om te behouden, 1,6 g per kg om af te vallen, 1,8 g per kg om spieren op te bouwen (75–230 g).",
+        "<strong>Vet:</strong> 28% van de calorieën, minimaal 40 g per dag.",
+        "<strong>Koolhydraten:</strong> de resterende calorieën, minimaal 50 g per dag. Eiwit en koolhydraten leveren 4 kcal per gram, vet 9 kcal."
+      ],
+      "note": "Vet op 28% valt binnen de 20–35% die voor volwassenen wordt aanbevolen, en koolhydraten komen meestal uit op ongeveer 40–50%. Dit zijn dezelfde regels als in de Pofu-app.",
+      "sources": [
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990 (een nieuwe formule voor het rustverbruik).",
+        "National Academies. <a href=\"https://nap.nationalacademies.org/catalog/10490\">Dietary Reference Intakes for energy, carbohydrate, fat and protein</a>, 2005 (vet 20–35%, koolhydraten 45–65% van de calorieën).",
+        "Jäger R. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">ISSN position stand: protein and exercise</a>. J Int Soc Sports Nutr, 2017."
+      ],
+      "faq": [
+        ["Wat is een goede macroverdeling voor vrouwen?", "Er is niet één beste verdeling. Een gangbare, haalbare verdeling is ongeveer 25–30% eiwit, 28–30% vet en de rest koolhydraten. Kies er een die je kunt volhouden en haal eerst je calorieën."],
+        ["Wat zijn goede macro's om af te vallen?", "Eet minder calorieën dan je verbruikt en houd je eiwit hoog (ongeveer 1,6 g per kg). Vet en koolhydraten kun je verdelen zoals jij wilt."],
+        ["Moet ik mijn macro's precies halen?", "Nee. Binnen ongeveer 10 g eiwit en koolhydraten en 5 g vet is dichtbij genoeg. Je weekgemiddelde zegt meer dan één dag."],
+        ["Is koolhydraatarm beter voor vrouwen?", "Onderzoeken die koolhydraatarme en vetarme voeding met dezelfde calorieën vergelijken, vinden een vergelijkbaar gewichtsverlies. Kies wat bij je eten en je energie past."],
+        ["Veranderen mijn macro's tijdens mijn menstruatiecyclus?", "Niet veel. Sommige mensen hebben voor hun menstruatie meer honger; onze rekentool voor cyclus en calorieën voegt voor die fase een kleine optionele marge toe."]
+      ],
+      "bridge": "Pofu houdt deze macro's voor je bij: maak een foto van je maaltijd en de app schat calorieën, eiwit, koolhydraten en vet, die je kunt aanpassen."
+    },
+    "deficit": {
+      "title": "Calorietekort berekenen: hoeveel kcal tot je streefdatum | Pofu",
+      "og_title": "Calorietekort berekenen met streefdatum",
+      "desc": "Gratis rekentool voor calorietekort voor vrouwen. Vul je streefgewicht en datum in en zie hoeveel calorieën per dag je nodig hebt, en of het tempo veilig is.",
+      "h1": "Calorietekort berekenen met streefdatum",
+      "lede": "Wil je op een bepaalde datum een bepaald gewicht bereiken? Zie hoeveel calorieën per dag daarvoor nodig zijn, en een realistische datum als het tempo te hoog ligt.",
+      "tool_h": "Bereken je calorietekort",
+      "f_goal_kg": "Streefgewicht",
+      "f_date": "Streefdatum",
+      "errors": {
+        "goalkg": "Vul een streefgewicht in dat lager is dan je huidige gewicht. Deze tool is bedoeld om af te vallen.",
+        "date": "Kies een streefdatum in de toekomst.",
+        "nodeficit": "Je onderhoudscalorieën liggen al dicht bij 1.200 kcal, dus we kunnen geen veilig tekort voorstellen. Praat met een arts of diëtist over je doel."
+      },
+      "res_ok": "Om {goal} te bereiken op {date}, eet je ongeveer",
+      "s_target": "Dagelijkse calorieën bij een veilig tempo",
+      "s_deficit": "dagelijks tekort",
+      "s_week": "verwacht verlies per week",
+      "s_maint": "onderhoud (TDEE)",
+      "too_fast": "Die datum vraagt om een tekort van {need} kcal per dag, meer dan de {max} kcal per dag die we voorstellen. Met een veilig tempo van {target} kcal per dag bereik je {goal} rond {date}.",
+      "low_goal": "Je streefgewicht ligt onder een BMI van 18,5 voor jouw lengte, wat als ondergewicht geldt. Bespreek je doel met een arts.",
+      "explain": "Dit is een schatting: gewichtsverlies vertraagt meestal na verloop van tijd en vocht laat de weegschaal van dag tot dag schommelen, vooral voor je menstruatie. Vergelijk weekgemiddelden, geen losse dagen.",
+      "how": [
+        "<strong>Onderhoud:</strong> de Mifflin-St Jeor-formule voor vrouwen maal je activiteitsfactor (1,2 tot 1,9).",
+        "<strong>Benodigd tekort:</strong> het af te vallen gewicht × 7.700 kcal per kg, gedeeld door het aantal dagen tot je datum.",
+        "<strong>Veilige grens:</strong> hoogstens 550 kcal per dag onder je onderhoud en nooit onder 1.200 kcal per dag. Vraagt je datum om meer, dan laat de rekentool zien wanneer je er in een veilig tempo zou zijn.",
+        "Het hoogste tempo is ongeveer 0,5 kg per week, in lijn met gangbaar advies van gezondheidsinstanties."
+      ],
+      "note": "7.700 kcal per kg is een veelgebruikte schatting. Het echte verlies is na de eerste weken vaak trager, omdat je lichaam minder energie gebruikt naarmate je lichter wordt. Zie de datum dus als richtlijn.",
+      "sources": [
+        "Hall K.D. <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">What is the required energy deficit per unit weight loss?</a> Int J Obes, 2008 (welk energietekort is nodig per kilo gewichtsverlies).",
+        "Mifflin M.D., St Jeor S.T. et al. <a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">A new predictive equation for resting energy expenditure in healthy individuals</a>. Am J Clin Nutr, 1990.",
+        "NIDDK. <a href=\"https://www.niddk.nih.gov/bwp\">Body Weight Planner</a> (een onderzoeksmodel voor hoe gewichtsverlies na verloop van tijd vertraagt).",
+        "NHS. <a href=\"https://www.nhs.uk/better-health/lose-weight/\">How to lose weight</a> (ongeveer 0,5 tot 1 kg per week)."
+      ],
+      "faq": [
+        ["Hoe groot moet mijn calorietekort zijn?", "Voor de meeste vrouwen is 250 tot 550 kcal per dag onder je onderhoud vol te houden. Dat is ongeveer 0,25 tot 0,5 kg per week. Grotere tekorten zijn lastiger vol te houden en kunnen spiermassa kosten."],
+        ["Hoe lang duurt het om 5 kg af te vallen?", "Bij een tekort van 550 kcal per dag ongeveer 10 weken; bij 400 kcal per dag ongeveer 14 weken. In de praktijk gaat het vaak iets langzamer."],
+        ["Waarom laat deze rekentool me niet onder 1.200 kcal eten?", "Onder 1.200 kcal per dag is het lastig om genoeg voedingsstoffen uit eten te halen. Lager gaan hoort alleen onder medisch toezicht."],
+        ["Is 7.700 calorieën echt één kilo?", "Het is een grove schatting voor lichaamsvet. In het begin bestaat een deel van het verlies uit vocht, en later past je lichaam zich aan. De regel is dus een richtlijn, geen belofte."],
+        ["Waarom ben ik aangekomen terwijl ik een tekort had?", "Vocht, zout, een grotere maaltijd en de dagen voor je menstruatie kunnen de weegschaal een paar dagen omhoog duwen. Kijk naar de trend over 2 tot 4 weken."]
+      ],
+      "bridge": "In Pofu kun je een streefgewicht en tempo instellen; de app berekent je dagdoel met dezelfde regels en toont je voortgang als weektrend."
+    },
+    "bmi": {
+      "title": "BMI berekenen voor vrouwen: gezond gewicht bij jouw lengte | Pofu",
+      "og_title": "BMI berekenen voor vrouwen",
+      "desc": "Gratis BMI-rekentool voor volwassen vrouwen. Bekijk je body mass index, wat die betekent en het gezonde gewichtsbereik bij jouw lengte, met uitleg over de beperkingen van BMI.",
+      "h1": "BMI berekenen voor vrouwen",
+      "lede": "Bereken je body mass index en zie welk gewichtsbereik bij jouw lengte als gezond geldt.",
+      "tool_h": "Bereken je BMI",
+      "res_head": "Je BMI",
+      "cats": {"under": "Ondergewicht (onder 18,5)", "normal": "Gezond gewicht (18,5 tot 24,9)", "over": "Overgewicht (25 tot 29,9)", "obese": "Obesitas (30 of hoger)"},
+      "range": "Een gezond gewichtsbereik voor jouw lengte is ongeveer {low} tot {high}.",
+      "explain": "BMI is een snel screeningsgetal, geen diagnose. Het maakt geen onderscheid tussen spier en vet, dus zeer gespierde vrouwen kunnen hoog scoren, en het geldt niet tijdens de zwangerschap.",
+      "how": [
+        "<strong>Formule:</strong> gewicht in kg gedeeld door lengte in meters in het kwadraat (kg/m²).",
+        "<strong>Categorieën (WHO, volwassenen):</strong> onder 18,5 ondergewicht, 18,5–24,9 gezond, 25–29,9 overgewicht, 30 of hoger obesitas.",
+        "<strong>Gezond bereik:</strong> de gewichten die bij jouw lengte een BMI van 18,5 tot 24,9 geven.",
+        "Dezelfde formule geldt voor vrouwen en mannen; ze is niet bedoeld voor kinderen, tieners of tijdens de zwangerschap."
+      ],
+      "note": "Voor sommige Aziatische bevolkingsgroepen stelt de WHO dat gezondheidsrisico's bij een lagere BMI beginnen (vanaf ongeveer 23). Je taille-omvang en hoe je je voelt geven nuttige context bij het getal.",
+      "sources": [
+        "WHO. <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Obesity and overweight fact sheet</a> (factsheet over obesitas en overgewicht).",
+        "WHO Expert Consultation. <a href=\"https://pubmed.ncbi.nlm.nih.gov/14726171/\">Appropriate body-mass index for Asian populations</a>. Lancet, 2004 (passende BMI voor Aziatische bevolkingsgroepen)."
+      ],
+      "faq": [
+        ["Wat is een gezonde BMI voor een vrouw?", "Voor volwassenen geldt een BMI van 18,5 tot 24,9 als een gezond gewicht. Voor vrouwen en mannen gelden dezelfde grenzen."],
+        ["Is BMI anders voor vrouwen?", "De formule en de categorieën zijn hetzelfde. Vrouwen hebben bij dezelfde BMI meestal meer lichaamsvet dan mannen, wat een reden is dat BMI maar een grove richtlijn is."],
+        ["Is BMI nauwkeurig?", "Het is nuttig voor groepen en als eerste check, maar het meet geen lichaamsvet. Spiermassa, leeftijd en lichaamsbouw veranderen allemaal wat een bepaalde BMI voor jou betekent."],
+        ["Welk gewicht hoort bij mijn lengte?", "Elk gewicht dat een BMI tussen 18,5 en 24,9 geeft, valt in het gezonde bereik. Bij een lengte van 165 cm is dat ongeveer 50 tot 68 kg."],
+        ["Kan ik BMI gebruiken als ik zwanger ben?", "Nee. Volg tijdens de zwangerschap het advies van je verloskundige of arts over gewichtstoename."]
+      ],
+      "bridge": "Pofu richt zich op gewoontes in plaats van op één getal: dagelijkse calorieën en eiwit, een wekelijkse gewichtstrend en jokerdagen, zodat een gemiste dag je reeks niet breekt."
+    }
+  }
+}

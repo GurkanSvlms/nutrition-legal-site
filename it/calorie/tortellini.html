@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/it/calorie/tortellini.html", "url": "https://getpofu.com/it/calorie/tortellini.html", "name": "Quante calorie ci sono in Tortellini? (1 piatto, 200 g)", "description": "Tortellini: circa 316 kcal per porzione (1 piatto, 200 g); 12,8 g di proteine, 52 g di carboidrati, 7,4 g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.", "inLanguage": "it", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tortellini", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "316 kcal", "proteinContent": "12.8 g", "carbohydrateContent": "52 g", "fatContent": "7.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/it/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorie", "item": "https://getpofu.com/it/calorie/"}, {"@type": "ListItem", "position": 3, "name": "Tortellini", "item": "https://getpofu.com/it/calorie/tortellini.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/it/calorie/tortellini.html", "url": "https://getpofu.com/it/calorie/tortellini.html", "name": "Quante calorie ci sono in Tortellini? (1 piatto, 200 g)", "description": "Tortellini: circa 316 kcal per porzione (1 piatto, 200 g); 12,8 g di proteine, 52 g di carboidrati, 7,4 g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.", "inLanguage": "it", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Tortellini", "nutrition": {"@type": "NutritionInformation", "servingSize": "200 g", "calories": "316 kcal", "proteinContent": "12.8 g", "carbohydrateContent": "52 g", "fatContent": "7.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/it/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorie", "item": "https://getpofu.com/it/calorie/"}, {"@type": "ListItem", "position": 3, "name": "Tortellini", "item": "https://getpofu.com/it/calorie/tortellini.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/it/calorie/tortellini.html#faq", "inLanguage": "it", "mainEntity": [{"@type": "Question", "name": "Tortellini: quante calorie ci sono in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Circa 158 kcal per 100 g, con 6,4 g di proteine, 26 g di carboidrati e 3,7 g di grassi."}}, {"@type": "Question", "name": "Tortellini: è ricco di proteine?", "acceptedAnswer": {"@type": "Answer", "text": "Ha un po’ di proteine: 12,8 g a porzione, circa il 16% delle sue calorie."}}, {"@type": "Question", "name": "Tortellini: come lo registro in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Scatta una foto del piatto o cerca il nome, poi imposta la porzione su ciò che hai mangiato davvero. Puoi correggere la stima, e Pofu ricorda la tua correzione la volta successiva."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porzione più piccola o più grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porzione</th><th scope="col">Calorie</th><th scope="col">Proteine</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mezza porzione (100 g)</th><td>158 kcal</td><td>6,4 g</td></tr>
+<tr><th scope="row">Porzione tipica (200 g)</th><td>316 kcal</td><td>12,8 g</td></tr>
+<tr><th scope="row">Una porzione e mezza (300 g)</th><td>474 kcal</td><td>19,2 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Da dove vengono le calorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:16%"></span><span class="sc" style="width:64%"></span><span class="sf" style="width:20%"></span></div>
+<p>Il 16% delle calorie viene dalle proteine, il 64% dai carboidrati e il 20% dai grassi. In breve: la maggior parte delle calorie viene dai carboidrati.</p>
+<p>Una porzione vale circa il 16% di una giornata da 2.000 kcal, il valore di riferimento usato sulle etichette degli alimenti.</p>
+</section>
 <section id="why">
 <h2>Perché il valore può variare</h2>
 <p>Il risultato dipende da come è stato preparato il piatto e da quanto olio, burro o zucchero contiene. Il peso da cotto e quello da secco sono molto diversi, perciò un piatto colmo e uno raso hanno valori lontani. Anche marca, dimensione e spessore cambiano il valore.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Come registrarlo in Pofu</h2>
 <p>Pofu è la nostra app. Per registrare questo alimento, fotografa il piatto: Pofu stima il piatto e la porzione e mostra un punteggio di affidabilità, così vedi quanto è sicura la stima e puoi correggerla. Puoi anche cercare per nome o scansionare un codice a barre e regolare la porzione sulla quantità che hai mangiato davvero. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_it&amp;mt=8">Scarica Pofu dall’App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrare un pasto da una foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Registrazione dello schermo dell’app Pofu (interfaccia in inglese): scatta una foto, controlla la stima, aggiungila a oggi.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimenti simili</h2>
@@ -213,10 +237,25 @@
 <li><a href="ceci-cotti.html">Ceci cotti</a> <span class="k">· 270 kcal (1 ciotola, 200 g)</span></li>
 <li><a href="lenticchie-cotte.html">Lenticchie cotte</a> <span class="k">· 230 kcal (1 ciotola, 200 g)</span></li>
 </ul>
+<h3>Opzioni più leggere dello stesso gruppo</h3>
+<ul class="foodlist">
+<li><a href="quinoa-cotta.html">Quinoa cotta</a> <span class="k">· 119 kcal per 100 g</span></li>
+<li><a href="lenticchie-cotte.html">Lenticchie cotte</a> <span class="k">· 115 kcal per 100 g</span></li>
+<li><a href="riso-integrale-cotto.html">Riso integrale cotto</a> <span class="k">· 110 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Tutti gli alimenti</a></p>
 </section>
+<section id="faq">
+<h2>Domande su questo alimento</h2>
+<h3>Tortellini: quante calorie ci sono in 100 g?</h3>
+<p>Circa 158 kcal per 100 g, con 6,4 g di proteine, 26 g di carboidrati e 3,7 g di grassi.</p>
+<h3>Tortellini: è ricco di proteine?</h3>
+<p>Ha un po’ di proteine: 12,8 g a porzione, circa il 16% delle sue calorie.</p>
+<h3>Tortellini: come lo registro in Pofu?</h3>
+<p>Scatta una foto del piatto o cerca il nome, poi imposta la porzione su ciò che hai mangiato davvero. Puoi correggere la stima, e Pofu ricorda la tua correzione la volta successiva.</p>
+</section>
 <section id="source">
-<p class="fine">Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione. <a href="https://www.alimentinutrizione.it/tabelle-nutrizionali/000885" rel="nofollow noopener">Fonte</a>.</p>
+<p class="fine">Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione. <a href="https://www.alimentinutrizione.it/tabelle-nutrizionali/000885" rel="nofollow noopener">Fonte</a>. <a href="../editorial-policy.html">Come prepariamo i nostri contenuti e le fonti</a>.</p>
 <div class="note"><p>Questa pagina ha scopo puramente informativo e non è una consulenza medica. Se sei in gravidanza, allatti, hai una patologia o hai sofferto di un disturbo alimentare, parlane con il tuo medico o con un professionista della nutrizione prima di contare le calorie.</p></div>
 </section>
 </main>
@@ -233,7 +272,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Esplora"><strong>Esplora</strong><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a></nav>
+<nav aria-label="Esplora"><strong>Esplora</strong><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a><a href="../editorial-policy.html">Contenuti e fonti</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

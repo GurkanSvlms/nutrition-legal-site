@@ -117,9 +117,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/krentenbrood.html", "url": "https://getpofu.com/nl/calorieen/krentenbrood.html", "name": "Hoeveel calorieën zitten er in Krentenbrood? (1 snee, 40 g)", "description": "Krentenbrood: ongeveer 109 kcal per portie (1 snee, 40 g); 3,1 g eiwit, 21,3 g koolhydraten, 1 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Krentenbrood", "nutrition": {"@type": "NutritionInformation", "servingSize": "40 g", "calories": "109 kcal", "proteinContent": "3.1 g", "carbohydrateContent": "21.3 g", "fatContent": "1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Krentenbrood", "item": "https://getpofu.com/nl/calorieen/krentenbrood.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/krentenbrood.html", "url": "https://getpofu.com/nl/calorieen/krentenbrood.html", "name": "Hoeveel calorieën zitten er in Krentenbrood? (1 snee, 40 g)", "description": "Krentenbrood: ongeveer 109 kcal per portie (1 snee, 40 g); 3,1 g eiwit, 21,3 g koolhydraten, 1 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Krentenbrood", "nutrition": {"@type": "NutritionInformation", "servingSize": "40 g", "calories": "109 kcal", "proteinContent": "3.1 g", "carbohydrateContent": "21.3 g", "fatContent": "1 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Krentenbrood", "item": "https://getpofu.com/nl/calorieen/krentenbrood.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/nl/calorieen/krentenbrood.html#faq", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Krentenbrood: hoeveel calorieën zitten er in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Ongeveer 272 kcal per 100 g, met 7,8 g eiwit, 53,2 g koolhydraten en 2,5 g vet."}}, {"@type": "Question", "name": "Krentenbrood: bevat het veel eiwit?", "acceptedAnswer": {"@type": "Answer", "text": "Niet veel: 3,1 g per portie, ongeveer 11% van de calorieën. Combineer het met een eiwitrijk product, zoals eieren, kwark, peulvruchten, vis of kip, als je een vullendere maaltijd wilt."}}, {"@type": "Question", "name": "Krentenbrood: hoe log ik het in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -195,6 +201,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere of grotere portie</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portie</th><th scope="col">Calorieën</th><th scope="col">Eiwit</th></tr></thead>
+<tbody>
+<tr><th scope="row">Een halve portie (20 g)</th><td>54 kcal</td><td>1,6 g</td></tr>
+<tr><th scope="row">Gebruikelijke portie (40 g)</th><td>109 kcal</td><td>3,1 g</td></tr>
+<tr><th scope="row">Anderhalve portie (60 g)</th><td>164 kcal</td><td>4,7 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Waar de calorieën vandaan komen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:12%"></span><span class="sc" style="width:80%"></span><span class="sf" style="width:8%"></span></div>
+<p>12% van de calorieën komt uit eiwit, 80% uit koolhydraten en 8% uit vet. Kort gezegd: de meeste calorieën komen uit koolhydraten.</p>
+<p>Eén portie is ongeveer 5% van een dag van 2.000 kcal, de referentiewaarde op voedingsetiketten.</p>
+</section>
 <section id="why">
 <h2>Waarom de waarde kan verschillen</h2>
 <p>De uitkomst hangt af van hoe het gerecht is bereid en hoeveel olie, boter of suiker erin zit. Gaar gewicht en droog gewicht verschillen sterk, daarom liggen een volle en een afgestreken portie ver uit elkaar. Merk, formaat en dikte veranderen de waarde ook.</p>
@@ -202,6 +225,7 @@
 <section id="log">
 <h2>Zo log je het in Pofu</h2>
 <p>Pofu is onze app. Om dit product te loggen, maak je een foto van je bord: Pofu schat het gerecht en de portie en toont een betrouwbaarheidsscore, zodat je ziet hoe zeker de schatting is en deze kunt aanpassen. Je kunt ook op naam zoeken of een barcode scannen en de portie instellen op wat je echt hebt gegeten. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_nl&amp;mt=8">Download Pofu in de App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-app: een maaltijd loggen met een foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Schermopname van de Pofu-app (Engelse interface): maak een foto, controleer de schatting, voeg het toe aan vandaag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Vergelijkbare producten</h2>
@@ -213,10 +237,25 @@
 <li><a href="banaan.html">Banaan</a> <span class="k">· 105 kcal (1 stuk, 120 g)</span></li>
 <li><a href="zoete-aardappel.html">Zoete aardappel</a> <span class="k">· 115 kcal (1 stuk, 130 g)</span></li>
 </ul>
+<h3>Lichtere opties in dezelfde groep</h3>
+<ul class="foodlist">
+<li><a href="gekookte-pasta.html">Gekookte pasta</a> <span class="k">· 157 kcal per 100 g</span></li>
+<li><a href="nasi-goreng.html">Nasi goreng</a> <span class="k">· 144 kcal per 100 g</span></li>
+<li><a href="gekookte-kikkererwten.html">Gekookte kikkererwten</a> <span class="k">· 135 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Alle producten</a></p>
 </section>
+<section id="faq">
+<h2>Vragen over dit voedingsmiddel</h2>
+<h3>Krentenbrood: hoeveel calorieën zitten er in 100 g?</h3>
+<p>Ongeveer 272 kcal per 100 g, met 7,8 g eiwit, 53,2 g koolhydraten en 2,5 g vet.</p>
+<h3>Krentenbrood: bevat het veel eiwit?</h3>
+<p>Niet veel: 3,1 g per portie, ongeveer 11% van de calorieën. Combineer het met een eiwitrijk product, zoals eieren, kwark, peulvruchten, vis of kip, als je een vullendere maaltijd wilt.</p>
+<h3>Krentenbrood: hoe log ik het in Pofu?</h3>
+<p>Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer.</p>
+</section>
 <section id="source">
-<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="https://nevo-online.rivm.nl/Home/GetProductsDetailsByNevoCode?nevoCode=233&amp;langSetting=nl" rel="nofollow noopener">Bron</a>.</p>
+<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="https://nevo-online.rivm.nl/Home/GetProductsDetailsByNevoCode?nevoCode=233&amp;langSetting=nl" rel="nofollow noopener">Bron</a>. <a href="../editorial-policy.html">Hoe we onze inhoud en bronnen opstellen</a>.</p>
 <div class="note"><p>Deze pagina is bedoeld als algemene informatie en is geen medisch advies. Als je zwanger bent, borstvoeding geeft, een aandoening hebt of eerder een eetstoornis hebt gehad, overleg dan met je huisarts of een diëtist voordat je calorieën gaat tellen.</p></div>
 </section>
 </main>
@@ -233,7 +272,7 @@
 </div>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a></nav>
+<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a><a href="../editorial-policy.html">Inhoud en bronnen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

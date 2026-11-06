@@ -118,9 +118,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html", "url": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html", "name": "Шашлик зі свинини з овочами: скільки калорій? (1 шампур, 202 g)", "description": "Шашлик зі свинини з овочами: близько 250 ккал на порцію (1 шампур, 202 g); 28 г білків, 10,2 г вуглеводів, 10,4 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Шашлик зі свинини з овочами", "nutrition": {"@type": "NutritionInformation", "servingSize": "202 g", "calories": "250 kcal", "proteinContent": "28 g", "carbohydrateContent": "10.2 g", "fatContent": "10.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Шашлик зі свинини з овочами", "item": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html", "url": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html", "name": "Шашлик зі свинини з овочами: скільки калорій? (1 шампур, 202 g)", "description": "Шашлик зі свинини з овочами: близько 250 ккал на порцію (1 шампур, 202 g); 28 г білків, 10,2 г вуглеводів, 10,4 г жирів. Типові значення з відкритих баз даних про продукти та із застосунку Pofu.", "inLanguage": "uk", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Шашлик зі свинини з овочами", "nutrition": {"@type": "NutritionInformation", "servingSize": "202 g", "calories": "250 kcal", "proteinContent": "28 g", "carbohydrateContent": "10.2 g", "fatContent": "10.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/uk/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Калорії", "item": "https://getpofu.com/uk/kalorii/"}, {"@type": "ListItem", "position": 3, "name": "Шашлик зі свинини з овочами", "item": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/uk/kalorii/shashlyk-svynyna.html#faq", "inLanguage": "uk", "mainEntity": [{"@type": "Question", "name": "Шашлик зі свинини з овочами: скільки калорій у 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Близько 124 ккал на 100 g, з них 13,9 г білка, 5 г вуглеводів і 5,1 г жиру."}}, {"@type": "Question", "name": "Шашлик зі свинини з овочами: чи багато в ньому білка?", "acceptedAnswer": {"@type": "Answer", "text": "Так. В одній порції 28 г білка, це близько 45% калорій."}}, {"@type": "Question", "name": "Шашлик зі свинини з овочами: як записати це в Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -196,6 +202,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Менша або більша порція</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Порція</th><th scope="col">Калорії</th><th scope="col">Білок</th></tr></thead>
+<tbody>
+<tr><th scope="row">Половина порції (101 g)</th><td>125 kcal</td><td>14 g</td></tr>
+<tr><th scope="row">Звичайна порція (202 g)</th><td>250 kcal</td><td>28 g</td></tr>
+<tr><th scope="row">Півтори порції (303 g)</th><td>375 kcal</td><td>42 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Звідки беруться калорії</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:45%"></span><span class="sc" style="width:17%"></span><span class="sf" style="width:38%"></span></div>
+<p>45% калорій припадає на білок, 17% на вуглеводи та 38% на жир. Коротко: хороше джерело білка.</p>
+<p>Одна порція — це близько 12% дня на 2 000 ккал, тобто еталонного значення, яке використовують на етикетках продуктів.</p>
+</section>
 <section id="why">
 <h2>Чому значення відрізняється</h2>
 <p>Важливі відруб або продукт, зрізаний чи залишений жир і спосіб приготування. Шкіра, маринади, соуси та жир для смаження дають калорії, яких за вагою не видно. Під час порівняння дивіться, чи вказано вагу вареного, чи сирого продукту.</p>
@@ -203,6 +226,7 @@
 <section id="log">
 <h2>Як записати це в Pofu</h2>
 <p>Pofu — наш застосунок. Щоб записати цей продукт, сфотографуйте тарілку: Pofu оцінить страву й порцію та покаже рівень упевненості, щоб ви бачили, наскільки точна оцінка, і могли її підправити. Можна також знайти страву за назвою або відсканувати штрихкод і підлаштувати порцію під реальну кількість. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_uk&amp;mt=8">Завантажити Pofu в App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Застосунок Pofu: запис прийому їжі за фото"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Запис екрана застосунку Pofu (інтерфейс англійською): зроби фото, перевір оцінку, додай до сьогоднішнього дня.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Схожі продукти</h2>
@@ -214,10 +238,23 @@
 <li><a href="kuryache-file.html">Куряче філе (гриль)</a> <span class="k">· 195 kcal (1 порція, 150 g)</span></li>
 <li><a href="hrudka-indychky.html">Грудка індички</a> <span class="k">· 160 kcal (1 порція, 150 g)</span></li>
 </ul>
+<h3>Легші варіанти з тієї самої групи</h3>
+<ul class="foodlist">
+<li><a href="tofu.html">Тофу</a> <span class="k">· 97 kcal на 100 g</span></li>
+</ul>
 <p><a href="./">Усі продукти</a></p>
 </section>
+<section id="faq">
+<h2>Запитання про цей продукт</h2>
+<h3>Шашлик зі свинини з овочами: скільки калорій у 100 g?</h3>
+<p>Близько 124 ккал на 100 g, з них 13,9 г білка, 5 г вуглеводів і 5,1 г жиру.</p>
+<h3>Шашлик зі свинини з овочами: чи багато в ньому білка?</h3>
+<p>Так. В одній порції 28 г білка, це близько 45% калорій.</p>
+<h3>Шашлик зі свинини з овочами: як записати це в Pofu?</h3>
+<p>Сфотографуй тарілку або знайди страву за назвою, а тоді вкажи порцію, яку ти справді з’їла. Можна виправити оцінку, і Pofu запам’ятає твою поправку наступного разу.</p>
+</section>
 <section id="source">
-<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції. <a href="https://fdc.nal.usda.gov/food-details/2706779/nutrients" rel="nofollow noopener">Джерело</a>.</p>
+<p class="fine">Значення: типові оцінки, з відкритих баз даних про продукти та із застосунку Pofu; вони змінюються залежно від рецепта й порції. <a href="https://fdc.nal.usda.gov/food-details/2706779/nutrients" rel="nofollow noopener">Джерело</a>. <a href="../editorial-policy.html">Як ми готуємо матеріали та джерела</a>.</p>
 <div class="note"><p>Ця сторінка має довідковий характер і не є медичною консультацією. Якщо ви вагітні, годуєте груддю, маєте захворювання або в минулому мали розлад харчової поведінки, обговоріть підрахунок калорій з лікарем або дієтологом.</p></div>
 </section>
 </main>
@@ -236,7 +273,7 @@
 <nav class="langs" aria-label="Ця страва іншими мовами" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../ru/kalorii/shashlyk-svinina.html" hreflang="ru" lang="ru">Русский</a> · <strong>Українська</strong></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a></nav>
+<nav aria-label="Розділи"><strong>Розділи</strong><a href="../guides.html">Посібники</a><a href="../tools.html">Інструменти</a><a href="./" aria-current="true">Калорії</a><a href="../questions/">Питання</a><a href="../compare.html">Порівняння</a><a href="../editorial-policy.html">Матеріали та джерела</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

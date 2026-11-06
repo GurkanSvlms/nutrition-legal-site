@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/broccoli.html", "url": "https://getpofu.com/nl/calorieen/broccoli.html", "name": "Hoeveel calorieën zitten er in Broccoli? (1 kom, 150 g)", "description": "Broccoli: ongeveer 55 kcal per portie (1 kom, 150 g); 3,7 g eiwit, 11 g koolhydraten, 0,6 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Broccoli", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "55 kcal", "proteinContent": "3.7 g", "carbohydrateContent": "11 g", "fatContent": "0.6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Broccoli", "item": "https://getpofu.com/nl/calorieen/broccoli.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/nl/calorieen/broccoli.html", "url": "https://getpofu.com/nl/calorieen/broccoli.html", "name": "Hoeveel calorieën zitten er in Broccoli? (1 kom, 150 g)", "description": "Broccoli: ongeveer 55 kcal per portie (1 kom, 150 g); 3,7 g eiwit, 11 g koolhydraten, 0,6 g vet. Typische waarden uit openbare voedingsdatabanken en de Pofu-app.", "inLanguage": "nl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Broccoli", "nutrition": {"@type": "NutritionInformation", "servingSize": "150 g", "calories": "55 kcal", "proteinContent": "3.7 g", "carbohydrateContent": "11 g", "fatContent": "0.6 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/nl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorieën", "item": "https://getpofu.com/nl/calorieen/"}, {"@type": "ListItem", "position": 3, "name": "Broccoli", "item": "https://getpofu.com/nl/calorieen/broccoli.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/nl/calorieen/broccoli.html#faq", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Broccoli: hoeveel calorieën zitten er in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Ongeveer 37 kcal per 100 g, met 2,5 g eiwit, 7,3 g koolhydraten en 0,4 g vet."}}, {"@type": "Question", "name": "Broccoli: bevat het veel eiwit?", "acceptedAnswer": {"@type": "Answer", "text": "Het bevat wat eiwit: 3,7 g per portie, ongeveer 27% van de calorieën."}}, {"@type": "Question", "name": "Broccoli: hoe log ik het in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Kleinere of grotere portie</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Portie</th><th scope="col">Calorieën</th><th scope="col">Eiwit</th></tr></thead>
+<tbody>
+<tr><th scope="row">Een halve portie (75 g)</th><td>28 kcal</td><td>1,9 g</td></tr>
+<tr><th scope="row">Gebruikelijke portie (150 g)</th><td>55 kcal</td><td>3,7 g</td></tr>
+<tr><th scope="row">Anderhalve portie (225 g)</th><td>82 kcal</td><td>5,6 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Waar de calorieën vandaan komen</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:23%"></span><span class="sc" style="width:69%"></span><span class="sf" style="width:8%"></span></div>
+<p>23% van de calorieën komt uit eiwit, 69% uit koolhydraten en 8% uit vet. Kort gezegd: een licht product dat vooral uit water bestaat.</p>
+<p>Eén portie is ongeveer 3% van een dag van 2.000 kcal, de referentiewaarde op voedingsetiketten.</p>
+</section>
 <section id="why">
 <h2>Waarom de waarde kan verschillen</h2>
 <p>Deze producten bestaan vooral uit water. Daarom tellen portiegrootte en echt gewicht zwaarder dan het recept. Formaat, rijpheid en toevoegingen zoals suiker, dressing, olie of melk veranderen de waarde.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Zo log je het in Pofu</h2>
 <p>Pofu is onze app. Om dit product te loggen, maak je een foto van je bord: Pofu schat het gerecht en de portie en toont een betrouwbaarheidsscore, zodat je ziet hoe zeker de schatting is en deze kunt aanpassen. Je kunt ook op naam zoeken of een barcode scannen en de portie instellen op wat je echt hebt gegeten. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_nl&amp;mt=8">Download Pofu in de App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Pofu-app: een maaltijd loggen met een foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Schermopname van de Pofu-app (Engelse interface): maak een foto, controleer de schatting, voeg het toe aan vandaag.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Vergelijkbare producten</h2>
@@ -234,10 +258,25 @@
 <li><a href="hutspot.html">Hutspot</a> <span class="k">· 220 kcal (1 bord, 350 g)</span></li>
 <li><a href="zuurkoolstamppot.html">Zuurkoolstamppot</a> <span class="k">· 238 kcal (1 bord, 350 g)</span></li>
 </ul>
+<h3>Lichtere opties in dezelfde groep</h3>
+<ul class="foodlist">
+<li><a href="spinazie.html">Spinazie</a> <span class="k">· 23 kcal per 100 g</span></li>
+<li><a href="tomaat.html">Tomaat</a> <span class="k">· 18 kcal per 100 g</span></li>
+<li><a href="komkommer.html">Komkommer</a> <span class="k">· 16 kcal per 100 g</span></li>
+</ul>
 <p><a href="./">Alle producten</a></p>
 </section>
+<section id="faq">
+<h2>Vragen over dit voedingsmiddel</h2>
+<h3>Broccoli: hoeveel calorieën zitten er in 100 g?</h3>
+<p>Ongeveer 37 kcal per 100 g, met 2,5 g eiwit, 7,3 g koolhydraten en 0,4 g vet.</p>
+<h3>Broccoli: bevat het veel eiwit?</h3>
+<p>Het bevat wat eiwit: 3,7 g per portie, ongeveer 27% van de calorieën.</p>
+<h3>Broccoli: hoe log ik het in Pofu?</h3>
+<p>Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer.</p>
+</section>
 <section id="source">
-<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie.</p>
+<p class="fine">Waarden: typische schattingen uit openbare voedingsdatabanken en de Pofu-app; ze verschillen per recept en portie. <a href="../editorial-policy.html">Hoe we onze inhoud en bronnen opstellen</a>.</p>
 <div class="note"><p>Deze pagina is bedoeld als algemene informatie en is geen medisch advies. Als je zwanger bent, borstvoeding geeft, een aandoening hebt of eerder een eetstoornis hebt gehad, overleg dan met je huisarts of een diëtist voordat je calorieën gaat tellen.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Dit product in andere talen" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/broccoli.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/brokoli.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/brokkoli.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/brocoli.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/brocoli.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/brocolis.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/broccoli.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/brokolice.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/broccoli.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/brokoli.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/broccoli.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/broccoli.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/broccoli.html" hreflang="ko" lang="ko">한국어</a> · <strong>Nederlands</strong> · <a href="../../pl/kalorie/brokuy.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/broccoli.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/brokkoli.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/broccoli.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/broccoli.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/brokoli.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/bong-cai-xanh.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/broccoli.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a></nav>
+<nav aria-label="Ontdekken"><strong>Ontdekken</strong><a href="../guides.html">Gidsen</a><a href="../tools.html">Tools</a><a href="./" aria-current="true">Calorieën</a><a href="../questions/">Vragen</a><a href="../compare.html">Vergelijkingen</a><a href="../editorial-policy.html">Inhoud en bronnen</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

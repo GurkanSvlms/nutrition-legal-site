@@ -1,0 +1,40 @@
+{
+  "food": {
+    "h_port": "Kleinere of grotere portie",
+    "port_cols": ["Portie", "Calorieën", "Eiwit"],
+    "port_rows": ["Een halve portie ({g} {u})", "Gebruikelijke portie ({g} {u})", "Anderhalve portie ({g} {u})"],
+    "h_split": "Waar de calorieën vandaan komen",
+    "split": "{p}% van de calorieën komt uit eiwit, {c}% uit koolhydraten en {f}% uit vet.",
+    "cat": {"fat": "Kort gezegd: de meeste calorieën komen uit vet, dus een kleine verandering in hoeveelheid maakt een groot verschil.", "prot": "Kort gezegd: een goede bron van eiwit.", "carb": "Kort gezegd: de meeste calorieën komen uit koolhydraten.", "light": "Kort gezegd: een licht product dat vooral uit water bestaat.", "mixed": "Kort gezegd: een mix van eiwit, koolhydraten en vet."},
+    "ref": "Eén portie is ongeveer {pct}% van een dag van 2.000 kcal, de referentiewaarde op voedingsetiketten.",
+    "h_lighter": "Lichtere opties in dezelfde groep",
+    "per100": "per 100 {u}",
+    "h_faq": "Vragen over dit voedingsmiddel",
+    "q100": "{name}: hoeveel calorieën zitten er in 100 {u}?",
+    "a100": "Ongeveer {kcal} kcal per 100 {u}, met {p} g eiwit, {c} g koolhydraten en {f} g vet.",
+    "qprot": "{name}: bevat het veel eiwit?",
+    "aprot_high": "Ja. Eén portie bevat {p} g eiwit, ongeveer {pp}% van de calorieën.",
+    "aprot_mid": "Het bevat wat eiwit: {p} g per portie, ongeveer {pp}% van de calorieën.",
+    "aprot_low": "Niet veel: {p} g per portie, ongeveer {pp}% van de calorieën. Combineer het met een eiwitrijk product, zoals eieren, kwark, peulvruchten, vis of kip, als je een vullendere maaltijd wilt.",
+    "qlog": "{name}: hoe log ik het in Pofu?",
+    "alog": "Maak een foto van je bord of zoek op de naam en stel de portie in op wat je echt hebt gegeten. Je kunt de schatting aanpassen en Pofu onthoudt je aanpassing de volgende keer.",
+    "video_caption": "Schermopname van de Pofu-app (Engelse interface): maak een foto, controleer de schatting, voeg het toe aan vandaag.",
+    "video_alt": "Pofu-app: een maaltijd loggen met een foto",
+    "method_link": "Hoe we onze inhoud en bronnen opstellen"
+  },
+  "method": {
+    "title": "Hoe we onze inhoud en bronnen opstellen | Pofu",
+    "desc": "Wie de Pofu-gidsen en rekentools schrijft, waar de caloriewaarden en formules vandaan komen, hoe we AI gebruiken en hoe we fouten herstellen.",
+    "h1": "Hoe we onze inhoud en bronnen opstellen",
+    "lede": "We willen dat elk getal op deze site te controleren is. Deze pagina legt uit wie het schrijft, waar de waarden vandaan komen en wat we niet doen.",
+    "sections": [
+      ["Wie schrijft het", "<p>Pofu is gemaakt door Ali Gürkan Sevilmiş, een onafhankelijke ontwikkelaar. De gidsen, rekentools en voedingspagina’s op deze site worden door hem geschreven en bijgehouden, op basis van de gepubliceerde bronnen hieronder.</p><p>Geen diëtist of arts heeft deze inhoud tot nu toe beoordeeld. Dat zeggen we openlijk, in plaats van een beoordelingsbadge te tonen voor een beoordeling die niet heeft plaatsgevonden. Ben je voedingsdeskundige en zie je iets wat beter kan, dan horen we dat graag.</p>"],
+      ["Waar de voedingswaarden vandaan komen", "<p>Calorieën, eiwit, koolhydraten en vet op de voedingspagina’s komen uit openbare voedingsmiddelendatabanken en uit de voedingsdatabase in de Pofu-app:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (ministerie van Landbouw van de Verenigde Staten)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Nederland)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Zweedse voedselautoriteit)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Tsjechië)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italië)</li></ul><p>Als een pagina een databankitem gebruikt, linkt ze ernaar. Recepten thuis en in restaurants verschillen, dus elke waarde is een gebruikelijke schatting voor de getoonde portie, en elke pagina zegt dat ook.</p>"],
+      ["Waar de formules vandaan komen", "<p>De rekentools gebruiken dezelfde regels als de Pofu-app, gebaseerd op gepubliceerd onderzoek: de Mifflin-St Jeor-formule voor het rustverbruik (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), eiwitbereiken van de <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, bereiken voor vet en koolhydraten van de <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI-categorieën van de <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Wereldgezondheidsorganisatie</a> en de benodigde energie per kilogram van <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Elke rekentool noemt haar bronnen en legt elke stap uit.</p><p>We stellen nooit minder dan 1.200 kcal per dag voor. De rekentools vragen je geen calorietekort te gebruiken als je zwanger bent of borstvoeding geeft, en de Pofu-app stelt geen tekort in als je dat aangeeft.</p>"],
+      ["Hoe we AI gebruiken", "<p>De Pofu-app gebruikt AI om een maaltijd op basis van een foto te schatten. Elke schatting toont een betrouwbaarheidsscore en kan worden aangepast. Op deze site helpen AI-tools ons teksten op te stellen en te vertalen vanuit de Engelse en Turkse originelen; de ontwikkelaar controleert de getallen aan de hand van de bronnen hierboven. Vertalingen zijn nog niet allemaal door moedertaalsprekers beoordeeld; klinkt een zin in jouw taal verkeerd, laat het ons dan weten.</p>"],
+      ["Wat we niet doen", "<ul><li>We geven geen medisch advies of diagnoses.</li><li>Pofu voorspelt geen menstruaties of ovulatie en heeft geen zwangerschapsregistratie; de optionele cyclusfunctie gebruikt alleen een datum die je zelf invult.</li><li>We beloven geen afvalresultaten en tonen geen voor-en-nafoto’s.</li><li>We publiceren geen nepreviews of -beoordelingen.</li><li>Onze vergelijkingspagina’s zijn geschreven door de makers van Pofu, en elke pagina zegt dat.</li><li>De rekentools draaien in je browser; niets wat je invult wordt verzonden of opgeslagen.</li></ul>"],
+      ["Updates en correcties", "<p>Elke pagina toont wanneer ze voor het laatst is bijgewerkt. We controleren de pagina’s als een bron verandert. Vind je een fout, schrijf dan naar <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; we controleren het aan de hand van de bron, herstellen bevestigde fouten en werken de datum op de pagina bij.</p>"]
+    ],
+    "nav": "Inhoud en bronnen"
+  }
+}

@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html", "url": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html", "name": "Ile kalorii zawiera: Gotowany biały ryż? (1 miska, 158 g)", "description": "Gotowany biały ryż: około 205 kcal w porcji (1 miska, 158 g); 4,3 g białka, 45 g węglowodanów, 0,4 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gotowany biały ryż", "nutrition": {"@type": "NutritionInformation", "servingSize": "158 g", "calories": "205 kcal", "proteinContent": "4.3 g", "carbohydrateContent": "45 g", "fatContent": "0.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Gotowany biały ryż", "item": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html", "url": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html", "name": "Ile kalorii zawiera: Gotowany biały ryż? (1 miska, 158 g)", "description": "Gotowany biały ryż: około 205 kcal w porcji (1 miska, 158 g); 4,3 g białka, 45 g węglowodanów, 0,4 g tłuszczu. Typowe wartości z publicznych baz danych o żywności i z aplikacji Pofu.", "inLanguage": "pl", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gotowany biały ryż", "nutrition": {"@type": "NutritionInformation", "servingSize": "158 g", "calories": "205 kcal", "proteinContent": "4.3 g", "carbohydrateContent": "45 g", "fatContent": "0.4 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/pl/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalorie", "item": "https://getpofu.com/pl/kalorie/"}, {"@type": "ListItem", "position": 3, "name": "Gotowany biały ryż", "item": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/pl/kalorie/gotowany-biay-ryz.html#faq", "inLanguage": "pl", "mainEntity": [{"@type": "Question", "name": "Gotowany biały ryż: ile kalorii jest w 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Około 130 kcal na 100 g, w tym 2,7 g białka, 28,5 g węglowodanów i 0,3 g tłuszczu."}}, {"@type": "Question", "name": "Gotowany biały ryż: czy zawiera dużo białka?", "acceptedAnswer": {"@type": "Answer", "text": "Niewiele: 4,3 g na porcję, czyli około 8% kalorii. Jeśli chcesz bardziej sycący posiłek, połącz go z produktem białkowym, takim jak jajka, jogurt, twaróg, strączki, ryba lub kurczak."}}, {"@type": "Question", "name": "Gotowany biały ryż: jak to zapisać w Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Mniejsza lub większa porcja</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porcja</th><th scope="col">Kalorie</th><th scope="col">Białko</th></tr></thead>
+<tbody>
+<tr><th scope="row">Pół porcji (79 g)</th><td>102 kcal</td><td>2,1 g</td></tr>
+<tr><th scope="row">Typowa porcja (158 g)</th><td>205 kcal</td><td>4,3 g</td></tr>
+<tr><th scope="row">Półtorej porcji (237 g)</th><td>308 kcal</td><td>6,4 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Skąd pochodzą kalorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:9%"></span><span class="sc" style="width:90%"></span><span class="sf" style="width:1%"></span></div>
+<p>9% kalorii pochodzi z białka, 90% z węglowodanów i 1% z tłuszczu. W skrócie: większość kalorii pochodzi z węglowodanów.</p>
+<p>Jedna porcja to około 10% dnia o wartości 2 000 kcal, czyli wartości odniesienia stosowanej na etykietach produktów.</p>
+</section>
 <section id="why">
 <h2>Dlaczego wartość może się różnić</h2>
 <p>Wynik zależy od sposobu przygotowania dania oraz od ilości oleju, masła lub cukru. Waga po ugotowaniu i waga suchego produktu bardzo się różnią, dlatego pełny i płaski talerz dzieli duża różnica. Marka, rozmiar i grubość też zmieniają wartość.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Jak dodać to w Pofu</h2>
 <p>Pofu to nasza aplikacja. Aby dodać ten produkt, zrób zdjęcie talerza: Pofu oszacuje danie i porcję oraz pokaże wskaźnik pewności, żebyś widziała, na ile trafna jest ocena, i mogła ją poprawić. Możesz też wyszukać po nazwie albo zeskanować kod kreskowy i ustawić porcję na to, co naprawdę zjadłaś. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_pl&amp;mt=8">Pobierz Pofu z App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="Aplikacja Pofu: zapisywanie posiłku ze zdjęcia"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Nagranie ekranu z aplikacji Pofu (interfejs po angielsku): zrób zdjęcie, sprawdź oszacowanie, dodaj do dzisiejszego dnia.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Podobne produkty</h2>
@@ -234,10 +258,25 @@
 <li><a href="pierogi.html">Pierogi</a> <span class="k">· 351 kcal (6 sztuk, 180 g)</span></li>
 <li><a href="pieczen-wieprzowa.html">Pieczeń wieprzowa</a> <span class="k">· 217 kcal (1 porcja, 120 g)</span></li>
 </ul>
+<h3>Lżejsze opcje z tej samej grupy</h3>
+<ul class="foodlist">
+<li><a href="banan.html">Banan</a> <span class="k">· 88 kcal na 100 g</span></li>
+<li><a href="batat.html">Batat</a> <span class="k">· 88 kcal na 100 g</span></li>
+<li><a href="gotowany-ziemniak.html">Gotowany ziemniak</a> <span class="k">· 87 kcal na 100 g</span></li>
+</ul>
 <p><a href="./">Wszystkie produkty</a></p>
 </section>
+<section id="faq">
+<h2>Pytania o ten produkt</h2>
+<h3>Gotowany biały ryż: ile kalorii jest w 100 g?</h3>
+<p>Około 130 kcal na 100 g, w tym 2,7 g białka, 28,5 g węglowodanów i 0,3 g tłuszczu.</p>
+<h3>Gotowany biały ryż: czy zawiera dużo białka?</h3>
+<p>Niewiele: 4,3 g na porcję, czyli około 8% kalorii. Jeśli chcesz bardziej sycący posiłek, połącz go z produktem białkowym, takim jak jajka, jogurt, twaróg, strączki, ryba lub kurczak.</p>
+<h3>Gotowany biały ryż: jak to zapisać w Pofu?</h3>
+<p>Zrób zdjęcie talerza albo wyszukaj nazwę, a potem ustaw porcję na tyle, ile naprawdę zjadłaś. Możesz poprawić oszacowanie, a Pofu zapamięta Twoją poprawkę na następny raz.</p>
+</section>
 <section id="source">
-<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji.</p>
+<p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji. <a href="../editorial-policy.html">Jak przygotowujemy treści i źródła</a>.</p>
 <div class="note"><p>Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Ten produkt w innych językach" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/cooked-white-rice.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/beyaz-pirinc-pismis.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/gekochter-weisser-reis.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/riz-blanc-cuit.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/arroz-blanco-cocido.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/arroz-branco-cozido.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/cooked-white-rice.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/varena-bila-ryze.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/cooked-white-rice.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/nasi-putih.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../../it/calorie/riso-bianco-cotto.html" hreflang="it" lang="it">Italiano</a> · <a href="../../ja/karori/cooked-white-rice.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/cooked-white-rice.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/gekookte-witte-rijst.html" hreflang="nl" lang="nl">Nederlands</a> · <strong>Polski</strong> · <a href="../../ro/calorii/orez-alb-fiert.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/varenyy-belyy-ris.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/kokt-vitt-ris.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/cooked-white-rice.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/varenyy-bilyy-rys.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/com-trang.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/cooked-white-rice.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a></nav>
+<nav aria-label="Odkrywaj"><strong>Odkrywaj</strong><a href="../guides.html">Poradniki</a><a href="../tools.html">Narzędzia</a><a href="./" aria-current="true">Kalorie</a><a href="../questions/">Pytania</a><a href="../compare.html">Porównania</a><a href="../editorial-policy.html">Treści i źródła</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/it/calorie/gamberi.html", "url": "https://getpofu.com/it/calorie/gamberi.html", "name": "Quante calorie ci sono in Gamberi? (1 porzione, 120 g)", "description": "Gamberi: circa 120 kcal per porzione (1 porzione, 120 g); 24 g di proteine, 1 g di carboidrati, 1,5 g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.", "inLanguage": "it", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gamberi", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "120 kcal", "proteinContent": "24 g", "carbohydrateContent": "1 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/it/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorie", "item": "https://getpofu.com/it/calorie/"}, {"@type": "ListItem", "position": 3, "name": "Gamberi", "item": "https://getpofu.com/it/calorie/gamberi.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/it/calorie/gamberi.html", "url": "https://getpofu.com/it/calorie/gamberi.html", "name": "Quante calorie ci sono in Gamberi? (1 porzione, 120 g)", "description": "Gamberi: circa 120 kcal per porzione (1 porzione, 120 g); 24 g di proteine, 1 g di carboidrati, 1,5 g di grassi. Valori tipici delle banche dati pubbliche e dell’app Pofu.", "inLanguage": "it", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Gamberi", "nutrition": {"@type": "NutritionInformation", "servingSize": "120 g", "calories": "120 kcal", "proteinContent": "24 g", "carbohydrateContent": "1 g", "fatContent": "1.5 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/it/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Calorie", "item": "https://getpofu.com/it/calorie/"}, {"@type": "ListItem", "position": 3, "name": "Gamberi", "item": "https://getpofu.com/it/calorie/gamberi.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/it/calorie/gamberi.html#faq", "inLanguage": "it", "mainEntity": [{"@type": "Question", "name": "Gamberi: quante calorie ci sono in 100 g?", "acceptedAnswer": {"@type": "Answer", "text": "Circa 100 kcal per 100 g, con 20 g di proteine, 0,8 g di carboidrati e 1,2 g di grassi."}}, {"@type": "Question", "name": "Gamberi: è ricco di proteine?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Una porzione ha 24 g di proteine, circa il 80% delle sue calorie."}}, {"@type": "Question", "name": "Gamberi: come lo registro in Pofu?", "acceptedAnswer": {"@type": "Answer", "text": "Scatta una foto del piatto o cerca il nome, poi imposta la porzione su ciò che hai mangiato davvero. Puoi correggere la stima, e Pofu ricorda la tua correzione la volta successiva."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Porzione più piccola o più grande</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porzione</th><th scope="col">Calorie</th><th scope="col">Proteine</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mezza porzione (60 g)</th><td>60 kcal</td><td>12 g</td></tr>
+<tr><th scope="row">Porzione tipica (120 g)</th><td>120 kcal</td><td>24 g</td></tr>
+<tr><th scope="row">Una porzione e mezza (180 g)</th><td>180 kcal</td><td>36 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Da dove vengono le calorie</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:85%"></span><span class="sc" style="width:4%"></span><span class="sf" style="width:11%"></span></div>
+<p>Il 85% delle calorie viene dalle proteine, il 4% dai carboidrati e il 11% dai grassi. In breve: una buona fonte di proteine.</p>
+<p>Una porzione vale circa il 6% di una giornata da 2.000 kcal, il valore di riferimento usato sulle etichette degli alimenti.</p>
+</section>
 <section id="why">
 <h2>Perché il valore può variare</h2>
 <p>Conta il taglio o il prodotto, se il grasso è stato rimosso o lasciato e come è stato cucinato. Pelle, marinate, salse e grasso di cottura aggiungono calorie che il peso non fa vedere. Quando confronti i valori, controlla se il peso è da cotto o da crudo.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Come registrarlo in Pofu</h2>
 <p>Pofu è la nostra app. Per registrare questo alimento, fotografa il piatto: Pofu stima il piatto e la porzione e mostra un punteggio di affidabilità, così vedi quanto è sicura la stima e puoi correggerla. Puoi anche cercare per nome o scansionare un codice a barre e regolare la porzione sulla quantità che hai mangiato davvero. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_it&amp;mt=8">Scarica Pofu dall’App Store</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../../assets/video/demo-scan.jpg" aria-label="App Pofu: registrare un pasto da una foto"><source src="../../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Registrazione dello schermo dell’app Pofu (interfaccia in inglese): scatta una foto, controlla la stima, aggiungila a oggi.</figcaption></figure>
 </section>
 <section id="related">
 <h2>Alimenti simili</h2>
@@ -236,8 +260,17 @@
 </ul>
 <p><a href="./">Tutti gli alimenti</a></p>
 </section>
+<section id="faq">
+<h2>Domande su questo alimento</h2>
+<h3>Gamberi: quante calorie ci sono in 100 g?</h3>
+<p>Circa 100 kcal per 100 g, con 20 g di proteine, 0,8 g di carboidrati e 1,2 g di grassi.</p>
+<h3>Gamberi: è ricco di proteine?</h3>
+<p>Sì. Una porzione ha 24 g di proteine, circa il 80% delle sue calorie.</p>
+<h3>Gamberi: come lo registro in Pofu?</h3>
+<p>Scatta una foto del piatto o cerca il nome, poi imposta la porzione su ciò che hai mangiato davvero. Puoi correggere la stima, e Pofu ricorda la tua correzione la volta successiva.</p>
+</section>
 <section id="source">
-<p class="fine">Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione.</p>
+<p class="fine">Valori: stime tipiche tratte da banche dati pubbliche e dall’app Pofu; variano in base alla ricetta e alla porzione. <a href="../editorial-policy.html">Come prepariamo i nostri contenuti e le fonti</a>.</p>
 <div class="note"><p>Questa pagina ha scopo puramente informativo e non è una consulenza medica. Se sei in gravidanza, allatti, hai una patologia o hai sofferto di un disturbo alimentare, parlane con il tuo medico o con un professionista della nutrizione prima di contare le calorie.</p></div>
 </section>
 </main>
@@ -256,7 +289,7 @@
 <nav class="langs" aria-label="Questo alimento in altre lingue" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../../calories/shrimp.html" hreflang="en" lang="en">English</a> · <a href="../../kalori/karides.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../../de/kalorien/garnelen.html" hreflang="de" lang="de">Deutsch</a> · <a href="../../fr/calories/crevettes.html" hreflang="fr" lang="fr">Français</a> · <a href="../../es/calorias/camaron.html" hreflang="es" lang="es">Español</a> · <a href="../../pt-BR/calorias/camarao.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../../ar/saarat/shrimp.html" hreflang="ar" lang="ar">العربية</a> · <a href="../../cs/kalorie/krevety.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../../hi/calories/shrimp.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../../id/kalori/udang.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <strong>Italiano</strong> · <a href="../../ja/karori/shrimp.html" hreflang="ja" lang="ja">日本語</a> · <a href="../../ko/kallori/shrimp.html" hreflang="ko" lang="ko">한국어</a> · <a href="../../nl/calorieen/garnalen.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../../pl/kalorie/krewetki.html" hreflang="pl" lang="pl">Polski</a> · <a href="../../ro/calorii/creveti.html" hreflang="ro" lang="ro">Română</a> · <a href="../../ru/kalorii/krevetki.html" hreflang="ru" lang="ru">Русский</a> · <a href="../../sv/kalorier/rakor.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../../th/khalori/shrimp.html" hreflang="th" lang="th">ไทย</a> · <a href="../../uk/kalorii/krevetky.html" hreflang="uk" lang="uk">Українська</a> · <a href="../../vi/calo/tom.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../../zh-Hans/kaluli/shrimp.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Esplora"><strong>Esplora</strong><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a></nav>
+<nav aria-label="Esplora"><strong>Esplora</strong><a href="../guides.html">Guide</a><a href="../tools.html">Strumenti</a><a href="./" aria-current="true">Calorie</a><a href="../questions/">Domande</a><a href="../compare.html">Confronti</a><a href="../editorial-policy.html">Contenuti e fonti</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>

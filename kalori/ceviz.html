@@ -138,9 +138,15 @@
     .foodlist { list-style: none; padding: 0; margin: 0 0 .9rem; display: grid; gap: .45rem; }
     .foodlist li { margin: 0; padding: .55rem .85rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--card); }
     .foodlist .k { color: var(--ink2); font-size: .92rem; }
+    .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
+    .split span { display: block; height: 100%; }
+    .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .demo { margin: .8rem 0 0; }
+    .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
+    .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/kalori/ceviz.html", "url": "https://getpofu.com/kalori/ceviz.html", "name": "Ceviz kaç kalori? (1 avuç, 30 g)", "description": "Ceviz: yaklaşık 200 kcal (bir porsiyon: 1 avuç, 30 g); 4,5 g protein, 4 g karbonhidrat, 20 g yağ. Pofu uygulamasında kullanılan tipik değerler.", "inLanguage": "tr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Ceviz", "nutrition": {"@type": "NutritionInformation", "servingSize": "30 g", "calories": "200 kcal", "proteinContent": "4.5 g", "carbohydrateContent": "4 g", "fatContent": "20 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/tr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Ceviz", "item": "https://getpofu.com/kalori/ceviz.html"}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://getpofu.com/kalori/ceviz.html", "url": "https://getpofu.com/kalori/ceviz.html", "name": "Ceviz kaç kalori? (1 avuç, 30 g)", "description": "Ceviz: yaklaşık 200 kcal (bir porsiyon: 1 avuç, 30 g); 4,5 g protein, 4 g karbonhidrat, 20 g yağ. Pofu uygulamasında kullanılan tipik değerler.", "inLanguage": "tr", "dateModified": "2026-11-06", "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": "https://getpofu.com/"}, "mainEntity": {"@type": "Recipe", "name": "Ceviz", "nutrition": {"@type": "NutritionInformation", "servingSize": "30 g", "calories": "200 kcal", "proteinContent": "4.5 g", "carbohydrateContent": "4 g", "fatContent": "20 g"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Pofu", "item": "https://getpofu.com/tr/pofu.html"}, {"@type": "ListItem", "position": 2, "name": "Kalori", "item": "https://getpofu.com/kalori/"}, {"@type": "ListItem", "position": 3, "name": "Ceviz", "item": "https://getpofu.com/kalori/ceviz.html"}]}, {"@type": "FAQPage", "@id": "https://getpofu.com/kalori/ceviz.html#faq", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Ceviz: 100 g kaç kalori?", "acceptedAnswer": {"@type": "Answer", "text": "100 g başına yaklaşık 667 kcal; 15 g protein, 13,3 g karbonhidrat ve 66,7 g yağ içerir."}}, {"@type": "Question", "name": "Ceviz: protein açısından zengin mi?", "acceptedAnswer": {"@type": "Answer", "text": "Pek değil: porsiyon başına 4,5 g, kalorisinin yaklaşık %9 kadarı. Daha doyurucu bir öğün istersen yumurta, yoğurt, baklagil, balık ya da tavuk gibi bir protein kaynağıyla birlikte ye."}}, {"@type": "Question", "name": "Ceviz: Pofu’ya nasıl eklerim?", "acceptedAnswer": {"@type": "Answer", "text": "Tabağının fotoğrafını çek ya da adını arat, sonra porsiyonu gerçekten yediğin miktara ayarla. Tahmini düzeltebilirsin; Pofu düzeltmeni bir sonraki sefer için hatırlar."}}]}]}
 </script>
 <style>/* nav:css:start */
 .top{position:relative}
@@ -216,6 +222,23 @@
 </tbody>
 </table></div>
 </section>
+<section id="portions">
+<h2>Daha küçük ya da daha büyük porsiyon</h2>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th scope="col">Porsiyon</th><th scope="col">Kalori</th><th scope="col">Protein</th></tr></thead>
+<tbody>
+<tr><th scope="row">Yarım porsiyon (15 g)</th><td>100 kcal</td><td>2,2 g</td></tr>
+<tr><th scope="row">Normal porsiyon (30 g)</th><td>200 kcal</td><td>4,5 g</td></tr>
+<tr><th scope="row">Bir buçuk porsiyon (45 g)</th><td>300 kcal</td><td>6,8 g</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="split">
+<h2>Kalori nereden geliyor</h2>
+<div class="split" aria-hidden="true"><span class="sp" style="width:8%"></span><span class="sc" style="width:7%"></span><span class="sf" style="width:85%"></span></div>
+<p>Kalorinin %8 kadarı proteinden, %7 kadarı karbonhidrattan ve %85 kadarı yağdan geliyor. Kısacası: kalorinin çoğu yağdan geliyor; miktardaki küçük bir değişiklik büyük fark yaratır.</p>
+<p>Bir porsiyon, gıda etiketlerinde referans olarak kullanılan 2.000 kcal’lik bir günün yaklaşık %10 kadarı.</p>
+</section>
 <section id="why">
 <h2>Değer neden değişir?</h2>
 <p>Burada en büyük fark yağdan gelir. Ne kadar yağ, tereyağı, peynir ya da kızartma yağı kullanıldığı ve kaşığın ya da kepçenin ne kadar dolu alındığı kaloriyi en çok değiştirir. Birbirine benzeyen iki tabak arasında bile belirgin fark olabilir.</p>
@@ -223,6 +246,7 @@
 <section id="log">
 <h2>Pofu'da nasıl kaydedilir?</h2>
 <p>Pofu bizim uygulamamız. Bu yiyeceği kaydetmek için tabağınızın fotoğrafını çekin: Pofu yemeği ve porsiyonu tahmin eder, ne kadar emin olduğunu güven skoruyla gösterir; isterseniz düzeltirsiniz. Ayrıca adıyla arayabilir ya da barkod tarayabilir, porsiyonu yediğiniz miktara göre ayarlayabilirsiniz. <a href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=food_tr&amp;mt=8">Pofu'yu App Store'da açın</a>.</p>
+<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" poster="../assets/video/demo-scan.jpg" aria-label="Pofu uygulaması: fotoğraftan öğün ekleme"><source src="../assets/video/demo-scan.mp4" type="video/mp4"></video><figcaption>Pofu uygulamasından ekran kaydı (İngilizce arayüz): fotoğraf çek, tahmini kontrol et, bugüne ekle.</figcaption></figure>
 </section>
 <section id="related">
 <h2>İlgili yiyecekler</h2>
@@ -234,10 +258,25 @@
 <li><a href="omlet.html">Omlet</a> <span class="k">· 220 kcal (2 yumurta, 120 g)</span></li>
 <li><a href="menemen.html">Menemen</a> <span class="k">· 230 kcal (1 porsiyon, 200 g)</span></li>
 </ul>
+<h3>Aynı gruptan daha hafif seçenekler</h3>
+<ul class="foodlist">
+<li><a href="kasar-cheddar.html">Kaşar / cheddar</a> <span class="k">· 400 kcal 100 g başına</span></li>
+<li><a href="kasar-peyniri.html">Kaşar peyniri</a> <span class="k">· 350 kcal 100 g başına</span></li>
+<li><a href="sigara-boregi.html">Sigara böreği</a> <span class="k">· 317 kcal 100 g başına</span></li>
+</ul>
 <p><a href="./">Tüm yiyecekler</a></p>
 </section>
+<section id="faq">
+<h2>Bu yiyecekle ilgili sorular</h2>
+<h3>Ceviz: 100 g kaç kalori?</h3>
+<p>100 g başına yaklaşık 667 kcal; 15 g protein, 13,3 g karbonhidrat ve 66,7 g yağ içerir.</p>
+<h3>Ceviz: protein açısından zengin mi?</h3>
+<p>Pek değil: porsiyon başına 4,5 g, kalorisinin yaklaşık %9 kadarı. Daha doyurucu bir öğün istersen yumurta, yoğurt, baklagil, balık ya da tavuk gibi bir protein kaynağıyla birlikte ye.</p>
+<h3>Ceviz: Pofu’ya nasıl eklerim?</h3>
+<p>Tabağının fotoğrafını çek ya da adını arat, sonra porsiyonu gerçekten yediğin miktara ayarla. Tahmini düzeltebilirsin; Pofu düzeltmeni bir sonraki sefer için hatırlar.</p>
+</section>
 <section id="source">
-<p class="fine">Değerler: Pofu uygulamasında kullanılan tipik tahminlerdir; tarife ve porsiyona göre değişir.</p>
+<p class="fine">Değerler: Pofu uygulamasında kullanılan tipik tahminlerdir; tarife ve porsiyona göre değişir. <a href="../icerik-ve-kaynak-politikasi.html">İçeriklerimizi nasıl hazırlıyoruz ve kaynaklarımız</a>.</p>
 <div class="note"><p>Bu sayfa genel bilgi içindir, tıbbi tavsiye değildir. Hamileyseniz, emziriyorsanız, bir sağlık sorununuz varsa ya da geçmişte yeme bozukluğu yaşadıysanız kalori saymadan önce doktorunuza veya diyetisyeninize danışın.</p></div>
 </section>
 </main>
@@ -256,7 +295,7 @@
 <nav class="langs" aria-label="Bu yiyecek diğer dillerde" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../calories/walnuts.html" hreflang="en" lang="en">English</a> · <strong>Türkçe</strong> · <a href="../de/kalorien/walnusse.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/calories/noix.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/calorias/nueces.html" hreflang="es" lang="es">Español</a> · <a href="../pt-BR/calorias/nozes.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../ar/saarat/walnuts.html" hreflang="ar" lang="ar">العربية</a> · <a href="../cs/kalorie/vlasske-orechy.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../hi/calories/walnuts.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../id/kalori/kenari.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../it/calorie/noci.html" hreflang="it" lang="it">Italiano</a> · <a href="../ja/karori/walnuts.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/kallori/walnuts.html" hreflang="ko" lang="ko">한국어</a> · <a href="../nl/calorieen/walnoten.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/kalorie/orzechy-woskie.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ro/calorii/nuci.html" hreflang="ro" lang="ro">Română</a> · <a href="../ru/kalorii/gretskie-orekhi.html" hreflang="ru" lang="ru">Русский</a> · <a href="../sv/kalorier/valnotter.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../th/khalori/walnuts.html" hreflang="th" lang="th">ไทย</a> · <a href="../uk/kalorii/voloski-horikhy.html" hreflang="uk" lang="uk">Українська</a> · <a href="../vi/calo/oc-cho.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../zh-Hans/kaluli/walnuts.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
 <!-- footnav:start -->
 <div class="wrap pfoot">
-<nav aria-label="Keşfet"><strong>Keşfet</strong><a href="../rehberler.html">Rehberler</a><a href="../araclar.html">Araçlar</a><a href="./" aria-current="true">Kalori</a><a href="../sorular/">Sorular</a><a href="../karsilastirmalar.html">Karşılaştırmalar</a></nav>
+<nav aria-label="Keşfet"><strong>Keşfet</strong><a href="../rehberler.html">Rehberler</a><a href="../araclar.html">Araçlar</a><a href="./" aria-current="true">Kalori</a><a href="../sorular/">Sorular</a><a href="../karsilastirmalar.html">Karşılaştırmalar</a><a href="../icerik-ve-kaynak-politikasi.html">İçerik ve kaynaklar</a></nav>
 </div>
 <!-- footnav:end -->
 </footer>
