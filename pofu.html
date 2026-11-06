@@ -135,76 +135,78 @@
 
   <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://getpofu.com/#org",
-   "name": "Pofu",
-   "url": "https://getpofu.com/pofu.html",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://getpofu.com/assets/img/icon-240.webp",
-    "width": 240,
-    "height": 240
-   },
-   "sameAs": [
-    "https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605",
-    "https://www.instagram.com/pofu.app/",
-    "https://www.tiktok.com/@pofu.app"
-   ],
-   "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "support@getpofu.com"
-   }
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://getpofu.com/#website",
-   "url": "https://getpofu.com/",
-   "name": "Pofu",
-   "inLanguage": "en",
-   "publisher": {
-    "@id": "https://getpofu.com/#org"
-   }
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://getpofu.com/pofu.html#webpage",
-   "url": "https://getpofu.com/pofu.html",
-   "name": "Pofu: the AI calorie counter made for women | iPhone app",
-   "description": "Pofu is a free-to-start AI calorie counter made for women: calories and macros from a photo, cycle-aware tracking, gentle fasting and grace days on iPhone.",
-   "inLanguage": "en",
-   "isPartOf": {
-    "@id": "https://getpofu.com/#website"
-   },
-   "breadcrumb": {
-    "@id": "https://getpofu.com/pofu.html#breadcrumb"
-   },
-   "about": {
-    "@id": "https://getpofu.com/pofu.html#app"
-   }
-  },
-  {
-   "@type": "BreadcrumbList",
-   "@id": "https://getpofu.com/pofu.html#breadcrumb",
-   "itemListElement": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://getpofu.com/"
+      "@type": "Organization",
+      "@id": "https://getpofu.com/#org",
+      "name": "Pofu",
+      "url": "https://getpofu.com/pofu.html",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://getpofu.com/assets/img/icon-240.webp",
+        "width": 240,
+        "height": 240
+      },
+      "sameAs": [
+        "https://apps.apple.com/us/app/pofu-womens-calorie-counter/id6778044605",
+        "https://www.instagram.com/pofu.app/",
+        "https://www.tiktok.com/@pofu.app",
+        "https://www.crunchbase.com/organization/pofu",
+        "https://www.producthunt.com/products/pofu"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@getpofu.com"
+      }
     },
     {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "Pofu app",
-     "item": "https://getpofu.com/pofu.html"
+      "@type": "WebSite",
+      "@id": "https://getpofu.com/#website",
+      "url": "https://getpofu.com/",
+      "name": "Pofu",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://getpofu.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://getpofu.com/pofu.html#webpage",
+      "url": "https://getpofu.com/pofu.html",
+      "name": "Pofu: the AI calorie counter made for women | iPhone app",
+      "description": "Pofu is a free-to-start AI calorie counter made for women: calories and macros from a photo, cycle-aware tracking, gentle fasting and grace days on iPhone.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://getpofu.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://getpofu.com/pofu.html#breadcrumb"
+      },
+      "about": {
+        "@id": "https://getpofu.com/pofu.html#app"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://getpofu.com/pofu.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://getpofu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pofu app",
+          "item": "https://getpofu.com/pofu.html"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
 </script>
   <script type="application/ld+json">
@@ -269,13 +271,21 @@
     "@id": "https://getpofu.com/#org"
   }
 }
-  </script>
+</script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "url": "https://getpofu.com/pofu.html",
-  "mainEntity": [{"@type": "Question", "name": "Is Pofu a period, ovulation or pregnancy tracker?", "acceptedAnswer": {"@type": "Answer", "text": "No. Pofu is a calorie counter: it estimates calories and macros from a photo, barcode, search, voice or manual entry. Cycle awareness is an optional extra that shows your cycle day and phase. Pofu does not predict periods or ovulation, has no pregnancy tracking and is not a medical app."}},
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Pofu a period, ovulation or pregnancy tracker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Pofu is a calorie counter: it estimates calories and macros from a photo, barcode, search, voice or manual entry. Cycle awareness is an optional extra that shows your cycle day and phase. Pofu does not predict periods or ovulation, has no pregnancy tracking and is not a medical app."
+      }
+    },
     {
       "@type": "Question",
       "name": "Is there a calorie counter that understands my cycle?",
@@ -358,7 +368,7 @@
     }
   ]
 }
-  </script>
+</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
