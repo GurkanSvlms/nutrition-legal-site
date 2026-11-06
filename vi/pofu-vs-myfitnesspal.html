@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pofu so với MyFitnessPal: một so sánh công bằng (2026)</title>
+<meta name="description" content="So sánh chung giữa Pofu và MyFitnessPal: cơ sở dữ liệu thực phẩm, ghi bằng ảnh, phản hồi có tính đến chu kỳ, ngày ân hạn, nhịn ăn, macro, tiện ích và mô hình giá.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/vi/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="it" href="https://getpofu.com/it/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="id" href="https://getpofu.com/id/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu-vs-myfitnesspal.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu-vs-myfitnesspal.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Pofu so với MyFitnessPal: một so sánh công bằng">
+<meta property="og:description" content="So sánh chung giữa Pofu và MyFitnessPal: cơ sở dữ liệu thực phẩm, ghi bằng ảnh, phản hồi có tính đến chu kỳ, ngày ân hạn, nhịn ăn, macro, tiện ích và giá.">
+<meta property="og:url" content="https://getpofu.com/vi/pofu-vs-myfitnesspal.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu explainer page: system fonts, no JavaScript. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+      .byline { margin: .7rem 0 0; font-size: .92rem; color: var(--ink2); }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://getpofu.com/#org",
+   "name": "Pofu",
+   "url": "https://getpofu.com/pofu.html",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://getpofu.com/assets/img/icon-240.webp",
+    "width": 240,
+    "height": 240
+   },
+   "sameAs": [
+    "https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605",
+    "https://www.instagram.com/pofu.app/",
+    "https://www.tiktok.com/@pofu.app"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@getpofu.com"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://getpofu.com/#website",
+   "url": "https://getpofu.com/",
+   "name": "Pofu",
+   "inLanguage": "vi",
+   "publisher": {
+    "@id": "https://getpofu.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html#webpage",
+   "url": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html",
+   "name": "Pofu so với MyFitnessPal: một so sánh công bằng (2026)",
+   "description": "So sánh chung giữa Pofu và MyFitnessPal: cơ sở dữ liệu thực phẩm, ghi bằng ảnh, phản hồi có tính đến chu kỳ, ngày ân hạn, nhịn ăn, macro, tiện ích và mô hình giá.",
+   "inLanguage": "vi",
+   "isPartOf": {
+    "@id": "https://getpofu.com/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Trang chủ",
+     "item": "https://getpofu.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pofu so với MyFitnessPal",
+     "item": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "@id": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html#article",
+   "headline": "Pofu so với MyFitnessPal: ứng dụng đếm calo nào phù hợp với bạn?",
+   "description": "So sánh chung giữa Pofu và MyFitnessPal: cơ sở dữ liệu thực phẩm, ghi bằng ảnh, phản hồi có tính đến chu kỳ, ngày ân hạn, nhịn ăn, macro, tiện ích và mô hình giá.",
+   "mainEntityOfPage": {
+    "@id": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html#webpage"
+   },
+   "image": "https://getpofu.com/assets/img/og-image.jpg",
+   "datePublished": "2026-11-02",
+   "dateModified": "2026-11-02",
+   "author": {
+    "@type": "Person",
+    "@id": "https://getpofu.com/about.html#person",
+    "name": "Ali Gürkan Sevilmiş",
+    "url": "https://getpofu.com/about.html"
+   },
+   "publisher": {
+    "@id": "https://getpofu.com/#org"
+   },
+   "inLanguage": "vi"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "vi", "url": "https://getpofu.com/vi/pofu-vs-myfitnesspal.html", "mainEntity": [{"@type": "Question", "name": "Pofu có tốt hơn MyFitnessPal không?", "acceptedAnswer": {"@type": "Answer", "text": "Tùy vào điều bạn coi trọng. Cơ sở dữ liệu thực phẩm lớn là thế mạnh thực sự của các ứng dụng lâu đời. Pofu được xây dựng quanh nhịp sinh hoạt của phụ nữ: nhận biết chu kỳ tùy chọn, ngày ân hạn, khung giờ nhịn ăn nhẹ nhàng và ghi bằng ảnh AI. MyFitnessPal có thể phù hợp hơn nếu cách tiếp cận của nó khớp với cách bạn thích theo dõi. Hãy thử cả hai, vì cả hai đều có thể bắt đầu mà không phải trả tiền trước, và kiểm tra trang App Store của từng ứng dụng để biết chi tiết hiện tại."}}, {"@type": "Question", "name": "Pofu có miễn phí so với MyFitnessPal không?", "acceptedAnswer": {"@type": "Answer", "text": "Pofu miễn phí để bắt đầu. Quét mã vạch, tìm kiếm và ghi thủ công miễn phí và không giới hạn, và bạn có 3 lần quét ảnh AI miễn phí vào ngày đầu và 1 lần mỗi ngày sau đó. Pofu Pro là tùy chọn. MyFitnessPal có các lựa chọn miễn phí và trả phí riêng, thay đổi theo thời gian, nên hãy kiểm tra trang App Store của ứng dụng."}}, {"@type": "Question", "name": "Pofu có chạy trên Android không?", "acceptedAnswer": {"@type": "Answer", "text": "Hiện chưa. Pofu là ứng dụng iOS cho iPhone và iPad, có kèm ứng dụng Apple Watch. Bạn có thể tải trên App Store."}}, {"@type": "Question", "name": "Tôi có thể chuyển lịch sử từ MyFitnessPal sang Pofu không?", "acceptedAnswer": {"@type": "Answer", "text": "Chúng tôi không hứa hẹn có tính năng nhập dữ liệu. Pofu cho phép bạn xuất hoặc xóa dữ liệu của chính mình bất cứ lúc nào. Xem tổng quan về Pofu và chính sách quyền riêng tư để biết chi tiết."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Chuyển đến nội dung</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_vs_mfp">Tải ứng dụng</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">So sánh · cập nhật tháng 11 năm 2026</p>
+<h1>Pofu so với MyFitnessPal: ứng dụng đếm calo nào phù hợp với bạn?</h1>
+<p class="byline">Tác giả: <a href="../about.html">Ali Gürkan Sevilmiş</a>, nhà phát triển Pofu · Đăng <time datetime="2026-11-02">2 tháng 11, 2026</time> · Cập nhật <time datetime="2026-11-02">2 tháng 11, 2026</time></p>
+<p class="lede">Một so sánh chung, công bằng giữa Pofu và MyFitnessPal dành cho những ai muốn ghi món ăn nhanh và duy trì đều đặn.</p>
+</section>
+<section id="intro">
+<h2>Tóm tắt nhanh</h2>
+<p>MyFitnessPal là một trong những ứng dụng đếm calo nổi tiếng nhất, thường gắn với cơ sở dữ liệu thực phẩm lớn và quét mã vạch. Pofu là ứng dụng iPhone độc lập, mới hơn, dành cho phụ nữ, xây dựng quanh ghi bằng ảnh AI, nhận biết chu kỳ tùy chọn, ngày ân hạn và khung giờ nhịn ăn nhẹ nhàng.</p><p>Khác biệt chủ yếu nằm ở trọng tâm: một công cụ theo dõi lâu đời, toàn diện so với một ứng dụng nhỏ hơn được thiết kế quanh cách nhiều phụ nữ thực sự ăn uống và cảm nhận trong suốt tháng.</p>
+<p class="fine">Giá và tính năng có thể thay đổi. Trang này chỉ mô tả MyFitnessPal ở mức chung, nên hãy kiểm tra trang App Store của ứng dụng để biết hiện nay ứng dụng cung cấp gì.</p>
+</section>
+
+<section id="table">
+<h2>So sánh tính năng</h2>
+<div class="card tblwrap"><table class="tbl"><caption>Pofu và MyFitnessPal trong một cái nhìn (mức chung)</caption>
+<thead><tr><th scope="col">Tính năng</th><th scope="col">MyFitnessPal</th><th scope="col">Pofu</th></tr></thead>
+<tbody>
+<tr><th scope="row">Ghi bằng ảnh</th><td>Hãy kiểm tra trang ứng dụng về các tính năng ảnh hiện tại và gói nào có chúng.</td><td>Quét ảnh AI ước tính món ăn, khẩu phần, calo và macro kèm điểm độ tin cậy hiển thị rõ. Bạn có thể chỉnh sửa, và Pofu nhớ bản sửa của bạn.</td></tr>
+<tr><th scope="row">Phản hồi có tính đến chu kỳ</th><td>Theo chúng tôi biết thì không phải tính năng trung tâm; hãy kiểm tra trang ứng dụng.</td><td>Tùy chọn và tắt theo mặc định. Hiển thị ngày chu kỳ và giai đoạn của bạn; ở giai đoạn hoàng thể, số cân tăng vọt được đánh dấu là có thể do nước. Dữ liệu chu kỳ ở lại trên thiết bị của bạn.</td></tr>
+<tr><th scope="row">Xử lý ngày bỏ lỡ</th><td>Hãy kiểm tra cách ứng dụng xử lý một ngày bị bỏ qua.</td><td>Ngày ân hạn giữ chuỗi ngày của bạn không bị đứt. Khi vượt mục tiêu, ứng dụng hiển thị con số một cách bình thản, không trách móc.</td></tr>
+<tr><th scope="row">Nhịn ăn</th><td>Hãy kiểm tra trang ứng dụng về công cụ nhịn ăn.</td><td>Bộ đếm giờ với các khung 16:8, 14:10, 18:6 và 5:2 cùng Live Activities. Khung giờ ngắn hơn vẫn được tính. Thống kê nhịn ăn là một phần của Pro.</td></tr>
+<tr><th scope="row">Macro</th><td>Theo dõi calo và macro là mục đích sử dụng cốt lõi của ứng dụng.</td><td>Protein, carb và chất béo cho từng bữa, với mục tiêu từ bài kiểm tra 2 phút. Phân tích nâng cao là một phần của Pro.</td></tr>
+<tr><th scope="row">Tiện ích và đồng hồ</th><td>Hãy kiểm tra trang ứng dụng về hỗ trợ tiện ích và đồng hồ hiện tại.</td><td>Tiện ích màn hình chính, ứng dụng Apple Watch, Live Activities và hỗ trợ Sức khỏe của Apple.</td></tr>
+<tr><th scope="row">Mô hình giá</th><td>Có gói miễn phí và gói trả phí. Hãy kiểm tra trên App Store.</td><td>Bắt đầu miễn phí: mã vạch, tìm kiếm và ghi thủ công miễn phí và không giới hạn, với 3 lần quét ảnh AI miễn phí vào ngày đầu và 1 lần mỗi ngày sau đó. Pofu Pro là tùy chọn (gói năm có 7 ngày dùng thử miễn phí, gói tháng hoặc mua một lần trọn đời).</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="who">
+<h2>Mỗi ứng dụng phù hợp hơn với ai</h2>
+<h3>MyFitnessPal có thể phù hợp với bạn nếu</h3>
+<ul>
+<li>Bạn coi trọng cơ sở dữ liệu thực phẩm lớn và một ứng dụng lâu đời.</li><li>Bạn thích tìm thực phẩm đóng gói và món ăn nhà hàng theo tên.</li><li>Bạn đã có lịch sử trong đó và không muốn bắt đầu lại.</li>
+</ul>
+<h3>Pofu có thể phù hợp với bạn nếu</h3>
+<ul>
+<li>Bạn muốn ghi một đĩa ăn bằng ảnh trước rồi mới chuyển sang tìm kiếm hoặc mã vạch.</li><li>Bạn muốn nhận biết chu kỳ tùy chọn và cách nói nhẹ nhàng hơn về số cân.</li><li>Bạn muốn ngày ân hạn và lời lẽ nhẹ nhàng.</li><li>Bạn muốn một ứng dụng độc lập, bắt đầu miễn phí đơn giản và có Pro tùy chọn.</li>
+</ul>
+<p>Không lựa chọn nào là sai. Ứng dụng đếm calo tốt nhất là ứng dụng bạn vẫn mở vào tuần thứ ba, và nhiều ứng dụng có cách dùng thử miễn phí.</p>
+</section>
+
+<section id="faq">
+<h2>Câu hỏi</h2>
+<h3>Pofu có tốt hơn MyFitnessPal không?</h3>
+<p>Tùy vào điều bạn coi trọng. Cơ sở dữ liệu thực phẩm lớn là thế mạnh thực sự của các ứng dụng lâu đời. Pofu được xây dựng quanh nhịp sinh hoạt của phụ nữ: nhận biết chu kỳ tùy chọn, ngày ân hạn, khung giờ nhịn ăn nhẹ nhàng và ghi bằng ảnh AI. MyFitnessPal có thể phù hợp hơn nếu cách tiếp cận của nó khớp với cách bạn thích theo dõi. Hãy thử cả hai, vì cả hai đều có thể bắt đầu mà không phải trả tiền trước, và kiểm tra trang App Store của từng ứng dụng để biết chi tiết hiện tại.</p>
+<h3>Pofu có miễn phí so với MyFitnessPal không?</h3>
+<p>Pofu miễn phí để bắt đầu. Quét mã vạch, tìm kiếm và ghi thủ công miễn phí và không giới hạn, và bạn có 3 lần quét ảnh AI miễn phí vào ngày đầu và 1 lần mỗi ngày sau đó. Pofu Pro là tùy chọn. MyFitnessPal có các lựa chọn miễn phí và trả phí riêng, thay đổi theo thời gian, nên hãy kiểm tra trang App Store của ứng dụng.</p>
+<h3>Pofu có chạy trên Android không?</h3>
+<p>Hiện chưa. Pofu là ứng dụng iOS cho iPhone và iPad, có kèm ứng dụng Apple Watch. Bạn có thể tải trên App Store.</p>
+<h3>Tôi có thể chuyển lịch sử từ MyFitnessPal sang Pofu không?</h3>
+<p>Chúng tôi không hứa hẹn có tính năng nhập dữ liệu. Pofu cho phép bạn xuất hoặc xóa dữ liệu của chính mình bất cứ lúc nào. Xem tổng quan về Pofu và chính sách quyền riêng tư để biết chi tiết.</p>
+</section>
+
+<section id="get-pofu">
+<h2>Dùng thử Pofu</h2>
+<p>Pofu miễn phí để bắt đầu trên iPhone. <a href="pofu.html">Đọc tổng quan đầy đủ về Pofu</a> hoặc xem <a href="best-calorie-counter-for-women.html">danh sách kiểm tra để chọn ứng dụng đếm calo dành cho phụ nữ</a>.</p>
+<p class="cta"><a href="https://apps.apple.com/vn/app/pofu-womens-calorie-counter/id6778044605?pt=128375664&amp;ct=web_vi_vs_mfp"><img src="../assets/img/app-store-badge.png" alt="Tải Pofu trên App Store" width="180" height="60"></a></p>
+</section>
+
+<section id="not-medical">
+<div class="note"><p>Ứng dụng calo là công cụ theo dõi, không phải lời khuyên y tế. Các con số calo do AI đưa ra chỉ là ước tính. Nếu bạn đang mang thai, cho con bú hoặc từng có rối loạn ăn uống, hãy làm theo lời khuyên của bác sĩ hoặc chuyên gia dinh dưỡng trước.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Pháp lý và hỗ trợ">
+<a href="pofu.html">Pofu</a>
+<a href="../about.html">Giới thiệu</a>
+<a href="../privacy.html">Quyền riêng tư</a>
+<a href="../terms.html">Điều khoản</a>
+<a href="../support.html">Hỗ trợ</a>
+</nav>
+<p>Cập nhật lần cuối <time datetime="2026-11-02">2 tháng 11, 2026</time>. Do Ali Gürkan Sevilmiş, nhà phát triển Pofu, viết.</p>
+<p>Apple, iPhone, iPad, Apple Watch và App Store là nhãn hiệu của Apple Inc. Mọi tên sản phẩm khác là nhãn hiệu của chủ sở hữu tương ứng và chỉ được dùng ở đây để nhận diện. © 2026 Pofu.</p>
+</div>
+<nav class="langs" aria-label="Languages" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../pofu-vs-myfitnesspal.html" hreflang="en" lang="en">English</a> · <a href="../de/pofu-vs-myfitnesspal.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/pofu-vs-myfitnesspal.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/pofu-vs-myfitnesspal.html" hreflang="es" lang="es">Español</a> · <a href="../it/pofu-vs-myfitnesspal.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/pofu-vs-myfitnesspal.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../nl/pofu-vs-myfitnesspal.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/pofu-vs-myfitnesspal.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ru/pofu-vs-myfitnesspal.html" hreflang="ru" lang="ru">Русский</a> · <a href="../uk/pofu-vs-myfitnesspal.html" hreflang="uk" lang="uk">Українська</a> · <a href="../cs/pofu-vs-myfitnesspal.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../ro/pofu-vs-myfitnesspal.html" hreflang="ro" lang="ro">Română</a> · <a href="../sv/pofu-vs-myfitnesspal.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../ja/pofu-vs-myfitnesspal.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ko/pofu-vs-myfitnesspal.html" hreflang="ko" lang="ko">한국어</a> · <a href="../zh-Hans/pofu-vs-myfitnesspal.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../id/pofu-vs-myfitnesspal.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <strong>Tiếng Việt</strong> · <a href="../th/pofu-vs-myfitnesspal.html" hreflang="th" lang="th">ไทย</a> · <a href="../hi/pofu-vs-myfitnesspal.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../ar/pofu-vs-myfitnesspal.html" hreflang="ar" lang="ar">العربية</a></nav>
+</footer>
+</body>
+</html>

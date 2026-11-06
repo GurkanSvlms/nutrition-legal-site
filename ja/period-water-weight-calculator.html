@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>生理中のむくみ体重計算機：水分？それとも脂肪？ | Pofu</title>
+<meta name="description" content="無料の生理中むくみ体重計算機。最後の生理が始まった日と体重計の増加量を入力すると、水分の可能性が高いか、それ以外かがわかります。入力内容がブラウザの外に出ることはありません。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/ja/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="tr" href="https://getpofu.com/regl-kilosu-su-mu-yag-mi.html">
+<link rel="alternate" hreflang="de" href="https://getpofu.com/de/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="es" href="https://getpofu.com/es/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="it" href="https://getpofu.com/it/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="id" href="https://getpofu.com/id/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="th" href="https://getpofu.com/th/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/period-water-weight-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/period-water-weight-calculator.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="生理中のむくみ体重計算機：水分か脂肪か">
+<meta property="og:description" content="無料の生理中むくみ体重計算機。最後の生理が始まった日と体重計の増加量を入力すると、水分の可能性が高いか、それ以外かがわかります。入力内容がブラウザの外に出ることはありません。">
+<meta property="og:url" content="https://getpofu.com/ja/period-water-weight-calculator.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu tool page: system fonts, one small script, nothing leaves the browser. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  
+    .tool { margin-top: .4rem; }
+    .tool form { display: grid; gap: .9rem; }
+    .field label, .field legend { display: block; font-weight: 700; margin-bottom: .3rem; }
+    .field .hint { display: block; font-weight: 400; font-size: .9rem; color: var(--ink2); }
+    .field input, .field select { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: .7rem; padding: .65rem .8rem; min-height: 2.9rem; }
+    .row { display: grid; grid-template-columns: 1fr 6.5rem; gap: .6rem; }
+    .tool button { justify-self: start; font: inherit; border: 0; cursor: pointer; }
+    .result { margin-top: 1.1rem; padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .result[hidden] { display: none; }
+    .result h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .result .meta { font-size: .95rem; color: var(--ink2); }
+    .result .err { color: var(--pink-text); font-weight: 700; margin: 0; }
+    .bridge { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line); }
+    .bridge p { margin-bottom: .6rem; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "生理中のむくみ体重計算機：水分？それとも脂肪？", "url": "https://getpofu.com/ja/period-water-weight-calculator.html", "inLanguage": "ja", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "description": "無料の生理中むくみ体重計算機。最後の生理が始まった日と体重計の増加量を入力すると、水分の可能性が高いか、それ以外かがわかります。入力内容がブラウザの外に出ることはありません。"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ja", "url": "https://getpofu.com/ja/period-water-weight-calculator.html", "inLanguage": "ja", "mainEntity": [{"@type": "Question", "name": "生理中の体重増加はどれくらいが普通？", "acceptedAnswer": {"@type": "Answer", "text": "多くの情報源では1〜5ポンド（0.5〜2.3kg）程度で、ほとんどが水分とされ、まったく増えない人もいます。42人の女性を対象とした研究では、月経中に平均で約0.45kgの増加が見られました。"}}, {"@type": "Question", "name": "生理中のむくみ体重はいつ戻る？", "acceptedAnswer": {"@type": "Answer", "text": "通常は生理が始まってから数日以内に戻ります。生理開始から1週間ほど後の同じ時間帯にもう一度体重を測ると、普段の体重がわかります。"}}, {"@type": "Question", "name": "生理中に食べたカロリーはカウントされる？", "acceptedAnswer": {"@type": "Answer", "text": "はい。黄体期には安静時のエネルギー消費がわずかに増えることがありますが、研究ではその差は小さいとされているため、カロリーは変わらず意味があります。"}}, {"@type": "Question", "name": "生理前に体重計の数字が跳ね上がったら、食べる量を減らすべき？", "acceptedAnswer": {"@type": "Answer", "text": "1回の測定だけでは減らさないでください。水分による体重は一時的なものなので、生理が終わってからの推移を見て、それから計画を見直しましょう。"}}, {"@type": "Question", "name": "このツールは私のデータを保存する？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。計算はブラウザ内で行われ、入力した内容が送信・保存されることはありません。"}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="../assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_water_ja&amp;mt=8">アプリを入手</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">無料ツール · 登録不要</p>
+<h1>生理中のむくみ体重計算機：水分？それとも脂肪？</h1>
+<p class="lede">生理前や生理中に体重計の数字が跳ね上がった？3つの数字を入力すると、その変化が周期に伴う典型的な水分貯留に見えるかどうかがわかります。</p>
+<p class="fine">執筆：Ali Gürkan Sevilmiş（Pofu開発者） · 2026年11月6日</p>
+</section>
+<section id="tool" class="tool" aria-labelledby="tool-h">
+<h2 id="tool-h">体重計の増加をチェック</h2>
+<div class="card">
+<form id="pw-form" novalidate>
+<div class="field"><label for="start">最後の生理はいつ始まりましたか？<span class="hint">出血が始まった最初の日です。今回の生理がすでに始まっている場合は、その日を入力してください。</span></label><input id="start" name="start" type="date" required></div>
+<div class="field"><label for="len">普段の周期の長さ（日）<span class="hint">生理が始まった日から次の生理が始まる日までの日数です。わからなければ28日。</span></label><input id="len" name="len" type="number" inputmode="numeric" min="21" max="40" value="28" required></div>
+<div class="field"><label for="change">体重計の数字はどれだけ増えましたか？<span class="hint">1〜2週間ほど前の普段の体重との比較です。減った場合はマイナス記号を付けてください。</span></label>
+<div class="row"><input id="change" name="change" type="text" inputmode="decimal" placeholder="例：3" required><select name="unit" aria-label="単位"><option value="kg" selected>kg</option><option value="lb">lb</option></select></div></div>
+<button class="btn" type="submit">チェック</button>
+<p class="fine">計算はすべてブラウザ内で行われます。入力した内容が送信・保存されることはありません。</p>
+</form>
+<div id="pw-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+</div>
+</section>
+<section id="how">
+<h2>この計算機のしくみ</h2>
+<ul>
+<li><strong>周期のどこにいるか：</strong>最後の生理の開始日から日数を数え、普段の周期の長さを使います。1〜5日目は生理中、周期の最後の1週間は生理前の期間として扱います。次の生理の予測は一切行いません。</li>
+<li><strong>むくみやすい期間：</strong>水分貯留は、生理前の数日間と生理の最初の数日間に最もよく報告されます。この期間の約5ポンド（2.3kg）までの増加は「水分の可能性が高い」と表示されます。</li>
+<li><strong>その期間以外：</strong>約1kg（2.2ポンド）までの変化は日常的な変動、それより大きい変化は周期では説明しにくいものとして扱います。</li>
+</ul>
+<p>これらの基準は、下記の情報源に基づく簡単なルールであり、診断ではありません。体は人それぞれで、まったく変化がない人もいます。</p>
+</section>
+<section id="research">
+<h2>研究でわかっていること</h2>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/37395124/">42人の女性を対象とした研究</a>では、体重は周期の第1週より月経中のほうが平均で約0.45kg高く、その変化は脂肪ではなく水分に連動していました。</li>
+<li><a href="https://www.healthline.com/health/womens-health/weight-gain-during-period">Healthline</a>などの健康情報サイトは、生理に伴う典型的な増加を数ポンド程度で、ほとんどが水分であり数日で戻ると説明しています。<a href="https://health.clevelandclinic.org/do-you-gain-weight-when-on-your-period">Cleveland Clinic</a>は、周期の中で体重が5ポンドを超えて変動する場合は医師の診察を勧めています。</li>
+<li><a href="https://www.nhs.uk/conditions/pre-menstrual-syndrome/">NHSは</a>、むくみを月経前によくある症状として挙げています。</li>
+</ul>
+</section>
+<section id="faq">
+<h2>よくある質問</h2>
+<h3>生理中の体重増加はどれくらいが普通？</h3>
+<p>多くの情報源では1〜5ポンド（0.5〜2.3kg）程度で、ほとんどが水分とされ、まったく増えない人もいます。42人の女性を対象とした研究では、月経中に平均で約0.45kgの増加が見られました。</p>
+<h3>生理中のむくみ体重はいつ戻る？</h3>
+<p>通常は生理が始まってから数日以内に戻ります。生理開始から1週間ほど後の同じ時間帯にもう一度体重を測ると、普段の体重がわかります。</p>
+<h3>生理中に食べたカロリーはカウントされる？</h3>
+<p>はい。黄体期には安静時のエネルギー消費がわずかに増えることがありますが、研究ではその差は小さいとされているため、カロリーは変わらず意味があります。</p>
+<h3>生理前に体重計の数字が跳ね上がったら、食べる量を減らすべき？</h3>
+<p>1回の測定だけでは減らさないでください。水分による体重は一時的なものなので、生理が終わってからの推移を見て、それから計画を見直しましょう。</p>
+<h3>このツールは私のデータを保存する？</h3>
+<p>いいえ。計算はブラウザ内で行われ、入力した内容が送信・保存されることはありません。</p>
+</section>
+<section id="related">
+<h2>関連記事</h2>
+<ul>
+<li><a href="calorie-tracking-menstrual-cycle.html">月経周期とカロリー記録</a></li>
+<li><a href="does-menstrual-cycle-affect-calorie-needs.html">生理周期は必要カロリーに影響する？</a></li>
+<li><a href="../regl-kilosu-su-mu-yag-mi.html" hreflang="tr" lang="tr">Bu aracın Türkçesi: Regl kilosu su mu, yağ mı?</a></li>
+</ul>
+</section>
+<section id="not-medical">
+<div class="note"><p>このツールは一般的な情報を提供するもので、医学的なアドバイスではありません。周期が不規則、強い痛みがある、急な体重変化や大きな体重変化がある、またはその他の健康上の不安がある場合は、医師に相談してください。妊娠中、授乳中、または摂食障害の既往がある場合は、医師または管理栄養士の指示に従ってください。</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="法的情報とサポート">
+<a href="pofu.html">Pofu</a>
+<a href="../privacy.html">プライバシー</a>
+<a href="../terms.html">利用規約</a>
+<a href="../support.html">サポート</a>
+</nav>
+<p>最終更新：<time datetime="2026-11-06">2026年11月6日</time>。</p>
+<p>Apple、iPhone、App Storeは、Apple Inc.の商標です。 © 2026 Pofu.</p>
+</div>
+<nav class="langs" aria-label="Languages" style="margin:2rem auto 0;max-width:720px;padding:0 16px;font-size:.85rem;line-height:1.9;color:var(--ink2)"><a href="../period-water-weight-calculator.html" hreflang="en" lang="en">English</a> · <a href="../regl-kilosu-su-mu-yag-mi.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../de/period-water-weight-calculator.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/period-water-weight-calculator.html" hreflang="fr" lang="fr">Français</a> · <a href="../es/period-water-weight-calculator.html" hreflang="es" lang="es">Español</a> · <a href="../it/period-water-weight-calculator.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/period-water-weight-calculator.html" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> · <a href="../nl/period-water-weight-calculator.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/period-water-weight-calculator.html" hreflang="pl" lang="pl">Polski</a> · <a href="../ru/period-water-weight-calculator.html" hreflang="ru" lang="ru">Русский</a> · <a href="../uk/period-water-weight-calculator.html" hreflang="uk" lang="uk">Українська</a> · <a href="../cs/period-water-weight-calculator.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../ro/period-water-weight-calculator.html" hreflang="ro" lang="ro">Română</a> · <a href="../sv/period-water-weight-calculator.html" hreflang="sv" lang="sv">Svenska</a> · <strong>日本語</strong> · <a href="../ko/period-water-weight-calculator.html" hreflang="ko" lang="ko">한국어</a> · <a href="../zh-Hans/period-water-weight-calculator.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../id/period-water-weight-calculator.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../vi/period-water-weight-calculator.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../th/period-water-weight-calculator.html" hreflang="th" lang="th">ไทย</a> · <a href="../hi/period-water-weight-calculator.html" hreflang="hi" lang="hi">हिन्दी</a> · <a href="../ar/period-water-weight-calculator.html" hreflang="ar" lang="ar">العربية</a></nav>
+</footer>
+<script src="../assets/period-water.js"></script>
+<script>window.__T = {"locale": "ja-JP", "phases": {"menstrual": "生理中（1〜5日目）", "follicular": "卵胞期", "early_luteal": "黄体期の前半", "late_luteal": "生理前の期間", "unknown": "不明なフェーズ"}, "results": {"likely_water": {"title": "水分の可能性が高い", "body": "周期のこの時期に{kg}kg（{lb}ポンド）増えるのは、多くの情報源が周期に伴う水分貯留として挙げる範囲（約1〜5ポンド、0.5〜2.3kg）に収まっています。通常は生理が始まって数日で落ち着きます。何かを変える前に、生理開始から1週間ほど後の同じ時間帯にもう一度体重を測ってみてください。"}, "more_than_water": {"title": "一部は水分かもしれませんが、すべてではなさそうです", "body": "{kg}kg（{lb}ポンド）の増加は、周期に伴う水分貯留の一般的な範囲（1〜5ポンド、0.5〜2.3kg）を上回っています。一部はやはり水分かもしれません。今後2週間は週平均を見てください。5ポンドを超える変動が毎周期起こる場合は、Cleveland Clinicは医師に相談することを勧めています。"}, "normal_noise": {"title": "おそらく日常的な変動です", "body": "周期に伴う水分貯留が最も多い時期ではありませんが、{kg}kg（{lb}ポンド）の変化は小さなものです。塩分、炭水化物、消化、体重を測る時間帯によっても、このくらいは動きます。1回ごとの数値ではなく、週平均で比べてください。"}, "unlikely_cycle": {"title": "周期では説明しにくい増加です", "body": "周期に伴う水分貯留が最も多い時期ではなく、{kg}kg（{lb}ポンド）は通常の1日の変動を超えています。1回の測定では誤解することもあるので、結論を出す前に2週間の週平均を見てください。"}, "no_gain": {"title": "説明が必要な変化はありません", "body": "体重計の数字は同じか、それより低くなっています。目標を追っている場合は、月ごとに周期の同じ日どうしを比べ続けてください。"}, "unknown_phase": {"title": "周期のどこにいるかを判断できません", "body": "最後の生理が始まってから{day}日が経っており、普段の周期に1週間を足した日数より長くなっています。生理が遅れている場合や周期が変わってきた場合は、医師に相談してください。このツールは生理を予測しません。"}}, "errors": {"date": "最後の生理が始まった日を入力してください。", "future": "その日付は未来です。最後の生理が始まった日を入力してください。", "length": "周期の長さは21〜40日の範囲で入力してください。", "change": "体重計の変化量を入力してください（例：3）。", "too_big": "水分としては非常に大きな変化です。数値を確認し、急で大きな体重変化については医師に相談してください。"}, "dayLine": "周期{day}日目 · {phase}", "bridge": "<div class=\"bridge\"><p>Pofuは、これを毎日あなたの代わりに行います。任意の周期サポートをオンにすると、周期の日数を表示し、体重計の急な増加が水分かもしれない時期を教えてくれるので、高い数字が嫌な一日になることはありません。</p><p class=\"cta\"><a href=\"https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_water_ja&amp;mt=8\"><img src=\"assets/img/app-store-badge.png\" alt=\"App StoreでPofuをダウンロード\" width=\"180\" height=\"60\"></a></p></div>"};</script>
+<script>
+(function () {
+  var T = window.__T, f = document.getElementById('pw-form'), out = document.getElementById('pw-result');
+  var d = new Date(); var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  f.start.max = today;
+  function fmt(n) { return (Math.round(n * 10) / 10).toLocaleString(T.locale); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var r = PeriodWater.assess({ lastStart: f.start.value, today: today, cycleLength: f.len.value, change: f.change.value.replace(',', '.'), unit: f.unit.value });
+    out.hidden = false;
+    if (r.error) { out.innerHTML = '<p class="err">' + T.errors[r.error] + '</p>'; out.focus(); return; }
+    var v = +f.change.value.replace(',', '.'), kg = f.unit.value === 'lb' ? v * 0.45359237 : v, lb = f.unit.value === 'lb' ? v : v / 0.45359237, m = T.results[r.result];
+    var body = m.body.replace(/\{day\}/g, r.cycleDay).replace(/\{phase\}/g, T.phases[r.phase]).replace(/\{kg\}/g, fmt(kg)).replace(/\{lb\}/g, fmt(lb));
+    out.innerHTML = '<h3>' + m.title + '</h3><p class="meta">' + T.dayLine.replace('{day}', r.cycleDay).replace('{phase}', T.phases[r.phase]) + '</p><p>' + body + '</p>' + T.bridge;
+    out.focus();
+  });
+})();
+</script>
+</body>
+</html>
