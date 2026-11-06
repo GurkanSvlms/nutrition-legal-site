@@ -29,6 +29,8 @@ TR_SLUG = {"protein": "kadinlar-icin-protein-ihtiyaci-hesaplama.html", "macro": 
 OLD_TOOLS = [("cycle-calorie-calculator.html", "kadin-gunluk-kalori-ihtiyaci-hesaplama.html"),
              ("period-water-weight-calculator.html", "regl-kilosu-su-mu-yag-mi.html")]
 TODAY = "2026-11-06"
+# app screen recording shown under "How this calculator works" (assets/video/demo-<clip>.mp4 + .jpg), if the file exists
+TOOL_CLIP = {"protein": "today", "macro": "today", "deficit": "today", "bmi": "streak"}
 
 
 def path_of(L, tool):
@@ -220,6 +222,14 @@ SCRIPT = r"""
 """
 
 
+def tf_caption(L):
+    """'Screen recording from the Pofu app (English interface)' in L, from data/trust/<L>.json."""
+    f = ROOT / "data" / "trust" / f"{L}.json"
+    if not f.exists():
+        return ""
+    return re.split(r"\s*[:：]\s*", json.loads(f.read_text(encoding="utf-8"))["food"]["video_caption"], maxsplit=1)[0]
+
+
 def page(L, d, tool, style):
     c, t = d["common"], d["tools"][tool]
     pre = prefix(L)
@@ -256,6 +266,12 @@ def page(L, d, tool, style):
     how = "\n".join(f"<li>{x}</li>" for x in t["how"])
     src = "\n".join(f"<li>{x}</li>" for x in t["sources"])
     faq_html = "\n".join(f"<h3>{q}</h3>\n<p>{a}</p>" for q, a in t["faq"])
+    clip = TOOL_CLIP.get(tool)
+    clip_html = ""
+    if clip and (ROOT / f"assets/video/demo-{clip}.mp4").exists() and tf_caption(L):
+        clip_html = (f'<figure class="demo"><video controls muted playsinline preload="none" width="270" height="587" '
+                     f'poster="{pre}assets/video/demo-{clip}.jpg"><source src="{pre}assets/video/demo-{clip}.mp4" type="video/mp4"></video>'
+                     f'<figcaption>{esc(tf_caption(L))}</figcaption></figure>')
     embed_code = (f'<iframe src="{me}?embed=1" title="{esc(t["h1"])}" width="100%" height="940" loading="lazy" '
                   f'style="border:0;max-width:640px"></iframe>\n<p><a href="{me}">{esc(t["h1"])}</a> · Pofu</p>')
     dir_attr = ' dir="rtl"' if L == "ar" else ""
@@ -282,6 +298,9 @@ def page(L, d, tool, style):
 <link rel="icon" type="image/png" sizes="64x64" href="{pre}assets/pofu-favicon.png?v=20260703">
 <link rel="apple-touch-icon" sizes="180x180" href="{pre}assets/apple-touch-icon.png?v=20260703">
 <style>{style}
+.demo {{ margin: .8rem 0 0; }}
+.demo video {{ display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }}
+.demo figcaption {{ font-size: .88rem; color: var(--ink2); margin-top: .4rem; }}
 #embed textarea {{ width: 100%; min-height: 6.5rem; font: .82rem/1.4 ui-monospace, Menlo, monospace; padding: .6rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); color: var(--ink); }}
 .embed-by {{ display: none; }}
 .embed body {{ background: transparent; }}
@@ -330,6 +349,7 @@ def page(L, d, tool, style):
 {how}
 </ul>
 <p>{t['note']}</p>
+{clip_html}
 </section>
 <section id="sources">
 <h2>{c['src_h']}</h2>
