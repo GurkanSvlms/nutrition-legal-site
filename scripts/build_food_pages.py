@@ -2,6 +2,7 @@
 """Generate "how many calories in <dish>" pages for getpofu.com.
 
 Run:  python3 scripts/build_food_pages.py          (build + run checks)
+      then python3 scripts/apply_nav.py and python3 scripts/apply_analytics.py (rebuilt pages lose nav + analytics)
       python3 scripts/build_food_pages.py --no-check
 
 Writes, per language in LANGS: <dir>/index.html (hub) + <dir>/<slug>.html (one per food),

@@ -8,6 +8,7 @@
 Text lives in data/tools/<lang>.json (en.json is the reference: same keys in every file).
 Math lives in assets/cycle-calories.js + assets/women-tools.js (tests: scripts/test_women_tools.js).
 After building, run scripts/apply_nav.py so the pages get the header/footer menus and hub entries.
+Then run scripts/apply_analytics.py (rebuilt pages lose the analytics snippet).
 """
 import html as htmllib
 import json

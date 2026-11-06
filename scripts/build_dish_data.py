@@ -8,6 +8,7 @@ Dishes = the "local" foods of each food-page language (scripts/build_food_pages.
 drinks, condiments and small sides (under 60 g or 80 kcal a serving).
 Text: data/dishes/<lang>.json (+ shared labels from data/tools/<lang>.json "common").
 Run scripts/apply_nav.py afterwards.
+Then run scripts/apply_analytics.py (rebuilt pages lose the analytics snippet).
 """
 import csv
 import html
