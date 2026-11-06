@@ -1,0 +1,5 @@
+/* Legal and support pages (privacy, terms, support): same fonts as the rest of the site.
+   Loaded by scripts/apply_nav.py after styles.css; layout stays as styles.css draws it. */
+body { font-family: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+h1, h2, h3, .brand { font-family: "Bricolage Grotesque", "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: -.01em; }
+h1 { font-weight: 800; }

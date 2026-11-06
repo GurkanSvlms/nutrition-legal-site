@@ -1,0 +1,146 @@
+/* Pofu site skin: brings every content page (guides, Q&A, comparisons, tools, food pages, hubs)
+   to the home page's look without changing page structure. Loaded after each page's own <style>
+   by scripts/apply_nav.py (<!-- skin:start/end -->). Landing and legal pages don't load it.
+   Fonts: Bricolage Grotesque (headings), Figtree (text); scripts they lack fall back to system fonts. */
+
+:root {
+  --font: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --head: "Bricolage Grotesque", "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --plum: #2E1229;
+  --plum-ink: #FCE9F1;
+  --plum-ink2: #E2BFD6;
+  --band: linear-gradient(180deg, #F8D6E5 0%, rgba(252, 233, 241, 0) 100%);
+  --shadow-sm: 0 1px 0 rgba(61, 31, 56, .06), 0 14px 34px -22px rgba(76, 33, 69, .38);
+  --shadow: 0 30px 60px -30px rgba(76, 33, 69, .42), 0 10px 22px -14px rgba(76, 33, 69, .22);
+  --r: 1.25rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --plum: #1E0A1A;
+    --band: linear-gradient(180deg, #45203F 0%, rgba(46, 18, 41, 0) 100%);
+    --shadow-sm: 0 1px 0 rgba(0, 0, 0, .2);
+    --shadow: 0 1px 0 rgba(0, 0, 0, .25);
+  }
+}
+
+html { overflow-x: clip; }
+body { font-family: var(--font); font-size: 1.0625rem; line-height: 1.7; }
+h1, h2, h3, .brand, .big, .stat b { font-family: var(--head); }
+h1 { font-weight: 800; font-size: clamp(2.1rem, 7vw, 3.1rem); line-height: 1.05; letter-spacing: -.02em; }
+h2 { font-weight: 700; font-size: clamp(1.45rem, 4.6vw, 1.9rem); line-height: 1.15; }
+h3 { font-weight: 700; font-size: 1.15rem; }
+.brand { font-weight: 800; font-size: 1.35rem; }
+
+/* Header: white bar, wider than the reading column */
+.top { background: color-mix(in srgb, var(--card) 88%, transparent); border-bottom: 1px solid var(--line); }
+.top .wrap, .foot .wrap { max-width: 72rem; }
+.btn { font-family: var(--font); }
+
+/* Hero: soft colour band across the full width */
+main > .hero { position: relative; isolation: isolate; padding-top: 2.6rem; padding-bottom: 2rem; }
+main > .hero::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); background: var(--band); }
+.pill { background: var(--card); box-shadow: var(--shadow-sm); font-weight: 700; font-size: .85rem; }
+.lede { font-size: 1.22rem; line-height: 1.55; }
+
+/* Sections: spacing instead of rule lines */
+main > section { padding: 1.4rem 0; }
+main > section + section { border-top: 0; }
+
+/* Cards and callouts */
+.card { border: 0; border-radius: var(--r); box-shadow: var(--shadow-sm); padding: 1.2rem 1.3rem; }
+.note { border-radius: var(--r); padding: 1.1rem 1.25rem; }
+#short { margin: .4rem 0 .6rem; padding: 1.3rem 1.4rem !important; background: var(--card); border: 1px solid color-mix(in srgb, var(--pink-deep) 22%, transparent) !important; border-radius: var(--r); }
+#short > h2 { font-family: var(--font); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--pink-text); margin-bottom: .5rem; }
+#short p:last-child { margin-bottom: 0; }
+.toc a { border: 0; box-shadow: var(--shadow-sm); font-weight: 600; }
+.tblwrap { background: var(--card); border-radius: var(--r); box-shadow: var(--shadow-sm); padding: .3rem .9rem; }
+.tbl thead th { font-size: .88rem; color: var(--ink2); }
+.facts { background: var(--card); border-radius: var(--r); padding: 1rem 1.2rem; box-shadow: var(--shadow-sm); }
+
+/* Link lists become card grids: hubs, related reading, calculators box, food lists */
+main > section:not(.hero) > ul:has(> li > a > strong),
+#related > ul, #free-tools > ul, .foodlist {
+  list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: .8rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+}
+main > section:not(.hero) > ul:has(> li > a > strong) > li,
+#related > ul > li, #free-tools > ul > li, .foodlist > li {
+  position: relative; margin: 0; padding: 1.05rem 1.15rem; border: 0; border-radius: var(--r);
+  background: var(--card); box-shadow: var(--shadow-sm); line-height: 1.45; transition: transform .15s ease;
+}
+main > section:not(.hero) > ul:has(> li > a > strong) > li:hover,
+#related > ul > li:hover, #free-tools > ul > li:hover, .foodlist > li:hover { transform: translateY(-2px); }
+main > section:not(.hero) > ul:has(> li > a > strong) > li > a,
+#related > ul > li > a, #free-tools > ul > li > a, .foodlist > li > a {
+  color: var(--ink); font-weight: 700; text-decoration: none;
+}
+main > section:not(.hero) > ul:has(> li > a > strong) > li > a::after,
+#related > ul > li > a::after, #free-tools > ul > li > a::after, .foodlist > li > a::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+}
+main > section:not(.hero) > ul:has(> li > a > strong) > li > a:focus-visible::after,
+#related > ul > li > a:focus-visible::after, #free-tools > ul > li > a:focus-visible::after, .foodlist > li > a:focus-visible::after {
+  outline: 3px solid var(--pink); outline-offset: 2px;
+}
+main > section:not(.hero) > ul:has(> li > a > strong) > li .fine { display: block; margin-top: .35rem; }
+.foodlist .k { display: block; margin-top: .25rem; }
+#free-tools { margin-top: 1rem; padding: 1.4rem !important; border-radius: calc(var(--r) + .25rem); background: var(--soft); }
+#free-tools > ul { margin-bottom: 0; }
+
+/* App section (the one with the App Store badge) and the tool's app bridge: plum card */
+main > section:has(.cta img[src*="app-store-badge"]):not(.hero):not(.tool), .bridge {
+  margin: 1rem 0; padding: 1.5rem 1.5rem 1.3rem !important; border-radius: calc(var(--r) + .3rem);
+  background: var(--plum); color: var(--plum-ink2); border-top: 0 !important;
+}
+main > section:has(.cta img[src*="app-store-badge"]):not(.hero):not(.tool) h2,
+main > section:has(.cta img[src*="app-store-badge"]):not(.hero):not(.tool) strong { color: var(--plum-ink); }
+main > section:has(.cta img[src*="app-store-badge"]):not(.hero):not(.tool) a:not(.btn),
+.bridge a { color: #F9B8D2; }
+
+/* Food pages: calorie split bar and app recording sit on cards */
+.split { height: .9rem; }
+.demo video { box-shadow: var(--shadow); border: 0; }
+
+/* Calculator pages */
+.tool .card { padding: 1.5rem; box-shadow: var(--shadow); border-radius: calc(var(--r) + .5rem); }
+.tool input, .tool select { border-radius: .8rem; font-family: var(--font); }
+.tool button.btn { min-height: 3rem; padding: .75rem 1.6rem; font-size: 1.02rem; }
+.result { border: 0 !important; border-radius: var(--r); background: var(--plum) !important; color: var(--plum-ink); padding: 1.3rem 1.35rem !important; }
+.result .meta { color: var(--plum-ink2); }
+.result .big { color: #fff; font-weight: 800; font-size: clamp(2.2rem, 7vw, 2.9rem); }
+.result .err { color: #FFC2D9; }
+.result p { color: var(--plum-ink2); }
+.stat { background: rgba(252, 233, 241, .08) !important; border: 0 !important; color: var(--plum-ink2); }
+.stat b { color: #fff; }
+.stat span { color: var(--plum-ink2) !important; }
+.result .bridge { margin: 1rem 0 0; padding: 1rem 0 0 !important; background: none; border-top: 1px solid rgba(252, 233, 241, .16) !important; border-radius: 0; }
+#embed textarea { border-radius: .8rem; }
+
+/* Footer: plum band */
+.foot { margin-top: 2rem; padding-top: 2.2rem; border-top: 0; background: var(--plum); color: var(--plum-ink2); }
+.foot a { color: var(--plum-ink); }
+.foot .pfoot { border-top-color: rgba(252, 233, 241, .14); }
+.foot .pfoot strong { color: #fff; }
+.foot .pfoot [aria-current] { color: #F9B8D2; }
+
+/* Header language menu and nav pills */
+.pnav__links a { border: 0; box-shadow: var(--shadow-sm); }
+.plang summary, .pnav__m summary { font-family: var(--font); }
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:not(.hero) > ul:has(> li > a > strong) > li, #related > ul > li, #free-tools > ul > li, .foodlist > li { transition: none; }
+}
+
+/* Narrow phones: keep logo, app button, menu and language on one row */
+@media (max-width: 26rem) {
+  .top__in { gap: .5rem; }
+  .top__in .btn { padding: .5rem .7rem; font-size: .84rem; }
+  .plang summary { padding: 0 .55rem; font-size: .85rem; }
+  .brand { gap: .45rem; font-size: 1.2rem; }
+}
+
+/* Same header order on every page type: logo … app button, menu, language (nav row below on wide screens) */
+.top__in .btn { order: 1; margin-inline-start: auto; }
+.pnav__m { order: 2; }
+.plang { order: 3; }
+.pnav__links { order: 4; }

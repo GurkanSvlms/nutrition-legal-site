@@ -35,6 +35,7 @@ from urllib.parse import urljoin, urlparse
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://getpofu.com/"
 TODAY = "2026-11-06"
+SKIN_V = "20261106"  # bump when assets/site.css changes (cache)
 
 OTHER = ["de", "fr", "es", "it", "pt-BR", "nl", "pl", "ru", "uk", "cs", "ro", "sv", "ja", "ko",
          "zh-Hans", "id", "vi", "th", "hi", "ar"]
@@ -331,8 +332,7 @@ NAV_CSS = """/* nav:css:start */
 .pfoot strong{color:var(--ink,#222)}
 .pfoot a{display:inline-flex;align-items:center;min-height:2.5rem}
 .pfoot [aria-current]{font-weight:700}
-.plang{margin-inline-start:auto}
-.top__in:has(.plang) .btn{margin-inline-start:0}
+.plang{order:2}
 .plang summary{list-style:none;display:inline-flex;align-items:center;gap:.3rem;min-width:44px;min-height:44px;padding:0 .7rem;border:1px solid var(--line,rgba(0,0,0,.18));border-radius:999px;background:var(--card,#fff);color:var(--ink,#222);font-weight:600;font-size:.9rem;line-height:1;cursor:pointer}
 .plang summary::-webkit-details-marker{display:none}
 .plang[open] summary{background:var(--soft,rgba(222,81,135,.12))}
@@ -486,6 +486,22 @@ def process(path, text=None, write=True):
         new = re.sub(r"<style>/\* nav:css:start \*/.*?/\* nav:css:end \*/</style>", lambda m: css, new, flags=re.S)
     else:
         new = new.replace("</head>", css + "\n</head>", 1)
+    # site skin (assets/site.css + fonts) after the page's own styles, standard pages only
+    new = re.sub(r"\n?<!-- skin:start -->.*?<!-- skin:end -->", "", new, flags=re.S)
+    if standard:
+        skin = ("<!-- skin:start -->\n"
+                '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+                '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+                '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">\n'
+                f'<link rel="stylesheet" href="{href_to("assets/site.css", r)}?v={SKIN_V}">\n'
+                "<!-- skin:end -->")
+        new = new.replace("</head>", skin + "\n</head>", 1)
+    else:  # legal pages keep styles.css; only the fonts change
+        skin = ("<!-- skin:start -->\n"
+                '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">\n'
+                f'<link rel="stylesheet" href="{href_to("assets/site-legal.css", r)}?v={SKIN_V}">\n'
+                "<!-- skin:end -->")
+        new = new.replace("</head>", skin + "\n</head>", 1)
     if standard:
         hb = header_block(L, r, new)
         if "<!-- nav:start -->" in new:
