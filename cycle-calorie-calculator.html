@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cycle calorie calculator for women: daily and luteal phase calories | Pofu</title>
+<meta name="description" content="Free calorie calculator for women that adds a small luteal phase allowance. Get your daily calories, maintenance, protein and today’s target by cycle phase. Nothing leaves your browser.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://getpofu.com/cycle-calorie-calculator.html">
+<link rel="alternate" hreflang="en" href="https://getpofu.com/cycle-calorie-calculator.html">
+<link rel="alternate" hreflang="tr" href="https://getpofu.com/kadin-gunluk-kalori-ihtiyaci-hesaplama.html">
+<link rel="alternate" hreflang="x-default" href="https://getpofu.com/cycle-calorie-calculator.html">
+<meta name="apple-itunes-app" content="app-id=6778044605">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Cycle calorie calculator for women">
+<meta property="og:description" content="Free calorie calculator for women that adds a small luteal phase allowance. Get your daily calories, maintenance, protein and today’s target by cycle phase. Nothing leaves your browser.">
+<meta property="og:url" content="https://getpofu.com/cycle-calorie-calculator.html">
+<meta property="og:image" content="https://getpofu.com/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/pofu-favicon.png?v=20260703">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260703">
+<style>
+    /* Pofu tool page: system fonts, one small script, nothing leaves the browser. Palette matches landing.css. */
+    :root {
+      --bg: #FCE9F1; --ink: #3D1F38; --ink2: #6A4863;
+      --pink: #DE5187; --pink-deep: #B93A6C; --pink-text: #A32F5E;
+      --soft: rgba(222, 81, 135, .12); --line: rgba(61, 31, 56, .14); --card: #FFFFFF;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #2E1229; --ink: #FCE9F1; --ink2: #E2BFD6;
+        --pink-text: #F59BC0; --soft: rgba(245, 155, 192, .16);
+        --line: rgba(252, 233, 241, .16); --card: #45203F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; font: 400 1.0625rem/1.65 var(--font); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--pink-text); text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 4px; }
+    p { margin: 0 0 .9rem; }
+    ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+    li { margin-bottom: .4rem; }
+    h1, h2, h3 { line-height: 1.2; margin: 0; text-wrap: balance; }
+    h1 { font-size: clamp(2rem, 7.5vw, 2.9rem); letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.4rem, 4.8vw, 1.75rem); margin-bottom: .7rem; letter-spacing: -.01em; }
+    h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .6rem 1rem; border-radius: .6rem; background: var(--card); color: var(--ink); }
+    .skip:focus { top: 1rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left)); }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; padding-bottom: .75rem; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+    .brand img { border-radius: 9px; }
+    .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 999px; background: var(--pink-deep); color: #fff; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .btn:hover { filter: brightness(.92); }
+    .btn--sm { padding: .55rem 1rem; font-size: .95rem; }
+
+    main > section { padding: 1.7rem 0; }
+    main > section + section { border-top: 1px solid var(--line); }
+    .hero { padding-top: 2.2rem; }
+    .pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--soft); color: var(--pink-text); font-size: .9rem; font-weight: 600; }
+    .lede { margin: 1rem 0 1.3rem; font-size: 1.2rem; color: var(--ink2); }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.1rem; margin: 0; }
+    .fine { margin: 0; font-size: .92rem; color: var(--ink2); }
+
+    .card { padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
+    .facts { margin: 0; }
+    .facts dt { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 700; }
+    .facts dt:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+    .facts dd { margin: 0; color: var(--ink2); }
+    @media (min-width: 38rem) {
+      .facts { display: grid; grid-template-columns: 9.5rem 1fr; column-gap: 1.2rem; }
+      .facts dt, .facts dd { margin: 0; padding: .7rem 0; border-top: 1px solid var(--line); }
+      .facts dt:first-of-type, .facts dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+    }
+
+    .toc ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: 0; }
+    .toc a { display: inline-block; padding: .4rem .85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; text-decoration: none; }
+    .toc h2 { font-size: 1rem; margin-bottom: .6rem; }
+
+    .qa { margin-bottom: 1.35rem; }
+    .qa p { margin: 0; }
+    .note { padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .note p:last-child { margin-bottom: 0; }
+    .center { text-align: center; }
+    .center .cta { justify-content: center; }
+
+    .foot { margin-top: 1rem; padding: 1.6rem 0 2.6rem; border-top: 1px solid var(--line); font-size: .92rem; color: var(--ink2); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-bottom: .9rem; }
+    .foot p { margin: 0 0 .5rem; }
+  
+    .tbl { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .tbl caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+    .tbl th, .tbl td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-top: 1px solid var(--line); }
+    .tbl thead th { border-top: 0; }
+    .tbl tbody th { font-weight: 700; width: 24%; }
+    .tbl td { color: var(--ink2); }
+    .tblwrap { overflow-x: auto; }
+  
+    .tool { margin-top: .4rem; }
+    .tool form { display: grid; gap: .9rem; }
+    .field label, .field legend { display: block; font-weight: 700; margin-bottom: .3rem; }
+    .field .hint { display: block; font-weight: 400; font-size: .9rem; color: var(--ink2); }
+    .field input, .field select { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: .7rem; padding: .65rem .8rem; min-height: 2.9rem; }
+    .row { display: grid; grid-template-columns: 1fr 6.5rem; gap: .6rem; }
+    .tool button { justify-self: start; font: inherit; border: 0; cursor: pointer; }
+    .result { margin-top: 1.1rem; padding: 1rem 1.15rem; border-radius: 1rem; background: var(--soft); }
+    .result[hidden] { display: none; }
+    .result h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .result .meta { font-size: .95rem; color: var(--ink2); }
+    .result .err { color: var(--pink-text); font-weight: 700; margin: 0; }
+    .bridge { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line); }
+    .bridge p { margin-bottom: .6rem; }
+
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+    details.opt { border: 1px dashed var(--line); border-radius: .8rem; padding: .7rem .9rem; }
+    details.opt summary { cursor: pointer; font-weight: 700; }
+    details.opt[open] summary { margin-bottom: .7rem; }
+    .big { font-size: 2.2rem; font-weight: 800; line-height: 1.1; margin: .2rem 0 .1rem; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .6rem; margin: .8rem 0; }
+    .stat { background: var(--card); border: 1px solid var(--line); border-radius: .8rem; padding: .6rem .75rem; }
+    .stat b { display: block; font-size: 1.25rem; }
+    .stat span { font-size: .88rem; color: var(--ink2); }
+    [hidden] { display: none !important; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebApplication", "name": "Cycle calorie calculator for women", "url": "https://getpofu.com/cycle-calorie-calculator.html", "inLanguage": "en", "applicationCategory": "HealthApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Pofu", "url": "https://getpofu.com/"}, "description": "Free calorie calculator for women that adds a small luteal phase allowance. Get your daily calories, maintenance, protein and today’s target by cycle phase. Nothing leaves your browser."}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://getpofu.com/cycle-calorie-calculator.html", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "How many calories should a woman eat a day?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on age, height, weight and activity. Many women maintain their weight somewhere around 1,800 to 2,400 kcal a day; this calculator estimates your own number with the Mifflin-St Jeor equation."}}, {"@type": "Question", "name": "Should I eat more in the luteal phase?", "acceptedAnswer": {"@type": "Answer", "text": "You can allow a little more. Research suggests resting energy use may rise slightly and many people eat about 170 kcal more on average, so this calculator adds a small allowance of 80 to 150 kcal. You don’t have to use it."}}, {"@type": "Question", "name": "Do calories count during your period?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Any change in energy use across the cycle is small, so calories still count every day."}}, {"@type": "Question", "name": "What is the lowest calorie target this calculator gives?", "acceptedAnswer": {"@type": "Answer", "text": "1,200 kcal a day. Going lower without medical supervision is not recommended."}}, {"@type": "Question", "name": "Does this calculator predict my period?", "acceptedAnswer": {"@type": "Answer", "text": "No. It only uses the date your last period started to show today’s phase. It doesn’t predict periods or ovulation."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap top__in">
+<a class="brand" href="pofu.html" aria-label="Pofu"><img src="assets/img/icon-96.webp" alt="" width="34" height="34"><span>Pofu</span></a>
+<a class="btn btn--sm" href="https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_cycle&amp;mt=8">Get the app</a>
+</div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+<p class="pill">Free tool · No sign-up</p>
+<h1>Cycle calorie calculator for women</h1>
+<p class="lede">How many calories should you eat, and does it change before your period? Get a daily target, a luteal phase target and your protein goal in one step.</p>
+<p class="fine">By Ali Gürkan Sevilmiş, developer of Pofu · November 6, 2026</p>
+</section>
+<section id="tool" class="tool" aria-labelledby="tool-h">
+<h2 id="tool-h">Calculate your calories</h2>
+<div class="card">
+<form id="cc-form" novalidate>
+<div class="field"><label for="age">Age</label><input id="age" name="age" type="number" inputmode="numeric" min="18" max="80" placeholder="30" required></div>
+<div class="field"><label for="system">Units</label><select id="system" name="system"><option value="us" selected>US (ft, lb)</option><option value="metric">Metric (cm, kg)</option></select></div>
+<div class="field" data-us><span class="lbl"><b>Height</b></span><div class="two"><input name="ft" type="number" inputmode="numeric" min="4" max="7" placeholder="ft" aria-label="Height, feet"><input name="inch" type="number" inputmode="numeric" min="0" max="11" placeholder="in" aria-label="Height, inches"></div></div>
+<div class="field" data-metric hidden><label for="cm">Height (cm)</label><input id="cm" name="cm" type="text" inputmode="decimal"></div>
+<div class="field" data-us><label for="lb">Weight (lb)</label><input id="lb" name="lb" type="text" inputmode="decimal"></div>
+<div class="field" data-metric hidden><label for="kg">Weight (kg)</label><input id="kg" name="kg" type="text" inputmode="decimal"></div>
+<div class="field"><label for="activity">Activity level</label><select id="activity" name="activity"><option value="sedentary">Mostly sitting (desk job, little exercise)</option><option value="light">Lightly active (light exercise 1–3 days a week)</option><option value="moderate" selected>Moderately active (exercise 3–5 days a week)</option><option value="active">Very active (hard exercise 6–7 days a week)</option><option value="very_active">Extremely active (physical job plus training)</option></select></div>
+<div class="field"><label for="goal">Goal</label><select id="goal" name="goal"><option value="maintain">Maintain my weight</option><option value="lose_slow">Lose weight slowly (about −250 kcal a day)</option><option value="lose" selected>Lose weight (about −400 kcal a day)</option><option value="lose_fast">Lose weight faster (about −550 kcal a day)</option></select></div>
+<details class="opt"><summary>Add your cycle (optional)</summary>
+<div class="field"><label for="start">When did your last period start?<span class="hint">Leave empty to skip. Used only to show today’s phase.</span></label><input id="start" name="start" type="date"></div>
+<div class="field"><label for="len">Usual cycle length (days)</label><input id="len" name="len" type="number" inputmode="numeric" min="21" max="40" value="28"></div>
+</details>
+<button class="btn" type="submit">Calculate</button>
+<p class="fine">Everything is calculated in your browser. Nothing you enter is sent or stored.</p>
+</form>
+<div id="cc-result" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+</div>
+</section>
+<section id="how">
+<h2>How this calculator works</h2>
+<ul>
+<li><strong>Resting energy:</strong> the Mifflin-St Jeor equation for women (10 × weight in kg + 6.25 × height in cm − 5 × age − 161).</li>
+<li><strong>Maintenance:</strong> resting energy × an activity factor from 1.2 (mostly sitting) to 1.9 (extremely active).</li>
+<li><strong>Daily target:</strong> maintenance plus your goal (0, −250, −400 or −550 kcal a day), never below 1,200 kcal.</li>
+<li><strong>Luteal phase target:</strong> daily target plus about 5%, kept between 80 and 150 kcal.</li>
+<li><strong>Protein:</strong> 1.6 g per kg when losing weight, 1.4 g per kg otherwise, kept between 75 and 230 g.</li>
+<li><strong>Cycle phase (optional):</strong> days 1–5 count as your period, ovulation as about 14 days before your next expected period, and the days after it as the luteal phase. It never predicts your next period.</li>
+</ul>
+<p>These are the same rules the Pofu app uses. They give a starting point; your own trend over a few weeks tells you more.</p>
+</section>
+<section id="research">
+<h2>What the research says</h2>
+<ul>
+<li>A <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236025">2020 meta-analysis of 26 studies</a> found a small rise in resting metabolism in the luteal phase, smaller and not statistically significant in studies since 2000. A <a href="https://pubmed.ncbi.nlm.nih.gov/41971666/">later systematic review</a> describes roughly 30 to 120 kcal a day, with inconsistent results.</li>
+<li>A <a href="https://academic.oup.com/nutritionreviews/article/83/3/e866/7713894">2025 meta-analysis</a> found people ate about 170 kcal a day more on average in the luteal phase than in the follicular phase.</li>
+</ul>
+<p>That is why the allowance is small and optional. These are group averages, not your personal needs.</p>
+</section>
+<section id="faq">
+<h2>Frequently asked questions</h2>
+<h3>How many calories should a woman eat a day?</h3>
+<p>It depends on age, height, weight and activity. Many women maintain their weight somewhere around 1,800 to 2,400 kcal a day; this calculator estimates your own number with the Mifflin-St Jeor equation.</p>
+<h3>Should I eat more in the luteal phase?</h3>
+<p>You can allow a little more. Research suggests resting energy use may rise slightly and many people eat about 170 kcal more on average, so this calculator adds a small allowance of 80 to 150 kcal. You don’t have to use it.</p>
+<h3>Do calories count during your period?</h3>
+<p>Yes. Any change in energy use across the cycle is small, so calories still count every day.</p>
+<h3>What is the lowest calorie target this calculator gives?</h3>
+<p>1,200 kcal a day. Going lower without medical supervision is not recommended.</p>
+<h3>Does this calculator predict my period?</h3>
+<p>No. It only uses the date your last period started to show today’s phase. It doesn’t predict periods or ovulation.</p>
+</section>
+<section id="related">
+<h2>Related reading</h2>
+<ul>
+<li><a href="period-water-weight-calculator.html">Free tool: period water weight calculator</a></li>
+<li><a href="calorie-tracking-menstrual-cycle.html">Calorie tracking and your menstrual cycle</a></li>
+<li><a href="kadin-gunluk-kalori-ihtiyaci-hesaplama.html" hreflang="tr" lang="tr">Bu aracın Türkçesi: Kadın günlük kalori ihtiyacı hesaplama</a></li>
+</ul>
+</section>
+<section id="not-medical">
+<div class="note"><p>This calculator gives general estimates, not medical advice. If you are pregnant or breastfeeding, have a medical condition, or have a history of disordered eating, don’t use a calorie deficit without your doctor’s or dietitian’s advice.</p></div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<nav aria-label="Legal and support">
+<a href="pofu.html">Pofu</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="support.html">Support</a>
+</nav>
+<p>Last updated: <time datetime="2026-11-06">November 6, 2026</time>.</p>
+<p>Apple, iPhone and App Store are trademarks of Apple Inc. © 2026 Pofu.</p>
+</div>
+</footer>
+<script src="assets/cycle-calories.js"></script>
+<script>window.__T = {"locale": "en-US", "phases": {"menstrual": "your period", "follicular": "the follicular phase", "ovulation": "around ovulation", "luteal": "the luteal phase", "unknown": "an unknown phase"}, "errors": {"age": "Enter an age between 18 and 80.", "height": "Enter your height (130–210 cm or 4 ft 3 in – 6 ft 11 in).", "weight": "Enter your weight (35–250 kg or 77–550 lb).", "activity": "Choose an activity level.", "goal": "Choose a goal.", "date": "Enter the date your last period started, or leave it empty.", "future": "That date is in the future. Enter the day your last period started.", "length": "Enter a cycle length between 21 and 40 days."}, "todayHead": "Today’s target · cycle day {day}, {phase}", "dailyHead": "Your daily target", "unknown": "It has been {day} days since your last period started, longer than your usual cycle plus a week, so the phase can’t be placed. This tool doesn’t predict periods.", "sTarget": "Daily target", "sLuteal": "Luteal phase target (+{a} kcal)", "sMaint": "Maintenance (TDEE)", "sProtein": "Protein a day", "floor": "Your target is set to 1,200 kcal, the lowest daily target we suggest. Going lower is not recommended without a doctor or dietitian.", "explain": "The luteal allowance is small on purpose: research suggests resting energy use may rise slightly before your period, and many people feel hungrier. It is room in your plan, not a rule to eat more.", "bridge": "<div class=\"bridge\"><p>Pofu uses this same formula. With optional cycle awareness on, it adds the luteal allowance on the right days by itself, and you can turn it off.</p><p class=\"cta\"><a href=\"https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=tool_cycle&amp;mt=8\"><img src=\"assets/img/app-store-badge.png\" alt=\"Download Pofu on the App Store\" width=\"180\" height=\"60\"></a></p></div>"};</script>
+<script>
+(function () {
+  var T = window.__T, f = document.getElementById('cc-form'), out = document.getElementById('cc-result');
+  var d = new Date(); var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  f.start.max = today;
+  function n(v) { return +String(v).replace(',', '.'); }
+  function fmt(x) { return Math.round(x).toLocaleString(T.locale); }
+  function sys() { return f.system ? f.system.value : 'metric'; }
+  function sync() { var us = sys() === 'us'; document.querySelectorAll('[data-us]').forEach(function (e) { e.hidden = !us; }); document.querySelectorAll('[data-metric]').forEach(function (e) { e.hidden = us; }); }
+  if (f.system) { f.system.addEventListener('change', sync); sync(); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var us = sys() === 'us';
+    var h = us ? (n(f.ft.value) * 12 + n(f.inch.value || 0)) * 2.54 : n(f.cm.value);
+    var w = us ? n(f.lb.value) * 0.45359237 : n(f.kg.value);
+    var r = CycleCalories.calc({ age: n(f.age.value), heightCm: h, weightKg: w, activity: f.activity.value, goal: f.goal.value,
+      lastStart: f.start.value || null, cycleLength: f.len.value, today: today });
+    out.hidden = false;
+    if (r.error) { out.innerHTML = '<p class="err">' + T.errors[r.error] + '</p>'; out.focus(); return; }
+    var main = r.todayTarget != null ? r.todayTarget : r.target;
+    var head = r.todayTarget != null ? T.todayHead.replace('{day}', r.cycleDay).replace('{phase}', T.phases[r.phase]) : T.dailyHead;
+    var html = '<p class="meta">' + head + '</p><p class="big">' + fmt(main) + ' kcal</p>';
+    if (r.phase === 'unknown') html += '<p>' + T.unknown.replace('{day}', r.cycleDay) + '</p>';
+    html += '<div class="stats">' +
+      '<div class="stat"><b>' + fmt(r.target) + ' kcal</b><span>' + T.sTarget + '</span></div>' +
+      '<div class="stat"><b>' + fmt(r.lutealTarget) + ' kcal</b><span>' + T.sLuteal.replace('{a}', fmt(r.allowance)) + '</span></div>' +
+      '<div class="stat"><b>' + fmt(r.tdee) + ' kcal</b><span>' + T.sMaint + '</span></div>' +
+      '<div class="stat"><b>' + fmt(r.proteinG) + ' g</b><span>' + T.sProtein + '</span></div></div>';
+    if (r.floorApplied) html += '<p>' + T.floor + '</p>';
+    html += '<p>' + T.explain + '</p>' + T.bridge;
+    out.innerHTML = html; out.focus();
+  });
+})();
+</script>
+</body>
+</html>

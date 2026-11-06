@@ -25,6 +25,8 @@ Key facts:
 ## Free tools
 - [Period water weight calculator](https://getpofu.com/period-water-weight-calculator.html): enter your last period start, cycle length and scale change to see if it is likely cycle-related water retention; runs in the browser, stores nothing
 - [Regl kilosu su mu, yağ mı? (Turkish)](https://getpofu.com/regl-kilosu-su-mu-yag-mi.html)
+- [Cycle calorie calculator](https://getpofu.com/cycle-calorie-calculator.html): daily calories, a small luteal phase allowance (80–150 kcal) and protein, with the same formula as the Pofu app; runs in the browser
+- [Kadın günlük kalori ihtiyacı hesaplama (Turkish)](https://getpofu.com/kadin-gunluk-kalori-ihtiyaci-hesaplama.html)
 
 ## Comparisons
 - [Pofu vs Cal AI](https://getpofu.com/pofu-vs-cal-ai.html)
