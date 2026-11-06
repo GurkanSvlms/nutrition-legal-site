@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Daha küçük ya da daha büyük porsiyon",
-    "port_cols": ["Porsiyon", "Kalori", "Protein"],
-    "port_rows": ["Yarım porsiyon ({g} {u})", "Normal porsiyon ({g} {u})", "Bir buçuk porsiyon ({g} {u})"],
+    "port_cols": [
+      "Porsiyon",
+      "Kalori",
+      "Protein"
+    ],
+    "port_rows": [
+      "Yarım porsiyon ({g} {u})",
+      "Normal porsiyon ({g} {u})",
+      "Bir buçuk porsiyon ({g} {u})"
+    ],
     "h_split": "Kalori nereden geliyor",
     "split": "Kalorinin %{p} kadarı proteinden, %{c} kadarı karbonhidrattan ve %{f} kadarı yağdan geliyor.",
-    "cat": {"fat": "Kısacası: kalorinin çoğu yağdan geliyor; miktardaki küçük bir değişiklik büyük fark yaratır.", "prot": "Kısacası: iyi bir protein kaynağı.", "carb": "Kısacası: kalorinin çoğu karbonhidrattan geliyor.", "light": "Kısacası: çoğunluğu su olan hafif bir besin.", "mixed": "Kısacası: protein, karbonhidrat ve yağın karışımı."},
+    "cat": {
+      "fat": "Kısacası: kalorinin çoğu yağdan geliyor; miktardaki küçük bir değişiklik büyük fark yaratır.",
+      "prot": "Kısacası: iyi bir protein kaynağı.",
+      "carb": "Kısacası: kalorinin çoğu karbonhidrattan geliyor.",
+      "light": "Kısacası: çoğunluğu su olan hafif bir besin.",
+      "mixed": "Kısacası: protein, karbonhidrat ve yağın karışımı."
+    },
     "ref": "Bir porsiyon, gıda etiketlerinde referans olarak kullanılan 2.000 kcal’lik bir günün yaklaşık %{pct} kadarı.",
     "h_lighter": "Aynı gruptan daha hafif seçenekler",
     "per100": "100 {u} başına",
@@ -28,13 +42,42 @@
     "h1": "İçeriklerimizi nasıl hazırlıyoruz ve kaynaklarımız",
     "lede": "Bu sitedeki her sayının kontrol edilebilir olmasını istiyoruz. Bu sayfa içeriği kimin yazdığını, değerlerin nereden geldiğini ve neleri yapmadığımızı anlatıyor.",
     "sections": [
-      ["Kim yazıyor", "<p>Pofu’yu bağımsız geliştirici Ali Gürkan Sevilmiş yapıyor. Bu sitedeki rehberler, hesaplama araçları ve yemek sayfaları da onun tarafından, aşağıda listelenen yayımlanmış kaynaklar kullanılarak yazılıyor ve güncelleniyor.</p><p>Bu içerikler henüz bir diyetisyen ya da doktor tarafından incelenmedi. Yapılmamış bir inceleme için rozet göstermek yerine bunu açıkça söylüyoruz. Bir beslenme uzmanıysan ve geliştirilebilecek bir şey görürsen seninle konuşmaktan memnuniyet duyarız.</p>"],
-      ["Yemek değerleri nereden geliyor", "<p>Yemek sayfalarındaki kalori, protein, karbonhidrat ve yağ değerleri açık besin içeriği veritabanlarından ve Pofu uygulamasının kendi yiyecek veritabanından geliyor:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (ABD Tarım Bakanlığı)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Hollanda)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket gıda veritabanı</a> (İsveç Gıda Ajansı)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Çekya)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA besin içeriği tabloları</a> (İtalya)</li></ul><p>Bir sayfa veritabanındaki bir kaydı kullanıyorsa o kayda bağlantı verir. Ev ve restoran tarifleri farklı olduğu için her değer, gösterilen porsiyon için tipik bir tahmindir ve her sayfa bunu belirtir.</p>"],
-      ["Formüller nereden geliyor", "<p>Hesaplama araçları Pofu uygulamasıyla aynı kuralları kullanır ve bu kurallar yayımlanmış araştırmalardan alınmıştır: dinlenme enerjisi için Mifflin-St Jeor denklemi (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">Uluslararası Spor Beslenmesi Derneği (2017)</a> protein aralıkları, <a href=\"https://nap.nationalacademies.org/catalog/10490\">ABD Ulusal Akademileri (2005)</a> yağ ve karbonhidrat aralıkları, <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Dünya Sağlık Örgütü</a> vücut kitle endeksi kategorileri ve kilogram başına gereken enerji için <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Her araç kendi kaynaklarını listeler ve her adımı açıklar.</p><p>Günde 1.200 kcal’nin altını hiçbir zaman önermiyoruz. Araçlar hamilelik ya da emzirme döneminde kalori açığı uygulamamanı ister; Pofu uygulaması da bunu belirttiğinde kalori açığı koymaz.</p>"],
-      ["Yapay zekâyı nasıl kullanıyoruz", "<p>Pofu uygulaması bir öğünü fotoğraftan tahmin etmek için yapay zekâ kullanır. Her tahmin bir güven puanı gösterir ve düzeltilebilir. Bu sitede yapay zekâ araçları metinlerin taslağını hazırlamamıza ve İngilizce ile Türkçe asıllardan çevirmemize yardım eder; sayılar geliştirici tarafından yukarıdaki kaynaklarla karşılaştırılır. Çevirilerin hepsi henüz anadili konuşanlar tarafından incelenmedi; dilinde kulağa yanlış gelen bir cümle görürsen lütfen bize yaz.</p>"],
-      ["Neleri yapmıyoruz", "<ul><li>Tıbbi tavsiye vermiyor, teşhis koymuyoruz.</li><li>Pofu regl ya da yumurtlama tahmini yapmaz ve hamilelik takibi yoktur; isteğe bağlı döngü özelliği yalnızca senin girdiğin bir tarihi kullanır.</li><li>Kilo verme sonucu vaat etmiyor, önce-sonra fotoğrafları göstermiyoruz.</li><li>Sahte yorum ya da puan yayımlamıyoruz.</li><li>Karşılaştırma sayfalarımızı Pofu’yu yapanlar yazıyor ve her biri bunu belirtiyor.</li><li>Hesaplama araçları tarayıcında çalışır; girdiğin hiçbir şey gönderilmez ya da saklanmaz.</li></ul>"],
-      ["Güncellemeler ve düzeltmeler", "<p>Her sayfa en son ne zaman güncellendiğini gösterir. Bir kaynak değiştiğinde sayfaları gözden geçiriyoruz. Bir hata bulursan <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a> adresine yaz; kaynağıyla karşılaştırır, doğrulanan hataları düzeltir ve sayfadaki tarihi güncelleriz.</p>"]
+      [
+        "Kim yazıyor",
+        "<p>Pofu’yu bağımsız geliştirici Ali Gürkan Sevilmiş yapıyor. Bu sitedeki rehberler, hesaplama araçları ve yemek sayfaları da onun tarafından, aşağıda listelenen yayımlanmış kaynaklar kullanılarak yazılıyor ve güncelleniyor.</p><p>Bu içerikler henüz bir diyetisyen ya da doktor tarafından incelenmedi. Yapılmamış bir inceleme için rozet göstermek yerine bunu açıkça söylüyoruz. Bir beslenme uzmanıysan ve geliştirilebilecek bir şey görürsen seninle konuşmaktan memnuniyet duyarız.</p>"
+      ],
+      [
+        "Yemek değerleri nereden geliyor",
+        "<p>Yemek sayfalarındaki kalori, protein, karbonhidrat ve yağ değerleri açık besin içeriği veritabanlarından ve Pofu uygulamasının kendi yiyecek veritabanından geliyor:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (ABD Tarım Bakanlığı)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Hollanda)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket gıda veritabanı</a> (İsveç Gıda Ajansı)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Çekya)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA besin içeriği tabloları</a> (İtalya)</li></ul><p>Bir sayfa veritabanındaki bir kaydı kullanıyorsa o kayda bağlantı verir. Ev ve restoran tarifleri farklı olduğu için her değer, gösterilen porsiyon için tipik bir tahmindir ve her sayfa bunu belirtir.</p>"
+      ],
+      [
+        "Formüller nereden geliyor",
+        "<p>Hesaplama araçları Pofu uygulamasıyla aynı kuralları kullanır ve bu kurallar yayımlanmış araştırmalardan alınmıştır: dinlenme enerjisi için Mifflin-St Jeor denklemi (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">Uluslararası Spor Beslenmesi Derneği (2017)</a> protein aralıkları, <a href=\"https://nap.nationalacademies.org/catalog/10490\">ABD Ulusal Akademileri (2005)</a> yağ ve karbonhidrat aralıkları, <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Dünya Sağlık Örgütü</a> vücut kitle endeksi kategorileri ve kilogram başına gereken enerji için <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Her araç kendi kaynaklarını listeler ve her adımı açıklar.</p><p>Günde 1.200 kcal’nin altını hiçbir zaman önermiyoruz. Araçlar hamilelik ya da emzirme döneminde kalori açığı uygulamamanı ister; Pofu uygulaması da bunu belirttiğinde kalori açığı koymaz.</p>"
+      ],
+      [
+        "Yapay zekâyı nasıl kullanıyoruz",
+        "<p>Pofu uygulaması bir öğünü fotoğraftan tahmin etmek için yapay zekâ kullanır. Her tahmin bir güven puanı gösterir ve düzeltilebilir. Bu sitede yapay zekâ araçları metinlerin taslağını hazırlamamıza ve İngilizce ile Türkçe asıllardan çevirmemize yardım eder; sayılar geliştirici tarafından yukarıdaki kaynaklarla karşılaştırılır. Çevirilerin hepsi henüz anadili konuşanlar tarafından incelenmedi; dilinde kulağa yanlış gelen bir cümle görürsen lütfen bize yaz.</p>"
+      ],
+      [
+        "Neleri yapmıyoruz",
+        "<ul><li>Tıbbi tavsiye vermiyor, teşhis koymuyoruz.</li><li>Pofu regl ya da yumurtlama tahmini yapmaz ve hamilelik takibi yoktur; isteğe bağlı döngü özelliği yalnızca senin girdiğin bir tarihi kullanır.</li><li>Kilo verme sonucu vaat etmiyor, önce-sonra fotoğrafları göstermiyoruz.</li><li>Sahte yorum ya da puan yayımlamıyoruz.</li><li>Karşılaştırma sayfalarımızı Pofu’yu yapanlar yazıyor ve her biri bunu belirtiyor.</li><li>Hesaplama araçları tarayıcında çalışır; girdiğin hiçbir şey gönderilmez ya da saklanmaz.</li></ul>"
+      ],
+      [
+        "Güncellemeler ve düzeltmeler",
+        "<p>Her sayfa en son ne zaman güncellendiğini gösterir. Bir kaynak değiştiğinde sayfaları gözden geçiriyoruz. Bir hata bulursan <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a> adresine yaz; kaynağıyla karşılaştırır, doğrulanan hataları düzeltir ve sayfadaki tarihi güncelleriz.</p>"
+      ]
     ],
     "nav": "İçerik ve kaynaklar"
+  },
+  "ui": {
+    "toc": "Bu sayfada",
+    "search": "Yiyecek ara",
+    "no_match": "Aramana uyan yiyecek yok.",
+    "f_all": "Tümü",
+    "f_light": "Hafif",
+    "f_prot": "Protein açısından zengin",
+    "f_carb": "Karbonhidrat ağırlıklı",
+    "f_fat": "Yağ ağırlıklı",
+    "f_mixed": "Karışık"
   }
 }

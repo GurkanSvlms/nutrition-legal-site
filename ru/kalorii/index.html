@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,80 +231,86 @@
 <h1>Сколько калорий в вашей еде?</h1>
 <p class="lede">Калории, белки, углеводы и жиры на порцию и на 100 г для 64 продуктов. Значения — типичные оценки из открытых баз данных о продуктах и из приложения Pofu; они меняются в зависимости от рецепта и порции.</p>
 </section>
+<section class="fsearch" aria-label="Поиск продуктов">
+<input type="search" id="fq" placeholder="Поиск продуктов" aria-label="Поиск продуктов" autocomplete="off">
+<div class="chips" role="group" aria-label="Все"><button type="button" data-cat="all" aria-pressed="true">Все</button><button type="button" data-cat="light" aria-pressed="false">Лёгкие</button><button type="button" data-cat="prot" aria-pressed="false">Богатые белком</button><button type="button" data-cat="carb" aria-pressed="false">В основном углеводы</button><button type="button" data-cat="fat" aria-pressed="false">В основном жиры</button><button type="button" data-cat="mixed" aria-pressed="false">Смешанные</button></div>
+<p class="nomatch" id="fnone" hidden>Ничего не найдено.</p>
+</section>
 <section id="local">
 <h2>Блюда</h2>
 <ul class="foodlist">
-<li><a href="befstroganov.html">Бефстроганов</a> <span class="k">· 375 kcal (1 порция, 250 g)</span></li>
-<li><a href="bliny.html">Блины</a> <span class="k">· 224 kcal (2 шт., 100 g)</span></li>
-<li><a href="bliny-s-myasom.html">Блины с мясом</a> <span class="k">· 268 kcal (2 блина, 155 g)</span></li>
-<li><a href="borshch.html">Борщ</a> <span class="k">· 60 kcal (1 тарелка, 300 g)</span></li>
-<li><a href="draniki.html">Драники</a> <span class="k">· 294 kcal (3 шт., 150 g)</span></li>
-<li><a href="farshirovannyy-perets.html">Фаршированный перец</a> <span class="k">· 356 kcal (1 шт., 200 g)</span></li>
-<li><a href="golubtsy.html">Голубцы</a> <span class="k">· 285 kcal (2 шт., 250 g)</span></li>
-<li><a href="gorokhovyy-sup.html">Гороховый суп</a> <span class="k">· 240 kcal (1 тарелка, 300 g)</span></li>
-<li><a href="grechka-varenaya.html">Гречка варёная</a> <span class="k">· 212 kcal (1 тарелка, 180 g)</span></li>
-<li><a href="kefir.html">Кефир</a> <span class="k">· 130 kcal (1 стакан, 250 g)</span></li>
-<li><a href="kotleta-po-kievski.html">Котлета по-киевски</a> <span class="k">· 420 kcal (1 шт., 150 g)</span></li>
-<li><a href="kurinyj-sup-s-lapshoj.html">Куриный суп с лапшой</a> <span class="k">· 159 kcal (1 тарелка, 300 g)</span></li>
-<li><a href="kvashenaya-kapusta.html">Квашеная капуста</a> <span class="k">· 40 kcal (1 порция, 100 g)</span></li>
-<li><a href="mannaya-kasha.html">Манная каша</a> <span class="k">· 162 kcal (1 тарелка, 250 g)</span></li>
-<li><a href="pechen-s-lukom.html">Печень с луком</a> <span class="k">· 258 kcal (1 порция, 200 g)</span></li>
-<li><a href="pshennaya-kasha.html">Пшённая каша</a> <span class="k">· 236 kcal (1 тарелка, 200 g)</span></li>
-<li><a href="salat-ogurcy-smetana.html">Салат из огурцов со сметаной</a> <span class="k">· 86 kcal (1 порция, 130 g)</span></li>
-<li><a href="shashlyk-kuritsa.html">Шашлык из курицы с овощами</a> <span class="k">· 210 kcal (1 шампур, 202 g)</span></li>
-<li><a href="shashlyk-svinina.html">Шашлык из свинины с овощами</a> <span class="k">· 250 kcal (1 шампур, 202 g)</span></li>
-<li><a href="tefteli.html">Тефтели в соусе</a> <span class="k">· 286 kcal (3 шт., 200 g)</span></li>
-<li><a href="tvorog.html">Творог</a> <span class="k">· 222 kcal (1 порция, 150 g)</span></li>
-<li><a href="vareniki.html">Вареники</a> <span class="k">· 390 kcal (5 шт., 200 g)</span></li>
+<li data-cat="fat" data-name="Бефстроганов"><a href="befstroganov.html">Бефстроганов</a> <span class="k">· 375 kcal (1 порция, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:56%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Блины"><a href="bliny.html">Блины</a> <span class="k">· 224 kcal (2 шт., 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Блины с мясом"><a href="bliny-s-myasom.html">Блины с мясом</a> <span class="k">· 268 kcal (2 блина, 155 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:52%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Борщ"><a href="borshch.html">Борщ</a> <span class="k">· 60 kcal (1 тарелка, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:74%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Драники"><a href="draniki.html">Драники</a> <span class="k">· 294 kcal (3 шт., 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:42%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Фаршированный перец"><a href="farshirovannyy-perets.html">Фаршированный перец</a> <span class="k">· 356 kcal (1 шт., 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:23%;background:#E9A23B"></span><span style="width:59%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Голубцы"><a href="golubtsy.html">Голубцы</a> <span class="k">· 285 kcal (2 шт., 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Гороховый суп"><a href="gorokhovyy-sup.html">Гороховый суп</a> <span class="k">· 240 kcal (1 тарелка, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:45%;background:#E9A23B"></span><span style="width:27%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Гречка варёная"><a href="grechka-varenaya.html">Гречка варёная</a> <span class="k">· 212 kcal (1 тарелка, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:61%;background:#E9A23B"></span><span style="width:29%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Кефир"><a href="kefir.html">Кефир</a> <span class="k">· 130 kcal (1 стакан, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:56%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Котлета по-киевски"><a href="kotleta-po-kievski.html">Котлета по-киевски</a> <span class="k">· 420 kcal (1 шт., 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:8%;background:#E9A23B"></span><span style="width:62%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Куриный суп с лапшой"><a href="kurinyj-sup-s-lapshoj.html">Куриный суп с лапшой</a> <span class="k">· 159 kcal (1 тарелка, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:24%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Квашеная капуста"><a href="kvashenaya-kapusta.html">Квашеная капуста</a> <span class="k">· 40 kcal (1 порция, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Манная каша"><a href="mannaya-kasha.html">Манная каша</a> <span class="k">· 162 kcal (1 тарелка, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:26%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Печень с луком"><a href="pechen-s-lukom.html">Печень с луком</a> <span class="k">· 258 kcal (1 порция, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:53%;background:#DE5187"></span><span style="width:22%;background:#E9A23B"></span><span style="width:25%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Пшённая каша"><a href="pshennaya-kasha.html">Пшённая каша</a> <span class="k">· 236 kcal (1 тарелка, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Салат из огурцов со сметаной"><a href="salat-ogurcy-smetana.html">Салат из огурцов со сметаной</a> <span class="k">· 86 kcal (1 порция, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:22%;background:#E9A23B"></span><span style="width:70%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Шашлык из курицы с овощами"><a href="shashlyk-kuritsa.html">Шашлык из курицы с овощами</a> <span class="k">· 210 kcal (1 шампур, 202 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:32%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Шашлык из свинины с овощами"><a href="shashlyk-svinina.html">Шашлык из свинины с овощами</a> <span class="k">· 250 kcal (1 шампур, 202 g)</span><span class="mbar" aria-hidden="true"><span style="width:45%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Тефтели в соусе"><a href="tefteli.html">Тефтели в соусе</a> <span class="k">· 286 kcal (3 шт., 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:34%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Творог"><a href="tvorog.html">Творог</a> <span class="k">· 222 kcal (1 порция, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:59%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Вареники"><a href="vareniki.html">Вареники</a> <span class="k">· 390 kcal (5 шт., 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:61%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Базовые продукты</h2>
 <ul class="foodlist">
-<li><a href="apelsin.html">Апельсин</a> <span class="k">· 70 kcal (1 шт., 150 g)</span></li>
-<li><a href="arakhisovaya-pasta.html">Арахисовая паста</a> <span class="k">· 190 kcal (1 ст. л., 32 g)</span></li>
-<li><a href="avokado.html">Авокадо</a> <span class="k">· 240 kcal (половинка, 100 g)</span></li>
-<li><a href="banan.html">Банан</a> <span class="k">· 105 kcal (1 шт., 120 g)</span></li>
-<li><a href="batat.html">Батат</a> <span class="k">· 115 kcal (1 шт., 130 g)</span></li>
-<li><a href="belyy-khleb.html">Белый хлеб</a> <span class="k">· 70 kcal (1 ломтик, 28 g)</span></li>
-<li><a href="brokkoli.html">Брокколи</a> <span class="k">· 55 kcal (1 миска, 150 g)</span></li>
-<li><a href="chedder.html">Чеддер</a> <span class="k">· 120 kcal (1 ломтик, 30 g)</span></li>
-<li><a href="chernyy-kofe.html">Чёрный кофе</a> <span class="k">· 2 kcal (1 чашка, 240 g)</span></li>
-<li><a href="feta.html">Фета</a> <span class="k">· 78 kcal (1 ломтик, 30 g)</span></li>
-<li><a href="golubika.html">Голубика</a> <span class="k">· 85 kcal (1 миска, 150 g)</span></li>
-<li><a href="govyazhiy-farsh.html">Говяжий фарш (15% жира)</a> <span class="k">· 250 kcal (1 порция, 100 g)</span></li>
-<li><a href="grecheskiy-yogurt.html">Греческий йогурт</a> <span class="k">· 130 kcal (1 миска, 170 g)</span></li>
-<li><a href="gretskie-orekhi.html">Грецкие орехи</a> <span class="k">· 200 kcal (1 горсть, 30 g)</span></li>
-<li><a href="grudka-indeyki.html">Грудка индейки</a> <span class="k">· 160 kcal (1 порция, 150 g)</span></li>
-<li><a href="klubnika.html">Клубника</a> <span class="k">· 50 kcal (1 миска, 150 g)</span></li>
-<li><a href="krevetki.html">Креветки</a> <span class="k">· 120 kcal (1 порция, 120 g)</span></li>
-<li><a href="kurinaya-grudka.html">Куриная грудка (гриль)</a> <span class="k">· 195 kcal (1 порция, 150 g)</span></li>
-<li><a href="latte.html">Латте</a> <span class="k">· 150 kcal (1 чашка, 350 g)</span></li>
-<li><a href="mindal.html">Миндаль</a> <span class="k">· 175 kcal (1 горсть, 30 g)</span></li>
-<li><a href="naturalnyy-yogurt.html">Натуральный йогурт</a> <span class="k">· 120 kcal (1 миска, 200 g)</span></li>
-<li><a href="ogurets.html">Огурец</a> <span class="k">· 16 kcal (1 шт., 100 g)</span></li>
-<li><a href="olivkovoe-maslo.html">Оливковое масло</a> <span class="k">· 120 kcal (1 ст. л., 14 g)</span></li>
-<li><a href="ovsyanye-khlopya.html">Овсяные хлопья</a> <span class="k">· 190 kcal (1 миска, 50 g)</span></li>
-<li><a href="pomidor.html">Помидор</a> <span class="k">· 22 kcal (1 шт., 120 g)</span></li>
-<li><a href="proteinovyy-poroshok.html">Протеиновый порошок</a> <span class="k">· 120 kcal (1 мерная ложка, 30 g)</span></li>
-<li><a href="shpinat.html">Шпинат</a> <span class="k">· 23 kcal (1 миска, 100 g)</span></li>
-<li><a href="slivochnoe-maslo.html">Сливочное масло</a> <span class="k">· 72 kcal (1 ст. л., 10 g)</span></li>
-<li><a href="tofu.html">Тофу</a> <span class="k">· 145 kcal (1 порция, 150 g)</span></li>
-<li><a href="tselnoe-moloko.html">Цельное молоко</a> <span class="k">· 120 kcal (1 стакан, 200 g)</span></li>
-<li><a href="tselnozernovoy-khleb.html">Цельнозерновой хлеб</a> <span class="k">· 68 kcal (1 ломтик, 28 g)</span></li>
-<li><a href="tunets-konservirovannyy.html">Тунец консервированный (в воде)</a> <span class="k">· 100 kcal (1 порция, 100 g)</span></li>
-<li><a href="varenaya-chechevitsa.html">Варёная чечевица</a> <span class="k">· 230 kcal (1 миска, 200 g)</span></li>
-<li><a href="varenaya-kinoa.html">Варёная киноа</a> <span class="k">· 220 kcal (1 миска, 185 g)</span></li>
-<li><a href="varenaya-pasta.html">Варёная паста</a> <span class="k">· 220 kcal (1 миска, 140 g)</span></li>
-<li><a href="varenoe-yaytso.html">Варёное яйцо</a> <span class="k">· 78 kcal (1 шт., 50 g)</span></li>
-<li><a href="varenyy-belyy-ris.html">Варёный белый рис</a> <span class="k">· 205 kcal (1 миска, 158 g)</span></li>
-<li><a href="varenyy-buryy-ris.html">Варёный бурый рис</a> <span class="k">· 215 kcal (1 миска, 195 g)</span></li>
-<li><a href="varenyy-kartofel.html">Варёный картофель</a> <span class="k">· 130 kcal (1 шт., 150 g)</span></li>
-<li><a href="varenyy-nut.html">Варёный нут</a> <span class="k">· 270 kcal (1 миска, 200 g)</span></li>
-<li><a href="yabloko.html">Яблоко</a> <span class="k">· 80 kcal (1 шт., 160 g)</span></li>
-<li><a href="zapechennyy-losos.html">Запечённый лосось</a> <span class="k">· 280 kcal (1 порция, 150 g)</span></li>
+<li data-cat="light" data-name="Апельсин"><a href="apelsin.html">Апельсин</a> <span class="k">· 70 kcal (1 шт., 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Арахисовая паста"><a href="arakhisovaya-pasta.html">Арахисовая паста</a> <span class="k">· 190 kcal (1 ст. л., 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Авокадо"><a href="avokado.html">Авокадо</a> <span class="k">· 240 kcal (половинка, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Банан"><a href="banan.html">Банан</a> <span class="k">· 105 kcal (1 шт., 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Батат"><a href="batat.html">Батат</a> <span class="k">· 115 kcal (1 шт., 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Белый хлеб"><a href="belyy-khleb.html">Белый хлеб</a> <span class="k">· 70 kcal (1 ломтик, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Брокколи"><a href="brokkoli.html">Брокколи</a> <span class="k">· 55 kcal (1 миска, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Чеддер"><a href="chedder.html">Чеддер</a> <span class="k">· 120 kcal (1 ломтик, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Чёрный кофе"><a href="chernyy-kofe.html">Чёрный кофе</a> <span class="k">· 2 kcal (1 чашка, 240 g)</span></li>
+<li data-cat="fat" data-name="Фета"><a href="feta.html">Фета</a> <span class="k">· 78 kcal (1 ломтик, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Голубика"><a href="golubika.html">Голубика</a> <span class="k">· 85 kcal (1 миска, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Говяжий фарш (15% жира)"><a href="govyazhiy-farsh.html">Говяжий фарш (15% жира)</a> <span class="k">· 250 kcal (1 порция, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Греческий йогурт"><a href="grecheskiy-yogurt.html">Греческий йогурт</a> <span class="k">· 130 kcal (1 миска, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Грецкие орехи"><a href="gretskie-orekhi.html">Грецкие орехи</a> <span class="k">· 200 kcal (1 горсть, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Грудка индейки"><a href="grudka-indeyki.html">Грудка индейки</a> <span class="k">· 160 kcal (1 порция, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Клубника"><a href="klubnika.html">Клубника</a> <span class="k">· 50 kcal (1 миска, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Креветки"><a href="krevetki.html">Креветки</a> <span class="k">· 120 kcal (1 порция, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Куриная грудка (гриль)"><a href="kurinaya-grudka.html">Куриная грудка (гриль)</a> <span class="k">· 195 kcal (1 порция, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Латте"><a href="latte.html">Латте</a> <span class="k">· 150 kcal (1 чашка, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Миндаль"><a href="mindal.html">Миндаль</a> <span class="k">· 175 kcal (1 горсть, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Натуральный йогурт"><a href="naturalnyy-yogurt.html">Натуральный йогурт</a> <span class="k">· 120 kcal (1 миска, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Огурец"><a href="ogurets.html">Огурец</a> <span class="k">· 16 kcal (1 шт., 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Оливковое масло"><a href="olivkovoe-maslo.html">Оливковое масло</a> <span class="k">· 120 kcal (1 ст. л., 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Овсяные хлопья"><a href="ovsyanye-khlopya.html">Овсяные хлопья</a> <span class="k">· 190 kcal (1 миска, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Помидор"><a href="pomidor.html">Помидор</a> <span class="k">· 22 kcal (1 шт., 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Протеиновый порошок"><a href="proteinovyy-poroshok.html">Протеиновый порошок</a> <span class="k">· 120 kcal (1 мерная ложка, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Шпинат"><a href="shpinat.html">Шпинат</a> <span class="k">· 23 kcal (1 миска, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Сливочное масло"><a href="slivochnoe-maslo.html">Сливочное масло</a> <span class="k">· 72 kcal (1 ст. л., 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Тофу"><a href="tofu.html">Тофу</a> <span class="k">· 145 kcal (1 порция, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Цельное молоко"><a href="tselnoe-moloko.html">Цельное молоко</a> <span class="k">· 120 kcal (1 стакан, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Цельнозерновой хлеб"><a href="tselnozernovoy-khleb.html">Цельнозерновой хлеб</a> <span class="k">· 68 kcal (1 ломтик, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Тунец консервированный (в воде)"><a href="tunets-konservirovannyy.html">Тунец консервированный (в воде)</a> <span class="k">· 100 kcal (1 порция, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёная чечевица"><a href="varenaya-chechevitsa.html">Варёная чечевица</a> <span class="k">· 230 kcal (1 миска, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёная киноа"><a href="varenaya-kinoa.html">Варёная киноа</a> <span class="k">· 220 kcal (1 миска, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёная паста"><a href="varenaya-pasta.html">Варёная паста</a> <span class="k">· 220 kcal (1 миска, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Варёное яйцо"><a href="varenoe-yaytso.html">Варёное яйцо</a> <span class="k">· 78 kcal (1 шт., 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёный белый рис"><a href="varenyy-belyy-ris.html">Варёный белый рис</a> <span class="k">· 205 kcal (1 миска, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёный бурый рис"><a href="varenyy-buryy-ris.html">Варёный бурый рис</a> <span class="k">· 215 kcal (1 миска, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёный картофель"><a href="varenyy-kartofel.html">Варёный картофель</a> <span class="k">· 130 kcal (1 шт., 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Варёный нут"><a href="varenyy-nut.html">Варёный нут</a> <span class="k">· 270 kcal (1 миска, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Яблоко"><a href="yabloko.html">Яблоко</a> <span class="k">· 80 kcal (1 шт., 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Запечённый лосось"><a href="zapechennyy-losos.html">Запечённый лосось</a> <span class="k">· 280 kcal (1 порция, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Значения: типичные оценки, из открытых баз данных о продуктах и из приложения Pofu; они меняются в зависимости от рецепта и порции.</p>
 <div class="note"><p>Эта страница носит справочный характер и не является медицинской консультацией. Если вы беременны, кормите грудью, у вас есть заболевание или в прошлом было расстройство пищевого поведения, обсудите подсчёт калорий с врачом или диетологом.</p></div>

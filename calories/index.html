@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,78 +231,84 @@
 <h1>How many calories in your food?</h1>
 <p class="lede">Calories, protein, carbs and fat per serving and per 100 g for 62 foods. Values are typical estimates used in the Pofu app and vary by recipe and portion.</p>
 </section>
+<section class="fsearch" aria-label="Search foods">
+<input type="search" id="fq" placeholder="Search foods" aria-label="Search foods" autocomplete="off">
+<div class="chips" role="group" aria-label="All"><button type="button" data-cat="all" aria-pressed="true">All</button><button type="button" data-cat="light" aria-pressed="false">Light</button><button type="button" data-cat="prot" aria-pressed="false">High in protein</button><button type="button" data-cat="carb" aria-pressed="false">Mostly carbs</button><button type="button" data-cat="fat" aria-pressed="false">Mostly fat</button><button type="button" data-cat="mixed" aria-pressed="false">Mixed</button></div>
+<p class="nomatch" id="fnone" hidden>No foods match your search.</p>
+</section>
 <section id="local">
 <h2>Popular dishes</h2>
 <ul class="foodlist">
-<li><a href="bagel-plain.html">Bagel (plain)</a> <span class="k">· 250 kcal (1 piece, 95 g)</span></li>
-<li><a href="caesar-salad.html">Caesar Salad</a> <span class="k">· 330 kcal (1 serving, 250 g)</span></li>
-<li><a href="cheeseburger.html">Cheeseburger</a> <span class="k">· 550 kcal (1 piece, 220 g)</span></li>
-<li><a href="chicken-curry.html">Chicken Curry</a> <span class="k">· 380 kcal (1 serving, 300 g)</span></li>
-<li><a href="club-sandwich.html">Club Sandwich</a> <span class="k">· 580 kcal (1 piece, 280 g)</span></li>
-<li><a href="falafel.html">Falafel</a> <span class="k">· 110 kcal (3 pieces, 50 g)</span></li>
-<li><a href="fish-and-chips.html">Fish and Chips</a> <span class="k">· 840 kcal (1 serving, 400 g)</span></li>
-<li><a href="french-fries.html">French Fries</a> <span class="k">· 310 kcal (1 serving, 110 g)</span></li>
-<li><a href="fried-rice.html">Fried Rice</a> <span class="k">· 350 kcal (1 serving, 250 g)</span></li>
-<li><a href="full-english-breakfast.html">Full English Breakfast</a> <span class="k">· 800 kcal (1 serving, 450 g)</span></li>
-<li><a href="greek-salad.html">Greek Salad</a> <span class="k">· 230 kcal (1 serving, 250 g)</span></li>
-<li><a href="hummus.html">Hummus</a> <span class="k">· 180 kcal (1 serving, 100 g)</span></li>
-<li><a href="pad-thai.html">Pad Thai</a> <span class="k">· 600 kcal (1 serving, 350 g)</span></li>
-<li><a href="pancakes.html">Pancakes</a> <span class="k">· 350 kcal (3 pieces, 150 g)</span></li>
-<li><a href="pizza-slice-cheese.html">Pizza Slice (cheese)</a> <span class="k">· 285 kcal (1 slice, 110 g)</span></li>
-<li><a href="poke-bowl.html">Poke Bowl</a> <span class="k">· 480 kcal (1 bowl, 400 g)</span></li>
-<li><a href="ramen.html">Ramen</a> <span class="k">· 500 kcal (1 bowl, 500 g)</span></li>
-<li><a href="shawarma-wrap.html">Shawarma Wrap</a> <span class="k">· 520 kcal (1 piece, 300 g)</span></li>
-<li><a href="smoothie-bowl.html">Smoothie Bowl</a> <span class="k">· 300 kcal (1 bowl, 350 g)</span></li>
-<li><a href="sushi-8-pieces.html">Sushi (8 pieces)</a> <span class="k">· 350 kcal (1 serving, 200 g)</span></li>
+<li data-cat="carb" data-name="Bagel (plain)"><a href="bagel-plain.html">Bagel (plain)</a> <span class="k">· 250 kcal (1 piece, 95 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:79%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Caesar Salad"><a href="caesar-salad.html">Caesar Salad</a> <span class="k">· 330 kcal (1 serving, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:73%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Cheeseburger"><a href="cheeseburger.html">Cheeseburger</a> <span class="k">· 550 kcal (1 piece, 220 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Chicken Curry"><a href="chicken-curry.html">Chicken Curry</a> <span class="k">· 380 kcal (1 serving, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Club Sandwich"><a href="club-sandwich.html">Club Sandwich</a> <span class="k">· 580 kcal (1 piece, 280 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:32%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Falafel"><a href="falafel.html">Falafel</a> <span class="k">· 110 kcal (3 pieces, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:41%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Fish and Chips"><a href="fish-and-chips.html">Fish and Chips</a> <span class="k">· 840 kcal (1 serving, 400 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:38%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="French Fries"><a href="french-fries.html">French Fries</a> <span class="k">· 310 kcal (1 serving, 110 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Fried Rice"><a href="fried-rice.html">Fried Rice</a> <span class="k">· 350 kcal (1 serving, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:32%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Full English Breakfast"><a href="full-english-breakfast.html">Full English Breakfast</a> <span class="k">· 800 kcal (1 serving, 450 g)</span><span class="mbar" aria-hidden="true"><span style="width:19%;background:#DE5187"></span><span style="width:23%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Greek Salad"><a href="greek-salad.html">Greek Salad</a> <span class="k">· 230 kcal (1 serving, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:20%;background:#E9A23B"></span><span style="width:68%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Hummus"><a href="hummus.html">Hummus</a> <span class="k">· 180 kcal (1 serving, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:33%;background:#E9A23B"></span><span style="width:54%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pad Thai"><a href="pad-thai.html">Pad Thai</a> <span class="k">· 600 kcal (1 serving, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pancakes"><a href="pancakes.html">Pancakes</a> <span class="k">· 350 kcal (3 pieces, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pizza Slice (cheese)"><a href="pizza-slice-cheese.html">Pizza Slice (cheese)</a> <span class="k">· 285 kcal (1 slice, 110 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:32%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Poke Bowl"><a href="poke-bowl.html">Poke Bowl</a> <span class="k">· 480 kcal (1 bowl, 400 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:29%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Ramen"><a href="ramen.html">Ramen</a> <span class="k">· 500 kcal (1 bowl, 500 g)</span><span class="mbar" aria-hidden="true"><span style="width:19%;background:#DE5187"></span><span style="width:48%;background:#E9A23B"></span><span style="width:33%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Shawarma Wrap"><a href="shawarma-wrap.html">Shawarma Wrap</a> <span class="k">· 520 kcal (1 piece, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Smoothie Bowl"><a href="smoothie-bowl.html">Smoothie Bowl</a> <span class="k">· 300 kcal (1 bowl, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:72%;background:#E9A23B"></span><span style="width:18%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Sushi (8 pieces)"><a href="sushi-8-pieces.html">Sushi (8 pieces)</a> <span class="k">· 350 kcal (1 serving, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Everyday staples</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">Almonds</a> <span class="k">· 175 kcal (1 handful, 30 g)</span></li>
-<li><a href="apple.html">Apple</a> <span class="k">· 80 kcal (1 piece, 160 g)</span></li>
-<li><a href="avocado.html">Avocado</a> <span class="k">· 240 kcal (Half, 100 g)</span></li>
-<li><a href="baked-salmon.html">Baked Salmon</a> <span class="k">· 280 kcal (1 serving, 150 g)</span></li>
-<li><a href="banana.html">Banana</a> <span class="k">· 105 kcal (1 piece, 120 g)</span></li>
-<li><a href="black-coffee.html">Black Coffee</a> <span class="k">· 2 kcal (1 cup, 240 g)</span></li>
-<li><a href="blueberries.html">Blueberries</a> <span class="k">· 85 kcal (1 bowl, 150 g)</span></li>
-<li><a href="boiled-egg.html">Boiled Egg</a> <span class="k">· 78 kcal (1 piece, 50 g)</span></li>
-<li><a href="boiled-potato.html">Boiled Potato</a> <span class="k">· 130 kcal (1 piece, 150 g)</span></li>
-<li><a href="broccoli.html">Broccoli</a> <span class="k">· 55 kcal (1 bowl, 150 g)</span></li>
-<li><a href="butter.html">Butter</a> <span class="k">· 72 kcal (1 tablespoon, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">Canned Tuna (in water)</a> <span class="k">· 100 kcal (1 serving, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">Cheddar Cheese</a> <span class="k">· 120 kcal (1 slice, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">Cooked Brown Rice</a> <span class="k">· 215 kcal (1 bowl, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">Cooked Chickpeas</a> <span class="k">· 270 kcal (1 bowl, 200 g)</span></li>
-<li><a href="cooked-lentils.html">Cooked Lentils</a> <span class="k">· 230 kcal (1 bowl, 200 g)</span></li>
-<li><a href="cooked-pasta.html">Cooked Pasta</a> <span class="k">· 220 kcal (1 bowl, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">Cooked Quinoa</a> <span class="k">· 220 kcal (1 bowl, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">Cooked White Rice</a> <span class="k">· 205 kcal (1 bowl, 158 g)</span></li>
-<li><a href="cucumber.html">Cucumber</a> <span class="k">· 16 kcal (1 piece, 100 g)</span></li>
-<li><a href="feta-cheese.html">Feta Cheese</a> <span class="k">· 78 kcal (1 slice, 30 g)</span></li>
-<li><a href="greek-yogurt.html">Greek Yogurt</a> <span class="k">· 130 kcal (1 bowl, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">Grilled Chicken Breast</a> <span class="k">· 195 kcal (1 serving, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">Ground Beef (15% fat)</a> <span class="k">· 250 kcal (1 serving, 100 g)</span></li>
-<li><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 cup, 350 g)</span></li>
-<li><a href="oatmeal.html">Oatmeal</a> <span class="k">· 190 kcal (1 bowl, 50 g)</span></li>
-<li><a href="olive-oil.html">Olive Oil</a> <span class="k">· 120 kcal (1 tablespoon, 14 g)</span></li>
-<li><a href="orange.html">Orange</a> <span class="k">· 70 kcal (1 piece, 150 g)</span></li>
-<li><a href="peanut-butter.html">Peanut Butter</a> <span class="k">· 190 kcal (1 tablespoon, 32 g)</span></li>
-<li><a href="plain-yogurt.html">Plain Yogurt</a> <span class="k">· 120 kcal (1 bowl, 200 g)</span></li>
-<li><a href="protein-powder.html">Protein Powder</a> <span class="k">· 120 kcal (1 scoop, 30 g)</span></li>
-<li><a href="shrimp.html">Shrimp</a> <span class="k">· 120 kcal (1 serving, 120 g)</span></li>
-<li><a href="spinach.html">Spinach</a> <span class="k">· 23 kcal (1 bowl, 100 g)</span></li>
-<li><a href="strawberries.html">Strawberries</a> <span class="k">· 50 kcal (1 bowl, 150 g)</span></li>
-<li><a href="sweet-potato.html">Sweet Potato</a> <span class="k">· 115 kcal (1 piece, 130 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 serving, 150 g)</span></li>
-<li><a href="tomato.html">Tomato</a> <span class="k">· 22 kcal (1 piece, 120 g)</span></li>
-<li><a href="turkey-breast.html">Turkey Breast</a> <span class="k">· 160 kcal (1 serving, 150 g)</span></li>
-<li><a href="walnuts.html">Walnuts</a> <span class="k">· 200 kcal (1 handful, 30 g)</span></li>
-<li><a href="white-bread.html">White Bread</a> <span class="k">· 70 kcal (1 slice, 28 g)</span></li>
-<li><a href="whole-milk.html">Whole Milk</a> <span class="k">· 120 kcal (1 glass, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">Whole Wheat Bread</a> <span class="k">· 68 kcal (1 slice, 28 g)</span></li>
+<li data-cat="fat" data-name="Almonds"><a href="almonds.html">Almonds</a> <span class="k">· 175 kcal (1 handful, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Apple"><a href="apple.html">Apple</a> <span class="k">· 80 kcal (1 piece, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Avocado"><a href="avocado.html">Avocado</a> <span class="k">· 240 kcal (Half, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Baked Salmon"><a href="baked-salmon.html">Baked Salmon</a> <span class="k">· 280 kcal (1 serving, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banana"><a href="banana.html">Banana</a> <span class="k">· 105 kcal (1 piece, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Black Coffee"><a href="black-coffee.html">Black Coffee</a> <span class="k">· 2 kcal (1 cup, 240 g)</span></li>
+<li data-cat="light" data-name="Blueberries"><a href="blueberries.html">Blueberries</a> <span class="k">· 85 kcal (1 bowl, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Boiled Egg"><a href="boiled-egg.html">Boiled Egg</a> <span class="k">· 78 kcal (1 piece, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Boiled Potato"><a href="boiled-potato.html">Boiled Potato</a> <span class="k">· 130 kcal (1 piece, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Broccoli"><a href="broccoli.html">Broccoli</a> <span class="k">· 55 kcal (1 bowl, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Butter"><a href="butter.html">Butter</a> <span class="k">· 72 kcal (1 tablespoon, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Canned Tuna (in water)"><a href="canned-tuna-in-water.html">Canned Tuna (in water)</a> <span class="k">· 100 kcal (1 serving, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Cheddar Cheese"><a href="cheddar-cheese.html">Cheddar Cheese</a> <span class="k">· 120 kcal (1 slice, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cooked Brown Rice"><a href="cooked-brown-rice.html">Cooked Brown Rice</a> <span class="k">· 215 kcal (1 bowl, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cooked Chickpeas"><a href="cooked-chickpeas.html">Cooked Chickpeas</a> <span class="k">· 270 kcal (1 bowl, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cooked Lentils"><a href="cooked-lentils.html">Cooked Lentils</a> <span class="k">· 230 kcal (1 bowl, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cooked Pasta"><a href="cooked-pasta.html">Cooked Pasta</a> <span class="k">· 220 kcal (1 bowl, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cooked Quinoa"><a href="cooked-quinoa.html">Cooked Quinoa</a> <span class="k">· 220 kcal (1 bowl, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cooked White Rice"><a href="cooked-white-rice.html">Cooked White Rice</a> <span class="k">· 205 kcal (1 bowl, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Cucumber"><a href="cucumber.html">Cucumber</a> <span class="k">· 16 kcal (1 piece, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Feta Cheese"><a href="feta-cheese.html">Feta Cheese</a> <span class="k">· 78 kcal (1 slice, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Greek Yogurt"><a href="greek-yogurt.html">Greek Yogurt</a> <span class="k">· 130 kcal (1 bowl, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Grilled Chicken Breast"><a href="grilled-chicken-breast.html">Grilled Chicken Breast</a> <span class="k">· 195 kcal (1 serving, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Ground Beef (15% fat)"><a href="ground-beef-15-fat.html">Ground Beef (15% fat)</a> <span class="k">· 250 kcal (1 serving, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Latte"><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 cup, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Oatmeal"><a href="oatmeal.html">Oatmeal</a> <span class="k">· 190 kcal (1 bowl, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Olive Oil"><a href="olive-oil.html">Olive Oil</a> <span class="k">· 120 kcal (1 tablespoon, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Orange"><a href="orange.html">Orange</a> <span class="k">· 70 kcal (1 piece, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Peanut Butter"><a href="peanut-butter.html">Peanut Butter</a> <span class="k">· 190 kcal (1 tablespoon, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Plain Yogurt"><a href="plain-yogurt.html">Plain Yogurt</a> <span class="k">· 120 kcal (1 bowl, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Protein Powder"><a href="protein-powder.html">Protein Powder</a> <span class="k">· 120 kcal (1 scoop, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Shrimp"><a href="shrimp.html">Shrimp</a> <span class="k">· 120 kcal (1 serving, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Spinach"><a href="spinach.html">Spinach</a> <span class="k">· 23 kcal (1 bowl, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Strawberries"><a href="strawberries.html">Strawberries</a> <span class="k">· 50 kcal (1 bowl, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Sweet Potato"><a href="sweet-potato.html">Sweet Potato</a> <span class="k">· 115 kcal (1 piece, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 serving, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tomato"><a href="tomato.html">Tomato</a> <span class="k">· 22 kcal (1 piece, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Turkey Breast"><a href="turkey-breast.html">Turkey Breast</a> <span class="k">· 160 kcal (1 serving, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Walnuts"><a href="walnuts.html">Walnuts</a> <span class="k">· 200 kcal (1 handful, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="White Bread"><a href="white-bread.html">White Bread</a> <span class="k">· 70 kcal (1 slice, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Whole Milk"><a href="whole-milk.html">Whole Milk</a> <span class="k">· 120 kcal (1 glass, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Whole Wheat Bread"><a href="whole-wheat-bread.html">Whole Wheat Bread</a> <span class="k">· 68 kcal (1 slice, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Values: typical estimates used in the Pofu app; they vary by recipe and portion.</p>
 <div class="note"><p>This page is general information, not medical advice. If you are pregnant, breastfeeding, have a medical condition or a history of an eating disorder, talk to your doctor or dietitian before counting calories.</p></div>

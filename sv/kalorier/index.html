@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,83 +231,89 @@
 <h1>Hur många kalorier har din mat?</h1>
 <p class="lede">Kalorier, protein, kolhydrater och fett per portion och per 100 g för 67 livsmedel. Värdena är typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen och varierar med recept och portion.</p>
 </section>
+<section class="fsearch" aria-label="Sök livsmedel">
+<input type="search" id="fq" placeholder="Sök livsmedel" aria-label="Sök livsmedel" autocomplete="off">
+<div class="chips" role="group" aria-label="Alla"><button type="button" data-cat="all" aria-pressed="true">Alla</button><button type="button" data-cat="light" aria-pressed="false">Lätta</button><button type="button" data-cat="prot" aria-pressed="false">Proteinrika</button><button type="button" data-cat="carb" aria-pressed="false">Mest kolhydrater</button><button type="button" data-cat="fat" aria-pressed="false">Mest fett</button><button type="button" data-cat="mixed" aria-pressed="false">Blandade</button></div>
+<p class="nomatch" id="fnone" hidden>Inga träffar.</p>
+</section>
 <section id="local">
 <h2>Maträtter</h2>
 <ul class="foodlist">
-<li><a href="artsoppa-med-flask.html">Ärtsoppa med fläsk</a> <span class="k">· 340 kcal (1 tallrik, 400 g)</span></li>
-<li><a href="chokladboll.html">Chokladboll</a> <span class="k">· 136 kcal (1 st, 30 g)</span></li>
-<li><a href="gravad-lax.html">Gravad lax</a> <span class="k">· 133 kcal (1 portion, 80 g)</span></li>
-<li><a href="inlagd-sill.html">Inlagd sill</a> <span class="k">· 147 kcal (3 bitar, 60 g)</span></li>
-<li><a href="janssons-frestelse.html">Janssons frestelse</a> <span class="k">· 483 kcal (1 portion, 300 g)</span></li>
-<li><a href="kaldolmar.html">Kåldolmar</a> <span class="k">· 270 kcal (3 st, 250 g)</span></li>
-<li><a href="kalops.html">Kalops</a> <span class="k">· 231 kcal (1 portion, 300 g)</span></li>
-<li><a href="kanelbulle.html">Kanelbulle</a> <span class="k">· 243 kcal (1 st, 75 g)</span></li>
-<li><a href="kladdkaka.html">Kladdkaka</a> <span class="k">· 333 kcal (1 bit, 80 g)</span></li>
-<li><a href="korv-stroganoff.html">Korv stroganoff</a> <span class="k">· 632 kcal (1 portion, 250 g)</span></li>
-<li><a href="kottbullar.html">Köttbullar</a> <span class="k">· 212 kcal (6 st, 120 g)</span></li>
-<li><a href="kroppkakor.html">Kroppkakor</a> <span class="k">· 390 kcal (2 st, 250 g)</span></li>
-<li><a href="ostkaka.html">Ostkaka</a> <span class="k">· 206 kcal (1 bit, 120 g)</span></li>
-<li><a href="pannkakor.html">Pannkakor</a> <span class="k">· 163 kcal (2 st, 120 g)</span></li>
-<li><a href="potatismos.html">Potatismos</a> <span class="k">· 176 kcal (1 portion, 200 g)</span></li>
-<li><a href="prinsesstarta.html">Prinsesstårta</a> <span class="k">· 295 kcal (1 bit, 100 g)</span></li>
-<li><a href="pytt-i-panna.html">Pytt i panna</a> <span class="k">· 417 kcal (1 portion, 300 g)</span></li>
-<li><a href="raggmunk.html">Raggmunk</a> <span class="k">· 224 kcal (2 st, 150 g)</span></li>
-<li><a href="risgrynsgrot.html">Risgrynsgröt</a> <span class="k">· 258 kcal (1 portion, 300 g)</span></li>
-<li><a href="semla.html">Semla</a> <span class="k">· 384 kcal (1 st, 130 g)</span></li>
-<li><a href="sjomansbiff.html">Sjömansbiff</a> <span class="k">· 315 kcal (1 portion, 350 g)</span></li>
-<li><a href="skagenrora.html">Skagenröra</a> <span class="k">· 161 kcal (1 portion, 100 g)</span></li>
-<li><a href="smorgastarta.html">Smörgåstårta</a> <span class="k">· 356 kcal (1 bit, 150 g)</span></li>
-<li><a href="stekt-falukorv.html">Stekt falukorv</a> <span class="k">· 402 kcal (1 portion, 150 g)</span></li>
-<li><a href="wallenbergare.html">Wallenbergare</a> <span class="k">· 369 kcal (1 st, 150 g)</span></li>
+<li data-cat="mixed" data-name="Ärtsoppa med fläsk"><a href="artsoppa-med-flask.html">Ärtsoppa med fläsk</a> <span class="k">· 340 kcal (1 tallrik, 400 g)</span><span class="mbar" aria-hidden="true"><span style="width:32%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:24%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Chokladboll"><a href="chokladboll.html">Chokladboll</a> <span class="k">· 136 kcal (1 st, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:3%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:50%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Gravad lax"><a href="gravad-lax.html">Gravad lax</a> <span class="k">· 133 kcal (1 portion, 80 g)</span><span class="mbar" aria-hidden="true"><span style="width:45%;background:#DE5187"></span><span style="width:8%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Inlagd sill"><a href="inlagd-sill.html">Inlagd sill</a> <span class="k">· 147 kcal (3 bitar, 60 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:33%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Janssons frestelse"><a href="janssons-frestelse.html">Janssons frestelse</a> <span class="k">· 483 kcal (1 portion, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:36%;background:#E9A23B"></span><span style="width:55%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kåldolmar"><a href="kaldolmar.html">Kåldolmar</a> <span class="k">· 270 kcal (3 st, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:32%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Kalops"><a href="kalops.html">Kalops</a> <span class="k">· 231 kcal (1 portion, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:38%;background:#DE5187"></span><span style="width:16%;background:#E9A23B"></span><span style="width:46%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kanelbulle"><a href="kanelbulle.html">Kanelbulle</a> <span class="k">· 243 kcal (1 st, 75 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kladdkaka"><a href="kladdkaka.html">Kladdkaka</a> <span class="k">· 333 kcal (1 bit, 80 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Korv stroganoff"><a href="korv-stroganoff.html">Korv stroganoff</a> <span class="k">· 632 kcal (1 portion, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:9%;background:#E9A23B"></span><span style="width:81%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Köttbullar"><a href="kottbullar.html">Köttbullar</a> <span class="k">· 212 kcal (6 st, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:36%;background:#DE5187"></span><span style="width:13%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kroppkakor"><a href="kroppkakor.html">Kroppkakor</a> <span class="k">· 390 kcal (2 st, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Ostkaka"><a href="ostkaka.html">Ostkaka</a> <span class="k">· 206 kcal (1 bit, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pannkakor"><a href="pannkakor.html">Pannkakor</a> <span class="k">· 163 kcal (2 st, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Potatismos"><a href="potatismos.html">Potatismos</a> <span class="k">· 176 kcal (1 portion, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Prinsesstårta"><a href="prinsesstarta.html">Prinsesstårta</a> <span class="k">· 295 kcal (1 bit, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:43%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pytt i panna"><a href="pytt-i-panna.html">Pytt i panna</a> <span class="k">· 417 kcal (1 portion, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:45%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Raggmunk"><a href="raggmunk.html">Raggmunk</a> <span class="k">· 224 kcal (2 st, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:55%;background:#E9A23B"></span><span style="width:34%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Risgrynsgröt"><a href="risgrynsgrot.html">Risgrynsgröt</a> <span class="k">· 258 kcal (1 portion, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:63%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Semla"><a href="semla.html">Semla</a> <span class="k">· 384 kcal (1 st, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:41%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Sjömansbiff"><a href="sjomansbiff.html">Sjömansbiff</a> <span class="k">· 315 kcal (1 portion, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:31%;background:#DE5187"></span><span style="width:42%;background:#E9A23B"></span><span style="width:27%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Skagenröra"><a href="skagenrora.html">Skagenröra</a> <span class="k">· 161 kcal (1 portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:31%;background:#DE5187"></span><span style="width:5%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Smörgåstårta"><a href="smorgastarta.html">Smörgåstårta</a> <span class="k">· 356 kcal (1 bit, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:26%;background:#E9A23B"></span><span style="width:59%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Stekt falukorv"><a href="stekt-falukorv.html">Stekt falukorv</a> <span class="k">· 402 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:68%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Wallenbergare"><a href="wallenbergare.html">Wallenbergare</a> <span class="k">· 369 kcal (1 st, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:61%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Basvaror</h2>
 <ul class="foodlist">
-<li><a href="apelsin.html">Apelsin</a> <span class="k">· 70 kcal (1 st, 150 g)</span></li>
-<li><a href="apple.html">Äpple</a> <span class="k">· 80 kcal (1 st, 160 g)</span></li>
-<li><a href="avokado.html">Avokado</a> <span class="k">· 240 kcal (Halv, 100 g)</span></li>
-<li><a href="banan.html">Banan</a> <span class="k">· 105 kcal (1 st, 120 g)</span></li>
-<li><a href="blabar.html">Blåbär</a> <span class="k">· 85 kcal (1 skål, 150 g)</span></li>
-<li><a href="broccoli.html">Broccoli</a> <span class="k">· 55 kcal (1 skål, 150 g)</span></li>
-<li><a href="cheddarost.html">Cheddarost</a> <span class="k">· 120 kcal (1 skiva, 30 g)</span></li>
-<li><a href="fetaost.html">Fetaost</a> <span class="k">· 78 kcal (1 skiva, 30 g)</span></li>
-<li><a href="fullkornsbrod.html">Fullkornsbröd</a> <span class="k">· 68 kcal (1 skiva, 28 g)</span></li>
-<li><a href="grekisk-yoghurt.html">Grekisk yoghurt</a> <span class="k">· 130 kcal (1 skål, 170 g)</span></li>
-<li><a href="grillat-kycklingbrost.html">Grillat kycklingbröst</a> <span class="k">· 195 kcal (1 portion, 150 g)</span></li>
-<li><a href="gurka.html">Gurka</a> <span class="k">· 16 kcal (1 st, 100 g)</span></li>
-<li><a href="havregrynsgrot.html">Havregrynsgröt</a> <span class="k">· 190 kcal (1 skål, 50 g)</span></li>
-<li><a href="jordgubbar.html">Jordgubbar</a> <span class="k">· 50 kcal (1 skål, 150 g)</span></li>
-<li><a href="jordnotssmor.html">Jordnötssmör</a> <span class="k">· 190 kcal (1 msk, 32 g)</span></li>
-<li><a href="kalkonbrost.html">Kalkonbröst</a> <span class="k">· 160 kcal (1 portion, 150 g)</span></li>
-<li><a href="kokt-agg.html">Kokt ägg</a> <span class="k">· 78 kcal (1 st, 50 g)</span></li>
-<li><a href="kokt-brunt-ris.html">Kokt brunt ris</a> <span class="k">· 215 kcal (1 skål, 195 g)</span></li>
-<li><a href="kokt-pasta.html">Kokt pasta</a> <span class="k">· 220 kcal (1 skål, 140 g)</span></li>
-<li><a href="kokt-potatis.html">Kokt potatis</a> <span class="k">· 130 kcal (1 st, 150 g)</span></li>
-<li><a href="kokt-quinoa.html">Kokt quinoa</a> <span class="k">· 220 kcal (1 skål, 185 g)</span></li>
-<li><a href="kokt-vitt-ris.html">Kokt vitt ris</a> <span class="k">· 205 kcal (1 skål, 158 g)</span></li>
-<li><a href="kokta-kikartor.html">Kokta kikärtor</a> <span class="k">· 270 kcal (1 skål, 200 g)</span></li>
-<li><a href="kokta-linser.html">Kokta linser</a> <span class="k">· 230 kcal (1 skål, 200 g)</span></li>
-<li><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 kopp, 350 g)</span></li>
-<li><a href="mandlar.html">Mandlar</a> <span class="k">· 175 kcal (1 handfull, 30 g)</span></li>
-<li><a href="naturell-yoghurt.html">Naturell yoghurt</a> <span class="k">· 120 kcal (1 skål, 200 g)</span></li>
-<li><a href="notfars-15-fett.html">Nötfärs (15 % fett)</a> <span class="k">· 250 kcal (1 portion, 100 g)</span></li>
-<li><a href="olivolja.html">Olivolja</a> <span class="k">· 120 kcal (1 msk, 14 g)</span></li>
-<li><a href="proteinpulver.html">Proteinpulver</a> <span class="k">· 120 kcal (1 mått, 30 g)</span></li>
-<li><a href="rakor.html">Räkor</a> <span class="k">· 120 kcal (1 portion, 120 g)</span></li>
-<li><a href="smor.html">Smör</a> <span class="k">· 72 kcal (1 msk, 10 g)</span></li>
-<li><a href="sotpotatis.html">Sötpotatis</a> <span class="k">· 115 kcal (1 st, 130 g)</span></li>
-<li><a href="spenat.html">Spenat</a> <span class="k">· 23 kcal (1 skål, 100 g)</span></li>
-<li><a href="standardmjolk-3.html">Standardmjölk (3 %)</a> <span class="k">· 120 kcal (1 glas, 200 g)</span></li>
-<li><a href="svart-kaffe.html">Svart kaffe</a> <span class="k">· 2 kcal (1 kopp, 240 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 portion, 150 g)</span></li>
-<li><a href="tomat.html">Tomat</a> <span class="k">· 22 kcal (1 st, 120 g)</span></li>
-<li><a href="tonfisk-pa-burk-i-vatten.html">Tonfisk på burk (i vatten)</a> <span class="k">· 100 kcal (1 portion, 100 g)</span></li>
-<li><a href="ugnsbakad-lax.html">Ugnsbakad lax</a> <span class="k">· 280 kcal (1 portion, 150 g)</span></li>
-<li><a href="valnotter.html">Valnötter</a> <span class="k">· 200 kcal (1 handfull, 30 g)</span></li>
-<li><a href="vitt-brod.html">Vitt bröd</a> <span class="k">· 70 kcal (1 skiva, 28 g)</span></li>
+<li data-cat="light" data-name="Apelsin"><a href="apelsin.html">Apelsin</a> <span class="k">· 70 kcal (1 st, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Äpple"><a href="apple.html">Äpple</a> <span class="k">· 80 kcal (1 st, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Avokado"><a href="avokado.html">Avokado</a> <span class="k">· 240 kcal (Halv, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banan"><a href="banan.html">Banan</a> <span class="k">· 105 kcal (1 st, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Blåbär"><a href="blabar.html">Blåbär</a> <span class="k">· 85 kcal (1 skål, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Broccoli"><a href="broccoli.html">Broccoli</a> <span class="k">· 55 kcal (1 skål, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Cheddarost"><a href="cheddarost.html">Cheddarost</a> <span class="k">· 120 kcal (1 skiva, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Fetaost"><a href="fetaost.html">Fetaost</a> <span class="k">· 78 kcal (1 skiva, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Fullkornsbröd"><a href="fullkornsbrod.html">Fullkornsbröd</a> <span class="k">· 68 kcal (1 skiva, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Grekisk yoghurt"><a href="grekisk-yoghurt.html">Grekisk yoghurt</a> <span class="k">· 130 kcal (1 skål, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Grillat kycklingbröst"><a href="grillat-kycklingbrost.html">Grillat kycklingbröst</a> <span class="k">· 195 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Gurka"><a href="gurka.html">Gurka</a> <span class="k">· 16 kcal (1 st, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Havregrynsgröt"><a href="havregrynsgrot.html">Havregrynsgröt</a> <span class="k">· 190 kcal (1 skål, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jordgubbar"><a href="jordgubbar.html">Jordgubbar</a> <span class="k">· 50 kcal (1 skål, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Jordnötssmör"><a href="jordnotssmor.html">Jordnötssmör</a> <span class="k">· 190 kcal (1 msk, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Kalkonbröst"><a href="kalkonbrost.html">Kalkonbröst</a> <span class="k">· 160 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kokt ägg"><a href="kokt-agg.html">Kokt ägg</a> <span class="k">· 78 kcal (1 st, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokt brunt ris"><a href="kokt-brunt-ris.html">Kokt brunt ris</a> <span class="k">· 215 kcal (1 skål, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokt pasta"><a href="kokt-pasta.html">Kokt pasta</a> <span class="k">· 220 kcal (1 skål, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokt potatis"><a href="kokt-potatis.html">Kokt potatis</a> <span class="k">· 130 kcal (1 st, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokt quinoa"><a href="kokt-quinoa.html">Kokt quinoa</a> <span class="k">· 220 kcal (1 skål, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokt vitt ris"><a href="kokt-vitt-ris.html">Kokt vitt ris</a> <span class="k">· 205 kcal (1 skål, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokta kikärtor"><a href="kokta-kikartor.html">Kokta kikärtor</a> <span class="k">· 270 kcal (1 skål, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kokta linser"><a href="kokta-linser.html">Kokta linser</a> <span class="k">· 230 kcal (1 skål, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Latte"><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 kopp, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Mandlar"><a href="mandlar.html">Mandlar</a> <span class="k">· 175 kcal (1 handfull, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Naturell yoghurt"><a href="naturell-yoghurt.html">Naturell yoghurt</a> <span class="k">· 120 kcal (1 skål, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Nötfärs (15 % fett)"><a href="notfars-15-fett.html">Nötfärs (15 % fett)</a> <span class="k">· 250 kcal (1 portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Olivolja"><a href="olivolja.html">Olivolja</a> <span class="k">· 120 kcal (1 msk, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Proteinpulver"><a href="proteinpulver.html">Proteinpulver</a> <span class="k">· 120 kcal (1 mått, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Räkor"><a href="rakor.html">Räkor</a> <span class="k">· 120 kcal (1 portion, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Smör"><a href="smor.html">Smör</a> <span class="k">· 72 kcal (1 msk, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Sötpotatis"><a href="sotpotatis.html">Sötpotatis</a> <span class="k">· 115 kcal (1 st, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Spenat"><a href="spenat.html">Spenat</a> <span class="k">· 23 kcal (1 skål, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Standardmjölk (3 %)"><a href="standardmjolk-3.html">Standardmjölk (3 %)</a> <span class="k">· 120 kcal (1 glas, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Svart kaffe"><a href="svart-kaffe.html">Svart kaffe</a> <span class="k">· 2 kcal (1 kopp, 240 g)</span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tomat"><a href="tomat.html">Tomat</a> <span class="k">· 22 kcal (1 st, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tonfisk på burk (i vatten)"><a href="tonfisk-pa-burk-i-vatten.html">Tonfisk på burk (i vatten)</a> <span class="k">· 100 kcal (1 portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Ugnsbakad lax"><a href="ugnsbakad-lax.html">Ugnsbakad lax</a> <span class="k">· 280 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Valnötter"><a href="valnotter.html">Valnötter</a> <span class="k">· 200 kcal (1 handfull, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vitt bröd"><a href="vitt-brod.html">Vitt bröd</a> <span class="k">· 70 kcal (1 skiva, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Värden: typiska uppskattningar från öppna livsmedelsdatabaser och Pofu-appen; de varierar med recept och portion.</p>
 <div class="note"><p>Den här sidan är allmän information och ingen medicinsk rådgivning. Om du är gravid, ammar, har en sjukdom eller tidigare har haft en ätstörning, prata med din läkare eller en dietist innan du börjar räkna kalorier.</p></div>

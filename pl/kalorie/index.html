@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,80 +231,86 @@
 <h1>Ile kalorii ma twoje jedzenie?</h1>
 <p class="lede">Kalorie, białko, węglowodany i tłuszcz w porcji i w 100 g dla 64 produktów. Wartości to typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu i różnią się w zależności od przepisu i porcji.</p>
 </section>
+<section class="fsearch" aria-label="Szukaj produktów">
+<input type="search" id="fq" placeholder="Szukaj produktów" aria-label="Szukaj produktów" autocomplete="off">
+<div class="chips" role="group" aria-label="Wszystkie"><button type="button" data-cat="all" aria-pressed="true">Wszystkie</button><button type="button" data-cat="light" aria-pressed="false">Lekkie</button><button type="button" data-cat="prot" aria-pressed="false">Bogate w białko</button><button type="button" data-cat="carb" aria-pressed="false">Głównie węglowodany</button><button type="button" data-cat="fat" aria-pressed="false">Głównie tłuszcz</button><button type="button" data-cat="mixed" aria-pressed="false">Mieszane</button></div>
+<p class="nomatch" id="fnone" hidden>Brak pasujących produktów.</p>
+</section>
 <section id="local">
 <h2>Dania</h2>
 <ul class="foodlist">
-<li><a href="barszcz-czerwony.html">Barszcz czerwony</a> <span class="k">· 50 kcal (1 talerz, 250 g)</span></li>
-<li><a href="golabki.html">Gołąbki</a> <span class="k">· 285 kcal (2 sztuki, 250 g)</span></li>
-<li><a href="kapusta-kiszona.html">Kapusta kiszona</a> <span class="k">· 40 kcal (1 porcja, 100 g)</span></li>
-<li><a href="kefir.html">Kefir</a> <span class="k">· 100 kcal (1 szklanka, 250 g)</span></li>
-<li><a href="kielbasa.html">Kiełbasa</a> <span class="k">· 337 kcal (1 kawałek, 100 g)</span></li>
-<li><a href="kotlet-schabowy.html">Kotlet schabowy</a> <span class="k">· 344 kcal (1 kotlet, 150 g)</span></li>
-<li><a href="mizeria.html">Mizeria (ogórki ze śmietaną)</a> <span class="k">· 86 kcal (1 porcja, 130 g)</span></li>
-<li><a href="nalesniki.html">Naleśniki (puste)</a> <span class="k">· 291 kcal (2 naleśniki, 130 g)</span></li>
-<li><a href="paczek.html">Pączek</a> <span class="k">· 253 kcal (1 pączek, 60 g)</span></li>
-<li><a href="papryka-faszerowana.html">Papryka faszerowana mięsem i ryżem</a> <span class="k">· 356 kcal (1 papryka, 200 g)</span></li>
-<li><a href="pieczen-wieprzowa.html">Pieczeń wieprzowa</a> <span class="k">· 217 kcal (1 porcja, 120 g)</span></li>
-<li><a href="pierogi.html">Pierogi</a> <span class="k">· 351 kcal (6 sztuk, 180 g)</span></li>
-<li><a href="placki-ziemniaczane.html">Placki ziemniaczane</a> <span class="k">· 235 kcal (2 sztuki, 120 g)</span></li>
-<li><a href="pulpety-w-sosie.html">Pulpety w sosie</a> <span class="k">· 286 kcal (3 pulpety, 200 g)</span></li>
-<li><a href="rosol-z-makaronem.html">Rosół z makaronem</a> <span class="k">· 159 kcal (1 miska, 300 g)</span></li>
-<li><a href="salatka-ziemniaczana.html">Sałatka ziemniaczana z jajkiem</a> <span class="k">· 236 kcal (1 porcja, 150 g)</span></li>
-<li><a href="sernik.html">Sernik</a> <span class="k">· 262 kcal (1 kawałek, 120 g)</span></li>
-<li><a href="sledz-marynowany.html">Śledź marynowany</a> <span class="k">· 125 kcal (1 filet, 60 g)</span></li>
-<li><a href="szarlotka.html">Szarlotka (ciasto jabłkowe)</a> <span class="k">· 370 kcal (1 kawałek, 125 g)</span></li>
-<li><a href="twarog.html">Twaróg</a> <span class="k">· 148 kcal (1 porcja, 100 g)</span></li>
-<li><a href="zupa-fasolowa.html">Zupa fasolowa z mięsem</a> <span class="k">· 252 kcal (1 talerz, 300 g)</span></li>
-<li><a href="zupa-ziemniaczana.html">Zupa ziemniaczana (kartoflanka)</a> <span class="k">· 225 kcal (1 talerz, 250 g)</span></li>
+<li data-cat="light" data-name="Barszcz czerwony"><a href="barszcz-czerwony.html">Barszcz czerwony</a> <span class="k">· 50 kcal (1 talerz, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:75%;background:#E9A23B"></span><span style="width:15%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Gołąbki"><a href="golabki.html">Gołąbki</a> <span class="k">· 285 kcal (2 sztuki, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kapusta kiszona"><a href="kapusta-kiszona.html">Kapusta kiszona</a> <span class="k">· 40 kcal (1 porcja, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Kefir"><a href="kefir.html">Kefir</a> <span class="k">· 100 kcal (1 szklanka, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:35%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:34%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kiełbasa"><a href="kielbasa.html">Kiełbasa</a> <span class="k">· 337 kcal (1 kawałek, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:6%;background:#E9A23B"></span><span style="width:79%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Kotlet schabowy"><a href="kotlet-schabowy.html">Kotlet schabowy</a> <span class="k">· 344 kcal (1 kotlet, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:45%;background:#DE5187"></span><span style="width:13%;background:#E9A23B"></span><span style="width:42%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Mizeria (ogórki ze śmietaną)"><a href="mizeria.html">Mizeria (ogórki ze śmietaną)</a> <span class="k">· 86 kcal (1 porcja, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:22%;background:#E9A23B"></span><span style="width:70%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Naleśniki (puste)"><a href="nalesniki.html">Naleśniki (puste)</a> <span class="k">· 291 kcal (2 naleśniki, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pączek"><a href="paczek.html">Pączek</a> <span class="k">· 253 kcal (1 pączek, 60 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:46%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Papryka faszerowana mięsem i ryżem"><a href="papryka-faszerowana.html">Papryka faszerowana mięsem i ryżem</a> <span class="k">· 356 kcal (1 papryka, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:23%;background:#E9A23B"></span><span style="width:59%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Pieczeń wieprzowa"><a href="pieczen-wieprzowa.html">Pieczeń wieprzowa</a> <span class="k">· 217 kcal (1 porcja, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:61%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pierogi"><a href="pierogi.html">Pierogi</a> <span class="k">· 351 kcal (6 sztuk, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:61%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Placki ziemniaczane"><a href="placki-ziemniaczane.html">Placki ziemniaczane</a> <span class="k">· 235 kcal (2 sztuki, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:42%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Pulpety w sosie"><a href="pulpety-w-sosie.html">Pulpety w sosie</a> <span class="k">· 286 kcal (3 pulpety, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:34%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Rosół z makaronem"><a href="rosol-z-makaronem.html">Rosół z makaronem</a> <span class="k">· 159 kcal (1 miska, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:24%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Sałatka ziemniaczana z jajkiem"><a href="salatka-ziemniaczana.html">Sałatka ziemniaczana z jajkiem</a> <span class="k">· 236 kcal (1 porcja, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:54%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Sernik"><a href="sernik.html">Sernik</a> <span class="k">· 262 kcal (1 kawałek, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Śledź marynowany"><a href="sledz-marynowany.html">Śledź marynowany</a> <span class="k">· 125 kcal (1 filet, 60 g)</span><span class="mbar" aria-hidden="true"><span style="width:31%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:69%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Szarlotka (ciasto jabłkowe)"><a href="szarlotka.html">Szarlotka (ciasto jabłkowe)</a> <span class="k">· 370 kcal (1 kawałek, 125 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:50%;background:#E9A23B"></span><span style="width:46%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Twaróg"><a href="twarog.html">Twaróg</a> <span class="k">· 148 kcal (1 porcja, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Zupa fasolowa z mięsem"><a href="zupa-fasolowa.html">Zupa fasolowa z mięsem</a> <span class="k">· 252 kcal (1 talerz, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:25%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Zupa ziemniaczana (kartoflanka)"><a href="zupa-ziemniaczana.html">Zupa ziemniaczana (kartoflanka)</a> <span class="k">· 225 kcal (1 talerz, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:46%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Podstawowe produkty</h2>
 <ul class="foodlist">
-<li><a href="awokado.html">Awokado</a> <span class="k">· 240 kcal (Połowa, 100 g)</span></li>
-<li><a href="banan.html">Banan</a> <span class="k">· 105 kcal (1 sztuka, 120 g)</span></li>
-<li><a href="batat.html">Batat</a> <span class="k">· 115 kcal (1 sztuka, 130 g)</span></li>
-<li><a href="borowki.html">Borówki</a> <span class="k">· 85 kcal (1 miska, 150 g)</span></li>
-<li><a href="brokuy.html">Brokuły</a> <span class="k">· 55 kcal (1 miska, 150 g)</span></li>
-<li><a href="chleb-penoziarnisty.html">Chleb pełnoziarnisty</a> <span class="k">· 68 kcal (1 kromka, 28 g)</span></li>
-<li><a href="chleb-pszenny.html">Chleb pszenny</a> <span class="k">· 70 kcal (1 kromka, 28 g)</span></li>
-<li><a href="czarna-kawa.html">Czarna kawa</a> <span class="k">· 2 kcal (1 filiżanka, 240 g)</span></li>
-<li><a href="gotowana-ciecierzyca.html">Gotowana ciecierzyca</a> <span class="k">· 270 kcal (1 miska, 200 g)</span></li>
-<li><a href="gotowana-komosa-ryzowa.html">Gotowana komosa ryżowa</a> <span class="k">· 220 kcal (1 miska, 185 g)</span></li>
-<li><a href="gotowana-soczewica.html">Gotowana soczewica</a> <span class="k">· 230 kcal (1 miska, 200 g)</span></li>
-<li><a href="gotowany-biay-ryz.html">Gotowany biały ryż</a> <span class="k">· 205 kcal (1 miska, 158 g)</span></li>
-<li><a href="gotowany-brazowy-ryz.html">Gotowany brązowy ryż</a> <span class="k">· 215 kcal (1 miska, 195 g)</span></li>
-<li><a href="gotowany-makaron.html">Gotowany makaron</a> <span class="k">· 220 kcal (1 miska, 140 g)</span></li>
-<li><a href="gotowany-ziemniak.html">Gotowany ziemniak</a> <span class="k">· 130 kcal (1 sztuka, 150 g)</span></li>
-<li><a href="jabko.html">Jabłko</a> <span class="k">· 80 kcal (1 sztuka, 160 g)</span></li>
-<li><a href="jajko-na-twardo.html">Jajko na twardo</a> <span class="k">· 78 kcal (1 sztuka, 50 g)</span></li>
-<li><a href="jogurt-grecki.html">Jogurt grecki</a> <span class="k">· 130 kcal (1 miska, 170 g)</span></li>
-<li><a href="jogurt-naturalny.html">Jogurt naturalny</a> <span class="k">· 120 kcal (1 miska, 200 g)</span></li>
-<li><a href="kawa-latte.html">Kawa latte</a> <span class="k">· 150 kcal (1 filiżanka, 350 g)</span></li>
-<li><a href="krewetki.html">Krewetki</a> <span class="k">· 120 kcal (1 porcja, 120 g)</span></li>
-<li><a href="maso.html">Masło</a> <span class="k">· 72 kcal (1 łyżka, 10 g)</span></li>
-<li><a href="maso-orzechowe.html">Masło orzechowe</a> <span class="k">· 190 kcal (1 łyżka, 32 g)</span></li>
-<li><a href="mielona-woowina-15-tuszczu.html">Mielona wołowina (15% tłuszczu)</a> <span class="k">· 250 kcal (1 porcja, 100 g)</span></li>
-<li><a href="migday.html">Migdały</a> <span class="k">· 175 kcal (1 garść, 30 g)</span></li>
-<li><a href="mleko-penotuste.html">Mleko pełnotłuste</a> <span class="k">· 120 kcal (1 szklanka, 200 g)</span></li>
-<li><a href="odzywka-biakowa.html">Odżywka białkowa</a> <span class="k">· 120 kcal (1 miarka, 30 g)</span></li>
-<li><a href="ogorek.html">Ogórek</a> <span class="k">· 16 kcal (1 sztuka, 100 g)</span></li>
-<li><a href="oliwa-z-oliwek.html">Oliwa z oliwek</a> <span class="k">· 120 kcal (1 łyżka, 14 g)</span></li>
-<li><a href="orzechy-woskie.html">Orzechy włoskie</a> <span class="k">· 200 kcal (1 garść, 30 g)</span></li>
-<li><a href="owsianka.html">Owsianka</a> <span class="k">· 190 kcal (1 miska, 50 g)</span></li>
-<li><a href="pieczony-osos.html">Pieczony łosoś</a> <span class="k">· 280 kcal (1 porcja, 150 g)</span></li>
-<li><a href="piers-z-indyka.html">Pierś z indyka</a> <span class="k">· 160 kcal (1 porcja, 150 g)</span></li>
-<li><a href="piers-z-kurczaka-z-grilla.html">Pierś z kurczaka z grilla</a> <span class="k">· 195 kcal (1 porcja, 150 g)</span></li>
-<li><a href="pomarancza.html">Pomarańcza</a> <span class="k">· 70 kcal (1 sztuka, 150 g)</span></li>
-<li><a href="pomidor.html">Pomidor</a> <span class="k">· 22 kcal (1 sztuka, 120 g)</span></li>
-<li><a href="ser-cheddar.html">Ser cheddar</a> <span class="k">· 120 kcal (1 plasterek, 30 g)</span></li>
-<li><a href="ser-feta.html">Ser feta</a> <span class="k">· 78 kcal (1 plasterek, 30 g)</span></li>
-<li><a href="szpinak.html">Szpinak</a> <span class="k">· 23 kcal (1 miska, 100 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porcja, 150 g)</span></li>
-<li><a href="truskawki.html">Truskawki</a> <span class="k">· 50 kcal (1 miska, 150 g)</span></li>
-<li><a href="tunczyk-z-puszki-we-wasnym-sosie.html">Tuńczyk z puszki (we własnym sosie)</a> <span class="k">· 100 kcal (1 porcja, 100 g)</span></li>
+<li data-cat="fat" data-name="Awokado"><a href="awokado.html">Awokado</a> <span class="k">· 240 kcal (Połowa, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banan"><a href="banan.html">Banan</a> <span class="k">· 105 kcal (1 sztuka, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Batat"><a href="batat.html">Batat</a> <span class="k">· 115 kcal (1 sztuka, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Borówki"><a href="borowki.html">Borówki</a> <span class="k">· 85 kcal (1 miska, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brokuły"><a href="brokuy.html">Brokuły</a> <span class="k">· 55 kcal (1 miska, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Chleb pełnoziarnisty"><a href="chleb-penoziarnisty.html">Chleb pełnoziarnisty</a> <span class="k">· 68 kcal (1 kromka, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Chleb pszenny"><a href="chleb-pszenny.html">Chleb pszenny</a> <span class="k">· 70 kcal (1 kromka, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Czarna kawa"><a href="czarna-kawa.html">Czarna kawa</a> <span class="k">· 2 kcal (1 filiżanka, 240 g)</span></li>
+<li data-cat="carb" data-name="Gotowana ciecierzyca"><a href="gotowana-ciecierzyca.html">Gotowana ciecierzyca</a> <span class="k">· 270 kcal (1 miska, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gotowana komosa ryżowa"><a href="gotowana-komosa-ryzowa.html">Gotowana komosa ryżowa</a> <span class="k">· 220 kcal (1 miska, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gotowana soczewica"><a href="gotowana-soczewica.html">Gotowana soczewica</a> <span class="k">· 230 kcal (1 miska, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gotowany biały ryż"><a href="gotowany-biay-ryz.html">Gotowany biały ryż</a> <span class="k">· 205 kcal (1 miska, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gotowany brązowy ryż"><a href="gotowany-brazowy-ryz.html">Gotowany brązowy ryż</a> <span class="k">· 215 kcal (1 miska, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gotowany makaron"><a href="gotowany-makaron.html">Gotowany makaron</a> <span class="k">· 220 kcal (1 miska, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gotowany ziemniak"><a href="gotowany-ziemniak.html">Gotowany ziemniak</a> <span class="k">· 130 kcal (1 sztuka, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jabłko"><a href="jabko.html">Jabłko</a> <span class="k">· 80 kcal (1 sztuka, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Jajko na twardo"><a href="jajko-na-twardo.html">Jajko na twardo</a> <span class="k">· 78 kcal (1 sztuka, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jogurt grecki"><a href="jogurt-grecki.html">Jogurt grecki</a> <span class="k">· 130 kcal (1 miska, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jogurt naturalny"><a href="jogurt-naturalny.html">Jogurt naturalny</a> <span class="k">· 120 kcal (1 miska, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Kawa latte"><a href="kawa-latte.html">Kawa latte</a> <span class="k">· 150 kcal (1 filiżanka, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Krewetki"><a href="krewetki.html">Krewetki</a> <span class="k">· 120 kcal (1 porcja, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Masło"><a href="maso.html">Masło</a> <span class="k">· 72 kcal (1 łyżka, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Masło orzechowe"><a href="maso-orzechowe.html">Masło orzechowe</a> <span class="k">· 190 kcal (1 łyżka, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Mielona wołowina (15% tłuszczu)"><a href="mielona-woowina-15-tuszczu.html">Mielona wołowina (15% tłuszczu)</a> <span class="k">· 250 kcal (1 porcja, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Migdały"><a href="migday.html">Migdały</a> <span class="k">· 175 kcal (1 garść, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Mleko pełnotłuste"><a href="mleko-penotuste.html">Mleko pełnotłuste</a> <span class="k">· 120 kcal (1 szklanka, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Odżywka białkowa"><a href="odzywka-biakowa.html">Odżywka białkowa</a> <span class="k">· 120 kcal (1 miarka, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Ogórek"><a href="ogorek.html">Ogórek</a> <span class="k">· 16 kcal (1 sztuka, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Oliwa z oliwek"><a href="oliwa-z-oliwek.html">Oliwa z oliwek</a> <span class="k">· 120 kcal (1 łyżka, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Orzechy włoskie"><a href="orzechy-woskie.html">Orzechy włoskie</a> <span class="k">· 200 kcal (1 garść, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Owsianka"><a href="owsianka.html">Owsianka</a> <span class="k">· 190 kcal (1 miska, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Pieczony łosoś"><a href="pieczony-osos.html">Pieczony łosoś</a> <span class="k">· 280 kcal (1 porcja, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Pierś z indyka"><a href="piers-z-indyka.html">Pierś z indyka</a> <span class="k">· 160 kcal (1 porcja, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Pierś z kurczaka z grilla"><a href="piers-z-kurczaka-z-grilla.html">Pierś z kurczaka z grilla</a> <span class="k">· 195 kcal (1 porcja, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Pomarańcza"><a href="pomarancza.html">Pomarańcza</a> <span class="k">· 70 kcal (1 sztuka, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Pomidor"><a href="pomidor.html">Pomidor</a> <span class="k">· 22 kcal (1 sztuka, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Ser cheddar"><a href="ser-cheddar.html">Ser cheddar</a> <span class="k">· 120 kcal (1 plasterek, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Ser feta"><a href="ser-feta.html">Ser feta</a> <span class="k">· 78 kcal (1 plasterek, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Szpinak"><a href="szpinak.html">Szpinak</a> <span class="k">· 23 kcal (1 miska, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porcja, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Truskawki"><a href="truskawki.html">Truskawki</a> <span class="k">· 50 kcal (1 miska, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tuńczyk z puszki (we własnym sosie)"><a href="tunczyk-z-puszki-we-wasnym-sosie.html">Tuńczyk z puszki (we własnym sosie)</a> <span class="k">· 100 kcal (1 porcja, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Wartości: typowe szacunki z publicznych baz danych o żywności i z aplikacji Pofu; różnią się w zależności od przepisu i porcji.</p>
 <div class="note"><p>Ta strona ma charakter ogólnoinformacyjny i nie stanowi porady medycznej. Jeśli jesteś w ciąży, karmisz piersią, masz chorobę lub w przeszłości miałaś zaburzenia odżywiania, przed liczeniem kalorii porozmawiaj z lekarzem lub dietetykiem.</p></div>

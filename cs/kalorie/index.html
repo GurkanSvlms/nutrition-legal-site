@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,81 +231,87 @@
 <h1>Kolik kalorií má vaše jídlo?</h1>
 <p class="lede">Kalorie, bílkoviny, sacharidy a tuky na porci a na 100 g u 65 potravin. Hodnoty jsou typické odhady z veřejných databází složení potravin a z aplikace Pofu a liší se podle receptu a porce.</p>
 </section>
+<section class="fsearch" aria-label="Hledat potraviny">
+<input type="search" id="fq" placeholder="Hledat potraviny" aria-label="Hledat potraviny" autocomplete="off">
+<div class="chips" role="group" aria-label="Vše"><button type="button" data-cat="all" aria-pressed="true">Vše</button><button type="button" data-cat="light" aria-pressed="false">Lehké</button><button type="button" data-cat="prot" aria-pressed="false">Bohaté na bílkoviny</button><button type="button" data-cat="carb" aria-pressed="false">Hlavně sacharidy</button><button type="button" data-cat="fat" aria-pressed="false">Hlavně tuky</button><button type="button" data-cat="mixed" aria-pressed="false">Smíšené</button></div>
+<p class="nomatch" id="fnone" hidden>Nic nenalezeno.</p>
+</section>
 <section id="local">
 <h2>Jídla</h2>
 <ul class="foodlist">
-<li><a href="babovka.html">Bábovka</a> <span class="k">· 290 kcal (1 kus, 80 g)</span></li>
-<li><a href="bramboracka.html">Bramboračka</a> <span class="k">· 156 kcal (1 talíř, 300 g)</span></li>
-<li><a href="bramborak.html">Bramborák</a> <span class="k">· 363 kcal (2 kusy, 150 g)</span></li>
-<li><a href="bramborove-knedliky.html">Bramborové knedlíky</a> <span class="k">· 276 kcal (4 plátky, 200 g)</span></li>
-<li><a href="bramborovy-salat.html">Bramborový salát</a> <span class="k">· 328 kcal (1 porce, 150 g)</span></li>
-<li><a href="buchty-s-tvarohem.html">Buchty s tvarohem</a> <span class="k">· 264 kcal (1 kus, 90 g)</span></li>
-<li><a href="chlupate-knedliky.html">Chlupaté knedlíky</a> <span class="k">· 226 kcal (3 kusy, 200 g)</span></li>
-<li><a href="hermelinovy-salat.html">Hermelínový salát</a> <span class="k">· 390 kcal (1 porce, 120 g)</span></li>
-<li><a href="houbova-omacka-s-hovezim-a-knedlikem.html">Houbová omáčka s hovězím a knedlíkem</a> <span class="k">· 550 kcal (1 porce, 350 g)</span></li>
-<li><a href="houskove-knedliky.html">Houskové knedlíky</a> <span class="k">· 396 kcal (4 plátky, 200 g)</span></li>
-<li><a href="jablkovy-zavin.html">Jablkový závin</a> <span class="k">· 379 kcal (1 kus, 120 g)</span></li>
-<li><a href="koprova-omacka-s-hovezim-a-knedlikem.html">Koprová omáčka s hovězím a knedlíkem</a> <span class="k">· 609 kcal (1 porce, 350 g)</span></li>
-<li><a href="langos.html">Langoš</a> <span class="k">· 598 kcal (1 kus, 180 g)</span></li>
-<li><a href="palacinka-se-zavareninou.html">Palačinka se zavařeninou</a> <span class="k">· 199 kcal (1 kus, 100 g)</span></li>
-<li><a href="parek-v-rohliku.html">Párek v rohlíku</a> <span class="k">· 317 kcal (1 kus, 130 g)</span></li>
-<li><a href="rajska-omacka-s-hovezim-a-knedlikem.html">Rajská omáčka s hovězím a knedlíkem</a> <span class="k">· 550 kcal (1 porce, 350 g)</span></li>
-<li><a href="rohlik.html">Rohlík</a> <span class="k">· 130 kcal (1 kus, 43 g)</span></li>
-<li><a href="skubanky-s-makem.html">Škubánky s mákem</a> <span class="k">· 545 kcal (1 porce, 250 g)</span></li>
-<li><a href="smazenka.html">Smaženka</a> <span class="k">· 357 kcal (1 kus, 150 g)</span></li>
-<li><a href="smazeny-syr.html">Smažený sýr</a> <span class="k">· 461 kcal (1 kus, 120 g)</span></li>
-<li><a href="smazeny-syr-v-housce.html">Smažený sýr v housce</a> <span class="k">· 640 kcal (1 kus, 200 g)</span></li>
-<li><a href="svickova-na-smetane-s-knedlikem.html">Svíčková na smetaně s knedlíkem</a> <span class="k">· 640 kcal (1 porce, 350 g)</span></li>
-<li><a href="tlacenka.html">Tlačenka</a> <span class="k">· 211 kcal (1 porce, 100 g)</span></li>
+<li data-cat="mixed" data-name="Bábovka"><a href="babovka.html">Bábovka</a> <span class="k">· 290 kcal (1 kus, 80 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Bramboračka"><a href="bramboracka.html">Bramboračka</a> <span class="k">· 156 kcal (1 talíř, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:38%;background:#E9A23B"></span><span style="width:50%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Bramborák"><a href="bramborak.html">Bramborák</a> <span class="k">· 363 kcal (2 kusy, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Bramborové knedlíky"><a href="bramborove-knedliky.html">Bramborové knedlíky</a> <span class="k">· 276 kcal (4 plátky, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Bramborový salát"><a href="bramborovy-salat.html">Bramborový salát</a> <span class="k">· 328 kcal (1 porce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:3%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:79%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Buchty s tvarohem"><a href="buchty-s-tvarohem.html">Buchty s tvarohem</a> <span class="k">· 264 kcal (1 kus, 90 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:62%;background:#E9A23B"></span><span style="width:26%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Chlupaté knedlíky"><a href="chlupate-knedliky.html">Chlupaté knedlíky</a> <span class="k">· 226 kcal (3 kusy, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:74%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Hermelínový salát"><a href="hermelinovy-salat.html">Hermelínový salát</a> <span class="k">· 390 kcal (1 porce, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:2%;background:#E9A23B"></span><span style="width:86%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Houbová omáčka s hovězím a knedlíkem"><a href="houbova-omacka-s-hovezim-a-knedlikem.html">Houbová omáčka s hovězím a knedlíkem</a> <span class="k">· 550 kcal (1 porce, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:42%;background:#E9A23B"></span><span style="width:32%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Houskové knedlíky"><a href="houskove-knedliky.html">Houskové knedlíky</a> <span class="k">· 396 kcal (4 plátky, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:78%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Jablkový závin"><a href="jablkovy-zavin.html">Jablkový závin</a> <span class="k">· 379 kcal (1 kus, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:29%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Koprová omáčka s hovězím a knedlíkem"><a href="koprova-omacka-s-hovezim-a-knedlikem.html">Koprová omáčka s hovězím a knedlíkem</a> <span class="k">· 609 kcal (1 porce, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:25%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:31%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Langoš"><a href="langos.html">Langoš</a> <span class="k">· 598 kcal (1 kus, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Palačinka se zavařeninou"><a href="palacinka-se-zavareninou.html">Palačinka se zavařeninou</a> <span class="k">· 199 kcal (1 kus, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Párek v rohlíku"><a href="parek-v-rohliku.html">Párek v rohlíku</a> <span class="k">· 317 kcal (1 kus, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Rajská omáčka s hovězím a knedlíkem"><a href="rajska-omacka-s-hovezim-a-knedlikem.html">Rajská omáčka s hovězím a knedlíkem</a> <span class="k">· 550 kcal (1 porce, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:43%;background:#E9A23B"></span><span style="width:33%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Rohlík"><a href="rohlik.html">Rohlík</a> <span class="k">· 130 kcal (1 kus, 43 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:72%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Škubánky s mákem"><a href="skubanky-s-makem.html">Škubánky s mákem</a> <span class="k">· 545 kcal (1 porce, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:41%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Smaženka"><a href="smazenka.html">Smaženka</a> <span class="k">· 357 kcal (1 kus, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:38%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Smažený sýr"><a href="smazeny-syr.html">Smažený sýr</a> <span class="k">· 461 kcal (1 kus, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:65%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Smažený sýr v housce"><a href="smazeny-syr-v-housce.html">Smažený sýr v housce</a> <span class="k">· 640 kcal (1 kus, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:50%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Svíčková na smetaně s knedlíkem"><a href="svickova-na-smetane-s-knedlikem.html">Svíčková na smetaně s knedlíkem</a> <span class="k">· 640 kcal (1 porce, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:43%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Tlačenka"><a href="tlacenka.html">Tlačenka</a> <span class="k">· 211 kcal (1 porce, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:32%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:68%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Základní potraviny</h2>
 <ul class="foodlist">
-<li><a href="arasidove-maslo.html">Arašídové máslo</a> <span class="k">· 190 kcal (1 lžíce, 32 g)</span></li>
-<li><a href="avokado.html">Avokádo</a> <span class="k">· 240 kcal (půlka, 100 g)</span></li>
-<li><a href="banan.html">Banán</a> <span class="k">· 105 kcal (1 kus, 120 g)</span></li>
-<li><a href="batat.html">Batát</a> <span class="k">· 115 kcal (1 kus, 130 g)</span></li>
-<li><a href="bily-chleb.html">Bílý chléb</a> <span class="k">· 70 kcal (1 plátek, 28 g)</span></li>
-<li><a href="bily-jogurt.html">Bílý jogurt</a> <span class="k">· 120 kcal (1 miska, 200 g)</span></li>
-<li><a href="boruvky.html">Borůvky</a> <span class="k">· 85 kcal (1 miska, 150 g)</span></li>
-<li><a href="brokolice.html">Brokolice</a> <span class="k">· 55 kcal (1 miska, 150 g)</span></li>
-<li><a href="cedar.html">Čedar</a> <span class="k">· 120 kcal (1 plátek, 30 g)</span></li>
-<li><a href="celozrnny-chleb.html">Celozrnný chléb</a> <span class="k">· 68 kcal (1 plátek, 28 g)</span></li>
-<li><a href="cerna-kava.html">Černá káva</a> <span class="k">· 2 kcal (1 šálek, 240 g)</span></li>
-<li><a href="feta.html">Feta</a> <span class="k">· 78 kcal (1 plátek, 30 g)</span></li>
-<li><a href="hovezi-mlete-maso.html">Hovězí mleté maso (15 % tuku)</a> <span class="k">· 250 kcal (1 porce, 100 g)</span></li>
-<li><a href="jablko.html">Jablko</a> <span class="k">· 80 kcal (1 kus, 160 g)</span></li>
-<li><a href="jahody.html">Jahody</a> <span class="k">· 50 kcal (1 miska, 150 g)</span></li>
-<li><a href="krevety.html">Krevety</a> <span class="k">· 120 kcal (1 porce, 120 g)</span></li>
-<li><a href="kruti-prsa.html">Krůtí prsa</a> <span class="k">· 160 kcal (1 porce, 150 g)</span></li>
-<li><a href="kureci-prsa.html">Kuřecí prsa (grilovaná)</a> <span class="k">· 195 kcal (1 porce, 150 g)</span></li>
-<li><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 šálek, 350 g)</span></li>
-<li><a href="mandle.html">Mandle</a> <span class="k">· 175 kcal (1 hrst, 30 g)</span></li>
-<li><a href="maslo.html">Máslo</a> <span class="k">· 72 kcal (1 lžíce, 10 g)</span></li>
-<li><a href="okurka.html">Okurka</a> <span class="k">· 16 kcal (1 kus, 100 g)</span></li>
-<li><a href="olivovy-olej.html">Olivový olej</a> <span class="k">· 120 kcal (1 lžíce, 14 g)</span></li>
-<li><a href="ovesne-vlocky.html">Ovesné vločky</a> <span class="k">· 190 kcal (1 miska, 50 g)</span></li>
-<li><a href="peceny-losos.html">Pečený losos</a> <span class="k">· 280 kcal (1 porce, 150 g)</span></li>
-<li><a href="plnotucne-mleko.html">Plnotučné mléko</a> <span class="k">· 120 kcal (1 sklenice, 200 g)</span></li>
-<li><a href="pomeranc.html">Pomeranč</a> <span class="k">· 70 kcal (1 kus, 150 g)</span></li>
-<li><a href="proteinovy-prasek.html">Proteinový prášek</a> <span class="k">· 120 kcal (1 odměrka, 30 g)</span></li>
-<li><a href="rajce.html">Rajče</a> <span class="k">· 22 kcal (1 kus, 120 g)</span></li>
-<li><a href="recky-jogurt.html">Řecký jogurt</a> <span class="k">· 130 kcal (1 miska, 170 g)</span></li>
-<li><a href="spenat.html">Špenát</a> <span class="k">· 23 kcal (1 miska, 100 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porce, 150 g)</span></li>
-<li><a href="tunak-v-konzerve.html">Tuňák v konzervě (ve vodě)</a> <span class="k">· 100 kcal (1 porce, 100 g)</span></li>
-<li><a href="varena-bila-ryze.html">Vařená bílá rýže</a> <span class="k">· 205 kcal (1 miska, 158 g)</span></li>
-<li><a href="varena-cizrna.html">Vařená cizrna</a> <span class="k">· 270 kcal (1 miska, 200 g)</span></li>
-<li><a href="varena-cocka.html">Vařená čočka</a> <span class="k">· 230 kcal (1 miska, 200 g)</span></li>
-<li><a href="varena-hneda-ryze.html">Vařená hnědá rýže</a> <span class="k">· 215 kcal (1 miska, 195 g)</span></li>
-<li><a href="varena-quinoa.html">Vařená quinoa</a> <span class="k">· 220 kcal (1 miska, 185 g)</span></li>
-<li><a href="varene-testoviny.html">Vařené těstoviny</a> <span class="k">· 220 kcal (1 miska, 140 g)</span></li>
-<li><a href="varene-vejce.html">Vařené vejce</a> <span class="k">· 78 kcal (1 kus, 50 g)</span></li>
-<li><a href="vareny-brambor.html">Vařený brambor</a> <span class="k">· 130 kcal (1 kus, 150 g)</span></li>
-<li><a href="vlasske-orechy.html">Vlašské ořechy</a> <span class="k">· 200 kcal (1 hrst, 30 g)</span></li>
+<li data-cat="fat" data-name="Arašídové máslo"><a href="arasidove-maslo.html">Arašídové máslo</a> <span class="k">· 190 kcal (1 lžíce, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Avokádo"><a href="avokado.html">Avokádo</a> <span class="k">· 240 kcal (půlka, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banán"><a href="banan.html">Banán</a> <span class="k">· 105 kcal (1 kus, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Batát"><a href="batat.html">Batát</a> <span class="k">· 115 kcal (1 kus, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Bílý chléb"><a href="bily-chleb.html">Bílý chléb</a> <span class="k">· 70 kcal (1 plátek, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Bílý jogurt"><a href="bily-jogurt.html">Bílý jogurt</a> <span class="k">· 120 kcal (1 miska, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Borůvky"><a href="boruvky.html">Borůvky</a> <span class="k">· 85 kcal (1 miska, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brokolice"><a href="brokolice.html">Brokolice</a> <span class="k">· 55 kcal (1 miska, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Čedar"><a href="cedar.html">Čedar</a> <span class="k">· 120 kcal (1 plátek, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Celozrnný chléb"><a href="celozrnny-chleb.html">Celozrnný chléb</a> <span class="k">· 68 kcal (1 plátek, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Černá káva"><a href="cerna-kava.html">Černá káva</a> <span class="k">· 2 kcal (1 šálek, 240 g)</span></li>
+<li data-cat="fat" data-name="Feta"><a href="feta.html">Feta</a> <span class="k">· 78 kcal (1 plátek, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Hovězí mleté maso (15 % tuku)"><a href="hovezi-mlete-maso.html">Hovězí mleté maso (15 % tuku)</a> <span class="k">· 250 kcal (1 porce, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jablko"><a href="jablko.html">Jablko</a> <span class="k">· 80 kcal (1 kus, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jahody"><a href="jahody.html">Jahody</a> <span class="k">· 50 kcal (1 miska, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Krevety"><a href="krevety.html">Krevety</a> <span class="k">· 120 kcal (1 porce, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Krůtí prsa"><a href="kruti-prsa.html">Krůtí prsa</a> <span class="k">· 160 kcal (1 porce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Kuřecí prsa (grilovaná)"><a href="kureci-prsa.html">Kuřecí prsa (grilovaná)</a> <span class="k">· 195 kcal (1 porce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Latte"><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 šálek, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Mandle"><a href="mandle.html">Mandle</a> <span class="k">· 175 kcal (1 hrst, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Máslo"><a href="maslo.html">Máslo</a> <span class="k">· 72 kcal (1 lžíce, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Okurka"><a href="okurka.html">Okurka</a> <span class="k">· 16 kcal (1 kus, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Olivový olej"><a href="olivovy-olej.html">Olivový olej</a> <span class="k">· 120 kcal (1 lžíce, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Ovesné vločky"><a href="ovesne-vlocky.html">Ovesné vločky</a> <span class="k">· 190 kcal (1 miska, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Pečený losos"><a href="peceny-losos.html">Pečený losos</a> <span class="k">· 280 kcal (1 porce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Plnotučné mléko"><a href="plnotucne-mleko.html">Plnotučné mléko</a> <span class="k">· 120 kcal (1 sklenice, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Pomeranč"><a href="pomeranc.html">Pomeranč</a> <span class="k">· 70 kcal (1 kus, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Proteinový prášek"><a href="proteinovy-prasek.html">Proteinový prášek</a> <span class="k">· 120 kcal (1 odměrka, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Rajče"><a href="rajce.html">Rajče</a> <span class="k">· 22 kcal (1 kus, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Řecký jogurt"><a href="recky-jogurt.html">Řecký jogurt</a> <span class="k">· 130 kcal (1 miska, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Špenát"><a href="spenat.html">Špenát</a> <span class="k">· 23 kcal (1 miska, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tuňák v konzervě (ve vodě)"><a href="tunak-v-konzerve.html">Tuňák v konzervě (ve vodě)</a> <span class="k">· 100 kcal (1 porce, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařená bílá rýže"><a href="varena-bila-ryze.html">Vařená bílá rýže</a> <span class="k">· 205 kcal (1 miska, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařená cizrna"><a href="varena-cizrna.html">Vařená cizrna</a> <span class="k">· 270 kcal (1 miska, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařená čočka"><a href="varena-cocka.html">Vařená čočka</a> <span class="k">· 230 kcal (1 miska, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařená hnědá rýže"><a href="varena-hneda-ryze.html">Vařená hnědá rýže</a> <span class="k">· 215 kcal (1 miska, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařená quinoa"><a href="varena-quinoa.html">Vařená quinoa</a> <span class="k">· 220 kcal (1 miska, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařené těstoviny"><a href="varene-testoviny.html">Vařené těstoviny</a> <span class="k">· 220 kcal (1 miska, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Vařené vejce"><a href="varene-vejce.html">Vařené vejce</a> <span class="k">· 78 kcal (1 kus, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vařený brambor"><a href="vareny-brambor.html">Vařený brambor</a> <span class="k">· 130 kcal (1 kus, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Vlašské ořechy"><a href="vlasske-orechy.html">Vlašské ořechy</a> <span class="k">· 200 kcal (1 hrst, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Hodnoty: typické odhady z veřejných databází složení potravin a z aplikace Pofu; liší se podle receptu a porce.</p>
 <div class="note"><p>Tato stránka slouží k obecné informaci a není lékařskou radou. Jste-li těhotná, kojíte, máte onemocnění nebo jste dříve měla poruchu příjmu potravy, proberte počítání kalorií se svým lékařem nebo nutričním terapeutem.</p></div>

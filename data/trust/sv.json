@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Mindre eller större portion",
-    "port_cols": ["Portion", "Kalorier", "Protein"],
-    "port_rows": ["En halv portion ({g} {u})", "Vanlig portion ({g} {u})", "En och en halv portion ({g} {u})"],
+    "port_cols": [
+      "Portion",
+      "Kalorier",
+      "Protein"
+    ],
+    "port_rows": [
+      "En halv portion ({g} {u})",
+      "Vanlig portion ({g} {u})",
+      "En och en halv portion ({g} {u})"
+    ],
     "h_split": "Varifrån kalorierna kommer",
     "split": "{p} % av kalorierna kommer från protein, {c} % från kolhydrater och {f} % från fett.",
-    "cat": {"fat": "Kort sagt: det mesta av kalorierna kommer från fett, så en liten ändring i mängd gör stor skillnad.", "prot": "Kort sagt: en bra proteinkälla.", "carb": "Kort sagt: det mesta av kalorierna kommer från kolhydrater.", "light": "Kort sagt: ett lätt livsmedel som mest består av vatten.", "mixed": "Kort sagt: en blandning av protein, kolhydrater och fett."},
+    "cat": {
+      "fat": "Kort sagt: det mesta av kalorierna kommer från fett, så en liten ändring i mängd gör stor skillnad.",
+      "prot": "Kort sagt: en bra proteinkälla.",
+      "carb": "Kort sagt: det mesta av kalorierna kommer från kolhydrater.",
+      "light": "Kort sagt: ett lätt livsmedel som mest består av vatten.",
+      "mixed": "Kort sagt: en blandning av protein, kolhydrater och fett."
+    },
     "ref": "En portion motsvarar ungefär {pct} % av en dag på 2 000 kcal, referensvärdet som används på livsmedelsetiketter.",
     "h_lighter": "Lättare alternativ i samma grupp",
     "per100": "per 100 {u}",
@@ -28,13 +42,42 @@
     "h1": "Så tar vi fram vårt innehåll och våra källor",
     "lede": "Vi vill att varje siffra på den här webbplatsen ska gå att kontrollera. Den här sidan förklarar vem som skriver den, varifrån värdena kommer och vad vi inte gör.",
     "sections": [
-      ["Vem som skriver", "<p>Pofu görs av Ali Gürkan Sevilmiş, en oberoende utvecklare. Guiderna, kalkylatorerna och livsmedelssidorna på den här webbplatsen skrivs och underhålls av honom, med hjälp av de publicerade källorna som listas nedan.</p><p>Ingen dietist eller läkare har granskat innehållet ännu. Det säger vi öppet i stället för att visa en granskningsstämpel för en granskning som inte har skett. Om du arbetar med nutrition och ser något som kan förbättras vill vi gärna höra från dig.</p>"],
-      ["Varifrån livsmedelsvärdena kommer", "<p>Kalorier, protein, kolhydrater och fett på livsmedelssidorna kommer från offentliga livsmedelsdatabaser och från livsmedelsdatabasen i Pofu-appen:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (USA:s jordbruksdepartement)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Nederländerna)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Livsmedelsverket)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Tjeckien)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italien)</li></ul><p>När en sida använder en post i en databas länkar den dit. Recept hemma och på restaurang varierar, så varje värde är en typisk uppskattning för den portion som visas, och varje sida säger det.</p>"],
-      ["Varifrån formlerna kommer", "<p>Kalkylatorerna använder samma regler som Pofu-appen, hämtade från publicerad forskning: Mifflin-St Jeor-ekvationen för vilometabolism (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), proteinintervall från <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, intervall för fett och kolhydrater från <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI-kategorier från <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Världshälsoorganisationen</a> och energin som behövs per kilo från <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Varje kalkylator listar sina källor och förklarar varje steg.</p><p>Vi föreslår aldrig mindre än 1 200 kcal per dag. Kalkylatorerna ber dig att inte använda ett kaloriunderskott om du är gravid eller ammar, och Pofu-appen sätter inget underskott när du anger det.</p>"],
-      ["Hur vi använder AI", "<p>Pofu-appen använder AI för att uppskatta en måltid utifrån ett foto. Varje uppskattning visar en säkerhetspoäng och kan justeras. På den här webbplatsen hjälper AI-verktyg oss att skriva utkast till texter och översätta dem från de engelska och turkiska originalen; utvecklaren kontrollerar siffrorna mot källorna ovan. Översättningarna har inte alla granskats av personer med språket som modersmål ännu; om en mening låter fel på ditt språk, berätta gärna för oss.</p>"],
-      ["Vad vi inte gör", "<ul><li>Vi ger inga medicinska råd eller diagnoser.</li><li>Pofu förutspår inte mens eller ägglossning och har ingen graviditetsspårning; den valfria cykelfunktionen använder bara ett datum som du anger.</li><li>Vi lovar inga viktnedgångsresultat och visar inga före- och efterbilder.</li><li>Vi publicerar inga falska recensioner eller betyg.</li><li>Våra jämförelsesidor är skrivna av dem som gör Pofu, och varje sida säger det.</li><li>Kalkylatorerna körs i din webbläsare; inget du skriver in skickas eller sparas.</li></ul>"],
-      ["Uppdateringar och rättelser", "<p>Varje sida visar när den senast uppdaterades. Vi går igenom sidorna när en källa ändras. Om du hittar ett fel, skriv till <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; vi kontrollerar det mot källan, rättar bekräftade fel och uppdaterar datumet på sidan.</p>"]
+      [
+        "Vem som skriver",
+        "<p>Pofu görs av Ali Gürkan Sevilmiş, en oberoende utvecklare. Guiderna, kalkylatorerna och livsmedelssidorna på den här webbplatsen skrivs och underhålls av honom, med hjälp av de publicerade källorna som listas nedan.</p><p>Ingen dietist eller läkare har granskat innehållet ännu. Det säger vi öppet i stället för att visa en granskningsstämpel för en granskning som inte har skett. Om du arbetar med nutrition och ser något som kan förbättras vill vi gärna höra från dig.</p>"
+      ],
+      [
+        "Varifrån livsmedelsvärdena kommer",
+        "<p>Kalorier, protein, kolhydrater och fett på livsmedelssidorna kommer från offentliga livsmedelsdatabaser och från livsmedelsdatabasen i Pofu-appen:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (USA:s jordbruksdepartement)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Nederländerna)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Livsmedelsverket)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Tjeckien)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italien)</li></ul><p>När en sida använder en post i en databas länkar den dit. Recept hemma och på restaurang varierar, så varje värde är en typisk uppskattning för den portion som visas, och varje sida säger det.</p>"
+      ],
+      [
+        "Varifrån formlerna kommer",
+        "<p>Kalkylatorerna använder samma regler som Pofu-appen, hämtade från publicerad forskning: Mifflin-St Jeor-ekvationen för vilometabolism (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), proteinintervall från <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, intervall för fett och kolhydrater från <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI-kategorier från <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Världshälsoorganisationen</a> och energin som behövs per kilo från <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Varje kalkylator listar sina källor och förklarar varje steg.</p><p>Vi föreslår aldrig mindre än 1 200 kcal per dag. Kalkylatorerna ber dig att inte använda ett kaloriunderskott om du är gravid eller ammar, och Pofu-appen sätter inget underskott när du anger det.</p>"
+      ],
+      [
+        "Hur vi använder AI",
+        "<p>Pofu-appen använder AI för att uppskatta en måltid utifrån ett foto. Varje uppskattning visar en säkerhetspoäng och kan justeras. På den här webbplatsen hjälper AI-verktyg oss att skriva utkast till texter och översätta dem från de engelska och turkiska originalen; utvecklaren kontrollerar siffrorna mot källorna ovan. Översättningarna har inte alla granskats av personer med språket som modersmål ännu; om en mening låter fel på ditt språk, berätta gärna för oss.</p>"
+      ],
+      [
+        "Vad vi inte gör",
+        "<ul><li>Vi ger inga medicinska råd eller diagnoser.</li><li>Pofu förutspår inte mens eller ägglossning och har ingen graviditetsspårning; den valfria cykelfunktionen använder bara ett datum som du anger.</li><li>Vi lovar inga viktnedgångsresultat och visar inga före- och efterbilder.</li><li>Vi publicerar inga falska recensioner eller betyg.</li><li>Våra jämförelsesidor är skrivna av dem som gör Pofu, och varje sida säger det.</li><li>Kalkylatorerna körs i din webbläsare; inget du skriver in skickas eller sparas.</li></ul>"
+      ],
+      [
+        "Uppdateringar och rättelser",
+        "<p>Varje sida visar när den senast uppdaterades. Vi går igenom sidorna när en källa ändras. Om du hittar ett fel, skriv till <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; vi kontrollerar det mot källan, rättar bekräftade fel och uppdaterar datumet på sidan.</p>"
+      ]
     ],
     "nav": "Innehåll och källor"
+  },
+  "ui": {
+    "toc": "På den här sidan",
+    "search": "Sök livsmedel",
+    "no_match": "Inga träffar.",
+    "f_all": "Alla",
+    "f_light": "Lätta",
+    "f_prot": "Proteinrika",
+    "f_carb": "Mest kolhydrater",
+    "f_fat": "Mest fett",
+    "f_mixed": "Blandade"
   }
 }

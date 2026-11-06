@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,68 +231,74 @@
 <h1>Wie viele Kalorien hat dein Essen?</h1>
 <p class="lede">Kalorien, Eiweiß, Kohlenhydrate und Fett pro Portion und pro 100 g für 52 Lebensmittel. Die Werte sind typische Schätzwerte aus der Pofu-App und schwanken je nach Rezept und Portion.</p>
 </section>
+<section class="fsearch" aria-label="Lebensmittel suchen">
+<input type="search" id="fq" placeholder="Lebensmittel suchen" aria-label="Lebensmittel suchen" autocomplete="off">
+<div class="chips" role="group" aria-label="Alle"><button type="button" data-cat="all" aria-pressed="true">Alle</button><button type="button" data-cat="light" aria-pressed="false">Leicht</button><button type="button" data-cat="prot" aria-pressed="false">Proteinreich</button><button type="button" data-cat="carb" aria-pressed="false">Vor allem Kohlenhydrate</button><button type="button" data-cat="fat" aria-pressed="false">Vor allem Fett</button><button type="button" data-cat="mixed" aria-pressed="false">Gemischt</button></div>
+<p class="nomatch" id="fnone" hidden>Keine passenden Lebensmittel.</p>
+</section>
 <section id="local">
 <h2>Gerichte</h2>
 <ul class="foodlist">
-<li><a href="bratwurst.html">Bratwurst</a> <span class="k">· 300 kcal (1 Stück, 100 g)</span></li>
-<li><a href="brezel.html">Brezel</a> <span class="k">· 340 kcal (1 Stück, 120 g)</span></li>
-<li><a href="currywurst.html">Currywurst</a> <span class="k">· 380 kcal (1 Portion, 150 g)</span></li>
-<li><a href="kartoffelsalat.html">Kartoffelsalat</a> <span class="k">· 190 kcal (1 Portion, 150 g)</span></li>
-<li><a href="kasespatzle.html">Käsespätzle</a> <span class="k">· 520 kcal (1 Portion, 250 g)</span></li>
-<li><a href="linsensuppe.html">Linsensuppe</a> <span class="k">· 160 kcal (1 Schale, 250 g)</span></li>
-<li><a href="musli-mit-joghurt.html">Müsli mit Joghurt</a> <span class="k">· 320 kcal (1 Schale, 200 g)</span></li>
-<li><a href="rinderroulade.html">Rinderroulade</a> <span class="k">· 380 kcal (1 Portion, 200 g)</span></li>
-<li><a href="sauerkraut.html">Sauerkraut</a> <span class="k">· 30 kcal (1 Portion, 150 g)</span></li>
-<li><a href="wiener-schnitzel.html">Wiener Schnitzel</a> <span class="k">· 430 kcal (1 Portion, 180 g)</span></li>
+<li data-cat="fat" data-name="Bratwurst"><a href="bratwurst.html">Bratwurst</a> <span class="k">· 300 kcal (1 Stück, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:81%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Brezel"><a href="brezel.html">Brezel</a> <span class="k">· 340 kcal (1 Stück, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:81%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Currywurst"><a href="currywurst.html">Currywurst</a> <span class="k">· 380 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:15%;background:#E9A23B"></span><span style="width:70%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kartoffelsalat"><a href="kartoffelsalat.html">Kartoffelsalat</a> <span class="k">· 190 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:46%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Käsespätzle"><a href="kasespatzle.html">Käsespätzle</a> <span class="k">· 520 kcal (1 Portion, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Linsensuppe"><a href="linsensuppe.html">Linsensuppe</a> <span class="k">· 160 kcal (1 Schale, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:60%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Müsli mit Joghurt"><a href="musli-mit-joghurt.html">Müsli mit Joghurt</a> <span class="k">· 320 kcal (1 Schale, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Rinderroulade"><a href="rinderroulade.html">Rinderroulade</a> <span class="k">· 380 kcal (1 Portion, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:34%;background:#DE5187"></span><span style="width:9%;background:#E9A23B"></span><span style="width:57%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Sauerkraut"><a href="sauerkraut.html">Sauerkraut</a> <span class="k">· 30 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:19%;background:#DE5187"></span><span style="width:75%;background:#E9A23B"></span><span style="width:6%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Wiener Schnitzel"><a href="wiener-schnitzel.html">Wiener Schnitzel</a> <span class="k">· 430 kcal (1 Portion, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:20%;background:#E9A23B"></span><span style="width:52%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Grundnahrungsmittel</h2>
 <ul class="foodlist">
-<li><a href="apfel.html">Apfel</a> <span class="k">· 80 kcal (1 Stück, 160 g)</span></li>
-<li><a href="avocado.html">Avocado</a> <span class="k">· 240 kcal (Halbe, 100 g)</span></li>
-<li><a href="banane.html">Banane</a> <span class="k">· 105 kcal (1 Stück, 120 g)</span></li>
-<li><a href="brokkoli.html">Brokkoli</a> <span class="k">· 55 kcal (1 Schale, 150 g)</span></li>
-<li><a href="butter.html">Butter</a> <span class="k">· 72 kcal (1 EL, 10 g)</span></li>
-<li><a href="cheddar.html">Cheddar</a> <span class="k">· 120 kcal (1 Scheibe, 30 g)</span></li>
-<li><a href="erdbeeren.html">Erdbeeren</a> <span class="k">· 50 kcal (1 Schale, 150 g)</span></li>
-<li><a href="erdnussbutter.html">Erdnussbutter</a> <span class="k">· 190 kcal (1 EL, 32 g)</span></li>
-<li><a href="feta.html">Feta</a> <span class="k">· 78 kcal (1 Scheibe, 30 g)</span></li>
-<li><a href="garnelen.html">Garnelen</a> <span class="k">· 120 kcal (1 Portion, 120 g)</span></li>
-<li><a href="gekochte-kartoffel.html">Gekochte Kartoffel</a> <span class="k">· 130 kcal (1 Stück, 150 g)</span></li>
-<li><a href="gekochte-kichererbsen.html">Gekochte Kichererbsen</a> <span class="k">· 270 kcal (1 Schale, 200 g)</span></li>
-<li><a href="gekochte-linsen.html">Gekochte Linsen</a> <span class="k">· 230 kcal (1 Schale, 200 g)</span></li>
-<li><a href="gekochte-nudeln.html">Gekochte Nudeln</a> <span class="k">· 220 kcal (1 Schale, 140 g)</span></li>
-<li><a href="gekochte-quinoa.html">Gekochte Quinoa</a> <span class="k">· 220 kcal (1 Schale, 185 g)</span></li>
-<li><a href="gekochter-vollkornreis.html">Gekochter Vollkornreis</a> <span class="k">· 215 kcal (1 Schale, 195 g)</span></li>
-<li><a href="gekochter-weisser-reis.html">Gekochter weißer Reis</a> <span class="k">· 205 kcal (1 Schale, 158 g)</span></li>
-<li><a href="gekochtes-ei.html">Gekochtes Ei</a> <span class="k">· 78 kcal (1 Stück, 50 g)</span></li>
-<li><a href="griechischer-joghurt.html">Griechischer Joghurt</a> <span class="k">· 130 kcal (1 Schale, 170 g)</span></li>
-<li><a href="gurke.html">Gurke</a> <span class="k">· 16 kcal (1 Stück, 100 g)</span></li>
-<li><a href="haferflocken.html">Haferflocken</a> <span class="k">· 190 kcal (1 Schale, 50 g)</span></li>
-<li><a href="hahnchenbrust-gegrillt.html">Hähnchenbrust (gegrillt)</a> <span class="k">· 195 kcal (1 Portion, 150 g)</span></li>
-<li><a href="heidelbeeren.html">Heidelbeeren</a> <span class="k">· 85 kcal (1 Schale, 150 g)</span></li>
-<li><a href="lachs-gebacken.html">Lachs (gebacken)</a> <span class="k">· 280 kcal (1 Portion, 150 g)</span></li>
-<li><a href="latte-macchiato.html">Latte Macchiato</a> <span class="k">· 150 kcal (1 Tasse, 350 g)</span></li>
-<li><a href="mandeln.html">Mandeln</a> <span class="k">· 175 kcal (1 Handvoll, 30 g)</span></li>
-<li><a href="naturjoghurt.html">Naturjoghurt</a> <span class="k">· 120 kcal (1 Schale, 200 g)</span></li>
-<li><a href="olivenol.html">Olivenöl</a> <span class="k">· 120 kcal (1 EL, 14 g)</span></li>
-<li><a href="orange.html">Orange</a> <span class="k">· 70 kcal (1 Stück, 150 g)</span></li>
-<li><a href="proteinpulver.html">Proteinpulver</a> <span class="k">· 120 kcal (1 Messlöffel, 30 g)</span></li>
-<li><a href="putenbrust.html">Putenbrust</a> <span class="k">· 160 kcal (1 Portion, 150 g)</span></li>
-<li><a href="rinderhackfleisch-15-fett.html">Rinderhackfleisch (15% Fett)</a> <span class="k">· 250 kcal (1 Portion, 100 g)</span></li>
-<li><a href="schwarzer-kaffee.html">Schwarzer Kaffee</a> <span class="k">· 2 kcal (1 Tasse, 240 g)</span></li>
-<li><a href="spinat.html">Spinat</a> <span class="k">· 23 kcal (1 Schale, 100 g)</span></li>
-<li><a href="susskartoffel.html">Süßkartoffel</a> <span class="k">· 115 kcal (1 Stück, 130 g)</span></li>
-<li><a href="thunfisch-dose-in-wasser.html">Thunfisch (Dose, in Wasser)</a> <span class="k">· 100 kcal (1 Portion, 100 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 Portion, 150 g)</span></li>
-<li><a href="tomate.html">Tomate</a> <span class="k">· 22 kcal (1 Stück, 120 g)</span></li>
-<li><a href="vollkornbrot.html">Vollkornbrot</a> <span class="k">· 68 kcal (1 Scheibe, 28 g)</span></li>
-<li><a href="vollmilch.html">Vollmilch</a> <span class="k">· 120 kcal (1 Glas, 200 g)</span></li>
-<li><a href="walnusse.html">Walnüsse</a> <span class="k">· 200 kcal (1 Handvoll, 30 g)</span></li>
-<li><a href="weissbrot.html">Weißbrot</a> <span class="k">· 70 kcal (1 Scheibe, 28 g)</span></li>
+<li data-cat="light" data-name="Apfel"><a href="apfel.html">Apfel</a> <span class="k">· 80 kcal (1 Stück, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Avocado"><a href="avocado.html">Avocado</a> <span class="k">· 240 kcal (Halbe, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banane"><a href="banane.html">Banane</a> <span class="k">· 105 kcal (1 Stück, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brokkoli"><a href="brokkoli.html">Brokkoli</a> <span class="k">· 55 kcal (1 Schale, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Butter"><a href="butter.html">Butter</a> <span class="k">· 72 kcal (1 EL, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Cheddar"><a href="cheddar.html">Cheddar</a> <span class="k">· 120 kcal (1 Scheibe, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Erdbeeren"><a href="erdbeeren.html">Erdbeeren</a> <span class="k">· 50 kcal (1 Schale, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Erdnussbutter"><a href="erdnussbutter.html">Erdnussbutter</a> <span class="k">· 190 kcal (1 EL, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Feta"><a href="feta.html">Feta</a> <span class="k">· 78 kcal (1 Scheibe, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Garnelen"><a href="garnelen.html">Garnelen</a> <span class="k">· 120 kcal (1 Portion, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochte Kartoffel"><a href="gekochte-kartoffel.html">Gekochte Kartoffel</a> <span class="k">· 130 kcal (1 Stück, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochte Kichererbsen"><a href="gekochte-kichererbsen.html">Gekochte Kichererbsen</a> <span class="k">· 270 kcal (1 Schale, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochte Linsen"><a href="gekochte-linsen.html">Gekochte Linsen</a> <span class="k">· 230 kcal (1 Schale, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochte Nudeln"><a href="gekochte-nudeln.html">Gekochte Nudeln</a> <span class="k">· 220 kcal (1 Schale, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochte Quinoa"><a href="gekochte-quinoa.html">Gekochte Quinoa</a> <span class="k">· 220 kcal (1 Schale, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochter Vollkornreis"><a href="gekochter-vollkornreis.html">Gekochter Vollkornreis</a> <span class="k">· 215 kcal (1 Schale, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Gekochter weißer Reis"><a href="gekochter-weisser-reis.html">Gekochter weißer Reis</a> <span class="k">· 205 kcal (1 Schale, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Gekochtes Ei"><a href="gekochtes-ei.html">Gekochtes Ei</a> <span class="k">· 78 kcal (1 Stück, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Griechischer Joghurt"><a href="griechischer-joghurt.html">Griechischer Joghurt</a> <span class="k">· 130 kcal (1 Schale, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Gurke"><a href="gurke.html">Gurke</a> <span class="k">· 16 kcal (1 Stück, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Haferflocken"><a href="haferflocken.html">Haferflocken</a> <span class="k">· 190 kcal (1 Schale, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Hähnchenbrust (gegrillt)"><a href="hahnchenbrust-gegrillt.html">Hähnchenbrust (gegrillt)</a> <span class="k">· 195 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Heidelbeeren"><a href="heidelbeeren.html">Heidelbeeren</a> <span class="k">· 85 kcal (1 Schale, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Lachs (gebacken)"><a href="lachs-gebacken.html">Lachs (gebacken)</a> <span class="k">· 280 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Latte Macchiato"><a href="latte-macchiato.html">Latte Macchiato</a> <span class="k">· 150 kcal (1 Tasse, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Mandeln"><a href="mandeln.html">Mandeln</a> <span class="k">· 175 kcal (1 Handvoll, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Naturjoghurt"><a href="naturjoghurt.html">Naturjoghurt</a> <span class="k">· 120 kcal (1 Schale, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Olivenöl"><a href="olivenol.html">Olivenöl</a> <span class="k">· 120 kcal (1 EL, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Orange"><a href="orange.html">Orange</a> <span class="k">· 70 kcal (1 Stück, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Proteinpulver"><a href="proteinpulver.html">Proteinpulver</a> <span class="k">· 120 kcal (1 Messlöffel, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Putenbrust"><a href="putenbrust.html">Putenbrust</a> <span class="k">· 160 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Rinderhackfleisch (15% Fett)"><a href="rinderhackfleisch-15-fett.html">Rinderhackfleisch (15% Fett)</a> <span class="k">· 250 kcal (1 Portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Schwarzer Kaffee"><a href="schwarzer-kaffee.html">Schwarzer Kaffee</a> <span class="k">· 2 kcal (1 Tasse, 240 g)</span></li>
+<li data-cat="light" data-name="Spinat"><a href="spinat.html">Spinat</a> <span class="k">· 23 kcal (1 Schale, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Süßkartoffel"><a href="susskartoffel.html">Süßkartoffel</a> <span class="k">· 115 kcal (1 Stück, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Thunfisch (Dose, in Wasser)"><a href="thunfisch-dose-in-wasser.html">Thunfisch (Dose, in Wasser)</a> <span class="k">· 100 kcal (1 Portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 Portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tomate"><a href="tomate.html">Tomate</a> <span class="k">· 22 kcal (1 Stück, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Vollkornbrot"><a href="vollkornbrot.html">Vollkornbrot</a> <span class="k">· 68 kcal (1 Scheibe, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Vollmilch"><a href="vollmilch.html">Vollmilch</a> <span class="k">· 120 kcal (1 Glas, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Walnüsse"><a href="walnusse.html">Walnüsse</a> <span class="k">· 200 kcal (1 Handvoll, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Weißbrot"><a href="weissbrot.html">Weißbrot</a> <span class="k">· 70 kcal (1 Scheibe, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Werte: typische Schätzwerte, wie sie in der Pofu-App verwendet werden; sie schwanken je nach Rezept und Portion.</p>
 <div class="note"><p>Diese Seite dient der allgemeinen Information und ist keine medizinische Beratung. Wenn du schwanger bist, stillst, eine Erkrankung hast oder früher eine Essstörung hattest, sprich vor dem Kalorienzählen mit deiner Ärztin, deinem Arzt oder einer Ernährungsberatung.</p></div>

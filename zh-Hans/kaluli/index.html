@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,78 +231,84 @@
 <h1>你吃的东西有多少热量？</h1>
 <p class="lede">收录 62 种食物，列出每份和每 100 g 的热量、蛋白质、碳水化合物和脂肪。数值为一般典型估算值，会因做法和分量而异。</p>
 </section>
+<section class="fsearch" aria-label="搜索食物">
+<input type="search" id="fq" placeholder="搜索食物" aria-label="搜索食物" autocomplete="off">
+<div class="chips" role="group" aria-label="全部"><button type="button" data-cat="all" aria-pressed="true">全部</button><button type="button" data-cat="light" aria-pressed="false">清淡</button><button type="button" data-cat="prot" aria-pressed="false">高蛋白</button><button type="button" data-cat="carb" aria-pressed="false">以碳水为主</button><button type="button" data-cat="fat" aria-pressed="false">以脂肪为主</button><button type="button" data-cat="mixed" aria-pressed="false">混合</button></div>
+<p class="nomatch" id="fnone" hidden>没有匹配的食物。</p>
+</section>
 <section id="local">
 <h2>热门菜肴</h2>
 <ul class="foodlist">
-<li><a href="bai-zhou.html">白粥</a> <span class="k">· 99 kcal (1碗, 255 g)</span></li>
-<li><a href="beijing-kaoya.html">北京烤鸭</a> <span class="k">· 154 kcal (1份, 100 g)</span></li>
-<li><a href="bobing.html">薄饼</a> <span class="k">· 116 kcal (2张, 56 g)</span></li>
-<li><a href="chaofan.html">炒饭</a> <span class="k">· 435 kcal (1碗, 250 g)</span></li>
-<li><a href="danhua-tang.html">蛋花汤</a> <span class="k">· 66 kcal (1碗, 245 g)</span></li>
-<li><a href="gongbao-jiding.html">宫保鸡丁</a> <span class="k">· 322 kcal (1盘, 250 g)</span></li>
-<li><a href="guotie.html">锅贴</a> <span class="k">· 288 kcal (6个, 150 g)</span></li>
-<li><a href="huntun-tang.html">馄饨汤</a> <span class="k">· 99 kcal (1碗, 300 g)</span></li>
-<li><a href="jirou-chaofan.html">鸡肉炒饭</a> <span class="k">· 432 kcal (1碗, 250 g)</span></li>
-<li><a href="mi-gaodian.html">米粉糕点</a> <span class="k">· 169 kcal (1块, 70 g)</span></li>
-<li><a href="muxu-rou.html">木须肉</a> <span class="k">· 230 kcal (1份, 150 g)</span></li>
-<li><a href="rou-baozi.html">肉包子</a> <span class="k">· 273 kcal (1个, 100 g)</span></li>
-<li><a href="rou-zhou.html">肉粥</a> <span class="k">· 148 kcal (1碗, 255 g)</span></li>
-<li><a href="su-baozi.html">素包子</a> <span class="k">· 268 kcal (1个, 100 g)</span></li>
-<li><a href="suanla-tang.html">酸辣汤</a> <span class="k">· 96 kcal (1碗, 245 g)</span></li>
-<li><a href="tangcu-rou.html">糖醋肉</a> <span class="k">· 520 kcal (1盘, 200 g)</span></li>
-<li><a href="xilanhua-chao-niurou.html">西兰花炒牛肉</a> <span class="k">· 320 kcal (1盘, 200 g)</span></li>
-<li><a href="zheng-jiaozi.html">蒸饺</a> <span class="k">· 226 kcal (8个, 200 g)</span></li>
-<li><a href="zhurou-chaomian.html">猪肉炒面</a> <span class="k">· 358 kcal (1盘, 250 g)</span></li>
-<li><a href="zhurou-laomian.html">猪肉捞面</a> <span class="k">· 414 kcal (1盘, 300 g)</span></li>
+<li data-cat="light" data-name="白粥"><a href="bai-zhou.html">白粥</a> <span class="k">· 99 kcal (1碗, 255 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="北京烤鸭"><a href="beijing-kaoya.html">北京烤鸭</a> <span class="k">· 154 kcal (1份, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:69%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="薄饼"><a href="bobing.html">薄饼</a> <span class="k">· 116 kcal (2张, 56 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="炒饭"><a href="chaofan.html">炒饭</a> <span class="k">· 435 kcal (1碗, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:75%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="蛋花汤"><a href="danhua-tang.html">蛋花汤</a> <span class="k">· 66 kcal (1碗, 245 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:63%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="宫保鸡丁"><a href="gongbao-jiding.html">宫保鸡丁</a> <span class="k">· 322 kcal (1盘, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:21%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="锅贴"><a href="guotie.html">锅贴</a> <span class="k">· 288 kcal (6个, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:29%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="馄饨汤"><a href="huntun-tang.html">馄饨汤</a> <span class="k">· 99 kcal (1碗, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:36%;background:#E9A23B"></span><span style="width:35%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="鸡肉炒饭"><a href="jirou-chaofan.html">鸡肉炒饭</a> <span class="k">· 432 kcal (1碗, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:64%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="米粉糕点"><a href="mi-gaodian.html">米粉糕点</a> <span class="k">· 169 kcal (1块, 70 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:74%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="木须肉"><a href="muxu-rou.html">木须肉</a> <span class="k">· 230 kcal (1份, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:63%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="肉包子"><a href="rou-baozi.html">肉包子</a> <span class="k">· 273 kcal (1个, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:58%;background:#E9A23B"></span><span style="width:26%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="肉粥"><a href="rou-zhou.html">肉粥</a> <span class="k">· 148 kcal (1碗, 255 g)</span><span class="mbar" aria-hidden="true"><span style="width:31%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="素包子"><a href="su-baozi.html">素包子</a> <span class="k">· 268 kcal (1个, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:10%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="酸辣汤"><a href="suanla-tang.html">酸辣汤</a> <span class="k">· 96 kcal (1碗, 245 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:45%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="糖醋肉"><a href="tangcu-rou.html">糖醋肉</a> <span class="k">· 520 kcal (1盘, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="西兰花炒牛肉"><a href="xilanhua-chao-niurou.html">西兰花炒牛肉</a> <span class="k">· 320 kcal (1盘, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:13%;background:#E9A23B"></span><span style="width:61%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="蒸饺"><a href="zheng-jiaozi.html">蒸饺</a> <span class="k">· 226 kcal (8个, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="猪肉炒面"><a href="zhurou-chaomian.html">猪肉炒面</a> <span class="k">· 358 kcal (1盘, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="猪肉捞面"><a href="zhurou-laomian.html">猪肉捞面</a> <span class="k">· 414 kcal (1盘, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:25%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>日常主食</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">杏仁</a> <span class="k">· 175 kcal (一把, 30 g)</span></li>
-<li><a href="apple.html">苹果</a> <span class="k">· 80 kcal (1个, 160 g)</span></li>
-<li><a href="avocado.html">牛油果</a> <span class="k">· 240 kcal (半个, 100 g)</span></li>
-<li><a href="baked-salmon.html">烤三文鱼</a> <span class="k">· 280 kcal (1份, 150 g)</span></li>
-<li><a href="banana.html">香蕉</a> <span class="k">· 105 kcal (1个, 120 g)</span></li>
-<li><a href="black-coffee.html">黑咖啡</a> <span class="k">· 2 kcal (1杯, 240 g)</span></li>
-<li><a href="blueberries.html">蓝莓</a> <span class="k">· 85 kcal (1碗, 150 g)</span></li>
-<li><a href="boiled-egg.html">煮鸡蛋</a> <span class="k">· 78 kcal (1个, 50 g)</span></li>
-<li><a href="boiled-potato.html">煮土豆</a> <span class="k">· 130 kcal (1个, 150 g)</span></li>
-<li><a href="broccoli.html">西兰花</a> <span class="k">· 55 kcal (1碗, 150 g)</span></li>
-<li><a href="butter.html">黄油</a> <span class="k">· 72 kcal (1汤匙, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">水浸金枪鱼罐头</a> <span class="k">· 100 kcal (1份, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">切达奶酪</a> <span class="k">· 120 kcal (1片, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">糙米饭</a> <span class="k">· 215 kcal (1碗, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">煮鹰嘴豆</a> <span class="k">· 270 kcal (1碗, 200 g)</span></li>
-<li><a href="cooked-lentils.html">煮扁豆</a> <span class="k">· 230 kcal (1碗, 200 g)</span></li>
-<li><a href="cooked-pasta.html">煮意大利面</a> <span class="k">· 220 kcal (1碗, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">煮藜麦</a> <span class="k">· 220 kcal (1碗, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">白米饭</a> <span class="k">· 205 kcal (1碗, 158 g)</span></li>
-<li><a href="cucumber.html">黄瓜</a> <span class="k">· 16 kcal (1个, 100 g)</span></li>
-<li><a href="feta-cheese.html">菲达奶酪</a> <span class="k">· 78 kcal (1片, 30 g)</span></li>
-<li><a href="greek-yogurt.html">希腊酸奶</a> <span class="k">· 130 kcal (1碗, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">烤鸡胸肉</a> <span class="k">· 195 kcal (1份, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">牛肉末（15%脂肪）</a> <span class="k">· 250 kcal (1份, 100 g)</span></li>
-<li><a href="latte.html">拿铁</a> <span class="k">· 150 kcal (1杯, 350 g)</span></li>
-<li><a href="oatmeal.html">燕麦片</a> <span class="k">· 190 kcal (1碗, 50 g)</span></li>
-<li><a href="olive-oil.html">橄榄油</a> <span class="k">· 120 kcal (1汤匙, 14 g)</span></li>
-<li><a href="orange.html">橙子</a> <span class="k">· 70 kcal (1个, 150 g)</span></li>
-<li><a href="peanut-butter.html">花生酱</a> <span class="k">· 190 kcal (1汤匙, 32 g)</span></li>
-<li><a href="plain-yogurt.html">原味酸奶</a> <span class="k">· 120 kcal (1碗, 200 g)</span></li>
-<li><a href="protein-powder-1-scoop.html">蛋白粉</a> <span class="k">· 120 kcal (1勺, 30 g)</span></li>
-<li><a href="shrimp.html">虾</a> <span class="k">· 120 kcal (1份, 120 g)</span></li>
-<li><a href="spinach.html">菠菜</a> <span class="k">· 23 kcal (1碗, 100 g)</span></li>
-<li><a href="strawberries.html">草莓</a> <span class="k">· 50 kcal (1碗, 150 g)</span></li>
-<li><a href="sweet-potato.html">红薯</a> <span class="k">· 115 kcal (1个, 130 g)</span></li>
-<li><a href="tofu.html">豆腐</a> <span class="k">· 145 kcal (1份, 150 g)</span></li>
-<li><a href="tomato.html">番茄</a> <span class="k">· 22 kcal (1个, 120 g)</span></li>
-<li><a href="turkey-breast.html">火鸡胸肉</a> <span class="k">· 160 kcal (1份, 150 g)</span></li>
-<li><a href="walnuts.html">核桃</a> <span class="k">· 200 kcal (一把, 30 g)</span></li>
-<li><a href="white-bread.html">白面包</a> <span class="k">· 70 kcal (1片, 28 g)</span></li>
-<li><a href="whole-milk.html">全脂牛奶</a> <span class="k">· 120 kcal (1杯, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">全麦面包</a> <span class="k">· 68 kcal (1片, 28 g)</span></li>
+<li data-cat="fat" data-name="杏仁"><a href="almonds.html">杏仁</a> <span class="k">· 175 kcal (一把, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="苹果"><a href="apple.html">苹果</a> <span class="k">· 80 kcal (1个, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="牛油果"><a href="avocado.html">牛油果</a> <span class="k">· 240 kcal (半个, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="烤三文鱼"><a href="baked-salmon.html">烤三文鱼</a> <span class="k">· 280 kcal (1份, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="香蕉"><a href="banana.html">香蕉</a> <span class="k">· 105 kcal (1个, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="黑咖啡"><a href="black-coffee.html">黑咖啡</a> <span class="k">· 2 kcal (1杯, 240 g)</span></li>
+<li data-cat="light" data-name="蓝莓"><a href="blueberries.html">蓝莓</a> <span class="k">· 85 kcal (1碗, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="煮鸡蛋"><a href="boiled-egg.html">煮鸡蛋</a> <span class="k">· 78 kcal (1个, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="煮土豆"><a href="boiled-potato.html">煮土豆</a> <span class="k">· 130 kcal (1个, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="西兰花"><a href="broccoli.html">西兰花</a> <span class="k">· 55 kcal (1碗, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="黄油"><a href="butter.html">黄油</a> <span class="k">· 72 kcal (1汤匙, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="水浸金枪鱼罐头"><a href="canned-tuna-in-water.html">水浸金枪鱼罐头</a> <span class="k">· 100 kcal (1份, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="切达奶酪"><a href="cheddar-cheese.html">切达奶酪</a> <span class="k">· 120 kcal (1片, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="糙米饭"><a href="cooked-brown-rice.html">糙米饭</a> <span class="k">· 215 kcal (1碗, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="煮鹰嘴豆"><a href="cooked-chickpeas.html">煮鹰嘴豆</a> <span class="k">· 270 kcal (1碗, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="煮扁豆"><a href="cooked-lentils.html">煮扁豆</a> <span class="k">· 230 kcal (1碗, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="煮意大利面"><a href="cooked-pasta.html">煮意大利面</a> <span class="k">· 220 kcal (1碗, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="煮藜麦"><a href="cooked-quinoa.html">煮藜麦</a> <span class="k">· 220 kcal (1碗, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="白米饭"><a href="cooked-white-rice.html">白米饭</a> <span class="k">· 205 kcal (1碗, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="黄瓜"><a href="cucumber.html">黄瓜</a> <span class="k">· 16 kcal (1个, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="菲达奶酪"><a href="feta-cheese.html">菲达奶酪</a> <span class="k">· 78 kcal (1片, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="希腊酸奶"><a href="greek-yogurt.html">希腊酸奶</a> <span class="k">· 130 kcal (1碗, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="烤鸡胸肉"><a href="grilled-chicken-breast.html">烤鸡胸肉</a> <span class="k">· 195 kcal (1份, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="牛肉末（15%脂肪）"><a href="ground-beef-15-fat.html">牛肉末（15%脂肪）</a> <span class="k">· 250 kcal (1份, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="拿铁"><a href="latte.html">拿铁</a> <span class="k">· 150 kcal (1杯, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="燕麦片"><a href="oatmeal.html">燕麦片</a> <span class="k">· 190 kcal (1碗, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="橄榄油"><a href="olive-oil.html">橄榄油</a> <span class="k">· 120 kcal (1汤匙, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="橙子"><a href="orange.html">橙子</a> <span class="k">· 70 kcal (1个, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="花生酱"><a href="peanut-butter.html">花生酱</a> <span class="k">· 190 kcal (1汤匙, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="原味酸奶"><a href="plain-yogurt.html">原味酸奶</a> <span class="k">· 120 kcal (1碗, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="蛋白粉"><a href="protein-powder-1-scoop.html">蛋白粉</a> <span class="k">· 120 kcal (1勺, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="虾"><a href="shrimp.html">虾</a> <span class="k">· 120 kcal (1份, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="菠菜"><a href="spinach.html">菠菜</a> <span class="k">· 23 kcal (1碗, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="草莓"><a href="strawberries.html">草莓</a> <span class="k">· 50 kcal (1碗, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="红薯"><a href="sweet-potato.html">红薯</a> <span class="k">· 115 kcal (1个, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="豆腐"><a href="tofu.html">豆腐</a> <span class="k">· 145 kcal (1份, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="番茄"><a href="tomato.html">番茄</a> <span class="k">· 22 kcal (1个, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="火鸡胸肉"><a href="turkey-breast.html">火鸡胸肉</a> <span class="k">· 160 kcal (1份, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="核桃"><a href="walnuts.html">核桃</a> <span class="k">· 200 kcal (一把, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="白面包"><a href="white-bread.html">白面包</a> <span class="k">· 70 kcal (1片, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="全脂牛奶"><a href="whole-milk.html">全脂牛奶</a> <span class="k">· 120 kcal (1杯, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="全麦面包"><a href="whole-wheat-bread.html">全麦面包</a> <span class="k">· 68 kcal (1片, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">数值为一般典型估算值，会因做法和分量而异。有出处的会附上链接。</p>
 <div class="note"><p>本页面仅提供一般性信息，不构成医疗建议。如果你正处于孕期或哺乳期、患有疾病或有进食障碍史，请在开始计算热量之前咨询医生或营养师。</p></div>

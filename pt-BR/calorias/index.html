@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,65 +231,71 @@
 <h1>Quantas calorias tem a sua comida?</h1>
 <p class="lede">Calorias, proteína, carboidratos e gordura por porção e por 100 g para 49 alimentos. Os valores são estimativas típicas usadas no app Pofu e variam conforme a receita e a porção.</p>
 </section>
+<section class="fsearch" aria-label="Buscar alimentos">
+<input type="search" id="fq" placeholder="Buscar alimentos" aria-label="Buscar alimentos" autocomplete="off">
+<div class="chips" role="group" aria-label="Todos"><button type="button" data-cat="all" aria-pressed="true">Todos</button><button type="button" data-cat="light" aria-pressed="false">Leve</button><button type="button" data-cat="prot" aria-pressed="false">Rico em proteína</button><button type="button" data-cat="carb" aria-pressed="false">Mais carboidratos</button><button type="button" data-cat="fat" aria-pressed="false">Mais gordura</button><button type="button" data-cat="mixed" aria-pressed="false">Misto</button></div>
+<p class="nomatch" id="fnone" hidden>Nenhum alimento encontrado.</p>
+</section>
 <section id="local">
 <h2>Pratos</h2>
 <ul class="foodlist">
-<li><a href="acai-na-tigela.html">Açaí na tigela</a> <span class="k">· 320 kcal (1 tigela, 300 g)</span></li>
-<li><a href="arroz-e-feijao.html">Arroz e feijão</a> <span class="k">· 340 kcal (1 porção, 300 g)</span></li>
-<li><a href="bacalhau.html">Bacalhau</a> <span class="k">· 220 kcal (1 porção, 150 g)</span></li>
-<li><a href="brigadeiro.html">Brigadeiro</a> <span class="k">· 110 kcal (1 unidade, 25 g)</span></li>
-<li><a href="coxinha.html">Coxinha</a> <span class="k">· 240 kcal (1 unidade, 90 g)</span></li>
-<li><a href="feijoada.html">Feijoada</a> <span class="k">· 450 kcal (1 porção, 300 g)</span></li>
-<li><a href="pao-de-queijo.html">Pão de queijo</a> <span class="k">· 90 kcal (1 unidade, 30 g)</span></li>
+<li data-cat="carb" data-name="Açaí na tigela"><a href="acai-na-tigela.html">Açaí na tigela</a> <span class="k">· 320 kcal (1 tigela, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:74%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Arroz e feijão"><a href="arroz-e-feijao.html">Arroz e feijão</a> <span class="k">· 340 kcal (1 porção, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Bacalhau"><a href="bacalhau.html">Bacalhau</a> <span class="k">· 220 kcal (1 porção, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:59%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Brigadeiro"><a href="brigadeiro.html">Brigadeiro</a> <span class="k">· 110 kcal (1 unidade, 25 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:60%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Coxinha"><a href="coxinha.html">Coxinha</a> <span class="k">· 240 kcal (1 unidade, 90 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Feijoada"><a href="feijoada.html">Feijoada</a> <span class="k">· 450 kcal (1 porção, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:32%;background:#E9A23B"></span><span style="width:42%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Pão de queijo"><a href="pao-de-queijo.html">Pão de queijo</a> <span class="k">· 90 kcal (1 unidade, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Alimentos básicos</h2>
 <ul class="foodlist">
-<li><a href="abacate.html">Abacate</a> <span class="k">· 240 kcal (Metade, 100 g)</span></li>
-<li><a href="amendoas.html">Amêndoas</a> <span class="k">· 175 kcal (1 punhado, 30 g)</span></li>
-<li><a href="arroz-branco-cozido.html">Arroz branco cozido</a> <span class="k">· 205 kcal (1 tigela, 158 g)</span></li>
-<li><a href="arroz-integral-cozido.html">Arroz integral cozido</a> <span class="k">· 215 kcal (1 tigela, 195 g)</span></li>
-<li><a href="atum-em-lata-em-agua.html">Atum em lata (em água)</a> <span class="k">· 100 kcal (1 porção, 100 g)</span></li>
-<li><a href="aveia.html">Aveia</a> <span class="k">· 190 kcal (1 tigela, 50 g)</span></li>
-<li><a href="azeite-de-oliva.html">Azeite de oliva</a> <span class="k">· 120 kcal (1 colher de sopa, 14 g)</span></li>
-<li><a href="banana.html">Banana</a> <span class="k">· 105 kcal (1 unidade, 120 g)</span></li>
-<li><a href="batata-cozida.html">Batata cozida</a> <span class="k">· 130 kcal (1 unidade, 150 g)</span></li>
-<li><a href="batata-doce.html">Batata-doce</a> <span class="k">· 115 kcal (1 unidade, 130 g)</span></li>
-<li><a href="brocolis.html">Brócolis</a> <span class="k">· 55 kcal (1 tigela, 150 g)</span></li>
-<li><a href="cafe-com-leite.html">Café com leite</a> <span class="k">· 150 kcal (1 xícara, 350 g)</span></li>
-<li><a href="cafe-preto.html">Café preto</a> <span class="k">· 2 kcal (1 xícara, 240 g)</span></li>
-<li><a href="camarao.html">Camarão</a> <span class="k">· 120 kcal (1 porção, 120 g)</span></li>
-<li><a href="carne-moida-15.html">Carne moída (15%)</a> <span class="k">· 250 kcal (1 porção, 100 g)</span></li>
-<li><a href="espinafre.html">Espinafre</a> <span class="k">· 23 kcal (1 tigela, 100 g)</span></li>
-<li><a href="grao-de-bico-cozido.html">Grão-de-bico cozido</a> <span class="k">· 270 kcal (1 tigela, 200 g)</span></li>
-<li><a href="iogurte-grego.html">Iogurte grego</a> <span class="k">· 130 kcal (1 tigela, 170 g)</span></li>
-<li><a href="iogurte-natural.html">Iogurte natural</a> <span class="k">· 120 kcal (1 tigela, 200 g)</span></li>
-<li><a href="laranja.html">Laranja</a> <span class="k">· 70 kcal (1 unidade, 150 g)</span></li>
-<li><a href="leite-integral.html">Leite integral</a> <span class="k">· 120 kcal (1 copo, 200 g)</span></li>
-<li><a href="lentilhas-cozidas.html">Lentilhas cozidas</a> <span class="k">· 230 kcal (1 tigela, 200 g)</span></li>
-<li><a href="maca.html">Maçã</a> <span class="k">· 80 kcal (1 unidade, 160 g)</span></li>
-<li><a href="macarrao-cozido.html">Macarrão cozido</a> <span class="k">· 220 kcal (1 tigela, 140 g)</span></li>
-<li><a href="manteiga.html">Manteiga</a> <span class="k">· 72 kcal (1 colher de sopa, 10 g)</span></li>
-<li><a href="mirtilos.html">Mirtilos</a> <span class="k">· 85 kcal (1 tigela, 150 g)</span></li>
-<li><a href="morangos.html">Morangos</a> <span class="k">· 50 kcal (1 tigela, 150 g)</span></li>
-<li><a href="nozes.html">Nozes</a> <span class="k">· 200 kcal (1 punhado, 30 g)</span></li>
-<li><a href="ovo-cozido.html">Ovo cozido</a> <span class="k">· 78 kcal (1 unidade, 50 g)</span></li>
-<li><a href="pao-branco.html">Pão branco</a> <span class="k">· 70 kcal (1 fatia, 28 g)</span></li>
-<li><a href="pao-integral.html">Pão integral</a> <span class="k">· 68 kcal (1 fatia, 28 g)</span></li>
-<li><a href="pasta-de-amendoim.html">Pasta de amendoim</a> <span class="k">· 190 kcal (1 colher de sopa, 32 g)</span></li>
-<li><a href="peito-de-frango-grelhado.html">Peito de frango grelhado</a> <span class="k">· 195 kcal (1 porção, 150 g)</span></li>
-<li><a href="peito-de-peru.html">Peito de peru</a> <span class="k">· 160 kcal (1 porção, 150 g)</span></li>
-<li><a href="pepino.html">Pepino</a> <span class="k">· 16 kcal (1 unidade, 100 g)</span></li>
-<li><a href="queijo-cheddar.html">Queijo cheddar</a> <span class="k">· 120 kcal (1 fatia, 30 g)</span></li>
-<li><a href="queijo-feta.html">Queijo feta</a> <span class="k">· 78 kcal (1 fatia, 30 g)</span></li>
-<li><a href="quinoa-cozida.html">Quinoa cozida</a> <span class="k">· 220 kcal (1 tigela, 185 g)</span></li>
-<li><a href="salmao-assado.html">Salmão assado</a> <span class="k">· 280 kcal (1 porção, 150 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porção, 150 g)</span></li>
-<li><a href="tomate.html">Tomate</a> <span class="k">· 22 kcal (1 unidade, 120 g)</span></li>
-<li><a href="whey.html">Whey</a> <span class="k">· 120 kcal (1 dose, 30 g)</span></li>
+<li data-cat="fat" data-name="Abacate"><a href="abacate.html">Abacate</a> <span class="k">· 240 kcal (Metade, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Amêndoas"><a href="amendoas.html">Amêndoas</a> <span class="k">· 175 kcal (1 punhado, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Arroz branco cozido"><a href="arroz-branco-cozido.html">Arroz branco cozido</a> <span class="k">· 205 kcal (1 tigela, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Arroz integral cozido"><a href="arroz-integral-cozido.html">Arroz integral cozido</a> <span class="k">· 215 kcal (1 tigela, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Atum em lata (em água)"><a href="atum-em-lata-em-agua.html">Atum em lata (em água)</a> <span class="k">· 100 kcal (1 porção, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Aveia"><a href="aveia.html">Aveia</a> <span class="k">· 190 kcal (1 tigela, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Azeite de oliva"><a href="azeite-de-oliva.html">Azeite de oliva</a> <span class="k">· 120 kcal (1 colher de sopa, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banana"><a href="banana.html">Banana</a> <span class="k">· 105 kcal (1 unidade, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Batata cozida"><a href="batata-cozida.html">Batata cozida</a> <span class="k">· 130 kcal (1 unidade, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Batata-doce"><a href="batata-doce.html">Batata-doce</a> <span class="k">· 115 kcal (1 unidade, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brócolis"><a href="brocolis.html">Brócolis</a> <span class="k">· 55 kcal (1 tigela, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Café com leite"><a href="cafe-com-leite.html">Café com leite</a> <span class="k">· 150 kcal (1 xícara, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Café preto"><a href="cafe-preto.html">Café preto</a> <span class="k">· 2 kcal (1 xícara, 240 g)</span></li>
+<li data-cat="prot" data-name="Camarão"><a href="camarao.html">Camarão</a> <span class="k">· 120 kcal (1 porção, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Carne moída (15%)"><a href="carne-moida-15.html">Carne moída (15%)</a> <span class="k">· 250 kcal (1 porção, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Espinafre"><a href="espinafre.html">Espinafre</a> <span class="k">· 23 kcal (1 tigela, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Grão-de-bico cozido"><a href="grao-de-bico-cozido.html">Grão-de-bico cozido</a> <span class="k">· 270 kcal (1 tigela, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Iogurte grego"><a href="iogurte-grego.html">Iogurte grego</a> <span class="k">· 130 kcal (1 tigela, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Iogurte natural"><a href="iogurte-natural.html">Iogurte natural</a> <span class="k">· 120 kcal (1 tigela, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Laranja"><a href="laranja.html">Laranja</a> <span class="k">· 70 kcal (1 unidade, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Leite integral"><a href="leite-integral.html">Leite integral</a> <span class="k">· 120 kcal (1 copo, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Lentilhas cozidas"><a href="lentilhas-cozidas.html">Lentilhas cozidas</a> <span class="k">· 230 kcal (1 tigela, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Maçã"><a href="maca.html">Maçã</a> <span class="k">· 80 kcal (1 unidade, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Macarrão cozido"><a href="macarrao-cozido.html">Macarrão cozido</a> <span class="k">· 220 kcal (1 tigela, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Manteiga"><a href="manteiga.html">Manteiga</a> <span class="k">· 72 kcal (1 colher de sopa, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Mirtilos"><a href="mirtilos.html">Mirtilos</a> <span class="k">· 85 kcal (1 tigela, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Morangos"><a href="morangos.html">Morangos</a> <span class="k">· 50 kcal (1 tigela, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Nozes"><a href="nozes.html">Nozes</a> <span class="k">· 200 kcal (1 punhado, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Ovo cozido"><a href="ovo-cozido.html">Ovo cozido</a> <span class="k">· 78 kcal (1 unidade, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pão branco"><a href="pao-branco.html">Pão branco</a> <span class="k">· 70 kcal (1 fatia, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pão integral"><a href="pao-integral.html">Pão integral</a> <span class="k">· 68 kcal (1 fatia, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Pasta de amendoim"><a href="pasta-de-amendoim.html">Pasta de amendoim</a> <span class="k">· 190 kcal (1 colher de sopa, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Peito de frango grelhado"><a href="peito-de-frango-grelhado.html">Peito de frango grelhado</a> <span class="k">· 195 kcal (1 porção, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Peito de peru"><a href="peito-de-peru.html">Peito de peru</a> <span class="k">· 160 kcal (1 porção, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Pepino"><a href="pepino.html">Pepino</a> <span class="k">· 16 kcal (1 unidade, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Queijo cheddar"><a href="queijo-cheddar.html">Queijo cheddar</a> <span class="k">· 120 kcal (1 fatia, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Queijo feta"><a href="queijo-feta.html">Queijo feta</a> <span class="k">· 78 kcal (1 fatia, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Quinoa cozida"><a href="quinoa-cozida.html">Quinoa cozida</a> <span class="k">· 220 kcal (1 tigela, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Salmão assado"><a href="salmao-assado.html">Salmão assado</a> <span class="k">· 280 kcal (1 porção, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porção, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tomate"><a href="tomate.html">Tomate</a> <span class="k">· 22 kcal (1 unidade, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Whey"><a href="whey.html">Whey</a> <span class="k">· 120 kcal (1 dose, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Valores: estimativas típicas usadas no app Pofu; variam conforme a receita e a porção.</p>
 <div class="note"><p>Esta página traz informações gerais e não é aconselhamento médico. Se você está grávida, amamentando, tem alguma condição de saúde ou histórico de transtorno alimentar, converse com seu médico ou nutricionista antes de contar calorias.</p></div>

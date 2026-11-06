@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,78 +231,84 @@
 <h1>Berapa kalori makananmu?</h1>
 <p class="lede">Kalori, protein, karbohidrat, dan lemak per porsi dan per 100 g untuk 62 makanan. Nilainya adalah perkiraan umum dari basis data pangan publik dan aplikasi Pofu dan bisa berbeda tergantung resep dan porsi.</p>
 </section>
+<section class="fsearch" aria-label="Cari makanan">
+<input type="search" id="fq" placeholder="Cari makanan" aria-label="Cari makanan" autocomplete="off">
+<div class="chips" role="group" aria-label="Semua"><button type="button" data-cat="all" aria-pressed="true">Semua</button><button type="button" data-cat="light" aria-pressed="false">Ringan</button><button type="button" data-cat="prot" aria-pressed="false">Tinggi protein</button><button type="button" data-cat="carb" aria-pressed="false">Kebanyakan karbohidrat</button><button type="button" data-cat="fat" aria-pressed="false">Kebanyakan lemak</button><button type="button" data-cat="mixed" aria-pressed="false">Campuran</button></div>
+<p class="nomatch" id="fnone" hidden>Tidak ada makanan yang cocok.</p>
+</section>
 <section id="local">
 <h2>Hidangan</h2>
 <ul class="foodlist">
-<li><a href="air-kelapa.html">Air kelapa</a> <span class="k">· 43 kcal (1 gelas, 240 g)</span></li>
-<li><a href="bumbu-kacang.html">Bumbu kacang (saus kacang)</a> <span class="k">· 82 kcal (2 sdm, 32 g)</span></li>
-<li><a href="cap-cay-ayam.html">Cap cay ayam</a> <span class="k">· 183 kcal (1 piring, 220 g)</span></li>
-<li><a href="kari-ayam.html">Kari ayam</a> <span class="k">· 257 kcal (1 mangkuk, 240 g)</span></li>
-<li><a href="kari-ikan.html">Kari ikan</a> <span class="k">· 223 kcal (1 mangkuk, 240 g)</span></li>
-<li><a href="kari-sapi.html">Kari sapi</a> <span class="k">· 271 kcal (1 mangkuk, 240 g)</span></li>
-<li><a href="kari-sayur.html">Kari sayur</a> <span class="k">· 206 kcal (1 mangkuk, 240 g)</span></li>
-<li><a href="mi-goreng-ayam.html">Mi goreng ayam (setara lo mein)</a> <span class="k">· 325 kcal (1 piring, 250 g)</span></li>
-<li><a href="nasi-goreng-ayam.html">Nasi goreng ayam</a> <span class="k">· 432 kcal (1 piring, 250 g)</span></li>
-<li><a href="nasi-goreng-sapi.html">Nasi goreng sapi</a> <span class="k">· 445 kcal (1 piring, 250 g)</span></li>
-<li><a href="nasi-goreng-udang.html">Nasi goreng udang</a> <span class="k">· 415 kcal (1 piring, 250 g)</span></li>
-<li><a href="nasi-uduk.html">Nasi uduk (nasi santan)</a> <span class="k">· 534 kcal (1 piring, 200 g)</span></li>
-<li><a href="pisang-goreng.html">Pisang goreng (tanpa tepung)</a> <span class="k">· 216 kcal (1 buah, 150 g)</span></li>
-<li><a href="sayur-sop.html">Sayur sop</a> <span class="k">· 66 kcal (1 mangkuk, 245 g)</span></li>
-<li><a href="singkong-rebus.html">Singkong rebus</a> <span class="k">· 306 kcal (1 porsi, 160 g)</span></li>
-<li><a href="soto-ayam.html">Soto ayam (sup ayam dengan mi)</a> <span class="k">· 159 kcal (1 mangkuk, 300 g)</span></li>
-<li><a href="tahu-goreng.html">Tahu goreng tepung</a> <span class="k">· 150 kcal (1 porsi, 100 g)</span></li>
-<li><a href="telur-dadar.html">Telur dadar</a> <span class="k">· 211 kcal (2 butir telur, 110 g)</span></li>
-<li><a href="tumis-tahu-sayur.html">Tumis tahu sayur</a> <span class="k">· 202 kcal (1 piring, 217 g)</span></li>
-<li><a href="udang-goreng-tepung.html">Udang goreng tepung</a> <span class="k">· 294 kcal (1 porsi, 135 g)</span></li>
+<li data-cat="light" data-name="Air kelapa"><a href="air-kelapa.html">Air kelapa</a> <span class="k">· 43 kcal (1 gelas, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:0%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Bumbu kacang (saus kacang)"><a href="bumbu-kacang.html">Bumbu kacang (saus kacang)</a> <span class="k">· 82 kcal (2 sdm, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:34%;background:#E9A23B"></span><span style="width:56%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Cap cay ayam"><a href="cap-cay-ayam.html">Cap cay ayam</a> <span class="k">· 183 kcal (1 piring, 220 g)</span><span class="mbar" aria-hidden="true"><span style="width:47%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:35%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kari ayam"><a href="kari-ayam.html">Kari ayam</a> <span class="k">· 257 kcal (1 mangkuk, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kari ikan"><a href="kari-ikan.html">Kari ikan</a> <span class="k">· 223 kcal (1 mangkuk, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:28%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kari sapi"><a href="kari-sapi.html">Kari sapi</a> <span class="k">· 271 kcal (1 mangkuk, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:23%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kari sayur"><a href="kari-sayur.html">Kari sayur</a> <span class="k">· 206 kcal (1 mangkuk, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Mi goreng ayam (setara lo mein)"><a href="mi-goreng-ayam.html">Mi goreng ayam (setara lo mein)</a> <span class="k">· 325 kcal (1 piring, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:50%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Nasi goreng ayam"><a href="nasi-goreng-ayam.html">Nasi goreng ayam</a> <span class="k">· 432 kcal (1 piring, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:64%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Nasi goreng sapi"><a href="nasi-goreng-sapi.html">Nasi goreng sapi</a> <span class="k">· 445 kcal (1 piring, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:62%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Nasi goreng udang"><a href="nasi-goreng-udang.html">Nasi goreng udang</a> <span class="k">· 415 kcal (1 piring, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Nasi uduk (nasi santan)"><a href="nasi-uduk.html">Nasi uduk (nasi santan)</a> <span class="k">· 534 kcal (1 piring, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:56%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pisang goreng (tanpa tepung)"><a href="pisang-goreng.html">Pisang goreng (tanpa tepung)</a> <span class="k">· 216 kcal (1 buah, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:3%;background:#DE5187"></span><span style="width:78%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Sayur sop"><a href="sayur-sop.html">Sayur sop</a> <span class="k">· 66 kcal (1 mangkuk, 245 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:73%;background:#E9A23B"></span><span style="width:15%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Singkong rebus"><a href="singkong-rebus.html">Singkong rebus</a> <span class="k">· 306 kcal (1 porsi, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:3%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Soto ayam (sup ayam dengan mi)"><a href="soto-ayam.html">Soto ayam (sup ayam dengan mi)</a> <span class="k">· 159 kcal (1 mangkuk, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:24%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Tahu goreng tepung"><a href="tahu-goreng.html">Tahu goreng tepung</a> <span class="k">· 150 kcal (1 porsi, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:22%;background:#E9A23B"></span><span style="width:56%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Telur dadar"><a href="telur-dadar.html">Telur dadar</a> <span class="k">· 211 kcal (2 butir telur, 110 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:2%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Tumis tahu sayur"><a href="tumis-tahu-sayur.html">Tumis tahu sayur</a> <span class="k">· 202 kcal (1 piring, 217 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:65%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Udang goreng tepung"><a href="udang-goreng-tepung.html">Udang goreng tepung</a> <span class="k">· 294 kcal (1 porsi, 135 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:23%;background:#E9A23B"></span><span style="width:54%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Makanan pokok</h2>
 <ul class="foodlist">
-<li><a href="almond.html">Almond</a> <span class="k">· 175 kcal (1 genggam, 30 g)</span></li>
-<li><a href="alpukat.html">Alpukat</a> <span class="k">· 240 kcal (Setengah buah, 100 g)</span></li>
-<li><a href="apel.html">Apel</a> <span class="k">· 80 kcal (1 buah, 160 g)</span></li>
-<li><a href="bayam.html">Bayam</a> <span class="k">· 23 kcal (1 mangkuk, 100 g)</span></li>
-<li><a href="blueberry.html">Blueberry</a> <span class="k">· 85 kcal (1 mangkuk, 150 g)</span></li>
-<li><a href="brokoli.html">Brokoli</a> <span class="k">· 55 kcal (1 mangkuk, 150 g)</span></li>
-<li><a href="bubuk-protein-1-sendok-takar.html">Bubuk protein</a> <span class="k">· 120 kcal (1 sendok takar, 30 g)</span></li>
-<li><a href="dada-ayam-panggang.html">Dada ayam panggang</a> <span class="k">· 195 kcal (1 porsi, 150 g)</span></li>
-<li><a href="dada-kalkun.html">Dada kalkun</a> <span class="k">· 160 kcal (1 porsi, 150 g)</span></li>
-<li><a href="daging-sapi-giling-15-lemak.html">Daging sapi giling (15% lemak)</a> <span class="k">· 250 kcal (1 porsi, 100 g)</span></li>
-<li><a href="jeruk.html">Jeruk</a> <span class="k">· 70 kcal (1 buah, 150 g)</span></li>
-<li><a href="kacang-arab-matang.html">Kacang arab matang</a> <span class="k">· 270 kcal (1 mangkuk, 200 g)</span></li>
-<li><a href="keju-cheddar.html">Keju cheddar</a> <span class="k">· 120 kcal (1 lembar, 30 g)</span></li>
-<li><a href="keju-feta.html">Keju feta</a> <span class="k">· 78 kcal (1 lembar, 30 g)</span></li>
-<li><a href="kenari.html">Kenari</a> <span class="k">· 200 kcal (1 genggam, 30 g)</span></li>
-<li><a href="kentang-rebus.html">Kentang rebus</a> <span class="k">· 130 kcal (1 buah, 150 g)</span></li>
-<li><a href="kopi-hitam.html">Kopi hitam</a> <span class="k">· 2 kcal (1 cangkir, 240 g)</span></li>
-<li><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 cangkir, 350 g)</span></li>
-<li><a href="lentil-matang.html">Lentil matang</a> <span class="k">· 230 kcal (1 mangkuk, 200 g)</span></li>
-<li><a href="mentega.html">Mentega</a> <span class="k">· 72 kcal (1 sdm, 10 g)</span></li>
-<li><a href="mentimun.html">Mentimun</a> <span class="k">· 16 kcal (1 buah, 100 g)</span></li>
-<li><a href="minyak-zaitun.html">Minyak zaitun</a> <span class="k">· 120 kcal (1 sdm, 14 g)</span></li>
-<li><a href="nasi-merah.html">Nasi merah</a> <span class="k">· 215 kcal (1 mangkuk, 195 g)</span></li>
-<li><a href="nasi-putih.html">Nasi putih</a> <span class="k">· 205 kcal (1 mangkuk, 158 g)</span></li>
-<li><a href="oatmeal.html">Oatmeal</a> <span class="k">· 190 kcal (1 mangkuk, 50 g)</span></li>
-<li><a href="pasta-matang.html">Pasta matang</a> <span class="k">· 220 kcal (1 mangkuk, 140 g)</span></li>
-<li><a href="pisang.html">Pisang</a> <span class="k">· 105 kcal (1 buah, 120 g)</span></li>
-<li><a href="quinoa-matang.html">Quinoa matang</a> <span class="k">· 220 kcal (1 mangkuk, 185 g)</span></li>
-<li><a href="roti-gandum-utuh.html">Roti gandum utuh</a> <span class="k">· 68 kcal (1 lembar, 28 g)</span></li>
-<li><a href="roti-tawar-putih.html">Roti tawar putih</a> <span class="k">· 70 kcal (1 lembar, 28 g)</span></li>
-<li><a href="salmon-panggang.html">Salmon panggang</a> <span class="k">· 280 kcal (1 porsi, 150 g)</span></li>
-<li><a href="selai-kacang.html">Selai kacang</a> <span class="k">· 190 kcal (1 sdm, 32 g)</span></li>
-<li><a href="stroberi.html">Stroberi</a> <span class="k">· 50 kcal (1 mangkuk, 150 g)</span></li>
-<li><a href="susu-sapi-full-cream.html">Susu sapi full cream</a> <span class="k">· 120 kcal (1 gelas, 200 g)</span></li>
-<li><a href="tahu.html">Tahu</a> <span class="k">· 145 kcal (1 porsi, 150 g)</span></li>
-<li><a href="telur-rebus.html">Telur rebus</a> <span class="k">· 78 kcal (1 butir, 50 g)</span></li>
-<li><a href="tomat.html">Tomat</a> <span class="k">· 22 kcal (1 buah, 120 g)</span></li>
-<li><a href="tuna-kalengan-dalam-air.html">Tuna kalengan (dalam air)</a> <span class="k">· 100 kcal (1 porsi, 100 g)</span></li>
-<li><a href="ubi-jalar.html">Ubi jalar</a> <span class="k">· 115 kcal (1 buah, 130 g)</span></li>
-<li><a href="udang.html">Udang</a> <span class="k">· 120 kcal (1 porsi, 120 g)</span></li>
-<li><a href="yogurt-plain.html">Yogurt plain</a> <span class="k">· 120 kcal (1 mangkuk, 200 g)</span></li>
-<li><a href="yogurt-yunani.html">Yogurt Yunani</a> <span class="k">· 130 kcal (1 mangkuk, 170 g)</span></li>
+<li data-cat="fat" data-name="Almond"><a href="almond.html">Almond</a> <span class="k">· 175 kcal (1 genggam, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Alpukat"><a href="alpukat.html">Alpukat</a> <span class="k">· 240 kcal (Setengah buah, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Apel"><a href="apel.html">Apel</a> <span class="k">· 80 kcal (1 buah, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Bayam"><a href="bayam.html">Bayam</a> <span class="k">· 23 kcal (1 mangkuk, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Blueberry"><a href="blueberry.html">Blueberry</a> <span class="k">· 85 kcal (1 mangkuk, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brokoli"><a href="brokoli.html">Brokoli</a> <span class="k">· 55 kcal (1 mangkuk, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Bubuk protein"><a href="bubuk-protein-1-sendok-takar.html">Bubuk protein</a> <span class="k">· 120 kcal (1 sendok takar, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Dada ayam panggang"><a href="dada-ayam-panggang.html">Dada ayam panggang</a> <span class="k">· 195 kcal (1 porsi, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Dada kalkun"><a href="dada-kalkun.html">Dada kalkun</a> <span class="k">· 160 kcal (1 porsi, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Daging sapi giling (15% lemak)"><a href="daging-sapi-giling-15-lemak.html">Daging sapi giling (15% lemak)</a> <span class="k">· 250 kcal (1 porsi, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Jeruk"><a href="jeruk.html">Jeruk</a> <span class="k">· 70 kcal (1 buah, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kacang arab matang"><a href="kacang-arab-matang.html">Kacang arab matang</a> <span class="k">· 270 kcal (1 mangkuk, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Keju cheddar"><a href="keju-cheddar.html">Keju cheddar</a> <span class="k">· 120 kcal (1 lembar, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Keju feta"><a href="keju-feta.html">Keju feta</a> <span class="k">· 78 kcal (1 lembar, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kenari"><a href="kenari.html">Kenari</a> <span class="k">· 200 kcal (1 genggam, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kentang rebus"><a href="kentang-rebus.html">Kentang rebus</a> <span class="k">· 130 kcal (1 buah, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Kopi hitam"><a href="kopi-hitam.html">Kopi hitam</a> <span class="k">· 2 kcal (1 cangkir, 240 g)</span></li>
+<li data-cat="light" data-name="Latte"><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 cangkir, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Lentil matang"><a href="lentil-matang.html">Lentil matang</a> <span class="k">· 230 kcal (1 mangkuk, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Mentega"><a href="mentega.html">Mentega</a> <span class="k">· 72 kcal (1 sdm, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Mentimun"><a href="mentimun.html">Mentimun</a> <span class="k">· 16 kcal (1 buah, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Minyak zaitun"><a href="minyak-zaitun.html">Minyak zaitun</a> <span class="k">· 120 kcal (1 sdm, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Nasi merah"><a href="nasi-merah.html">Nasi merah</a> <span class="k">· 215 kcal (1 mangkuk, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Nasi putih"><a href="nasi-putih.html">Nasi putih</a> <span class="k">· 205 kcal (1 mangkuk, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Oatmeal"><a href="oatmeal.html">Oatmeal</a> <span class="k">· 190 kcal (1 mangkuk, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pasta matang"><a href="pasta-matang.html">Pasta matang</a> <span class="k">· 220 kcal (1 mangkuk, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pisang"><a href="pisang.html">Pisang</a> <span class="k">· 105 kcal (1 buah, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Quinoa matang"><a href="quinoa-matang.html">Quinoa matang</a> <span class="k">· 220 kcal (1 mangkuk, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Roti gandum utuh"><a href="roti-gandum-utuh.html">Roti gandum utuh</a> <span class="k">· 68 kcal (1 lembar, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Roti tawar putih"><a href="roti-tawar-putih.html">Roti tawar putih</a> <span class="k">· 70 kcal (1 lembar, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Salmon panggang"><a href="salmon-panggang.html">Salmon panggang</a> <span class="k">· 280 kcal (1 porsi, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Selai kacang"><a href="selai-kacang.html">Selai kacang</a> <span class="k">· 190 kcal (1 sdm, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Stroberi"><a href="stroberi.html">Stroberi</a> <span class="k">· 50 kcal (1 mangkuk, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Susu sapi full cream"><a href="susu-sapi-full-cream.html">Susu sapi full cream</a> <span class="k">· 120 kcal (1 gelas, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tahu"><a href="tahu.html">Tahu</a> <span class="k">· 145 kcal (1 porsi, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Telur rebus"><a href="telur-rebus.html">Telur rebus</a> <span class="k">· 78 kcal (1 butir, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tomat"><a href="tomat.html">Tomat</a> <span class="k">· 22 kcal (1 buah, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tuna kalengan (dalam air)"><a href="tuna-kalengan-dalam-air.html">Tuna kalengan (dalam air)</a> <span class="k">· 100 kcal (1 porsi, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Ubi jalar"><a href="ubi-jalar.html">Ubi jalar</a> <span class="k">· 115 kcal (1 buah, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Udang"><a href="udang.html">Udang</a> <span class="k">· 120 kcal (1 porsi, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yogurt plain"><a href="yogurt-plain.html">Yogurt plain</a> <span class="k">· 120 kcal (1 mangkuk, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yogurt Yunani"><a href="yogurt-yunani.html">Yogurt Yunani</a> <span class="k">· 130 kcal (1 mangkuk, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Nilai: perkiraan umum dari basis data pangan publik dan aplikasi Pofu; bisa berbeda tergantung resep dan porsi.</p>
 <div class="note"><p>Halaman ini hanya berisi informasi umum dan bukan nasihat medis. Jika kamu sedang hamil, menyusui, memiliki kondisi medis, atau pernah mengalami gangguan makan, bicarakan dengan dokter atau ahli gizi sebelum menghitung kalori.</p></div>

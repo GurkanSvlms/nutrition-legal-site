@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,117 +231,123 @@
 <h1>Yemekler kaç kalori?</h1>
 <p class="lede">101 yiyecek için porsiyon başına ve 100 g başına kalori, protein, karbonhidrat ve yağ. Değerler Pofu uygulamasında kullanılan tipik tahminlerdir; tarife ve porsiyona göre değişir.</p>
 </section>
+<section class="fsearch" aria-label="Yiyecek ara">
+<input type="search" id="fq" placeholder="Yiyecek ara" aria-label="Yiyecek ara" autocomplete="off">
+<div class="chips" role="group" aria-label="Tümü"><button type="button" data-cat="all" aria-pressed="true">Tümü</button><button type="button" data-cat="light" aria-pressed="false">Hafif</button><button type="button" data-cat="prot" aria-pressed="false">Protein açısından zengin</button><button type="button" data-cat="carb" aria-pressed="false">Karbonhidrat ağırlıklı</button><button type="button" data-cat="fat" aria-pressed="false">Yağ ağırlıklı</button><button type="button" data-cat="mixed" aria-pressed="false">Karışık</button></div>
+<p class="nomatch" id="fnone" hidden>Aramana uyan yiyecek yok.</p>
+</section>
 <section id="local">
 <h2>Türk yemekleri</h2>
 <ul class="foodlist">
-<li><a href="acma.html">Açma</a> <span class="k">· 270 kcal (1 adet, 85 g)</span></li>
-<li><a href="adana-kebap.html">Adana kebap</a> <span class="k">· 480 kcal (1 porsiyon, 180 g)</span></li>
-<li><a href="asure.html">Aşure</a> <span class="k">· 250 kcal (1 kâse, 200 g)</span></li>
-<li><a href="ayran.html">Ayran</a> <span class="k">· 60 kcal (1 bardak, 200 ml)</span></li>
-<li><a href="baklava.html">Baklava</a> <span class="k">· 200 kcal (1 dilim, 50 g)</span></li>
-<li><a href="bal.html">Bal</a> <span class="k">· 64 kcal (1 yemek kaşığı, 20 g)</span></li>
-<li><a href="beyaz-peynir.html">Beyaz peynir</a> <span class="k">· 78 kcal (1 dilim, 30 g)</span></li>
-<li><a href="biber-dolmasi.html">Biber dolması</a> <span class="k">· 165 kcal (1 adet, 150 g)</span></li>
-<li><a href="bulgur-pilavi.html">Bulgur pilavı</a> <span class="k">· 230 kcal (1 porsiyon, 180 g)</span></li>
-<li><a href="cacik.html">Cacık</a> <span class="k">· 90 kcal (1 kâse, 200 g)</span></li>
-<li><a href="cay-sekersiz.html">Çay (şekersiz)</a> <span class="k">· 2 kcal (1 çay bardağı, 100 ml)</span></li>
-<li><a href="cig-kofte-etsiz.html">Çiğ köfte (etsiz)</a> <span class="k">· 130 kcal (5 adet, 100 g)</span></li>
-<li><a href="coban-salata.html">Çoban salata</a> <span class="k">· 90 kcal (1 porsiyon, 200 g)</span></li>
-<li><a href="domates-corbasi.html">Domates çorbası</a> <span class="k">· 130 kcal (1 kepçe, 200 ml)</span></li>
-<li><a href="dondurma.html">Dondurma</a> <span class="k">· 200 kcal (2 top, 100 g)</span></li>
-<li><a href="et-doner.html">Et döner</a> <span class="k">· 380 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="ezogelin-corbasi.html">Ezogelin çorbası</a> <span class="k">· 175 kcal (1 kepçe, 200 ml)</span></li>
-<li><a href="gozleme-peynirli.html">Gözleme (peynirli)</a> <span class="k">· 380 kcal (1 adet, 180 g)</span></li>
-<li><a href="haydari.html">Haydari</a> <span class="k">· 150 kcal (1 porsiyon, 100 g)</span></li>
-<li><a href="icli-kofte.html">İçli köfte</a> <span class="k">· 220 kcal (1 adet, 100 g)</span></li>
-<li><a href="imam-bayildi.html">İmam bayıldı</a> <span class="k">· 260 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="iskender.html">İskender</a> <span class="k">· 780 kcal (1 porsiyon, 350 g)</span></li>
-<li><a href="izgara-kofte.html">Izgara köfte</a> <span class="k">· 250 kcal (4 adet, 120 g)</span></li>
-<li><a href="karniyarik.html">Karnıyarık</a> <span class="k">· 330 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="kasar-peyniri.html">Kaşar peyniri</a> <span class="k">· 105 kcal (1 dilim, 30 g)</span></li>
-<li><a href="kasarli-pide.html">Kaşarlı pide</a> <span class="k">· 680 kcal (1 adet, 280 g)</span></li>
-<li><a href="kazandibi.html">Kazandibi</a> <span class="k">· 230 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="kiymali-pide.html">Kıymalı pide</a> <span class="k">· 620 kcal (1 adet, 280 g)</span></li>
-<li><a href="kofte-ekmek.html">Köfte ekmek</a> <span class="k">· 480 kcal (1 adet, 200 g)</span></li>
-<li><a href="kokorec.html">Kokoreç</a> <span class="k">· 520 kcal (Yarım ekmek, 200 g)</span></li>
-<li><a href="kunefe.html">Künefe</a> <span class="k">· 480 kcal (1 porsiyon, 180 g)</span></li>
-<li><a href="kuru-fasulye.html">Kuru fasulye</a> <span class="k">· 320 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="lahmacun.html">Lahmacun</a> <span class="k">· 300 kcal (1 adet, 140 g)</span></li>
-<li><a href="makarna-domates-soslu.html">Makarna (domates soslu)</a> <span class="k">· 330 kcal (1 porsiyon, 200 g)</span></li>
-<li><a href="manti.html">Mantı</a> <span class="k">· 420 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="menemen.html">Menemen</a> <span class="k">· 230 kcal (1 porsiyon, 200 g)</span></li>
-<li><a href="mercimek-corbasi.html">Mercimek çorbası</a> <span class="k">· 160 kcal (1 kepçe, 200 ml)</span></li>
-<li><a href="musakka.html">Musakka</a> <span class="k">· 310 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="nohut-yemegi.html">Nohut yemeği</a> <span class="k">· 300 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="omlet.html">Omlet</a> <span class="k">· 220 kcal (2 yumurta, 120 g)</span></li>
-<li><a href="pirinc-pilavi.html">Pirinç pilavı</a> <span class="k">· 260 kcal (1 porsiyon, 180 g)</span></li>
-<li><a href="piyaz.html">Piyaz</a> <span class="k">· 200 kcal (1 porsiyon, 200 g)</span></li>
-<li><a href="pogaca.html">Poğaça</a> <span class="k">· 250 kcal (1 adet, 80 g)</span></li>
-<li><a href="salgam-suyu.html">Şalgam suyu</a> <span class="k">· 20 kcal (1 bardak, 200 ml)</span></li>
-<li><a href="sehriyeli-pilav.html">Şehriyeli pilav</a> <span class="k">· 270 kcal (1 porsiyon, 180 g)</span></li>
-<li><a href="sigara-boregi.html">Sigara böreği</a> <span class="k">· 95 kcal (1 adet, 30 g)</span></li>
-<li><a href="simit.html">Simit</a> <span class="k">· 290 kcal (1 adet, 100 g)</span></li>
-<li><a href="siyah-zeytin.html">Siyah zeytin</a> <span class="k">· 45 kcal (5 adet, 20 g)</span></li>
-<li><a href="su-boregi.html">Su böreği</a> <span class="k">· 300 kcal (1 dilim, 120 g)</span></li>
-<li><a href="sucuklu-yumurta.html">Sucuklu yumurta</a> <span class="k">· 330 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="sutlac.html">Sütlaç</a> <span class="k">· 220 kcal (1 kâse, 170 g)</span></li>
-<li><a href="tarhana-corbasi.html">Tarhana çorbası</a> <span class="k">· 135 kcal (1 kepçe, 200 ml)</span></li>
-<li><a href="tavuk-doner.html">Tavuk döner</a> <span class="k">· 290 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="tavuk-sis.html">Tavuk şiş</a> <span class="k">· 300 kcal (1 porsiyon, 180 g)</span></li>
-<li><a href="taze-fasulye.html">Taze fasulye</a> <span class="k">· 160 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="tost-kasarli.html">Tost (kaşarlı)</a> <span class="k">· 400 kcal (1 adet, 160 g)</span></li>
-<li><a href="turk-kahvesi-sade.html">Türk kahvesi (sade)</a> <span class="k">· 5 kcal (1 fincan, 60 ml)</span></li>
-<li><a href="turlu.html">Türlü</a> <span class="k">· 220 kcal (1 porsiyon, 250 g)</span></li>
-<li><a href="yaprak-sarma.html">Yaprak sarma</a> <span class="k">· 45 kcal (1 adet, 35 g)</span></li>
-<li><a href="yayla-corbasi.html">Yayla çorbası</a> <span class="k">· 150 kcal (1 kepçe, 200 ml)</span></li>
+<li data-cat="mixed" data-name="Açma"><a href="acma.html">Açma</a> <span class="k">· 270 kcal (1 adet, 85 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:50%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Adana kebap"><a href="adana-kebap.html">Adana kebap</a> <span class="k">· 480 kcal (1 porsiyon, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:25%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:68%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Aşure"><a href="asure.html">Aşure</a> <span class="k">· 250 kcal (1 kâse, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:78%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Ayran"><a href="ayran.html">Ayran</a> <span class="k">· 60 kcal (1 bardak, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:32%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Baklava"><a href="baklava.html">Baklava</a> <span class="k">· 200 kcal (1 dilim, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:48%;background:#E9A23B"></span><span style="width:46%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Bal"><a href="bal.html">Bal</a> <span class="k">· 64 kcal (1 yemek kaşığı, 20 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:100%;background:#E9A23B"></span><span style="width:0%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Beyaz peynir"><a href="beyaz-peynir.html">Beyaz peynir</a> <span class="k">· 78 kcal (1 dilim, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Biber dolması"><a href="biber-dolmasi.html">Biber dolması</a> <span class="k">· 165 kcal (1 adet, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Bulgur pilavı"><a href="bulgur-pilavi.html">Bulgur pilavı</a> <span class="k">· 230 kcal (1 porsiyon, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:72%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Cacık"><a href="cacik.html">Cacık</a> <span class="k">· 90 kcal (1 kâse, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:36%;background:#E9A23B"></span><span style="width:41%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Çay (şekersiz)"><a href="cay-sekersiz.html">Çay (şekersiz)</a> <span class="k">· 2 kcal (1 çay bardağı, 100 ml)</span></li>
+<li data-cat="carb" data-name="Çiğ köfte (etsiz)"><a href="cig-kofte-etsiz.html">Çiğ köfte (etsiz)</a> <span class="k">· 130 kcal (5 adet, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:77%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Çoban salata"><a href="coban-salata.html">Çoban salata</a> <span class="k">· 90 kcal (1 porsiyon, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Domates çorbası"><a href="domates-corbasi.html">Domates çorbası</a> <span class="k">· 130 kcal (1 kepçe, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:54%;background:#E9A23B"></span><span style="width:34%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Dondurma"><a href="dondurma.html">Dondurma</a> <span class="k">· 200 kcal (2 top, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:48%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Et döner"><a href="et-doner.html">Et döner</a> <span class="k">· 380 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:2%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Ezogelin çorbası"><a href="ezogelin-corbasi.html">Ezogelin çorbası</a> <span class="k">· 175 kcal (1 kepçe, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:61%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Gözleme (peynirli)"><a href="gozleme-peynirli.html">Gözleme (peynirli)</a> <span class="k">· 380 kcal (1 adet, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Haydari"><a href="haydari.html">Haydari</a> <span class="k">· 150 kcal (1 porsiyon, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:13%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="İçli köfte"><a href="icli-kofte.html">İçli köfte</a> <span class="k">· 220 kcal (1 adet, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="İmam bayıldı"><a href="imam-bayildi.html">İmam bayıldı</a> <span class="k">· 260 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:33%;background:#E9A23B"></span><span style="width:61%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="İskender"><a href="iskender.html">İskender</a> <span class="k">· 780 kcal (1 porsiyon, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:29%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Izgara köfte"><a href="izgara-kofte.html">Izgara köfte</a> <span class="k">· 250 kcal (4 adet, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:36%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:54%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Karnıyarık"><a href="karniyarik.html">Karnıyarık</a> <span class="k">· 330 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:26%;background:#E9A23B"></span><span style="width:57%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kaşar peyniri"><a href="kasar-peyniri.html">Kaşar peyniri</a> <span class="k">· 105 kcal (1 dilim, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:70%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kaşarlı pide"><a href="kasarli-pide.html">Kaşarlı pide</a> <span class="k">· 680 kcal (1 adet, 280 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kazandibi"><a href="kazandibi.html">Kazandibi</a> <span class="k">· 230 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kıymalı pide"><a href="kiymali-pide.html">Kıymalı pide</a> <span class="k">· 620 kcal (1 adet, 280 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:35%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Köfte ekmek"><a href="kofte-ekmek.html">Köfte ekmek</a> <span class="k">· 480 kcal (1 adet, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:38%;background:#E9A23B"></span><span style="width:41%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kokoreç"><a href="kokorec.html">Kokoreç</a> <span class="k">· 520 kcal (Yarım ekmek, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Künefe"><a href="kunefe.html">Künefe</a> <span class="k">· 480 kcal (1 porsiyon, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:45%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Kuru fasulye"><a href="kuru-fasulye.html">Kuru fasulye</a> <span class="k">· 320 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:53%;background:#E9A23B"></span><span style="width:26%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Lahmacun"><a href="lahmacun.html">Lahmacun</a> <span class="k">· 300 kcal (1 adet, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:53%;background:#E9A23B"></span><span style="width:30%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Makarna (domates soslu)"><a href="makarna-domates-soslu.html">Makarna (domates soslu)</a> <span class="k">· 330 kcal (1 porsiyon, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Mantı"><a href="manti.html">Mantı</a> <span class="k">· 420 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:46%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Menemen"><a href="menemen.html">Menemen</a> <span class="k">· 230 kcal (1 porsiyon, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:62%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Mercimek çorbası"><a href="mercimek-corbasi.html">Mercimek çorbası</a> <span class="k">· 160 kcal (1 kepçe, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:60%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Musakka"><a href="musakka.html">Musakka</a> <span class="k">· 310 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:19%;background:#DE5187"></span><span style="width:26%;background:#E9A23B"></span><span style="width:55%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Nohut yemeği"><a href="nohut-yemegi.html">Nohut yemeği</a> <span class="k">· 300 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:53%;background:#E9A23B"></span><span style="width:27%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Omlet"><a href="omlet.html">Omlet</a> <span class="k">· 220 kcal (2 yumurta, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:27%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:69%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pirinç pilavı"><a href="pirinc-pilavi.html">Pirinç pilavı</a> <span class="k">· 260 kcal (1 porsiyon, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Piyaz"><a href="piyaz.html">Piyaz</a> <span class="k">· 200 kcal (1 porsiyon, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Poğaça"><a href="pogaca.html">Poğaça</a> <span class="k">· 250 kcal (1 adet, 80 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:46%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Şalgam suyu"><a href="salgam-suyu.html">Şalgam suyu</a> <span class="k">· 20 kcal (1 bardak, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:20%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:0%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Şehriyeli pilav"><a href="sehriyeli-pilav.html">Şehriyeli pilav</a> <span class="k">· 270 kcal (1 porsiyon, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Sigara böreği"><a href="sigara-boregi.html">Sigara böreği</a> <span class="k">· 95 kcal (1 adet, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:33%;background:#E9A23B"></span><span style="width:55%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Simit"><a href="simit.html">Simit</a> <span class="k">· 290 kcal (1 adet, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:72%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Siyah zeytin"><a href="siyah-zeytin.html">Siyah zeytin</a> <span class="k">· 45 kcal (5 adet, 20 g)</span><span class="mbar" aria-hidden="true"><span style="width:3%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:87%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Su böreği"><a href="su-boregi.html">Su böreği</a> <span class="k">· 300 kcal (1 dilim, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Sucuklu yumurta"><a href="sucuklu-yumurta.html">Sucuklu yumurta</a> <span class="k">· 330 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Sütlaç"><a href="sutlac.html">Sütlaç</a> <span class="k">· 220 kcal (1 kâse, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tarhana çorbası"><a href="tarhana-corbasi.html">Tarhana çorbası</a> <span class="k">· 135 kcal (1 kepçe, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Tavuk döner"><a href="tavuk-doner.html">Tavuk döner</a> <span class="k">· 290 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:38%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:59%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tavuk şiş"><a href="tavuk-sis.html">Tavuk şiş</a> <span class="k">· 300 kcal (1 porsiyon, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:52%;background:#DE5187"></span><span style="width:5%;background:#E9A23B"></span><span style="width:43%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Taze fasulye"><a href="taze-fasulye.html">Taze fasulye</a> <span class="k">· 160 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Tost (kaşarlı)"><a href="tost-kasarli.html">Tost (kaşarlı)</a> <span class="k">· 400 kcal (1 adet, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:38%;background:#E9A23B"></span><span style="width:44%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Türk kahvesi (sade)"><a href="turk-kahvesi-sade.html">Türk kahvesi (sade)</a> <span class="k">· 5 kcal (1 fincan, 60 ml)</span></li>
+<li data-cat="mixed" data-name="Türlü"><a href="turlu.html">Türlü</a> <span class="k">· 220 kcal (1 porsiyon, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:47%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Yaprak sarma"><a href="yaprak-sarma.html">Yaprak sarma</a> <span class="k">· 45 kcal (1 adet, 35 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yayla çorbası"><a href="yayla-corbasi.html">Yayla çorbası</a> <span class="k">· 150 kcal (1 kepçe, 200 ml)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:33%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Temel gıdalar</h2>
 <ul class="foodlist">
-<li><a href="avokado.html">Avokado</a> <span class="k">· 240 kcal (Yarım adet, 100 g)</span></li>
-<li><a href="badem.html">Badem</a> <span class="k">· 175 kcal (1 avuç, 30 g)</span></li>
-<li><a href="beyaz-ekmek.html">Beyaz ekmek</a> <span class="k">· 70 kcal (1 dilim, 28 g)</span></li>
-<li><a href="beyaz-pirinc-pismis.html">Beyaz pirinç (pişmiş)</a> <span class="k">· 205 kcal (1 kâse, 158 g)</span></li>
-<li><a href="brokoli.html">Brokoli</a> <span class="k">· 55 kcal (1 kâse, 150 g)</span></li>
-<li><a href="ceviz.html">Ceviz</a> <span class="k">· 200 kcal (1 avuç, 30 g)</span></li>
-<li><a href="cilek.html">Çilek</a> <span class="k">· 50 kcal (1 kâse, 150 g)</span></li>
-<li><a href="dana-kiyma-15-yag.html">Dana kıyma (%15 yağ)</a> <span class="k">· 250 kcal (1 porsiyon, 100 g)</span></li>
-<li><a href="domates.html">Domates</a> <span class="k">· 22 kcal (1 adet, 120 g)</span></li>
-<li><a href="elma.html">Elma</a> <span class="k">· 80 kcal (1 adet, 160 g)</span></li>
-<li><a href="esmer-pirinc-pismis.html">Esmer pirinç (pişmiş)</a> <span class="k">· 215 kcal (1 kâse, 195 g)</span></li>
-<li><a href="fistik-ezmesi.html">Fıstık ezmesi</a> <span class="k">· 190 kcal (1 yemek kaşığı, 32 g)</span></li>
-<li><a href="hindi-gogsu.html">Hindi göğsü</a> <span class="k">· 160 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="ispanak.html">Ispanak</a> <span class="k">· 23 kcal (1 kâse, 100 g)</span></li>
-<li><a href="kahve-sade.html">Kahve (sade)</a> <span class="k">· 2 kcal (1 su bardağı, 240 g)</span></li>
-<li><a href="karides.html">Karides</a> <span class="k">· 120 kcal (1 porsiyon, 120 g)</span></li>
-<li><a href="kasar-cheddar.html">Kaşar / cheddar</a> <span class="k">· 120 kcal (1 dilim, 30 g)</span></li>
-<li><a href="kinoa-pismis.html">Kinoa (pişmiş)</a> <span class="k">· 220 kcal (1 kâse, 185 g)</span></li>
-<li><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 su bardağı, 350 g)</span></li>
-<li><a href="makarna-pismis.html">Makarna (pişmiş)</a> <span class="k">· 220 kcal (1 kâse, 140 g)</span></li>
-<li><a href="mercimek-haslanmis.html">Mercimek (haşlanmış)</a> <span class="k">· 230 kcal (1 kâse, 200 g)</span></li>
-<li><a href="muz.html">Muz</a> <span class="k">· 105 kcal (1 adet, 120 g)</span></li>
-<li><a href="nohut-haslanmis.html">Nohut (haşlanmış)</a> <span class="k">· 270 kcal (1 kâse, 200 g)</span></li>
-<li><a href="patates-haslanmis.html">Patates (haşlanmış)</a> <span class="k">· 130 kcal (1 adet, 150 g)</span></li>
-<li><a href="portakal.html">Portakal</a> <span class="k">· 70 kcal (1 adet, 150 g)</span></li>
-<li><a href="protein-tozu.html">Protein tozu</a> <span class="k">· 120 kcal (1 ölçek, 30 g)</span></li>
-<li><a href="salatalik.html">Salatalık</a> <span class="k">· 16 kcal (1 adet, 100 g)</span></li>
-<li><a href="somon-firinlanmis.html">Somon (fırınlanmış)</a> <span class="k">· 280 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="sut-tam-yagli.html">Süt (tam yağlı)</a> <span class="k">· 120 kcal (1 bardak, 200 g)</span></li>
-<li><a href="tam-bugday-ekmegi.html">Tam buğday ekmeği</a> <span class="k">· 68 kcal (1 dilim, 28 g)</span></li>
-<li><a href="tatli-patates.html">Tatlı patates</a> <span class="k">· 115 kcal (1 adet, 130 g)</span></li>
-<li><a href="tavuk-gogsu-izgara.html">Tavuk göğsü (ızgara)</a> <span class="k">· 195 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="tereyagi.html">Tereyağı</a> <span class="k">· 72 kcal (1 yemek kaşığı, 10 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porsiyon, 150 g)</span></li>
-<li><a href="ton-baligi-konserve-suda.html">Ton balığı (konserve, suda)</a> <span class="k">· 100 kcal (1 porsiyon, 100 g)</span></li>
-<li><a href="yaban-mersini.html">Yaban mersini</a> <span class="k">· 85 kcal (1 kâse, 150 g)</span></li>
-<li><a href="yogurt-sade.html">Yoğurt (sade)</a> <span class="k">· 120 kcal (1 kâse, 200 g)</span></li>
-<li><a href="yulaf-ezmesi.html">Yulaf ezmesi</a> <span class="k">· 190 kcal (1 kâse, 50 g)</span></li>
-<li><a href="yumurta-haslanmis.html">Yumurta (haşlanmış)</a> <span class="k">· 78 kcal (1 adet, 50 g)</span></li>
-<li><a href="yunan-yogurdu.html">Yunan yoğurdu</a> <span class="k">· 130 kcal (1 kâse, 170 g)</span></li>
-<li><a href="zeytinyagi.html">Zeytinyağı</a> <span class="k">· 120 kcal (1 yemek kaşığı, 14 g)</span></li>
+<li data-cat="fat" data-name="Avokado"><a href="avokado.html">Avokado</a> <span class="k">· 240 kcal (Yarım adet, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Badem"><a href="badem.html">Badem</a> <span class="k">· 175 kcal (1 avuç, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Beyaz ekmek"><a href="beyaz-ekmek.html">Beyaz ekmek</a> <span class="k">· 70 kcal (1 dilim, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Beyaz pirinç (pişmiş)"><a href="beyaz-pirinc-pismis.html">Beyaz pirinç (pişmiş)</a> <span class="k">· 205 kcal (1 kâse, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brokoli"><a href="brokoli.html">Brokoli</a> <span class="k">· 55 kcal (1 kâse, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Ceviz"><a href="ceviz.html">Ceviz</a> <span class="k">· 200 kcal (1 avuç, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Çilek"><a href="cilek.html">Çilek</a> <span class="k">· 50 kcal (1 kâse, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Dana kıyma (%15 yağ)"><a href="dana-kiyma-15-yag.html">Dana kıyma (%15 yağ)</a> <span class="k">· 250 kcal (1 porsiyon, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Domates"><a href="domates.html">Domates</a> <span class="k">· 22 kcal (1 adet, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Elma"><a href="elma.html">Elma</a> <span class="k">· 80 kcal (1 adet, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Esmer pirinç (pişmiş)"><a href="esmer-pirinc-pismis.html">Esmer pirinç (pişmiş)</a> <span class="k">· 215 kcal (1 kâse, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Fıstık ezmesi"><a href="fistik-ezmesi.html">Fıstık ezmesi</a> <span class="k">· 190 kcal (1 yemek kaşığı, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Hindi göğsü"><a href="hindi-gogsu.html">Hindi göğsü</a> <span class="k">· 160 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Ispanak"><a href="ispanak.html">Ispanak</a> <span class="k">· 23 kcal (1 kâse, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Kahve (sade)"><a href="kahve-sade.html">Kahve (sade)</a> <span class="k">· 2 kcal (1 su bardağı, 240 g)</span></li>
+<li data-cat="prot" data-name="Karides"><a href="karides.html">Karides</a> <span class="k">· 120 kcal (1 porsiyon, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Kaşar / cheddar"><a href="kasar-cheddar.html">Kaşar / cheddar</a> <span class="k">· 120 kcal (1 dilim, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Kinoa (pişmiş)"><a href="kinoa-pismis.html">Kinoa (pişmiş)</a> <span class="k">· 220 kcal (1 kâse, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Latte"><a href="latte.html">Latte</a> <span class="k">· 150 kcal (1 su bardağı, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Makarna (pişmiş)"><a href="makarna-pismis.html">Makarna (pişmiş)</a> <span class="k">· 220 kcal (1 kâse, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Mercimek (haşlanmış)"><a href="mercimek-haslanmis.html">Mercimek (haşlanmış)</a> <span class="k">· 230 kcal (1 kâse, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Muz"><a href="muz.html">Muz</a> <span class="k">· 105 kcal (1 adet, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Nohut (haşlanmış)"><a href="nohut-haslanmis.html">Nohut (haşlanmış)</a> <span class="k">· 270 kcal (1 kâse, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Patates (haşlanmış)"><a href="patates-haslanmis.html">Patates (haşlanmış)</a> <span class="k">· 130 kcal (1 adet, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Portakal"><a href="portakal.html">Portakal</a> <span class="k">· 70 kcal (1 adet, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Protein tozu"><a href="protein-tozu.html">Protein tozu</a> <span class="k">· 120 kcal (1 ölçek, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Salatalık"><a href="salatalik.html">Salatalık</a> <span class="k">· 16 kcal (1 adet, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Somon (fırınlanmış)"><a href="somon-firinlanmis.html">Somon (fırınlanmış)</a> <span class="k">· 280 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Süt (tam yağlı)"><a href="sut-tam-yagli.html">Süt (tam yağlı)</a> <span class="k">· 120 kcal (1 bardak, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Tam buğday ekmeği"><a href="tam-bugday-ekmegi.html">Tam buğday ekmeği</a> <span class="k">· 68 kcal (1 dilim, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Tatlı patates"><a href="tatli-patates.html">Tatlı patates</a> <span class="k">· 115 kcal (1 adet, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tavuk göğsü (ızgara)"><a href="tavuk-gogsu-izgara.html">Tavuk göğsü (ızgara)</a> <span class="k">· 195 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Tereyağı"><a href="tereyagi.html">Tereyağı</a> <span class="k">· 72 kcal (1 yemek kaşığı, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 porsiyon, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Ton balığı (konserve, suda)"><a href="ton-baligi-konserve-suda.html">Ton balığı (konserve, suda)</a> <span class="k">· 100 kcal (1 porsiyon, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yaban mersini"><a href="yaban-mersini.html">Yaban mersini</a> <span class="k">· 85 kcal (1 kâse, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yoğurt (sade)"><a href="yogurt-sade.html">Yoğurt (sade)</a> <span class="k">· 120 kcal (1 kâse, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Yulaf ezmesi"><a href="yulaf-ezmesi.html">Yulaf ezmesi</a> <span class="k">· 190 kcal (1 kâse, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Yumurta (haşlanmış)"><a href="yumurta-haslanmis.html">Yumurta (haşlanmış)</a> <span class="k">· 78 kcal (1 adet, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yunan yoğurdu"><a href="yunan-yogurdu.html">Yunan yoğurdu</a> <span class="k">· 130 kcal (1 kâse, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Zeytinyağı"><a href="zeytinyagi.html">Zeytinyağı</a> <span class="k">· 120 kcal (1 yemek kaşığı, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Değerler: Pofu uygulamasında kullanılan tipik tahminlerdir; tarife ve porsiyona göre değişir.</p>
 <div class="note"><p>Bu sayfa genel bilgi içindir, tıbbi tavsiye değildir. Hamileyseniz, emziriyorsanız, bir sağlık sorununuz varsa ya da geçmişte yeme bozukluğu yaşadıysanız kalori saymadan önce doktorunuza veya diyetisyeninize danışın.</p></div>

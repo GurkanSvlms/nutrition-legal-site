@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,66 +231,72 @@
 <h1>อาหารของคุณกี่แคลอรี?</h1>
 <p class="lede">แคลอรี โปรตีน คาร์โบไฮเดรต และไขมันต่อ 1 เสิร์ฟและต่อ 100 g ของอาหาร 50 รายการ ตัวเลขเป็นค่าประมาณโดยทั่วไป ขึ้นอยู่กับสูตรและปริมาณ</p>
 </section>
+<section class="fsearch" aria-label="ค้นหาอาหาร">
+<input type="search" id="fq" placeholder="ค้นหาอาหาร" aria-label="ค้นหาอาหาร" autocomplete="off">
+<div class="chips" role="group" aria-label="ทั้งหมด"><button type="button" data-cat="all" aria-pressed="true">ทั้งหมด</button><button type="button" data-cat="light" aria-pressed="false">เบา</button><button type="button" data-cat="prot" aria-pressed="false">โปรตีนสูง</button><button type="button" data-cat="carb" aria-pressed="false">คาร์บเป็นหลัก</button><button type="button" data-cat="fat" aria-pressed="false">ไขมันเป็นหลัก</button><button type="button" data-cat="mixed" aria-pressed="false">ผสม</button></div>
+<p class="nomatch" id="fnone" hidden>ไม่พบอาหารที่ตรงกัน</p>
+</section>
 <section id="local">
 <h2>อาหารยอดนิยม</h2>
 <ul class="foodlist">
-<li><a href="khai-chiao.html">ไข่เจียว</a> <span class="k">· 157 kcal (1 ฟอง, 110 g)</span></li>
-<li><a href="khao-phat-kai.html">ข้าวผัดไก่</a> <span class="k">· 432 kcal (1 จาน, 250 g)</span></li>
-<li><a href="khao-phat-kung.html">ข้าวผัดกุ้ง</a> <span class="k">· 415 kcal (1 จาน, 250 g)</span></li>
-<li><a href="khao-phat-mu.html">ข้าวผัดหมู</a> <span class="k">· 448 kcal (1 จาน, 250 g)</span></li>
-<li><a href="nam-maphrao.html">น้ำมะพร้าว</a> <span class="k">· 43 kcal (1 แก้ว, 240 g)</span></li>
-<li><a href="phat-thai-kai.html">ผัดไทยไก่</a> <span class="k">· 462 kcal (1 จาน, 300 g)</span></li>
-<li><a href="phat-thai-thale.html">ผัดไทยทะเล</a> <span class="k">· 441 kcal (1 จาน, 300 g)</span></li>
-<li><a href="sen-kuaitiao.html">เส้นก๋วยเตี๋ยวต้ม (เส้นเปล่า)</a> <span class="k">· 214 kcal (1 ถ้วย, 200 g)</span></li>
+<li data-cat="fat" data-name="ไข่เจียว"><a href="khai-chiao.html">ไข่เจียว</a> <span class="k">· 157 kcal (1 ฟอง, 110 g)</span><span class="mbar" aria-hidden="true"><span style="width:35%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:62%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ข้าวผัดไก่"><a href="khao-phat-kai.html">ข้าวผัดไก่</a> <span class="k">· 432 kcal (1 จาน, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:64%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ข้าวผัดกุ้ง"><a href="khao-phat-kung.html">ข้าวผัดกุ้ง</a> <span class="k">· 415 kcal (1 จาน, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ข้าวผัดหมู"><a href="khao-phat-mu.html">ข้าวผัดหมู</a> <span class="k">· 448 kcal (1 จาน, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:62%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="น้ำมะพร้าว"><a href="nam-maphrao.html">น้ำมะพร้าว</a> <span class="k">· 43 kcal (1 แก้ว, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:0%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="ผัดไทยไก่"><a href="phat-thai-kai.html">ผัดไทยไก่</a> <span class="k">· 462 kcal (1 จาน, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:36%;background:#E9A23B"></span><span style="width:43%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="ผัดไทยทะเล"><a href="phat-thai-thale.html">ผัดไทยทะเล</a> <span class="k">· 441 kcal (1 จาน, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:42%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="เส้นก๋วยเตี๋ยวต้ม (เส้นเปล่า)"><a href="sen-kuaitiao.html">เส้นก๋วยเตี๋ยวต้ม (เส้นเปล่า)</a> <span class="k">· 214 kcal (1 ถ้วย, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>อาหารพื้นฐานที่กินทุกวัน</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">อัลมอนด์</a> <span class="k">· 175 kcal (1 กำมือ, 30 g)</span></li>
-<li><a href="apple.html">แอปเปิล</a> <span class="k">· 80 kcal (1 ชิ้น, 160 g)</span></li>
-<li><a href="avocado.html">อะโวคาโด</a> <span class="k">· 240 kcal (ครึ่งลูก, 100 g)</span></li>
-<li><a href="baked-salmon.html">แซลมอนอบ</a> <span class="k">· 280 kcal (1 เสิร์ฟ, 150 g)</span></li>
-<li><a href="banana.html">กล้วย</a> <span class="k">· 105 kcal (1 ชิ้น, 120 g)</span></li>
-<li><a href="black-coffee.html">กาแฟดำ</a> <span class="k">· 2 kcal (1 แก้ว, 240 g)</span></li>
-<li><a href="blueberries.html">บลูเบอร์รี</a> <span class="k">· 85 kcal (1 ถ้วย, 150 g)</span></li>
-<li><a href="boiled-egg.html">ไข่ต้ม</a> <span class="k">· 78 kcal (1 ฟอง, 50 g)</span></li>
-<li><a href="boiled-potato.html">มันฝรั่งต้ม</a> <span class="k">· 130 kcal (1 ชิ้น, 150 g)</span></li>
-<li><a href="broccoli.html">บรอกโคลี</a> <span class="k">· 55 kcal (1 ถ้วย, 150 g)</span></li>
-<li><a href="butter.html">เนย</a> <span class="k">· 72 kcal (1 ช้อนโต๊ะ, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">ทูน่ากระป๋อง (ในน้ำ)</a> <span class="k">· 100 kcal (1 เสิร์ฟ, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">ชีสเชดดาร์</a> <span class="k">· 120 kcal (1 แผ่น, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">ข้าวกล้อง</a> <span class="k">· 215 kcal (1 ถ้วย, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">ถั่วลูกไก่สุก</a> <span class="k">· 270 kcal (1 ถ้วย, 200 g)</span></li>
-<li><a href="cooked-lentils.html">ถั่วเลนทิลสุก</a> <span class="k">· 230 kcal (1 ถ้วย, 200 g)</span></li>
-<li><a href="cooked-pasta.html">พาสต้าสุก</a> <span class="k">· 220 kcal (1 ถ้วย, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">ควินัวสุก</a> <span class="k">· 220 kcal (1 ถ้วย, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">ข้าวสวย</a> <span class="k">· 205 kcal (1 ถ้วย, 158 g)</span></li>
-<li><a href="cucumber.html">แตงกวา</a> <span class="k">· 16 kcal (1 ชิ้น, 100 g)</span></li>
-<li><a href="feta-cheese.html">ชีสเฟต้า</a> <span class="k">· 78 kcal (1 แผ่น, 30 g)</span></li>
-<li><a href="greek-yogurt.html">กรีกโยเกิร์ต</a> <span class="k">· 130 kcal (1 ถ้วย, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">อกไก่ย่าง</a> <span class="k">· 195 kcal (1 เสิร์ฟ, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">เนื้อวัวบด (ไขมัน 15%)</a> <span class="k">· 250 kcal (1 เสิร์ฟ, 100 g)</span></li>
-<li><a href="latte.html">ลาเต้</a> <span class="k">· 150 kcal (1 แก้ว, 350 g)</span></li>
-<li><a href="oatmeal.html">ข้าวโอ๊ต</a> <span class="k">· 190 kcal (1 ถ้วย, 50 g)</span></li>
-<li><a href="olive-oil.html">น้ำมันมะกอก</a> <span class="k">· 120 kcal (1 ช้อนโต๊ะ, 14 g)</span></li>
-<li><a href="orange.html">ส้ม</a> <span class="k">· 70 kcal (1 ชิ้น, 150 g)</span></li>
-<li><a href="peanut-butter.html">เนยถั่ว</a> <span class="k">· 190 kcal (1 ช้อนโต๊ะ, 32 g)</span></li>
-<li><a href="plain-yogurt.html">โยเกิร์ตรสธรรมชาติ</a> <span class="k">· 120 kcal (1 ถ้วย, 200 g)</span></li>
-<li><a href="protein-powder-1-scoop.html">โปรตีนผง</a> <span class="k">· 120 kcal (1 สกู๊ป, 30 g)</span></li>
-<li><a href="shrimp.html">กุ้ง</a> <span class="k">· 120 kcal (1 เสิร์ฟ, 120 g)</span></li>
-<li><a href="spinach.html">ผักโขม</a> <span class="k">· 23 kcal (1 ถ้วย, 100 g)</span></li>
-<li><a href="strawberries.html">สตรอว์เบอร์รี</a> <span class="k">· 50 kcal (1 ถ้วย, 150 g)</span></li>
-<li><a href="sweet-potato.html">มันเทศ</a> <span class="k">· 115 kcal (1 ชิ้น, 130 g)</span></li>
-<li><a href="tofu.html">เต้าหู้</a> <span class="k">· 145 kcal (1 เสิร์ฟ, 150 g)</span></li>
-<li><a href="tomato.html">มะเขือเทศ</a> <span class="k">· 22 kcal (1 ชิ้น, 120 g)</span></li>
-<li><a href="turkey-breast.html">อกไก่งวง</a> <span class="k">· 160 kcal (1 เสิร์ฟ, 150 g)</span></li>
-<li><a href="walnuts.html">วอลนัต</a> <span class="k">· 200 kcal (1 กำมือ, 30 g)</span></li>
-<li><a href="white-bread.html">ขนมปังขาว</a> <span class="k">· 70 kcal (1 แผ่น, 28 g)</span></li>
-<li><a href="whole-milk.html">นมสดไขมันเต็ม</a> <span class="k">· 120 kcal (1 แก้ว, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">ขนมปังโฮลวีต</a> <span class="k">· 68 kcal (1 แผ่น, 28 g)</span></li>
+<li data-cat="fat" data-name="อัลมอนด์"><a href="almonds.html">อัลมอนด์</a> <span class="k">· 175 kcal (1 กำมือ, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="แอปเปิล"><a href="apple.html">แอปเปิล</a> <span class="k">· 80 kcal (1 ชิ้น, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="อะโวคาโด"><a href="avocado.html">อะโวคาโด</a> <span class="k">· 240 kcal (ครึ่งลูก, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="แซลมอนอบ"><a href="baked-salmon.html">แซลมอนอบ</a> <span class="k">· 280 kcal (1 เสิร์ฟ, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="กล้วย"><a href="banana.html">กล้วย</a> <span class="k">· 105 kcal (1 ชิ้น, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="กาแฟดำ"><a href="black-coffee.html">กาแฟดำ</a> <span class="k">· 2 kcal (1 แก้ว, 240 g)</span></li>
+<li data-cat="light" data-name="บลูเบอร์รี"><a href="blueberries.html">บลูเบอร์รี</a> <span class="k">· 85 kcal (1 ถ้วย, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ไข่ต้ม"><a href="boiled-egg.html">ไข่ต้ม</a> <span class="k">· 78 kcal (1 ฟอง, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="มันฝรั่งต้ม"><a href="boiled-potato.html">มันฝรั่งต้ม</a> <span class="k">· 130 kcal (1 ชิ้น, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="บรอกโคลี"><a href="broccoli.html">บรอกโคลี</a> <span class="k">· 55 kcal (1 ถ้วย, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="เนย"><a href="butter.html">เนย</a> <span class="k">· 72 kcal (1 ช้อนโต๊ะ, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="ทูน่ากระป๋อง (ในน้ำ)"><a href="canned-tuna-in-water.html">ทูน่ากระป๋อง (ในน้ำ)</a> <span class="k">· 100 kcal (1 เสิร์ฟ, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ชีสเชดดาร์"><a href="cheddar-cheese.html">ชีสเชดดาร์</a> <span class="k">· 120 kcal (1 แผ่น, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ข้าวกล้อง"><a href="cooked-brown-rice.html">ข้าวกล้อง</a> <span class="k">· 215 kcal (1 ถ้วย, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ถั่วลูกไก่สุก"><a href="cooked-chickpeas.html">ถั่วลูกไก่สุก</a> <span class="k">· 270 kcal (1 ถ้วย, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ถั่วเลนทิลสุก"><a href="cooked-lentils.html">ถั่วเลนทิลสุก</a> <span class="k">· 230 kcal (1 ถ้วย, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="พาสต้าสุก"><a href="cooked-pasta.html">พาสต้าสุก</a> <span class="k">· 220 kcal (1 ถ้วย, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ควินัวสุก"><a href="cooked-quinoa.html">ควินัวสุก</a> <span class="k">· 220 kcal (1 ถ้วย, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ข้าวสวย"><a href="cooked-white-rice.html">ข้าวสวย</a> <span class="k">· 205 kcal (1 ถ้วย, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="แตงกวา"><a href="cucumber.html">แตงกวา</a> <span class="k">· 16 kcal (1 ชิ้น, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ชีสเฟต้า"><a href="feta-cheese.html">ชีสเฟต้า</a> <span class="k">· 78 kcal (1 แผ่น, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="กรีกโยเกิร์ต"><a href="greek-yogurt.html">กรีกโยเกิร์ต</a> <span class="k">· 130 kcal (1 ถ้วย, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="อกไก่ย่าง"><a href="grilled-chicken-breast.html">อกไก่ย่าง</a> <span class="k">· 195 kcal (1 เสิร์ฟ, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="เนื้อวัวบด (ไขมัน 15%)"><a href="ground-beef-15-fat.html">เนื้อวัวบด (ไขมัน 15%)</a> <span class="k">· 250 kcal (1 เสิร์ฟ, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ลาเต้"><a href="latte.html">ลาเต้</a> <span class="k">· 150 kcal (1 แก้ว, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ข้าวโอ๊ต"><a href="oatmeal.html">ข้าวโอ๊ต</a> <span class="k">· 190 kcal (1 ถ้วย, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="น้ำมันมะกอก"><a href="olive-oil.html">น้ำมันมะกอก</a> <span class="k">· 120 kcal (1 ช้อนโต๊ะ, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ส้ม"><a href="orange.html">ส้ม</a> <span class="k">· 70 kcal (1 ชิ้น, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="เนยถั่ว"><a href="peanut-butter.html">เนยถั่ว</a> <span class="k">· 190 kcal (1 ช้อนโต๊ะ, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="โยเกิร์ตรสธรรมชาติ"><a href="plain-yogurt.html">โยเกิร์ตรสธรรมชาติ</a> <span class="k">· 120 kcal (1 ถ้วย, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="โปรตีนผง"><a href="protein-powder-1-scoop.html">โปรตีนผง</a> <span class="k">· 120 kcal (1 สกู๊ป, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="กุ้ง"><a href="shrimp.html">กุ้ง</a> <span class="k">· 120 kcal (1 เสิร์ฟ, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ผักโขม"><a href="spinach.html">ผักโขม</a> <span class="k">· 23 kcal (1 ถ้วย, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="สตรอว์เบอร์รี"><a href="strawberries.html">สตรอว์เบอร์รี</a> <span class="k">· 50 kcal (1 ถ้วย, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="มันเทศ"><a href="sweet-potato.html">มันเทศ</a> <span class="k">· 115 kcal (1 ชิ้น, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="เต้าหู้"><a href="tofu.html">เต้าหู้</a> <span class="k">· 145 kcal (1 เสิร์ฟ, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="มะเขือเทศ"><a href="tomato.html">มะเขือเทศ</a> <span class="k">· 22 kcal (1 ชิ้น, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="อกไก่งวง"><a href="turkey-breast.html">อกไก่งวง</a> <span class="k">· 160 kcal (1 เสิร์ฟ, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="วอลนัต"><a href="walnuts.html">วอลนัต</a> <span class="k">· 200 kcal (1 กำมือ, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ขนมปังขาว"><a href="white-bread.html">ขนมปังขาว</a> <span class="k">· 70 kcal (1 แผ่น, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="นมสดไขมันเต็ม"><a href="whole-milk.html">นมสดไขมันเต็ม</a> <span class="k">· 120 kcal (1 แก้ว, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ขนมปังโฮลวีต"><a href="whole-wheat-bread.html">ขนมปังโฮลวีต</a> <span class="k">· 68 kcal (1 แผ่น, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">ตัวเลขเป็นค่าประมาณโดยทั่วไป ขึ้นอยู่กับสูตรและปริมาณ หากมีแหล่งที่มาจะแสดงลิงก์ไว้</p>
 <div class="note"><p>หน้านี้ให้ข้อมูลทั่วไปเท่านั้น ไม่ใช่คำแนะนำทางการแพทย์ หากคุณตั้งครรภ์ อยู่ในช่วงให้นมบุตร มีโรคประจำตัว หรือเคยมีภาวะการกินผิดปกติ โปรดปรึกษาแพทย์หรือนักกำหนดอาหารก่อนเริ่มนับแคลอรี</p></div>

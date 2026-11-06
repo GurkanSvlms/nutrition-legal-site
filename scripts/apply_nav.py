@@ -35,7 +35,7 @@ from urllib.parse import urljoin, urlparse
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://getpofu.com/"
 TODAY = "2026-11-06"
-SKIN_V = "20261106"  # bump when assets/site.css changes (cache)
+SKIN_V = "20261107"  # bump when assets/site.css changes (cache)
 
 OTHER = ["de", "fr", "es", "it", "pt-BR", "nl", "pl", "ru", "uk", "cs", "ro", "sv", "ja", "ko",
          "zh-Hans", "id", "vi", "th", "hi", "ar"]
@@ -469,6 +469,55 @@ def toolbox_block(L, r):
             f"<h2>{h}</h2>\n<ul>\n" + "\n".join(items) + "\n</ul>\n</section>\n<!-- toolbox:end -->")
 
 
+# ----------------------------------------------------------------------------- "On this page" menu
+def toc_block(L, r, text):
+    """(new text, block) — table of contents for guides, Q&A and comparisons with 3+ sections.
+    Adds stable ids (sec-N) to h2s whose section has no id. Skips hubs and pages with their own .toc."""
+    if classify(L, r) not in ("guides", "qa", "compare") or os.path.basename(r) in NON_CONTENT or 'class="toc"' in text:
+        return text, ""
+    tf = ROOT / "data" / "trust" / f"{L}.json"
+    if not tf.exists():
+        return text, ""
+    label = json.loads(rd(tf)).get("ui", {}).get("toc")
+    m = re.search(r'(<main\b[^>]*>)(.*?)(</main>)', text, re.S)
+    if not label or not m:
+        return text, ""
+    body = m.group(2)
+    skip = {"free-tools", "related", "not-medical", "source", "sources"}
+    items, n = [], 0
+
+    def sec(mm):
+        nonlocal n
+        attrs, inner = mm.group(1), mm.group(2)
+        sid = re.search(r'\bid="([^"]+)"', attrs)
+        if 'class="hero"' in attrs or (sid and sid.group(1) in skip):
+            return mm.group(0)
+        h = re.search(r"<h2\b([^>]*)>(.*?)</h2>", inner, re.S)
+        if not h:
+            return mm.group(0)
+        n += 1
+        title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", h.group(2))).strip()
+        if sid:
+            target = sid.group(1)
+        else:
+            hid = re.search(r'\bid="([^"]+)"', h.group(1))
+            target = hid.group(1) if hid else f"sec-{n}"
+            if not hid:
+                inner = inner.replace(h.group(0), f'<h2 id="{target}"{h.group(1)}>{h.group(2)}</h2>', 1)
+        items.append((target, title))
+        return f"<section{attrs}>{inner}</section>"
+
+    new_body = re.sub(r"<section\b([^>]*)>(.*?)</section>", sec, body, flags=re.S)
+    if len(items) < 3:
+        return text, ""
+    lab = htmllib.escape(label, quote=False)
+    lis = "".join(f'<li><a href="#{t}">{htmllib.escape(x, quote=False)}</a></li>' for t, x in items)
+    block = (f'<!-- ptoc:start -->\n<nav class="ptoc" aria-label="{lab}">'
+             f'<details class="ptoc__m"><summary>{lab}</summary><ol>{lis}</ol></details>'
+             f'<div class="ptoc__d"><b>{lab}</b><ol>{lis}</ol></div></nav>\n<!-- ptoc:end -->')
+    return text[:m.start(2)] + new_body + text[m.end(2):], block
+
+
 STD_HEADER = re.compile(r'(<header class="top">\s*<div class="wrap top__in">.*?)(\s*</div>\s*</header>)', re.S)
 
 
@@ -508,6 +557,13 @@ def process(path, text=None, write=True):
             new = re.sub(r"<!-- nav:start -->.*?<!-- nav:end -->", lambda m: hb, new, flags=re.S)
         else:
             new = STD_HEADER.sub(lambda m: m.group(1) + "\n" + hb + m.group(2), new, count=1)
+    new = re.sub(r"\n?<!-- ptoc:start -->.*?<!-- ptoc:end -->", "", new, flags=re.S)
+    if standard:
+        new, pt = toc_block(L, r, new)
+        if pt:
+            hero = re.search(r'<section class="hero">.*?</section>', new, re.S)
+            if hero:
+                new = new[:hero.end()] + "\n" + pt + new[hero.end():]
     tb = toolbox_block(L, r)
     new = re.sub(r"\n?<!-- toolbox:start -->.*?<!-- toolbox:end -->", "", new, flags=re.S)
     if tb and "</main>" in new:

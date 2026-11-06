@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,79 +231,85 @@
 <h1>كم سعرة حرارية في طعامك؟</h1>
 <p class="lede">السعرات والبروتين والكربوهيدرات والدهون لكل حصة ولكل 100 غ في 63 طعامًا. القيم تقديرات نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu وتختلف بحسب الوصفة والحصة.</p>
 </section>
+<section class="fsearch" aria-label="ابحثي عن طعام">
+<input type="search" id="fq" placeholder="ابحثي عن طعام" aria-label="ابحثي عن طعام" autocomplete="off">
+<div class="chips" role="group" aria-label="الكل"><button type="button" data-cat="all" aria-pressed="true">الكل</button><button type="button" data-cat="light" aria-pressed="false">خفيف</button><button type="button" data-cat="prot" aria-pressed="false">غني بالبروتين</button><button type="button" data-cat="carb" aria-pressed="false">كربوهيدرات في الغالب</button><button type="button" data-cat="fat" aria-pressed="false">دهون في الغالب</button><button type="button" data-cat="mixed" aria-pressed="false">مختلط</button></div>
+<p class="nomatch" id="fnone" hidden>لا توجد أطعمة مطابقة.</p>
+</section>
 <section id="local">
 <h2>الأطباق</h2>
 <ul class="foodlist">
-<li><a href="aruz-bi-haleeb.html">أرز بالحليب</a> <span class="k">· 281 kcal (1 كوب, 260 g)</span></li>
-<li><a href="baba-ghanoush.html">بابا غنوج (متبل الباذنجان)</a> <span class="k">· 110 kcal (4 ملاعق كبيرة, 60 g)</span></li>
-<li><a href="baklava.html">بقلاوة</a> <span class="k">· 352 kcal (1 قطعة, 80 g)</span></li>
-<li><a href="couscous.html">كسكسي مطبوخ</a> <span class="k">· 178 kcal (1 كوب, 160 g)</span></li>
-<li><a href="falafel.html">فلافل</a> <span class="k">· 350 kcal (4 أقراص, 68 g)</span></li>
-<li><a href="falafel-sandwich.html">ساندويتش فلافل</a> <span class="k">· 570 kcal (1 ساندويتش, 215 g)</span></li>
-<li><a href="fatayer-sabanikh.html">فطيرة سبانخ</a> <span class="k">· 254 kcal (1 فطيرة, 120 g)</span></li>
-<li><a href="frooj-mashwi.html">صدر فروج مشوي</a> <span class="k">· 262 kcal (1 صدر, 150 g)</span></li>
-<li><a href="ful.html">فول مطبوخ</a> <span class="k">· 298 kcal (1 كوب, 185 g)</span></li>
-<li><a href="gyro-sandwich.html">ساندويتش جايرو (قريب من الشاورما)</a> <span class="k">· 368 kcal (1 ساندويتش, 200 g)</span></li>
-<li><a href="hummus.html">حمص بالطحينة</a> <span class="k">· 146 kcal (4 ملاعق كبيرة, 60 g)</span></li>
-<li><a href="hummus-masluq.html">حمص مسلوق</a> <span class="k">· 293 kcal (1 كوب, 180 g)</span></li>
-<li><a href="khubz-arabi.html">خبز عربي (بيتا)</a> <span class="k">· 234 kcal (1 رغيف كبير, 85 g)</span></li>
-<li><a href="mujaddara.html">مجدرة (أرز بالعدس)</a> <span class="k">· 310 kcal (1 طبق, 207 g)</span></li>
-<li><a href="shish-kabab-lahm.html">شيش كباب لحم مع خضار</a> <span class="k">· 327 kcal (1 سيخ, 202 g)</span></li>
-<li><a href="shish-tawook.html">شيش طاووق مع خضار</a> <span class="k">· 210 kcal (1 سيخ, 202 g)</span></li>
-<li><a href="shorbat-adas.html">شوربة عدس</a> <span class="k">· 180 kcal (1 وعاء, 300 g)</span></li>
-<li><a href="tabbouleh.html">تبولة</a> <span class="k">· 203 kcal (1 كوب, 160 g)</span></li>
-<li><a href="tahini.html">طحينة</a> <span class="k">· 105 kcal (1 ملعقة كبيرة, 15 g)</span></li>
-<li><a href="warak-enab-aruz.html">ورق عنب بالأرز (يالنجي)</a> <span class="k">· 188 kcal (2 لفتين, 112 g)</span></li>
-<li><a href="warak-enab-lahm.html">ورق عنب بلحم البقر والأرز</a> <span class="k">· 239 kcal (5 لفات, 105 g)</span></li>
+<li data-cat="carb" data-name="أرز بالحليب"><a href="aruz-bi-haleeb.html">أرز بالحليب</a> <span class="k">· 281 kcal (1 كوب, 260 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="بابا غنوج (متبل الباذنجان)"><a href="baba-ghanoush.html">بابا غنوج (متبل الباذنجان)</a> <span class="k">· 110 kcal (4 ملاعق كبيرة, 60 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:73%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="بقلاوة"><a href="baklava.html">بقلاوة</a> <span class="k">· 352 kcal (1 قطعة, 80 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:34%;background:#E9A23B"></span><span style="width:60%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="كسكسي مطبوخ"><a href="couscous.html">كسكسي مطبوخ</a> <span class="k">· 178 kcal (1 كوب, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="فلافل"><a href="falafel.html">فلافل</a> <span class="k">· 350 kcal (4 أقراص, 68 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:22%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ساندويتش فلافل"><a href="falafel-sandwich.html">ساندويتش فلافل</a> <span class="k">· 570 kcal (1 ساندويتش, 215 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:50%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="فطيرة سبانخ"><a href="fatayer-sabanikh.html">فطيرة سبانخ</a> <span class="k">· 254 kcal (1 فطيرة, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:20%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="صدر فروج مشوي"><a href="frooj-mashwi.html">صدر فروج مشوي</a> <span class="k">· 262 kcal (1 صدر, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:60%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="فول مطبوخ"><a href="ful.html">فول مطبوخ</a> <span class="k">· 298 kcal (1 كوب, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:45%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="ساندويتش جايرو (قريب من الشاورما)"><a href="gyro-sandwich.html">ساندويتش جايرو (قريب من الشاورما)</a> <span class="k">· 368 kcal (1 ساندويتش, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:25%;background:#DE5187"></span><span style="width:42%;background:#E9A23B"></span><span style="width:33%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="حمص بالطحينة"><a href="hummus.html">حمص بالطحينة</a> <span class="k">· 146 kcal (4 ملاعق كبيرة, 60 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="حمص مسلوق"><a href="hummus-masluq.html">حمص مسلوق</a> <span class="k">· 293 kcal (1 كوب, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="خبز عربي (بيتا)"><a href="khubz-arabi.html">خبز عربي (بيتا)</a> <span class="k">· 234 kcal (1 رغيف كبير, 85 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="مجدرة (أرز بالعدس)"><a href="mujaddara.html">مجدرة (أرز بالعدس)</a> <span class="k">· 310 kcal (1 طبق, 207 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="شيش كباب لحم مع خضار"><a href="shish-kabab-lahm.html">شيش كباب لحم مع خضار</a> <span class="k">· 327 kcal (1 سيخ, 202 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:13%;background:#E9A23B"></span><span style="width:57%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="شيش طاووق مع خضار"><a href="shish-tawook.html">شيش طاووق مع خضار</a> <span class="k">· 210 kcal (1 سيخ, 202 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:32%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="شوربة عدس"><a href="shorbat-adas.html">شوربة عدس</a> <span class="k">· 180 kcal (1 وعاء, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:25%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:10%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="تبولة"><a href="tabbouleh.html">تبولة</a> <span class="k">· 203 kcal (1 كوب, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:29%;background:#E9A23B"></span><span style="width:66%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="طحينة"><a href="tahini.html">طحينة</a> <span class="k">· 105 kcal (1 ملعقة كبيرة, 15 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:8%;background:#E9A23B"></span><span style="width:81%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ورق عنب بالأرز (يالنجي)"><a href="warak-enab-aruz.html">ورق عنب بالأرز (يالنجي)</a> <span class="k">· 188 kcal (2 لفتين, 112 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:32%;background:#E9A23B"></span><span style="width:63%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ورق عنب بلحم البقر والأرز"><a href="warak-enab-lahm.html">ورق عنب بلحم البقر والأرز</a> <span class="k">· 239 kcal (5 لفات, 105 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:20%;background:#E9A23B"></span><span style="width:66%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>الأطعمة الأساسية</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">لوز</a> <span class="k">· 175 kcal (حفنة, 30 g)</span></li>
-<li><a href="apple.html">تفاح</a> <span class="k">· 80 kcal (حبة واحدة, 160 g)</span></li>
-<li><a href="avocado.html">أفوكادو</a> <span class="k">· 240 kcal (نصف حبة, 100 g)</span></li>
-<li><a href="baked-salmon.html">سلمون مخبوز</a> <span class="k">· 280 kcal (حصة واحدة, 150 g)</span></li>
-<li><a href="banana.html">موز</a> <span class="k">· 105 kcal (حبة واحدة, 120 g)</span></li>
-<li><a href="black-coffee.html">قهوة سوداء</a> <span class="k">· 2 kcal (فنجان واحد, 240 g)</span></li>
-<li><a href="blueberries.html">توت أزرق</a> <span class="k">· 85 kcal (وعاء واحد, 150 g)</span></li>
-<li><a href="boiled-egg.html">بيضة مسلوقة</a> <span class="k">· 78 kcal (بيضة واحدة, 50 g)</span></li>
-<li><a href="boiled-potato.html">بطاطس مسلوقة</a> <span class="k">· 130 kcal (حبة واحدة, 150 g)</span></li>
-<li><a href="broccoli.html">بروكلي</a> <span class="k">· 55 kcal (وعاء واحد, 150 g)</span></li>
-<li><a href="butter.html">زبدة</a> <span class="k">· 72 kcal (ملعقة كبيرة, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">تونة معلّبة (في الماء)</a> <span class="k">· 100 kcal (حصة واحدة, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">جبنة شيدر</a> <span class="k">· 120 kcal (شريحة واحدة, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">أرز بني مطبوخ</a> <span class="k">· 215 kcal (وعاء واحد, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">حمص مطبوخ</a> <span class="k">· 270 kcal (وعاء واحد, 200 g)</span></li>
-<li><a href="cooked-lentils.html">عدس مطبوخ</a> <span class="k">· 230 kcal (وعاء واحد, 200 g)</span></li>
-<li><a href="cooked-pasta.html">معكرونة مطبوخة</a> <span class="k">· 220 kcal (وعاء واحد, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">كينوا مطبوخة</a> <span class="k">· 220 kcal (وعاء واحد, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">أرز أبيض مطبوخ</a> <span class="k">· 205 kcal (وعاء واحد, 158 g)</span></li>
-<li><a href="cucumber.html">خيار</a> <span class="k">· 16 kcal (حبة واحدة, 100 g)</span></li>
-<li><a href="feta-cheese.html">جبنة فيتا</a> <span class="k">· 78 kcal (شريحة واحدة, 30 g)</span></li>
-<li><a href="greek-yogurt.html">زبادي يوناني</a> <span class="k">· 130 kcal (وعاء واحد, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">صدر دجاج مشوي</a> <span class="k">· 195 kcal (حصة واحدة, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">لحم بقري مفروم (15% دهون)</a> <span class="k">· 250 kcal (حصة واحدة, 100 g)</span></li>
-<li><a href="latte.html">لاتيه</a> <span class="k">· 150 kcal (كوب واحد, 350 g)</span></li>
-<li><a href="oatmeal.html">شوفان</a> <span class="k">· 190 kcal (وعاء واحد, 50 g)</span></li>
-<li><a href="olive-oil.html">زيت زيتون</a> <span class="k">· 120 kcal (ملعقة كبيرة, 14 g)</span></li>
-<li><a href="orange.html">برتقال</a> <span class="k">· 70 kcal (حبة واحدة, 150 g)</span></li>
-<li><a href="peanut-butter.html">زبدة الفول السوداني</a> <span class="k">· 190 kcal (ملعقة كبيرة, 32 g)</span></li>
-<li><a href="plain-yogurt.html">زبادي سادة</a> <span class="k">· 120 kcal (وعاء واحد, 200 g)</span></li>
-<li><a href="protein-powder.html">مسحوق بروتين</a> <span class="k">· 120 kcal (مغرفة واحدة, 30 g)</span></li>
-<li><a href="shrimp.html">روبيان (جمبري)</a> <span class="k">· 120 kcal (حصة واحدة, 120 g)</span></li>
-<li><a href="spinach.html">سبانخ</a> <span class="k">· 23 kcal (وعاء واحد, 100 g)</span></li>
-<li><a href="strawberries.html">فراولة</a> <span class="k">· 50 kcal (وعاء واحد, 150 g)</span></li>
-<li><a href="sweet-potato.html">بطاطا حلوة</a> <span class="k">· 115 kcal (حبة واحدة, 130 g)</span></li>
-<li><a href="tofu.html">توفو</a> <span class="k">· 145 kcal (حصة واحدة, 150 g)</span></li>
-<li><a href="tomato.html">طماطم</a> <span class="k">· 22 kcal (حبة واحدة, 120 g)</span></li>
-<li><a href="turkey-breast.html">صدر ديك رومي</a> <span class="k">· 160 kcal (حصة واحدة, 150 g)</span></li>
-<li><a href="walnuts.html">جوز</a> <span class="k">· 200 kcal (حفنة, 30 g)</span></li>
-<li><a href="white-bread.html">خبز أبيض</a> <span class="k">· 70 kcal (شريحة واحدة, 28 g)</span></li>
-<li><a href="whole-milk.html">حليب كامل الدسم</a> <span class="k">· 120 kcal (كوب واحد, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">خبز القمح الكامل</a> <span class="k">· 68 kcal (شريحة واحدة, 28 g)</span></li>
+<li data-cat="fat" data-name="لوز"><a href="almonds.html">لوز</a> <span class="k">· 175 kcal (حفنة, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="تفاح"><a href="apple.html">تفاح</a> <span class="k">· 80 kcal (حبة واحدة, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="أفوكادو"><a href="avocado.html">أفوكادو</a> <span class="k">· 240 kcal (نصف حبة, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="سلمون مخبوز"><a href="baked-salmon.html">سلمون مخبوز</a> <span class="k">· 280 kcal (حصة واحدة, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="موز"><a href="banana.html">موز</a> <span class="k">· 105 kcal (حبة واحدة, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="قهوة سوداء"><a href="black-coffee.html">قهوة سوداء</a> <span class="k">· 2 kcal (فنجان واحد, 240 g)</span></li>
+<li data-cat="light" data-name="توت أزرق"><a href="blueberries.html">توت أزرق</a> <span class="k">· 85 kcal (وعاء واحد, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="بيضة مسلوقة"><a href="boiled-egg.html">بيضة مسلوقة</a> <span class="k">· 78 kcal (بيضة واحدة, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="بطاطس مسلوقة"><a href="boiled-potato.html">بطاطس مسلوقة</a> <span class="k">· 130 kcal (حبة واحدة, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="بروكلي"><a href="broccoli.html">بروكلي</a> <span class="k">· 55 kcal (وعاء واحد, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="زبدة"><a href="butter.html">زبدة</a> <span class="k">· 72 kcal (ملعقة كبيرة, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="تونة معلّبة (في الماء)"><a href="canned-tuna-in-water.html">تونة معلّبة (في الماء)</a> <span class="k">· 100 kcal (حصة واحدة, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="جبنة شيدر"><a href="cheddar-cheese.html">جبنة شيدر</a> <span class="k">· 120 kcal (شريحة واحدة, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="أرز بني مطبوخ"><a href="cooked-brown-rice.html">أرز بني مطبوخ</a> <span class="k">· 215 kcal (وعاء واحد, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="حمص مطبوخ"><a href="cooked-chickpeas.html">حمص مطبوخ</a> <span class="k">· 270 kcal (وعاء واحد, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="عدس مطبوخ"><a href="cooked-lentils.html">عدس مطبوخ</a> <span class="k">· 230 kcal (وعاء واحد, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="معكرونة مطبوخة"><a href="cooked-pasta.html">معكرونة مطبوخة</a> <span class="k">· 220 kcal (وعاء واحد, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="كينوا مطبوخة"><a href="cooked-quinoa.html">كينوا مطبوخة</a> <span class="k">· 220 kcal (وعاء واحد, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="أرز أبيض مطبوخ"><a href="cooked-white-rice.html">أرز أبيض مطبوخ</a> <span class="k">· 205 kcal (وعاء واحد, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="خيار"><a href="cucumber.html">خيار</a> <span class="k">· 16 kcal (حبة واحدة, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="جبنة فيتا"><a href="feta-cheese.html">جبنة فيتا</a> <span class="k">· 78 kcal (شريحة واحدة, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="زبادي يوناني"><a href="greek-yogurt.html">زبادي يوناني</a> <span class="k">· 130 kcal (وعاء واحد, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="صدر دجاج مشوي"><a href="grilled-chicken-breast.html">صدر دجاج مشوي</a> <span class="k">· 195 kcal (حصة واحدة, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="لحم بقري مفروم (15% دهون)"><a href="ground-beef-15-fat.html">لحم بقري مفروم (15% دهون)</a> <span class="k">· 250 kcal (حصة واحدة, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="لاتيه"><a href="latte.html">لاتيه</a> <span class="k">· 150 kcal (كوب واحد, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="شوفان"><a href="oatmeal.html">شوفان</a> <span class="k">· 190 kcal (وعاء واحد, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="زيت زيتون"><a href="olive-oil.html">زيت زيتون</a> <span class="k">· 120 kcal (ملعقة كبيرة, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="برتقال"><a href="orange.html">برتقال</a> <span class="k">· 70 kcal (حبة واحدة, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="زبدة الفول السوداني"><a href="peanut-butter.html">زبدة الفول السوداني</a> <span class="k">· 190 kcal (ملعقة كبيرة, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="زبادي سادة"><a href="plain-yogurt.html">زبادي سادة</a> <span class="k">· 120 kcal (وعاء واحد, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="مسحوق بروتين"><a href="protein-powder.html">مسحوق بروتين</a> <span class="k">· 120 kcal (مغرفة واحدة, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="روبيان (جمبري)"><a href="shrimp.html">روبيان (جمبري)</a> <span class="k">· 120 kcal (حصة واحدة, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="سبانخ"><a href="spinach.html">سبانخ</a> <span class="k">· 23 kcal (وعاء واحد, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="فراولة"><a href="strawberries.html">فراولة</a> <span class="k">· 50 kcal (وعاء واحد, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="بطاطا حلوة"><a href="sweet-potato.html">بطاطا حلوة</a> <span class="k">· 115 kcal (حبة واحدة, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="توفو"><a href="tofu.html">توفو</a> <span class="k">· 145 kcal (حصة واحدة, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="طماطم"><a href="tomato.html">طماطم</a> <span class="k">· 22 kcal (حبة واحدة, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="صدر ديك رومي"><a href="turkey-breast.html">صدر ديك رومي</a> <span class="k">· 160 kcal (حصة واحدة, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="جوز"><a href="walnuts.html">جوز</a> <span class="k">· 200 kcal (حفنة, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="خبز أبيض"><a href="white-bread.html">خبز أبيض</a> <span class="k">· 70 kcal (شريحة واحدة, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="حليب كامل الدسم"><a href="whole-milk.html">حليب كامل الدسم</a> <span class="k">· 120 kcal (كوب واحد, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="خبز القمح الكامل"><a href="whole-wheat-bread.html">خبز القمح الكامل</a> <span class="k">· 68 kcal (شريحة واحدة, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">القيم: تقديرات نموذجية من قواعد بيانات غذائية عامة ومن تطبيق Pofu، وتختلف بحسب الوصفة والحصة.</p>
 <div class="note"><p>هذه الصفحة للمعلومات العامة فقط وليست نصيحة طبية. إذا كنتِ حاملًا أو مرضعة أو لديكِ حالة صحية أو سبق أن عانيتِ من اضطراب في الأكل، فتحدّثي إلى طبيبك أو أخصائية التغذية قبل عدّ السعرات.</p></div>

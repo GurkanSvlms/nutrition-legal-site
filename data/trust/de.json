@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Kleinere oder größere Portion",
-    "port_cols": ["Portion", "Kalorien", "Protein"],
-    "port_rows": ["Eine halbe Portion ({g} {u})", "Übliche Portion ({g} {u})", "Anderthalb Portionen ({g} {u})"],
+    "port_cols": [
+      "Portion",
+      "Kalorien",
+      "Protein"
+    ],
+    "port_rows": [
+      "Eine halbe Portion ({g} {u})",
+      "Übliche Portion ({g} {u})",
+      "Anderthalb Portionen ({g} {u})"
+    ],
     "h_split": "Woher die Kalorien kommen",
     "split": "{p} % der Kalorien stammen aus Protein, {c} % aus Kohlenhydraten und {f} % aus Fett.",
-    "cat": {"fat": "Kurz gesagt: Die meisten Kalorien stammen aus Fett, daher macht schon eine kleine Mengenänderung einen großen Unterschied.", "prot": "Kurz gesagt: eine gute Proteinquelle.", "carb": "Kurz gesagt: Die meisten Kalorien stammen aus Kohlenhydraten.", "light": "Kurz gesagt: ein leichtes Lebensmittel, das hauptsächlich aus Wasser besteht.", "mixed": "Kurz gesagt: eine Mischung aus Protein, Kohlenhydraten und Fett."},
+    "cat": {
+      "fat": "Kurz gesagt: Die meisten Kalorien stammen aus Fett, daher macht schon eine kleine Mengenänderung einen großen Unterschied.",
+      "prot": "Kurz gesagt: eine gute Proteinquelle.",
+      "carb": "Kurz gesagt: Die meisten Kalorien stammen aus Kohlenhydraten.",
+      "light": "Kurz gesagt: ein leichtes Lebensmittel, das hauptsächlich aus Wasser besteht.",
+      "mixed": "Kurz gesagt: eine Mischung aus Protein, Kohlenhydraten und Fett."
+    },
     "ref": "Eine Portion entspricht etwa {pct} % eines Tages mit 2.000 kcal, dem Referenzwert auf Lebensmitteletiketten.",
     "h_lighter": "Leichtere Alternativen in derselben Gruppe",
     "per100": "pro 100 {u}",
@@ -28,13 +42,42 @@
     "h1": "Wie wir unsere Inhalte und Quellen erstellen",
     "lede": "Jede Zahl auf dieser Seite soll überprüfbar sein. Diese Seite erklärt, wer sie schreibt, woher die Werte kommen und was wir nicht tun.",
     "sections": [
-      ["Wer schreibt die Inhalte", "<p>Pofu wird von Ali Gürkan Sevilmiş entwickelt, einem unabhängigen Entwickler. Die Ratgeber, Rechner und Lebensmittelseiten dieser Website werden von ihm geschrieben und gepflegt, auf Grundlage der unten genannten veröffentlichten Quellen.</p><p>Bisher hat keine Ernährungsberatung und keine Ärztin bzw. kein Arzt diese Inhalte geprüft. Das sagen wir offen, statt ein Prüfsiegel für eine Prüfung zu zeigen, die nicht stattgefunden hat. Wenn du Ernährungsfachkraft bist und etwas siehst, das man verbessern könnte, freuen wir uns über deine Nachricht.</p>"],
-      ["Woher die Lebensmittelwerte stammen", "<p>Kalorien, Protein, Kohlenhydrate und Fett auf den Lebensmittelseiten stammen aus öffentlichen Nährwertdatenbanken und aus der Lebensmitteldatenbank in der Pofu-App:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (US-Landwirtschaftsministerium)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Niederlande)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Schwedische Lebensmittelbehörde)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Tschechien)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italien)</li></ul><p>Wenn eine Seite einen Datenbankeintrag nutzt, verlinkt sie ihn. Rezepte zu Hause und im Restaurant unterscheiden sich, daher ist jeder Wert eine typische Schätzung für die gezeigte Portion, und jede Seite weist darauf hin.</p>"],
-      ["Woher die Formeln stammen", "<p>Die Rechner nutzen dieselben Regeln wie die Pofu-App, entnommen aus veröffentlichter Forschung: die Mifflin-St-Jeor-Formel für den Grundumsatz (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), Proteinbereiche der <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, Fett- und Kohlenhydratbereiche der <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI-Kategorien der <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Weltgesundheitsorganisation</a> und die pro Kilogramm nötige Energie nach <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Jeder Rechner nennt seine Quellen und erklärt jeden Schritt.</p><p>Wir empfehlen nie weniger als 1.200 kcal am Tag. Die Rechner bitten dich, kein Kaloriendefizit zu nutzen, wenn du schwanger bist oder stillst, und die Pofu-App setzt kein Defizit, wenn du ihr das mitteilst.</p>"],
-      ["Wie wir KI nutzen", "<p>Die Pofu-App nutzt KI, um eine Mahlzeit anhand eines Fotos zu schätzen. Jede Schätzung zeigt einen Konfidenzwert und kann korrigiert werden. Auf dieser Website helfen uns KI-Tools, Texte zu entwerfen und aus den englischen und türkischen Originalen zu übersetzen; der Entwickler prüft die Zahlen anhand der oben genannten Quellen. Die Übersetzungen wurden noch nicht alle von Muttersprachlerinnen und Muttersprachlern geprüft; wenn ein Satz in deiner Sprache falsch klingt, sag uns bitte Bescheid.</p>"],
-      ["Was wir nicht tun", "<ul><li>Wir geben keine medizinische Beratung und stellen keine Diagnosen.</li><li>Pofu sagt weder Periode noch Eisprung voraus und hat kein Schwangerschafts-Tracking; die optionale Zyklusfunktion nutzt nur ein Datum, das du selbst eingibst.</li><li>Wir versprechen keine Abnehmerfolge und zeigen keine Vorher-nachher-Fotos.</li><li>Wir veröffentlichen keine gefälschten Bewertungen.</li><li>Unsere Vergleichsseiten werden von den Machern von Pofu geschrieben, und jede weist darauf hin.</li><li>Die Rechner laufen in deinem Browser; nichts, was du eingibst, wird gesendet oder gespeichert.</li></ul>"],
-      ["Aktualisierungen und Korrekturen", "<p>Jede Seite zeigt, wann sie zuletzt aktualisiert wurde. Wir prüfen die Seiten, wenn sich eine Quelle ändert. Wenn du einen Fehler findest, schreib an <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; wir prüfen ihn anhand der Quelle, beheben bestätigte Fehler und aktualisieren das Datum auf der Seite.</p>"]
+      [
+        "Wer schreibt die Inhalte",
+        "<p>Pofu wird von Ali Gürkan Sevilmiş entwickelt, einem unabhängigen Entwickler. Die Ratgeber, Rechner und Lebensmittelseiten dieser Website werden von ihm geschrieben und gepflegt, auf Grundlage der unten genannten veröffentlichten Quellen.</p><p>Bisher hat keine Ernährungsberatung und keine Ärztin bzw. kein Arzt diese Inhalte geprüft. Das sagen wir offen, statt ein Prüfsiegel für eine Prüfung zu zeigen, die nicht stattgefunden hat. Wenn du Ernährungsfachkraft bist und etwas siehst, das man verbessern könnte, freuen wir uns über deine Nachricht.</p>"
+      ],
+      [
+        "Woher die Lebensmittelwerte stammen",
+        "<p>Kalorien, Protein, Kohlenhydrate und Fett auf den Lebensmittelseiten stammen aus öffentlichen Nährwertdatenbanken und aus der Lebensmitteldatenbank in der Pofu-App:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (US-Landwirtschaftsministerium)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Niederlande)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Schwedische Lebensmittelbehörde)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Tschechien)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italien)</li></ul><p>Wenn eine Seite einen Datenbankeintrag nutzt, verlinkt sie ihn. Rezepte zu Hause und im Restaurant unterscheiden sich, daher ist jeder Wert eine typische Schätzung für die gezeigte Portion, und jede Seite weist darauf hin.</p>"
+      ],
+      [
+        "Woher die Formeln stammen",
+        "<p>Die Rechner nutzen dieselben Regeln wie die Pofu-App, entnommen aus veröffentlichter Forschung: die Mifflin-St-Jeor-Formel für den Grundumsatz (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), Proteinbereiche der <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, Fett- und Kohlenhydratbereiche der <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI-Kategorien der <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Weltgesundheitsorganisation</a> und die pro Kilogramm nötige Energie nach <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Jeder Rechner nennt seine Quellen und erklärt jeden Schritt.</p><p>Wir empfehlen nie weniger als 1.200 kcal am Tag. Die Rechner bitten dich, kein Kaloriendefizit zu nutzen, wenn du schwanger bist oder stillst, und die Pofu-App setzt kein Defizit, wenn du ihr das mitteilst.</p>"
+      ],
+      [
+        "Wie wir KI nutzen",
+        "<p>Die Pofu-App nutzt KI, um eine Mahlzeit anhand eines Fotos zu schätzen. Jede Schätzung zeigt einen Konfidenzwert und kann korrigiert werden. Auf dieser Website helfen uns KI-Tools, Texte zu entwerfen und aus den englischen und türkischen Originalen zu übersetzen; der Entwickler prüft die Zahlen anhand der oben genannten Quellen. Die Übersetzungen wurden noch nicht alle von Muttersprachlerinnen und Muttersprachlern geprüft; wenn ein Satz in deiner Sprache falsch klingt, sag uns bitte Bescheid.</p>"
+      ],
+      [
+        "Was wir nicht tun",
+        "<ul><li>Wir geben keine medizinische Beratung und stellen keine Diagnosen.</li><li>Pofu sagt weder Periode noch Eisprung voraus und hat kein Schwangerschafts-Tracking; die optionale Zyklusfunktion nutzt nur ein Datum, das du selbst eingibst.</li><li>Wir versprechen keine Abnehmerfolge und zeigen keine Vorher-nachher-Fotos.</li><li>Wir veröffentlichen keine gefälschten Bewertungen.</li><li>Unsere Vergleichsseiten werden von den Machern von Pofu geschrieben, und jede weist darauf hin.</li><li>Die Rechner laufen in deinem Browser; nichts, was du eingibst, wird gesendet oder gespeichert.</li></ul>"
+      ],
+      [
+        "Aktualisierungen und Korrekturen",
+        "<p>Jede Seite zeigt, wann sie zuletzt aktualisiert wurde. Wir prüfen die Seiten, wenn sich eine Quelle ändert. Wenn du einen Fehler findest, schreib an <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; wir prüfen ihn anhand der Quelle, beheben bestätigte Fehler und aktualisieren das Datum auf der Seite.</p>"
+      ]
     ],
     "nav": "Inhalte und Quellen"
+  },
+  "ui": {
+    "toc": "Auf dieser Seite",
+    "search": "Lebensmittel suchen",
+    "no_match": "Keine passenden Lebensmittel.",
+    "f_all": "Alle",
+    "f_light": "Leicht",
+    "f_prot": "Proteinreich",
+    "f_carb": "Vor allem Kohlenhydrate",
+    "f_fat": "Vor allem Fett",
+    "f_mixed": "Gemischt"
   }
 }

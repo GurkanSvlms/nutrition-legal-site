@@ -1,72 +1,83 @@
 {
- "food": {
-  "h_port": "Porsi lebih kecil atau lebih besar",
-  "port_cols": [
-   "Porsi",
-   "Kalori",
-   "Protein"
-  ],
-  "port_rows": [
-   "Setengah porsi ({g} {u})",
-   "Porsi biasa ({g} {u})",
-   "Satu setengah porsi ({g} {u})"
-  ],
-  "h_split": "Dari mana kalorinya berasal",
-  "split": "{p}% kalori berasal dari protein, {c}% dari karbohidrat, dan {f}% dari lemak.",
-  "cat": {
-   "fat": "Singkatnya: sebagian besar kalorinya berasal dari lemak, jadi perubahan jumlah sedikit saja berpengaruh besar.",
-   "prot": "Singkatnya: sumber protein yang baik.",
-   "carb": "Singkatnya: sebagian besar kalorinya berasal dari karbohidrat.",
-   "light": "Singkatnya: makanan ringan yang sebagian besar berupa air.",
-   "mixed": "Singkatnya: campuran protein, karbohidrat, dan lemak."
+  "food": {
+    "h_port": "Porsi lebih kecil atau lebih besar",
+    "port_cols": [
+      "Porsi",
+      "Kalori",
+      "Protein"
+    ],
+    "port_rows": [
+      "Setengah porsi ({g} {u})",
+      "Porsi biasa ({g} {u})",
+      "Satu setengah porsi ({g} {u})"
+    ],
+    "h_split": "Dari mana kalorinya berasal",
+    "split": "{p}% kalori berasal dari protein, {c}% dari karbohidrat, dan {f}% dari lemak.",
+    "cat": {
+      "fat": "Singkatnya: sebagian besar kalorinya berasal dari lemak, jadi perubahan jumlah sedikit saja berpengaruh besar.",
+      "prot": "Singkatnya: sumber protein yang baik.",
+      "carb": "Singkatnya: sebagian besar kalorinya berasal dari karbohidrat.",
+      "light": "Singkatnya: makanan ringan yang sebagian besar berupa air.",
+      "mixed": "Singkatnya: campuran protein, karbohidrat, dan lemak."
+    },
+    "ref": "Satu porsi sekitar {pct}% dari kebutuhan 2.000 kcal sehari, nilai acuan yang dipakai pada label makanan.",
+    "h_lighter": "Pilihan yang lebih ringan dalam kelompok yang sama",
+    "per100": "per 100 {u}",
+    "h_faq": "Pertanyaan tentang makanan ini",
+    "q100": "{name}: berapa kalori dalam 100 {u}?",
+    "a100": "Sekitar {kcal} kcal per 100 {u}, dengan {p} g protein, {c} g karbohidrat, dan {f} g lemak.",
+    "qprot": "{name}: apakah tinggi protein?",
+    "aprot_high": "Ya. Satu porsi mengandung {p} g protein, sekitar {pp}% dari kalorinya.",
+    "aprot_mid": "Ada proteinnya: {p} g per porsi, sekitar {pp}% dari kalorinya.",
+    "aprot_low": "Tidak banyak: {p} g per porsi, sekitar {pp}% dari kalorinya. Padukan dengan makanan berprotein, seperti telur, yogurt, kacang-kacangan, tempe, ikan, atau ayam, kalau kamu ingin makanan yang lebih mengenyangkan.",
+    "qlog": "{name}: bagaimana mencatatnya di Pofu?",
+    "alog": "Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali.",
+    "video_caption": "Rekaman layar dari aplikasi Pofu (antarmuka dalam bahasa Inggris): ambil foto, cek perkiraannya, tambahkan ke hari ini.",
+    "video_alt": "Aplikasi Pofu: mencatat makanan dari foto",
+    "method_link": "Cara kami menyiapkan konten dan sumber kami"
   },
-  "ref": "Satu porsi sekitar {pct}% dari kebutuhan 2.000 kcal sehari, nilai acuan yang dipakai pada label makanan.",
-  "h_lighter": "Pilihan yang lebih ringan dalam kelompok yang sama",
-  "per100": "per 100 {u}",
-  "h_faq": "Pertanyaan tentang makanan ini",
-  "q100": "{name}: berapa kalori dalam 100 {u}?",
-  "a100": "Sekitar {kcal} kcal per 100 {u}, dengan {p} g protein, {c} g karbohidrat, dan {f} g lemak.",
-  "qprot": "{name}: apakah tinggi protein?",
-  "aprot_high": "Ya. Satu porsi mengandung {p} g protein, sekitar {pp}% dari kalorinya.",
-  "aprot_mid": "Ada proteinnya: {p} g per porsi, sekitar {pp}% dari kalorinya.",
-  "aprot_low": "Tidak banyak: {p} g per porsi, sekitar {pp}% dari kalorinya. Padukan dengan makanan berprotein, seperti telur, yogurt, kacang-kacangan, tempe, ikan, atau ayam, kalau kamu ingin makanan yang lebih mengenyangkan.",
-  "qlog": "{name}: bagaimana mencatatnya di Pofu?",
-  "alog": "Foto piringmu atau cari namanya, lalu atur porsinya sesuai yang benar-benar kamu makan. Kamu bisa mengoreksi perkiraannya, dan Pofu mengingat koreksimu untuk lain kali.",
-  "video_caption": "Rekaman layar dari aplikasi Pofu (antarmuka dalam bahasa Inggris): ambil foto, cek perkiraannya, tambahkan ke hari ini.",
-  "video_alt": "Aplikasi Pofu: mencatat makanan dari foto",
-  "method_link": "Cara kami menyiapkan konten dan sumber kami"
- },
- "method": {
-  "title": "Cara kami menyiapkan konten dan sumber | Pofu",
-  "desc": "Siapa yang menulis panduan dan kalkulator Pofu, dari mana nilai kalori dan rumusnya berasal, bagaimana AI dipakai, dan cara kami memperbaiki kesalahan.",
-  "h1": "Cara kami menyiapkan konten dan sumber kami",
-  "lede": "Kami ingin setiap angka di situs ini bisa dicek. Halaman ini menjelaskan siapa yang menulisnya, dari mana nilainya berasal, dan apa yang tidak kami lakukan.",
-  "sections": [
-   [
-    "Siapa yang menulis",
-    "<p>Pofu dibuat oleh Ali Gürkan Sevilmiş, pengembang independen. Panduan, kalkulator, dan halaman makanan di situs ini ditulis dan dikelola olehnya, dengan memakai sumber terbitan yang tercantum di bawah.</p><p>Belum ada ahli gizi atau dokter yang meninjau konten ini. Kami mengatakannya dengan terbuka, alih-alih memasang lencana tinjauan untuk tinjauan yang tidak pernah terjadi. Kalau kamu tenaga profesional di bidang gizi dan melihat hal yang bisa diperbaiki, kami senang mendengarnya.</p>"
-   ],
-   [
-    "Dari mana nilai makanan berasal",
-    "<p>Kalori, protein, karbohidrat, dan lemak di halaman makanan berasal dari basis data komposisi pangan publik dan dari basis data makanan di dalam aplikasi Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departemen Pertanian Amerika Serikat)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Belanda)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Basis data Livsmedelsverket</a> (Badan Pangan Swedia)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Republik Ceko)</li><li><a href=\"https://www.alimentinutrizione.it/\">Tabel komposisi pangan CREA</a> (Italia)</li></ul><p>Kalau sebuah halaman memakai entri basis data, halaman itu menautkannya. Resep rumahan dan restoran berbeda-beda, jadi setiap nilai adalah perkiraan umum untuk porsi yang ditampilkan, dan setiap halaman menyebutkannya.</p>"
-   ],
-   [
-    "Dari mana rumusnya berasal",
-    "<p>Kalkulator memakai aturan yang sama dengan aplikasi Pofu, yang diambil dari penelitian terbitan: persamaan Mifflin-St Jeor untuk energi istirahat (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), kisaran protein dari <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, kisaran lemak dan karbohidrat dari <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies AS (2005)</a>, kategori BMI dari <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organisasi Kesehatan Dunia (WHO)</a>, dan energi yang dibutuhkan per kilogram dari <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Setiap kalkulator mencantumkan sumbernya dan menjelaskan setiap langkah.</p><p>Kami tidak pernah menyarankan kurang dari 1.200 kcal sehari. Kalkulator meminta kamu tidak menjalani defisit kalori jika sedang hamil atau menyusui, dan aplikasi Pofu tidak menetapkan defisit saat kamu memberitahunya demikian.</p>"
-   ],
-   [
-    "Bagaimana kami memakai AI",
-    "<p>Aplikasi Pofu memakai AI untuk memperkirakan makanan dari foto. Setiap perkiraan menampilkan skor keyakinan dan bisa dikoreksi. Di situs ini, alat AI membantu kami menyusun draf teks dan menerjemahkannya dari versi asli bahasa Inggris dan Turki; pengembang memeriksa angkanya terhadap sumber di atas. Terjemahan belum semuanya ditinjau oleh penutur asli; kalau ada kalimat yang terdengar janggal dalam bahasamu, tolong beri tahu kami.</p>"
-   ],
-   [
-    "Yang tidak kami lakukan",
-    "<ul><li>Kami tidak memberikan saran medis atau diagnosis.</li><li>Pofu tidak memprediksi haid atau ovulasi dan tidak punya pelacakan kehamilan; fitur siklus yang opsional hanya memakai tanggal yang kamu masukkan.</li><li>Kami tidak menjanjikan hasil penurunan berat badan atau menampilkan foto sebelum dan sesudah.</li><li>Kami tidak menerbitkan ulasan atau peringkat palsu.</li><li>Halaman perbandingan kami ditulis oleh pembuat Pofu, dan masing-masing menyebutkannya.</li><li>Kalkulator berjalan di browsermu; apa pun yang kamu masukkan tidak dikirim atau disimpan.</li></ul>"
-   ],
-   [
-    "Pembaruan dan koreksi",
-    "<p>Setiap halaman menampilkan kapan terakhir diperbarui. Kami meninjau halaman saat ada sumber yang berubah. Kalau kamu menemukan kesalahan, tulis ke <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; kami mengeceknya dengan sumbernya, memperbaiki kesalahan yang terverifikasi, dan memperbarui tanggal di halaman.</p>"
-   ]
-  ],
-  "nav": "Konten dan sumber"
- }
+  "method": {
+    "title": "Cara kami menyiapkan konten dan sumber | Pofu",
+    "desc": "Siapa yang menulis panduan dan kalkulator Pofu, dari mana nilai kalori dan rumusnya berasal, bagaimana AI dipakai, dan cara kami memperbaiki kesalahan.",
+    "h1": "Cara kami menyiapkan konten dan sumber kami",
+    "lede": "Kami ingin setiap angka di situs ini bisa dicek. Halaman ini menjelaskan siapa yang menulisnya, dari mana nilainya berasal, dan apa yang tidak kami lakukan.",
+    "sections": [
+      [
+        "Siapa yang menulis",
+        "<p>Pofu dibuat oleh Ali Gürkan Sevilmiş, pengembang independen. Panduan, kalkulator, dan halaman makanan di situs ini ditulis dan dikelola olehnya, dengan memakai sumber terbitan yang tercantum di bawah.</p><p>Belum ada ahli gizi atau dokter yang meninjau konten ini. Kami mengatakannya dengan terbuka, alih-alih memasang lencana tinjauan untuk tinjauan yang tidak pernah terjadi. Kalau kamu tenaga profesional di bidang gizi dan melihat hal yang bisa diperbaiki, kami senang mendengarnya.</p>"
+      ],
+      [
+        "Dari mana nilai makanan berasal",
+        "<p>Kalori, protein, karbohidrat, dan lemak di halaman makanan berasal dari basis data komposisi pangan publik dan dari basis data makanan di dalam aplikasi Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departemen Pertanian Amerika Serikat)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Belanda)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Basis data Livsmedelsverket</a> (Badan Pangan Swedia)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Republik Ceko)</li><li><a href=\"https://www.alimentinutrizione.it/\">Tabel komposisi pangan CREA</a> (Italia)</li></ul><p>Kalau sebuah halaman memakai entri basis data, halaman itu menautkannya. Resep rumahan dan restoran berbeda-beda, jadi setiap nilai adalah perkiraan umum untuk porsi yang ditampilkan, dan setiap halaman menyebutkannya.</p>"
+      ],
+      [
+        "Dari mana rumusnya berasal",
+        "<p>Kalkulator memakai aturan yang sama dengan aplikasi Pofu, yang diambil dari penelitian terbitan: persamaan Mifflin-St Jeor untuk energi istirahat (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), kisaran protein dari <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, kisaran lemak dan karbohidrat dari <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies AS (2005)</a>, kategori BMI dari <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organisasi Kesehatan Dunia (WHO)</a>, dan energi yang dibutuhkan per kilogram dari <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Setiap kalkulator mencantumkan sumbernya dan menjelaskan setiap langkah.</p><p>Kami tidak pernah menyarankan kurang dari 1.200 kcal sehari. Kalkulator meminta kamu tidak menjalani defisit kalori jika sedang hamil atau menyusui, dan aplikasi Pofu tidak menetapkan defisit saat kamu memberitahunya demikian.</p>"
+      ],
+      [
+        "Bagaimana kami memakai AI",
+        "<p>Aplikasi Pofu memakai AI untuk memperkirakan makanan dari foto. Setiap perkiraan menampilkan skor keyakinan dan bisa dikoreksi. Di situs ini, alat AI membantu kami menyusun draf teks dan menerjemahkannya dari versi asli bahasa Inggris dan Turki; pengembang memeriksa angkanya terhadap sumber di atas. Terjemahan belum semuanya ditinjau oleh penutur asli; kalau ada kalimat yang terdengar janggal dalam bahasamu, tolong beri tahu kami.</p>"
+      ],
+      [
+        "Yang tidak kami lakukan",
+        "<ul><li>Kami tidak memberikan saran medis atau diagnosis.</li><li>Pofu tidak memprediksi haid atau ovulasi dan tidak punya pelacakan kehamilan; fitur siklus yang opsional hanya memakai tanggal yang kamu masukkan.</li><li>Kami tidak menjanjikan hasil penurunan berat badan atau menampilkan foto sebelum dan sesudah.</li><li>Kami tidak menerbitkan ulasan atau peringkat palsu.</li><li>Halaman perbandingan kami ditulis oleh pembuat Pofu, dan masing-masing menyebutkannya.</li><li>Kalkulator berjalan di browsermu; apa pun yang kamu masukkan tidak dikirim atau disimpan.</li></ul>"
+      ],
+      [
+        "Pembaruan dan koreksi",
+        "<p>Setiap halaman menampilkan kapan terakhir diperbarui. Kami meninjau halaman saat ada sumber yang berubah. Kalau kamu menemukan kesalahan, tulis ke <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; kami mengeceknya dengan sumbernya, memperbaiki kesalahan yang terverifikasi, dan memperbarui tanggal di halaman.</p>"
+      ]
+    ],
+    "nav": "Konten dan sumber"
+  },
+  "ui": {
+    "toc": "Di halaman ini",
+    "search": "Cari makanan",
+    "no_match": "Tidak ada makanan yang cocok.",
+    "f_all": "Semua",
+    "f_light": "Ringan",
+    "f_prot": "Tinggi protein",
+    "f_carb": "Kebanyakan karbohidrat",
+    "f_fat": "Kebanyakan lemak",
+    "f_mixed": "Campuran"
+  }
 }

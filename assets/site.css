@@ -144,3 +144,20 @@ main > section:has(.cta img[src*="app-store-badge"]):not(.hero):not(.tool) a:not
 .pnav__m { order: 2; }
 .plang { order: 3; }
 .pnav__links { order: 4; }
+
+/* "On this page" menu (guides, Q&A, comparisons): collapsible on phones, sticky side column on wide screens */
+.ptoc ol { margin: .6rem 0 0; padding: 0; list-style: none; display: grid; gap: .15rem; }
+.ptoc li { margin: 0; }
+.ptoc a { display: block; padding: .45rem .65rem; border-radius: .6rem; color: var(--ink); text-decoration: none; font-size: .95rem; line-height: 1.35; }
+.ptoc a:hover { background: var(--soft); }
+.ptoc__m { margin: 1rem 0 .4rem; padding: .85rem 1.1rem; border-radius: var(--r); background: var(--card); box-shadow: var(--shadow-sm); }
+.ptoc__m summary { cursor: pointer; font-weight: 700; min-height: 1.6rem; }
+.ptoc__d { display: none; }
+@media (min-width: 80rem) {
+  main.wrap:has(> .ptoc) { max-width: 66rem; display: grid; grid-template-columns: 15rem minmax(0, 46rem); column-gap: 3rem; justify-content: center; }
+  main.wrap:has(> .ptoc) > * { grid-column: 2; }
+  main.wrap:has(> .ptoc) > .ptoc { grid-column: 1; grid-row: 2 / span 40; align-self: start; position: sticky; top: 1.2rem; }
+  .ptoc__m { display: none; }
+  .ptoc__d { display: block; margin-top: 1.6rem; padding: 1.1rem; border-radius: var(--r); background: var(--card); box-shadow: var(--shadow-sm); }
+  .ptoc__d > b { display: block; padding: 0 .65rem; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink2); }
+}

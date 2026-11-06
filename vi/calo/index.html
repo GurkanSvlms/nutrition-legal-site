@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,77 +231,83 @@
 <h1>Bữa ăn của bạn có bao nhiêu calo?</h1>
 <p class="lede">Calo, protein, carbohydrate và chất béo mỗi khẩu phần và trên 100 g cho 61 thực phẩm. Giá trị là ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu và thay đổi theo công thức và khẩu phần.</p>
 </section>
+<section class="fsearch" aria-label="Tìm món ăn">
+<input type="search" id="fq" placeholder="Tìm món ăn" aria-label="Tìm món ăn" autocomplete="off">
+<div class="chips" role="group" aria-label="Tất cả"><button type="button" data-cat="all" aria-pressed="true">Tất cả</button><button type="button" data-cat="light" aria-pressed="false">Nhẹ</button><button type="button" data-cat="prot" aria-pressed="false">Giàu đạm</button><button type="button" data-cat="carb" aria-pressed="false">Chủ yếu tinh bột</button><button type="button" data-cat="fat" aria-pressed="false">Chủ yếu chất béo</button><button type="button" data-cat="mixed" aria-pressed="false">Hỗn hợp</button></div>
+<p class="nomatch" id="fnone" hidden>Không có món nào phù hợp.</p>
+</section>
 <section id="local">
 <h2>Món ăn</h2>
 <ul class="foodlist">
-<li><a href="bun.html">Bún (bún gạo đã nấu)</a> <span class="k">· 214 kcal (1 tô, 200 g)</span></li>
-<li><a href="cha-gio.html">Chả giò (kiểu egg roll thịt heo/bò)</a> <span class="k">· 348 kcal (2 cuốn, 128 g)</span></li>
-<li><a href="com-ca-ri-bo.html">Cơm cà ri bò</a> <span class="k">· 357 kcal (1 đĩa, 300 g)</span></li>
-<li><a href="com-ca-ri-ca.html">Cơm cà ri cá</a> <span class="k">· 321 kcal (1 đĩa, 300 g)</span></li>
-<li><a href="com-ca-ri-ga.html">Cơm cà ri gà</a> <span class="k">· 348 kcal (1 đĩa, 300 g)</span></li>
-<li><a href="com-chien-ga.html">Cơm chiên gà</a> <span class="k">· 432 kcal (1 đĩa, 250 g)</span></li>
-<li><a href="com-chien-thit-heo.html">Cơm chiên thịt heo</a> <span class="k">· 448 kcal (1 đĩa, 250 g)</span></li>
-<li><a href="com-chien-tom.html">Cơm chiên tôm</a> <span class="k">· 415 kcal (1 đĩa, 250 g)</span></li>
-<li><a href="dau-hu-chien.html">Đậu hũ chiên giòn (tẩm bột)</a> <span class="k">· 150 kcal (1 phần, 100 g)</span></li>
-<li><a href="dau-hu-xao-rau.html">Đậu hũ xào rau</a> <span class="k">· 202 kcal (1 đĩa, 217 g)</span></li>
-<li><a href="ha-cao-hap.html">Há cảo hấp</a> <span class="k">· 113 kcal (4 cái, 100 g)</span></li>
-<li><a href="hoanh-thanh.html">Hoành thánh (súp)</a> <span class="k">· 99 kcal (1 tô, 300 g)</span></li>
-<li><a href="khoai-mi-luoc.html">Khoai mì luộc</a> <span class="k">· 306 kcal (1 chén, 160 g)</span></li>
-<li><a href="mi-xao-ga.html">Mì xào gà (kiểu lo mein)</a> <span class="k">· 325 kcal (1 đĩa, 250 g)</span></li>
-<li><a href="nuoc-dua.html">Nước dừa</a> <span class="k">· 43 kcal (1 ly, 240 g)</span></li>
-<li><a href="pho-bo.html">Phở bò</a> <span class="k">· 385 kcal (1 tô, 500 g)</span></li>
-<li><a href="pho-chay.html">Phở chay (không thịt)</a> <span class="k">· 185 kcal (1 tô, 500 g)</span></li>
-<li><a href="thit-heo-chua-ngot.html">Thịt heo xào chua ngọt</a> <span class="k">· 588 kcal (1 đĩa, 226 g)</span></li>
-<li><a href="trung-chien.html">Trứng chiên</a> <span class="k">· 157 kcal (2 quả trứng, 110 g)</span></li>
+<li data-cat="carb" data-name="Bún (bún gạo đã nấu)"><a href="bun.html">Bún (bún gạo đã nấu)</a> <span class="k">· 214 kcal (1 tô, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Chả giò (kiểu egg roll thịt heo/bò)"><a href="cha-gio.html">Chả giò (kiểu egg roll thịt heo/bò)</a> <span class="k">· 348 kcal (2 cuốn, 128 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Cơm cà ri bò"><a href="com-ca-ri-bo.html">Cơm cà ri bò</a> <span class="k">· 357 kcal (1 đĩa, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:19%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:30%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Cơm cà ri cá"><a href="com-ca-ri-ca.html">Cơm cà ri cá</a> <span class="k">· 321 kcal (1 đĩa, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Cơm cà ri gà"><a href="com-ca-ri-ga.html">Cơm cà ri gà</a> <span class="k">· 348 kcal (1 đĩa, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:31%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cơm chiên gà"><a href="com-chien-ga.html">Cơm chiên gà</a> <span class="k">· 432 kcal (1 đĩa, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:64%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cơm chiên thịt heo"><a href="com-chien-thit-heo.html">Cơm chiên thịt heo</a> <span class="k">· 448 kcal (1 đĩa, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:62%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cơm chiên tôm"><a href="com-chien-tom.html">Cơm chiên tôm</a> <span class="k">· 415 kcal (1 đĩa, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:16%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:16%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Đậu hũ chiên giòn (tẩm bột)"><a href="dau-hu-chien.html">Đậu hũ chiên giòn (tẩm bột)</a> <span class="k">· 150 kcal (1 phần, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:22%;background:#E9A23B"></span><span style="width:56%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Đậu hũ xào rau"><a href="dau-hu-xao-rau.html">Đậu hũ xào rau</a> <span class="k">· 202 kcal (1 đĩa, 217 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:18%;background:#E9A23B"></span><span style="width:65%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Há cảo hấp"><a href="ha-cao-hap.html">Há cảo hấp</a> <span class="k">· 113 kcal (4 cái, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Hoành thánh (súp)"><a href="hoanh-thanh.html">Hoành thánh (súp)</a> <span class="k">· 99 kcal (1 tô, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:36%;background:#E9A23B"></span><span style="width:35%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Khoai mì luộc"><a href="khoai-mi-luoc.html">Khoai mì luộc</a> <span class="k">· 306 kcal (1 chén, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:3%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Mì xào gà (kiểu lo mein)"><a href="mi-xao-ga.html">Mì xào gà (kiểu lo mein)</a> <span class="k">· 325 kcal (1 đĩa, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:50%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Nước dừa"><a href="nuoc-dua.html">Nước dừa</a> <span class="k">· 43 kcal (1 ly, 240 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:0%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Phở bò"><a href="pho-bo.html">Phở bò</a> <span class="k">· 385 kcal (1 tô, 500 g)</span><span class="mbar" aria-hidden="true"><span style="width:31%;background:#DE5187"></span><span style="width:30%;background:#E9A23B"></span><span style="width:39%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Phở chay (không thịt)"><a href="pho-chay.html">Phở chay (không thịt)</a> <span class="k">· 185 kcal (1 tô, 500 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:63%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Thịt heo xào chua ngọt"><a href="thit-heo-chua-ngot.html">Thịt heo xào chua ngọt</a> <span class="k">· 588 kcal (1 đĩa, 226 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Trứng chiên"><a href="trung-chien.html">Trứng chiên</a> <span class="k">· 157 kcal (2 quả trứng, 110 g)</span><span class="mbar" aria-hidden="true"><span style="width:35%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:62%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Thực phẩm cơ bản</h2>
 <ul class="foodlist">
-<li><a href="banh-mi-nguyen-cam.html">Bánh mì nguyên cám</a> <span class="k">· 68 kcal (1 lát, 28 g)</span></li>
-<li><a href="banh-mi-trang.html">Bánh mì trắng</a> <span class="k">· 70 kcal (1 lát, 28 g)</span></li>
-<li><a href="bo-dau-phong.html">Bơ đậu phộng</a> <span class="k">· 190 kcal (1 muỗng canh, 32 g)</span></li>
-<li><a href="bo-dong-vat.html">Bơ động vật</a> <span class="k">· 72 kcal (1 muỗng canh, 10 g)</span></li>
-<li><a href="bong-cai-xanh.html">Bông cải xanh</a> <span class="k">· 55 kcal (1 bát, 150 g)</span></li>
-<li><a href="bot-protein-1-muong.html">Bột protein</a> <span class="k">· 120 kcal (1 muỗng, 30 g)</span></li>
-<li><a href="ca-chua.html">Cà chua</a> <span class="k">· 22 kcal (1 quả, 120 g)</span></li>
-<li><a href="ca-hoi-nuong.html">Cá hồi nướng</a> <span class="k">· 280 kcal (1 khẩu phần, 150 g)</span></li>
-<li><a href="ca-ngu-dong-hop-ngam-nuoc.html">Cá ngừ đóng hộp (ngâm nước)</a> <span class="k">· 100 kcal (1 khẩu phần, 100 g)</span></li>
-<li><a href="ca-phe-den.html">Cà phê đen</a> <span class="k">· 2 kcal (1 tách, 240 g)</span></li>
-<li><a href="ca-phe-latte.html">Cà phê latte</a> <span class="k">· 150 kcal (1 ly, 350 g)</span></li>
-<li><a href="cam.html">Cam</a> <span class="k">· 70 kcal (1 quả, 150 g)</span></li>
-<li><a href="chuoi.html">Chuối</a> <span class="k">· 105 kcal (1 quả, 120 g)</span></li>
-<li><a href="com-gao-lut.html">Cơm gạo lứt</a> <span class="k">· 215 kcal (1 bát, 195 g)</span></li>
-<li><a href="com-trang.html">Cơm trắng</a> <span class="k">· 205 kcal (1 bát, 158 g)</span></li>
-<li><a href="dau-ga-nau-chin.html">Đậu gà nấu chín</a> <span class="k">· 270 kcal (1 bát, 200 g)</span></li>
-<li><a href="dau-lang-nau-chin.html">Đậu lăng nấu chín</a> <span class="k">· 230 kcal (1 bát, 200 g)</span></li>
-<li><a href="dau-o-liu.html">Dầu ô liu</a> <span class="k">· 120 kcal (1 muỗng canh, 14 g)</span></li>
-<li><a href="dau-phu.html">Đậu phụ</a> <span class="k">· 145 kcal (1 khẩu phần, 150 g)</span></li>
-<li><a href="dau-tay.html">Dâu tây</a> <span class="k">· 50 kcal (1 bát, 150 g)</span></li>
-<li><a href="dua-chuot.html">Dưa chuột</a> <span class="k">· 16 kcal (1 quả, 100 g)</span></li>
-<li><a href="hanh-nhan.html">Hạnh nhân</a> <span class="k">· 175 kcal (1 nắm, 30 g)</span></li>
-<li><a href="khoai-lang.html">Khoai lang</a> <span class="k">· 115 kcal (1 củ, 130 g)</span></li>
-<li><a href="khoai-tay-luoc.html">Khoai tây luộc</a> <span class="k">· 130 kcal (1 củ, 150 g)</span></li>
-<li><a href="mi-ong-nau-chin.html">Mì ống nấu chín</a> <span class="k">· 220 kcal (1 bát, 140 g)</span></li>
-<li><a href="oc-cho.html">Óc chó</a> <span class="k">· 200 kcal (1 nắm, 30 g)</span></li>
-<li><a href="pho-mai-cheddar.html">Phô mai cheddar</a> <span class="k">· 120 kcal (1 lát, 30 g)</span></li>
-<li><a href="pho-mai-feta.html">Phô mai feta</a> <span class="k">· 78 kcal (1 lát, 30 g)</span></li>
-<li><a href="qua-bo.html">Quả bơ</a> <span class="k">· 240 kcal (Nửa quả, 100 g)</span></li>
-<li><a href="quinoa-nau-chin.html">Quinoa nấu chín</a> <span class="k">· 220 kcal (1 bát, 185 g)</span></li>
-<li><a href="rau-bina-cai-bo-xoi.html">Rau bina (cải bó xôi)</a> <span class="k">· 23 kcal (1 bát, 100 g)</span></li>
-<li><a href="sua-chua-hy-lap.html">Sữa chua Hy Lạp</a> <span class="k">· 130 kcal (1 bát, 170 g)</span></li>
-<li><a href="sua-chua-khong-duong.html">Sữa chua không đường</a> <span class="k">· 120 kcal (1 bát, 200 g)</span></li>
-<li><a href="sua-tuoi-nguyen-kem.html">Sữa tươi nguyên kem</a> <span class="k">· 120 kcal (1 ly, 200 g)</span></li>
-<li><a href="tao.html">Táo</a> <span class="k">· 80 kcal (1 quả, 160 g)</span></li>
-<li><a href="thit-bo-xay-15-mo.html">Thịt bò xay (15% mỡ)</a> <span class="k">· 250 kcal (1 khẩu phần, 100 g)</span></li>
-<li><a href="tom.html">Tôm</a> <span class="k">· 120 kcal (1 khẩu phần, 120 g)</span></li>
-<li><a href="trung-luoc.html">Trứng luộc</a> <span class="k">· 78 kcal (1 quả, 50 g)</span></li>
-<li><a href="uc-ga-nuong.html">Ức gà nướng</a> <span class="k">· 195 kcal (1 khẩu phần, 150 g)</span></li>
-<li><a href="uc-ga-tay.html">Ức gà tây</a> <span class="k">· 160 kcal (1 khẩu phần, 150 g)</span></li>
-<li><a href="viet-quat.html">Việt quất</a> <span class="k">· 85 kcal (1 bát, 150 g)</span></li>
-<li><a href="yen-mach-nau.html">Yến mạch nấu</a> <span class="k">· 190 kcal (1 bát, 50 g)</span></li>
+<li data-cat="carb" data-name="Bánh mì nguyên cám"><a href="banh-mi-nguyen-cam.html">Bánh mì nguyên cám</a> <span class="k">· 68 kcal (1 lát, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Bánh mì trắng"><a href="banh-mi-trang.html">Bánh mì trắng</a> <span class="k">· 70 kcal (1 lát, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Bơ đậu phộng"><a href="bo-dau-phong.html">Bơ đậu phộng</a> <span class="k">· 190 kcal (1 muỗng canh, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Bơ động vật"><a href="bo-dong-vat.html">Bơ động vật</a> <span class="k">· 72 kcal (1 muỗng canh, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Bông cải xanh"><a href="bong-cai-xanh.html">Bông cải xanh</a> <span class="k">· 55 kcal (1 bát, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Bột protein"><a href="bot-protein-1-muong.html">Bột protein</a> <span class="k">· 120 kcal (1 muỗng, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Cà chua"><a href="ca-chua.html">Cà chua</a> <span class="k">· 22 kcal (1 quả, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Cá hồi nướng"><a href="ca-hoi-nuong.html">Cá hồi nướng</a> <span class="k">· 280 kcal (1 khẩu phần, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Cá ngừ đóng hộp (ngâm nước)"><a href="ca-ngu-dong-hop-ngam-nuoc.html">Cá ngừ đóng hộp (ngâm nước)</a> <span class="k">· 100 kcal (1 khẩu phần, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Cà phê đen"><a href="ca-phe-den.html">Cà phê đen</a> <span class="k">· 2 kcal (1 tách, 240 g)</span></li>
+<li data-cat="light" data-name="Cà phê latte"><a href="ca-phe-latte.html">Cà phê latte</a> <span class="k">· 150 kcal (1 ly, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Cam"><a href="cam.html">Cam</a> <span class="k">· 70 kcal (1 quả, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Chuối"><a href="chuoi.html">Chuối</a> <span class="k">· 105 kcal (1 quả, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cơm gạo lứt"><a href="com-gao-lut.html">Cơm gạo lứt</a> <span class="k">· 215 kcal (1 bát, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Cơm trắng"><a href="com-trang.html">Cơm trắng</a> <span class="k">· 205 kcal (1 bát, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Đậu gà nấu chín"><a href="dau-ga-nau-chin.html">Đậu gà nấu chín</a> <span class="k">· 270 kcal (1 bát, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Đậu lăng nấu chín"><a href="dau-lang-nau-chin.html">Đậu lăng nấu chín</a> <span class="k">· 230 kcal (1 bát, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Dầu ô liu"><a href="dau-o-liu.html">Dầu ô liu</a> <span class="k">· 120 kcal (1 muỗng canh, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Đậu phụ"><a href="dau-phu.html">Đậu phụ</a> <span class="k">· 145 kcal (1 khẩu phần, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Dâu tây"><a href="dau-tay.html">Dâu tây</a> <span class="k">· 50 kcal (1 bát, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Dưa chuột"><a href="dua-chuot.html">Dưa chuột</a> <span class="k">· 16 kcal (1 quả, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Hạnh nhân"><a href="hanh-nhan.html">Hạnh nhân</a> <span class="k">· 175 kcal (1 nắm, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Khoai lang"><a href="khoai-lang.html">Khoai lang</a> <span class="k">· 115 kcal (1 củ, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Khoai tây luộc"><a href="khoai-tay-luoc.html">Khoai tây luộc</a> <span class="k">· 130 kcal (1 củ, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Mì ống nấu chín"><a href="mi-ong-nau-chin.html">Mì ống nấu chín</a> <span class="k">· 220 kcal (1 bát, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Óc chó"><a href="oc-cho.html">Óc chó</a> <span class="k">· 200 kcal (1 nắm, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Phô mai cheddar"><a href="pho-mai-cheddar.html">Phô mai cheddar</a> <span class="k">· 120 kcal (1 lát, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Phô mai feta"><a href="pho-mai-feta.html">Phô mai feta</a> <span class="k">· 78 kcal (1 lát, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Quả bơ"><a href="qua-bo.html">Quả bơ</a> <span class="k">· 240 kcal (Nửa quả, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Quinoa nấu chín"><a href="quinoa-nau-chin.html">Quinoa nấu chín</a> <span class="k">· 220 kcal (1 bát, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Rau bina (cải bó xôi)"><a href="rau-bina-cai-bo-xoi.html">Rau bina (cải bó xôi)</a> <span class="k">· 23 kcal (1 bát, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Sữa chua Hy Lạp"><a href="sua-chua-hy-lap.html">Sữa chua Hy Lạp</a> <span class="k">· 130 kcal (1 bát, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Sữa chua không đường"><a href="sua-chua-khong-duong.html">Sữa chua không đường</a> <span class="k">· 120 kcal (1 bát, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Sữa tươi nguyên kem"><a href="sua-tuoi-nguyen-kem.html">Sữa tươi nguyên kem</a> <span class="k">· 120 kcal (1 ly, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Táo"><a href="tao.html">Táo</a> <span class="k">· 80 kcal (1 quả, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Thịt bò xay (15% mỡ)"><a href="thit-bo-xay-15-mo.html">Thịt bò xay (15% mỡ)</a> <span class="k">· 250 kcal (1 khẩu phần, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tôm"><a href="tom.html">Tôm</a> <span class="k">· 120 kcal (1 khẩu phần, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Trứng luộc"><a href="trung-luoc.html">Trứng luộc</a> <span class="k">· 78 kcal (1 quả, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Ức gà nướng"><a href="uc-ga-nuong.html">Ức gà nướng</a> <span class="k">· 195 kcal (1 khẩu phần, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Ức gà tây"><a href="uc-ga-tay.html">Ức gà tây</a> <span class="k">· 160 kcal (1 khẩu phần, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Việt quất"><a href="viet-quat.html">Việt quất</a> <span class="k">· 85 kcal (1 bát, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Yến mạch nấu"><a href="yen-mach-nau.html">Yến mạch nấu</a> <span class="k">· 190 kcal (1 bát, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Giá trị: ước tính tiêu biểu từ cơ sở dữ liệu thực phẩm công khai và ứng dụng Pofu; chúng thay đổi theo công thức và khẩu phần.</p>
 <div class="note"><p>Trang này chỉ mang tính thông tin chung và không phải lời khuyên y tế. Nếu bạn đang mang thai, cho con bú, có bệnh lý hoặc từng có rối loạn ăn uống, hãy trao đổi với bác sĩ hoặc chuyên gia dinh dưỡng trước khi đếm calo.</p></div>

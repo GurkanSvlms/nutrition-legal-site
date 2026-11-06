@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Porzione più piccola o più grande",
-    "port_cols": ["Porzione", "Calorie", "Proteine"],
-    "port_rows": ["Mezza porzione ({g} {u})", "Porzione tipica ({g} {u})", "Una porzione e mezza ({g} {u})"],
+    "port_cols": [
+      "Porzione",
+      "Calorie",
+      "Proteine"
+    ],
+    "port_rows": [
+      "Mezza porzione ({g} {u})",
+      "Porzione tipica ({g} {u})",
+      "Una porzione e mezza ({g} {u})"
+    ],
     "h_split": "Da dove vengono le calorie",
     "split": "Il {p}% delle calorie viene dalle proteine, il {c}% dai carboidrati e il {f}% dai grassi.",
-    "cat": {"fat": "In breve: la maggior parte delle calorie viene dai grassi, quindi una piccola variazione di quantità fa una grande differenza.", "prot": "In breve: una buona fonte di proteine.", "carb": "In breve: la maggior parte delle calorie viene dai carboidrati.", "light": "In breve: un alimento leggero, fatto per lo più di acqua.", "mixed": "In breve: un mix di proteine, carboidrati e grassi."},
+    "cat": {
+      "fat": "In breve: la maggior parte delle calorie viene dai grassi, quindi una piccola variazione di quantità fa una grande differenza.",
+      "prot": "In breve: una buona fonte di proteine.",
+      "carb": "In breve: la maggior parte delle calorie viene dai carboidrati.",
+      "light": "In breve: un alimento leggero, fatto per lo più di acqua.",
+      "mixed": "In breve: un mix di proteine, carboidrati e grassi."
+    },
     "ref": "Una porzione vale circa il {pct}% di una giornata da 2.000 kcal, il valore di riferimento usato sulle etichette degli alimenti.",
     "h_lighter": "Opzioni più leggere dello stesso gruppo",
     "per100": "per 100 {u}",
@@ -28,13 +42,42 @@
     "h1": "Come prepariamo i nostri contenuti e le fonti",
     "lede": "Vogliamo che ogni numero di questo sito sia verificabile. Questa pagina spiega chi lo scrive, da dove vengono i valori e cosa non facciamo.",
     "sections": [
-      ["Chi scrive i contenuti", "<p>Pofu è creato da Ali Gürkan Sevilmiş, sviluppatore indipendente. Le guide, i calcolatori e le pagine degli alimenti di questo sito sono scritti e aggiornati da lui, a partire dalle fonti pubblicate elencate qui sotto.</p><p>Nessun dietista o medico ha ancora rivisto questi contenuti. Lo diciamo apertamente invece di mostrare un badge di revisione per una revisione che non c’è stata. Se sei una professionista della nutrizione e vedi qualcosa da migliorare, ci farebbe piacere sentirti.</p>"],
-      ["Da dove vengono i valori degli alimenti", "<p>Calorie, proteine, carboidrati e grassi delle pagine degli alimenti provengono da banche dati pubbliche di composizione degli alimenti e dalla banca dati degli alimenti dentro l’app Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Dipartimento dell’Agricoltura degli Stati Uniti)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Paesi Bassi)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Agenzia svedese per l’alimentazione)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Repubblica Ceca)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italia)</li></ul><p>Quando una pagina usa una voce di una banca dati, la collega con un link. Le ricette fatte in casa e quelle dei ristoranti sono diverse, quindi ogni valore è una stima tipica per la porzione indicata, e ogni pagina lo dice.</p>"],
-      ["Da dove vengono le formule", "<p>I calcolatori usano le stesse regole dell’app Pofu, tratte dalla ricerca pubblicata: l’equazione di Mifflin-St Jeor per il dispendio a riposo (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), gli intervalli di proteine della <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, gli intervalli di grassi e carboidrati delle <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies statunitensi (2005)</a>, le categorie di BMI dell’<a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organizzazione mondiale della sanità</a> e l’energia necessaria per chilogrammo secondo <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Ogni calcolatore elenca le proprie fonti e spiega ogni passaggio.</p><p>Non suggeriamo mai meno di 1.200 kcal al giorno. I calcolatori ti chiedono di non seguire un deficit calorico se sei incinta o allatti, e l’app Pofu non imposta alcun deficit quando glielo indichi.</p>"],
-      ["Come usiamo l’IA", "<p>L’app Pofu usa l’IA per stimare un pasto da una foto. Ogni stima mostra un punteggio di affidabilità e può essere corretta. Su questo sito, strumenti di IA ci aiutano a scrivere bozze di testi e a tradurli dagli originali in inglese e in turco; lo sviluppatore verifica i numeri con le fonti sopra. Le traduzioni non sono ancora state tutte riviste da madrelingua; se una frase ti suona sbagliata nella tua lingua, faccelo sapere.</p>"],
-      ["Cosa non facciamo", "<ul><li>Non diamo consigli medici né diagnosi.</li><li>Pofu non prevede il ciclo né l’ovulazione e non ha un monitoraggio della gravidanza; la funzione facoltativa del ciclo usa solo una data che inserisci tu.</li><li>Non promettiamo risultati di perdita di peso e non mostriamo foto prima/dopo.</li><li>Non pubblichiamo recensioni false.</li><li>Le nostre pagine di confronto sono scritte dai creatori di Pofu, e ognuna lo dice.</li><li>I calcolatori funzionano nel tuo browser; nulla di ciò che inserisci viene inviato o salvato.</li></ul>"],
-      ["Aggiornamenti e correzioni", "<p>Ogni pagina mostra quando è stata aggiornata l’ultima volta. Riguardiamo le pagine quando cambia una fonte. Se trovi un errore, scrivi a <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; lo verifichiamo sulla fonte, correggiamo gli errori confermati e aggiorniamo la data della pagina.</p>"]
+      [
+        "Chi scrive i contenuti",
+        "<p>Pofu è creato da Ali Gürkan Sevilmiş, sviluppatore indipendente. Le guide, i calcolatori e le pagine degli alimenti di questo sito sono scritti e aggiornati da lui, a partire dalle fonti pubblicate elencate qui sotto.</p><p>Nessun dietista o medico ha ancora rivisto questi contenuti. Lo diciamo apertamente invece di mostrare un badge di revisione per una revisione che non c’è stata. Se sei una professionista della nutrizione e vedi qualcosa da migliorare, ci farebbe piacere sentirti.</p>"
+      ],
+      [
+        "Da dove vengono i valori degli alimenti",
+        "<p>Calorie, proteine, carboidrati e grassi delle pagine degli alimenti provengono da banche dati pubbliche di composizione degli alimenti e dalla banca dati degli alimenti dentro l’app Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Dipartimento dell’Agricoltura degli Stati Uniti)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Paesi Bassi)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Agenzia svedese per l’alimentazione)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Repubblica Ceca)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italia)</li></ul><p>Quando una pagina usa una voce di una banca dati, la collega con un link. Le ricette fatte in casa e quelle dei ristoranti sono diverse, quindi ogni valore è una stima tipica per la porzione indicata, e ogni pagina lo dice.</p>"
+      ],
+      [
+        "Da dove vengono le formule",
+        "<p>I calcolatori usano le stesse regole dell’app Pofu, tratte dalla ricerca pubblicata: l’equazione di Mifflin-St Jeor per il dispendio a riposo (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), gli intervalli di proteine della <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, gli intervalli di grassi e carboidrati delle <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies statunitensi (2005)</a>, le categorie di BMI dell’<a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organizzazione mondiale della sanità</a> e l’energia necessaria per chilogrammo secondo <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Ogni calcolatore elenca le proprie fonti e spiega ogni passaggio.</p><p>Non suggeriamo mai meno di 1.200 kcal al giorno. I calcolatori ti chiedono di non seguire un deficit calorico se sei incinta o allatti, e l’app Pofu non imposta alcun deficit quando glielo indichi.</p>"
+      ],
+      [
+        "Come usiamo l’IA",
+        "<p>L’app Pofu usa l’IA per stimare un pasto da una foto. Ogni stima mostra un punteggio di affidabilità e può essere corretta. Su questo sito, strumenti di IA ci aiutano a scrivere bozze di testi e a tradurli dagli originali in inglese e in turco; lo sviluppatore verifica i numeri con le fonti sopra. Le traduzioni non sono ancora state tutte riviste da madrelingua; se una frase ti suona sbagliata nella tua lingua, faccelo sapere.</p>"
+      ],
+      [
+        "Cosa non facciamo",
+        "<ul><li>Non diamo consigli medici né diagnosi.</li><li>Pofu non prevede il ciclo né l’ovulazione e non ha un monitoraggio della gravidanza; la funzione facoltativa del ciclo usa solo una data che inserisci tu.</li><li>Non promettiamo risultati di perdita di peso e non mostriamo foto prima/dopo.</li><li>Non pubblichiamo recensioni false.</li><li>Le nostre pagine di confronto sono scritte dai creatori di Pofu, e ognuna lo dice.</li><li>I calcolatori funzionano nel tuo browser; nulla di ciò che inserisci viene inviato o salvato.</li></ul>"
+      ],
+      [
+        "Aggiornamenti e correzioni",
+        "<p>Ogni pagina mostra quando è stata aggiornata l’ultima volta. Riguardiamo le pagine quando cambia una fonte. Se trovi un errore, scrivi a <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; lo verifichiamo sulla fonte, correggiamo gli errori confermati e aggiorniamo la data della pagina.</p>"
+      ]
     ],
     "nav": "Contenuti e fonti"
+  },
+  "ui": {
+    "toc": "In questa pagina",
+    "search": "Cerca un alimento",
+    "no_match": "Nessun alimento corrisponde.",
+    "f_all": "Tutti",
+    "f_light": "Leggero",
+    "f_prot": "Ricco di proteine",
+    "f_carb": "Soprattutto carboidrati",
+    "f_fat": "Soprattutto grassi",
+    "f_mixed": "Misto"
   }
 }

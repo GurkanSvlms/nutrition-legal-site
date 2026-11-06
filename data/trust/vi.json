@@ -1,72 +1,83 @@
 {
- "food": {
-  "h_port": "Khẩu phần nhỏ hơn hoặc lớn hơn",
-  "port_cols": [
-   "Khẩu phần",
-   "Calo",
-   "Protein"
-  ],
-  "port_rows": [
-   "Nửa khẩu phần ({g} {u})",
-   "Khẩu phần thông thường ({g} {u})",
-   "Một rưỡi khẩu phần ({g} {u})"
-  ],
-  "h_split": "Calo đến từ đâu",
-  "split": "{p}% lượng calo đến từ protein, {c}% từ tinh bột và {f}% từ chất béo.",
-  "cat": {
-   "fat": "Tóm lại: phần lớn calo đến từ chất béo, nên chỉ cần thay đổi một chút về lượng là chênh lệch đã rất lớn.",
-   "prot": "Tóm lại: nguồn protein tốt.",
-   "carb": "Tóm lại: phần lớn calo đến từ tinh bột.",
-   "light": "Tóm lại: món nhẹ, phần lớn là nước.",
-   "mixed": "Tóm lại: kết hợp giữa protein, tinh bột và chất béo."
+  "food": {
+    "h_port": "Khẩu phần nhỏ hơn hoặc lớn hơn",
+    "port_cols": [
+      "Khẩu phần",
+      "Calo",
+      "Protein"
+    ],
+    "port_rows": [
+      "Nửa khẩu phần ({g} {u})",
+      "Khẩu phần thông thường ({g} {u})",
+      "Một rưỡi khẩu phần ({g} {u})"
+    ],
+    "h_split": "Calo đến từ đâu",
+    "split": "{p}% lượng calo đến từ protein, {c}% từ tinh bột và {f}% từ chất béo.",
+    "cat": {
+      "fat": "Tóm lại: phần lớn calo đến từ chất béo, nên chỉ cần thay đổi một chút về lượng là chênh lệch đã rất lớn.",
+      "prot": "Tóm lại: nguồn protein tốt.",
+      "carb": "Tóm lại: phần lớn calo đến từ tinh bột.",
+      "light": "Tóm lại: món nhẹ, phần lớn là nước.",
+      "mixed": "Tóm lại: kết hợp giữa protein, tinh bột và chất béo."
+    },
+    "ref": "Một khẩu phần chiếm khoảng {pct}% nhu cầu 2.000 kcal mỗi ngày, mức tham chiếu được dùng trên nhãn thực phẩm.",
+    "h_lighter": "Lựa chọn nhẹ hơn trong cùng nhóm",
+    "per100": "mỗi 100 {u}",
+    "h_faq": "Câu hỏi về món này",
+    "q100": "{name}: 100 {u} có bao nhiêu calo?",
+    "a100": "Khoảng {kcal} kcal mỗi 100 {u}, với {p} g protein, {c} g tinh bột và {f} g chất béo.",
+    "qprot": "{name}: có nhiều protein không?",
+    "aprot_high": "Có. Một khẩu phần có {p} g protein, khoảng {pp}% lượng calo.",
+    "aprot_mid": "Có một ít protein: {p} g mỗi khẩu phần, khoảng {pp}% lượng calo.",
+    "aprot_low": "Không nhiều: {p} g mỗi khẩu phần, khoảng {pp}% lượng calo. Hãy ăn kèm món giàu protein, như trứng, sữa chua, các loại đậu, đậu phụ, cá hoặc thịt gà, nếu bạn muốn bữa ăn no lâu hơn.",
+    "qlog": "{name}: ghi lại trong Pofu như thế nào?",
+    "alog": "Chụp ảnh đĩa ăn hoặc tìm theo tên, rồi chỉnh khẩu phần đúng với lượng bạn thực sự đã ăn. Bạn có thể sửa lại ước tính, và Pofu sẽ nhớ chỗ bạn sửa cho lần sau.",
+    "video_caption": "Quay màn hình từ ứng dụng Pofu (giao diện tiếng Anh): chụp ảnh, kiểm tra ước tính, thêm vào hôm nay.",
+    "video_alt": "Ứng dụng Pofu: ghi lại bữa ăn từ ảnh",
+    "method_link": "Cách chúng tôi chuẩn bị nội dung và nguồn"
   },
-  "ref": "Một khẩu phần chiếm khoảng {pct}% nhu cầu 2.000 kcal mỗi ngày, mức tham chiếu được dùng trên nhãn thực phẩm.",
-  "h_lighter": "Lựa chọn nhẹ hơn trong cùng nhóm",
-  "per100": "mỗi 100 {u}",
-  "h_faq": "Câu hỏi về món này",
-  "q100": "{name}: 100 {u} có bao nhiêu calo?",
-  "a100": "Khoảng {kcal} kcal mỗi 100 {u}, với {p} g protein, {c} g tinh bột và {f} g chất béo.",
-  "qprot": "{name}: có nhiều protein không?",
-  "aprot_high": "Có. Một khẩu phần có {p} g protein, khoảng {pp}% lượng calo.",
-  "aprot_mid": "Có một ít protein: {p} g mỗi khẩu phần, khoảng {pp}% lượng calo.",
-  "aprot_low": "Không nhiều: {p} g mỗi khẩu phần, khoảng {pp}% lượng calo. Hãy ăn kèm món giàu protein, như trứng, sữa chua, các loại đậu, đậu phụ, cá hoặc thịt gà, nếu bạn muốn bữa ăn no lâu hơn.",
-  "qlog": "{name}: ghi lại trong Pofu như thế nào?",
-  "alog": "Chụp ảnh đĩa ăn hoặc tìm theo tên, rồi chỉnh khẩu phần đúng với lượng bạn thực sự đã ăn. Bạn có thể sửa lại ước tính, và Pofu sẽ nhớ chỗ bạn sửa cho lần sau.",
-  "video_caption": "Quay màn hình từ ứng dụng Pofu (giao diện tiếng Anh): chụp ảnh, kiểm tra ước tính, thêm vào hôm nay.",
-  "video_alt": "Ứng dụng Pofu: ghi lại bữa ăn từ ảnh",
-  "method_link": "Cách chúng tôi chuẩn bị nội dung và nguồn"
- },
- "method": {
-  "title": "Cách chúng tôi chuẩn bị nội dung và nguồn | Pofu",
-  "desc": "Ai viết các hướng dẫn và máy tính của Pofu, giá trị calo và công thức đến từ đâu, AI được dùng thế nào và chúng tôi sửa lỗi ra sao.",
-  "h1": "Cách chúng tôi chuẩn bị nội dung và nguồn",
-  "lede": "Chúng tôi muốn mọi con số trên trang này đều kiểm chứng được. Trang này giải thích ai viết ra chúng, giá trị lấy từ đâu và những gì chúng tôi không làm.",
-  "sections": [
-   [
-    "Ai viết nội dung",
-    "<p>Pofu do Ali Gürkan Sevilmiş, một nhà phát triển độc lập, tạo ra. Các hướng dẫn, máy tính và trang thực phẩm trên trang này do anh viết và duy trì, dựa trên những nguồn đã công bố được liệt kê bên dưới.</p><p>Chưa có chuyên gia dinh dưỡng hay bác sĩ nào thẩm định nội dung này. Chúng tôi nói thẳng điều đó thay vì gắn huy hiệu thẩm định cho một lần thẩm định chưa từng diễn ra. Nếu bạn là chuyên gia dinh dưỡng và thấy chỗ nào cần cải thiện, chúng tôi rất vui được nghe bạn góp ý.</p>"
-   ],
-   [
-    "Giá trị thực phẩm lấy từ đâu",
-    "<p>Calo, protein, tinh bột và chất béo trên các trang thực phẩm lấy từ các cơ sở dữ liệu thành phần thực phẩm công khai và từ cơ sở dữ liệu thực phẩm bên trong ứng dụng Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Bộ Nông nghiệp Hoa Kỳ)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Hà Lan)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Cơ sở dữ liệu Livsmedelsverket</a> (Cơ quan Thực phẩm Thụy Điển)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Cộng hòa Séc)</li><li><a href=\"https://www.alimentinutrizione.it/\">Bảng thành phần thực phẩm CREA</a> (Ý)</li></ul><p>Khi một trang dùng mục từ cơ sở dữ liệu, trang đó có liên kết tới mục ấy. Công thức nấu tại nhà và ở nhà hàng khác nhau, nên mỗi giá trị là ước tính điển hình cho khẩu phần được hiển thị, và mỗi trang đều ghi rõ điều đó.</p>"
-   ],
-   [
-    "Công thức lấy từ đâu",
-    "<p>Các máy tính dùng cùng quy tắc với ứng dụng Pofu, lấy từ nghiên cứu đã công bố: phương trình Mifflin-St Jeor cho năng lượng khi nghỉ (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), khoảng protein từ <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, khoảng chất béo và tinh bột từ <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies Hoa Kỳ (2005)</a>, phân loại BMI từ <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Tổ chức Y tế Thế giới (WHO)</a> và năng lượng cần cho mỗi kilôgam từ <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Mỗi máy tính đều liệt kê nguồn và giải thích từng bước.</p><p>Chúng tôi không bao giờ gợi ý dưới 1.200 kcal mỗi ngày. Các máy tính đề nghị bạn không áp dụng mức thâm hụt calo nếu đang mang thai hoặc cho con bú, và ứng dụng Pofu không đặt mức thâm hụt nào khi bạn cho biết như vậy.</p>"
-   ],
-   [
-    "Chúng tôi dùng AI thế nào",
-    "<p>Ứng dụng Pofu dùng AI để ước tính một bữa ăn từ ảnh. Mỗi ước tính đều có điểm tin cậy và có thể chỉnh sửa. Trên trang này, các công cụ AI giúp chúng tôi soạn nháp văn bản và dịch từ bản gốc tiếng Anh và tiếng Thổ Nhĩ Kỳ; nhà phát triển kiểm tra các con số với nguồn ở trên. Không phải bản dịch nào cũng đã được người bản ngữ xem lại; nếu có câu nào nghe không tự nhiên trong tiếng Việt, xin hãy cho chúng tôi biết.</p>"
-   ],
-   [
-    "Những gì chúng tôi không làm",
-    "<ul><li>Chúng tôi không đưa ra lời khuyên y tế hay chẩn đoán.</li><li>Pofu không dự đoán kỳ kinh hay ngày rụng trứng và không có tính năng theo dõi thai kỳ; tính năng chu kỳ tùy chọn chỉ dùng ngày bạn nhập.</li><li>Chúng tôi không hứa hẹn kết quả giảm cân hay đăng ảnh trước và sau.</li><li>Chúng tôi không đăng đánh giá hay xếp hạng giả.</li><li>Các trang so sánh do chính người làm ra Pofu viết, và mỗi trang đều nói rõ điều đó.</li><li>Các máy tính chạy ngay trong trình duyệt của bạn; những gì bạn nhập không được gửi đi hay lưu lại.</li></ul>"
-   ],
-   [
-    "Cập nhật và đính chính",
-    "<p>Mỗi trang đều hiển thị lần cập nhật gần nhất. Chúng tôi rà soát các trang khi nguồn thay đổi. Nếu bạn phát hiện lỗi, hãy viết tới <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; chúng tôi đối chiếu với nguồn, sửa những lỗi đã xác minh và cập nhật ngày trên trang.</p>"
-   ]
-  ],
-  "nav": "Nội dung và nguồn"
- }
+  "method": {
+    "title": "Cách chúng tôi chuẩn bị nội dung và nguồn | Pofu",
+    "desc": "Ai viết các hướng dẫn và máy tính của Pofu, giá trị calo và công thức đến từ đâu, AI được dùng thế nào và chúng tôi sửa lỗi ra sao.",
+    "h1": "Cách chúng tôi chuẩn bị nội dung và nguồn",
+    "lede": "Chúng tôi muốn mọi con số trên trang này đều kiểm chứng được. Trang này giải thích ai viết ra chúng, giá trị lấy từ đâu và những gì chúng tôi không làm.",
+    "sections": [
+      [
+        "Ai viết nội dung",
+        "<p>Pofu do Ali Gürkan Sevilmiş, một nhà phát triển độc lập, tạo ra. Các hướng dẫn, máy tính và trang thực phẩm trên trang này do anh viết và duy trì, dựa trên những nguồn đã công bố được liệt kê bên dưới.</p><p>Chưa có chuyên gia dinh dưỡng hay bác sĩ nào thẩm định nội dung này. Chúng tôi nói thẳng điều đó thay vì gắn huy hiệu thẩm định cho một lần thẩm định chưa từng diễn ra. Nếu bạn là chuyên gia dinh dưỡng và thấy chỗ nào cần cải thiện, chúng tôi rất vui được nghe bạn góp ý.</p>"
+      ],
+      [
+        "Giá trị thực phẩm lấy từ đâu",
+        "<p>Calo, protein, tinh bột và chất béo trên các trang thực phẩm lấy từ các cơ sở dữ liệu thành phần thực phẩm công khai và từ cơ sở dữ liệu thực phẩm bên trong ứng dụng Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Bộ Nông nghiệp Hoa Kỳ)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Hà Lan)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Cơ sở dữ liệu Livsmedelsverket</a> (Cơ quan Thực phẩm Thụy Điển)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Cộng hòa Séc)</li><li><a href=\"https://www.alimentinutrizione.it/\">Bảng thành phần thực phẩm CREA</a> (Ý)</li></ul><p>Khi một trang dùng mục từ cơ sở dữ liệu, trang đó có liên kết tới mục ấy. Công thức nấu tại nhà và ở nhà hàng khác nhau, nên mỗi giá trị là ước tính điển hình cho khẩu phần được hiển thị, và mỗi trang đều ghi rõ điều đó.</p>"
+      ],
+      [
+        "Công thức lấy từ đâu",
+        "<p>Các máy tính dùng cùng quy tắc với ứng dụng Pofu, lấy từ nghiên cứu đã công bố: phương trình Mifflin-St Jeor cho năng lượng khi nghỉ (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), khoảng protein từ <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, khoảng chất béo và tinh bột từ <a href=\"https://nap.nationalacademies.org/catalog/10490\">National Academies Hoa Kỳ (2005)</a>, phân loại BMI từ <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Tổ chức Y tế Thế giới (WHO)</a> và năng lượng cần cho mỗi kilôgam từ <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Mỗi máy tính đều liệt kê nguồn và giải thích từng bước.</p><p>Chúng tôi không bao giờ gợi ý dưới 1.200 kcal mỗi ngày. Các máy tính đề nghị bạn không áp dụng mức thâm hụt calo nếu đang mang thai hoặc cho con bú, và ứng dụng Pofu không đặt mức thâm hụt nào khi bạn cho biết như vậy.</p>"
+      ],
+      [
+        "Chúng tôi dùng AI thế nào",
+        "<p>Ứng dụng Pofu dùng AI để ước tính một bữa ăn từ ảnh. Mỗi ước tính đều có điểm tin cậy và có thể chỉnh sửa. Trên trang này, các công cụ AI giúp chúng tôi soạn nháp văn bản và dịch từ bản gốc tiếng Anh và tiếng Thổ Nhĩ Kỳ; nhà phát triển kiểm tra các con số với nguồn ở trên. Không phải bản dịch nào cũng đã được người bản ngữ xem lại; nếu có câu nào nghe không tự nhiên trong tiếng Việt, xin hãy cho chúng tôi biết.</p>"
+      ],
+      [
+        "Những gì chúng tôi không làm",
+        "<ul><li>Chúng tôi không đưa ra lời khuyên y tế hay chẩn đoán.</li><li>Pofu không dự đoán kỳ kinh hay ngày rụng trứng và không có tính năng theo dõi thai kỳ; tính năng chu kỳ tùy chọn chỉ dùng ngày bạn nhập.</li><li>Chúng tôi không hứa hẹn kết quả giảm cân hay đăng ảnh trước và sau.</li><li>Chúng tôi không đăng đánh giá hay xếp hạng giả.</li><li>Các trang so sánh do chính người làm ra Pofu viết, và mỗi trang đều nói rõ điều đó.</li><li>Các máy tính chạy ngay trong trình duyệt của bạn; những gì bạn nhập không được gửi đi hay lưu lại.</li></ul>"
+      ],
+      [
+        "Cập nhật và đính chính",
+        "<p>Mỗi trang đều hiển thị lần cập nhật gần nhất. Chúng tôi rà soát các trang khi nguồn thay đổi. Nếu bạn phát hiện lỗi, hãy viết tới <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; chúng tôi đối chiếu với nguồn, sửa những lỗi đã xác minh và cập nhật ngày trên trang.</p>"
+      ]
+    ],
+    "nav": "Nội dung và nguồn"
+  },
+  "ui": {
+    "toc": "Trong trang này",
+    "search": "Tìm món ăn",
+    "no_match": "Không có món nào phù hợp.",
+    "f_all": "Tất cả",
+    "f_light": "Nhẹ",
+    "f_prot": "Giàu đạm",
+    "f_carb": "Chủ yếu tinh bột",
+    "f_fat": "Chủ yếu chất béo",
+    "f_mixed": "Hỗn hợp"
+  }
 }

@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,63 +231,69 @@
 <h1>내 음식은 몇 kcal일까요?</h1>
 <p class="lede">47가지 음식의 1회 분량당, 100 g당 칼로리, 단백질, 탄수화물, 지방을 정리했습니다. 수치는 일반적인 평균 추정값이며 레시피와 분량에 따라 달라집니다.</p>
 </section>
+<section class="fsearch" aria-label="음식 검색">
+<input type="search" id="fq" placeholder="음식 검색" aria-label="음식 검색" autocomplete="off">
+<div class="chips" role="group" aria-label="전체"><button type="button" data-cat="all" aria-pressed="true">전체</button><button type="button" data-cat="light" aria-pressed="false">가벼운 음식</button><button type="button" data-cat="prot" aria-pressed="false">단백질이 풍부한 음식</button><button type="button" data-cat="carb" aria-pressed="false">탄수화물 위주</button><button type="button" data-cat="fat" aria-pressed="false">지방 위주</button><button type="button" data-cat="mixed" aria-pressed="false">혼합</button></div>
+<p class="nomatch" id="fnone" hidden>일치하는 음식이 없습니다.</p>
+</section>
 <section id="local">
 <h2>인기 요리</h2>
 <ul class="foodlist">
-<li><a href="bibimbap.html">비빔밥</a> <span class="k">· 304 kcal (1그릇, 400 g)</span></li>
-<li><a href="fried-mandu.html">군만두</a> <span class="k">· 288 kcal (6개, 150 g)</span></li>
-<li><a href="kimchi.html">김치</a> <span class="k">· 8 kcal (1접시, 50 g)</span></li>
-<li><a href="steamed-mandu.html">찐만두</a> <span class="k">· 170 kcal (6개, 150 g)</span></li>
-<li><a href="tteokbokki.html">떡볶이</a> <span class="k">· 328 kcal (1인분, 250 g)</span></li>
+<li data-cat="light" data-name="비빔밥"><a href="bibimbap.html">비빔밥</a> <span class="k">· 304 kcal (1그릇, 400 g)</span><span class="mbar" aria-hidden="true"><span style="width:29%;background:#DE5187"></span><span style="width:42%;background:#E9A23B"></span><span style="width:29%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="군만두"><a href="fried-mandu.html">군만두</a> <span class="k">· 288 kcal (6개, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:29%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="김치"><a href="kimchi.html">김치</a> <span class="k">· 8 kcal (1접시, 50 g)</span></li>
+<li data-cat="mixed" data-name="찐만두"><a href="steamed-mandu.html">찐만두</a> <span class="k">· 170 kcal (6개, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="떡볶이"><a href="tteokbokki.html">떡볶이</a> <span class="k">· 328 kcal (1인분, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:60%;background:#E9A23B"></span><span style="width:27%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>일상 기본 식품</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">아몬드</a> <span class="k">· 175 kcal (한 줌, 30 g)</span></li>
-<li><a href="apple.html">사과</a> <span class="k">· 80 kcal (1개, 160 g)</span></li>
-<li><a href="avocado.html">아보카도</a> <span class="k">· 240 kcal (반 개, 100 g)</span></li>
-<li><a href="baked-salmon.html">구운 연어</a> <span class="k">· 280 kcal (1인분, 150 g)</span></li>
-<li><a href="banana.html">바나나</a> <span class="k">· 105 kcal (1개, 120 g)</span></li>
-<li><a href="black-coffee.html">블랙커피</a> <span class="k">· 2 kcal (1잔, 240 g)</span></li>
-<li><a href="blueberries.html">블루베리</a> <span class="k">· 85 kcal (1그릇, 150 g)</span></li>
-<li><a href="boiled-egg.html">삶은 달걀</a> <span class="k">· 78 kcal (1개, 50 g)</span></li>
-<li><a href="boiled-potato.html">삶은 감자</a> <span class="k">· 130 kcal (1개, 150 g)</span></li>
-<li><a href="broccoli.html">브로콜리</a> <span class="k">· 55 kcal (1그릇, 150 g)</span></li>
-<li><a href="butter.html">버터</a> <span class="k">· 72 kcal (1큰술, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">참치 통조림(물에 담근 것)</a> <span class="k">· 100 kcal (1인분, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">체다 치즈</a> <span class="k">· 120 kcal (1장, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">현미밥</a> <span class="k">· 215 kcal (1그릇, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">삶은 병아리콩</a> <span class="k">· 270 kcal (1그릇, 200 g)</span></li>
-<li><a href="cooked-lentils.html">삶은 렌틸콩</a> <span class="k">· 230 kcal (1그릇, 200 g)</span></li>
-<li><a href="cooked-pasta.html">삶은 파스타</a> <span class="k">· 220 kcal (1그릇, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">삶은 퀴노아</a> <span class="k">· 220 kcal (1그릇, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">흰쌀밥</a> <span class="k">· 205 kcal (1그릇, 158 g)</span></li>
-<li><a href="cucumber.html">오이</a> <span class="k">· 16 kcal (1개, 100 g)</span></li>
-<li><a href="feta-cheese.html">페타 치즈</a> <span class="k">· 78 kcal (1장, 30 g)</span></li>
-<li><a href="greek-yogurt.html">그릭 요거트</a> <span class="k">· 130 kcal (1그릇, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">닭가슴살(구이)</a> <span class="k">· 195 kcal (1인분, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">소고기 다짐육(지방 15%)</a> <span class="k">· 250 kcal (1인분, 100 g)</span></li>
-<li><a href="latte.html">라테</a> <span class="k">· 150 kcal (1잔, 350 g)</span></li>
-<li><a href="oatmeal.html">오트밀</a> <span class="k">· 190 kcal (1그릇, 50 g)</span></li>
-<li><a href="olive-oil.html">올리브유</a> <span class="k">· 120 kcal (1큰술, 14 g)</span></li>
-<li><a href="orange.html">오렌지</a> <span class="k">· 70 kcal (1개, 150 g)</span></li>
-<li><a href="peanut-butter.html">땅콩버터</a> <span class="k">· 190 kcal (1큰술, 32 g)</span></li>
-<li><a href="plain-yogurt.html">플레인 요거트</a> <span class="k">· 120 kcal (1그릇, 200 g)</span></li>
-<li><a href="protein-powder-1-scoop.html">프로틴 파우더</a> <span class="k">· 120 kcal (1스쿱, 30 g)</span></li>
-<li><a href="shrimp.html">새우</a> <span class="k">· 120 kcal (1인분, 120 g)</span></li>
-<li><a href="spinach.html">시금치</a> <span class="k">· 23 kcal (1그릇, 100 g)</span></li>
-<li><a href="strawberries.html">딸기</a> <span class="k">· 50 kcal (1그릇, 150 g)</span></li>
-<li><a href="sweet-potato.html">고구마</a> <span class="k">· 115 kcal (1개, 130 g)</span></li>
-<li><a href="tofu.html">두부</a> <span class="k">· 145 kcal (1인분, 150 g)</span></li>
-<li><a href="tomato.html">토마토</a> <span class="k">· 22 kcal (1개, 120 g)</span></li>
-<li><a href="turkey-breast.html">칠면조 가슴살</a> <span class="k">· 160 kcal (1인분, 150 g)</span></li>
-<li><a href="walnuts.html">호두</a> <span class="k">· 200 kcal (한 줌, 30 g)</span></li>
-<li><a href="white-bread.html">식빵</a> <span class="k">· 70 kcal (1장, 28 g)</span></li>
-<li><a href="whole-milk.html">전지우유</a> <span class="k">· 120 kcal (1잔, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">통밀빵</a> <span class="k">· 68 kcal (1장, 28 g)</span></li>
+<li data-cat="fat" data-name="아몬드"><a href="almonds.html">아몬드</a> <span class="k">· 175 kcal (한 줌, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="사과"><a href="apple.html">사과</a> <span class="k">· 80 kcal (1개, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="아보카도"><a href="avocado.html">아보카도</a> <span class="k">· 240 kcal (반 개, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="구운 연어"><a href="baked-salmon.html">구운 연어</a> <span class="k">· 280 kcal (1인분, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="바나나"><a href="banana.html">바나나</a> <span class="k">· 105 kcal (1개, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="블랙커피"><a href="black-coffee.html">블랙커피</a> <span class="k">· 2 kcal (1잔, 240 g)</span></li>
+<li data-cat="light" data-name="블루베리"><a href="blueberries.html">블루베리</a> <span class="k">· 85 kcal (1그릇, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="삶은 달걀"><a href="boiled-egg.html">삶은 달걀</a> <span class="k">· 78 kcal (1개, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="삶은 감자"><a href="boiled-potato.html">삶은 감자</a> <span class="k">· 130 kcal (1개, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="브로콜리"><a href="broccoli.html">브로콜리</a> <span class="k">· 55 kcal (1그릇, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="버터"><a href="butter.html">버터</a> <span class="k">· 72 kcal (1큰술, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="참치 통조림(물에 담근 것)"><a href="canned-tuna-in-water.html">참치 통조림(물에 담근 것)</a> <span class="k">· 100 kcal (1인분, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="체다 치즈"><a href="cheddar-cheese.html">체다 치즈</a> <span class="k">· 120 kcal (1장, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="현미밥"><a href="cooked-brown-rice.html">현미밥</a> <span class="k">· 215 kcal (1그릇, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="삶은 병아리콩"><a href="cooked-chickpeas.html">삶은 병아리콩</a> <span class="k">· 270 kcal (1그릇, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="삶은 렌틸콩"><a href="cooked-lentils.html">삶은 렌틸콩</a> <span class="k">· 230 kcal (1그릇, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="삶은 파스타"><a href="cooked-pasta.html">삶은 파스타</a> <span class="k">· 220 kcal (1그릇, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="삶은 퀴노아"><a href="cooked-quinoa.html">삶은 퀴노아</a> <span class="k">· 220 kcal (1그릇, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="흰쌀밥"><a href="cooked-white-rice.html">흰쌀밥</a> <span class="k">· 205 kcal (1그릇, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="오이"><a href="cucumber.html">오이</a> <span class="k">· 16 kcal (1개, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="페타 치즈"><a href="feta-cheese.html">페타 치즈</a> <span class="k">· 78 kcal (1장, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="그릭 요거트"><a href="greek-yogurt.html">그릭 요거트</a> <span class="k">· 130 kcal (1그릇, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="닭가슴살(구이)"><a href="grilled-chicken-breast.html">닭가슴살(구이)</a> <span class="k">· 195 kcal (1인분, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="소고기 다짐육(지방 15%)"><a href="ground-beef-15-fat.html">소고기 다짐육(지방 15%)</a> <span class="k">· 250 kcal (1인분, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="라테"><a href="latte.html">라테</a> <span class="k">· 150 kcal (1잔, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="오트밀"><a href="oatmeal.html">오트밀</a> <span class="k">· 190 kcal (1그릇, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="올리브유"><a href="olive-oil.html">올리브유</a> <span class="k">· 120 kcal (1큰술, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="오렌지"><a href="orange.html">오렌지</a> <span class="k">· 70 kcal (1개, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="땅콩버터"><a href="peanut-butter.html">땅콩버터</a> <span class="k">· 190 kcal (1큰술, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="플레인 요거트"><a href="plain-yogurt.html">플레인 요거트</a> <span class="k">· 120 kcal (1그릇, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="프로틴 파우더"><a href="protein-powder-1-scoop.html">프로틴 파우더</a> <span class="k">· 120 kcal (1스쿱, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="새우"><a href="shrimp.html">새우</a> <span class="k">· 120 kcal (1인분, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="시금치"><a href="spinach.html">시금치</a> <span class="k">· 23 kcal (1그릇, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="딸기"><a href="strawberries.html">딸기</a> <span class="k">· 50 kcal (1그릇, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="고구마"><a href="sweet-potato.html">고구마</a> <span class="k">· 115 kcal (1개, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="두부"><a href="tofu.html">두부</a> <span class="k">· 145 kcal (1인분, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="토마토"><a href="tomato.html">토마토</a> <span class="k">· 22 kcal (1개, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="칠면조 가슴살"><a href="turkey-breast.html">칠면조 가슴살</a> <span class="k">· 160 kcal (1인분, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="호두"><a href="walnuts.html">호두</a> <span class="k">· 200 kcal (한 줌, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="식빵"><a href="white-bread.html">식빵</a> <span class="k">· 70 kcal (1장, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="전지우유"><a href="whole-milk.html">전지우유</a> <span class="k">· 120 kcal (1잔, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="통밀빵"><a href="whole-wheat-bread.html">통밀빵</a> <span class="k">· 68 kcal (1장, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">수치는 일반적인 평균 추정값이며 레시피와 분량에 따라 달라집니다. 출처가 있는 경우 링크를 표시합니다.</p>
 <div class="note"><p>이 페이지는 일반적인 정보 제공을 위한 것이며 의학적 조언이 아닙니다. 임신 중이거나 수유 중이거나, 질환이 있거나, 섭식장애를 겪은 적이 있다면 칼로리를 계산하기 전에 의사나 영양사와 상담하세요.</p></div>

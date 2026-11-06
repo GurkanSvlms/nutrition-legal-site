@@ -342,10 +342,39 @@ EXTRA_CSS = """
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
 """
+
+
+# food hub: filter the lists by text and category (no network, no storage)
+HUB_JS = ("(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',"
+          "lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');"
+          "function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\\u0300-\\u036f]/g,'');}"
+          "document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});"
+          "function run(){var t=norm(q.value.trim()),shown=0;"
+          "document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){"
+          "var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});"
+          "ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);"
+          "bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){"
+          "x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();")
 
 
 def css_for(lc):
@@ -491,6 +520,14 @@ def build():
             src = ""
             if it.get("source"): src = ' <a href="%s" rel="nofollow noopener">%s</a>.' % (e(it["source"]), lc["src_link"])
             sh = shares(it) if kc > 10 else None
+            ring = ""
+            if sh:
+                a, b = sh[0], sh[0] + sh[1]
+                bars = "".join('<li><span>%s</span><b>%s g</b><i style="--w:%s%%;--c:%s"></i></li>' % (e(lab), g, w, col) for lab, g, w, col in (
+                    (lc["rows"][1], pr, sh[0], "#DE5187"), (lc["rows"][2], ca, sh[1], "#E9A23B"), (lc["rows"][3], fa, sh[2], "#7A5AA6")))
+                ring = ('<div class="macro"><div class="ring" role="img" aria-label="%s" style="background:conic-gradient(#DE5187 0 %s%%,#E9A23B %s%% %s%%,#7A5AA6 %s%% 100%%)">'
+                        '<span><b>%s</b>kcal</span></div><ul class="bars">%s</ul></div>\n') % (
+                    e(fill(T["split"], p=sh[0], c=sh[1], f=sh[2])), a, a, b, b, kc, bars)
             g2 = lambda m: max(1, round(it["grams"] * m))
             port = "".join("<tr><th scope=\"row\">%s</th><td>%s kcal</td><td>%s g</td></tr>\n" % (
                 e(fill(T["port_rows"][i], g=g2(m), u=unit)), round(kc * m), fnum(it["p"] * m, code)) for i, m in enumerate((0.5, 1, 1.5)))
@@ -536,7 +573,7 @@ def build():
 <p class="pill">{lc['pill']}</p>
 <h1>{e(h1)}</h1>
 <p class="answer">{ans}</p>
-</section>
+{ring}</section>
 <section id="table">
 <h2>{lc['h_table']}</h2>
 <div class="tblwrap"><table class="tbl">
@@ -574,6 +611,10 @@ def build():
 
         # hub
         n = len(items)
+        U = json.load(open(os.path.join(SITE, "data/trust/%s.json" % code), encoding="utf-8"))["ui"]
+        cats = [c for c in ("light", "prot", "carb", "fat", "mixed") if any(i["cat"] == c for i in items)]
+        chips = '<button type="button" data-cat="all" aria-pressed="true">%s</button>' % e(U["f_all"]) + "".join(
+            '<button type="button" data-cat="%s" aria-pressed="false">%s</button>' % (c, e(U["f_" + c])) for c in cats)
         halts = [(c, u) for c, u in hubs.items()]
         halts = [(LANGS[c]["code"], u) for c, u in halts] + [("x-default", hubs["en"])]
         lists = ""
@@ -583,7 +624,11 @@ def build():
             lists += '<section id="%s">\n<h2>%s</h2>\n<ul class="foodlist">\n' % (g, gh)
             for o in sub:
                 u = "ml" if "ml" in o["label"] else "g"
-                lists += '<li><a href="%s.html">%s</a> <span class="k">· %s kcal (%s)</span></li>\n' % (o["slug"], e(o["name"]), o["kcal"], e(label_full(o["label"], o["grams"], u)))
+                sh = shares(o) if o["kcal"] > 10 else None
+                mbar = ('<span class="mbar" aria-hidden="true"><span style="width:%s%%;background:#DE5187"></span><span style="width:%s%%;background:#E9A23B"></span>'
+                        '<span style="width:%s%%;background:#7A5AA6"></span></span>' % sh) if sh else ""
+                lists += '<li data-cat="%s" data-name="%s"><a href="%s.html">%s</a> <span class="k">· %s kcal (%s)</span>%s</li>\n' % (
+                    o["cat"], e(o["name"]), o["slug"], e(o["name"]), o["kcal"], e(label_full(o["label"], o["grams"], u)), mbar)
             lists += "</ul>\n</section>\n"
         ld = {"@context": "https://schema.org", "@graph": [
             {"@type": "CollectionPage", "@id": hub_url, "url": hub_url, "name": lc["hub_title"], "description": lc["hub_desc"] % n,
@@ -595,7 +640,13 @@ def build():
 <h1>{e(lc['hub_h1'])}</h1>
 <p class="lede">{lc['hub_intro'] % n}</p>
 </section>
-{lists}<section id="source">
+<section class="fsearch" aria-label="{e(U['search'])}">
+<input type="search" id="fq" placeholder="{e(U['search'])}" aria-label="{e(U['search'])}" autocomplete="off">
+<div class="chips" role="group" aria-label="{e(U['f_all'])}">{chips}</div>
+<p class="nomatch" id="fnone" hidden>{e(U['no_match'])}</p>
+</section>
+{lists}<script>{HUB_JS}</script>
+<section id="source">
 <p class="fine">{lc['source']}</p>
 <div class="note"><p>{lc['medical']}</p></div>
 </section>

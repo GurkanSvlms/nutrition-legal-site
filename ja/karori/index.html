@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,78 +231,84 @@
 <h1>あなたの食事は何kcal？</h1>
 <p class="lede">62種類の食品について、1食あたりと100 gあたりのカロリー、たんぱく質、炭水化物、脂質を掲載しています。数値は一般的な目安で、レシピや分量によって変わります。</p>
 </section>
+<section class="fsearch" aria-label="食品を検索">
+<input type="search" id="fq" placeholder="食品を検索" aria-label="食品を検索" autocomplete="off">
+<div class="chips" role="group" aria-label="すべて"><button type="button" data-cat="all" aria-pressed="true">すべて</button><button type="button" data-cat="light" aria-pressed="false">軽め</button><button type="button" data-cat="prot" aria-pressed="false">たんぱく質が多い</button><button type="button" data-cat="carb" aria-pressed="false">炭水化物が中心</button><button type="button" data-cat="fat" aria-pressed="false">脂質が中心</button><button type="button" data-cat="mixed" aria-pressed="false">バランス型</button></div>
+<p class="nomatch" id="fnone" hidden>該当する食品がありません。</p>
+</section>
 <section id="local">
 <h2>人気の料理</h2>
 <ul class="foodlist">
-<li><a href="california-roll.html">カリフォルニアロール</a> <span class="k">· 169 kcal (6切れ, 180 g)</span></li>
-<li><a href="edamame.html">枝豆</a> <span class="k">· 112 kcal (1人前, 80 g)</span></li>
-<li><a href="fried-gyoza.html">揚げ餃子</a> <span class="k">· 288 kcal (6個, 150 g)</span></li>
-<li><a href="instant-ramen.html">インスタントラーメン（調理後）</a> <span class="k">· 290 kcal (1個, 440 g)</span></li>
-<li><a href="miso-soup.html">味噌汁</a> <span class="k">· 48 kcal (1杯, 200 g)</span></li>
-<li><a href="ramen.html">ラーメン</a> <span class="k">· 508 kcal (1杯, 400 g)</span></li>
-<li><a href="salmon-maki.html">サーモン巻き寿司</a> <span class="k">· 185 kcal (6切れ, 180 g)</span></li>
-<li><a href="salmon-nigiri.html">サーモン握り寿司</a> <span class="k">· 225 kcal (6貫, 210 g)</span></li>
-<li><a href="shrimp-nigiri.html">エビ握り寿司</a> <span class="k">· 216 kcal (6貫, 210 g)</span></li>
-<li><a href="steamed-gyoza.html">蒸し餃子</a> <span class="k">· 170 kcal (6個, 150 g)</span></li>
-<li><a href="tamago-nigiri.html">玉子握り寿司</a> <span class="k">· 238 kcal (4貫, 200 g)</span></li>
-<li><a href="tempura-moriawase.html">天ぷら盛り合わせ</a> <span class="k">· 237 kcal (1人前, 134 g)</span></li>
-<li><a href="teriyaki-beef.html">牛肉の照り焼き</a> <span class="k">· 362 kcal (1人前, 183 g)</span></li>
-<li><a href="teriyaki-chicken.html">照り焼きチキン</a> <span class="k">· 244 kcal (1人前, 150 g)</span></li>
-<li><a href="teriyaki-shrimp.html">エビの照り焼き</a> <span class="k">· 136 kcal (1人前, 113 g)</span></li>
-<li><a href="tuna-maki.html">鉄火巻き（マグロ巻き）</a> <span class="k">· 175 kcal (6切れ, 180 g)</span></li>
-<li><a href="tuna-nigiri.html">マグロ握り寿司</a> <span class="k">· 210 kcal (6貫, 210 g)</span></li>
-<li><a href="unagi-nigiri.html">うなぎ握り寿司</a> <span class="k">· 265 kcal (6貫, 210 g)</span></li>
-<li><a href="vegetable-maki.html">野菜巻き寿司</a> <span class="k">· 123 kcal (6切れ, 132 g)</span></li>
-<li><a href="yasai-tempura.html">野菜の天ぷら</a> <span class="k">· 358 kcal (5個, 150 g)</span></li>
+<li data-cat="carb" data-name="カリフォルニアロール"><a href="california-roll.html">カリフォルニアロール</a> <span class="k">· 169 kcal (6切れ, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:81%;background:#E9A23B"></span><span style="width:6%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="枝豆"><a href="edamame.html">枝豆</a> <span class="k">· 112 kcal (1人前, 80 g)</span><span class="mbar" aria-hidden="true"><span style="width:31%;background:#DE5187"></span><span style="width:23%;background:#E9A23B"></span><span style="width:46%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="揚げ餃子"><a href="fried-gyoza.html">揚げ餃子</a> <span class="k">· 288 kcal (6個, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:29%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="インスタントラーメン（調理後）"><a href="instant-ramen.html">インスタントラーメン（調理後）</a> <span class="k">· 290 kcal (1個, 440 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:55%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="味噌汁"><a href="miso-soup.html">味噌汁</a> <span class="k">· 48 kcal (1杯, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:34%;background:#DE5187"></span><span style="width:36%;background:#E9A23B"></span><span style="width:30%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="ラーメン"><a href="ramen.html">ラーメン</a> <span class="k">· 508 kcal (1杯, 400 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:33%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="サーモン巻き寿司"><a href="salmon-maki.html">サーモン巻き寿司</a> <span class="k">· 185 kcal (6切れ, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:61%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="サーモン握り寿司"><a href="salmon-nigiri.html">サーモン握り寿司</a> <span class="k">· 225 kcal (6貫, 210 g)</span><span class="mbar" aria-hidden="true"><span style="width:34%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:15%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="エビ握り寿司"><a href="shrimp-nigiri.html">エビ握り寿司</a> <span class="k">· 216 kcal (6貫, 210 g)</span><span class="mbar" aria-hidden="true"><span style="width:37%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:6%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="蒸し餃子"><a href="steamed-gyoza.html">蒸し餃子</a> <span class="k">· 170 kcal (6個, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="玉子握り寿司"><a href="tamago-nigiri.html">玉子握り寿司</a> <span class="k">· 238 kcal (4貫, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:25%;background:#DE5187"></span><span style="width:35%;background:#E9A23B"></span><span style="width:40%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="天ぷら盛り合わせ"><a href="tempura-moriawase.html">天ぷら盛り合わせ</a> <span class="k">· 237 kcal (1人前, 134 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:81%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="牛肉の照り焼き"><a href="teriyaki-beef.html">牛肉の照り焼き</a> <span class="k">· 362 kcal (1人前, 183 g)</span><span class="mbar" aria-hidden="true"><span style="width:58%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:38%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="照り焼きチキン"><a href="teriyaki-chicken.html">照り焼きチキン</a> <span class="k">· 244 kcal (1人前, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:63%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:33%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="エビの照り焼き"><a href="teriyaki-shrimp.html">エビの照り焼き</a> <span class="k">· 136 kcal (1人前, 113 g)</span><span class="mbar" aria-hidden="true"><span style="width:76%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="鉄火巻き（マグロ巻き）"><a href="tuna-maki.html">鉄火巻き（マグロ巻き）</a> <span class="k">· 175 kcal (6切れ, 180 g)</span><span class="mbar" aria-hidden="true"><span style="width:32%;background:#DE5187"></span><span style="width:66%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="マグロ握り寿司"><a href="tuna-nigiri.html">マグロ握り寿司</a> <span class="k">· 210 kcal (6貫, 210 g)</span><span class="mbar" aria-hidden="true"><span style="width:41%;background:#DE5187"></span><span style="width:56%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="うなぎ握り寿司"><a href="unagi-nigiri.html">うなぎ握り寿司</a> <span class="k">· 265 kcal (6貫, 210 g)</span><span class="mbar" aria-hidden="true"><span style="width:25%;background:#DE5187"></span><span style="width:44%;background:#E9A23B"></span><span style="width:31%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="野菜巻き寿司"><a href="vegetable-maki.html">野菜巻き寿司</a> <span class="k">· 123 kcal (6切れ, 132 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:78%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="野菜の天ぷら"><a href="yasai-tempura.html">野菜の天ぷら</a> <span class="k">· 358 kcal (5個, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:6%;background:#DE5187"></span><span style="width:34%;background:#E9A23B"></span><span style="width:60%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>毎日の定番食品</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">アーモンド</a> <span class="k">· 175 kcal (ひとつかみ, 30 g)</span></li>
-<li><a href="apple.html">りんご</a> <span class="k">· 80 kcal (1個, 160 g)</span></li>
-<li><a href="avocado.html">アボカド</a> <span class="k">· 240 kcal (半分, 100 g)</span></li>
-<li><a href="baked-salmon.html">焼き鮭</a> <span class="k">· 280 kcal (1人前, 150 g)</span></li>
-<li><a href="banana.html">バナナ</a> <span class="k">· 105 kcal (1個, 120 g)</span></li>
-<li><a href="black-coffee.html">ブラックコーヒー</a> <span class="k">· 2 kcal (1杯, 240 g)</span></li>
-<li><a href="blueberries.html">ブルーベリー</a> <span class="k">· 85 kcal (1杯, 150 g)</span></li>
-<li><a href="boiled-egg.html">ゆで卵</a> <span class="k">· 78 kcal (1個, 50 g)</span></li>
-<li><a href="boiled-potato.html">ゆでじゃがいも</a> <span class="k">· 130 kcal (1個, 150 g)</span></li>
-<li><a href="broccoli.html">ブロッコリー</a> <span class="k">· 55 kcal (1杯, 150 g)</span></li>
-<li><a href="butter.html">バター</a> <span class="k">· 72 kcal (大さじ1, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">ツナ缶（水煮）</a> <span class="k">· 100 kcal (1人前, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">チェダーチーズ</a> <span class="k">· 120 kcal (1枚, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">玄米ごはん</a> <span class="k">· 215 kcal (1杯, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">ひよこ豆（調理済み）</a> <span class="k">· 270 kcal (1杯, 200 g)</span></li>
-<li><a href="cooked-lentils.html">レンズ豆（調理済み）</a> <span class="k">· 230 kcal (1杯, 200 g)</span></li>
-<li><a href="cooked-pasta.html">パスタ（調理済み）</a> <span class="k">· 220 kcal (1杯, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">キヌア（調理済み）</a> <span class="k">· 220 kcal (1杯, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">白ごはん</a> <span class="k">· 205 kcal (1杯, 158 g)</span></li>
-<li><a href="cucumber.html">きゅうり</a> <span class="k">· 16 kcal (1個, 100 g)</span></li>
-<li><a href="feta-cheese.html">フェタチーズ</a> <span class="k">· 78 kcal (1枚, 30 g)</span></li>
-<li><a href="greek-yogurt.html">ギリシャヨーグルト</a> <span class="k">· 130 kcal (1杯, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">鶏むね肉（グリル）</a> <span class="k">· 195 kcal (1人前, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">牛ひき肉（脂質15%）</a> <span class="k">· 250 kcal (1人前, 100 g)</span></li>
-<li><a href="latte.html">カフェラテ</a> <span class="k">· 150 kcal (1杯, 350 g)</span></li>
-<li><a href="oatmeal.html">オートミール</a> <span class="k">· 190 kcal (1杯, 50 g)</span></li>
-<li><a href="olive-oil.html">オリーブオイル</a> <span class="k">· 120 kcal (大さじ1, 14 g)</span></li>
-<li><a href="orange.html">オレンジ</a> <span class="k">· 70 kcal (1個, 150 g)</span></li>
-<li><a href="peanut-butter.html">ピーナッツバター</a> <span class="k">· 190 kcal (大さじ1, 32 g)</span></li>
-<li><a href="plain-yogurt.html">プレーンヨーグルト</a> <span class="k">· 120 kcal (1杯, 200 g)</span></li>
-<li><a href="protein-powder-1-scoop.html">プロテインパウダー</a> <span class="k">· 120 kcal (1スクープ, 30 g)</span></li>
-<li><a href="shrimp.html">エビ</a> <span class="k">· 120 kcal (1人前, 120 g)</span></li>
-<li><a href="spinach.html">ほうれん草</a> <span class="k">· 23 kcal (1杯, 100 g)</span></li>
-<li><a href="strawberries.html">いちご</a> <span class="k">· 50 kcal (1杯, 150 g)</span></li>
-<li><a href="sweet-potato.html">さつまいも</a> <span class="k">· 115 kcal (1個, 130 g)</span></li>
-<li><a href="tofu.html">豆腐</a> <span class="k">· 145 kcal (1人前, 150 g)</span></li>
-<li><a href="tomato.html">トマト</a> <span class="k">· 22 kcal (1個, 120 g)</span></li>
-<li><a href="turkey-breast.html">七面鳥の胸肉</a> <span class="k">· 160 kcal (1人前, 150 g)</span></li>
-<li><a href="walnuts.html">くるみ</a> <span class="k">· 200 kcal (ひとつかみ, 30 g)</span></li>
-<li><a href="white-bread.html">食パン</a> <span class="k">· 70 kcal (1枚, 28 g)</span></li>
-<li><a href="whole-milk.html">全乳（牛乳）</a> <span class="k">· 120 kcal (1杯, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">全粒粉パン</a> <span class="k">· 68 kcal (1枚, 28 g)</span></li>
+<li data-cat="fat" data-name="アーモンド"><a href="almonds.html">アーモンド</a> <span class="k">· 175 kcal (ひとつかみ, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="りんご"><a href="apple.html">りんご</a> <span class="k">· 80 kcal (1個, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="アボカド"><a href="avocado.html">アボカド</a> <span class="k">· 240 kcal (半分, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="焼き鮭"><a href="baked-salmon.html">焼き鮭</a> <span class="k">· 280 kcal (1人前, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="バナナ"><a href="banana.html">バナナ</a> <span class="k">· 105 kcal (1個, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ブラックコーヒー"><a href="black-coffee.html">ブラックコーヒー</a> <span class="k">· 2 kcal (1杯, 240 g)</span></li>
+<li data-cat="light" data-name="ブルーベリー"><a href="blueberries.html">ブルーベリー</a> <span class="k">· 85 kcal (1杯, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ゆで卵"><a href="boiled-egg.html">ゆで卵</a> <span class="k">· 78 kcal (1個, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ゆでじゃがいも"><a href="boiled-potato.html">ゆでじゃがいも</a> <span class="k">· 130 kcal (1個, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ブロッコリー"><a href="broccoli.html">ブロッコリー</a> <span class="k">· 55 kcal (1杯, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="バター"><a href="butter.html">バター</a> <span class="k">· 72 kcal (大さじ1, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="ツナ缶（水煮）"><a href="canned-tuna-in-water.html">ツナ缶（水煮）</a> <span class="k">· 100 kcal (1人前, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="チェダーチーズ"><a href="cheddar-cheese.html">チェダーチーズ</a> <span class="k">· 120 kcal (1枚, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="玄米ごはん"><a href="cooked-brown-rice.html">玄米ごはん</a> <span class="k">· 215 kcal (1杯, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ひよこ豆（調理済み）"><a href="cooked-chickpeas.html">ひよこ豆（調理済み）</a> <span class="k">· 270 kcal (1杯, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="レンズ豆（調理済み）"><a href="cooked-lentils.html">レンズ豆（調理済み）</a> <span class="k">· 230 kcal (1杯, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="パスタ（調理済み）"><a href="cooked-pasta.html">パスタ（調理済み）</a> <span class="k">· 220 kcal (1杯, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="キヌア（調理済み）"><a href="cooked-quinoa.html">キヌア（調理済み）</a> <span class="k">· 220 kcal (1杯, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="白ごはん"><a href="cooked-white-rice.html">白ごはん</a> <span class="k">· 205 kcal (1杯, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="きゅうり"><a href="cucumber.html">きゅうり</a> <span class="k">· 16 kcal (1個, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="フェタチーズ"><a href="feta-cheese.html">フェタチーズ</a> <span class="k">· 78 kcal (1枚, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ギリシャヨーグルト"><a href="greek-yogurt.html">ギリシャヨーグルト</a> <span class="k">· 130 kcal (1杯, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="鶏むね肉（グリル）"><a href="grilled-chicken-breast.html">鶏むね肉（グリル）</a> <span class="k">· 195 kcal (1人前, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="牛ひき肉（脂質15%）"><a href="ground-beef-15-fat.html">牛ひき肉（脂質15%）</a> <span class="k">· 250 kcal (1人前, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="カフェラテ"><a href="latte.html">カフェラテ</a> <span class="k">· 150 kcal (1杯, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="オートミール"><a href="oatmeal.html">オートミール</a> <span class="k">· 190 kcal (1杯, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="オリーブオイル"><a href="olive-oil.html">オリーブオイル</a> <span class="k">· 120 kcal (大さじ1, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="オレンジ"><a href="orange.html">オレンジ</a> <span class="k">· 70 kcal (1個, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ピーナッツバター"><a href="peanut-butter.html">ピーナッツバター</a> <span class="k">· 190 kcal (大さじ1, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="プレーンヨーグルト"><a href="plain-yogurt.html">プレーンヨーグルト</a> <span class="k">· 120 kcal (1杯, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="プロテインパウダー"><a href="protein-powder-1-scoop.html">プロテインパウダー</a> <span class="k">· 120 kcal (1スクープ, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="エビ"><a href="shrimp.html">エビ</a> <span class="k">· 120 kcal (1人前, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ほうれん草"><a href="spinach.html">ほうれん草</a> <span class="k">· 23 kcal (1杯, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="いちご"><a href="strawberries.html">いちご</a> <span class="k">· 50 kcal (1杯, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="さつまいも"><a href="sweet-potato.html">さつまいも</a> <span class="k">· 115 kcal (1個, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="豆腐"><a href="tofu.html">豆腐</a> <span class="k">· 145 kcal (1人前, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="トマト"><a href="tomato.html">トマト</a> <span class="k">· 22 kcal (1個, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="七面鳥の胸肉"><a href="turkey-breast.html">七面鳥の胸肉</a> <span class="k">· 160 kcal (1人前, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="くるみ"><a href="walnuts.html">くるみ</a> <span class="k">· 200 kcal (ひとつかみ, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="食パン"><a href="white-bread.html">食パン</a> <span class="k">· 70 kcal (1枚, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="全乳（牛乳）"><a href="whole-milk.html">全乳（牛乳）</a> <span class="k">· 120 kcal (1杯, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="全粒粉パン"><a href="whole-wheat-bread.html">全粒粉パン</a> <span class="k">· 68 kcal (1枚, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">数値は一般的な目安で、レシピや分量によって変わります。出典がある場合はリンクを掲載しています。</p>
 <div class="note"><p>このページは一般的な情報の提供を目的としたもので、医療上のアドバイスではありません。妊娠中・授乳中の方、持病のある方、摂食障害の経験がある方は、カロリー計算を始める前に、医師または管理栄養士にご相談ください。</p></div>

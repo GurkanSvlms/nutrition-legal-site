@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Smaller or larger portion",
-    "port_cols": ["Portion", "Calories", "Protein"],
-    "port_rows": ["Half a portion ({g} {u})", "Typical portion ({g} {u})", "One and a half portions ({g} {u})"],
+    "port_cols": [
+      "Portion",
+      "Calories",
+      "Protein"
+    ],
+    "port_rows": [
+      "Half a portion ({g} {u})",
+      "Typical portion ({g} {u})",
+      "One and a half portions ({g} {u})"
+    ],
     "h_split": "Where the calories come from",
     "split": "{p}% of the calories come from protein, {c}% from carbohydrates and {f}% from fat.",
-    "cat": {"fat": "In short: most of the calories come from fat, so a small change in amount makes a big difference.", "prot": "In short: a good source of protein.", "carb": "In short: most of the calories come from carbohydrates.", "light": "In short: a light food that is mostly water.", "mixed": "In short: a mix of protein, carbohydrates and fat."},
+    "cat": {
+      "fat": "In short: most of the calories come from fat, so a small change in amount makes a big difference.",
+      "prot": "In short: a good source of protein.",
+      "carb": "In short: most of the calories come from carbohydrates.",
+      "light": "In short: a light food that is mostly water.",
+      "mixed": "In short: a mix of protein, carbohydrates and fat."
+    },
     "ref": "One portion is about {pct}% of a 2,000 kcal day, the reference value used on food labels.",
     "h_lighter": "Lighter options in the same group",
     "per100": "per 100 {u}",
@@ -28,13 +42,42 @@
     "h1": "How we prepare our content and sources",
     "lede": "We want every number on this site to be checkable. This page explains who writes it, where the values come from and what we don’t do.",
     "sections": [
-      ["Who writes it", "<p>Pofu is made by Ali Gürkan Sevilmiş, an independent developer. The guides, calculators and food pages on this site are written and maintained by him, using the published sources listed below.</p><p>No dietitian or doctor has reviewed this content yet. We say that openly instead of showing a review badge for a review that did not happen. If you are a nutrition professional and see something to improve, we would be glad to hear from you.</p>"],
-      ["Where the food values come from", "<p>Calories, protein, carbohydrates and fat on the food pages come from public food composition databases and from the food database inside the Pofu app:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (United States Department of Agriculture)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, the Netherlands)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Swedish Food Agency)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Czech Republic)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italy)</li></ul><p>When a page uses a database entry, it links to it. Home and restaurant recipes differ, so every value is a typical estimate for the portion shown, and each page says so.</p>"],
-      ["Where the formulas come from", "<p>The calculators use the same rules as the Pofu app, taken from published research: the Mifflin-St Jeor equation for resting energy (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), protein ranges from the <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, fat and carbohydrate ranges from the <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI categories from the <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">World Health Organization</a> and the energy needed per kilogram from <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Each calculator lists its sources and explains every step.</p><p>We never suggest less than 1,200 kcal a day. The calculators ask you not to use a calorie deficit if you are pregnant or breastfeeding, and the Pofu app sets no deficit when you tell it so.</p>"],
-      ["How we use AI", "<p>The Pofu app uses AI to estimate a meal from a photo. Every estimate shows a confidence score and can be corrected. On this site, AI tools help us draft texts and translate them from the English and Turkish originals; the developer checks the numbers against the sources above. Translations have not all been reviewed by native speakers yet; if a sentence sounds wrong in your language, please tell us.</p>"],
-      ["What we don’t do", "<ul><li>We don’t give medical advice or diagnoses.</li><li>Pofu doesn’t predict periods or ovulation and has no pregnancy tracking; the optional cycle feature only uses a date you enter.</li><li>We don’t promise weight loss results or show before-and-after photos.</li><li>We don’t publish fake reviews or ratings.</li><li>Our comparison pages are written by the makers of Pofu, and each one says so.</li><li>The calculators run in your browser; nothing you enter is sent or stored.</li></ul>"],
-      ["Updates and corrections", "<p>Every page shows when it was last updated. We review the pages when a source changes. If you find a mistake, write to <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; we check it against the source, fix verified errors and update the date on the page.</p>"]
+      [
+        "Who writes it",
+        "<p>Pofu is made by Ali Gürkan Sevilmiş, an independent developer. The guides, calculators and food pages on this site are written and maintained by him, using the published sources listed below.</p><p>No dietitian or doctor has reviewed this content yet. We say that openly instead of showing a review badge for a review that did not happen. If you are a nutrition professional and see something to improve, we would be glad to hear from you.</p>"
+      ],
+      [
+        "Where the food values come from",
+        "<p>Calories, protein, carbohydrates and fat on the food pages come from public food composition databases and from the food database inside the Pofu app:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (United States Department of Agriculture)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, the Netherlands)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Swedish Food Agency)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Czech Republic)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italy)</li></ul><p>When a page uses a database entry, it links to it. Home and restaurant recipes differ, so every value is a typical estimate for the portion shown, and each page says so.</p>"
+      ],
+      [
+        "Where the formulas come from",
+        "<p>The calculators use the same rules as the Pofu app, taken from published research: the Mifflin-St Jeor equation for resting energy (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), protein ranges from the <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, fat and carbohydrate ranges from the <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, BMI categories from the <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">World Health Organization</a> and the energy needed per kilogram from <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Each calculator lists its sources and explains every step.</p><p>We never suggest less than 1,200 kcal a day. The calculators ask you not to use a calorie deficit if you are pregnant or breastfeeding, and the Pofu app sets no deficit when you tell it so.</p>"
+      ],
+      [
+        "How we use AI",
+        "<p>The Pofu app uses AI to estimate a meal from a photo. Every estimate shows a confidence score and can be corrected. On this site, AI tools help us draft texts and translate them from the English and Turkish originals; the developer checks the numbers against the sources above. Translations have not all been reviewed by native speakers yet; if a sentence sounds wrong in your language, please tell us.</p>"
+      ],
+      [
+        "What we don’t do",
+        "<ul><li>We don’t give medical advice or diagnoses.</li><li>Pofu doesn’t predict periods or ovulation and has no pregnancy tracking; the optional cycle feature only uses a date you enter.</li><li>We don’t promise weight loss results or show before-and-after photos.</li><li>We don’t publish fake reviews or ratings.</li><li>Our comparison pages are written by the makers of Pofu, and each one says so.</li><li>The calculators run in your browser; nothing you enter is sent or stored.</li></ul>"
+      ],
+      [
+        "Updates and corrections",
+        "<p>Every page shows when it was last updated. We review the pages when a source changes. If you find a mistake, write to <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; we check it against the source, fix verified errors and update the date on the page.</p>"
+      ]
     ],
     "nav": "Content and sources"
+  },
+  "ui": {
+    "toc": "On this page",
+    "search": "Search foods",
+    "no_match": "No foods match your search.",
+    "f_all": "All",
+    "f_light": "Light",
+    "f_prot": "High in protein",
+    "f_carb": "Mostly carbs",
+    "f_fat": "Mostly fat",
+    "f_mixed": "Mixed"
   }
 }

@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Mniejsza lub większa porcja",
-    "port_cols": ["Porcja", "Kalorie", "Białko"],
-    "port_rows": ["Pół porcji ({g} {u})", "Typowa porcja ({g} {u})", "Półtorej porcji ({g} {u})"],
+    "port_cols": [
+      "Porcja",
+      "Kalorie",
+      "Białko"
+    ],
+    "port_rows": [
+      "Pół porcji ({g} {u})",
+      "Typowa porcja ({g} {u})",
+      "Półtorej porcji ({g} {u})"
+    ],
     "h_split": "Skąd pochodzą kalorie",
     "split": "{p}% kalorii pochodzi z białka, {c}% z węglowodanów i {f}% z tłuszczu.",
-    "cat": {"fat": "W skrócie: większość kalorii pochodzi z tłuszczu, więc niewielka zmiana ilości robi dużą różnicę.", "prot": "W skrócie: dobre źródło białka.", "carb": "W skrócie: większość kalorii pochodzi z węglowodanów.", "light": "W skrócie: lekki produkt, który w większości składa się z wody.", "mixed": "W skrócie: mieszanka białka, węglowodanów i tłuszczu."},
+    "cat": {
+      "fat": "W skrócie: większość kalorii pochodzi z tłuszczu, więc niewielka zmiana ilości robi dużą różnicę.",
+      "prot": "W skrócie: dobre źródło białka.",
+      "carb": "W skrócie: większość kalorii pochodzi z węglowodanów.",
+      "light": "W skrócie: lekki produkt, który w większości składa się z wody.",
+      "mixed": "W skrócie: mieszanka białka, węglowodanów i tłuszczu."
+    },
     "ref": "Jedna porcja to około {pct}% dnia o wartości 2 000 kcal, czyli wartości odniesienia stosowanej na etykietach produktów.",
     "h_lighter": "Lżejsze opcje z tej samej grupy",
     "per100": "na 100 {u}",
@@ -28,13 +42,42 @@
     "h1": "Jak przygotowujemy treści i źródła",
     "lede": "Chcemy, aby każdą liczbę na tej stronie dało się sprawdzić. Ta strona wyjaśnia, kto ją pisze, skąd pochodzą wartości i czego nie robimy.",
     "sections": [
-      ["Kto to pisze", "<p>Pofu tworzy Ali Gürkan Sevilmiş, niezależny programista. Poradniki, kalkulatory i strony o produktach na tej stronie pisze i prowadzi on sam, na podstawie opublikowanych źródeł wymienionych poniżej.</p><p>Żaden dietetyk ani lekarz nie sprawdził jeszcze tych treści. Mówimy o tym otwarcie, zamiast pokazywać odznakę weryfikacji za weryfikację, która się nie odbyła. Jeśli jesteś specjalistką lub specjalistą od żywienia i widzisz coś do poprawy, chętnie to usłyszymy.</p>"],
-      ["Skąd pochodzą wartości produktów", "<p>Kalorie, białko, węglowodany i tłuszcz na stronach o produktach pochodzą z publicznych baz składu żywności oraz z bazy produktów w aplikacji Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departament Rolnictwa Stanów Zjednoczonych)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Holandia)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (szwedzka agencja żywności)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Czechy)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Włochy)</li></ul><p>Gdy strona korzysta z wpisu z bazy, podaje do niego link. Przepisy domowe i restauracyjne się różnią, więc każda wartość to typowe oszacowanie dla pokazanej porcji, i każda strona o tym informuje.</p>"],
-      ["Skąd pochodzą wzory", "<p>Kalkulatory stosują te same zasady co aplikacja Pofu, oparte na opublikowanych badaniach: równanie Mifflina-St Jeora dla spoczynkowego wydatku energetycznego (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), zakresy białka z <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, zakresy tłuszczu i węglowodanów z <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, kategorie BMI ze strony <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Światowej Organizacji Zdrowia</a> oraz energię potrzebną na kilogram z pracy <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Halla (2008)</a>. Każdy kalkulator podaje swoje źródła i wyjaśnia każdy krok.</p><p>Nigdy nie proponujemy mniej niż 1 200 kcal dziennie. Kalkulatory proszą, by nie stosować deficytu kalorycznego w ciąży ani podczas karmienia piersią, a aplikacja Pofu nie ustawia deficytu, gdy o tym poinformujesz.</p>"],
-      ["Jak używamy AI", "<p>Aplikacja Pofu używa AI do oszacowania posiłku na podstawie zdjęcia. Każde oszacowanie pokazuje wskaźnik pewności i można je poprawić. Na tej stronie narzędzia AI pomagają nam przygotowywać teksty i tłumaczyć je z angielskich i tureckich oryginałów; twórca sprawdza liczby ze źródłami wymienionymi powyżej. Tłumaczenia nie zostały jeszcze w całości sprawdzone przez osoby, dla których dany język jest ojczysty; jeśli jakieś zdanie brzmi w Twoim języku źle, daj nam znać.</p>"],
-      ["Czego nie robimy", "<ul><li>Nie udzielamy porad medycznych ani diagnoz.</li><li>Pofu nie przewiduje miesiączek ani owulacji i nie ma śledzenia ciąży; opcjonalna funkcja cyklu korzysta tylko z daty, którą wpiszesz.</li><li>Nie obiecujemy efektów odchudzania i nie pokazujemy zdjęć „przed i po”.</li><li>Nie publikujemy fałszywych opinii ani ocen.</li><li>Nasze strony porównań pisze twórca Pofu i każda z nich o tym informuje.</li><li>Kalkulatory działają w Twojej przeglądarce; nic, co wpiszesz, nie jest wysyłane ani zapisywane.</li></ul>"],
-      ["Aktualizacje i poprawki", "<p>Każda strona pokazuje datę ostatniej aktualizacji. Przeglądamy strony, gdy zmienia się źródło. Jeśli znajdziesz błąd, napisz na <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; sprawdzimy go ze źródłem, poprawimy potwierdzone błędy i zaktualizujemy datę na stronie.</p>"]
+      [
+        "Kto to pisze",
+        "<p>Pofu tworzy Ali Gürkan Sevilmiş, niezależny programista. Poradniki, kalkulatory i strony o produktach na tej stronie pisze i prowadzi on sam, na podstawie opublikowanych źródeł wymienionych poniżej.</p><p>Żaden dietetyk ani lekarz nie sprawdził jeszcze tych treści. Mówimy o tym otwarcie, zamiast pokazywać odznakę weryfikacji za weryfikację, która się nie odbyła. Jeśli jesteś specjalistką lub specjalistą od żywienia i widzisz coś do poprawy, chętnie to usłyszymy.</p>"
+      ],
+      [
+        "Skąd pochodzą wartości produktów",
+        "<p>Kalorie, białko, węglowodany i tłuszcz na stronach o produktach pochodzą z publicznych baz składu żywności oraz z bazy produktów w aplikacji Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departament Rolnictwa Stanów Zjednoczonych)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Holandia)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (szwedzka agencja żywności)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Czechy)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Włochy)</li></ul><p>Gdy strona korzysta z wpisu z bazy, podaje do niego link. Przepisy domowe i restauracyjne się różnią, więc każda wartość to typowe oszacowanie dla pokazanej porcji, i każda strona o tym informuje.</p>"
+      ],
+      [
+        "Skąd pochodzą wzory",
+        "<p>Kalkulatory stosują te same zasady co aplikacja Pofu, oparte na opublikowanych badaniach: równanie Mifflina-St Jeora dla spoczynkowego wydatku energetycznego (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), zakresy białka z <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, zakresy tłuszczu i węglowodanów z <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, kategorie BMI ze strony <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Światowej Organizacji Zdrowia</a> oraz energię potrzebną na kilogram z pracy <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Halla (2008)</a>. Każdy kalkulator podaje swoje źródła i wyjaśnia każdy krok.</p><p>Nigdy nie proponujemy mniej niż 1 200 kcal dziennie. Kalkulatory proszą, by nie stosować deficytu kalorycznego w ciąży ani podczas karmienia piersią, a aplikacja Pofu nie ustawia deficytu, gdy o tym poinformujesz.</p>"
+      ],
+      [
+        "Jak używamy AI",
+        "<p>Aplikacja Pofu używa AI do oszacowania posiłku na podstawie zdjęcia. Każde oszacowanie pokazuje wskaźnik pewności i można je poprawić. Na tej stronie narzędzia AI pomagają nam przygotowywać teksty i tłumaczyć je z angielskich i tureckich oryginałów; twórca sprawdza liczby ze źródłami wymienionymi powyżej. Tłumaczenia nie zostały jeszcze w całości sprawdzone przez osoby, dla których dany język jest ojczysty; jeśli jakieś zdanie brzmi w Twoim języku źle, daj nam znać.</p>"
+      ],
+      [
+        "Czego nie robimy",
+        "<ul><li>Nie udzielamy porad medycznych ani diagnoz.</li><li>Pofu nie przewiduje miesiączek ani owulacji i nie ma śledzenia ciąży; opcjonalna funkcja cyklu korzysta tylko z daty, którą wpiszesz.</li><li>Nie obiecujemy efektów odchudzania i nie pokazujemy zdjęć „przed i po”.</li><li>Nie publikujemy fałszywych opinii ani ocen.</li><li>Nasze strony porównań pisze twórca Pofu i każda z nich o tym informuje.</li><li>Kalkulatory działają w Twojej przeglądarce; nic, co wpiszesz, nie jest wysyłane ani zapisywane.</li></ul>"
+      ],
+      [
+        "Aktualizacje i poprawki",
+        "<p>Każda strona pokazuje datę ostatniej aktualizacji. Przeglądamy strony, gdy zmienia się źródło. Jeśli znajdziesz błąd, napisz na <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; sprawdzimy go ze źródłem, poprawimy potwierdzone błędy i zaktualizujemy datę na stronie.</p>"
+      ]
     ],
     "nav": "Treści i źródła"
+  },
+  "ui": {
+    "toc": "Na tej stronie",
+    "search": "Szukaj produktów",
+    "no_match": "Brak pasujących produktów.",
+    "f_all": "Wszystkie",
+    "f_light": "Lekkie",
+    "f_prot": "Bogate w białko",
+    "f_carb": "Głównie węglowodany",
+    "f_fat": "Głównie tłuszcz",
+    "f_mixed": "Mieszane"
   }
 }

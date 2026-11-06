@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,66 +231,72 @@
 <h1>Combien de calories dans votre assiette ?</h1>
 <p class="lede">Calories, protéines, glucides et lipides par portion et pour 100 g pour 50 aliments. Les valeurs sont des estimations typiques utilisées dans l’appli Pofu et varient selon la recette et la portion.</p>
 </section>
+<section class="fsearch" aria-label="Rechercher un aliment">
+<input type="search" id="fq" placeholder="Rechercher un aliment" aria-label="Rechercher un aliment" autocomplete="off">
+<div class="chips" role="group" aria-label="Tous"><button type="button" data-cat="all" aria-pressed="true">Tous</button><button type="button" data-cat="light" aria-pressed="false">Léger</button><button type="button" data-cat="prot" aria-pressed="false">Riche en protéines</button><button type="button" data-cat="carb" aria-pressed="false">Surtout des glucides</button><button type="button" data-cat="fat" aria-pressed="false">Surtout des lipides</button><button type="button" data-cat="mixed" aria-pressed="false">Mixte</button></div>
+<p class="nomatch" id="fnone" hidden>Aucun aliment ne correspond.</p>
+</section>
 <section id="local">
 <h2>Plats</h2>
 <ul class="foodlist">
-<li><a href="baguette.html">Baguette</a> <span class="k">· 180 kcal (1 morceau, 70 g)</span></li>
-<li><a href="coq-au-vin.html">Coq au vin</a> <span class="k">· 420 kcal (1 portion, 250 g)</span></li>
-<li><a href="crepe-nature.html">Crêpe nature</a> <span class="k">· 150 kcal (1 pièce, 70 g)</span></li>
-<li><a href="croissant.html">Croissant</a> <span class="k">· 270 kcal (1 pièce, 60 g)</span></li>
-<li><a href="quiche-lorraine.html">Quiche lorraine</a> <span class="k">· 380 kcal (1 tranche, 150 g)</span></li>
-<li><a href="ratatouille.html">Ratatouille</a> <span class="k">· 150 kcal (1 portion, 250 g)</span></li>
-<li><a href="salade-nicoise.html">Salade niçoise</a> <span class="k">· 320 kcal (1 portion, 300 g)</span></li>
-<li><a href="soupe-a-l-oignon.html">Soupe à l&#x27;oignon</a> <span class="k">· 220 kcal (1 bol, 300 g)</span></li>
+<li data-cat="carb" data-name="Baguette"><a href="baguette.html">Baguette</a> <span class="k">· 180 kcal (1 morceau, 70 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:81%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Coq au vin"><a href="coq-au-vin.html">Coq au vin</a> <span class="k">· 420 kcal (1 portion, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:38%;background:#DE5187"></span><span style="width:8%;background:#E9A23B"></span><span style="width:54%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Crêpe nature"><a href="crepe-nature.html">Crêpe nature</a> <span class="k">· 150 kcal (1 pièce, 70 g)</span><span class="mbar" aria-hidden="true"><span style="width:11%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:32%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="Croissant"><a href="croissant.html">Croissant</a> <span class="k">· 270 kcal (1 pièce, 60 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:46%;background:#E9A23B"></span><span style="width:46%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Quiche lorraine"><a href="quiche-lorraine.html">Quiche lorraine</a> <span class="k">· 380 kcal (1 tranche, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:28%;background:#E9A23B"></span><span style="width:57%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Ratatouille"><a href="ratatouille.html">Ratatouille</a> <span class="k">· 150 kcal (1 portion, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:43%;background:#E9A23B"></span><span style="width:49%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Salade niçoise"><a href="salade-nicoise.html">Salade niçoise</a> <span class="k">· 320 kcal (1 portion, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:16%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Soupe à l&#x27;oignon"><a href="soupe-a-l-oignon.html">Soupe à l&#x27;oignon</a> <span class="k">· 220 kcal (1 bol, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:37%;background:#E9A23B"></span><span style="width:46%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>Aliments de base</h2>
 <ul class="foodlist">
-<li><a href="amandes.html">Amandes</a> <span class="k">· 175 kcal (1 poignée, 30 g)</span></li>
-<li><a href="avocat.html">Avocat</a> <span class="k">· 240 kcal (Moitié, 100 g)</span></li>
-<li><a href="banane.html">Banane</a> <span class="k">· 105 kcal (1 pièce, 120 g)</span></li>
-<li><a href="beurre.html">Beurre</a> <span class="k">· 72 kcal (1 c. à soupe, 10 g)</span></li>
-<li><a href="beurre-de-cacahuete.html">Beurre de cacahuète</a> <span class="k">· 190 kcal (1 c. à soupe, 32 g)</span></li>
-<li><a href="blanc-de-dinde.html">Blanc de dinde</a> <span class="k">· 160 kcal (1 portion, 150 g)</span></li>
-<li><a href="blanc-de-poulet-grille.html">Blanc de poulet grillé</a> <span class="k">· 195 kcal (1 portion, 150 g)</span></li>
-<li><a href="boeuf-hache-15.html">Bœuf haché (15%)</a> <span class="k">· 250 kcal (1 portion, 100 g)</span></li>
-<li><a href="brocoli.html">Brocoli</a> <span class="k">· 55 kcal (1 bol, 150 g)</span></li>
-<li><a href="cafe-latte.html">Café latte</a> <span class="k">· 150 kcal (1 tasse, 350 g)</span></li>
-<li><a href="cafe-noir.html">Café noir</a> <span class="k">· 2 kcal (1 tasse, 240 g)</span></li>
-<li><a href="cheddar.html">Cheddar</a> <span class="k">· 120 kcal (1 tranche, 30 g)</span></li>
-<li><a href="concombre.html">Concombre</a> <span class="k">· 16 kcal (1 pièce, 100 g)</span></li>
-<li><a href="crevettes.html">Crevettes</a> <span class="k">· 120 kcal (1 portion, 120 g)</span></li>
-<li><a href="epinards.html">Épinards</a> <span class="k">· 23 kcal (1 bol, 100 g)</span></li>
-<li><a href="feta.html">Feta</a> <span class="k">· 78 kcal (1 tranche, 30 g)</span></li>
-<li><a href="flocons-d-avoine.html">Flocons d&#x27;avoine</a> <span class="k">· 190 kcal (1 bol, 50 g)</span></li>
-<li><a href="fraises.html">Fraises</a> <span class="k">· 50 kcal (1 bol, 150 g)</span></li>
-<li><a href="huile-d-olive.html">Huile d&#x27;olive</a> <span class="k">· 120 kcal (1 c. à soupe, 14 g)</span></li>
-<li><a href="lait-entier.html">Lait entier</a> <span class="k">· 120 kcal (1 verre, 200 g)</span></li>
-<li><a href="lentilles-cuites.html">Lentilles cuites</a> <span class="k">· 230 kcal (1 bol, 200 g)</span></li>
-<li><a href="myrtilles.html">Myrtilles</a> <span class="k">· 85 kcal (1 bol, 150 g)</span></li>
-<li><a href="noix.html">Noix</a> <span class="k">· 200 kcal (1 poignée, 30 g)</span></li>
-<li><a href="orange.html">Orange</a> <span class="k">· 70 kcal (1 pièce, 150 g)</span></li>
-<li><a href="pain-blanc.html">Pain blanc</a> <span class="k">· 70 kcal (1 tranche, 28 g)</span></li>
-<li><a href="pain-complet.html">Pain complet</a> <span class="k">· 68 kcal (1 tranche, 28 g)</span></li>
-<li><a href="patate-douce.html">Patate douce</a> <span class="k">· 115 kcal (1 pièce, 130 g)</span></li>
-<li><a href="pates-cuites.html">Pâtes cuites</a> <span class="k">· 220 kcal (1 bol, 140 g)</span></li>
-<li><a href="pois-chiches-cuits.html">Pois chiches cuits</a> <span class="k">· 270 kcal (1 bol, 200 g)</span></li>
-<li><a href="pomme.html">Pomme</a> <span class="k">· 80 kcal (1 pièce, 160 g)</span></li>
-<li><a href="pomme-de-terre-bouillie.html">Pomme de terre bouillie</a> <span class="k">· 130 kcal (1 pièce, 150 g)</span></li>
-<li><a href="poudre-proteinee.html">Poudre protéinée</a> <span class="k">· 120 kcal (1 dose, 30 g)</span></li>
-<li><a href="quinoa-cuit.html">Quinoa cuit</a> <span class="k">· 220 kcal (1 bol, 185 g)</span></li>
-<li><a href="riz-blanc-cuit.html">Riz blanc cuit</a> <span class="k">· 205 kcal (1 bol, 158 g)</span></li>
-<li><a href="riz-complet-cuit.html">Riz complet cuit</a> <span class="k">· 215 kcal (1 bol, 195 g)</span></li>
-<li><a href="saumon-au-four.html">Saumon au four</a> <span class="k">· 280 kcal (1 portion, 150 g)</span></li>
-<li><a href="thon-en-conserve-a-l-eau.html">Thon en conserve (à l&#x27;eau)</a> <span class="k">· 100 kcal (1 portion, 100 g)</span></li>
-<li><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 portion, 150 g)</span></li>
-<li><a href="tomate.html">Tomate</a> <span class="k">· 22 kcal (1 pièce, 120 g)</span></li>
-<li><a href="uf-dur.html">Œuf dur</a> <span class="k">· 78 kcal (1 pièce, 50 g)</span></li>
-<li><a href="yaourt-grec.html">Yaourt grec</a> <span class="k">· 130 kcal (1 bol, 170 g)</span></li>
-<li><a href="yaourt-nature.html">Yaourt nature</a> <span class="k">· 120 kcal (1 bol, 200 g)</span></li>
+<li data-cat="fat" data-name="Amandes"><a href="amandes.html">Amandes</a> <span class="k">· 175 kcal (1 poignée, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Avocat"><a href="avocat.html">Avocat</a> <span class="k">· 240 kcal (Moitié, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Banane"><a href="banane.html">Banane</a> <span class="k">· 105 kcal (1 pièce, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Beurre"><a href="beurre.html">Beurre</a> <span class="k">· 72 kcal (1 c. à soupe, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Beurre de cacahuète"><a href="beurre-de-cacahuete.html">Beurre de cacahuète</a> <span class="k">· 190 kcal (1 c. à soupe, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Blanc de dinde"><a href="blanc-de-dinde.html">Blanc de dinde</a> <span class="k">· 160 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Blanc de poulet grillé"><a href="blanc-de-poulet-grille.html">Blanc de poulet grillé</a> <span class="k">· 195 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Bœuf haché (15%)"><a href="boeuf-hache-15.html">Bœuf haché (15%)</a> <span class="k">· 250 kcal (1 portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Brocoli"><a href="brocoli.html">Brocoli</a> <span class="k">· 55 kcal (1 bol, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Café latte"><a href="cafe-latte.html">Café latte</a> <span class="k">· 150 kcal (1 tasse, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Café noir"><a href="cafe-noir.html">Café noir</a> <span class="k">· 2 kcal (1 tasse, 240 g)</span></li>
+<li data-cat="fat" data-name="Cheddar"><a href="cheddar.html">Cheddar</a> <span class="k">· 120 kcal (1 tranche, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Concombre"><a href="concombre.html">Concombre</a> <span class="k">· 16 kcal (1 pièce, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Crevettes"><a href="crevettes.html">Crevettes</a> <span class="k">· 120 kcal (1 portion, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Épinards"><a href="epinards.html">Épinards</a> <span class="k">· 23 kcal (1 bol, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Feta"><a href="feta.html">Feta</a> <span class="k">· 78 kcal (1 tranche, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Flocons d&#x27;avoine"><a href="flocons-d-avoine.html">Flocons d&#x27;avoine</a> <span class="k">· 190 kcal (1 bol, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Fraises"><a href="fraises.html">Fraises</a> <span class="k">· 50 kcal (1 bol, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Huile d&#x27;olive"><a href="huile-d-olive.html">Huile d&#x27;olive</a> <span class="k">· 120 kcal (1 c. à soupe, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Lait entier"><a href="lait-entier.html">Lait entier</a> <span class="k">· 120 kcal (1 verre, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Lentilles cuites"><a href="lentilles-cuites.html">Lentilles cuites</a> <span class="k">· 230 kcal (1 bol, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Myrtilles"><a href="myrtilles.html">Myrtilles</a> <span class="k">· 85 kcal (1 bol, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Noix"><a href="noix.html">Noix</a> <span class="k">· 200 kcal (1 poignée, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Orange"><a href="orange.html">Orange</a> <span class="k">· 70 kcal (1 pièce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pain blanc"><a href="pain-blanc.html">Pain blanc</a> <span class="k">· 70 kcal (1 tranche, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pain complet"><a href="pain-complet.html">Pain complet</a> <span class="k">· 68 kcal (1 tranche, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Patate douce"><a href="patate-douce.html">Patate douce</a> <span class="k">· 115 kcal (1 pièce, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pâtes cuites"><a href="pates-cuites.html">Pâtes cuites</a> <span class="k">· 220 kcal (1 bol, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pois chiches cuits"><a href="pois-chiches-cuits.html">Pois chiches cuits</a> <span class="k">· 270 kcal (1 bol, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Pomme"><a href="pomme.html">Pomme</a> <span class="k">· 80 kcal (1 pièce, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Pomme de terre bouillie"><a href="pomme-de-terre-bouillie.html">Pomme de terre bouillie</a> <span class="k">· 130 kcal (1 pièce, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Poudre protéinée"><a href="poudre-proteinee.html">Poudre protéinée</a> <span class="k">· 120 kcal (1 dose, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Quinoa cuit"><a href="quinoa-cuit.html">Quinoa cuit</a> <span class="k">· 220 kcal (1 bol, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Riz blanc cuit"><a href="riz-blanc-cuit.html">Riz blanc cuit</a> <span class="k">· 205 kcal (1 bol, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="Riz complet cuit"><a href="riz-complet-cuit.html">Riz complet cuit</a> <span class="k">· 215 kcal (1 bol, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Saumon au four"><a href="saumon-au-four.html">Saumon au four</a> <span class="k">· 280 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Thon en conserve (à l&#x27;eau)"><a href="thon-en-conserve-a-l-eau.html">Thon en conserve (à l&#x27;eau)</a> <span class="k">· 100 kcal (1 portion, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="Tofu"><a href="tofu.html">Tofu</a> <span class="k">· 145 kcal (1 portion, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Tomate"><a href="tomate.html">Tomate</a> <span class="k">· 22 kcal (1 pièce, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="Œuf dur"><a href="uf-dur.html">Œuf dur</a> <span class="k">· 78 kcal (1 pièce, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yaourt grec"><a href="yaourt-grec.html">Yaourt grec</a> <span class="k">· 130 kcal (1 bol, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="Yaourt nature"><a href="yaourt-nature.html">Yaourt nature</a> <span class="k">· 120 kcal (1 bol, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">Valeurs : estimations typiques utilisées dans l’appli Pofu ; elles varient selon la recette et la portion.</p>
 <div class="note"><p>Cette page donne des informations générales et ne constitue pas un avis médical. Si vous êtes enceinte, si vous allaitez, si vous avez un problème de santé ou des antécédents de trouble alimentaire, parlez-en à votre médecin ou à votre diététicien(ne) avant de compter les calories.</p></div>

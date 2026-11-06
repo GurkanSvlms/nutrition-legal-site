@@ -141,6 +141,22 @@
     .split { display: flex; height: .8rem; border-radius: 999px; overflow: hidden; margin: .4rem 0 .7rem; background: var(--line); }
     .split span { display: block; height: 100%; }
     .split .sp { background: #DE5187; } .split .sc { background: #E9A23B; } .split .sf { background: #7A5AA6; }
+    .macro { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.6rem; margin: 1.2rem 0 .2rem; padding: 1.2rem 1.3rem; border-radius: 1.25rem; background: var(--card); }
+    .ring { flex: none; width: 8.5rem; height: 8.5rem; border-radius: 50%; display: grid; place-items: center; }
+    .ring span { display: grid; place-items: center; width: 6rem; height: 6rem; border-radius: 50%; background: var(--card); font-size: .9rem; color: var(--ink2); line-height: 1.1; text-align: center; }
+    .ring b { display: block; font-size: 1.7rem; color: var(--ink); }
+    .bars { flex: 1 1 12rem; list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .bars li { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .25rem .5rem; font-weight: 600; }
+    .bars i { grid-column: 1 / -1; display: block; height: .5rem; border-radius: 999px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .bars i::before { content: ""; display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--c); }
+    .fsearch { display: flex; flex-direction: column; gap: .8rem; margin: 0 0 .5rem; }
+    .fsearch input { width: 100%; min-height: 3.1rem; padding: 0 1.1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; }
+    .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .chips button { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+    .chips button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .mbar { display: flex; height: .4rem; margin-top: .55rem; border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+    .mbar span { display: block; height: 100%; }
+    .nomatch { color: var(--ink2); }
     .demo { margin: .8rem 0 0; }
     .demo video { display: block; width: 100%; max-width: 270px; height: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--card); }
     .demo figcaption { font-size: .88rem; color: var(--ink2); margin-top: .4rem; max-width: 34rem; }
@@ -191,7 +207,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../../assets/site.css?v=20261106">
+<link rel="stylesheet" href="../../assets/site.css?v=20261107">
 <!-- skin:end -->
 </head>
 <body>
@@ -215,78 +231,84 @@
 <h1>आपके खाने में कितनी कैलोरी है?</h1>
 <p class="lede">62 खाद्य पदार्थों के लिए प्रति सर्विंग और प्रति 100 g कैलोरी, प्रोटीन, कार्बोहाइड्रेट और फैट। ये मान सार्वजनिक खाद्य डेटाबेस और Pofu ऐप के सामान्य अनुमान हैं और रेसिपी तथा सर्विंग के अनुसार बदलते हैं।</p>
 </section>
+<section class="fsearch" aria-label="खाना खोजें">
+<input type="search" id="fq" placeholder="खाना खोजें" aria-label="खाना खोजें" autocomplete="off">
+<div class="chips" role="group" aria-label="सभी"><button type="button" data-cat="all" aria-pressed="true">सभी</button><button type="button" data-cat="light" aria-pressed="false">हल्का</button><button type="button" data-cat="prot" aria-pressed="false">प्रोटीन से भरपूर</button><button type="button" data-cat="carb" aria-pressed="false">ज़्यादातर कार्ब्स</button><button type="button" data-cat="fat" aria-pressed="false">ज़्यादातर फ़ैट</button><button type="button" data-cat="mixed" aria-pressed="false">मिश्रित</button></div>
+<p class="nomatch" id="fnone" hidden>कोई मेल खाता खाना नहीं मिला।</p>
+</section>
 <section id="local">
 <h2>व्यंजन</h2>
 <ul class="foodlist">
-<li><a href="barfi.html">बर्फी</a> <span class="k">· 128 kcal (1 टुकड़ा, 45 g)</span></li>
-<li><a href="chana-palak.html">चना पालक (छोले-पालक सब्ज़ी)</a> <span class="k">· 134 kcal (1 कटोरी, 150 g)</span></li>
-<li><a href="chicken-biryani.html">चिकन बिरयानी</a> <span class="k">· 260 kcal (1 प्लेट, 250 g)</span></li>
-<li><a href="chicken-curry.html">चिकन करी</a> <span class="k">· 214 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="chicken-curry-chawal.html">चावल के साथ चिकन करी</a> <span class="k">· 348 kcal (1 प्लेट, 300 g)</span></li>
-<li><a href="dal.html">दाल</a> <span class="k">· 218 kcal (1 कटोरी, 150 g)</span></li>
-<li><a href="firni.html">फ़िरनी</a> <span class="k">· 288 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="kheer.html">खीर (चावल की खीर)</a> <span class="k">· 216 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="khichdi.html">खिचड़ी (चावल-दाल)</a> <span class="k">· 310 kcal (1 प्लेट, 207 g)</span></li>
-<li><a href="machhli-curry.html">मछली करी</a> <span class="k">· 186 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="meat-biryani.html">मीट बिरयानी</a> <span class="k">· 362 kcal (1 प्लेट, 250 g)</span></li>
-<li><a href="mutton-gravy.html">मटन ग्रेवी</a> <span class="k">· 438 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="naan.html">नान</a> <span class="k">· 137 kcal (1 टुकड़ा, 44 g)</span></li>
-<li><a href="omelet.html">ऑमलेट</a> <span class="k">· 157 kcal (2 अंडे, 110 g)</span></li>
-<li><a href="palak-paneer.html">पालक पनीर</a> <span class="k">· 152 kcal (1 कटोरी, 150 g)</span></li>
-<li><a href="paneer.html">पनीर</a> <span class="k">· 150 kcal (50 ग्राम, 50 g)</span></li>
-<li><a href="roti.html">रोटी (चपाती)</a> <span class="k">· 120 kcal (1 रोटी, 40 g)</span></li>
-<li><a href="sabzi-curry.html">सब्ज़ी करी</a> <span class="k">· 172 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="samosa.html">समोसा</a> <span class="k">· 310 kcal (1 समोसा, 100 g)</span></li>
-<li><a href="veg-biryani.html">वेज बिरयानी</a> <span class="k">· 272 kcal (1 प्लेट, 250 g)</span></li>
+<li data-cat="mixed" data-name="बर्फी"><a href="barfi.html">बर्फी</a> <span class="k">· 128 kcal (1 टुकड़ा, 45 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:36%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="चना पालक (छोले-पालक सब्ज़ी)"><a href="chana-palak.html">चना पालक (छोले-पालक सब्ज़ी)</a> <span class="k">· 134 kcal (1 कटोरी, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:18%;background:#DE5187"></span><span style="width:39%;background:#E9A23B"></span><span style="width:43%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="चिकन बिरयानी"><a href="chicken-biryani.html">चिकन बिरयानी</a> <span class="k">· 260 kcal (1 प्लेट, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:28%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="चिकन करी"><a href="chicken-curry.html">चिकन करी</a> <span class="k">· 214 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="चावल के साथ चिकन करी"><a href="chicken-curry-chawal.html">चावल के साथ चिकन करी</a> <span class="k">· 348 kcal (1 प्लेट, 300 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:52%;background:#E9A23B"></span><span style="width:31%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="दाल"><a href="dal.html">दाल</a> <span class="k">· 218 kcal (1 कटोरी, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:51%;background:#E9A23B"></span><span style="width:26%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="फ़िरनी"><a href="firni.html">फ़िरनी</a> <span class="k">· 288 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:20%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="खीर (चावल की खीर)"><a href="kheer.html">खीर (चावल की खीर)</a> <span class="k">· 216 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:12%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:19%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="खिचड़ी (चावल-दाल)"><a href="khichdi.html">खिचड़ी (चावल-दाल)</a> <span class="k">· 310 kcal (1 प्लेट, 207 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:57%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="मछली करी"><a href="machhli-curry.html">मछली करी</a> <span class="k">· 186 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:28%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="मीट बिरयानी"><a href="meat-biryani.html">मीट बिरयानी</a> <span class="k">· 362 kcal (1 प्लेट, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:34%;background:#E9A23B"></span><span style="width:42%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="मटन ग्रेवी"><a href="mutton-gravy.html">मटन ग्रेवी</a> <span class="k">· 438 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:32%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:65%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="नान"><a href="naan.html">नान</a> <span class="k">· 137 kcal (1 टुकड़ा, 44 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ऑमलेट"><a href="omelet.html">ऑमलेट</a> <span class="k">· 157 kcal (2 अंडे, 110 g)</span><span class="mbar" aria-hidden="true"><span style="width:35%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:62%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="पालक पनीर"><a href="palak-paneer.html">पालक पनीर</a> <span class="k">· 152 kcal (1 कटोरी, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:17%;background:#E9A23B"></span><span style="width:62%;background:#7A5AA6"></span></span></li>
+<li data-cat="mixed" data-name="पनीर"><a href="paneer.html">पनीर</a> <span class="k">· 150 kcal (50 ग्राम, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="रोटी (चपाती)"><a href="roti.html">रोटी (चपाती)</a> <span class="k">· 120 kcal (1 रोटी, 40 g)</span><span class="mbar" aria-hidden="true"><span style="width:10%;background:#DE5187"></span><span style="width:62%;background:#E9A23B"></span><span style="width:28%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="सब्ज़ी करी"><a href="sabzi-curry.html">सब्ज़ी करी</a> <span class="k">· 172 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:40%;background:#E9A23B"></span><span style="width:53%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="समोसा"><a href="samosa.html">समोसा</a> <span class="k">· 310 kcal (1 समोसा, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:43%;background:#E9A23B"></span><span style="width:50%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="वेज बिरयानी"><a href="veg-biryani.html">वेज बिरयानी</a> <span class="k">· 272 kcal (1 प्लेट, 250 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:66%;background:#E9A23B"></span><span style="width:27%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
 <section id="staple">
 <h2>रोज़मर्रा के खाद्य पदार्थ</h2>
 <ul class="foodlist">
-<li><a href="almonds.html">बादाम</a> <span class="k">· 175 kcal (1 मुट्ठी, 30 g)</span></li>
-<li><a href="apple.html">सेब</a> <span class="k">· 80 kcal (1 पीस, 160 g)</span></li>
-<li><a href="avocado.html">एवोकाडो</a> <span class="k">· 240 kcal (आधा, 100 g)</span></li>
-<li><a href="baked-salmon.html">बेक्ड सैल्मन</a> <span class="k">· 280 kcal (1 सर्विंग, 150 g)</span></li>
-<li><a href="banana.html">केला</a> <span class="k">· 105 kcal (1 पीस, 120 g)</span></li>
-<li><a href="black-coffee.html">ब्लैक कॉफ़ी</a> <span class="k">· 2 kcal (1 कप, 240 g)</span></li>
-<li><a href="blueberries.html">ब्लूबेरी</a> <span class="k">· 85 kcal (1 कटोरी, 150 g)</span></li>
-<li><a href="boiled-egg.html">उबला अंडा</a> <span class="k">· 78 kcal (1 अंडा, 50 g)</span></li>
-<li><a href="boiled-potato.html">उबला आलू</a> <span class="k">· 130 kcal (1 आलू, 150 g)</span></li>
-<li><a href="broccoli.html">ब्रोकली</a> <span class="k">· 55 kcal (1 कटोरी, 150 g)</span></li>
-<li><a href="butter.html">मक्खन</a> <span class="k">· 72 kcal (1 बड़ा चम्मच, 10 g)</span></li>
-<li><a href="canned-tuna-in-water.html">कैन्ड टूना (पानी में)</a> <span class="k">· 100 kcal (1 सर्विंग, 100 g)</span></li>
-<li><a href="cheddar-cheese.html">चेडर चीज़</a> <span class="k">· 120 kcal (1 स्लाइस, 30 g)</span></li>
-<li><a href="cooked-brown-rice.html">पका ब्राउन राइस</a> <span class="k">· 215 kcal (1 कटोरी, 195 g)</span></li>
-<li><a href="cooked-chickpeas.html">पके काबुली चने</a> <span class="k">· 270 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="cooked-lentils.html">पकी मसूर दाल</a> <span class="k">· 230 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="cooked-pasta.html">पका पास्ता</a> <span class="k">· 220 kcal (1 कटोरी, 140 g)</span></li>
-<li><a href="cooked-quinoa.html">पकी क्विनोआ</a> <span class="k">· 220 kcal (1 कटोरी, 185 g)</span></li>
-<li><a href="cooked-white-rice.html">पका सफेद चावल</a> <span class="k">· 205 kcal (1 कटोरी, 158 g)</span></li>
-<li><a href="cucumber.html">खीरा</a> <span class="k">· 16 kcal (1 पीस, 100 g)</span></li>
-<li><a href="feta-cheese.html">फेटा चीज़</a> <span class="k">· 78 kcal (1 स्लाइस, 30 g)</span></li>
-<li><a href="greek-yogurt.html">ग्रीक योगर्ट</a> <span class="k">· 130 kcal (1 कटोरी, 170 g)</span></li>
-<li><a href="grilled-chicken-breast.html">ग्रिल्ड चिकन ब्रेस्ट</a> <span class="k">· 195 kcal (1 सर्विंग, 150 g)</span></li>
-<li><a href="ground-beef-15-fat.html">ग्राउंड बीफ (15% फैट)</a> <span class="k">· 250 kcal (1 सर्विंग, 100 g)</span></li>
-<li><a href="latte.html">लाटे</a> <span class="k">· 150 kcal (1 कप, 350 g)</span></li>
-<li><a href="oatmeal.html">ओटमील</a> <span class="k">· 190 kcal (1 कटोरी, 50 g)</span></li>
-<li><a href="olive-oil.html">ज़ैतून का तेल</a> <span class="k">· 120 kcal (1 बड़ा चम्मच, 14 g)</span></li>
-<li><a href="orange.html">संतरा</a> <span class="k">· 70 kcal (1 पीस, 150 g)</span></li>
-<li><a href="peanut-butter.html">पीनट बटर</a> <span class="k">· 190 kcal (1 बड़ा चम्मच, 32 g)</span></li>
-<li><a href="plain-yogurt.html">सादा दही</a> <span class="k">· 120 kcal (1 कटोरी, 200 g)</span></li>
-<li><a href="protein-powder.html">प्रोटीन पाउडर</a> <span class="k">· 120 kcal (1 स्कूप, 30 g)</span></li>
-<li><a href="shrimp.html">झींगा</a> <span class="k">· 120 kcal (1 सर्विंग, 120 g)</span></li>
-<li><a href="spinach.html">पालक</a> <span class="k">· 23 kcal (1 कटोरी, 100 g)</span></li>
-<li><a href="strawberries.html">स्ट्रॉबेरी</a> <span class="k">· 50 kcal (1 कटोरी, 150 g)</span></li>
-<li><a href="sweet-potato.html">शकरकंद</a> <span class="k">· 115 kcal (1 आलू, 130 g)</span></li>
-<li><a href="tofu.html">टोफू</a> <span class="k">· 145 kcal (1 सर्विंग, 150 g)</span></li>
-<li><a href="tomato.html">टमाटर</a> <span class="k">· 22 kcal (1 पीस, 120 g)</span></li>
-<li><a href="turkey-breast.html">टर्की ब्रेस्ट</a> <span class="k">· 160 kcal (1 सर्विंग, 150 g)</span></li>
-<li><a href="walnuts.html">अखरोट</a> <span class="k">· 200 kcal (1 मुट्ठी, 30 g)</span></li>
-<li><a href="white-bread.html">व्हाइट ब्रेड</a> <span class="k">· 70 kcal (1 स्लाइस, 28 g)</span></li>
-<li><a href="whole-milk.html">फुल क्रीम दूध</a> <span class="k">· 120 kcal (1 गिलास, 200 g)</span></li>
-<li><a href="whole-wheat-bread.html">होल व्हीट ब्रेड</a> <span class="k">· 68 kcal (1 स्लाइस, 28 g)</span></li>
+<li data-cat="fat" data-name="बादाम"><a href="almonds.html">बादाम</a> <span class="k">· 175 kcal (1 मुट्ठी, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:14%;background:#E9A23B"></span><span style="width:72%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="सेब"><a href="apple.html">सेब</a> <span class="k">· 80 kcal (1 पीस, 160 g)</span><span class="mbar" aria-hidden="true"><span style="width:2%;background:#DE5187"></span><span style="width:95%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="एवोकाडो"><a href="avocado.html">एवोकाडो</a> <span class="k">· 240 kcal (आधा, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:19%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="बेक्ड सैल्मन"><a href="baked-salmon.html">बेक्ड सैल्मन</a> <span class="k">· 280 kcal (1 सर्विंग, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:49%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:51%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="केला"><a href="banana.html">केला</a> <span class="k">· 105 kcal (1 पीस, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:4%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:4%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ब्लैक कॉफ़ी"><a href="black-coffee.html">ब्लैक कॉफ़ी</a> <span class="k">· 2 kcal (1 कप, 240 g)</span></li>
+<li data-cat="light" data-name="ब्लूबेरी"><a href="blueberries.html">ब्लूबेरी</a> <span class="k">· 85 kcal (1 कटोरी, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:5%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="उबला अंडा"><a href="boiled-egg.html">उबला अंडा</a> <span class="k">· 78 kcal (1 अंडा, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:33%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:64%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="उबला आलू"><a href="boiled-potato.html">उबला आलू</a> <span class="k">· 130 kcal (1 आलू, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ब्रोकली"><a href="broccoli.html">ब्रोकली</a> <span class="k">· 55 kcal (1 कटोरी, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:69%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="मक्खन"><a href="butter.html">मक्खन</a> <span class="k">· 72 kcal (1 बड़ा चम्मच, 10 g)</span><span class="mbar" aria-hidden="true"><span style="width:1%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:99%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="कैन्ड टूना (पानी में)"><a href="canned-tuna-in-water.html">कैन्ड टूना (पानी में)</a> <span class="k">· 100 kcal (1 सर्विंग, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:91%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:9%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="चेडर चीज़"><a href="cheddar-cheese.html">चेडर चीज़</a> <span class="k">· 120 kcal (1 स्लाइस, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:23%;background:#DE5187"></span><span style="width:1%;background:#E9A23B"></span><span style="width:76%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="पका ब्राउन राइस"><a href="cooked-brown-rice.html">पका ब्राउन राइस</a> <span class="k">· 215 kcal (1 कटोरी, 195 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:83%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="पके काबुली चने"><a href="cooked-chickpeas.html">पके काबुली चने</a> <span class="k">· 270 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:65%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="पकी मसूर दाल"><a href="cooked-lentils.html">पकी मसूर दाल</a> <span class="k">· 230 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:30%;background:#DE5187"></span><span style="width:67%;background:#E9A23B"></span><span style="width:3%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="पका पास्ता"><a href="cooked-pasta.html">पका पास्ता</a> <span class="k">· 220 kcal (1 कटोरी, 140 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="पकी क्विनोआ"><a href="cooked-quinoa.html">पकी क्विनोआ</a> <span class="k">· 220 kcal (1 कटोरी, 185 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:71%;background:#E9A23B"></span><span style="width:14%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="पका सफेद चावल"><a href="cooked-white-rice.html">पका सफेद चावल</a> <span class="k">· 205 kcal (1 कटोरी, 158 g)</span><span class="mbar" aria-hidden="true"><span style="width:9%;background:#DE5187"></span><span style="width:90%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="खीरा"><a href="cucumber.html">खीरा</a> <span class="k">· 16 kcal (1 पीस, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:5%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="फेटा चीज़"><a href="feta-cheese.html">फेटा चीज़</a> <span class="k">· 78 kcal (1 स्लाइस, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:26%;background:#DE5187"></span><span style="width:3%;background:#E9A23B"></span><span style="width:71%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="ग्रीक योगर्ट"><a href="greek-yogurt.html">ग्रीक योगर्ट</a> <span class="k">· 130 kcal (1 कटोरी, 170 g)</span><span class="mbar" aria-hidden="true"><span style="width:69%;background:#DE5187"></span><span style="width:24%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="ग्रिल्ड चिकन ब्रेस्ट"><a href="grilled-chicken-breast.html">ग्रिल्ड चिकन ब्रेस्ट</a> <span class="k">· 195 kcal (1 सर्विंग, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:78%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:22%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ग्राउंड बीफ (15% फैट)"><a href="ground-beef-15-fat.html">ग्राउंड बीफ (15% फैट)</a> <span class="k">· 250 kcal (1 सर्विंग, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:58%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="लाटे"><a href="latte.html">लाटे</a> <span class="k">· 150 kcal (1 कप, 350 g)</span><span class="mbar" aria-hidden="true"><span style="width:22%;background:#DE5187"></span><span style="width:41%;background:#E9A23B"></span><span style="width:37%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="ओटमील"><a href="oatmeal.html">ओटमील</a> <span class="k">· 190 kcal (1 कटोरी, 50 g)</span><span class="mbar" aria-hidden="true"><span style="width:15%;background:#DE5187"></span><span style="width:68%;background:#E9A23B"></span><span style="width:17%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="ज़ैतून का तेल"><a href="olive-oil.html">ज़ैतून का तेल</a> <span class="k">· 120 kcal (1 बड़ा चम्मच, 14 g)</span><span class="mbar" aria-hidden="true"><span style="width:0%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:100%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="संतरा"><a href="orange.html">संतरा</a> <span class="k">· 70 kcal (1 पीस, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:91%;background:#E9A23B"></span><span style="width:2%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="पीनट बटर"><a href="peanut-butter.html">पीनट बटर</a> <span class="k">· 190 kcal (1 बड़ा चम्मच, 32 g)</span><span class="mbar" aria-hidden="true"><span style="width:14%;background:#DE5187"></span><span style="width:12%;background:#E9A23B"></span><span style="width:74%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="सादा दही"><a href="plain-yogurt.html">सादा दही</a> <span class="k">· 120 kcal (1 कटोरी, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:24%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:45%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="प्रोटीन पाउडर"><a href="protein-powder.html">प्रोटीन पाउडर</a> <span class="k">· 120 kcal (1 स्कूप, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:10%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="झींगा"><a href="shrimp.html">झींगा</a> <span class="k">· 120 kcal (1 सर्विंग, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:85%;background:#DE5187"></span><span style="width:4%;background:#E9A23B"></span><span style="width:11%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="पालक"><a href="spinach.html">पालक</a> <span class="k">· 23 kcal (1 कटोरी, 100 g)</span><span class="mbar" aria-hidden="true"><span style="width:39%;background:#DE5187"></span><span style="width:49%;background:#E9A23B"></span><span style="width:12%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="स्ट्रॉबेरी"><a href="strawberries.html">स्ट्रॉबेरी</a> <span class="k">· 50 kcal (1 कटोरी, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:85%;background:#E9A23B"></span><span style="width:8%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="शकरकंद"><a href="sweet-potato.html">शकरकंद</a> <span class="k">· 115 kcal (1 आलू, 130 g)</span><span class="mbar" aria-hidden="true"><span style="width:7%;background:#DE5187"></span><span style="width:92%;background:#E9A23B"></span><span style="width:1%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="टोफू"><a href="tofu.html">टोफू</a> <span class="k">· 145 kcal (1 सर्विंग, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:42%;background:#DE5187"></span><span style="width:11%;background:#E9A23B"></span><span style="width:47%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="टमाटर"><a href="tomato.html">टमाटर</a> <span class="k">· 22 kcal (1 पीस, 120 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:76%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="prot" data-name="टर्की ब्रेस्ट"><a href="turkey-breast.html">टर्की ब्रेस्ट</a> <span class="k">· 160 kcal (1 सर्विंग, 150 g)</span><span class="mbar" aria-hidden="true"><span style="width:79%;background:#DE5187"></span><span style="width:0%;background:#E9A23B"></span><span style="width:21%;background:#7A5AA6"></span></span></li>
+<li data-cat="fat" data-name="अखरोट"><a href="walnuts.html">अखरोट</a> <span class="k">· 200 kcal (1 मुट्ठी, 30 g)</span><span class="mbar" aria-hidden="true"><span style="width:8%;background:#DE5187"></span><span style="width:7%;background:#E9A23B"></span><span style="width:85%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="व्हाइट ब्रेड"><a href="white-bread.html">व्हाइट ब्रेड</a> <span class="k">· 70 kcal (1 स्लाइस, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:13%;background:#DE5187"></span><span style="width:80%;background:#E9A23B"></span><span style="width:7%;background:#7A5AA6"></span></span></li>
+<li data-cat="light" data-name="फुल क्रीम दूध"><a href="whole-milk.html">फुल क्रीम दूध</a> <span class="k">· 120 kcal (1 गिलास, 200 g)</span><span class="mbar" aria-hidden="true"><span style="width:21%;background:#DE5187"></span><span style="width:31%;background:#E9A23B"></span><span style="width:48%;background:#7A5AA6"></span></span></li>
+<li data-cat="carb" data-name="होल व्हीट ब्रेड"><a href="whole-wheat-bread.html">होल व्हीट ब्रेड</a> <span class="k">· 68 kcal (1 स्लाइस, 28 g)</span><span class="mbar" aria-hidden="true"><span style="width:17%;background:#DE5187"></span><span style="width:70%;background:#E9A23B"></span><span style="width:13%;background:#7A5AA6"></span></span></li>
 </ul>
 </section>
+<script>(function(){var q=document.getElementById('fq'),none=document.getElementById('fnone'),cat='all',lang=document.documentElement.lang,bs=document.querySelectorAll('.chips button');function norm(x){return x.toLocaleLowerCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}document.querySelectorAll('.foodlist li').forEach(function(li){li.dataset.name=norm(li.dataset.name);});function run(){var t=norm(q.value.trim()),shown=0;document.querySelectorAll('.foodlist').forEach(function(ul){var n=0;ul.querySelectorAll('li').forEach(function(li){var ok=(cat==='all'||li.dataset.cat===cat)&&(!t||li.dataset.name.indexOf(t)>-1);li.hidden=!ok;if(ok)n++;});ul.parentElement.hidden=!n;shown+=n;});none.hidden=shown>0;}q.addEventListener('input',run);bs.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});})();</script>
 <section id="source">
 <p class="fine">मान: सार्वजनिक खाद्य डेटाबेस और Pofu ऐप के सामान्य अनुमान; ये रेसिपी और सर्विंग के अनुसार बदलते हैं।</p>
 <div class="note"><p>यह पेज सामान्य जानकारी के लिए है और चिकित्सीय सलाह नहीं है। यदि आप गर्भवती हैं, स्तनपान करा रही हैं, कोई स्वास्थ्य समस्या है या पहले खाने से जुड़ा कोई विकार रहा है, तो कैलोरी गिनने से पहले अपने डॉक्टर या डायटीशियन से बात करें।</p></div>

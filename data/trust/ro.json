@@ -1,11 +1,25 @@
 {
   "food": {
     "h_port": "Porție mai mică sau mai mare",
-    "port_cols": ["Porție", "Calorii", "Proteine"],
-    "port_rows": ["O jumătate de porție ({g} {u})", "Porție obișnuită ({g} {u})", "O porție și jumătate ({g} {u})"],
+    "port_cols": [
+      "Porție",
+      "Calorii",
+      "Proteine"
+    ],
+    "port_rows": [
+      "O jumătate de porție ({g} {u})",
+      "Porție obișnuită ({g} {u})",
+      "O porție și jumătate ({g} {u})"
+    ],
     "h_split": "De unde vin caloriile",
     "split": "{p}% din calorii provin din proteine, {c}% din carbohidrați și {f}% din grăsimi.",
-    "cat": {"fat": "Pe scurt: cea mai mare parte a caloriilor vine din grăsimi, așa că o mică schimbare a cantității face o mare diferență.", "prot": "Pe scurt: o sursă bună de proteine.", "carb": "Pe scurt: cea mai mare parte a caloriilor vine din carbohidrați.", "light": "Pe scurt: un aliment ușor, format mai ales din apă.", "mixed": "Pe scurt: un amestec de proteine, carbohidrați și grăsimi."},
+    "cat": {
+      "fat": "Pe scurt: cea mai mare parte a caloriilor vine din grăsimi, așa că o mică schimbare a cantității face o mare diferență.",
+      "prot": "Pe scurt: o sursă bună de proteine.",
+      "carb": "Pe scurt: cea mai mare parte a caloriilor vine din carbohidrați.",
+      "light": "Pe scurt: un aliment ușor, format mai ales din apă.",
+      "mixed": "Pe scurt: un amestec de proteine, carbohidrați și grăsimi."
+    },
     "ref": "O porție reprezintă aproximativ {pct}% dintr-o zi de 2.000 kcal, valoarea de referință folosită pe etichetele alimentelor.",
     "h_lighter": "Variante mai ușoare din aceeași grupă",
     "per100": "la 100 {u}",
@@ -28,13 +42,42 @@
     "h1": "Cum pregătim conținutul și sursele noastre",
     "lede": "Ne dorim ca fiecare cifră de pe acest site să poată fi verificată. Această pagină explică cine o scrie, de unde provin valorile și ce nu facem.",
     "sections": [
-      ["Cine scrie conținutul", "<p>Pofu este creat de Ali Gürkan Sevilmiş, dezvoltator independent. Ghidurile, calculatoarele și paginile de alimente de pe acest site sunt scrise și întreținute de el, pe baza surselor publicate enumerate mai jos.</p><p>Niciun dietetician sau medic nu a revizuit încă acest conținut. Spunem asta deschis, în loc să afișăm o insignă de revizuire pentru o revizuire care nu a avut loc. Dacă ești specialist în nutriție și observi ceva de îmbunătățit, ne-ar face plăcere să ne scrii.</p>"],
-      ["De unde provin valorile alimentelor", "<p>Caloriile, proteinele, carbohidrații și grăsimile de pe paginile de alimente provin din baze de date publice de compoziție a alimentelor și din baza de date de alimente din aplicația Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departamentul Agriculturii al Statelor Unite)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Țările de Jos)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Agenția Suedeză pentru Alimente)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Cehia)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italia)</li></ul><p>Când o pagină folosește o intrare dintr-o bază de date, trimite către ea. Rețetele de acasă și cele din restaurante diferă, așa că fiecare valoare este o estimare tipică pentru porția afișată, iar fiecare pagină o spune.</p>"],
-      ["De unde provin formulele", "<p>Calculatoarele folosesc aceleași reguli ca aplicația Pofu, preluate din cercetări publicate: ecuația Mifflin-St Jeor pentru energia de repaus (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), intervalele de proteine de la <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, intervalele de grăsimi și carbohidrați de la <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, categoriile IMC de la <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organizația Mondială a Sănătății</a> și energia necesară pe kilogram de la <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Fiecare calculator își enumeră sursele și explică fiecare pas.</p><p>Nu sugerăm niciodată mai puțin de 1.200 kcal pe zi. Calculatoarele te roagă să nu folosești un deficit caloric dacă ești însărcinată sau alăptezi, iar aplicația Pofu nu setează niciun deficit atunci când îi spui acest lucru.</p>"],
-      ["Cum folosim AI", "<p>Aplicația Pofu folosește AI pentru a estima o masă dintr-o fotografie. Fiecare estimare arată un scor de încredere și poate fi corectată. Pe acest site, instrumentele AI ne ajută să redactăm textele și să le traducem din originalele în engleză și turcă; dezvoltatorul verifică cifrele în raport cu sursele de mai sus. Traducerile nu au fost încă toate revizuite de vorbitori nativi; dacă o frază sună greșit în limba ta, te rugăm să ne spui.</p>"],
-      ["Ce nu facem", "<ul><li>Nu oferim sfaturi medicale sau diagnostice.</li><li>Pofu nu prezice menstruația sau ovulația și nu urmărește sarcina; funcția opțională legată de ciclu folosește doar o dată pe care o introduci tu.</li><li>Nu promitem rezultate de slăbire și nu afișăm fotografii înainte și după.</li><li>Nu publicăm recenzii sau evaluări false.</li><li>Paginile noastre de comparații sunt scrise de creatorii Pofu, iar fiecare spune asta.</li><li>Calculatoarele rulează în browserul tău; nimic din ce introduci nu este trimis sau stocat.</li></ul>"],
-      ["Actualizări și corecturi", "<p>Fiecare pagină arată când a fost actualizată ultima dată. Revizuim paginile atunci când se schimbă o sursă. Dacă găsești o greșeală, scrie-ne la <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; o verificăm în raport cu sursa, corectăm erorile confirmate și actualizăm data de pe pagină.</p>"]
+      [
+        "Cine scrie conținutul",
+        "<p>Pofu este creat de Ali Gürkan Sevilmiş, dezvoltator independent. Ghidurile, calculatoarele și paginile de alimente de pe acest site sunt scrise și întreținute de el, pe baza surselor publicate enumerate mai jos.</p><p>Niciun dietetician sau medic nu a revizuit încă acest conținut. Spunem asta deschis, în loc să afișăm o insignă de revizuire pentru o revizuire care nu a avut loc. Dacă ești specialist în nutriție și observi ceva de îmbunătățit, ne-ar face plăcere să ne scrii.</p>"
+      ],
+      [
+        "De unde provin valorile alimentelor",
+        "<p>Caloriile, proteinele, carbohidrații și grăsimile de pe paginile de alimente provin din baze de date publice de compoziție a alimentelor și din baza de date de alimente din aplicația Pofu:</p><ul><li><a href=\"https://fdc.nal.usda.gov/\">USDA FoodData Central</a> (Departamentul Agriculturii al Statelor Unite)</li><li><a href=\"https://nevo-online.rivm.nl/\">NEVO</a> (RIVM, Țările de Jos)</li><li><a href=\"https://www.livsmedelsverket.se/en/food-and-content/naringsamnen/livsmedelsdatabasen\">Livsmedelsverket food database</a> (Agenția Suedeză pentru Alimente)</li><li><a href=\"https://www.nutridatabaze.cz/\">NutriDatabáze</a> (Cehia)</li><li><a href=\"https://www.alimentinutrizione.it/\">CREA food composition tables</a> (Italia)</li></ul><p>Când o pagină folosește o intrare dintr-o bază de date, trimite către ea. Rețetele de acasă și cele din restaurante diferă, așa că fiecare valoare este o estimare tipică pentru porția afișată, iar fiecare pagină o spune.</p>"
+      ],
+      [
+        "De unde provin formulele",
+        "<p>Calculatoarele folosesc aceleași reguli ca aplicația Pofu, preluate din cercetări publicate: ecuația Mifflin-St Jeor pentru energia de repaus (<a href=\"https://pubmed.ncbi.nlm.nih.gov/2305711/\">Am J Clin Nutr, 1990</a>), intervalele de proteine de la <a href=\"https://pubmed.ncbi.nlm.nih.gov/28642676/\">International Society of Sports Nutrition (2017)</a>, intervalele de grăsimi și carbohidrați de la <a href=\"https://nap.nationalacademies.org/catalog/10490\">US National Academies (2005)</a>, categoriile IMC de la <a href=\"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight\">Organizația Mondială a Sănătății</a> și energia necesară pe kilogram de la <a href=\"https://pubmed.ncbi.nlm.nih.gov/17848938/\">Hall (2008)</a>. Fiecare calculator își enumeră sursele și explică fiecare pas.</p><p>Nu sugerăm niciodată mai puțin de 1.200 kcal pe zi. Calculatoarele te roagă să nu folosești un deficit caloric dacă ești însărcinată sau alăptezi, iar aplicația Pofu nu setează niciun deficit atunci când îi spui acest lucru.</p>"
+      ],
+      [
+        "Cum folosim AI",
+        "<p>Aplicația Pofu folosește AI pentru a estima o masă dintr-o fotografie. Fiecare estimare arată un scor de încredere și poate fi corectată. Pe acest site, instrumentele AI ne ajută să redactăm textele și să le traducem din originalele în engleză și turcă; dezvoltatorul verifică cifrele în raport cu sursele de mai sus. Traducerile nu au fost încă toate revizuite de vorbitori nativi; dacă o frază sună greșit în limba ta, te rugăm să ne spui.</p>"
+      ],
+      [
+        "Ce nu facem",
+        "<ul><li>Nu oferim sfaturi medicale sau diagnostice.</li><li>Pofu nu prezice menstruația sau ovulația și nu urmărește sarcina; funcția opțională legată de ciclu folosește doar o dată pe care o introduci tu.</li><li>Nu promitem rezultate de slăbire și nu afișăm fotografii înainte și după.</li><li>Nu publicăm recenzii sau evaluări false.</li><li>Paginile noastre de comparații sunt scrise de creatorii Pofu, iar fiecare spune asta.</li><li>Calculatoarele rulează în browserul tău; nimic din ce introduci nu este trimis sau stocat.</li></ul>"
+      ],
+      [
+        "Actualizări și corecturi",
+        "<p>Fiecare pagină arată când a fost actualizată ultima dată. Revizuim paginile atunci când se schimbă o sursă. Dacă găsești o greșeală, scrie-ne la <a href=\"mailto:support@getpofu.com\">support@getpofu.com</a>; o verificăm în raport cu sursa, corectăm erorile confirmate și actualizăm data de pe pagină.</p>"
+      ]
     ],
     "nav": "Conținut și surse"
+  },
+  "ui": {
+    "toc": "Pe această pagină",
+    "search": "Caută alimente",
+    "no_match": "Niciun aliment găsit.",
+    "f_all": "Toate",
+    "f_light": "Ușoare",
+    "f_prot": "Bogate în proteine",
+    "f_carb": "Mai ales carbohidrați",
+    "f_fat": "Mai ales grăsimi",
+    "f_mixed": "Mixte"
   }
 }
