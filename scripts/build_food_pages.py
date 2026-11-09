@@ -499,11 +499,7 @@ def build():
             alts.append(("x-default", xd))
             ld = {"@context": "https://schema.org", "@graph": [
                 {"@type": "WebPage", "@id": it["url"], "url": it["url"], "name": title, "description": desc, "inLanguage": code,
-                 "dateModified": TODAY, "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": BASE},
-                 "mainEntity": {"@type": "Recipe", "name": nm, "nutrition": {
-                     "@type": "NutritionInformation", "servingSize": "%s %s" % (it["grams"], unit),
-                     "calories": "%s kcal" % kc, "proteinContent": "%s g" % ("%g" % it["p"]),
-                     "carbohydrateContent": "%s g" % ("%g" % it["c"]), "fatContent": "%s g" % ("%g" % it["fat"])}}},
+                 "dateModified": TODAY, "isPartOf": {"@type": "WebSite", "name": "Pofu", "url": BASE}},
                 crumbs(lc, hubn, hub_url, nm, it["url"])]}
             # related: 4 nearest same group (same category first), then 2 nearest from the other group
             def near(pool, n):
@@ -676,15 +672,13 @@ def check(data, written):
             if os.path.isdir(t): t = os.path.join(t, "index.html")
             if not os.path.exists(t): errs.append("broken link %s -> %s" % (path, ref))
         if it:
-            ld = json.loads(re.search(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', txt, re.S).group(1))
-            nut = ld["@graph"][0]["mainEntity"]["nutrition"]
-            g = float(nut["servingSize"].split()[0])
+            if '"Recipe"' in txt: errs.append("Recipe markup on a page without a recipe: " + path)
+            g = float(it["grams"])
             rows = re.findall(r"<tr><th scope=\"row\">[^<]*</th><td>([^<]*)</td><td>([^<]*)</td></tr>", txt)
             vals = [(float(a.split()[0].replace(",", ".")), float(b.split()[0].replace(",", "."))) for a, b in rows]
             src = [it["kcal"], it["p"], it["c"], it["fat"]]
             for (s, p100), raw, tol in zip(vals, src, (0.51, 0.06, 0.06, 0.06)):
                 if abs(s - raw) > 1e-9 or abs(p100 - raw / g * 100) > tol: errs.append("math %s: %s %s %s g=%s" % (path, s, p100, raw, g))
-            if nut["calories"] != "%s kcal" % it["kcal"]: errs.append("ld kcal mismatch " + path)
     for code, items in data.items():  # unique slugs + hub links every page
         slugs = [i["slug"] for i in items]
         if len(slugs) != len(set(slugs)): errs.append("dup slugs " + code)
