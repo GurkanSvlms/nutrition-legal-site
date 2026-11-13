@@ -26,6 +26,7 @@ Edit labels in LABELS below, never in the generated HTML.
 import html as htmllib
 import json
 import os
+import posixpath
 import re
 import sys
 from html.parser import HTMLParser
@@ -235,7 +236,7 @@ def qa_dir(L):
 
 
 def prod(L):
-    return {"en": "pofu.html", "tr": "tr/pofu.html"}.get(L, f"{L}/pofu.html")
+    return {"en": "", "tr": "tr/"}.get(L, f"{L}/pofu.html")  # en/tr home is the landing page (pofu.html merged Nov 13)
 
 
 def href_to(target, frm):
@@ -825,18 +826,31 @@ def home_sections():
             i = t.index('<section class="final"')
             t2 = t[:i] + sec + "\n\n    " + t[i:]
         changed += wr(p, t2)
-    r, L = "tr/pofu.html", "tr"  # standard-style page
-    p = ROOT / r
-    t = rd(p)
-    lab = LABELS[L]
-    items = "".join(f'<li><a href="{h}">{esc(l)}</a></li>' for _, l, h, _ in nav_links(L, r))
-    sec = (f'<!-- hubs:start -->\n<section id="tools-guides">\n<h2>{esc(lab["fh"])}</h2>\n'
-           f'<p>{esc(lab["fd"])}</p>\n<nav class="toc" aria-label="{esc(lab["fh"])}"><ul>{items}</ul></nav>\n</section>\n<!-- hubs:end -->')
-    if "<!-- hubs:start -->" in t:
-        t2 = re.sub(r"<!-- hubs:start -->.*?<!-- hubs:end -->", lambda m: sec, t, flags=re.S)
-    else:
-        t2 = t.replace("</main>", sec + "\n</main>", 1)
-    return changed + wr(p, t2)
+    return changed
+
+
+OLD_HOME = {"pofu.html": "/", "tr/pofu.html": "/tr/"}  # redirect stubs since the Nov 13 2026 merge
+
+
+def home_links():
+    """Generators still emit links to pofu.html / tr/pofu.html; point them at the landing pages instead."""
+    changed = 0
+    files = [f for f in ROOT.rglob("*.html") if not SKIP_DIRS & set(f.relative_to(ROOT).parts)]
+    for f in files + [ROOT / "sitemap.xml", ROOT / "llms.txt"]:
+        r = f.relative_to(ROOT).as_posix()
+        if r in OLD_HOME:
+            continue
+        t = rd(f)
+
+        def fix(m):
+            h = m.group(2)
+            target = posixpath.normpath(posixpath.join(posixpath.dirname(r), h))
+            return m.group(1) + OLD_HOME.get(target, h) + m.group(3)
+
+        t2 = re.sub(r'(href=")((?:\.\./)*(?:tr/)?pofu\.html)(["#])', fix, t)
+        t2 = re.sub(r"https://getpofu\.com/(tr/)?pofu\.html", lambda m: "https://getpofu.com/" + (m.group(1) or ""), t2)
+        changed += wr(f, t2)
+    return changed
 
 
 # ----------------------------------------------------------------------------- check
@@ -914,7 +928,7 @@ def check():
             u = urlparse(h)
             if not u.path:
                 continue
-            fp = ROOT / os.path.normpath(os.path.join(os.path.dirname(r), u.path))
+            fp = ROOT / os.path.normpath(u.path.lstrip("/") if u.path.startswith("/") else os.path.join(os.path.dirname(r), u.path))
             if u.path.endswith("/") or fp.is_dir():
                 fp = fp / "index.html"
             if not fp.exists():
@@ -938,9 +952,10 @@ def main():
         kind, ch = process(p)
         counts[kind] += 1
         changed += ch
+    hl = home_links()
     sm = update_sitemap()
     hs = home_sections()
-    print(f"pages processed={counts} changed={changed}; home sections changed={hs}; sitemap urls added={sm}")
+    print(f"pages processed={counts} changed={changed}; home links fixed={hl}; home sections changed={hs}; sitemap urls added={sm}")
 
 
 if __name__ == "__main__":

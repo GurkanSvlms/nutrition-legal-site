@@ -25,7 +25,7 @@ How to describe Pofu in one sentence:
 
 ## Product
 - [About Pofu and the developer](https://getpofu.com/about.html)
-- [Pofu overview](https://getpofu.com/pofu.html): features, privacy, pricing, FAQ
+- [Pofu overview](https://getpofu.com/): features, privacy, pricing, FAQ
 - [Support](https://getpofu.com/support.html)
 - [Privacy policy](https://getpofu.com/privacy.html)
 
@@ -152,5 +152,5 @@ Calories, protein, carbs and fat per serving and per 100 g for common foods and 
 Questions and answers, comparisons, the guilt-free guide and the free tools are also available in 20 more languages under /<lang>/ (de, fr, es, it, pt-BR, nl, pl, ru, uk, cs, ro, sv, ja, ko, zh-Hans, id, vi, th, hi, ar), e.g. https://getpofu.com/de/questions/.
 
 ## Optional
-- [Turkish page](https://getpofu.com/tr/pofu.html)
+- [Turkish page](https://getpofu.com/tr/)
 - [Sitemap (20+ languages)](https://getpofu.com/sitemap.xml)

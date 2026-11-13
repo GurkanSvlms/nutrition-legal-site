@@ -73,6 +73,26 @@
     <lastmod>2026-11-07</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://getpofu.com/it/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://getpofu.com/id/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
@@ -846,8 +866,8 @@
   <url>
     <loc>https://getpofu.com/ar/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -868,7 +888,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/ar/questions/</loc>
@@ -6309,8 +6329,8 @@
   <url>
     <loc>https://getpofu.com/cs/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -6331,7 +6351,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/cs/questions/</loc>
@@ -8938,8 +8958,8 @@
   <url>
     <loc>https://getpofu.com/de/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -8960,7 +8980,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/de/questions/</loc>
@@ -11575,8 +11595,8 @@
   <url>
     <loc>https://getpofu.com/es/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -11597,7 +11617,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/es/questions/</loc>
@@ -14186,8 +14206,8 @@
   <url>
     <loc>https://getpofu.com/fr/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -14208,7 +14228,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/fr/questions/</loc>
@@ -16886,8 +16906,8 @@
   <url>
     <loc>https://getpofu.com/hi/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -16908,7 +16928,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/hi/questions/</loc>
@@ -19589,8 +19609,8 @@
   <url>
     <loc>https://getpofu.com/id/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -19611,7 +19631,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/id/questions/</loc>
@@ -22257,8 +22277,8 @@
   <url>
     <loc>https://getpofu.com/it/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -22279,7 +22299,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/it/questions/</loc>
@@ -24914,8 +24934,8 @@
   <url>
     <loc>https://getpofu.com/ja/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -24936,7 +24956,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/ja/questions/</loc>
@@ -29090,8 +29110,8 @@
   <url>
     <loc>https://getpofu.com/ko/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -29112,7 +29132,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/ko/questions/</loc>
@@ -31778,8 +31798,8 @@
   <url>
     <loc>https://getpofu.com/nl/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -31800,7 +31820,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/nl/questions/</loc>
@@ -34509,8 +34529,8 @@
   <url>
     <loc>https://getpofu.com/pl/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -34531,7 +34551,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/pl/questions/</loc>
@@ -35369,33 +35389,6 @@
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu-vs-yazio.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu-vs-yazio.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu-vs-yazio.html"/>
-  </url>
-  <url>
-    <loc>https://getpofu.com/pofu.html</loc>
-    <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://getpofu.com/it/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://getpofu.com/id/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
   </url>
   <url>
     <loc>https://getpofu.com/pt-BR/best-calorie-counter-for-women.html</loc>
@@ -37357,8 +37350,8 @@
   <url>
     <loc>https://getpofu.com/pt-BR/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -37379,7 +37372,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/pt-BR/questions/</loc>
@@ -40686,8 +40679,8 @@
   <url>
     <loc>https://getpofu.com/ro/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -40708,7 +40701,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/ro/questions/</loc>
@@ -43392,8 +43385,8 @@
   <url>
     <loc>https://getpofu.com/ru/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -43414,7 +43407,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/ru/questions/</loc>
@@ -46646,8 +46639,8 @@
   <url>
     <loc>https://getpofu.com/sv/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -46668,7 +46661,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/sv/questions/</loc>
@@ -49247,8 +49240,8 @@
   <url>
     <loc>https://getpofu.com/th/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -49269,7 +49262,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/th/questions/</loc>
@@ -49897,6 +49890,26 @@
     <lastmod>2026-11-07</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://getpofu.com/it/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://getpofu.com/id/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
@@ -50168,33 +50181,6 @@
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu-vs-yazio.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu-vs-yazio.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu-vs-yazio.html"/>
-  </url>
-  <url>
-    <loc>https://getpofu.com/tr/pofu.html</loc>
-    <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://getpofu.com/it/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://getpofu.com/pt-BR/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://getpofu.com/nl/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://getpofu.com/pl/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://getpofu.com/ru/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://getpofu.com/uk/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://getpofu.com/cs/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://getpofu.com/ro/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://getpofu.com/sv/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://getpofu.com/ja/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://getpofu.com/ko/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://getpofu.com/zh-Hans/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://getpofu.com/id/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://getpofu.com/vi/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
   </url>
   <url>
     <loc>https://getpofu.com/uk/best-calorie-counter-for-women.html</loc>
@@ -52295,8 +52281,8 @@
   <url>
     <loc>https://getpofu.com/uk/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -52317,7 +52303,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/uk/questions/</loc>
@@ -54969,8 +54955,8 @@
   <url>
     <loc>https://getpofu.com/vi/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -54991,7 +54977,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/vi/questions/</loc>
@@ -57635,8 +57621,8 @@
   <url>
     <loc>https://getpofu.com/zh-Hans/pofu.html</loc>
     <lastmod>2026-11-07</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://getpofu.com/de/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://getpofu.com/fr/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://getpofu.com/es/pofu.html"/>
@@ -57657,7 +57643,7 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://getpofu.com/th/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://getpofu.com/hi/pofu.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://getpofu.com/ar/pofu.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/pofu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
   </url>
   <url>
     <loc>https://getpofu.com/zh-Hans/questions/</loc>
