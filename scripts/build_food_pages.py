@@ -305,6 +305,23 @@ def inline_name(code, name):
 def e(s): return html.escape(s, quote=True)
 
 
+CTR = json.load(open(os.path.join(SITE, "data/foods/ctr_snippets.json"), encoding="utf-8"))
+
+
+def serp(code, title, desc, n, k, s, k100, u, p, c, f):
+    """CTR-oriented <title> (<=60) and description (<=155): kcal per serving and per 100 g up front.
+    First pattern that fits wins; falls back to the old strings if none does."""
+    t = CTR.get(code)
+    if not t: return title, desc
+    kw = dict(n=n, ni=inline_name(code, n), k=k, s=s, k100=k100, u=u, p=p, c=c, f=f)
+    tt = [t[i] for i in ("t1", "t2", "t3")]
+    if str(k) == str(k100):  # 100 g serving: "(240 per 100 g)" would just repeat the number
+        tt = [re.sub(r"\s*[(（][^()（）]*\{k100\}[^()（）]*[)）]", "", x) for x in tt]
+    ti = next((x for x in (y.format(**kw) for y in tt) if len(x) <= 60), title)
+    de = next((x for x in (t[i].format(**kw) for i in ("d1", "d2", "d3")) if len(x) <= 155), desc)
+    return ti, de
+
+
 def trust(code):
     """Extra food-page strings (portions, calorie split, FAQ, video) from data/trust/<lang>.json."""
     return json.load(open(os.path.join(SITE, "data/trust/%s.json" % code), encoding="utf-8"))["food"]
@@ -492,7 +509,7 @@ def build():
             kc, pr, ca, fa = it["kcal"], fnum(it["p"], code), fnum(it["c"], code), fnum(it["fat"], code)
             tail = (unit, p100["kcal"]) if lc.get("swap100") else (p100["kcal"], unit)
             ans = lc["answer"] % ((e(nm), kc, e(lf), pr, ca, fa) + tail)
-            desc = lc["desc"] % (nm, kc, lf, pr, ca, fa)
+            title, desc = serp(code, title, lc["desc"] % (nm, kc, lf, pr, ca, fa), nm, kc, lf, p100["kcal"], unit, pr, ca, fa)
             alts = [(l, u) for l, u in groups[it["base"]].items()]
             alts = [(LANGS[l]["code"], u) for l, u in alts]
             g = groups[it["base"]]; xd = g.get("en") or g[sorted(g)[0]]  # same x-default on every page of a group

@@ -1,0 +1,179 @@
+{
+ "_doc": "SERP title/description patterns for food pages (build_food_pages.py). t1..t3 titles (<=60 chars, first that fits wins), d1..d3 descriptions (<=155). Placeholders: {n} name {k} kcal/serving {s} serving label {k100} kcal/100 {u} unit {p} protein {c} carbs {f} fat.",
+ "en": {
+  "t1": "Calories in {n}: {k} kcal ({s})",
+  "t2": "Calories in {n}: {k} kcal ({k100} per 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: about {k} kcal ({s}), or {k100} kcal per 100 {u}. {p} g protein, {c} g carbs, {f} g fat. Scan your plate with Pofu to log it.",
+  "d2": "{n}: about {k} kcal ({s}), or {k100} kcal per 100 {u}. {p} g protein, {c} g carbs, {f} g fat.",
+  "d3": "{n}: about {k} kcal per serving, {k100} kcal per 100 {u}."
+ },
+ "tr": {
+  "t1": "{n} kaç kalori? {s}: {k} kcal (100 {u}: {k100})",
+  "t2": "{n} kaç kalori? {k} kcal (100 {u}: {k100})",
+  "t3": "{n}: {k} kcal (100 {u}: {k100})",
+  "d1": "{n}: {s} yaklaşık {k} kcal, 100 {u} için {k100} kcal. {p} g protein, {c} g karbonhidrat, {f} g yağ. Pofu ile fotoğraftan say.",
+  "d2": "{n}: {s} yaklaşık {k} kcal, 100 {u} için {k100} kcal. {p} g protein, {c} g karbonhidrat, {f} g yağ.",
+  "d3": "{n}: porsiyonu {k} kcal, 100 {u} için {k100} kcal."
+ },
+ "de": {
+  "t1": "{n} Kalorien: {k} kcal ({s})",
+  "t2": "{n} Kalorien: {k} kcal ({k100} pro 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: etwa {k} kcal ({s}), {k100} kcal pro 100 {u}. {p} g Eiweiß, {c} g Kohlenhydrate, {f} g Fett. Mit Pofu per Foto loggen.",
+  "d2": "{n}: etwa {k} kcal ({s}), {k100} kcal pro 100 {u}. {p} g Eiweiß, {c} g Kohlenhydrate, {f} g Fett.",
+  "d3": "{n}: etwa {k} kcal pro Portion, {k100} kcal pro 100 {u}."
+ },
+ "fr": {
+  "t1": "Calories {n} : {k} kcal ({s})",
+  "t2": "Calories {n} : {k} kcal ({k100} pour 100 {u})",
+  "t3": "Calories {n} : {k} kcal ({k100}/100 {u})",
+  "d1": "Calories {n} : environ {k} kcal ({s}), {k100} kcal/100 {u}. Protéines {p} g, glucides {c} g, lipides {f} g. Photographiez-le avec Pofu.",
+  "d2": "{n} : environ {k} kcal ({s}), soit {k100} kcal pour 100 {u}. {p} g de protéines, {c} g de glucides, {f} g de lipides.",
+  "d3": "{n} : environ {k} kcal par portion, {k100} kcal pour 100 {u}."
+ },
+ "es": {
+  "t1": "Calorías de {ni}: {k} kcal ({s})",
+  "t2": "Calorías de {ni}: {k} kcal ({k100} por 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: aprox. {k} kcal ({s}), {k100} kcal por 100 {u}. {p} g de proteína, {c} g de carbohidratos, {f} g de grasa. Regístralo con una foto en Pofu.",
+  "d2": "{n}: aprox. {k} kcal ({s}), {k100} kcal por 100 {u}. {p} g de proteína, {c} g de carbohidratos, {f} g de grasa.",
+  "d3": "{n}: aprox. {k} kcal por porción, {k100} kcal por 100 {u}."
+ },
+ "pt-BR": {
+  "t1": "Calorias de {ni}: {k} kcal ({s})",
+  "t2": "Calorias de {ni}: {k} kcal ({k100} por 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: cerca de {k} kcal ({s}), {k100} kcal por 100 {u}. {p} g de proteína, {c} g de carboidratos, {f} g de gordura. Registre com uma foto no Pofu.",
+  "d2": "{n}: cerca de {k} kcal ({s}), {k100} kcal por 100 {u}. {p} g de proteína, {c} g de carboidratos, {f} g de gordura.",
+  "d3": "{n}: cerca de {k} kcal por porção, {k100} kcal por 100 {u}."
+ },
+ "ar": {
+  "t1": "سعرات {n}: {k} kcal ({s})",
+  "t2": "سعرات {n}: {k} kcal ({k100} لكل 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: حوالي {k} kcal ({s})، أي {k100} kcal لكل 100 {u}. {p} غ بروتين، {c} غ كربوهيدرات، {f} غ دهون. سجّله بصورة في Pofu.",
+  "d2": "{n}: حوالي {k} kcal ({s})، أي {k100} kcal لكل 100 {u}. {p} غ بروتين، {c} غ كربوهيدرات، {f} غ دهون.",
+  "d3": "{n}: حوالي {k} kcal للحصة، {k100} kcal لكل 100 {u}."
+ },
+ "cs": {
+  "t1": "Kalorie {n}: {k} kcal ({s})",
+  "t2": "Kalorie {n}: {k} kcal ({k100} na 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: asi {k} kcal ({s}), tedy {k100} kcal na 100 {u}. {p} g bílkovin, {c} g sacharidů, {f} g tuku. Zapište si to fotkou v Pofu.",
+  "d2": "{n}: asi {k} kcal ({s}), tedy {k100} kcal na 100 {u}. {p} g bílkovin, {c} g sacharidů, {f} g tuku.",
+  "d3": "{n}: asi {k} kcal na porci, {k100} kcal na 100 {u}."
+ },
+ "hi": {
+  "t1": "{n} में कैलोरी: {k} kcal ({s})",
+  "t2": "{n} में कैलोरी: {k} kcal ({k100} प्रति 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: प्रति {s} लगभग {k} kcal, यानी प्रति 100 {u} {k100} kcal। {p} g प्रोटीन, {c} g कार्ब्स, {f} g फैट। Pofu में फ़ोटो से लॉग करें।",
+  "d2": "{n}: प्रति {s} लगभग {k} kcal, यानी प्रति 100 {u} {k100} kcal। {p} g प्रोटीन, {c} g कार्ब्स, {f} g फैट।",
+  "d3": "{n}: प्रति सर्विंग लगभग {k} kcal, प्रति 100 {u} {k100} kcal।"
+ },
+ "id": {
+  "t1": "Kalori {n}: {k} kkal ({s})",
+  "t2": "Kalori {n}: {k} kkal ({k100} per 100 {u})",
+  "t3": "{n}: {k} kkal ({k100}/100 {u})",
+  "d1": "{n}: sekitar {k} kkal ({s}), atau {k100} kkal per 100 {u}. {p} g protein, {c} g karbohidrat, {f} g lemak. Catat lewat foto di Pofu.",
+  "d2": "{n}: sekitar {k} kkal ({s}), atau {k100} kkal per 100 {u}. {p} g protein, {c} g karbohidrat, {f} g lemak.",
+  "d3": "{n}: sekitar {k} kkal per porsi, {k100} kkal per 100 {u}."
+ },
+ "it": {
+  "t1": "Calorie {n}: {k} kcal ({s})",
+  "t2": "Calorie {n}: {k} kcal ({k100} per 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: circa {k} kcal ({s}), cioè {k100} kcal per 100 {u}. {p} g di proteine, {c} g di carboidrati, {f} g di grassi. Registralo con una foto in Pofu.",
+  "d2": "{n}: circa {k} kcal ({s}), cioè {k100} kcal per 100 {u}. {p} g di proteine, {c} g di carboidrati, {f} g di grassi.",
+  "d3": "{n}: circa {k} kcal a porzione, {k100} kcal per 100 {u}."
+ },
+ "ja": {
+  "t1": "{n}のカロリー：{s}で{k} kcal（100 {u}あたり{k100}）",
+  "t2": "{n}のカロリー：{k} kcal（100 {u}あたり{k100}）",
+  "t3": "{n}：{k} kcal（100 {u}で{k100}）",
+  "d1": "{n}：{s}で約{k} kcal、100 {u}あたり{k100} kcal。たんぱく質{p} g、炭水化物{c} g、脂質{f} g。Pofuで写真から記録できます。",
+  "d2": "{n}：{s}で約{k} kcal、100 {u}あたり{k100} kcal。たんぱく質{p} g、炭水化物{c} g、脂質{f} g。",
+  "d3": "{n}：1食約{k} kcal、100 {u}あたり{k100} kcal。"
+ },
+ "ko": {
+  "t1": "{n} 칼로리: {s} {k} kcal (100 {u}당 {k100})",
+  "t2": "{n} 칼로리: {k} kcal (100 {u}당 {k100})",
+  "t3": "{n}: {k} kcal (100 {u}당 {k100})",
+  "d1": "{n}: {s} 기준 약 {k} kcal, 100 {u}당 {k100} kcal. 단백질 {p} g, 탄수화물 {c} g, 지방 {f} g. Pofu로 사진을 찍어 기록하세요.",
+  "d2": "{n}: {s} 기준 약 {k} kcal, 100 {u}당 {k100} kcal. 단백질 {p} g, 탄수화물 {c} g, 지방 {f} g.",
+  "d3": "{n}: 1회 약 {k} kcal, 100 {u}당 {k100} kcal."
+ },
+ "nl": {
+  "t1": "Calorieën in {n}: {k} kcal ({s})",
+  "t2": "Calorieën in {n}: {k} kcal ({k100} per 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: ongeveer {k} kcal ({s}), oftewel {k100} kcal per 100 {u}. {p} g eiwit, {c} g koolhydraten, {f} g vet. Log het met een foto in Pofu.",
+  "d2": "{n}: ongeveer {k} kcal ({s}), oftewel {k100} kcal per 100 {u}. {p} g eiwit, {c} g koolhydraten, {f} g vet.",
+  "d3": "{n}: ongeveer {k} kcal per portie, {k100} kcal per 100 {u}."
+ },
+ "pl": {
+  "t1": "Kalorie – {n}: {k} kcal ({s})",
+  "t2": "Kalorie – {n}: {k} kcal ({k100} na 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: ok. {k} kcal ({s}), czyli {k100} kcal na 100 {u}. {p} g białka, {c} g węglowodanów, {f} g tłuszczu. Zapisz to zdjęciem w Pofu.",
+  "d2": "{n}: ok. {k} kcal ({s}), czyli {k100} kcal na 100 {u}. {p} g białka, {c} g węglowodanów, {f} g tłuszczu.",
+  "d3": "{n}: ok. {k} kcal w porcji, {k100} kcal na 100 {u}."
+ },
+ "ro": {
+  "t1": "Calorii {n}: {k} kcal ({s})",
+  "t2": "Calorii {n}: {k} kcal ({k100} la 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: aprox. {k} kcal ({s}), adică {k100} kcal la 100 {u}. {p} g proteine, {c} g carbohidrați, {f} g grăsimi. Înregistrează cu o poză în Pofu.",
+  "d2": "{n}: aprox. {k} kcal ({s}), adică {k100} kcal la 100 {u}. {p} g proteine, {c} g carbohidrați, {f} g grăsimi.",
+  "d3": "{n}: aprox. {k} kcal per porție, {k100} kcal la 100 {u}."
+ },
+ "ru": {
+  "t1": "Калории: {n} — {k} ккал ({s})",
+  "t2": "Калории: {n} — {k} ккал ({k100} на 100 {u})",
+  "t3": "{n}: {k} ккал ({k100}/100 {u})",
+  "d1": "{n}: около {k} ккал ({s}), или {k100} ккал на 100 {u}. Белки {p} г, углеводы {c} г, жиры {f} г. Записывайте по фото в Pofu.",
+  "d2": "{n}: около {k} ккал ({s}), или {k100} ккал на 100 {u}. Белки {p} г, углеводы {c} г, жиры {f} г.",
+  "d3": "{n}: около {k} ккал на порцию, {k100} ккал на 100 {u}."
+ },
+ "sv": {
+  "t1": "Kalorier i {n}: {k} kcal ({s})",
+  "t2": "Kalorier i {n}: {k} kcal ({k100} per 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: cirka {k} kcal ({s}), alltså {k100} kcal per 100 {u}. {p} g protein, {c} g kolhydrater, {f} g fett. Logga med ett foto i Pofu.",
+  "d2": "{n}: cirka {k} kcal ({s}), alltså {k100} kcal per 100 {u}. {p} g protein, {c} g kolhydrater, {f} g fett.",
+  "d3": "{n}: cirka {k} kcal per portion, {k100} kcal per 100 {u}."
+ },
+ "th": {
+  "t1": "แคลอรี่ {n}: {k} kcal ({s})",
+  "t2": "แคลอรี่ {n}: {k} kcal ({k100} ต่อ 100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: ประมาณ {k} kcal ({s}) หรือ {k100} kcal ต่อ 100 {u} โปรตีน {p} g คาร์โบไฮเดรต {c} g ไขมัน {f} g บันทึกด้วยการถ่ายรูปใน Pofu",
+  "d2": "{n}: ประมาณ {k} kcal ({s}) หรือ {k100} kcal ต่อ 100 {u} โปรตีน {p} g คาร์โบไฮเดรต {c} g ไขมัน {f} g",
+  "d3": "{n}: ประมาณ {k} kcal ต่อเสิร์ฟ, {k100} kcal ต่อ 100 {u}"
+ },
+ "uk": {
+  "t1": "Калорії: {n} — {k} ккал ({s})",
+  "t2": "Калорії: {n} — {k} ккал ({k100} на 100 {u})",
+  "t3": "{n}: {k} ккал ({k100}/100 {u})",
+  "d1": "{n}: близько {k} ккал ({s}), або {k100} ккал на 100 {u}. Білки {p} г, вуглеводи {c} г, жири {f} г. Записуйте за фото в Pofu.",
+  "d2": "{n}: близько {k} ккал ({s}), або {k100} ккал на 100 {u}. Білки {p} г, вуглеводи {c} г, жири {f} г.",
+  "d3": "{n}: близько {k} ккал на порцію, {k100} ккал на 100 {u}."
+ },
+ "vi": {
+  "t1": "Calo trong {n}: {k} kcal ({s})",
+  "t2": "Calo trong {n}: {k} kcal ({k100}/100 {u})",
+  "t3": "{n}: {k} kcal ({k100}/100 {u})",
+  "d1": "{n}: khoảng {k} kcal ({s}), tức {k100} kcal mỗi 100 {u}. {p} g protein, {c} g carbohydrate, {f} g chất béo. Ghi lại bằng ảnh trong Pofu.",
+  "d2": "{n}: khoảng {k} kcal ({s}), tức {k100} kcal mỗi 100 {u}. {p} g protein, {c} g carbohydrate, {f} g chất béo.",
+  "d3": "{n}: khoảng {k} kcal mỗi khẩu phần, {k100} kcal mỗi 100 {u}."
+ },
+ "zh-Hans": {
+  "t1": "{n}热量：{s} {k} kcal（每100 {u} {k100} kcal）",
+  "t2": "{n}热量：{k} kcal（每100 {u} {k100} kcal）",
+  "t3": "{n}：{k} kcal（每100 {u} {k100}）",
+  "d1": "{n}：{s}约 {k} kcal，每100 {u}约 {k100} kcal。蛋白质{p} g，碳水{c} g，脂肪{f} g。用 Pofu 拍照记录。",
+  "d2": "{n}：{s}约 {k} kcal，每100 {u}约 {k100} kcal。蛋白质{p} g，碳水{c} g，脂肪{f} g。",
+  "d3": "{n}：每份 {k} kcal，每100 {u} {k100} kcal。"
+ }
+}
