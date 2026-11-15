@@ -266,7 +266,7 @@ def classify(L, r):
     base = os.path.basename(r)
     if base in NON_CONTENT or base.startswith("google"):
         return None
-    if base.startswith("pofu-vs-"):
+    if base.startswith("pofu-vs-") or "-alternatives" in base:
         return "compare"
     if base in TOOL_NAMES or base.endswith(("calculator.html", "hesaplama.html")):
         return "tools"

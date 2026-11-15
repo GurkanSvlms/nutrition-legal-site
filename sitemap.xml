@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://getpofu.com/googleebb85b79f2b7d799.html</loc>
-    <lastmod>2026-11-02</lastmod>
-  </url>
-  <url>
-    <loc>https://getpofu.com/index.html</loc>
-    <lastmod>2026-11-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
-  </url>
-  <url>
     <loc>https://getpofu.com/privacy.html</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/privacy.html"/>
@@ -30,13 +19,6 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/terms.html"/>
   </url>
   <url>
-    <loc>https://getpofu.com/tr/index.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/"/>
-  </url>
-  <url>
     <loc>https://getpofu.com/tr/privacy.html</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/privacy.html"/>
@@ -53,20 +35,6 @@
     <lastmod>2026-07-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/terms.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/tr/terms.html"/>
-  </url>
-  <url>
-    <loc>https://getpofu.com/questions/index.html</loc>
-    <lastmod>2026-11-06</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/questions/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/sorular/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/questions/"/>
-  </url>
-  <url>
-    <loc>https://getpofu.com/sorular/index.html</loc>
-    <lastmod>2026-11-06</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getpofu.com/questions/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://getpofu.com/sorular/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpofu.com/questions/"/>
   </url>
   <url>
     <loc>https://getpofu.com/</loc>
