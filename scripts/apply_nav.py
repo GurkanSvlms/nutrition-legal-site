@@ -23,6 +23,7 @@ Skipped: google*.html, non-pages, landing pages without the standard header (ind
 get/index.html get only the home section / nothing). Legal pages (privacy/terms/support) get only the footer block.
 Edit labels in LABELS below, never in the generated HTML.
 """
+import noindex_unsupported
 import html as htmllib
 import json
 import os
@@ -765,8 +766,8 @@ def build_hub(L, kind):
     t = re.sub(r"((?:&amp;|\?)ct=)[A-Za-z0-9_-]+",
                lambda m: m.group(1) + "web_" + ("" if L == "en" else L.lower().replace("-", "") + "_") + "hub_" + kind, t)
     if L == "tr":  # root-level Turkish template points its brand/legal "Pofu" link at the English page
-        t = t.replace('<a class="brand" href="pofu.html"', '<a class="brand" href="tr/pofu.html"')
-        t = t.replace('<nav aria-label="Yasal bilgiler ve destek">\n<a href="pofu.html">', '<nav aria-label="Yasal bilgiler ve destek">\n<a href="tr/pofu.html">')
+        t = re.sub(r'<a class="brand" href="(?:pofu\.html|/)"', '<a class="brand" href="/tr/"', t)
+        t = re.sub(r'(<nav aria-label="Yasal bilgiler ve destek">\n<a href=")(?:pofu\.html|/)"', r'\1/tr/"', t)
     # strip the template's injected nav pieces; process() adds fresh ones for this page
     t = re.sub(r"<!-- nav:start -->.*?<!-- nav:end -->\n?", "", t, flags=re.S)
     t = re.sub(r"\n?<!-- footnav:start -->.*?<!-- footnav:end -->", "", t, flags=re.S)
@@ -946,6 +947,7 @@ def main():
     if "--no-hubs" not in sys.argv:
         made, kept = make_hubs()
         print(f"hubs written={made} kept(hand-edited)={kept}")
+    noindex_unsupported.main()  # before pages: footer language switchers are built from the cleaned hreflang
     counts = {"standard": 0, "legal": 0, "skipped": 0}
     changed = 0
     for p in pages():
