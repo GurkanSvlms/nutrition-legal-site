@@ -33,6 +33,7 @@ ADDING A LANGUAGE LATER
      and set "data_file": True in the LANGS entry.
 """
 import html, json, os, re, sys, unicodedata
+from urllib.parse import quote
 from math import log
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,6 +52,12 @@ Ayran|Türk Kahvesi (sade)|Çay (şekersiz)|Kokoreç|İçli Köfte|Kazandibi|Aş
 
 TR_PROPER = {"Adana", "Urfa", "Türk", "İskender", "Rus", "Antep"}
 EN_KEEP = {"Caesar", "English", "Greek", "Thai", "French", "Spanish", "Lorraine", "Niçoise", "Cheddar"}
+
+USDA_CHECK = {"en": "Compare with USDA FoodData Central", "tr": "USDA FoodData Central ile karşılaştır",
+              "de": "Mit USDA FoodData Central vergleichen", "fr": "Comparer avec USDA FoodData Central",
+              "es": "Comparar con USDA FoodData Central", "pt-BR": "Comparar com o USDA FoodData Central",
+              "ko": "USDA FoodData Central과 비교하기", "ru": "Сравнить с USDA FoodData Central",
+              "vi": "So sánh với USDA FoodData Central"}
 
 NAV_NAMES = {"en": "English", "tr": "Türkçe", "de": "Deutsch", "fr": "Français", "es": "Español", "pt-BR": "Português (BR)"}
 
@@ -532,6 +539,9 @@ def build():
             trs = "".join("<tr><th scope=\"row\">%s</th><td>%s</td><td>%s</td></tr>\n" % c for c in cells)
             src = ""
             if it.get("source"): src = ' <a href="%s" rel="nofollow noopener">%s</a>.' % (e(it["source"]), lc["src_link"])
+            elif it["group"] == "staple":  # generic staples: let readers cross-check against USDA (not our source)
+                src = ' <a href="https://fdc.nal.usda.gov/food-search?query=%s" rel="nofollow noopener">%s</a>.' % (
+                    quote(it["base"]), USDA_CHECK.get(code, USDA_CHECK["en"]))
             sh = shares(it) if kc > 10 else None
             ring = ""
             if sh:
