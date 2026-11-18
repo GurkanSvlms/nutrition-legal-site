@@ -29,6 +29,12 @@ def hidden(url_path):
     return url_path.startswith(PREFIXES) or url_path in THIN
 
 
+def noindexed_file(url_path):
+    """True when the page file itself carries a noindex robots meta (any page, not just the folders above)."""
+    f = ROOT / (url_path + "index.html" if url_path.endswith("/") or not url_path else url_path)
+    return f.is_file() and re.search(r'<meta name="robots" content="[^"]*noindex', f.read_text(encoding="utf-8")) is not None
+
+
 def alt_re(tag):
     # one alternate tag (html <link> or sitemap <xhtml:link>) whose href is a hidden page, with its leading whitespace
     return re.compile(r'\n?[ \t]*<' + tag + r' rel="alternate" hreflang="[^"]+" href="' + re.escape(SITE)
@@ -55,7 +61,7 @@ def main():
     sm = ROOT / "sitemap.xml"
     s = sm.read_text(encoding="utf-8")
     urls = re.findall(r"[ \t]*<url>.*?</url>\n", s, flags=re.S)
-    keep = [u for u in urls if not hidden(re.search(r"<loc>" + re.escape(SITE) + r"([^<]*)</loc>", u).group(1))]
+    keep = [u for u in urls if not (lambda q: hidden(q) or noindexed_file(q))(re.search(r"<loc>" + re.escape(SITE) + r"([^<]*)</loc>", u).group(1))]
     s2 = s.replace("".join(urls), "".join(xlink_re.sub("", u) for u in keep)) if "".join(urls) in s else None
     assert s2 is not None, "sitemap <url> blocks are not contiguous; refusing to rewrite"
     if s2 != s:
