@@ -37,7 +37,7 @@ from urllib.parse import urljoin, urlparse
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://getpofu.com/"
 TODAY = "2026-11-06"
-SKIN_V = "20261112"  # bump when assets/site.css changes (cache)
+SKIN_V = "20261118"  # bump when assets/site.css changes (cache)
 
 OTHER = ["de", "fr", "es", "it", "pt-BR", "nl", "pl", "ru", "uk", "cs", "ro", "sv", "ja", "ko",
          "zh-Hans", "id", "vi", "th", "hi", "ar"]
@@ -521,9 +521,8 @@ def toc_block(L, r, text):
 
 
 # ----------------------------------------------------------------------------- app promo (every content page)
-# Strings: data/promo/<lang>.json. Four slots, each between its own markers so re-runs replace them:
-#   promo:strip (under the header), promo:card (after the hero), promo:panel (middle of <main>),
-#   promo:bar (sticky bar before </body>, dismissed for 7 days via localStorage).
+# Strings: data/promo/<lang>.json. One slot, promo:panel (middle of <main>), between markers so re-runs replace it.
+# PROMO_RE also strips the retired strip/card/bar slots.
 # Design reference: https://claude.ai/artifact/Xm9uGCA41AdDMHeD2PvtsV
 _PROMO = {}
 CYCLE_WORDS = ("period", "cycle", "menstru", "luteal", "regl", "pms", "ovulat", "adet", "dongu")
@@ -555,16 +554,6 @@ def promo_blocks(L, r):
     img = href_to(f"assets/video/{shot}", r)
     badge = href_to("assets/img/app-store-badge.png", r)
     lang = f' · {t["app_lang"]}' if t.get("app_lang") else ""
-    note = t["not_tracker"] if card == "cycle" else t["note"]
-    strip = ('<!-- promo:strip:start -->\n<aside class="pp-strip" aria-label="Pofu">'
-             f'<div class="pp-strip__in"><img src="{icon}" alt="" width="30" height="30">'
-             f'<p><b>Pofu</b> · {t["strip"]}</p><a href="{store_url("strip", L)}">{t["strip_cta"]} →</a></div></aside>\n'
-             '<!-- promo:strip:end -->')
-    cardb = ('<!-- promo:card:start -->\n<aside class="pp-card" aria-label="Pofu">'
-             f'<div class="pp-card__shot"><img src="{img}" alt="{t["shot_alt"]}" loading="lazy" width="92" height="200"></div>'
-             f'<div class="pp-card__body"><p class="pp-card__h">{t[card + "_h"]}</p><p>{t[card + "_p"]}</p>'
-             f'<a class="pp-btn pp-btn--dark" href="{store_url("card", L)}">{t[card + "_cta"]}</a>'
-             f'<p class="pp-small">{note}{lang}</p></div></aside>\n<!-- promo:card:end -->')
     panel = ('<!-- promo:panel:start -->\n<aside class="pp-panel" aria-label="Pofu">'
              f'<div class="pp-panel__text"><div class="pp-id"><img src="{icon}" alt="" width="48" height="48">'
              f'<div><b>Pofu</b><span>{t["tagline"]}</span></div></div>'
@@ -574,16 +563,7 @@ def promo_blocks(L, r):
              f'<span>{t["panel_note"]}{lang}</span></div></div>'
              f'<div class="pp-panel__phone"><img src="{img}" alt="{t["shot_alt"]}" loading="lazy" width="230" height="500"></div>'
              '</aside>\n<!-- promo:panel:end -->')
-    bar = ('<!-- promo:bar:start -->\n<aside class="pp-bar" id="pp-bar" hidden aria-label="Pofu">'
-           f'<img src="{icon}" alt="" width="44" height="44"><p><b>Pofu</b><span>{t["bar_sub"]}</span></p>'
-           f'<a class="pp-btn" href="{store_url("bar", L)}">{t["bar_cta"]}</a>'
-           f'<button type="button" class="pp-bar__x" aria-label="{t["close"]}">×</button></aside>\n'
-           "<script>(function(){var b=document.getElementById('pp-bar'),k='pofu-bar-closed',n=Date.now();"
-           "try{if(+localStorage.getItem(k)>n)return}catch(e){}"
-           "function s(){if(scrollY>300){b.hidden=false;removeEventListener('scroll',s)}}addEventListener('scroll',s,{passive:true});s();"
-           "b.querySelector('button').onclick=function(){b.hidden=true;try{localStorage.setItem(k,n+6048e5)}catch(e){}}})();</script>\n"
-           "<!-- promo:bar:end -->")
-    return {"strip": strip, "card": cardb, "panel": panel, "bar": bar}
+    return {"panel": panel}
 
 
 SKIP_MID = ("hero", "related", "faq", "source", "sources", "free-tools")
@@ -594,13 +574,6 @@ def apply_promo(L, r, text):
     b = promo_blocks(L, r)
     if not b or "</main>" not in text:
         return text
-    hi = text.find("</header>")
-    if hi != -1:
-        hi += len("</header>")
-        text = text[:hi] + "\n" + b["strip"] + text[hi:]
-    hero = re.search(r'<section class="hero">.*?</section>', text, re.S)
-    if hero:
-        text = text[:hero.end()] + "\n" + b["card"] + text[hero.end():]
     m = re.search(r"<main\b[^>]*>(.*)</main>", text, re.S)
     secs = [s for s in re.finditer(r"<section\b([^>]*)>", text[m.start(1):m.end(1)])
             if not re.search(r'(class="hero"|id="(%s)")' % "|".join(SKIP_MID), s.group(1))] if m else []
@@ -610,8 +583,7 @@ def apply_promo(L, r, text):
     elif "</main>" in text:
         i = text.rindex("</main>")
         text = text[:i] + b["panel"] + "\n" + text[i:]
-    i = text.rindex("</body>")
-    return text[:i] + b["bar"] + "\n" + text[i:]
+    return text
 
 
 STD_HEADER = re.compile(r'(<header class="top">\s*<div class="wrap top__in">.*?)(\s*</div>\s*</header>)', re.S)

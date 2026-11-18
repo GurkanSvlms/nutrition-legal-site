@@ -6,10 +6,12 @@ they cannot use in their language. They stay online and linked (noindex, follow)
   1. their <meta name="robots"> becomes "noindex, follow";
   2. every other page drops its <link rel="alternate" hreflang> pointing at them;
   3. sitemap.xml drops their <url> entries and the <xhtml:link> alternates pointing at them.
-Idempotent. Run after build_food_pages.py / apply_nav.py (apply_nav.py calls it at the end).
+Also hides the thin pages from noindex_thin.py. Idempotent. Run after build_food_pages.py / apply_nav.py (apply_nav.py calls it at the end).
 """
 import re
 from pathlib import Path
+
+import noindex_thin
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://getpofu.com/"
@@ -18,18 +20,20 @@ FOOD_DIRS = {"ar": "saarat", "cs": "kalorie", "hi": "calories", "id": "kalori", 
              "nl": "calorieen", "pl": "kalorie", "ro": "calorii", "sv": "kalorier", "th": "khalori",
              "uk": "kalorii", "zh-Hans": "kaluli"}
 PREFIXES = tuple(f"{L}/{d}/" for L, fd in FOOD_DIRS.items() for d in (fd, "questions"))
+THIN = set(noindex_thin.thin_paths())  # thin pages of indexable languages get the same treatment
 ROBOTS = '<meta name="robots" content="noindex, follow">'
 
 
 def hidden(url_path):
     """True for a site-relative path ("ar/saarat/x.html") inside a noindexed folder."""
-    return url_path.startswith(PREFIXES)
+    return url_path.startswith(PREFIXES) or url_path in THIN
 
 
 def alt_re(tag):
     # one alternate tag (html <link> or sitemap <xhtml:link>) whose href is a hidden page, with its leading whitespace
     return re.compile(r'\n?[ \t]*<' + tag + r' rel="alternate" hreflang="[^"]+" href="' + re.escape(SITE)
-                      + r'(' + "|".join(re.escape(p) for p in PREFIXES) + r')[^"]*"\s*/?>')
+                      + r'(?:(?:' + "|".join(re.escape(p) for p in PREFIXES) + r')[^"]*|'
+                      + "|".join(re.escape(p) for p in sorted(THIN)) + r')"\s*/?>')
 
 
 def main():
