@@ -171,7 +171,8 @@ main > section:has(.cta img[src*="app-store-badge"]):not(.hero):not(.tool) a:not
 .pp-id div { display: flex; flex-direction: column; line-height: 1.3; }
 .pp-id b { font-family: var(--head); font-size: 1.2rem; }
 .pp-id span { font-size: .9rem; color: #E2BFD6; }
-.pp-panel .pp-panel__h { margin: 0; font-family: var(--head); font-weight: 800; font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.05; letter-spacing: -.02em; color: #FCE9F1; }
+.pp-panel .pp-panel__deal { margin: 0; } .pp-panel__deal a { display: inline-block; padding: .35rem .8rem; border-radius: 999px; background: #FCE9F1; color: #2E1229; font-weight: 800; text-decoration: none; }
+.pp-panel__h { margin: 0; font-family: var(--head); font-weight: 800; font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.05; letter-spacing: -.02em; color: #FCE9F1; }
 .pp-panel ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: .35rem; line-height: 1.45; }
 .pp-panel li::marker { color: #F59BC0; }
 .pp-panel__cta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }

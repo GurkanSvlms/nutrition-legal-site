@@ -536,6 +536,10 @@ def promo_text(L):
     return _PROMO[L]
 
 
+# Optional campaign line: add "deal" to data/promo/<lang>.json to show it, remove it to hide it.
+REDEEM_BF = "https://apps.apple.com/redeem?ctx=offercodes&amp;id=6778044605&amp;code=POFUBF"
+
+
 def store_url(slot, L):
     return f"https://apps.apple.com/app/apple-store/id6778044605?pt=128375664&amp;ct=promo_{slot}_{L}&amp;mt=8"
 
@@ -557,7 +561,8 @@ def promo_blocks(L, r):
     panel = ('<!-- promo:panel:start -->\n<aside class="pp-panel" aria-label="Pofu">'
              f'<div class="pp-panel__text"><div class="pp-id"><img src="{icon}" alt="" width="48" height="48">'
              f'<div><b>Pofu</b><span>{t["tagline"]}</span></div></div>'
-             f'<p class="pp-panel__h">{t["panel_h"]}</p>'
+             + (f'<p class="pp-panel__deal"><a href="{REDEEM_BF}">{t["deal"]}</a></p>' if t.get("deal") else '')
+             + f'<p class="pp-panel__h">{t["panel_h"]}</p>'
              f'<ul><li>{t["panel_1"]}</li><li>{t["panel_2"]}</li><li>{t["panel_3"]}</li></ul>'
              f'<div class="pp-panel__cta"><a href="{store_url("panel", L)}"><img src="{badge}" alt="{t["badge_alt"]}" width="150" height="50" loading="lazy"></a>'
              f'<span>{t["panel_note"]}{lang}</span></div></div>'
